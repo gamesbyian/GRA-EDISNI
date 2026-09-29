@@ -269,3 +269,16 @@ Notable deduplication findings:
 - a BMP and two JPG filenames are all the same 3.96 MB blob `21649d1b...`, so historical filename extensions cannot be trusted as format evidence.
 
 The later partial capture `9580913d...` is especially useful: even through the connector's lossy text view it visibly contains standard JPEG Huffman-table strings and ends with literal `pe^!02un`. Its archived provenance says it omits the beginning/end but avoided some HTML-parser damage. The next experiment must operate on raw bytes, not Unicode-decoded text.
+
+
+## Frozen May-2026 table versus the current canonical corpus
+
+A direct cross-check closes an easy-to-misstate prospective-validation question.
+
+The current canonical `data/observations.csv` contains **82 physical sticker observations but only 65 distinct H108 residues**. After mapping canonical residue 108 to the Sticker Studio's zero-indexed residue 0, those 65 residue positions are exactly the 65 entries hard-coded in the archived May-2026 `KNOWN` table.
+
+Therefore no provenance-backed physical observation currently in the canonical corpus supplies a genuinely new residue against which the May prediction table can be scored prospectively. The additional rows are repeat-cycle confirmations of already-known residues.
+
+The Sep-2026 text reports for residues 103 and 45 remain interesting precisely because both positions were outside that frozen 65-residue set, but neither belongs in `observations.csv` until a photograph or equivalent provenance is recovered.
+
+Consequence: do not quote retrospective performance of the May predictor on the current 82-row corpus as prospective validation. The only presently available out-of-freeze tests are the quarantined later claims.
