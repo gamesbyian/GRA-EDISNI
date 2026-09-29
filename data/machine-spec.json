@@ -238,6 +238,32 @@
         "102"
       ],
       "remaining_abstract_selector_gauge": "C=0 or 2"
+    },
+    "physical_codebook_holdout": {
+      "experiment": 295,
+      "depends_on_experiment": 294,
+      "recovered_fixed_selector": {
+        "B": 2,
+        "E": 0,
+        "F": 1,
+        "H": 2,
+        "I": 2
+      },
+      "q4_observation_records_used": 9,
+      "distinct_codebook_entries_observed": 6,
+      "compatible_shared_codebooks": 8,
+      "pairwise_distinct_codeword_survivors": 8,
+      "all_nonuniform_codeword_survivors": 6,
+      "equal_row_weight_survivors": 1,
+      "cyclic_equivariant_survivors": 1,
+      "minimum_slash_survivors": 1,
+      "recovered_codewords_by_selector": [
+        "/..",
+        "./.",
+        "../"
+      ],
+      "recovered_rule": "slash iff physical depth d equals selector value S",
+      "evidence_role": "holdout physical encoding check; shared-codebook symmetry remains an authoring premise"
     }
   },
   "first_pass": {
