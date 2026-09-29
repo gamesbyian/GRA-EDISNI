@@ -51,6 +51,13 @@
   ],
   "checks": [
     {
+      "id": "q3-route-shell",
+      "script": "scripts/audit_q3_route_shell.py",
+      "covers": [
+        "T5"
+      ]
+    },
+    {
       "id": "final-primary-polarity",
       "script": "scripts/audit_final_primary_polarity.py",
       "covers": [
