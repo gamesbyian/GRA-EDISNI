@@ -47,6 +47,8 @@ jobs:
         run: python scripts/audit_primary_frame_balance.py
       - name: Audit primary frame-balance minimality
         run: python scripts/audit_primary_balance_minimality.py
+      - name: Exhaust frame-balance partitions
+        run: python scripts/audit_frame_balance_partitions.py
       - name: Audit minimum primary witness
         run: python scripts/audit_minimum_primary_witness.py
       - name: Audit Q4 polarity gauge factorization
