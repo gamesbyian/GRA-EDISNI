@@ -137,6 +137,67 @@ def main() -> None:
 
     assert spec["primary"]["physical_completion_gauge"]["bits"] == 2
     assert spec["q4"]["polarity_gauge"]["bits"] == 3
+    q4_gauge = spec["q4"]["polarity_gauge"]
+    assert q4_gauge["shared_polarity_required_for_function"] is False
+    assert q4_gauge["independent_polarity_route_masks"] == ["0", "A", "C", "A+C"]
+    assert q4_gauge["independent_polarity_route_shell"] == ["120", "012", "102"]
+    assert q4_gauge["functional_ablation_experiment"] == 292
+
+    q4_inverse = spec["q4"]["abstract_selector_inverse"]
+    assert q4_inverse["experiment"] == 294
+    assert q4_inverse["raw_q4_observations_used"] is False
+    assert q4_inverse["expected_terminal_used_as_filter"] is False
+    assert q4_inverse["expected_core_location_used_as_filter"] is False
+    assert q4_inverse["selector_maps"] == 3**9 == 19683
+    assert q4_inverse["core_location_candidates"] == 84
+    assert q4_inverse["first_pass_pos3_pairs"] == 288
+    assert q4_inverse["second_pass_pos3_pairs"] == 208
+    assert q4_inverse["terminal_distribution"] == {
+        "100": 28,
+        "102": 84,
+        "110": 24,
+        "112": 72,
+    }
+    assert q4_inverse["route_capable_core_locations"] == ["ADG"]
+    assert q4_inverse["scaffold_coordinate_order"] == "BCEFHI"
+    assert q4_inverse["route_capable_scaffolds"] == ["200122", "220122"]
+    assert q4_inverse["states_per_scaffold"] == 7
+    assert q4_inverse["recovered_core_words"] == ["110", "220", "212"]
+    assert q4_inverse["recovered_terminal"] == "100"
+    assert q4_inverse["recovered_route_shell"] == ["120", "012", "102"]
+    assert q4_inverse["remaining_abstract_selector_gauge"] == "C=0 or 2"
+
+    q4_code = spec["q4"]["physical_codebook_holdout"]
+    assert q4_code["experiment"] == 295
+    assert q4_code["depends_on_experiment"] == 294
+    assert q4_code["recovered_fixed_selector"] == {
+        "B": 2,
+        "E": 0,
+        "F": 1,
+        "H": 2,
+        "I": 2,
+    }
+    assert q4_code["fixed_scaffold_q4_observation_records"] == 9
+    assert q4_code["fixed_scaffold_distinct_codebook_entries_observed"] == 6
+    assert q4_code["fixed_scaffold_compatible_shared_codebooks"] == 8
+    assert q4_code["full_q4_observation_records"] == 11
+    assert q4_code["recovered_selector_fields_tested"] == 6
+    assert q4_code["full_family_forced_codebook_entries"] == 7
+    assert q4_code["full_family_compatible_shared_codebooks"] == 4
+    assert q4_code["residual_physical_codebook_gauge_entries"] == [
+        "E[0,2]",
+        "E[1,2]",
+    ]
+    assert q4_code["pairwise_distinct_codeword_survivors"] == 4
+    assert q4_code["all_nonuniform_codeword_survivors"] == 4
+    assert q4_code["equal_row_weight_survivors"] == 1
+    assert q4_code["cyclic_equivariant_survivors"] == 1
+    assert q4_code["minimum_slash_survivors"] == 1
+    assert q4_code["recovered_codewords_by_selector"] == ["/..", "./.", "../"]
+    assert q4_code["recovered_rule"] == (
+        "slash iff physical depth d equals selector value S"
+    )
+
     assert spec["recursion_gauge"]["bits"] == 1
 
     expected_census = Counter({
@@ -160,6 +221,9 @@ def main() -> None:
     print("OK(spec): Q4 control cores and request/grant table match runtime states")
     print("OK(spec): preferred latent register, 95/13 split, and 54/36/18 census match")
     print("OK(spec): corrected coupled gauge-family metadata is internally consistent")
+    print("OK(spec): Experiment 292 shared-polarity ablation is recorded")
+    print("OK(spec): Experiment 294 abstract-selector inverse is recorded")
+    print("OK(spec): Experiment 295 physical-codebook holdout is recorded")
     print("OK(spec): terminal handoff fields remain canonical")
 
 
