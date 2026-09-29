@@ -1,0 +1,27 @@
+name: Verify Experiments 303-305
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_quadratic_address_bijections.py"
+      - "scripts/audit_all_quadratic_address_maps.py"
+      - "scripts/audit_all_address_bijections.py"
+      - "scripts/enumerate_raw_machine.py"
+      - "data/observations.csv"
+      - "docs/global-address-bijection-audit.md"
+      - ".github/workflows/verify-experiments-303-305.yml"
+
+jobs:
+  verify-global-address-audits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run quadratic bijection audit
+        run: python scripts/audit_quadratic_address_bijections.py
+      - name: Run all quadratic-map negative control
+        run: python scripts/audit_all_quadratic_address_maps.py
+      - name: Run complete 9! address-bijection audit
+        run: python scripts/audit_all_address_bijections.py
