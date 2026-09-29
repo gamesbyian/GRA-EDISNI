@@ -37,7 +37,30 @@ def load_manifest(path: Path) -> list[dict]:
 
 def run(cmd: list[str], cwd: Path) -> subprocess.CompletedProcess[str]:
     print("+", " ".join(cmd), flush=True)
-    return subprocess.run(cmd, cwd=cwd, text=True, check=False)
+    proc = subprocess.run(
+        cmd,
+        cwd=cwd,
+        text=True,
+        check=False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+    )
+    if proc.stdout:
+        print(proc.stdout, end="" if proc.stdout.endswith("\n") else "\n", flush=True)
+    return proc
+
+
+def classify_extractor_failure(proc: subprocess.CompletedProcess[str]) -> str:
+    output = (proc.stdout or "").lower()
+    if "sign in to confirm you" in output and "not a bot" in output:
+        return "login-required-or-antibot"
+    if "429" in output or "too many requests" in output:
+        return "rate-limited"
+    if "private video" in output or "login required" in output:
+        return "login-required"
+    if "video unavailable" in output or "has been removed" in output:
+        return "removed-or-missing"
+    return "extractor-broken"
 
 
 def harvest_direct(source: dict, root: Path) -> dict:
@@ -95,7 +118,11 @@ def harvest_youtube(source: dict, root: Path, include_media: bool) -> dict:
     cmd += [source["url"]]
     proc = run(cmd, cwd=Path.cwd())
     if proc.returncode != 0:
-        raise RuntimeError(f"yt-dlp exited {proc.returncode}")
+        return {
+            "exit_code": proc.returncode,
+            "classification_override": classify_extractor_failure(proc),
+            "extractor_output_tail": (proc.stdout or "")[-4000:],
+        }
 
     return {"exit_code": proc.returncode}
 
@@ -168,7 +195,7 @@ def main() -> int:
                 record["classification"] = "ok"
             elif source["kind"] == "youtube":
                 record.update(harvest_youtube(source, args.output, args.include_media))
-                record["classification"] = "ok"
+                record["classification"] = record.pop("classification_override", "ok")
             elif source["kind"] in {"instagram", "twitter", "vk", "facebook"}:
                 if not args.include_social:
                     record["classification"] = "manual-review"
