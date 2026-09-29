@@ -99,7 +99,7 @@ jobs:
         run: python scripts/audit_terminal_orbit_dynamics.py
       - name: Explain f1 recursion gauge support
         run: python scripts/audit_f1_gauge_support.py
-      - name: Compose full transition-invisible gauge quotient
+      - name: Audit corrected cross-gauge coupling
         run: python scripts/audit_full_gauge_quotient.py
       - name: Verify machine-spec drift
         run: python scripts/verify_machine_spec.py

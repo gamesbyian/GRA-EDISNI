@@ -118,14 +118,22 @@ def main() -> None:
     assert anatomy["invariant_residues"] == 108 - len(variable) == 95
 
     quotient = spec["master_anatomy"]["gauge_quotient"]
-    assert quotient["physical_gauge_bits"] == 5
-    assert quotient["physical_gauge_settings"] == 32
-    assert quotient["hidden_states_per_setting"] == 14
-    assert quotient["distinct_complete_masters"] == 448
-    assert quotient["operation_gauge_bits"] == 1
-    assert quotient["total_gauge_bits"] == 6
-    assert quotient["total_gauge_settings"] == 64
-    assert quotient["state_operation_representations"] == 896
+    exact = quotient["exact_transducer"]
+    assert exact["physical_gauge_bits"] == 4
+    assert exact["physical_gauge_settings"] == 16
+    assert exact["hidden_states_per_setting"] == 14
+    assert exact["distinct_complete_masters"] == 224
+    assert exact["operation_gauge_bits"] == 1
+    assert exact["total_gauge_bits"] == 5
+    assert exact["total_representation_settings"] == 32
+
+    broader = quotient["broader_recursive_family"]
+    assert broader["viable_physical_settings"] == 24
+    assert broader["distinct_complete_masters"] == 336
+    assert broader["operation_gauge_settings"] == 2
+    assert broader["total_representation_settings"] == 48
+    assert broader["state_operation_representations"] == 672
+    assert len(broader["union_variable_residues"]) == 21
 
     assert spec["primary"]["physical_completion_gauge"]["bits"] == 2
     assert spec["q4"]["polarity_gauge"]["bits"] == 3
@@ -151,7 +159,7 @@ def main() -> None:
     print("OK(spec): primary payload template matches every legal state")
     print("OK(spec): Q4 control cores and request/grant table match runtime states")
     print("OK(spec): preferred latent register, 95/13 split, and 54/36/18 census match")
-    print("OK(spec): six-bit gauge quotient metadata is internally consistent")
+    print("OK(spec): corrected coupled gauge-family metadata is internally consistent")
     print("OK(spec): terminal handoff fields remain canonical")
 
 
