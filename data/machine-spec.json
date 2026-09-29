@@ -163,7 +163,31 @@
       ],
       "preferred_representative": "all slash-exception",
       "transition_invisible_within_14_state_family": false,
-      "note": "A/C are exact canonical-first-pass gauges; F+I is a coupled alternative branch that changes first-pass words and is incompatible with the primary q0,d0 H<->F flip."
+      "note": "A/C are exact physical-polarity gauges with unchanged selector depths; F+I is a coupled alternative branch that changes first-pass words and is incompatible with the primary q0,d0 H<->F flip.",
+      "exact_gauge_generators": [
+        "A",
+        "C"
+      ],
+      "exact_gauge_support": {
+        "A": {
+          "residues": [
+            82,
+            91,
+            100
+          ],
+          "public_observations": 0,
+          "selector_depth_change": false
+        },
+        "C": {
+          "residues": [
+            84,
+            93,
+            102
+          ],
+          "public_observations": 0,
+          "selector_depth_change": false
+        }
+      }
     }
   },
   "first_pass": {
