@@ -152,7 +152,7 @@
       ]
     },
     {
-      "id": "full-gauge-quotient",
+      "id": "cross-gauge-coupling",
       "script": "scripts/audit_full_gauge_quotient.py",
       "covers": []
     }
