@@ -163,7 +163,7 @@
       ],
       "preferred_representative": "all slash-exception",
       "transition_invisible_within_14_state_family": false,
-      "note": "A/C are exact physical-polarity gauges with unchanged selector depths; F+I is a coupled alternative branch that changes first-pass words and is incompatible with the primary q0,d0 H<->F flip.",
+      "note": "A/C are exact physical-polarity gauges with unchanged selector depths; F+I is a coupled alternative branch that changes first-pass words and is incompatible with the primary q0,d0 H<->F flip. Experiment 292 shows global shared polarity is not required for the route machine: independent stack polarities reduce under closure plus the reversible-route criterion to 0/A/C/A+C.",
       "exact_gauge_generators": [
         "A",
         "C"
@@ -187,7 +187,20 @@
           "public_observations": 0,
           "selector_depth_change": false
         }
-      }
+      },
+      "shared_polarity_required_for_function": false,
+      "independent_polarity_route_masks": [
+        "0",
+        "A",
+        "C",
+        "A+C"
+      ],
+      "independent_polarity_route_shell": [
+        "120",
+        "012",
+        "102"
+      ],
+      "functional_ablation_experiment": 292
     }
   },
   "first_pass": {
