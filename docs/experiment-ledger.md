@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **253**.
+Latest indexed experiment: **255**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -261,6 +261,8 @@ Latest indexed experiment: **253**.
 | 251 | exact equality of raw-reconstructed, Boolean, and native 14-master sets |
 | 252 | raw constraint-flow anatomy: C gauge, ADG core recovery, and request/grant relation emerge from closure |
 | 253 | raw-space recursion audit: canonical two-pass operation is unique up to external-q relabeling among maximal shell-preserving solutions |
+| 254 | Q4 grammar weakening: shared POS3 polarity is sufficient and raw observations force slash-exception orientation |
+| 255 | primary optional-pulse audit: exact POS3 selects 14 states, while terminal 100 persists across 832 closure states |
 
 ## Current frontier
 
@@ -270,7 +272,7 @@ Latest indexed experiment: **253**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–253:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, and non-circular raw-space recursion selection.
+- **250–255:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening, and primary-POS3 robustness boundary.
 
 ## Status shorthand
 
