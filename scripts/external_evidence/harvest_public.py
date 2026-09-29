@@ -143,7 +143,20 @@ def harvest_gallery(source: dict, root: Path) -> dict:
         cwd=Path.cwd(),
     )
     if proc.returncode != 0:
-        raise RuntimeError(f"gallery-dl exited {proc.returncode}")
+        return {
+            "exit_code": proc.returncode,
+            "classification_override": classify_extractor_failure(proc),
+            "extractor_output_tail": (proc.stdout or "")[-4000:],
+        }
+
+    files = [p for p in out_dir.rglob("*") if p.is_file()]
+    media_files = [p for p in files if p.suffix.lower() not in {".json", ".txt"}]
+    if source.get("media") and not media_files:
+        return {
+            "exit_code": proc.returncode,
+            "classification_override": "no-media-found",
+            "note": "Extractor exited successfully but produced no media payload.",
+        }
     return {"exit_code": proc.returncode}
 
 
@@ -202,7 +215,7 @@ def main() -> int:
                     record["note"] = "Public social extraction disabled unless --include-social is supplied."
                 else:
                     record.update(harvest_gallery(source, args.output))
-                    record["classification"] = "ok"
+                    record["classification"] = record.pop("classification_override", "ok")
             else:
                 record["classification"] = "unsupported"
         except Exception as exc:  # noqa: BLE001
