@@ -1,12 +1,14 @@
 # Deck + Evidence Workbook Update Plan
 
-_Status: implementation plan, drafted 2026-09-29 against `main` through Experiment 291 plus live PR #31 (Experiment 293) and live PR #32 (Experiments 292, 294, 295)._
+_Status: implementation plan, drafted 2026-09-29 against `main` through Experiment 291 plus live PR #31 (Experiment 293), live PR #32 (Experiments 292, 294, 295), and live PR #34 (Experiments 296–297)._
 
 ## Purpose
 
-Update the public-facing presentation and its supporting evidence files so that they reflect the modern mechanical crack without losing the deck's existing narrative clarity.
+Update the public-facing presentation and its single supporting evidence workbook so that they reflect the modern mechanical crack without losing the deck's existing narrative clarity, design language, density, or voice.
 
-The current deck is still structurally good. Its early story of sparse stickers -> H108 -> ternary geometry -> selector/routing machine remains useful. The largest problem is that later research has changed the epistemic status of several claims:
+The current deck is not merely structurally good; its existing visual design is the baseline to preserve. The update should look like an extension of the same deck, not a redesign. Its typography, spacing, restrained palette, section dividers, callout style, diagram language, density, detail level, and conversational-but-careful tone should be reused wherever possible. Existing slides should not be reformatted, rewritten, or visually modernized unless correctness or the insertion of genuinely new evidence requires it.
+
+Its early story of sparse stickers -> H108 -> ternary geometry -> selector/routing machine remains useful. The largest substantive problem is that later research has changed the epistemic status of several claims:
 
 - exact primary POS3 is a preferred physical authoring grammar, but not the only parent that recovers the canonical 14-state machine;
 - globally shared Q4 slash polarity is no longer a functional premise;
@@ -22,16 +24,18 @@ The update should preserve the public deck's "show the mystery becoming machiner
 Current archived artifacts:
 
 - `archive/drive/INSIDE_Collector_Edition_Sticker_Mystery_What_I_found_and_what_it_might_mean.pptx`
-- `archive/drive/INSIDE_Sticker_Mystery_Supplementary_Evidence.csv`
-- `archive/drive/INSIDE_Sticker_Mystery_Verification_Pack.xlsx`
+- `archive/drive/INSIDE_Sticker_Mystery_Supplementary_Evidence.csv` — legacy evidence export; preserve as an archive, but do not maintain a second spreadsheet deliverable
+- `archive/drive/INSIDE_Sticker_Mystery_Verification_Pack.xlsx` — the format to carry forward
 
-The deck contains 44 slides including section dividers and appendix. The CSV/XLSX evidence pack is effectively frozen around Experiment 194.
+The deck contains 44 slides including section dividers and appendix. The older evidence files are effectively frozen around Experiment 194. The refreshed evidence product should be **one XLSX workbook only**.
 
 ## Update principles
 
-1. Preserve the current deck's restrained visual system, generous whitespace, and low-text presentation style.
-2. Prefer one visual claim per slide.
-3. Distinguish:
+1. **Treat the existing deck as the design specification.** Preserve its typography, palette, spacing, grid, recurring shapes, section dividers, callouts, line weights, diagram style, and visual rhythm. Reuse existing slide elements whenever possible instead of inventing new ones.
+2. **Do not change an existing slide merely because it could be redesigned.** Make the smallest visual and textual change that restores correctness or creates room for genuinely new evidence.
+3. **Match the existing density, detail, and tone.** New slides should feel neither more academic and crowded nor more sparse and promotional than their neighbors. If one new idea cannot fit at the deck's established density, give it another slide rather than shrinking type or compressing prose.
+4. Prefer one visual claim per slide, consistent with the current deck's pacing.
+5. Distinguish:
    - raw observation;
    - local reconstruction;
    - model-class selection;
@@ -39,15 +43,18 @@ The deck contains 44 slides including section dividers and appendix. The CSV/XLS
    - physical gauge;
    - observer/readout;
    - semantic hypothesis.
-4. Do not use color alone to encode state. Every color-coded distinction also gets a label, icon, border style, position, or shape.
-5. Do not imply that 224 or 336 complete masters are 224 or 336 machine states. The functional hidden-state family remains 14 states; the larger counts arise from physical completion gauges.
-6. Do not present the all-slash Q4 surface as functionally forced. Present it as the preferred physical gauge representative, with independent simplicity/balance support.
-7. Keep `100` as the mechanically reconstructed fixed terminal. Do not revive plaintext/lore speculation.
-8. Use cubes only where the data are genuinely cubic or where a cube is an exact state-space diagram. Cubes should explain structure, not serve as decoration.
+6. Do not use color alone to encode state. Every color-coded distinction also gets a label, icon, border style, position, or shape.
+7. Do not imply that 224 or 336 complete masters are 224 or 336 machine states. The functional hidden-state family remains 14 states; the larger counts arise from physical completion gauges.
+8. Do not present the all-slash Q4 surface as functionally forced. Present it as the preferred physical gauge representative, with independent simplicity/balance support.
+9. Keep `100` as the mechanically reconstructed fixed terminal. Do not revive plaintext/lore speculation.
+10. Use cubes only where the data are genuinely cubic or where a cube is an exact state-space diagram. Cubes should explain structure, not serve as decoration.
+11. Preserve the deck's voice. Prefer editing only the specific sentence, caption, number, or diagram whose meaning has changed over rewriting a slide wholesale.
 
 ## Visual language and accessibility
 
-Retain the deck's subdued dark/light neutral palette. For new categorical accents, use a color-blind-safe set with high luminance separation, roughly:
+The current deck's actual palette and components take precedence over any generic redesign guidance below. Sample colors, fonts, border weights, icon treatment, and recurring layout geometry from the existing deck and extend them. Introduce a new visual convention only where the existing system has no suitable equivalent.
+
+Retain the deck's subdued dark/light neutral palette. For any genuinely new categorical accents, use a color-blind-safe set with high luminance separation, roughly:
 
 - deep blue for observed / carrier facts;
 - amber for inferred authoring grammar;
@@ -84,7 +91,7 @@ The recommendation below preserves the existing slide IDs where possible. New in
 | 06A • HUMAN CLUES | KEEP | Keep. It does useful narrative work and inoculates later formalism against looking purely machine-invented. | None. |
 | 07 • BREAKTHROUGH | KEEP | Keep H108 evidence. | None. |
 | 07A • REPEATS YOU CAN POINT TO | KEEP | Keep concrete repeats. | None. |
-| 08 • H108 | MAJOR VISUAL UPGRADE | Replace the current mostly typographic "three views" treatment with a translation diagram: 12×9 strip -> four 27-cell quarters -> **four 3×3×3 cubes**. Show one quarter enlarged as a wireframe cube with axes `d × row × column` / `d × j`, and annotate that the cube is a coordinate system, not semantic proof. | This is the first major "people love cubes" opportunity and is mathematically exact. Slide 09 immediately supplies the epistemic brake. |
+| 08 • H108 | TARGETED VISUAL ENHANCEMENT | Preserve the slide's existing composition and typography, but extend its "three views" treatment with a translation diagram: 12×9 strip -> four 27-cell quarters -> **four 3×3×3 cubes**. Use the deck's existing line/label language for the wireframes. Show one quarter enlarged with axes `d × row × column` / `d × j`, and annotate that the cube is a coordinate system, not semantic proof. | This is the first major "people love cubes" opportunity and is mathematically exact. It should feel like one more view added to the existing slide, not a visual reboot. Slide 09 immediately supplies the epistemic brake. |
 | 09 • EPISTEMIC GUARDRAIL | KEEP | Keep. Slightly update the ladder so "mechanistic" now includes "raw reconstruction + gauge quotient", while "semantic" remains open. | Important immediately after the cube visual so dimensional elegance is not oversold. |
 | 09A • LETTER-LIKE GHOSTS | KEEP / TRIM | Keep the human-recognition history but reduce copy by ~15–20%. Retain MIL / MIX / MISS / XML as cautionary artifacts. | The next divider can then decisively pivot away from glyph-reading. |
 | Divider: The geometry starts behaving like machinery | KEEP | Keep. | None. |
@@ -106,7 +113,7 @@ The recommendation below preserves the existing slide IDs where possible. New in
 | 19A • THREE HUMAN-LEGIBLE STATES | KEEP | Keep the 100→110→111 thermometer code, but make clear it is a recoding of route state, not another independent discovery. | Works after 19B. |
 | 20 • TWO INTERFACES | MODIFY | Keep causal-path vs observer distinction. Replace any old "14 distinct readouts survive" wording with language aligned to current observer theorem: the frozen observer recovers the four-bit hidden state while transition logic quotients it. | End of mechanism section. |
 | Divider: Is this just an ornate story? | KEEP | Keep. | Stronger than ever because the next section now has better hostile tests. |
-| 21 • HOSTILE COMPARISON | LIGHT EDIT | Keep the 746,496 older nearby-machine cage, but label it explicitly as an early bounded sibling-family stress test. | Do not let this remain the strongest-looking uniqueness evidence. |
+| 21 • HOSTILE COMPARISON | LIGHT EDIT | Keep the 746,496 older nearby-machine cage, but label it explicitly as an early bounded sibling-family stress test. Add a compact modern adversarial callout from Experiments 296–297: local recursion exceptions can preserve `100`, the exact 14 masters, or even 20 states, but the reversible route layer rejects those stronger-looking siblings; canonical uniquely maximizes retention among route-capable zero/one/two-cell first-pass variants. | This updates the hostile-test story without adding another experiment-specific slide. Do not let the older MDL cage remain the strongest-looking uniqueness evidence. |
 | 22 • COMPRESSION | LIGHT EDIT | Keep the 24 / 746,496 / 1:31,104 / ~14.9 bits result as MDL bookkeeping. Add a footer: "Useful, but later raw-space reconstruction is a stronger argument." | Leads to new 22A. |
 | **22A • START WITH RAW CONSTRAINTS, NOT THE SOLVED MACHINE** | **NEW** | Large funnel / Sankey-style count reduction: `6 primary payloads × 36 Q4 selectors = 216` -> first-pass POS3 -> `20` -> selector reuse -> `14` -> every survivor terminal `100`. Include three checkmarks: Boolean implementation, native `x/y/p/g` implementation, raw enumerator all emit the exact same 14 complete masters. | One of the most important new slides. This should visually supersede the older MDL result without deleting it. |
 | **22B • RECOVER Q4 WITHOUT FEEDING IT Q4** | **NEW** | Summarize Experiments 294/295. Start from `3^9 = 19,683` abstract ternary selector fields × `C(9,3)=84` possible 3-position control cores. No observed Q4 cell values, expected core, route words, state count, or target terminal supplied. Recursive closure + reversible-route criterion recovers the physical A/D/G core, real scaffold modulo C gauge, 7-state compatibility relation, route shell, terminal 100. Then a small second panel: held-out Q4 marks plus either equal-row-weight or cyclic codebook symmetry recover the one-slash physical code `/.., ./. , ../`. | This is the modern anti-circularity showpiece. Could use a small **3×3×3 cube** inset to depict a ternary selector/codebook, but keep the main visual as a search funnel so the cube does not obscure the count argument. |
@@ -125,11 +132,11 @@ The recommendation below preserves the existing slide IDs where possible. New in
 | 32 • WHY THIS MATTERS | MODIFY | New central contrast: "The community already had enough data to recover the machine." New stickers are validation/gauge resolution; the critical path is no longer collection. | Stronger ending than the old "may already have enough." |
 | APPENDIX • SOURCES & SCOPE | MAJOR UPDATE | Replace stale "Experiments 140–150 + Engines A–C" line. Cite repo state through 291 plus the merged/latest applicable 292–295 results at implementation time. Add `machine-spec.json`, theorem graph, proof-pack, raw enumerator, and three-way implementation equivalence as supporting sources. State clearly which claims come from unmerged PRs if the deck is built before merge. | Last implementation step should re-check this slide against actual merged state. |
 
-## Proposed target deck size
+## Deck length, density, and pacing
 
-Current: 44 slides.
+There is **no target slide count**.
 
-Recommended inserts:
+The seven proposed inserts below are content recommendations, not a quota:
 
 - 10A raw-primary forcing
 - 11A Q4 gauge cube
@@ -139,16 +146,11 @@ Recommended inserts:
 - 22B broad Q4 inverse recovery
 - 26A plausible human path
 
-Net target: **51 slides** if no existing slide is removed.
+During implementation, preserve the existing deck's standard of density and pacing. If a proposed insert can be absorbed cleanly into an adjacent slide **without making that slide visibly denser, smaller-typed, or more technical than its neighbors**, do so. If an existing slide now needs two distinct visual claims to stay correct, split it rather than compress it. Conversely, do not add a slide merely because an experiment exists.
 
-That is acceptable because the additions replace explanation burden elsewhere. If a shorter public deck is desired, the first candidates to move to appendix are:
+The deck may end up longer than 51 slides or shorter. Slide count is subordinate to continuity, legibility, and the existing deck's tone.
 
-- 19A thermometer encoding;
-- 23 selector-universe rarity;
-- 24 evidence anatomy;
-- 25 mutation test.
-
-Do **not** cut 22A or 22B. They are now central evidence.
+Slides 22A and 22B contain central new evidence and should remain prominent somewhere in the main narrative even if their exact boundaries change.
 
 ## Cube inventory
 
@@ -167,17 +169,13 @@ Avoid turning the 4-bit state into a fake 4D cube projection. Two ordinary 3D cu
 
 ## Overall decision
 
-A CSV cannot be visually styled. Preserve the existing supplementary CSV as the machine-readable long-form export, but stop treating it as the primary human-facing spreadsheet.
+Maintain **one spreadsheet artifact only: XLSX**.
 
-The human-facing evidence product should be an upgraded **multi-sheet XLSX verification workbook**. The workbook should absorb the useful content of the supplementary CSV so a reader does not need to bounce between two files.
+The refreshed `INSIDE_Sticker_Mystery_Verification_Pack.xlsx` becomes the single supporting evidence workbook for both human browsing and structured evidence records. It should absorb all useful rows and fields from the old supplementary CSV into an `EVIDENCE RECORDS` sheet and extend them through the current research frontier.
 
-Recommended artifact policy:
+The existing `INSIDE_Sticker_Mystery_Supplementary_Evidence.csv` should remain in the archive unchanged as historical provenance, but it should **not** be updated, presented as a parallel current deliverable, or treated as a second canonical spreadsheet.
 
-- Keep `INSIDE_Sticker_Mystery_Supplementary_Evidence.csv` as canonical flat export.
-- Upgrade `INSIDE_Sticker_Mystery_Verification_Pack.xlsx` into the main human-facing workbook.
-- Optionally also emit `INSIDE_Sticker_Mystery_Supplementary_Evidence.xlsx` as a styled mirror of the CSV only if a separate sortable long-form workbook proves useful. Do not maintain two independently edited evidence databases.
-
-The XLSX should be generated from canonical repo data where practical rather than manually diverging.
+The workbook should be generated from canonical repo data where practical rather than manually diverging. If a script ever needs CSV as an interchange format, it may derive a temporary CSV from the workbook/repo data during a build or analysis step, but no second maintained spreadsheet artifact should result.
 
 ## Workbook visual system
 
@@ -260,7 +258,7 @@ This becomes the fastest skeptical-reader audit surface.
 
 ### 3. EVIDENCE RECORDS
 
-Import the full supplementary CSV schema and extend it through the current experiment frontier.
+Absorb the full legacy supplementary-CSV schema into this workbook and extend it through the current experiment frontier. This sheet replaces the old CSV as the maintained flat evidence table.
 
 Keep the existing columns but add:
 
@@ -276,7 +274,7 @@ Use an Excel table with filters and alternating neutral row shading.
 
 ### 4. EXPERIMENT FRONTIER
 
-Human-readable summary of Experiments 195 onward, especially 241–295.
+Human-readable summary of Experiments 195 onward, especially 241 through the current implementation frontier.
 
 Columns:
 
@@ -349,6 +347,7 @@ Include:
 - 27-choice route-shell audit;
 - fixed-point vs 102↔100 period-2 behavior;
 - direct selector-universe counts;
+- Experiments 296–297 as a hostile local-operation test: terminal agreement and raw-state retention alone admit attractive siblings, while route capability isolates canonical as the highest-retention member of the tested local-defect family;
 - terminal representations: frame 9 / 100 / ---//////.
 
 ### 9. HIDDEN STATE & OBSERVER
@@ -436,11 +435,11 @@ Use only charts that clarify a concrete relationship:
 
 Do not add decorative pie charts.
 
-## CSV update
+## Legacy CSV retirement
 
-The flat CSV should remain plain UTF-8, but its content needs extension and schema cleanup.
+Do not produce an updated CSV deliverable.
 
-Required updates:
+During workbook construction, ingest the useful legacy CSV content into the `EVIDENCE RECORDS` sheet, preserve source/provenance columns, then extend and clean the records there. Required content work includes:
 
 - extend experiment coverage from 194 through the implementation frontier;
 - add explicit gauge rows;
@@ -450,19 +449,20 @@ Required updates:
 - add primary and Q4 physical-gauge rows;
 - add Experiment 293 weaker-source-POS3 rows if merged;
 - add Experiments 292/294/295 if merged;
+- add Experiments 296–297 if merged, emphasizing that terminal agreement alone is weak and route structure remains discriminating;
 - mark Experiment 286 superseded by 287;
-- add `claim_id`, `module`, and `repo_artifact` columns if compatibility permits.
+- add `claim_id`, `module`, and `repo_artifact` columns.
 
-The XLSX should be generated from or checked against this CSV so the two cannot silently drift.
+Once incorporated, the old CSV remains only an archived snapshot of an earlier evidence pack.
 
 ---
 
 # Implementation order
 
-1. Reconcile/merge or explicitly pin the current research frontier. Before editing artifacts, check whether PR #31 and #32 have merged or advanced.
-2. Update the evidence CSV first. It is the flat source for claims and experiment metadata.
-3. Rebuild the XLSX around the new multi-sheet information architecture.
-4. Update the deck narrative and slide order from the evidence pack, not from memory.
+1. Reconcile/merge or explicitly pin the current research frontier. Before editing artifacts, check whether PR #31, #32, and #34 have merged or advanced.
+2. Rebuild the XLSX as the **single maintained evidence spreadsheet**, importing the old CSV rows into `EVIDENCE RECORDS` and extending them from canonical repo state.
+3. Validate the workbook's flat evidence sheet against the relevant repo data/scripts so the workbook does not become a manually forked truth source.
+4. Update the deck narrative and slide order from the verified evidence pack, not from memory.
 5. Render the deck to images/PDF and inspect every slide for overflow, contrast, and visual continuity.
 6. Check all workbook sheets for clipped text, inaccessible color reliance, hidden columns, broken filters, and frozen-pane behavior.
 7. Cross-check every headline number appearing in the deck against workbook cells or repo scripts.
@@ -478,6 +478,7 @@ At implementation time, repeat these checks:
 - latest experiment number;
 - whether PR #31 / Experiment 293 is merged;
 - whether PR #32's 292/294/295 work is merged or has advanced;
+- whether PR #34's 296/297 local-recursion-defect work is merged or has advanced;
 - whether any new result changes:
   - functional state count;
   - physical gauge count;
@@ -503,7 +504,7 @@ After drafting the slide plan, the following improvements were made deliberately
 7. **Keep the human story.** The direct diagonal construction, visual hunches, and failed letter readings remain because they explain discovery rather than merely proving correctness.
 8. **Close the semantic branch more firmly.** The updated ending should say the machine is mechanically cracked while an external consumer remains unknown.
 9. **Make the workbook the technical companion.** This lets the deck stay elegant while still exposing the modern theorem/ablation/gauge machinery to skeptical readers.
-10. **Keep a raw CSV.** Styling should not destroy the simplest machine-readable evidence format.
+10. **One spreadsheet, one truth surface.** The XLSX should contain the flat evidence table as one sheet rather than maintaining a parallel updated CSV. The legacy CSV remains archive-only.
 
 ## Current repo-change review at plan completion
 
@@ -516,5 +517,16 @@ The plan was initially framed against `main` through Experiment 291 plus PRs 31�
 Those results materially improved the plan and are now explicitly represented in slides 11A and 22B and in the Q4 workbook sheet.
 
 PR #31's Experiment 293 remains represented as a weaker composite source-POS3 recovery, but not promoted to the primary public discovery path because its five authoring regularities are less human-simple than direct POS3 recognition.
+
+A second freshness pass then found PR #34 containing Experiments 296–297. These show that tiny cell-local recursion exceptions can preserve terminal `100`, preserve the exact 14 masters, or even retain 20 states, while destroying the reversible route layer. Across the 163 zero/one/two-cell first-pass configurations tested in Experiment 297, only canonical plus two damaged seven-state C variants remain route-capable, and canonical uniquely maximizes retained raw states among them. This strengthens the route criterion as an adversarial discriminator but **does not warrant another main-deck slide**. Incorporate it as a concise callout on slide 21 or 22A and in the workbook's Experiment Frontier / Routing & Terminal / Robustness sheets.
+
+Final sanity conclusions:
+
+- preserve the existing deck's design elements by default;
+- preserve its density, level of detail, and tone rather than optimizing for a particular slide count;
+- add visual complexity only where it carries new information;
+- prefer adapting an existing component to inventing a new visual language;
+- maintain one current spreadsheet artifact, the XLSX verification workbook;
+- keep research-frontier churn mostly in the workbook/appendix unless it changes the public explanatory story.
 
 Before artifact editing begins, re-run the freshness gate above.
