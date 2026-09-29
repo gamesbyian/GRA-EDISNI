@@ -1,0 +1,26 @@
+G stage 7: three-symbol source-quality triage
+
+Goal
+- Find a first three-symbol class (slash/dash/dot) suitable for exact-source latent reconstruction after successful C and A two-state reconstructions.
+
+Candidate selection
+- Public file-size inventory initially favored class G: #475 slash (large source file), #178 dash, #097 dot (edited).
+- Exact bytes recovered for #475, #178, #097 and later #223 slash. Temporary bridge docs were deleted after extraction.
+
+Observed source quality
+- #097 dot: strong visible class-G halftone texture and good edited crop.
+- #178 dash: moderate visible texture, usable sticker crop.
+- #475 slash: despite large source file size, the sticker background is effectively washed out by lighting; file size was a poor proxy for usable halftone information.
+- #223 slash: visible but faint halftone texture; substantially weaker than #097.
+
+Registration trial
+- All sources were perspective-normalized to the sticker boundary.
+- Bounded near-identity registration of #178/#223 to #097 did not produce a robust common-visible correlation in the first controlled search. #178 reached only ~0.055 in the conservative common mask before the broader #223 search was stopped to avoid wasting compute.
+- Do not force a G three-way composite from these sources. The dot source is strong, but current slash/dash pairing is not yet good enough to meet the evidence standard established by C and A.
+
+Methodological lesson
+- Source file size does not predict recoverable halftone quality. Future class selection should inspect actual texture visibility before binary-byte recovery and registration.
+- Prefer a class where each required symbol has directly visible halftone structure in the source photograph, even if file sizes are smaller.
+
+Next
+- Continue source-quality triage across B, D, E, H, and I. A two-state reconstruction can still proceed for any strong slash/dash pair, but the first three-state reconstruction should wait for a class with three genuinely usable exposures.
