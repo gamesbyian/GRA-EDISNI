@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Experiment 301: exhaust arbitrary cell-local selector permutations.
+"""Experiment 311: exhaust arbitrary cell-local selector permutations.
 
-Experiment 300 closed the family of cyclic local depth offsets reused on both
+Experiment 310 closed the family of cyclic local depth offsets reused on both
 passes. This experiment broadens each cell from the three cyclic shifts to ALL
 six permutations of the selector value.
 
@@ -438,7 +438,7 @@ def main() -> None:
         (("100", 14),): 64,
     })
 
-    print("Experiment 301")
+    print("Experiment 311")
     print("arbitrary local selector-permutation family:", total_operations)
     print("exact signature quotient:", [len(x) for x in per_column])
     print("quotient combinations evaluated:", 24 * 216 * 17)
