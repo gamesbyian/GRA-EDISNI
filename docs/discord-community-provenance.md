@@ -152,6 +152,26 @@ Do not import this into the mechanical model. Recover the original argument or s
 
 Action: archival follow-up only.
 
+## Impact on earlier experiment families
+
+This evidence is worth applying retroactively because it changes **which claims are discoveries of the present model** versus **facts already available to a historical solver**.
+
+| Earlier work | Reclassification after Experiment 297 |
+|---|---|
+| Experiments 1–10: image classes, repeat periods, H108, nine-tile geometry | Strengthened as carrier facts and historical human-entry structure. Experiment 297 independently re-executes the earliest period question and confirms 108 is the smallest collision-consistent period in the present ledger. The community testimony additionally shows 108/9 registration was known before the current model. |
+| Experiments 7 and 38: chronological quasi-holdouts | Keep the numerical robustness results, but do not describe H108 itself as a novel prospective discovery if the historical cutoff postdates the community's 108 result. Re-audit wording against actual dates. |
+| Experiments 11–20: plaintext/Braille/geometry/production branches | No reopen. The historical no-dot-before-85 observation and failed rotation/pixel-art attempt add prior negative context, while the unverified >=630 production inference belongs only in archival/manufacturing work. |
+| Experiment 28: exact 81/27 vocabulary boundary | Still stands on the classified corpus and machine structure. The historical dot desert is corroborative, not an independent proof of the boundary. |
+| Experiments 59, 77–90 and 113–114: intended-human path and registration | Strengthened at the front end. Period 108, width 9, 12×9 display, and zero phase are now historically attested; later POS3, diagonal, and selector claims remain present-project inferences. |
+| Experiment 62: Trifid/Fractionated Morse audit | Historical community skepticism toward ordinary Morse/ternary plaintext is directionally consistent with the negative result but adds no new statistical evidence. |
+| Experiments 89, 100, 171, 188, 191, 192: chronology / historical solvability | Revisit wording. The new material is exactly the kind of dated prior structure those experiments are meant to classify. Distinguish "raw data existed" from "this structural inference was publicly known." |
+| Experiments 165–177: evidence reconstruction, repeats, provenance | Strongly cross-checked at the bookkeeping level: the external screenshot's 65 filled / 43 empty / 15 overlap cells / 17 extra records / zero conflicts matches the repository ledger exactly. This is provenance agreement, not a second sample. |
+| Experiments 184–190: physical derivation of address and Q4 serial-stack readability | Front-end assumptions become more human-plausible because the 9-column and zero-phase carrier were historically available. The 4×3×3×3 semantics and Q4 selector interpretation are not supplied by Discord. |
+| Experiment 204: public-corpus blind stripe | Same-corpus caution becomes more important: community renderings of the same 65 residues cannot be counted as extra blind evidence. |
+| Experiment 248 and later human-path work | Update the first two steps from reconstructed hindsight to historically corroborated discovery steps. The remaining bottleneck moves forward to recognizing the finer three-cell POS3 rail and recursive operation. |
+
+No downstream mechanical theorem is invalidated by this reclassification. The main change is epistemic bookkeeping: some early geometry is now better supported and less hindsight-sensitive, while any claim of independent replication from the Discord master must be removed.
+
 ## Consequences for the research plan
 
 The highest-value new lane is **historical method archaeology**, not another semantic decode:
