@@ -562,6 +562,8 @@ Experiment 257 returns to the 832-state optional-pulse primary closure family fr
 
 Experiment 258 exhaustively searches the 36 possible pairwise equalities among the nine frame weights. No set of five or fewer frame-weight equalities eliminates all 818 noncanonical optional-pulse survivors; the natural within-quarter balance rule uses six equalities and does eliminate all 818. Six is therefore the exact cardinality minimum in this equality family. The quarter-local rule is a structurally natural minimum witness, though not claimed to be the unique six-equality solution.
 
+Experiment 259 solves the human-facing raw-evidence minimization exactly within the established H108/POS3 representation. Because the nine primary frames are independent for the Experiment-246 reconstruction constraints, each frame can be minimized exhaustively. The unique global minimum contains 34 distinct observed primary residues and preserves every one of the eight corpus-forced frame polarities plus all 25 corpus-forced primary trits. This is a minimum verification witness for the representation, not a claim that a solver could discover H108/POS3 from those 34 stickers alone.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
