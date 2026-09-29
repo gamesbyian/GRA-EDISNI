@@ -121,6 +121,8 @@ jobs:
         run: python scripts/audit_discord_column_shifts.py
       - name: Audit historical Discord Sticker Studio predictors
         run: python scripts/audit_discord_sticker_studio.py
+      - name: Reproduce historical Discord interval scanner
+        run: python scripts/audit_discord_interval_scanner.py
       - name: Audit human coordinate-copy operations
         run: python scripts/audit_human_coordinate_copy.py
       - name: Audit human second selector choice

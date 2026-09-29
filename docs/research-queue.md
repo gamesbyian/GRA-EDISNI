@@ -158,7 +158,7 @@ Do not inflate evidentiary weight by treating the same 65 populated residues in 
 
 Newly recovered executable artifacts sharpen this lane:
 
-- reproduce the historical interval scanner as provenance, but treat its printed endpoint totals (including 648) as arithmetic extrapolations rather than production evidence;
+- **completed in Experiment 301:** the historical interval scanner has been reproduced exactly; it leaves only offsets 108, 125, 197, 216 and 254, with 108 the smallest compatible tested offset. Its printed 648/625/788/648/762 totals are exactly the next multiples above serial 597, so they are arithmetic extrapolations rather than production evidence;
 - **completed in Experiment 298:** the supplied Column Shift Tool is frozen and all **65,536 admissible** tail-constrained vectors were exhausted under four preregistered generic structure scores, with exact full-`8^9` null distributions. The constrained family misses every unrestricted optimum and its winners are expected somewhere in a 65,536-trial search. Treat generic column shifting as a closed negative historical transform; reopen only if an independent clue specifies a narrower statistic or operation before output inspection;
 - **completed in Experiment 300:** the preserved Sticker Studio's mod-54, multi-period, weighted-zoned and cross-zone predictors were reproduced under leave-one-out scoring; none beats the tool's own zone-majority baseline, so model-filled cells remain quarantined and these predictor families are now formal historical negative controls;
 - retain the P1/P2 phrase search as a negative semantic-search artifact unless an independent clue supplies its composition rule;
