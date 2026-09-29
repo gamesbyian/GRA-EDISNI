@@ -37,6 +37,17 @@
   "missing_high_value_channel": {
     "name": "stickers-solving",
     "status": "not present in inspected export",
+    "created_at": "2026-09-22T19:12:00",
+    "creation_source": {
+      "channel": "ARG / solving",
+      "channel_id": "461275582970462209",
+      "text_blob_sha": "1889cc948f86f5a4455de0d7310b15cdb1b88b5c",
+      "note": "Pinned message says #sticker-hunting and #stickers-solving were newly created to split sticker work."
+    },
+    "later_redirects": [
+      "2026-09-25T02:21:00",
+      "2026-09-28T02:21:00"
+    ],
     "intended_collection": "authorized one-shot Discord bot if moderators approve"
   },
   "key_assets": [
@@ -115,6 +126,14 @@
     {
       "date": "2022-02-24",
       "claim": "dedicated UV inspection of sticker/envelope reported negative"
+    },
+    {
+      "date": "2026-05-22",
+      "claim": "historical solver proposes 9x12 hierarchy where first 9 cells encode a larger domain and last 3 a smaller subset"
+    },
+    {
+      "date": "2026-09-22",
+      "claim": "#stickers-solving and #sticker-hunting created as separate channels; legacy export does not include them"
     }
   ],
   "first_party_archive_refs": [
