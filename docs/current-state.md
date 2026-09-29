@@ -1,6 +1,6 @@
 # Current Research State
 
-_Compacted repository state reconciled through Experiment 313._
+_Compacted repository state reconciled through Experiment 314._
 
 ## Status
 
@@ -24,6 +24,8 @@ Experiments 303–305 close the broadest current state-independent recursion alt
 Experiments 306–312 close the corresponding natural cell-local recursion families. Pass-specific terminal rewrites are massively underidentified: 4,320 different second-pass local rules can reproduce the canonical 14 states and terminal `100`. Requiring the same operation to be reused on both passes restores discrimination. Under all `6^9 = 10,077,696` cell-local selector permutations, the remaining route-max invariant-`100` fork is an explained coupled A-label / operation gauge involving unobserved A-stack cells and the existing `f1` symbol-equality gauge. The canonical rule is therefore the simplest globally uniform representative of the routed functional machine, while the closed corpus cannot select every printed/local gauge representative. See `docs/alternative-machine-single-cell-defects.md`.
 
 Experiment 313 fills the remaining natural gap with reused cell-local translations of both address coordinates: `F_j(q,S)=(q+a_j,S+b_j) mod 3` across all `9^9 = 387,420,489` physical rules. Raw retention can rise to 24, but every >14-state sibling is route-degenerate. Routed retention tops out at 14 across 396 physical rules / 10 observable classes; only one class preserves the canonical 14 states, canonical route shell and invariant terminal `100`. That class contains 36 exact operation gauges whose signatures are identical over all 216 raw-compatible candidates. Thus local additive address freedom introduces gauge multiplicity, not a second functional machine. See `docs/experiment-313-local-2d-translation-reuse.md`.
+
+Experiment 314 tests the smallest selector-dependent coordinate coupling, `F_j(q,S)=(q+c_j*S,S) mod 3`, over all `3^9 = 19,683` reused local shear rules. Raw retention reaches 20, but every >14-state shear is route-degenerate. Exactly 99 operations remain route-capable; all nine route-max 14-state rules are observationally identical to canonical. Their only freedom is independent ternary E/F shear coefficients: E is inactive because `S_E=0`, while F depth 1 is slash for q=0,1,2 across all six raw-compatible primary payloads. This closes the minimal state-dependent local coupling as gauge-only. See `docs/experiment-314-local-selector-shear.md`.
 
 The internal semantic branch is closed at the current evidence level. Reopen it only if an external physical/archive/ARG clue independently supplies a consumer for the terminal object. The bounded protocol for doing that without semantic overfitting is `docs/external-consumer-audit.md`: external evidence must supply the cue first, and failure to find a consumer leaves `100` as the valid project endpoint.
 
