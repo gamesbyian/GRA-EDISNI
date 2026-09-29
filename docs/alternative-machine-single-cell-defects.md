@@ -375,3 +375,200 @@ Within **all cell-local cyclic rewrites of first-pass selector depth**:
 That combination is not a post-hoc endpoint target. Both ingredients were independently motivated earlier: route reversibility/distinction in Experiment 278 and maximum raw-state retention in Experiment 253.
 
 The family is now exhausted rather than sampled. Further cell-local first-pass offset work would add no information unless a new physical constraint changes the model class.
+
+
+# Experiment 299 — Full second-pass local address closure
+
+Experiment 298 closed all cell-local cyclic depth rewrites on the first pass. Experiment 299 turns the telescope around and asks how identifiable the **terminal pass** is if it is allowed its own local address rule.
+
+At each A–I cell independently choose both coordinates:
+
+```
+q' = S(j) + q_offset[j] mod 3
+d' = S(j) + d_offset[j] mod 3
+```
+
+Each cell therefore has 9 local choices. The complete family contains:
+
+```
+9^9 = 387,420,489
+```
+
+second-pass operations.
+
+The first pass remains canonical, leaving the established 20 raw-compatible first-pass survivors.
+
+## Exact factorization
+
+A literal 387-million-operation loop is unnecessary because terminal POS3 validity factorizes by physical column.
+
+Each three-cell column has only `9^3 = 729` local address-choice triples. When those are collapsed by their exact 20-candidate output signature, the three columns contain only:
+
+```
+10
+270
+4
+```
+
+distinct signatures.
+
+Thus every physical operation is counted exactly by only:
+
+```
+10 × 270 × 4 = 10,800
+```
+
+signature combinations, with multiplicities carried through.
+
+This is an exact quotient, not sampling.
+
+## Result
+
+The unconstrained second pass is dramatically less identifiable than the first.
+
+- 35,640 operations retain **all 20** first-pass states.
+- Every 20-state operation has three terminal payloads and is not a maximum route-compatible model.
+- 17,359,920 operations retain some three-class reversible route structure.
+- The maximum route-capable state count is 14.
+- Exactly 249,480 operations attain that 14-state route maximum.
+- Every one of those 249,480 operations selects the **same canonical 14 physical states**.
+- Conversely, every operation selecting exactly the canonical 14 is route-capable because the first-pass computation is unchanged.
+
+So maximum route-compatible retention still identifies the physical state family, but it does **not** identify the terminal address rule.
+
+## How underdetermined is the terminal?
+
+Within those exact-canonical 249,480 operations:
+
+- 27 distinct terminal profiles occur;
+- 178,200 operations produce one invariant terminal across all 14 states;
+- only 4,320 produce invariant terminal `100`.
+
+So even the combination:
+
+```
+exact canonical 14 physical states
++ canonical first-pass route shell
++ invariant terminal 100
+```
+
+still admits **4,320 distinct cell-local second-pass address rules** if pass two is allowed its own arbitrary local coordinate rewrites.
+
+That is a useful negative result. The terminal is not independently reconstructible under such a permissive grammar.
+
+## Interpretation
+
+This does not weaken the recursive model. It clarifies which part of the model carries explanatory force.
+
+A pass-specific rule with 18 independently choosable ternary offsets is an enormous exception budget. Once that budget is admitted, the same observed terminal can be manufactured thousands of ways.
+
+The important mechanical claim is therefore not merely:
+
+> there exists a second address read producing 100.
+
+It is:
+
+> the **same simple selector-address operation is reused** recursively.
+
+Experiment 299 deliberately removes that uniform-reuse constraint and shows exactly what happens: identification evaporates.
+
+That makes pass-to-pass rule reuse a substantive structural premise rather than cosmetic elegance.
+
+
+# Experiment 300 — Same local operator reused on both passes
+
+Experiment 299's huge ambiguity suggests the obvious hostile control: keep cell-local freedom, but require it to describe an actual recursive operation rather than a special terminal decoder.
+
+At each cell choose one depth offset:
+
+```
+F_j(q,S) = (q, S + offset[j]) mod 3
+```
+
+and use the **same** `F_j` on both passes:
+
+```
+first:  F_j(q,S)
+second: F_j(S,S)
+```
+
+The complete family is again `3^9 = 19,683` operations.
+
+## Result
+
+Only 18 of the 19,683 operations preserve any three-class reversible route shell.
+
+Their retained-state counts are:
+
+```
+4  states : 2 operations
+5  states : 4
+6  states : 4
+7  states : 2
+8  states : 1
+10 states : 2
+12 states : 2
+14 states : 1
+```
+
+The unique 14-state route-capable operation is:
+
+```
+canonical
+```
+
+The two best route-capable siblings retain only 12 states:
+
+```
+B2+G2+H2
+A2+B2+G2+H2
+```
+
+Both split their terminals evenly between `122` and `102`.
+
+## Bigger machines exist, but lose the route layer
+
+The global maximum within the same-operation family is 22 states, reached by:
+
+```
+D2
+B1+D2+H1
+B2+D2+H2
+```
+
+All three are route-degenerate.
+
+Thus every operation retaining more raw-compatible states than canonical pays for it by losing the reversible three-class computation.
+
+## Exact-master siblings
+
+Two noncanonical same-operation rules recover exactly the same 14 physical candidates:
+
+```
+B1+H1
+B2+H2
+```
+
+Both terminate invariantly at `102`, and both destroy the route shell.
+
+So even within a genuinely reused operation grammar, exact physical-state reconstruction alone is still weaker than reconstructing the transition structure.
+
+## Combined lesson from 298–300
+
+These three experiments separate three questions that had previously been easy to blur:
+
+1. **Can a local rule reproduce the physical state family?**
+2. **Can it preserve the reversible intermediate computation?**
+3. **Is it genuinely one operation reused recursively rather than a pass-specific decoder?**
+
+The answers are now sharply different.
+
+- Arbitrary first-pass local rewrites: several physical siblings and larger state families exist, but canonical uniquely maximizes retention among route-capable rules.
+- Arbitrary second-pass local rewrites: thousands of terminal rules reproduce the canonical family and endpoint because pass-specific exception freedom is enormous.
+- Same local operation reused on both passes: canonical becomes the **unique maximum-retention route-capable rule** across the full 19,683-member family.
+
+This gives Priority 5 a stronger stopping condition for local-coordinate alternatives.
+
+The meaningful model class is not “anything cell-local that happens to terminate.” It is a compact operation that survives raw-state pressure, preserves the independently derived reversible route layer, and is reused across recursion.
+
+Within the complete cyclic local-depth family, that combination now selects canonical uniquely.
