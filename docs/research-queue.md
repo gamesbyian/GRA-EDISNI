@@ -96,6 +96,8 @@ Disagreement is a bug or hidden assumption and should stop downstream work.
 
 **Discord archaeology now supplies an additional anti-hindsight prior for the next human step.** The 2018 PC/Xbox printer work used side/margin structure to constrain row order, and archived Jan/Dec-2022 sticker discussions explicitly invoked that precedent when interpreting the 108 foreground. This does not license arbitrary rearrangement and is not evidence for POS3 by itself. It does mean future blind-human tests should expose raw boundary/registration structure rather than hiding it, and should ask whether a solver independently separates structural marks from payload before being shown the ternary model.
 
+**Frozen May-2026 predictions provide a prospective proof-sticker check.** The archived community generator predicts residue 103 as dot and residue 45 as slash before September 2026 commenters claimed `•427` (r103) and `•369` (r45). The former would agree and the latter would disagree, but both remain unverified text-only claims. Preserve them as preregistered discriminators: if a provenance-backed photograph appears, score it before changing any model or observation ledger.
+
 
 Experiment 246 materially improves the likely human entry path: the primary object can now be presented as “the stickers visibly determine almost the entire ternary lattice” rather than as a heavily inferred reconstruction.
 
