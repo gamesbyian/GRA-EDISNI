@@ -1,0 +1,2 @@
+hypothesis,known_H108_cells,templates_before_symbol_permutation,symbol_permutations,observed_best_matches,observed_best_fraction,best_template,best_mapping,null_preserves,monte_carlo_trials,null_median_max,null_95pct_max,p_value_ge_observed,conclusion
+H108 as three adjacent rows or columns of Xbox 36x36 core,65,272,6,41,0.6307692307692307,"('rows', 1, True, False)","{'/': '-', '-': '/', '•': '.'}",known positions and symbol counts within each 27-position H108 quarter,50000,39.0,43.0,0.22797544049119017,No significant direct 3x36 Xbox alignment
