@@ -223,12 +223,12 @@
     {
       "id": "terminal41-saf-dat-col",
       "kind": "large_text_asset",
-      "status": "manual-download-required",
+      "status": "vendored",
       "source": "twinysam/INSIDE-ARG",
       "path": "terminal41.link/dat/saf_dat_col.html",
       "blob_sha": "349b818fce618ef55c404bedfb602b1d03f29a48",
       "size_bytes": 1986163,
-      "note": "Exact source needed for Tier 29 byte/mojibake-reversal reproduction; connector returns empty body."
+      "note": "Exact upstream blob preserved via low-level Git blob retrieval; no longer manual-only."
     },
     {
       "id": "fork-archaeology-census",
@@ -253,6 +253,39 @@
       "source": "twinysam/INSIDE-ARG stickers.md",
       "path": "data/social-evidence-index.json",
       "note": "192 deduplicated public provenance/media links categorized across X/Twitter, Reddit, YouTube, eBay, Instagram, Facebook, ResetEra, PriceCharting, CollectedIt and VK."
+    },
+    {
+      "id": "saf-dat-col-exact-blob",
+      "kind": "vendored_git_blob",
+      "status": "vendored",
+      "source": "twinysam/INSIDE-ARG",
+      "path": "archive/external/twinysam-inside-arg/terminal41.link/dat/saf_dat_col.html",
+      "blob_sha": "349b818fce618ef55c404bedfb602b1d03f29a48",
+      "note": "Recovered via low-level Git blob API after fetch_file returned empty content; exact upstream blob SHA preserved."
+    },
+    {
+      "id": "bigdusty-backup-canvas",
+      "kind": "historical_branch_snapshot",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map backups/canvas",
+      "path": "archive/external/bigdusty/backups/",
+      "note": "Preserves revision 1230 backup state and transient Railway image metadata."
+    },
+    {
+      "id": "inside-freecam",
+      "kind": "technical_tool",
+      "status": "vendored",
+      "source": "sashaok123/playdead-INSIDE-FreeCam",
+      "path": "archive/external/inside-freecam/",
+      "note": "Licensed runtime free-camera/freeze tooling for INSIDE scene inspection."
+    },
+    {
+      "id": "inside-technical-tools",
+      "kind": "tool_manifest",
+      "status": "vendored",
+      "source": "multiple public GitHub repos",
+      "path": "data/inside-technical-tools.json",
+      "note": "Catalogs adjacent manipulation/inspection tools, including reference-only unlicensed repos."
     }
   ]
 }
