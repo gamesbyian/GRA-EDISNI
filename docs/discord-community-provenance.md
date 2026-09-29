@@ -8,7 +8,7 @@ A user-supplied FAQ and linked Discord message add historical provenance for the
 
 The important epistemic correction is that the supplied 108-character string is **not a new blind dataset**. Experiment 297 round-trips it against `data/observations.csv` and gets an exact match to every one of the repository's 82 physical records. It is therefore a historical/community reconstruction of the same public corpus, not 65 additional observations.
 
-That still matters. It moves several facts from "geometry discovered during the present solve" to "geometry independently reached by the community before the present model existed."
+That still matters, but the full September-2026 export lets the chronology be stated more carefully. The period-9 A–I background carrier and its exact physical/serial phase were explicit by February 2020. The foreground data were sufficient to recover H108 before 2021, while the earliest explicit community statement found that the minimum repeat length is 108 is 25 March 2021; a formal 108-period argument and 12×9 rendering follow on 11 December 2021. These structures were independently reached before the present model existed, but they should not all be backdated to 2020.
 
 ## Supplied community material
 
@@ -158,11 +158,11 @@ This evidence is worth applying retroactively because it changes **which claims 
 
 | Earlier work | Reclassification after Experiment 297 |
 |---|---|
-| Experiments 1–10: image classes, repeat periods, H108, nine-tile geometry | Strengthened as carrier facts and historical human-entry structure. Experiment 297 independently re-executes the earliest period question and confirms 108 is the smallest collision-consistent period in the present ledger. The community testimony additionally shows 108/9 registration was known before the current model. |
+| Experiments 1–10: image classes, repeat periods, H108, nine-tile geometry | Strengthened as carrier facts and historical human-entry structure. Experiment 297 independently re-executes the earliest period question and confirms 108 is the smallest collision-consistent period in the present ledger. The community testimony dates the background period-9 registration to February 2020 and explicit H108 to March 2021, both before the current model. |
 | Experiments 7 and 38: chronological quasi-holdouts | Keep the numerical robustness results, but do not describe H108 itself as a novel prospective discovery if the historical cutoff postdates the community's 108 result. Re-audit wording against actual dates. |
 | Experiments 11–20: plaintext/Braille/geometry/production branches | No reopen. The historical no-dot-before-85 observation and failed rotation/pixel-art attempt add prior negative context, while the unverified >=630 production inference belongs only in archival/manufacturing work. |
 | Experiment 28: exact 81/27 vocabulary boundary | Still stands on the classified corpus and machine structure. The historical dot desert is corroborative, not an independent proof of the boundary. |
-| Experiments 59, 77–90 and 113–114: intended-human path and registration | Strengthened at the front end. Period 108, width 9, 12×9 display, and zero phase are now historically attested; later POS3, diagonal, and selector claims remain present-project inferences. |
+| Experiments 59, 77–90 and 113–114: intended-human path and registration | Strengthened at the front end. The period-9 A–I phase is historically attested in February 2020; explicit H108 appears by March 2021 and the 12×9 rendering by December 2021. Later POS3, diagonal, and selector claims remain present-project inferences. |
 | Experiment 62: Trifid/Fractionated Morse audit | Historical community skepticism toward ordinary Morse/ternary plaintext is directionally consistent with the negative result but adds no new statistical evidence. |
 | Experiments 89, 100, 171, 188, 191, 192: chronology / historical solvability | Revisit wording. The new material is exactly the kind of dated prior structure those experiments are meant to classify. Distinguish "raw data existed" from "this structural inference was publicly known." |
 | Experiments 165–177: evidence reconstruction, repeats, provenance | Strongly cross-checked at the bookkeeping level: the external screenshot's 65 filled / 43 empty / 15 overlap cells / 17 extra records / zero conflicts matches the repository ledger exactly. This is provenance agreement, not a second sample. |
