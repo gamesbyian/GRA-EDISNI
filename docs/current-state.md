@@ -283,13 +283,9 @@ q=1 -> 012
 q=2 -> 120
 ```
 
-Human inverse derivation:
+Experiment 278 derives the orientation without assuming `q=2-p`. The three first-pass functional families each expose three q-indexed ternary words. Exhausting all `3^3=27` ways to choose one output from each family, and requiring only that all three selected words are reversible ternary permutations and mutually distinct, leaves exactly one choice vector: `(2,1,0)`. The selected shell is `120/012/102`, which is precisely `q=2-p`.
 
-- q=1 is no-request fallback, so route is identity `012`;
-- q=2 is the unique loopless/derangement route, forcing `120`;
-- uniqueness of the derangement forces q=0 to `102`.
-
-Q3 contains a transposition, identity, and 3-cycle. Q1/Q2 are the two opposite 3-cycles.
+The resulting three route maps have fixed-point counts `0/3/1`: one 3-cycle derangement, identity, and transposition. Q1/Q2 remain the two opposite 3-cycles.
 
 ## One-hot / thermometer conversion
 
@@ -597,6 +593,8 @@ Experiment 275 attacks the same fork through coordinate factorization rather tha
 Experiment 276 compares the operational rank of the same two 14-state branches. The canonical branch has three distinct first-pass output triples with multiplicities 4/4/6: `102/002/120`, `102/012/100`, and `102/022/100`, reproducing the established rank-3 functional quotient. The centre-pileup sibling has first-pass rank 1: all 14 states map immediately to `102/022/100`. Canonical surviving selector fields vary at A/C/D/G and number six; sibling selector fields vary only at C/G and number four. Thus the sibling's equal physical state count is misleading: it has already erased all control-class diversity before the second pass. Under the machine interpretation, the canonical branch is the unique nondegenerate transducer in this 14+14 fork.
 
 Experiment 277 removes the last supplied primary-polarity completion. Under exact POS3, raw marks force eight frame polarities and leave only `q=1,d=2` ambiguous. Slash-minority at that frame admits six raw primary payloads, 20 first-pass recursive survivors, and the canonical 14 final states. Dash-minority admits twelve raw primary payloads, hence 432 payload×selector candidates, but zero survive the first selector substitution as valid dash-POS3 surfaces. The full `d<=q` staircase is therefore derived from raw POS3 constraints plus first-pass recursion rather than supplied as a ninth-frame completion rule.
+
+Experiment 278 removes the remaining Q3 route-shell orientation ambiguity in a bounded family. From the three first-pass functional output triples, test every one of the 27 ways to select one q-indexed word per functional class. Requiring the selected words to be three distinct ternary permutations leaves exactly one shell: choices `(2,1,0)` and routes `120/012/102`. Thus `q=2-p` is derived from reversibility plus functional distinction rather than imposed from the earlier `210` baseline interpretation.
 
 ## Mechanical completion
 
