@@ -112,5 +112,84 @@
     "Classify replacement-character regions, HTML entity transformations, CR/NUL transformations, and genuinely absent ranges separately.",
     "Rebuild only JPEG fields fixed by standards or independently preserved metadata.",
     "Report recoverable byte constraints and entropy loss before attempting any image-content reconstruction."
-  ]
+  ],
+  "experiment_316": {
+    "exact_blob_byte_stats": {
+      "A": {
+        "blob_sha": "ce55c03ee972954f6e80f55a1a279bb85024f99b",
+        "bytes": 12150,
+        "utf8_replacement_triples": 0,
+        "literal_question_marks": 2152,
+        "crlf_pairs": 68,
+        "nul_bytes": 0,
+        "html_gt_entities": 0,
+        "html_lt_entities": 0,
+        "comment_openers": 0,
+        "comment_closers": 0,
+        "jfif_offset": 285,
+        "terminal_pe_offset": 12084
+      },
+      "B": {
+        "blob_sha": "f12c02c49f4c3f7589419fe8e20d655f7b95a9f4",
+        "bytes": 16922,
+        "utf8_replacement_triples": 2047,
+        "literal_question_marks": 24,
+        "crlf_pairs": 171,
+        "nul_bytes": 0,
+        "html_gt_entities": 10,
+        "html_lt_entities": 12,
+        "comment_openers": 4,
+        "comment_closers": 4,
+        "jfif_offset": 274,
+        "terminal_pe_offset": 16612
+      },
+      "E": {
+        "blob_sha": "35eb550d0b7600761fd44ce41b44ba494c00e228",
+        "bytes": 17017,
+        "utf8_replacement_triples": 2047,
+        "literal_question_marks": 24,
+        "crlf_pairs": 177,
+        "nul_bytes": 0,
+        "html_gt_entities": 10,
+        "html_lt_entities": 12,
+        "comment_openers": 4,
+        "comment_closers": 4,
+        "jfif_offset": 369,
+        "terminal_pe_offset": 16707
+      },
+      "H": {
+        "blob_sha": "88dca8c56036c12d80aec4ecaab2b0abcce1ab50",
+        "bytes": 16915,
+        "utf8_replacement_triples": 2047,
+        "literal_question_marks": 24,
+        "crlf_pairs": 171,
+        "nul_bytes": 0,
+        "html_gt_entities": 10,
+        "html_lt_entities": 12,
+        "comment_openers": 3,
+        "comment_closers": 3,
+        "jfif_offset": 274,
+        "terminal_pe_offset": 16605
+      },
+      "P": {
+        "blob_sha": "9580913d043ca3efd54a01a38a9cff5767ea8ee7",
+        "bytes": 8760,
+        "utf8_replacement_triples": 1976,
+        "literal_question_marks": 20,
+        "crlf_pairs": 24,
+        "nul_bytes": 0,
+        "html_gt_entities": 0,
+        "html_lt_entities": 0,
+        "comment_openers": 0,
+        "comment_closers": 0,
+        "jfif_offset": null,
+        "terminal_pe_offset": 8752
+      }
+    },
+    "exact_relations": [
+      "E and B share an exact 16703-byte suffix; the 95-byte total-length difference is presentation-wrapper/style material and their damaged JPEG-like content is the same.",
+      "H is exactly B after deleting the four-byte <!-- opener at B offset 13927 and its three-byte --> closer at B offset 14661.",
+      "P is not pristine JPEG data: it still contains 1976 stored UTF-8 replacement-character triples, despite avoiding HTML entities/comment delimiters."
+    ]
+  }
 }
