@@ -1,0 +1,41 @@
+name: External evidence public social smoke
+
+on:
+  pull_request:
+    paths:
+      - "scripts/external_evidence/**"
+      - "data/external-acquisition-targets.json"
+      - ".github/workflows/external-evidence-social-smoke.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    strategy:
+      fail-fast: false
+      matrix:
+        source_id:
+          - instagram-01-B6EECojHUKZ
+          - x-kaydhendricks
+          - vk-bigdafymonster
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install public extractors
+        run: python -m pip install --disable-pip-version-check yt-dlp gallery-dl
+      - name: Harvest one public social source
+        run: python scripts/external_evidence/harvest_public.py --source-id "${{ matrix.source_id }}" --include-social
+      - name: Upload smoke artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: social-smoke-${{ matrix.source_id }}-${{ github.run_id }}
+          path: evidence-work/
+          if-no-files-found: warn
+          retention-days: 14
