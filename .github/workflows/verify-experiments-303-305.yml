@@ -1,6 +1,8 @@
 name: Verify Experiments 303-305
 
 on:
+  push:
+    branches: ["main"]
   pull_request:
     paths:
       - "scripts/audit_quadratic_address_bijections.py"
