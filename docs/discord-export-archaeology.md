@@ -207,3 +207,52 @@ The export also carries larger cover assets than the previously discussed low-qu
 - `assets/Cover_blend-dfb43cdd555596a7.jpg` and `assets/Cover_blend_mirrored-c2fb3d0f85f5b014.jpg` preserve historical overlay/mirroring attempts.
 
 Action: run a bounded structural re-audit directly on the best archived A/B source images before asking owners for new scans. Preserve the historical failed overlay/UV work as negative controls.
+
+
+## Stickers-solving channel creation provenance
+
+The missing `#stickers-solving` export is now historically explained rather than merely observed as absent.
+
+In the archived `ARG / solving` text, on **22 Sep 2026 at 19:12**, santiface posts a pinned message:
+
+> "to better organize the solving efforts I made two new channels: #sticker-hunting ... and #stickers-solving"
+
+Later `#solving` messages on 25 and 28 Sep explicitly redirect sticker work into `#stickers-solving`.
+
+Therefore:
+
+- `#stickers-solving` is a genuinely separate channel, not a rename of `#solving`;
+- it was created only six days before the export repository's 28 Sep cutoff;
+- the public export appears to have captured the long-lived legacy channels but not these newly split sticker channels;
+- the authorized one-shot bot remains useful specifically for this late-created gap.
+
+This also means that essentially all sticker work before 22 Sep 2026 should still be recoverable from the exported `#solving` / `#solving-breakout` corpus.
+
+## Strong historical precursor to the modern 81+27 / selector interpretation
+
+A particularly important `#solving-breakout` message predates the present machine model.
+
+On **22 May 2026 at 16:32**, lime8159, discussing a 9x12 sticker orientation, proposes that:
+
+- the **first 9 bits** could encode one number / larger domain;
+- the **last 3 bits** could encode a second number / smaller subset.
+
+This is not the present machine and should not be retrofitted as one. But it is unusually close in *structural vocabulary* to the modern decomposition of each 12-cell stripe into a 9-cell primary region plus a 3-cell selector region. Together with the January-2022 observation of an 81-cell slash/dash zone followed by a 27-cell slash/dot zone, it is strong anti-hindsight evidence that the raw corpus itself suggested hierarchical 9+3 structure to independent solvers.
+
+Action: treat 9+3 hierarchical decomposition as historically discoverable from the carrier, while keeping the exact POS3 / selector semantics derived from the modern executable model.
+
+## Late 534brn/JPEG forensic recovery lane
+
+The 2025–2026 archive contains a more advanced forensic lane than the older "JPG is irrecoverable" summary suggests.
+
+Key points:
+
+- **20 Dec 2025:** a solver identifies ordinary JPEG structures in the damaged payload, including EXIF/TIFF metadata, Huffman tables and quantization tables, and argues parts of the header can be reconstructed.
+- **18 Mar 2026:** a solver explicitly questions whether the UTF-8 replacement corruption happened server-side or during scraping/saving.
+- **14 Jul 2026:** eropkol identifies a better historical capture linked from an April-2020 Discord message, claiming it avoids some HTML-parser damage but lacks the beginning/end.
+- **21 Jul–2 Aug 2026:** the group reconstructs substantial header/EXIF structure, identifies the file as grayscale JPEG-like data, and preserves a cleaner text capture as `assets/message-630970294e9fb0ce.txt`.
+- **18 Aug 2026:** the original discoverer reports that only two people saw the page before the terminal shutdown and that the surviving copy may have been captured through a Chromebook, leaving the corruption provenance genuinely ambiguous.
+
+This does **not** establish recoverability of the missing image payload; the archive still records expert and community assessments that too much entropy is missing for normal JPEG recovery. It does, however, mean the old "server-side corruption, nothing more can be done" statement is too strong.
+
+High-value bounded follow-up: compare every preserved 534brn capture byte-for-byte, reconstruct only deterministic JPEG/EXIF fields, and quantify exactly which bytes are information-theoretically lost versus merely transformed by ANSI/UTF-8/HTML handling. Do not use guessed image content as evidence.
