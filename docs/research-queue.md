@@ -27,7 +27,7 @@ The current mechanical model is compact, but some uniqueness statements remain c
 Remaining high-value ingredients:
 
 - primary local column-POS3 grammar itself;
-- the single unresolved frame-polarity completion at `q=1,d=2` under weaker-than-staircase grammars;
+- the single unresolved frame-polarity completion at `q=1,d=2` under weaker-than-staircase grammars (Experiment 247 shows `d<=q` is the unique cheapest bounded linear-threshold completion);
 - canonical Q3 shell orientation;
 - broader recursion parents that are not expressible as independent ternary coordinate maps.
 
@@ -76,6 +76,10 @@ Disagreement is a bug or hidden assumption and should stop downstream work.
 ## Priority 4 — human solve reconstruction
 
 Experiment 246 materially improves the likely human entry path: the primary object can now be presented as “the stickers visibly determine almost the entire ternary lattice” rather than as a heavily inferred reconstruction.
+
+**Experiment 248 now records a hindsight-controlled human solve in `docs/human-solve-reconstruction.md`.** It marks each step as direct visibility, strong inference, hypothesis test, or confirmation-only. The remaining human-path bottleneck is earlier than recursion: finding the smallest raw-sticker view that makes POS3 conspicuous without arranging the evidence according to the solved model.
+
+Experiment 249 shows the raw primary reconstruction is robust to every single observed primary-residue deletion; no deletion worsens the 8-polarity/25-trit reconstruction beyond 7/24.
 
 Now that the machine is theoremized, reconstruct the shortest plausible human path without using conclusions before they are discoverable.
 
