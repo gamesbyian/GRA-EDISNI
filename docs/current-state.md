@@ -556,6 +556,10 @@ Experiment 254 weakens the Q4 grammar. If each depth stack may independently cho
 
 Experiment 255 weakens the primary grammar from exactly one minority cell per column to zero-or-one minority cell. Raw observations then admit 1,536 primary completions; with the 36 Q4 selectors there are 55,296 raw candidate machines. Recursive POS3 closure leaves 832 states, all of which still terminate at `100`. Exactly 14 of the 832 have all 27 primary columns occupied by one minority cell, and those are the canonical exact-POS3 family. Therefore exact primary POS3 is genuinely needed to select the 14-state physical family, but terminal `100` is invariant over a much broader missing-pulse primary grammar.
 
+Experiment 256 enumerates all 2^9 per-stack Q4 polarity assignments rather than comparing only the globally shared and fully independent extremes. Raw marks admit 256 polarity words; only 16 survive recursive closure. Eight retain the full 14-state family and terminal `100`, while eight form a 12-state sibling terminating at `110`. In every maximal 14-state word, B/D/E/G/H are slash-exception; A/C/F/I may vary across the surviving maximal family. The D-stack polarity is the decisive separator between the 14-state/`100` and 12-state/`110` branches. Therefore globally shared Q4 polarity is stronger than the transition mechanics require, even though it remains a compact rule for the canonical physical completion.
+
+Experiment 257 returns to the 832-state optional-pulse primary closure family from Experiment 255. Requiring only that, within each external quarter, the three depth frames have equal total minority-pulse counts reduces 832 exactly to the canonical 14 states. Every survivor then has frame weight 3 and no missing pulses. Thus exact one-pulse-per-column POS3 need not be imposed directly inside this tested parent: the weaker combination "zero-or-one pulse per column + quarter-local frame-weight balance" recovers it after recursive closure. This is a bounded alternative grammar, not a raw observation.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
