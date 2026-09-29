@@ -149,6 +149,21 @@ Archival target created by this clue:
 - search iam8bit support/marketing archives for the wording;
 - ask iam8bit directly what "numbered... in their own way" referred to.
 
+### 9. iam8bit publicly describes substantial physical-production work as in-house
+
+In a 2020 GamesRadar feature about boutique physical releases, Jon Gibson and Amanda White describe iam8bit's operating model for its Legacy Cartridge Collection. They say the in-house iam8bit team manages creative, restoration, **print production, fulfilment, shipping, sales, and business**, while specialized partners handle cartridge engineering/fabrication.
+
+Source:
+
+- GamesRadar, 2020: https://www.gamesradar.com/lets-get-physical-meet-the-companies-reissuing-retro-classics-for-audiences-new-and-old/
+
+This statement is **not specific to INSIDE** and does not identify the 2019 CE sticker operator. It does, however, weaken an assumption that an unknown external packaging company necessarily owned the black-wrap/seal process. The production chain should retain two live hypotheses:
+
+1. **iam8bit-managed internal kitting/print-production:** sticker source and assembly instructions may have lived directly in iam8bit's project files or warehouse workflow.
+2. **iam8bit-managed external vendor:** iam8bit owned the creative/print-production specification while an outside printer or fulfillment house executed it.
+
+The first routing question should therefore ask **who owned the black-wrap/seal production step internally**, before asking only for a vendor name.
+
 ## Responsibility map
 
 Current public evidence supports this working split:
