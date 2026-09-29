@@ -142,6 +142,31 @@ def main() -> None:
     assert q4_gauge["independent_polarity_route_masks"] == ["0", "A", "C", "A+C"]
     assert q4_gauge["independent_polarity_route_shell"] == ["120", "012", "102"]
     assert q4_gauge["functional_ablation_experiment"] == 292
+
+    q4_inverse = spec["q4"]["abstract_selector_inverse"]
+    assert q4_inverse["experiment"] == 294
+    assert q4_inverse["raw_q4_observations_used"] is False
+    assert q4_inverse["expected_terminal_used_as_filter"] is False
+    assert q4_inverse["expected_core_location_used_as_filter"] is False
+    assert q4_inverse["selector_maps"] == 3**9 == 19683
+    assert q4_inverse["core_location_candidates"] == 84
+    assert q4_inverse["first_pass_pos3_pairs"] == 288
+    assert q4_inverse["second_pass_pos3_pairs"] == 208
+    assert q4_inverse["terminal_distribution"] == {
+        "100": 28,
+        "102": 84,
+        "110": 24,
+        "112": 72,
+    }
+    assert q4_inverse["route_capable_core_locations"] == ["ADG"]
+    assert q4_inverse["scaffold_coordinate_order"] == "BCEFHI"
+    assert q4_inverse["route_capable_scaffolds"] == ["200122", "220122"]
+    assert q4_inverse["states_per_scaffold"] == 7
+    assert q4_inverse["recovered_core_words"] == ["110", "220", "212"]
+    assert q4_inverse["recovered_terminal"] == "100"
+    assert q4_inverse["recovered_route_shell"] == ["120", "012", "102"]
+    assert q4_inverse["remaining_abstract_selector_gauge"] == "C=0 or 2"
+
     assert spec["recursion_gauge"]["bits"] == 1
 
     expected_census = Counter({
@@ -166,6 +191,7 @@ def main() -> None:
     print("OK(spec): preferred latent register, 95/13 split, and 54/36/18 census match")
     print("OK(spec): corrected coupled gauge-family metadata is internally consistent")
     print("OK(spec): Experiment 292 shared-polarity ablation is recorded")
+    print("OK(spec): Experiment 294 abstract-selector inverse is recorded")
     print("OK(spec): terminal handoff fields remain canonical")
 
 
