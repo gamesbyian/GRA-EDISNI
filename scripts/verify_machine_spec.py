@@ -177,11 +177,19 @@ def main() -> None:
         "H": 2,
         "I": 2,
     }
-    assert q4_code["q4_observation_records_used"] == 9
-    assert q4_code["distinct_codebook_entries_observed"] == 6
-    assert q4_code["compatible_shared_codebooks"] == 8
-    assert q4_code["pairwise_distinct_codeword_survivors"] == 8
-    assert q4_code["all_nonuniform_codeword_survivors"] == 6
+    assert q4_code["fixed_scaffold_q4_observation_records"] == 9
+    assert q4_code["fixed_scaffold_distinct_codebook_entries_observed"] == 6
+    assert q4_code["fixed_scaffold_compatible_shared_codebooks"] == 8
+    assert q4_code["full_q4_observation_records"] == 11
+    assert q4_code["recovered_selector_fields_tested"] == 6
+    assert q4_code["full_family_forced_codebook_entries"] == 7
+    assert q4_code["full_family_compatible_shared_codebooks"] == 4
+    assert q4_code["residual_physical_codebook_gauge_entries"] == [
+        "E[0,2]",
+        "E[1,2]",
+    ]
+    assert q4_code["pairwise_distinct_codeword_survivors"] == 4
+    assert q4_code["all_nonuniform_codeword_survivors"] == 4
     assert q4_code["equal_row_weight_survivors"] == 1
     assert q4_code["cyclic_equivariant_survivors"] == 1
     assert q4_code["minimum_slash_survivors"] == 1
