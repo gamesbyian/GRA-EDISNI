@@ -8,8 +8,10 @@ read from DISCORD_BOT_TOKEN and is never written to the export.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
+import secrets
 import pathlib
 import time
 import urllib.error
@@ -107,6 +109,81 @@ def fetch_messages(channel_id: str, token: str):
     return messages
 
 
+def anonymous_alias(user_id: str, salt: bytes) -> str:
+    digest = hashlib.sha256(salt + user_id.encode("utf-8")).hexdigest()[:10]
+    return f"poster-{digest}"
+
+
+def sanitize_user(user: dict, salt: bytes) -> dict:
+    user_id = str(user.get("id") or "unknown")
+    alias = anonymous_alias(user_id, salt)
+    return {
+        "id": alias,
+        "username": alias,
+        "global_name": None,
+        "discriminator": "0",
+        "avatar": None,
+        "bot": bool(user.get("bot", False)),
+        "system": bool(user.get("system", False)),
+    }
+
+
+def anonymize_message(value, salt: bytes):
+    """Remove Discord user identity metadata before an export is serialized."""
+    if isinstance(value, list):
+        return [anonymize_message(item, salt) for item in value]
+    if not isinstance(value, dict):
+        return value
+
+    out = {}
+    for key, item in value.items():
+        if key in {"author", "user"} and isinstance(item, dict):
+            out[key] = sanitize_user(item, salt)
+        elif key == "member" and isinstance(item, dict):
+            # Guild membership metadata can itself be identifying and is not
+            # needed for the puzzle archive.
+            out[key] = {"anonymized": True}
+        elif key == "mentions" and isinstance(item, list):
+            out[key] = [
+                sanitize_user(mention, salt) if isinstance(mention, dict) else mention
+                for mention in item
+            ]
+        else:
+            out[key] = anonymize_message(item, salt)
+    return out
+
+
+def replace_user_mentions(value, aliases: dict[str, str]):
+    """Replace Discord <@snowflake> tokens in strings with anonymous aliases."""
+    if isinstance(value, str):
+        for user_id, alias in aliases.items():
+            value = value.replace(f"<@{user_id}>", f"@{alias}")
+            value = value.replace(f"<@!{user_id}>", f"@{alias}")
+        return value
+    if isinstance(value, list):
+        return [replace_user_mentions(item, aliases) for item in value]
+    if isinstance(value, dict):
+        return {key: replace_user_mentions(item, aliases) for key, item in value.items()}
+    return value
+
+
+def collect_user_ids(value, found: set[str]) -> None:
+    if isinstance(value, list):
+        for item in value:
+            collect_user_ids(item, found)
+        return
+    if not isinstance(value, dict):
+        return
+    for key, item in value.items():
+        if key in {"author", "user"} and isinstance(item, dict) and item.get("id"):
+            found.add(str(item["id"]))
+        elif key == "mentions" and isinstance(item, list):
+            for mention in item:
+                if isinstance(mention, dict) and mention.get("id"):
+                    found.add(str(mention["id"]))
+        collect_user_ids(item, found)
+
+
 def download_attachment(url: str, destination: pathlib.Path):
     destination.parent.mkdir(parents=True, exist_ok=True)
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -135,6 +212,11 @@ def main() -> int:
         help="Restrict export to one or more exact channel/thread names.",
     )
     parser.add_argument("--download-attachments", action="store_true")
+    parser.add_argument(
+        "--anonymize-authors",
+        action="store_true",
+        help="Pseudonymize poster/user identity metadata before writing export files.",
+    )
     parser.add_argument(
         "--include-archived-public-threads",
         action="store_true",
@@ -184,8 +266,11 @@ def main() -> int:
     ]
     selected.sort(key=lambda c: (int(c.get("position", 0)), str(c.get("id"))))
 
+    anonymization_salt = secrets.token_bytes(32) if args.anonymize_authors else None
+
     manifest = {
         "schema_version": 1,
+        "authors_anonymized": bool(args.anonymize_authors),
         "guild": {
             "id": str(guild.get("id")),
             "name": guild.get("name"),
@@ -215,12 +300,24 @@ def main() -> int:
         manifest["exported_channel_count"] += 1
         manifest["exported_message_count"] += len(messages)
 
+        export_messages = messages
+        if anonymization_salt is not None:
+            user_ids: set[str] = set()
+            collect_user_ids(messages, user_ids)
+            aliases = {
+                user_id: anonymous_alias(user_id, anonymization_salt)
+                for user_id in user_ids
+            }
+            export_messages = anonymize_message(messages, anonymization_salt)
+            export_messages = replace_user_mentions(export_messages, aliases)
+
         out = {
             "schema_version": 1,
+            "authors_anonymized": bool(args.anonymize_authors),
             "guild_id": str(guild.get("id")),
             "guild_name": guild.get("name"),
             "channel": channel,
-            "messages": messages,
+            "messages": export_messages,
         }
         file_path = root / "channels" / f"{safe_name(name)}--{cid}.json"
         file_path.parent.mkdir(parents=True, exist_ok=True)
