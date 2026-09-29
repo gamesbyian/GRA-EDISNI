@@ -25,19 +25,21 @@ Source folder ID: `17M62PsS0LtSpEBljmjlSHtwLgSF6bNsq`
 
 The Drive folder currently exposes 134 file entries. Some entries are duplicate uploads with the same filename/content. The repo archives unique payloads by filename under `archive/research-files/`.
 
-At this audit, 125 unique research filenames are present in the repo. The only unique Drive files not copied verbatim are the two large ZIP bundles below:
+At this audit, all 127 unique research filenames exposed by Drive are present in the repo, including the two large ZIP bundles that initially exceeded the direct connector transfer path.
+
+The two oversized ZIPs were imported byte-for-byte through a one-shot GitHub Actions handoff using temporary authenticated Drive download references, with exact byte-size checks before commit:
 
 1. `h108_marked_printer_stage1_artifacts.zip`
    - Drive file ID: `1xoQMWQy3POvLv1H4kJzC772g0EVkBuef`
    - size: 11,617,658 bytes
-   - status: Drive raw fetch succeeded to local handoff, but the inline base64 body failed during connector transfer with an HTTP/2 body error before GitHub ingest.
+   - repo path: `archive/research-files/h108_marked_printer_stage1_artifacts.zip`
 
 2. `INSIDE_Sticker_Cipher_Research_Artifacts.zip`
    - Drive file ID: `1WZ0JunCvFU0wxTNSIoMNVLopMp29D_j_`
    - size: 21,053,771 bytes
-   - status: not attempted inline after the smaller ZIP established the connector transfer ceiling.
+   - repo path: `archive/research-files/INSIDE_Sticker_Cipher_Research_Artifacts.zip`
 
-These ZIPs are archive bundles rather than the sole copies of the research outputs. Their constituent research artifacts are being preserved individually in this repository. If a future upload path can accept a Drive/file reference directly, copy the two ZIPs verbatim and update this note.
+The temporary import workflow was removed after the successful transfer.
 
 Duplicate Drive entries with the same filename are intentionally not duplicated in Git; the goal is preservation of unique artifacts, not preservation of redundant Drive upload objects.
 
