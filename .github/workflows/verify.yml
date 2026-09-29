@@ -49,3 +49,5 @@ jobs:
         run: python scripts/audit_primary_balance_minimality.py
       - name: Audit minimum primary witness
         run: python scripts/audit_minimum_primary_witness.py
+      - name: Audit Q4 polarity gauge factorization
+        run: python scripts/audit_q4_polarity_gauge.py
