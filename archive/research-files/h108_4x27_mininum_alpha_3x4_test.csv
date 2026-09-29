@@ -1,0 +1,25 @@
+phase,hflip,vflip,invert,dead_positions,singleton_positions,total_candidate_letters_digits,candidate_counts,candidate_sets
+2,False,False,True,4,3,12,0 3 1 0 1 0 1 0 6,∅ | FGP | V | ∅ | F | ∅ | 1 | ∅ | AHMW08
+0,True,False,True,5,3,5,1 0 0 0 1 0 0 1 2,1 | ∅ | ∅ | ∅ | H | ∅ | ∅ | J | HW
+0,False,False,False,6,3,3,0 0 1 1 0 0 0 1 0,∅ | ∅ | 1 | C | ∅ | ∅ | ∅ | 7 | ∅
+2,False,True,False,6,1,5,0 2 2 0 0 0 1 0 0,∅ | X7 | TY | ∅ | ∅ | ∅ | 9 | ∅ | ∅
+2,True,True,False,6,0,7,0 3 2 0 0 0 2 0 0,∅ | FKX | TY | ∅ | ∅ | ∅ | RZ | ∅ | ∅
+2,True,False,True,6,1,17,0 2 1 0 0 0 0 0 14,∅ | OQ | V | ∅ | ∅ | ∅ | ∅ | ∅ | BDHKMNOQUW0468
+0,False,True,False,7,2,2,0 0 1 1 0 0 0 0 0,∅ | ∅ | T | C | ∅ | ∅ | ∅ | ∅ | ∅
+0,False,True,True,7,2,2,0 0 0 0 1 0 0 0 1,∅ | ∅ | ∅ | ∅ | H | ∅ | ∅ | ∅ | M
+0,True,True,True,7,1,3,0 0 0 0 2 0 0 0 1,∅ | ∅ | ∅ | ∅ | HK | ∅ | ∅ | ∅ | M
+1,True,False,False,7,1,3,0 0 2 0 0 0 0 1 0,∅ | ∅ | LU | ∅ | ∅ | ∅ | ∅ | 3 | ∅
+0,False,False,True,7,1,4,0 0 0 0 1 0 0 0 3,∅ | ∅ | ∅ | ∅ | H | ∅ | ∅ | ∅ | HW4
+1,True,False,True,7,1,4,0 3 0 0 0 0 0 1 0,∅ | HW9 | ∅ | ∅ | ∅ | ∅ | ∅ | 4 | ∅
+1,True,True,True,7,1,4,0 3 0 0 0 0 0 1 0,∅ | M38 | ∅ | ∅ | ∅ | ∅ | ∅ | F | ∅
+2,True,False,False,7,1,5,0 1 0 0 0 0 4 0 0,∅ | L | ∅ | ∅ | ∅ | ∅ | GKX6 | ∅ | ∅
+2,True,True,True,7,0,9,0 2 0 0 0 0 0 0 7,∅ | J2 | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | AHMW028
+2,False,True,True,7,0,23,0 8 0 0 0 0 0 0 15,∅ | BDLOQS15 | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | BDHMNOQSUW04589
+0,True,True,False,8,1,1,0 0 1 0 0 0 0 0 0,∅ | ∅ | T | ∅ | ∅ | ∅ | ∅ | ∅ | ∅
+1,False,True,False,8,1,1,0 0 1 0 0 0 0 0 0,∅ | ∅ | N | ∅ | ∅ | ∅ | ∅ | ∅ | ∅
+1,False,False,False,8,0,2,0 0 0 0 0 0 0 2 0,∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | EF | ∅
+1,False,False,True,8,0,2,0 2 0 0 0 0 0 0 0,∅ | HW | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅
+2,False,False,False,8,0,2,0 0 0 0 0 0 2 0 0,∅ | ∅ | ∅ | ∅ | ∅ | ∅ | XZ | ∅ | ∅
+1,False,True,True,8,0,6,0 6 0 0 0 0 0 0 0,∅ | BEKM68 | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅
+0,True,False,False,9,0,0,0 0 0 0 0 0 0 0 0,∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅
+1,True,True,False,9,0,0,0 0 0 0 0 0 0 0 0,∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅

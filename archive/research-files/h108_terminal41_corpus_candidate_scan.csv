@@ -1,0 +1,2 @@
+candidate,normalized_length,source,core_terminal41_windows_scanned,compatible_window_occurrences,distinct_compatible_candidates,repeated_letter,repeat_positions,jointly_known_repeat_cells,repeat_cell_matches,repeat_cell_conflicts,status
+LOGHYPERNATE,12,terminal41.link/dat/breachlog.html,358,6,1,E,"7,12",2,2,0,"active candidate, weakly supported; not a decode"

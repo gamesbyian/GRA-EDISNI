@@ -1,0 +1,3 @@
+model,trials,passes,pass_rate
+uniform A-Z iid,500000,38359,0.076718
+English letter-frequency iid,500000,6913,0.013826
