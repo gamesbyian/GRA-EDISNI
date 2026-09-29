@@ -2,7 +2,7 @@
 
 _Status: Experiment 241 theorem graph, now paired with the executable proof pack in `scripts/verify_proof_pack.py`._
 
-This document separates supplied observations/grammars from derived consequences in the current closed-corpus machine. It is intentionally narrower than the historical Results document: the goal is to make circular support and redundant premises obvious.
+This document separates supplied observations/grammars from derived consequences in the current closed-corpus machine. Historical same-corpus reconstructions may strengthen chronology or intended-human plausibility, but do not count as independent observations. It is intentionally narrower than the historical Results document: the goal is to make circular support and redundant premises obvious.
 
 ## Node classes
 
@@ -17,7 +17,7 @@ This document separates supplied observations/grammars from derived consequences
 
 | ID | Class | Claim | Direct dependencies |
 |---|---|---|---|
-| O1 | O | Serial foreground period is 108 and background image class cycles A–I with period 9. | corpus |
+| O1 | O | Serial foreground period is 108 and background image class cycles A–I with period 9; Experiment 297 additionally documents historically prior community recovery of the 108/9 registration and zero phase from the same public corpus. | corpus; historical provenance |
 | O2 | O | H108 address factorization is `r-1 = 27q + 9d + j`; residues 1–81 use slash/dash and 82–108 use slash/dot. | O1, corpus |
 | G1 | G | Primary columns use POS3: ternary value is the position of the exceptional member in a three-cell rail. | O2 |
 | G3 | G | Q4 supplies one ternary depth-selector value `S(j)∈{0,1,2}` at each A–I position; physically, a nonuniform slash/dot depth stack represents `S` by the depth of its exceptional member. The executable canonical path fixes all-slash as a printed gauge convention. | O2 |

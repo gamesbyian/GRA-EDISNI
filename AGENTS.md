@@ -42,6 +42,8 @@ Keep these categories separate:
 
 A derived property does not become independent evidence for its own premises.
 
+The preserved Discord 108-cell master is an exact same-corpus rendering of `data/observations.csv`; use it for historical chronology/registration provenance, never as an independent holdout for the machine.
+
 Do not multiply matched-null frequencies or code-space densities as if independent.
 
 ## Closed-corpus rules

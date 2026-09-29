@@ -92,6 +92,9 @@ Disagreement is a bug or hidden assumption and should stop downstream work.
 
 ## Priority 4 — human solve reconstruction
 
+**Experiment 297 materially changes the status of the earliest human-entry steps.** A user-supplied historical Discord reconstruction independently reached the 108-position period, 9-column / 12-row view, and sticker-0 phase before the present machine model. The preserved community master is an exact same-corpus round trip of all 82 repository observations, so it must not be counted as a blind validation set; its value is chronology and anti-hindsight evidence. The separate A–I image cycle also matches serial mod 9 with zero mismatches and places serial 0 on I, the registered top-left cell. Treat H108/9-column/zero-phase registration as externally motivated carrier structure, then continue to derive POS3 and deeper machine claims from the corpus.
+
+
 Experiment 246 materially improves the likely human entry path: the primary object can now be presented as “the stickers visibly determine almost the entire ternary lattice” rather than as a heavily inferred reconstruction.
 
 **Experiment 248 now records a hindsight-controlled human solve in `docs/human-solve-reconstruction.md`.** It marks each step as direct visibility, strong inference, hypothesis test, or confirmation-only. The remaining human-path bottleneck is earlier than recursion: finding the smallest raw-sticker view that makes POS3 conspicuous without arranging the evidence according to the solved model.
@@ -145,6 +148,22 @@ This is the strongest remaining closed-corpus adversarial test.
 Use exact enumeration or SAT/SMT-style constraint solving if the family becomes too large for direct loops.
 
 ## Priority 6 — archival/manufacturing lane
+### Priority 6A — historical method archaeology
+
+This is now a high-value archival sublane because it can supply **preregistered structure without new stickers**.
+
+Recover dated Discord posts/screenshots around the original 108/9 discovery and classify every recovered item as one of: new raw observation, same-corpus reconstruction, independently inferred operation, or copied community lore. Re-audit chronology-sensitive Experiments 7, 38, 89, 100, 171, 188, 191, and 192 against any recovered dates so their language distinguishes historical data availability from historical public knowledge of a structural inference. Highest-value targets are the original sticker-0/background-puzzle argument, the first 12×9 rendering, any historically attempted operations beyond generic Morse/ternary/pixel-art tests, and any dated clue language that could have motivated address substitution or selector reuse.
+
+Do not inflate evidentiary weight by treating the same 65 populated residues in a different rendering as independent data. Preserve negative historical tests because they are useful anti-hindsight controls. Use `docs/discord-community-provenance.md` and Experiment 297 as the classification template.
+
+Newly recovered executable artifacts sharpen this lane:
+
+- reproduce the historical interval scanner as provenance, but treat its printed endpoint totals (including 648) as arithmetic extrapolations rather than production evidence;
+- freeze the supplied Column Shift Tool exactly as found, then exhaustively enumerate all **65,536 admissible** tail-constrained shift vectors; preregister image/structure scores and matched null families before inspecting winners, so a compelling-looking bitmap cannot win by eyeballing alone;
+- mine the preserved Sticker Studio for dated methods and negative controls, while keeping every model-filled cell outside the observation ledger;
+- retain the P1/P2 phrase search as a negative semantic-search artifact unless an independent clue supplies its composition rule;
+- recover the labeled community 3×3 assembly/order referenced as missing in the September-27 handoff and use its date/provenance to separate historical availability from later reconstruction.
+
 
 This is opportunistic, not critical path.
 

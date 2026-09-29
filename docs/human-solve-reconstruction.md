@@ -28,9 +28,9 @@ That immediately suggests separating:
 
 Do not begin with plaintext. The serial number is behaving like an address.
 
-### 2. Fold foreground marks modulo 108 — S
+### 2. Fold foreground marks modulo 108 — D/S
 
-The foreground has a 108-state repeat structure while the image class repeats every 9.
+The foreground has a 108-state repeat structure while the image class repeats every 9. Experiment 297 adds useful historical control here: a community investigator reports independently reaching 108 entries and a 9-column view from overlap plus image numbering years before the present machine model. The supplied community master exactly round-trips the same 82-record corpus, so this is not new data, but it shows the fold itself was genuinely discoverable without hindsight from the later routing interpretation.
 
 Factor:
 
@@ -52,7 +52,7 @@ with:
 
 At this stage `q` and `d` are labels for nested serial blocks, not yet semantic “quarter” and “depth” concepts.
 
-### 3. Use the physical A–I 3×3 layout — D/S
+### 3. Use the physical A–I 3×3 layout — D
 
 The image classes occupy:
 
@@ -63,6 +63,8 @@ F G H
 ```
 
 so each nine-residue serial block can be viewed as a physical 3×3 frame.
+
+Experiment 297 verifies the registration directly across all 82 records: serial modulo 9 maps `1..8,0 -> A..H,I` with zero mismatches. Serial 0 therefore lands on `I`, the top-left physical cell. The linked historical FAQ explicitly cites this background puzzle as the reason the 108 foreground master should also start at sticker 0. Phase zero is therefore an externally motivated physical registration, not a rotation chosen after seeing the machine.
 
 The 108-fold now becomes twelve 3×3 frames: four groups of three.
 
@@ -299,7 +301,7 @@ That gives a plausible human sequence:
 5. recover frame polarity locally;
 6. only then write the ternary digits and notice the global staircase.
 
-The remaining earlier discovery question is now the H108/A–I framing itself, not POS3 orientation.
+The earlier H108/A–I framing question is now materially reduced by Experiment 297: period 108, width 9, and zero-phase orientation are historically attested community discoveries. The remaining discovery question is the transition from that preregistered carrier view to the finer three-cell POS3 rail interpretation.
 
 Experiment 274 adds a second, genuinely raw-facing cue before full POS3 commitment. Normalize the observed slash/dash marks only to minority/majority using the frame polarities, then compare the nine sparse physical frames pairwise. Exactly two frame pairs have the strongest conflict-free support available in the corpus: four positions observed in both frames, no normalized conflicts, and eight of nine physical positions covered across the pair. They are `q0,d1=q1,d0` and `q1,d2=q2,d2`. Those are precisely two repeated motifs in the canonical primary tensor. In the weaker frame-weight-three + centroid parent, extending both partial repeats to exact frame equality removes the only 14-state centre-column sibling and leaves the canonical 14 states. A human route can therefore treat repeated sparse motifs as a recognition cue rather than needing to invent one-pulse-per-column from nothing. The inferential jump is still real: partial compatibility does not logically prove full equality.
 

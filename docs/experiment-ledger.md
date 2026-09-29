@@ -305,6 +305,7 @@ Latest indexed experiment: **255**.
 | 295 | Q4 physical-codebook holdout audit: Experiment-294 fixed scaffold first leaves 8 shared E[S,d] codebooks; requiring the full recovered selector family to reproduce all 11 Q4 observations forces 7/9 entries and leaves a two-bit gauge E[0,2]/E[1,2] across 4 codebooks; distinct/nonuniform rows remain non-unique, but either equal row weight or cyclic depth/value equivariance uniquely yields /.., ./., ../ (slash iff d=S), with minimum slash count agreeing as a simplicity prior |
 
 | 296 | Q4 label-symmetry stress test: among the four Experiment-295 shared codebooks, swap(0,1) leaves two survivors while every nontrivial simultaneous selector/depth relabeling that moves label 2 uniquely selects /.., ./., ../; either 3-cycle alone fixes the full two-bit gauge |
+| 297 | historical Discord 108/9 provenance audit: supplied community master round-trips all 82 records exactly; 65 unique residues, 15 overlap cells / 17 extra records, zero conflicts, and exact serial-mod-9 A–I registration with 0→I; re-running the early period test makes 108 the smallest symbol-consistent period through serial 597 and the smallest compatible multiple of 9; upgrades H108/9-column/zero-phase chronology and human plausibility but is explicitly same-corpus evidence, not a blind machine replication |
 
 ## Current frontier
 
@@ -314,7 +315,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–295:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, and primary-POS3 robustness plus weaker-frame recovery.
+- **250–297:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 

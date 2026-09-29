@@ -1,0 +1,33 @@
+{
+  "source": {
+    "description": "User-supplied transcription from the INSIDE sticker-solving Discord FAQ, preserved 2026-09-29",
+    "message_url_phase_anchor": "https://discord.com/channels/460626942190813184/462637922944811028/704767641499205693",
+    "message_url_ternary_discussion": "https://discord.com/channels/460626942190813184/1552077397493424272/1554205291682463766",
+    "status": "community transcription, not a new independent physical observation"
+  },
+  "indexing": {
+    "rule": "character index equals sticker serial modulo 108",
+    "index_0": "sticker 0 mod 108",
+    "repo_residue_note": "repository residue 108 represents serial 0 mod 108; residues 1..107 map to same-number character indices"
+  },
+  "rows_12x9": [
+    "/ /--/ / ",
+    "/- -/-/ /",
+    "--/- -- -",
+    "  //-/   ",
+    "/-/// //-",
+    " ///  - -",
+    "  /- //  ",
+    "/ //  /--",
+    "- --/ ///",
+    "/   ./  .",
+    ". .  ./..",
+    "  /      "
+  ],
+  "symbol_legend": {
+    "/": "grey in community color rendering",
+    "-": "red in community color rendering",
+    ".": "yellow in community color rendering",
+    " ": "unobserved residue"
+  }
+}

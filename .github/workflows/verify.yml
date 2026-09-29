@@ -115,6 +115,8 @@ jobs:
         run: python scripts/audit_q4_label_symmetry.py
       - name: Audit weaker input POS3 recovery
         run: python scripts/audit_weaker_input_pos3.py
+      - name: Audit Discord community master provenance
+        run: python scripts/audit_discord_master.py
       - name: Audit human coordinate-copy operations
         run: python scripts/audit_human_coordinate_copy.py
       - name: Audit human second selector choice
