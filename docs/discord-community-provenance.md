@@ -185,3 +185,18 @@ The highest-value new lane is **historical method archaeology**, not another sem
 7. avoid counting same-corpus reconstructions as independent statistical evidence.
 
 This lane can strengthen intended-human-path and anti-hindsight claims without requiring any new sticker to surface.
+
+
+## Second artifact batch — tools and verification handoff
+
+A second user-supplied Discord batch is preserved under `archive/discord/2026-09-29/`. It materially improves **method provenance**, but it does not add new physical sticker observations.
+
+The historical interval-scanner source explains the modular-period screenshot directly: it tests offsets against the then-known serial/symbol table, rejects any offset with an observed disagreement, and prints surviving offsets plus an extrapolated endpoint derived from the maximum serial. This upgrades the provenance of the 108 search itself while downgrading any temptation to treat the printed `648` as a production-count observation. It is a consequence of the candidate period arithmetic, not independent manufacturing evidence.
+
+The preserved Sticker Studio source is the generator behind many of the supplied charts. It explicitly separates 65 known H108 cells from 43 unknowns, implements the old mod-54/multi-period/partner-vote models, and contains leave-one-out checks showing that those prediction schemes do not beat the simple zone baseline. Preserve those failures as historical negative controls. Never feed its guessed cells into the canonical observation ledger.
+
+The preserved Column Shift Tool is more structurally interesting. It treats rows 1–9 of the 12×9 view as nine vertical payload columns and rows 10–12 as one 3-bit control word per column, with dot=1 and slash=0. Each control word rotates its corresponding nine-cell upper column by 0–7 positions. Crucially, already-known tail cells restrict the allowed controls; under the tool's own frozen grid the nine columns admit `2,8,4,4,4,2,4,4,2` values respectively, so the complete admissible family is only **65,536 shift vectors**. This makes the historical transform exhaustively testable. It remains a hypothesis until a preregistered structural score separates its best outputs from matched nulls.
+
+The P1/P2 combination file records a very large semantic pairing search and explicitly reports no convincing SPACE/INSIDE-themed sentence. Keep it as negative semantic-search archaeology, not as a lead.
+
+Finally, the supplied September-27 verification handoff is cautious same-corpus work rather than a claimed solve. It independently records the 108/65/43 bookkeeping, repeat consistency, dot clustering, negative literal printer-string and LIFEDETECTED tests, straight-layout Braille negatives, and a then-blocked jigsaw branch awaiting the community's labeled 3×3 image order. Its stopping-point chronology is useful when deciding whether later recovered Discord material is genuinely new to that investigation.
