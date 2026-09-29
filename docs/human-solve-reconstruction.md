@@ -260,8 +260,12 @@ This path is short enough to be human-plausible and keeps every large conceptual
 
 The weakest human-discovery step is still the first recognition of POS3 itself. Once POS3 is noticed, Experiment 246 shows that the primary reconstruction becomes unusually constrained.
 
-The next best human-path research target is therefore not “how would someone guess recursion?” but:
+Experiment 259 now gives an exact answer to the narrower verification version of that question: once H108/POS3 is being tested, a unique set of 34 distinct primary residues preserves all eight raw-forced frame polarities and all 25 raw-forced trits. See `docs/minimum-primary-witness.md`.
 
-> What is the smallest raw-sticker view in which POS3 becomes conspicuous without already arranging the data according to the solved model?
+Experiment 261 also improves the last ambiguous primary frame. At `q=1,d=2`, the current slash-minority polarity yields one exact POS3 payload completion, while the alternate dash-minority polarity leaves two. A human can therefore prefer the current completion by local determinacy even before noticing the global `d<=q` threshold rule.
 
-That question can be attacked with blinded layouts and progressive-reveal worksheets.
+The remaining discovery question is narrower and cleaner:
+
+> Can a solver notice the exceptional-position / frame-balance structure from a raw-first rendering of the 34-residue witness, before seeing solved ternary digits or the compact lattice?
+
+The next worksheet should therefore show the nine sparse physical 3×3 frames first, then progressively reveal frame polarity, minority positions, and only finally the ternary lattice.
