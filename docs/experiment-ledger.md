@@ -279,6 +279,7 @@ Latest indexed experiment: **255**.
 | 269 | idempotent-retraction audit: among the nonlinear fiber-preserving family, idempotence plus two-pass POS3 closure uniquely selects the canonical identity recursion and terminal 100 |
 | 270 | Q4 gauge physical-simplicity audit: all-slash is the unique minimum in polarity flips, physical domain walls, mixed rows, and mixed columns across all 16 recursively closed polarity words |
 | 271 | exhaustive 3+3+3 frame-balance partitions: 90/280 abstract groupings recover 14 states, but physical quarter rows are the unique exact solution among the two straight parallel-axis partitions; depth columns leave 50 |
+| 272 | frame-weight-three primary parent: dropping column occupancy yields 1,296 raw primaries and 1,548 recursively closed states, all terminal 100; only 14 retain exact column POS3 |
 
 ## Current frontier
 
@@ -288,7 +289,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–271:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
+- **250–272:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
 
 ## Status shorthand
 
