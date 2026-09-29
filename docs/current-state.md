@@ -590,6 +590,8 @@ Experiment 271 exhausts all 280 ways to partition the nine primary (q,d) frames 
 
 Experiment 272 drops the optional-pulse column grammar entirely and keeps only a frame-level rule: every primary 3×3 frame contains exactly three minority-symbol cells somewhere in the frame, consistent with raw observations and the established polarity. This broader parent has 1,296 raw primary completions × 36 Q4 selectors. Canonical recursive closure leaves 1,548 states, all with terminal `100`; only 14 survivors have one minority cell in every physical column. The non-POS3 survivors contain between 2 and 10 defective columns. Therefore the terminal is robust even to substantial within-frame pulse rearrangement, but the exact 14-state physical family still depends on directional column structure. Frame-weight-three alone is not a substitute for G1.
 
+Experiment 273 adds a strictly weaker directional condition than POS3 to the frame-weight-three parent: the three minority cells in every frame must have horizontal first moment centred at the middle column (`sum column indices = 3`). This admits both distributed occupancy `(1,1,1)` and a degenerate centre pileup `(0,3,0)`. Recursive closure leaves exactly 28 states: the canonical 14 exact-POS3 states plus 14 siblings. Every sibling differs only in frame `q=1,d=0`, where the canonical distributed pattern is replaced by all three pulses in the centre column. The two families differ only at residues 28,33,34,35, all currently unobserved in the public corpus, and both still terminate at `100`. Thus a weak symmetry principle gets extremely close to deriving G1 but exposes one exact closed-corpus physical fork.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
