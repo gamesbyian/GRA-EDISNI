@@ -274,6 +274,7 @@ Latest indexed experiment: **255**.
 | 264 | all 280 rail partitions: raw POS3 compatibility leaves 4 combinatorial survivors; physical columns are the sole survivor made of three straight parallel rails |
 | 265 | 34-residue discovery / 20-residue holdout: 5 maximum-determinacy rail partitions are nominated, but only physical columns generalize to all withheld data |
 | 266 | coupled affine first-pass audit: among 432 bijections of the (q,S) address plane, maximal raw-state retention forces d'=S and leaves only six external-q relabelings |
+| 267 | singular-affine negative control: unconstrained retention is maximized by 24 maps that erase selector S entirely; shell preservation is necessary to avoid trivial winners |
 
 ## Current frontier
 
@@ -283,7 +284,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–266:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
+- **250–267:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
 
 ## Status shorthand
 
