@@ -10,8 +10,9 @@ Run:
 python scripts/verify_proof_pack.py
 ```
 
-The runner reads `data/theorem-obligations.json`, parses the theorem graph, checks its dependency structure, verifies that terminal node `T6` has no `R`, `A`, or `S` ancestors, and then runs five existing independent checks:
+The runner reads `data/theorem-obligations.json`, parses the theorem graph, checks its dependency structure, verifies that terminal node `T6` has no `R`, `A`, or `S` ancestors, and then runs six existing independent checks:
 
+- the Experiment 246 raw-primary reconstruction, including the derived outer no-self result;
 - the canonical Boolean machine verifier;
 - the native `(x,y,p,g)` verifier;
 - exact Boolean/native master-set comparison;
