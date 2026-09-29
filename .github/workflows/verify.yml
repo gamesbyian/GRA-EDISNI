@@ -63,3 +63,11 @@ jobs:
         run: python scripts/audit_affine_first_pass.py
       - name: Audit affine retention degeneracy
         run: python scripts/audit_affine_degeneracy.py
+      - name: Audit nonlinear fiber-preserving recursion
+        run: python scripts/audit_fiber_preserving_recursion.py
+      - name: Audit idempotent recursion criterion
+        run: python scripts/audit_idempotent_recursion.py
+      - name: Verify machine-spec drift
+        run: python scripts/verify_machine_spec.py
+      - name: Verify executable proof pack
+        run: python scripts/verify_proof_pack.py
