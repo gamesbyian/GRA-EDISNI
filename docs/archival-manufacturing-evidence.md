@@ -82,6 +82,22 @@ High-value comparison question:
 
 If the game case, disc, or poster are identical while the coded sticker exists only on CE packaging, then the sticker was likely introduced in the CE-specific assembly/fulfillment chain rather than the ordinary game-manufacturing chain.
 
+### 6. The coded sticker is documented as a seal on the wrapping
+
+The community's long-running INSIDE-ARG documentation states that the stickers **seal the wrapping** of the Collector's Edition. That is a highly useful manufacturing fact because it places the coded label at or near the **final packaging stage**, downstream of the fabrication of individual contents.
+
+Source:
+
+- twinysam/INSIDE-ARG public documentation, Collector's Edition Stickers section: https://github.com/twinysam/INSIDE-ARG
+
+Manufacturing implication:
+
+- a sticker applied to exterior wrapping is unlikely to have been part of RealDoll's silicone fabrication process;
+- the most plausible application points become final box assembly, shrink/wrap sealing, warehouse kitting, or fulfillment preparation;
+- the sticker printer and the final pack-out operation may therefore have been the same vendor or tightly coupled vendors.
+
+This gives a concrete provenance test: locate photos/video of an **unwrapped but not yet finally sealed** CE during production. If coded stickers are absent at that stage, the application point can be localized even further.
+
 ## Responsibility map
 
 Current public evidence supports this working split:
@@ -95,7 +111,7 @@ Current public evidence supports this working split:
 | Premium box / foam / printed inserts | unknown supplier(s) | unresolved | high |
 | Coded-sticker artwork/master generation | unknown | unresolved | highest |
 | Sticker printing | unknown | unresolved | highest |
-| Sticker application / box assembly | unknown | unresolved | highest |
+| Sticker application / final wrapping or box assembly | unknown | unresolved | highest; community documentation places sticker on wrapping |
 | Final CE fulfillment | likely iam8bit-managed, exact vendor unresolved | medium | high |
 
 ## Records worth finding
