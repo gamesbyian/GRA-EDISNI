@@ -130,7 +130,7 @@ The recommendation below preserves the existing slide IDs where possible. New in
 | 30 • WHAT IT MIGHT MEAN | REPLACE | Retitle **WHAT 100 IS, AND WHAT IT ISN'T**. Left: mechanically established properties (frame 9, normalized 100, raw ---//////, invariant fixed terminal, derangement certificate). Right: not established (plaintext, URL, lore phrase, known ARG consumer). One final line: an external clue could still tell us how to consume the terminal. | This closes the internal semantic branch without claiming the ARG itself is solved. |
 | 31 • WHERE THE MYSTERY STANDS | REWRITE | Progress ladder should now show **mechanical decode / transducer** essentially complete, with **external semantic consumer** as a separate unresolved branch rather than one more step on the same ladder. | Avoid "decoded" as a binary single axis. |
 | 32 • WHY THIS MATTERS | MODIFY | New central contrast: "The community already had enough data to recover the machine." New stickers are validation/gauge resolution; the critical path is no longer collection. | Stronger ending than the old "may already have enough." |
-| APPENDIX • SOURCES & SCOPE | MAJOR UPDATE | Replace stale "Experiments 140–150 + Engines A–C" line. Cite repo state through 291 plus the merged/latest applicable 292–295 results at implementation time. Add `machine-spec.json`, theorem graph, proof-pack, raw enumerator, and three-way implementation equivalence as supporting sources. State clearly which claims come from unmerged PRs if the deck is built before merge. | Last implementation step should re-check this slide against actual merged state. |
+| APPENDIX • SOURCES & SCOPE | MAJOR UPDATE | Replace stale "Experiments 140–150 + Engines A–C" line. Cite repo state through 291 plus the merged/latest applicable 292–297 results at implementation time. Add `machine-spec.json`, theorem graph, proof-pack, raw enumerator, and three-way implementation equivalence as supporting sources. State clearly which claims come from unmerged PRs if the deck is built before merge. | Last implementation step should re-check this slide against actual merged state. |
 
 ## Deck length, density, and pacing
 
@@ -148,7 +148,7 @@ The seven proposed inserts below are content recommendations, not a quota:
 
 During implementation, preserve the existing deck's standard of density and pacing. If a proposed insert can be absorbed cleanly into an adjacent slide **without making that slide visibly denser, smaller-typed, or more technical than its neighbors**, do so. If an existing slide now needs two distinct visual claims to stay correct, split it rather than compress it. Conversely, do not add a slide merely because an experiment exists.
 
-The deck may end up longer than 51 slides or shorter. Slide count is subordinate to continuity, legibility, and the existing deck's tone.
+The deck may grow or shrink as needed. Slide count is subordinate to continuity, legibility, and the existing deck's tone.
 
 Slides 22A and 22B contain central new evidence and should remain prominent somewhere in the main narrative even if their exact boundaries change.
 
