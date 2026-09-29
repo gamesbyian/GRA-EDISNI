@@ -340,6 +340,37 @@ def main() -> None:
     assert canonical_column_multiplicities == [3, 1, 12]
     assert 3 * 1 * 12 == 36
 
+    # Resolve those 36 exact-operation gauges back into physical cell moves.
+    canonical_options = []
+    for js, target_signature in zip(columns, canonical_signatures):
+        options = []
+        for local in product(TRANSLATIONS, repeat=3):
+            if column_signature(candidates, js, local) == target_signature:
+                options.append(local)
+        canonical_options.append(options)
+
+    assert canonical_options[0] == [
+        ((0, 0), (0, 0), (0, 0)),
+        ((0, 0), (0, 0), (1, 0)),
+        ((0, 0), (0, 0), (2, 0)),
+    ]
+    assert canonical_options[1] == [
+        ((0, 0), (0, 0), (0, 0)),
+    ]
+    assert canonical_options[2] == [
+        ((b, db), (e, 0), (h, dh))
+        for b, db in ((0, 0), (1, 2))
+        for e in range(3)
+        for h, dh in ((0, 0), (1, 2))
+    ]
+
+    # In physical letters this is:
+    #   F: arbitrary q translation, depth unchanged;
+    #   E: arbitrary q translation, depth unchanged;
+    #   B/H independently: identity or (q+1, depth-1).
+    # A/D/G and I/C remain fixed. These options produce exactly the same
+    # q0/q1/q2/terminal signatures over all 216 raw-compatible candidates.
+
     # The canonical observational class is the only route-max class with the
     # canonical 14 physical states, invariant 100, and canonical route shell.
     for key in route_max_classes:
@@ -365,6 +396,7 @@ def main() -> None:
     print("route-max class multiplicities:", sorted(route_max_classes.values()))
     print("canonical-equivalent physical operations:", route_max_classes[canonical_key])
     print("canonical column gauge multiplicities:", canonical_column_multiplicities)
+    print("canonical exact gauges: F q+=0/1/2; E q+=0/1/2; B/H each identity or (q+1,d-1)")
     print("simplest route-max representatives:")
     for key, multiplicity in sorted(
         route_max_classes.items(),
