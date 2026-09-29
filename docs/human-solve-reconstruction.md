@@ -266,8 +266,19 @@ Experiment 261 also improves the last ambiguous primary frame. At `q=1,d=2`, the
 
 Experiment 262 answers the first version of that question positively inside the candidate grammar. In `docs/raw-first-primary-witness.md`, the 34 residues are shown only as nine consecutive sparse 3×3 physical frames. Eight frames eliminate one polarity outright under exact POS3; the ninth resolves by local completion count 1 versus 8. A solver can therefore recover the entire polarity sequence before seeing the `q,d` lattice or the global staircase.
 
-The next discovery question moves one step earlier:
+Experiments 263–265 now push one step earlier, into discovery of the rail orientation itself.
 
-> What raw presentation makes the one-exception-per-column POS3 idea itself noticeable, before the solver has been told to test it?
+Among the four natural parallel-line partitions of a 3×3 frame, only physical columns fit exact POS3 across all nine full-corpus primary frames. Broadening to every one of the 280 possible 3+3+3 cell partitions leaves four combinatorial survivors, but physical columns are the only one made of three straight parallel rails.
 
-The useful next worksheets should compare several non-solved presentations of the same marks: serial order, consecutive 9-frame physical layouts, and perhaps column-oriented strips, while withholding ternary labels and recursion.
+More importantly, the 34-residue witness can be used as a genuine discovery set rather than merely a retrospective illustration. It nominates five partitions that both fit all nine sparse frames and maximize polarity determinacy. The other 20 observed primary residues then act as holdout evidence: four candidates fail, while physical columns alone generalize to all nine full frames.
+
+That gives a plausible human sequence:
+
+1. fold to consecutive 9-residue physical frames;
+2. test simple three-cell rail organizations;
+3. notice that columns are exceptionally constraining;
+4. use more stickers as validation rather than as part of the original guess;
+5. recover frame polarity locally;
+6. only then write the ternary digits and notice the global staircase.
+
+The remaining earlier discovery question is now the H108/A–I framing itself, not POS3 orientation.
