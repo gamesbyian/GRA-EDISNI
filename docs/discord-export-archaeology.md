@@ -357,3 +357,35 @@ On **6 Jan 2024**, a solver explains that the conspicuous nine-cell black block 
 This is not evidence that those residues were never manufactured: discovery is heavily biased and later observations can fill historical gaps. Its value is human-solve provenance. Before the present machine model, solvers were already treating a **nine-cell contiguous absence at the end of the 108 carrier** as potentially intentional registration information rather than merely missing data.
 
 Keep this separate from the current Q4 interpretation. It supports discoverability of the 9-cell framing clue, not the machine semantics derived later.
+
+
+## Public Google Docs recover the original puzzle rationale
+
+The Discord URL inventory led to several still-readable historical Google Docs. These are stronger than later chat recollection because they preserve the working notes produced while the original printer ARG was active.
+
+### \`INSIDE PRINTER SECRET\`
+
+Public document ID: \`1vlpah0LdCRpJe-OfhnkaiBIcmepGXust5BMbaFJGGt8\`.
+
+The document states explicitly that rearranging the 32 long PC printer strings into a specific order reveals the acorn/41 image, and records the then-leading hypothesis that:
+
+- the **dots** carry the encoded message;
+- the **acorn shape serves as a method of preserving the correct order of the strings**.
+
+That is unusually direct historical support for the registration interpretation behind the later Discord “margin/check-bit” explanations. In a solved Playdead puzzle, geometry could be the ordering scaffold while a secondary symbol layer carried the payload.
+
+The same document records analogous multi-stage consumers on other platforms: Xbox geometry → Braille → password; iOS time-of-day ordering → 5×5 glyphs → password; Switch controller actions → RGB codes. Each accepted password/code then caused Playdead/Terminal41 state to advance.
+
+### \`terminal41.link journal\`
+
+Public document ID: \`1V9TsI8D-NG191aNplbQxnteboUc_TYl0IViFtkwDKWA\`.
+
+This contemporaneous journal is useful because it separates **scheduled/server-side site changes** from changes solvers could confidently attribute to submitted answers. In late June 2018, multiple Terminal41 pages changed around platform-release dates even though the author says the community was unaware of doing anything to trigger them. The journal explicitly warns that early \`printreqstatus\`/breachlog changes may therefore have been time/release driven.
+
+This qualifies the “active consumer” precedent:
+
+- the archived printer JavaScript and later accepted-answer behavior demonstrate genuine submitted-input handling;
+- not every Terminal41 page transition was necessarily caused by solver input;
+- historical endpoint chronology must distinguish **time/platform-release gates** from **answer-triggered unlocks**.
+
+That distinction should carry into any search for a modern consumer of terminal \`100\`: server state changes alone do not prove causation by a submitted token.
