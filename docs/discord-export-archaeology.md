@@ -134,6 +134,14 @@ The ordering clue is not only a retrospective analogy supplied in 2026. The arch
 - **23–24 Dec 2022:** after more rearrangement attempts, a participant summarizes the earlier picture-puzzle precedent as important information living in one mark type while dashes/slashes functioned as a background element "to help us arrange it correctly."
 
 This is valuable anti-hindsight evidence. Long before the present typed-machine interpretation, solvers already regarded **registration marks / boundary regularities / symbol-role separation** as plausible Playdead grammar for this exact sticker foreground. It does not validate any particular modern arrangement, but it lowers the epistemic cost of asking whether one symbol family is structural rather than payload.
+## The 81+27 alphabet boundary was noticed years before the machine model
+
+The export contains unusually strong anti-hindsight evidence for the modern primary/selector split:
+
+- **26 Jan 2022:** a solver notes that the 108 rendering can be viewed as an 81-cell slash/dash region followed by 27 slash/dot cells and proposes, speculatively, that the latter might be checksums. The proposed semantics were wrong, but the exact **81+27 structural boundary** was identified from the raw symbols.
+- **29 Oct 2023:** in `#solving-breakout`, solvers argue that the puzzle probably needs a visual aid because the earlier Xbox/PC puzzles did, and explicitly call “Why are yellows only at the bottom?” the big question/clue.
+
+The current model's interpretation of those 27 cells as selector frames is much stronger than the historical checksum hypothesis, but the boundary itself did not originate with the current algebra. Treat the historical discussion as provenance for discoverability, not as an independent holdout.
 ## Frozen May-2026 sticker predictions versus September claims
 
 The export preserves a useful prospective discriminator that should remain quarantined until the physical claims are verified.
