@@ -4,7 +4,7 @@ _Date: 2026-09-29_
 
 ## Purpose
 
-Experiment 297 changed the epistemic status of the earliest carrier steps. The full Discord export now dates those front-end discoveries more precisely. The nine-state A–I background carrier and its `IAB/CDE/FGH` registration were explicit in February 2020. The foreground corpus was retrospectively sufficient to recover H108 before 2021, but the earliest explicit community statement found so far that the sticker repeat has minimum length 108 is **25 March 2021**. A formal 108-period argument and 12×9 rendering follow on **11 December 2021**.
+Experiment 297 changed the epistemic status of the earliest carrier steps. The full Discord export now dates those front-end discoveries more precisely. The nine-state A–I background carrier and its `IAB/CDE/FGH` registration were explicit in February 2020. The foreground corpus was retrospectively sufficient to recover H108 before 2021, but the earliest explicit community statement found so far that the sticker repeat has minimum length 108 is **25 March 2021**. A formal 108-period argument and 12×9 rendering follow on **11 December 2021**. The explicit foreground convention that the 108 rendering starts with sticker 0 at top left is documented on **26 January 2022**.
 
 The research queue therefore marked chronology-sensitive Experiments **7, 38, 89, 100, 171, 188, 191, and 192** for re-audit.
 
