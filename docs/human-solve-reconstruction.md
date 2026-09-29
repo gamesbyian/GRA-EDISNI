@@ -321,6 +321,7 @@ Experiment 283 checks that this is not a peculiarity of Manhattan distance. As l
 
 Experiment 293 supplies a useful boundary rather than a shorter human route. Exact source POS3 can be recovered without imposing one-pulse-per-column directly if a solver instead assumes common frame weight, promotes both strongest sparse-frame repeats to exact equality, and imposes one aggregate column-balance relation in each quarter. Those five regularities are jointly subset-minimal in that tested parent: remove any one and extra non-POS3 states return. That makes the construction a legitimate weaker composite authoring grammar, but not a simpler discovery story. For the human reconstruction, direct recognition of the three physical column rails remains the cleaner hypothesis to test.
 
+Experiment 315 materially reduces the remaining front-end geometry burden. The historical community was already applying 3×3 framing to the 12×9 foreground by December 2022, explicitly described the foreground as twelve 3×3 squares by October 2023, and by May 2026 described those twelve blocks as nine slash/dash blocks followed by three slash/dot blocks. This means the twelve-frame geometry should be treated as a historically attested human move, not merely a convenient factorization discovered by the present model. The provenance upgrade stops there: the archive search found no pre-current statement of the within-frame one-exception-per-column POS3 rule, so POS3 remains a genuine present-project inference.
 
 ## Reconciliation with the earlier physical-entry work
 
