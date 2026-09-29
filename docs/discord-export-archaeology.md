@@ -58,9 +58,7 @@ and maps it to the local export asset:
 
 That image is directly readable from the fork and is therefore no longer a dead-source artifact.
 
-**Caution:** do not silently rewrite the project's registered `IAB/CDE/FGH` carrier from a visual glance at this screenshot. The screenshot visibly carries A–I annotations, but Experiment 302's remaining question is an exact mapping between historical tile labels, image assembly, serial phase, and the project's registered carrier convention. That comparison should be made explicitly before changing any machine coordinate statement.
-
-Action: update Experiment 302 from “pixels unavailable” to “source pixels recovered; exact orientation reconciliation pending/available for direct audit.”
+That source-access problem is now fully closed by Experiment 302. The same archived transcript explicitly states the row-major order `I,A,B,C,D,E,F,G,H` in message `673020569905528835`, immediately after the A–I labeling message `673020230200721428`. The discussion also states `A=001`, hence `I=000`, fixing the serial/background phase. The current `IAB/CDE/FGH` carrier is therefore directly historically attested rather than inferred from a modern visual read.
 
 ## Historical Sticker Studio
 
@@ -120,7 +118,7 @@ A user-supplied pair of Discord images shows:
 
 The accompanying Discord explanation says those alternating side pixels help determine the order in which the rows should be placed.
 
-The public `#solving` export contains matching historical discussion from 9 Jul 2018. Solvers describe an "alternating interlaced pattern" that limits arrangements, identify the "distribution of margin slashes" as important, note that different row orders change the visible object, and ultimately recover the acorn/41 image. On 11 Jul the `#tldr` channel records the result as a deliberate rearrangement of the PC long strings.
+The public `#solving` export contains matching historical discussion from 9 Jul 2018 with exact anchors. Message `465922647662788609` describes an "alternating interlaced pattern" that limits arrangements; `465923442374344707` calls the "distribution of margin slashes" a key feature; `466023354214776832` says the left/right patterns form six boundary patterns; `466032381518807070` says "The sides are the only thing that made this possible"; and `466036574128439301` explicitly calls the side marks "check-bits" used to line things up. Solvers change line order while trying to recover the image and ultimately recover the acorn/41 image. On 11 Jul the `#tldr` channel records the result as a deliberate rearrangement of the PC long strings.
 
 This closes a small but useful design-vocabulary gap: row permutation in a successful historical INSIDE ARG puzzle was not justified only by visual resemblance. Boundary/margin structure helped constrain the ordering.
 
@@ -129,8 +127,8 @@ Implication for current sticker work: preserve and inspect ancillary/boundary in
 
 The ordering clue is not only a retrospective analogy supplied in 2026. The archived `#solving` discussion shows the community making the connection while the sticker foreground was still unsolved:
 
-- **26 Jan 2022:** after rendering the 108-chain from sticker 0, a participant calls out a conspicuous empty bottom row. Another says it may be analogous to the side pixels of the older Xbox code, "kind of a hint to indicate the format/resolution of the message."
-- **27 Jan 2022:** a participant explicitly asks whether the first nine rows could be arranged "as same as we did it acorn." The idea is exploratory and was not a demonstrated solve.
+- **26 Jan 2022:** after rendering the 108-chain from sticker 0, a participant calls out a conspicuous empty bottom row. In message `935891168124887100`, another says it may be analogous to the side pixels of the older printer-code puzzle, "kind of a hint to indicate the format/resolution of the message."
+- **27 Jan 2022:** message `936157143273443359` explicitly asks whether the first nine rows could be arranged "as same as we did it acorn." A nearby restatement of the boundary-pixel idea is preserved at `936154496030097418`. These were exploratory suggestions, not demonstrated sticker solves.
 - **23–24 Dec 2022:** after more rearrangement attempts, a participant summarizes the earlier picture-puzzle precedent as important information living in one mark type while dashes/slashes functioned as a background element "to help us arrange it correctly."
 
 This is valuable anti-hindsight evidence. Long before the present typed-machine interpretation, solvers already regarded **registration marks / boundary regularities / symbol-role separation** as plausible Playdead grammar for this exact sticker foreground. It does not validate any particular modern arrangement, but it lowers the epistemic cost of asking whether one symbol family is structural rather than payload.
