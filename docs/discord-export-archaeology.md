@@ -125,6 +125,15 @@ The public `#solving` export contains matching historical discussion from 9 Jul 
 This closes a small but useful design-vocabulary gap: row permutation in a successful historical INSIDE ARG puzzle was not justified only by visual resemblance. Boundary/margin structure helped constrain the ordering.
 
 Implication for current sticker work: preserve and inspect ancillary/boundary information around the physical sticker carrier before treating row/column order as an arbitrary visualization choice. Do not reopen unconstrained H108 permutations; look specifically for an external registration cue.
+## Historical community applied the ordering precedent to the sticker foreground
+
+The ordering clue is not only a retrospective analogy supplied in 2026. The archived `#solving` discussion shows the community making the connection while the sticker foreground was still unsolved:
+
+- **26 Jan 2022:** after rendering the 108-chain from sticker 0, a participant calls out a conspicuous empty bottom row. Another says it may be analogous to the side pixels of the older Xbox code, "kind of a hint to indicate the format/resolution of the message."
+- **27 Jan 2022:** a participant explicitly asks whether the first nine rows could be arranged "as same as we did it acorn." The idea is exploratory and was not a demonstrated solve.
+- **23–24 Dec 2022:** after more rearrangement attempts, a participant summarizes the earlier picture-puzzle precedent as important information living in one mark type while dashes/slashes functioned as a background element "to help us arrange it correctly."
+
+This is valuable anti-hindsight evidence. Long before the present typed-machine interpretation, solvers already regarded **registration marks / boundary regularities / symbol-role separation** as plausible Playdead grammar for this exact sticker foreground. It does not validate any particular modern arrangement, but it lowers the epistemic cost of asking whether one symbol family is structural rather than payload.
 ## Other-channel leads
 
 The late `#solving` export preserves several non-sticker discoveries and loose ends that may matter only if they supply an independently motivated external consumer:
