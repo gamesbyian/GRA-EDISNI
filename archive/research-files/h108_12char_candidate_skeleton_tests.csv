@@ -1,0 +1,25 @@
+candidate,source_class,repeated_letters,repeated_cell_comparisons,contradictions,passes_repeated_letter_test,first_conflicts,rationale
+PROBESACTIVE,ARG-style probe phrase,Ex2,1,0,True,,Probe terminology is established; exact phrase is a hypothesis.
+SUBJECTALIVE,game-theme/terminal style,Ex2,1,0,True,,Plausible clinical/terminal status language.
+BREACHSTATUS,ARG exact phrase,Ax2 Sx2 Tx2,8,3,False,A@4/9:cell3 0!=1; A@4/9:cell4 0!=1; A@4/9:cell5 1!=0,Terminal41 uses 'breach status' repeatedly.
+BREACHTHREAT,ARG exact phrase,Ax2 Ex2 Hx2 Rx2 Tx2,15,5,False,A@4/11:cell3 0!=1; A@4/11:cell6 0!=1; E@3/10:cell6 1!=0; H@6/8:cell7 1!=0; R@2/9:cell1 1!=0,Terminal41 print status uses 'WARNING BREACH THREAT'.
+KEYEXPANSION,ARG exact phrase,Ex2 Nx2,6,5,False,E@2/4:cell1 1!=0; E@2/4:cell4 1!=0; E@2/4:cell5 0!=1; E@2/4:cell6 1!=0; N@8/12:cell1 1!=0,Terminal41 uses 'gateway key expansion'.
+KEYINTEGRITY,ARG exact phrase,Ex2 Ix2 Tx2 Yx2,11,5,False,E@2/7:cell1 1!=0; E@2/7:cell6 1!=0; I@4/10:cell1 0!=1; T@6/11:cell3 0!=1; T@6/11:cell7 1!=0,Terminal41 uses 'gateway key integrity'.
+REQUIREMENTS,ARG exact word,Ex3 Rx2,15,5,False,E@2/7:cell1 1!=0; E@2/7:cell6 1!=0; E@2/9:cell1 1!=0; E@7/9:cell3 0!=1; R@1/6:cell4 1!=0,Terminal41 repeatedly refers to print requirements.
+PRINTREQUEST,ARG vocabulary,Ex2 Rx2 Tx2,7,5,False,E@7/10:cell1 0!=1; R@2/6:cell2 1!=0; R@2/6:cell4 1!=0; R@2/6:cell7 0!=1; R@2/6:cell9 0!=1,Printer/request language is central to Terminal41.
+SYSTEMBREACH,ARG-style compound,Ex2 Sx2,9,4,False,E@5/9:cell3 0!=1; E@5/9:cell4 0!=1; E@5/9:cell9 1!=0; S@1/3:cell6 0!=1,Natural compression of recurring system/breach language.
+SIGNALDETECT,ARG-style compressed phrase,Ex2 Tx2,4,1,False,T@9/12:cell3 1!=0,Detection language plus terminal-style compression.
+DEVICEACTIVE,ARG-style device phrase,Cx2 Ex3 Ix2 Vx2,18,9,False,C@5/8:cell8 0!=1; E@2/6:cell2 1!=0; E@2/6:cell4 1!=0; E@2/6:cell7 0!=1; E@2/6:cell9 0!=1,Device/status terminology is established; exact phrase is a hypothesis.
+DEVICEONLINE,ARG-style device phrase,Ex3 Ix2 Nx2,13,7,False,E@2/6:cell2 1!=0; E@2/6:cell4 1!=0; E@2/6:cell7 0!=1; E@2/6:cell9 0!=1; E@2/12:cell1 1!=0,Terminal/system status vocabulary; exact phrase is a hypothesis.
+GATEWAYRESET,ARG-style gateway phrase,Ax2 Ex3 Tx2,15,11,False,A@2/6:cell2 1!=0; A@2/6:cell4 1!=0; A@2/6:cell7 0!=1; A@2/6:cell9 0!=1; E@4/9:cell3 0!=1,Gateway terminology is established; reset is a plausible status/action.
+SIGNALACTIVE,ARG-style signal phrase,Ax2 Ix2,7,4,False,A@5/7:cell4 0!=1; I@2/10:cell5 0!=1; I@2/10:cell6 1!=0; I@2/10:cell9 0!=1,Signal/status vocabulary; exact phrase is a hypothesis.
+BREACHFAILED,ARG-style status,Ax2 Ex2,7,3,False,A@4/8:cell1 0!=1; E@3/11:cell3 0!=1; E@3/11:cell7 1!=0,Natural terminal-style status candidate.
+BREAKTHELOOP,game-theme hypothesis,Ex2 Ox2,6,3,False,E@3/8:cell4 1!=0; E@3/8:cell7 1!=0; O@10/11:cell6 0!=1,Fits INSIDE's loop/control/escape themes.
+DISCONNECTME,game-theme hypothesis,Cx2 Ex2 Nx2,9,6,False,C@4/9:cell3 0!=1; C@4/9:cell4 0!=1; C@4/9:cell5 1!=0; E@8/12:cell1 1!=0; N@6/7:cell4 0!=1,Fits unplug/disconnection themes of the secret ending.
+FREEYOURMIND,game-theme hypothesis,Ex2 Rx2,7,4,False,E@3/4:cell4 1!=0; E@3/4:cell6 1!=0; R@2/8:cell4 1!=0; R@2/8:cell9 0!=1,"Fits mind-control themes, but not an attested phrase."
+HUMANCONTROL,game-theme hypothesis,Nx2 Ox2,8,3,False,N@5/8:cell8 0!=1; O@7/11:cell3 0!=1; O@7/11:cell6 0!=1,Fits the game's human-control machinery.
+MINDTRANSFER,game-theme hypothesis,Nx2 Rx2,5,2,False,N@3/8:cell4 1!=0; N@3/8:cell7 1!=0,Fits consciousness/control interpretation; not attested text.
+UNPLUGSYSTEM,game-theme hypothesis,Sx2 Ux2,8,3,False,S@7/9:cell3 0!=1; U@1/5:cell4 1!=0; U@1/5:cell5 1!=0,Secret-ending/disconnection theme.
+CHILDESCAPED,game-theme/terminal style,Cx2 Dx2 Ex2,8,5,False,C@1/8:cell1 0!=1; C@1/8:cell4 1!=0; C@1/8:cell8 0!=1; E@6/11:cell3 0!=1; E@6/11:cell7 1!=0,Directly evokes the player's escape; not attested ARG text.
+HUMANESCAPED,game-theme/terminal style,Ax2 Ex2,7,5,False,A@4/9:cell3 0!=1; A@4/9:cell4 0!=1; A@4/9:cell5 1!=0; E@6/11:cell3 0!=1; E@6/11:cell7 1!=0,Directly evokes escape; not attested ARG text.
+SUBJECTFOUND,game-theme/terminal style,Ux2,4,3,False,U@2/10:cell5 0!=1; U@2/10:cell6 1!=0; U@2/10:cell9 0!=1,Plausible tracking/status language.

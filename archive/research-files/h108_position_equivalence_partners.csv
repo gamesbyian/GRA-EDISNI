@@ -1,0 +1,13 @@
+position,possible_same_character_positions,impossible_same_character_positions,possible_degree,forbidden_degree
+1,7(ov4) 12(ov2),2(ov4) 3(ov3) 4(ov5) 5(ov4) 6(ov2) 8(ov4) 9(ov5) 10(ov3) 11(ov3),2,9
+2,,1(ov4) 3(ov5) 4(ov4) 5(ov5) 6(ov4) 7(ov4) 8(ov4) 9(ov5) 10(ov4) 11(ov3) 12(ov1),0,11
+3,12(ov1),1(ov3) 2(ov5) 4(ov3) 5(ov5) 6(ov5) 7(ov4) 8(ov4) 9(ov4) 10(ov2) 11(ov4),1,10
+4,6(ov2) 12(ov2),1(ov5) 2(ov4) 3(ov3) 5(ov3) 7(ov4) 8(ov3) 9(ov4) 10(ov3) 11(ov2),2,9
+5,12(ov1),1(ov4) 2(ov5) 3(ov5) 4(ov3) 6(ov5) 7(ov3) 8(ov5) 9(ov6) 10(ov2) 11(ov4),1,10
+6,4(ov2) 12(ov1),1(ov2) 2(ov4) 3(ov5) 5(ov5) 7(ov3) 8(ov4) 9(ov4) 10(ov1) 11(ov3),2,9
+7,1(ov4) 12(ov2),2(ov4) 3(ov4) 4(ov4) 5(ov3) 6(ov3) 8(ov4) 9(ov4) 10(ov2) 11(ov3),2,9
+8,,1(ov4) 2(ov4) 3(ov4) 4(ov3) 5(ov5) 6(ov4) 7(ov4) 9(ov6) 10(ov2) 11(ov4) 12(ov2),0,11
+9,,1(ov5) 2(ov5) 3(ov4) 4(ov4) 5(ov6) 6(ov4) 7(ov4) 8(ov6) 10(ov3) 11(ov4) 12(ov2),0,11
+10,,1(ov3) 2(ov4) 3(ov2) 4(ov3) 5(ov2) 6(ov1) 7(ov2) 8(ov2) 9(ov3) 11(ov2) 12(ov1),0,11
+11,,1(ov3) 2(ov3) 3(ov4) 4(ov2) 5(ov4) 6(ov3) 7(ov3) 8(ov4) 9(ov4) 10(ov2) 12(ov1),0,11
+12,1(ov2) 3(ov1) 4(ov2) 5(ov1) 6(ov1) 7(ov2),2(ov1) 8(ov2) 9(ov2) 10(ov1) 11(ov1),6,5

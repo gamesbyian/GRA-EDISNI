@@ -1,0 +1,17 @@
+transpose,vflip,hflip,invert,dead_columns,total_candidates,singleton_columns,candidate_sets
+False,False,False,True,6,5,2,U | 4 | ∅ | ∅ | ∅ | ∅ | ∅ | KMX | ∅
+True,False,False,True,6,5,2,U | 4 | ∅ | ∅ | ∅ | ∅ | ∅ | KMX | ∅
+False,True,False,True,7,3,1,A | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | HW | ∅
+True,False,True,True,7,3,1,A | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | HW | ∅
+False,True,True,False,7,4,1,∅ | I19 | ∅ | ∅ | X | ∅ | ∅ | ∅ | ∅
+True,True,True,False,7,4,1,∅ | I19 | ∅ | ∅ | X | ∅ | ∅ | ∅ | ∅
+False,True,False,False,7,5,0,∅ | I1 | ∅ | ∅ | FKX | ∅ | ∅ | ∅ | ∅
+False,True,True,True,7,5,0,N4 | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | HW4 | ∅
+True,False,True,False,7,5,0,∅ | I1 | ∅ | ∅ | FKX | ∅ | ∅ | ∅ | ∅
+True,True,True,True,7,5,0,N4 | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | HW4 | ∅
+False,False,False,False,7,6,1,∅ | EFIT6 | ∅ | ∅ | L | ∅ | ∅ | ∅ | ∅
+True,False,False,False,7,6,1,∅ | EFIT6 | ∅ | ∅ | L | ∅ | ∅ | ∅ | ∅
+False,False,True,False,8,3,0,∅ | IT3 | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅
+True,True,False,False,8,3,0,∅ | IT3 | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅
+False,False,True,True,8,4,0,∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | FKMX | ∅
+True,True,False,True,8,4,0,∅ | ∅ | ∅ | ∅ | ∅ | ∅ | ∅ | FKMX | ∅
