@@ -1,4 +1,4 @@
-name: Verify Experiments 296-298
+name: Verify Experiments 296-300
 
 on:
   pull_request:
@@ -6,6 +6,8 @@ on:
       - "scripts/audit_single_cell_recursion_defects.py"
       - "scripts/audit_two_cell_recursion_defects.py"
       - "scripts/audit_full_local_first_pass_offsets.py"
+      - "scripts/audit_full_local_second_pass_offsets.py"
+      - "scripts/audit_local_same_operation_reuse.py"
       - "scripts/enumerate_raw_machine.py"
       - "data/observations.csv"
       - "docs/alternative-machine-single-cell-defects.md"
@@ -25,3 +27,7 @@ jobs:
         run: python scripts/audit_two_cell_recursion_defects.py
       - name: Run full first-pass local-offset closure
         run: python scripts/audit_full_local_first_pass_offsets.py
+      - name: Run full second-pass local-address closure
+        run: python scripts/audit_full_local_second_pass_offsets.py
+      - name: Run same-operation local reuse audit
+        run: python scripts/audit_local_same_operation_reuse.py
