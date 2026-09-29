@@ -57,3 +57,5 @@ jobs:
         run: python scripts/audit_raw_first_pos3_cue.py
       - name: Audit all POS3 rail partitions
         run: python scripts/audit_all_pos3_partitions.py
+      - name: Validate POS3 rails on holdout data
+        run: python scripts/audit_pos3_partition_holdout.py
