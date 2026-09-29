@@ -95,6 +95,22 @@ The discussion itself treats both as unverified, with `•369` specifically rega
 
 This is especially important because residue 103 is currently a latent-register cell in the preferred machine. A genuine observation there would be highly informative, so confirmation standards should be stricter rather than looser.
 
+## Reversible-cover and UV loose ends narrowed
+
+The export closes some repeated “has anyone tried this?” loops.
+
+For the reversible PS4 cover / CE printed materials:
+
+- **15 Dec 2019:** an owner reports trying blacklight/UV and says nothing obvious appeared on first or second glance.
+- **Jan 2020:** owners repeatedly scanned/photographed both sides of the reversible cover. The archive contains several of those images, including `assets/image0-82936663ee93baac.png`; participants explicitly describe the available scan as low quality.
+- **2020:** the community also tested scene matching, the 12:12 clock, viewing through the case/plastic, light-angle/translucency ideas, and cover overlays without a conclusive result.
+- **Feb 2022:** a participant who says they bought UV lights specifically for testing reports no finding on the sticker/envelope and posts UV photographs (`assets/unknown-56db79e565e6f04c.png`, `assets/unknown-ec3f926e6920d7a3.png`).
+- Later 2026 discussion had partially forgotten these tests and again proposed UV/phosphor checks.
+
+This does not prove that every wavelength/material test is exhausted, and the archive still describes the best cover scan as inadequate. It does mean generic “try UV” should be treated as a **historically tested negative**, not an untried priority.
+
+The high-value cover task remains source-quality acquisition and externally registered structural inspection, not repeating generic light/filter experiments.
+
 ## Other-channel leads
 
 The late `#solving` export preserves several non-sticker discoveries and loose ends that may matter only if they supply an independently motivated external consumer:
