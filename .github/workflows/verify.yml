@@ -61,3 +61,5 @@ jobs:
         run: python scripts/audit_pos3_partition_holdout.py
       - name: Audit coupled affine first-pass recursion
         run: python scripts/audit_affine_first_pass.py
+      - name: Audit affine retention degeneracy
+        run: python scripts/audit_affine_degeneracy.py
