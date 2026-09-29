@@ -156,6 +156,14 @@ Recover dated Discord posts/screenshots around the original 108/9 discovery and 
 
 Do not inflate evidentiary weight by treating the same 65 populated residues in a different rendering as independent data. Preserve negative historical tests because they are useful anti-hindsight controls. Use `docs/discord-community-provenance.md` and Experiment 297 as the classification template.
 
+Newly recovered executable artifacts sharpen this lane:
+
+- reproduce the historical interval scanner as provenance, but treat its printed endpoint totals (including 648) as arithmetic extrapolations rather than production evidence;
+- freeze the supplied Column Shift Tool exactly as found, then exhaustively enumerate all **65,536 admissible** tail-constrained shift vectors; preregister image/structure scores and matched null families before inspecting winners, so a compelling-looking bitmap cannot win by eyeballing alone;
+- mine the preserved Sticker Studio for dated methods and negative controls, while keeping every model-filled cell outside the observation ledger;
+- retain the P1/P2 phrase search as a negative semantic-search artifact unless an independent clue supplies its composition rule;
+- recover the labeled community 3×3 assembly/order referenced as missing in the September-27 handoff and use its date/provenance to separate historical availability from later reconstruction.
+
 
 This is opportunistic, not critical path.
 
