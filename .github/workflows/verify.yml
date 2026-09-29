@@ -71,6 +71,8 @@ jobs:
         run: python scripts/audit_q4_polarity_gauge.py
       - name: Audit Q4 gauge physical simplicity
         run: python scripts/audit_q4_gauge_physical_simplicity.py
+      - name: Audit Q4 global symbol balance
+        run: python scripts/audit_q4_global_symbol_balance.py
       - name: Audit ambiguous primary frame parsimony
         run: python scripts/audit_ambiguous_frame_parsimony.py
       - name: Audit raw-first POS3 cue
