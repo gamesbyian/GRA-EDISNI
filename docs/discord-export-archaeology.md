@@ -111,6 +111,20 @@ This does not prove that every wavelength/material test is exhausted, and the ar
 
 The high-value cover task remains source-quality acquisition and externally registered structural inspection, not repeating generic light/filter experiments.
 
+## User-supplied prior-ARG ordering clue cross-checked against archive
+
+A user-supplied pair of Discord images shows:
+
+- a raw stack of dash/slash printer strings;
+- the reconstructed red/blue image whose left and right margins carry a sparse alternating series of red pixels.
+
+The accompanying Discord explanation says those alternating side pixels help determine the order in which the rows should be placed.
+
+The public `#solving` export contains matching historical discussion from 9 Jul 2018. Solvers describe an "alternating interlaced pattern" that limits arrangements, identify the "distribution of margin slashes" as important, note that different row orders change the visible object, and ultimately recover the acorn/41 image. On 11 Jul the `#tldr` channel records the result as a deliberate rearrangement of the PC long strings.
+
+This closes a small but useful design-vocabulary gap: row permutation in a successful historical INSIDE ARG puzzle was not justified only by visual resemblance. Boundary/margin structure helped constrain the ordering.
+
+Implication for current sticker work: preserve and inspect ancillary/boundary information around the physical sticker carrier before treating row/column order as an arbitrary visualization choice. Do not reopen unconstrained H108 permutations; look specifically for an external registration cue.
 ## Other-channel leads
 
 The late `#solving` export preserves several non-sticker discoveries and loose ends that may matter only if they supply an independently motivated external consumer:
