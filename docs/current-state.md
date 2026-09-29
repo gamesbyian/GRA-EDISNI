@@ -458,7 +458,7 @@ Preferred irreducible transition-side supplied set:
 
 1. serial/H108/A-I carrier geometry;
 2. primary physical column positional code;
-3. local outer no-self depth registration;
+3. primary frame-polarity staircase (minority dash iff `d<=q`), with 8/9 entries directly forced by the corpus under POS3;
 4. Q4 as depth-indexed POS3 selector encoding;
 5. recursive application of selector to primary memory;
 6. reuse of the same selector on regenerated surfaces;
@@ -466,6 +466,7 @@ Preferred irreducible transition-side supplied set:
 
 Increasingly theorem-level rather than separately supplied:
 
+- outer no-self registration;
 - T polarity staircase;
 - 210 baseline;
 - p self-label;
@@ -482,7 +483,7 @@ The frozen pointer observer is a separate preregistered readout module, not part
 
 ## Post-240 uniqueness hardening
 
-Experiments 241–245 sharpen the status of the recursion and implementation assumptions without changing the preferred machine.
+Experiments 241–246 sharpen the status of the recursion, implementation, and primary-grammar assumptions without changing the preferred machine.
 
 Experiment 241 makes the dependency structure explicit in `docs/theorem-graph.md`, separating physical observations, supplied local grammars, derived theorems, observer-only facts, algebraic descriptions, and the semantic stopping statement.
 
@@ -511,6 +512,10 @@ terminal = 100
 ```
 
 Thus the current first and second address substitutions are now unique inside a substantially broader shell-preserving coordinate-map family. This does **not** prove uniqueness over every conceivable recursion grammar; the remaining queue explicitly targets broader non-coordinate-map parents.
+
+Experiment 246 reconstructs the primary payload directly from the classified corpus under POS3 while initially leaving each frame polarity free. Eight of the nine frame polarities are forced by observations. The sole ambiguity is frame `q=1,d=2`, exactly the missing upper-triangle entry in the global `d<=q` staircase. Applying that staircase forces 25 of the 27 primary trits directly from raw observations; the only unresolved positions are the already-known state ports `x=(q0,d2,c1)` and `y=(q2,d0,c1)`.
+
+All 18 outer primary trits are among the 25 observation-forced values and all satisfy minority-row `!= d`. The former “outer no-self registration” therefore adds no independent constraint once POS3 and the frame-polarity staircase are in place. It should be treated as a derived corpus fact rather than a separate supplied axiom.
 
 ## Mechanical completion
 
