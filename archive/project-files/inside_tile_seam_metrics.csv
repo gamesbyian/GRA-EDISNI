@@ -1,0 +1,9 @@
+index,layout,feature_layer,seam_score,canonical_percentile_among_3x3_permutations
+0,3x3 canonical,coarse,3.4847,92.98
+1,3x3 canonical,medium,1.6785,99.91
+2,3x3 canonical,fine,1.6925,99.98
+3,3x3 canonical,edge,4.3428,99.998
+4,3x3 best,coarse,7.696,
+5,3x3 best,medium,2.2225,
+6,3x3 best,fine,2.192,
+7,3x3 best,edge,4.7344,
