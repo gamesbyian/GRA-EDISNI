@@ -291,6 +291,8 @@ Experiment 276 makes the warning visible at the next worksheet step. If the cent
 
 Experiment 280 adds an important humility check. Not every non-POS3 deviation can be rejected by computation. Two tiny deviations live in cells that the selector never addresses: H↔F in q0,d0 and I↔E in q1,d1. They are also entirely unobserved in the public corpus. Toggling either or both leaves the whole 14→3→1 computation unchanged. A human choosing exact one-per-column POS3 is therefore also choosing the simplest uniform physical code and fixing a real two-bit gauge. That is a plausible authoring inference, but it should not be retold as something recursion proved.
 
+Experiment 282 gives the human solver another reason to make that choice. Forget columns for a moment and simply ask how far the three minority marks have to move as neighboring primary frames change. The all-POS3 completion is the unique smoothest member of the four transition-equivalent gauges under minimum Manhattan transport. Each invisible pulse swap independently makes its local neighborhood jumpier. This is still a simplicity judgment, but it is visually native to the 3×3 frame sheet and does not depend on knowing the recursive answer.
+
 
 ## Reconciliation with the earlier physical-entry work
 
