@@ -1,0 +1,41 @@
+name: Verify Experiments 306-312
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    paths:
+      - "scripts/audit_single_cell_recursion_defects.py"
+      - "scripts/audit_two_cell_recursion_defects.py"
+      - "scripts/audit_full_local_first_pass_offsets.py"
+      - "scripts/audit_full_local_second_pass_offsets.py"
+      - "scripts/audit_local_same_operation_reuse.py"
+      - "scripts/audit_local_selector_permutations.py"
+      - "scripts/audit_local_permutation_gauge_decomposition.py"
+      - "scripts/enumerate_raw_machine.py"
+      - "data/observations.csv"
+      - "docs/alternative-machine-single-cell-defects.md"
+      - ".github/workflows/verify-local-recursion-306-312.yml"
+
+jobs:
+  verify-experiment-296:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run single-cell recursion-defect audit
+        run: python scripts/audit_single_cell_recursion_defects.py
+      - name: Run two-cell first-pass defect audit
+        run: python scripts/audit_two_cell_recursion_defects.py
+      - name: Run full first-pass local-offset closure
+        run: python scripts/audit_full_local_first_pass_offsets.py
+      - name: Run full second-pass local-address closure
+        run: python scripts/audit_full_local_second_pass_offsets.py
+      - name: Run same-operation local reuse audit
+        run: python scripts/audit_local_same_operation_reuse.py
+      - name: Run arbitrary local selector-permutation audit
+        run: python scripts/audit_local_selector_permutations.py
+      - name: Decompose local permutation gauge fork
+        run: python scripts/audit_local_permutation_gauge_decomposition.py
