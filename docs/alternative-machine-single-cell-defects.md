@@ -256,3 +256,122 @@ That suggests a productive general rule for future alternative-machine searches:
 > retain route structure as an independent model-selection criterion, and treat terminal agreement alone as weak evidence.
 
 It also reinforces the stopping signal from Experiment 296. Expanding to arbitrary cell-local exceptions rapidly creates representational siblings, while the structurally meaningful discriminator remains the same reversible route shell already derived independently.
+
+
+# Experiment 298 — Full 3^9 first-pass local-offset closure
+
+Experiments 296–297 suggested that local exception freedom grows rapidly, but the family is still small enough to close exactly.
+
+At every A–I cell independently choose:
+
+```
+d' = S(j) + offset[j] mod 3
+offset[j] ∈ {0,1,2}
+```
+
+External q remains untouched and the second pass remains canonical.
+
+This is the complete `3^9 = 19,683` cell-local first-pass offset family. No defect-count bound remains.
+
+## Global result
+
+Before first-pass closure, the canonical second pass admits 96 of the 216 raw machines as valid POS3 terminals, and all 96 already terminate at `100`.
+
+The full first-pass search produces this survivor-count distribution:
+
+```
+0  -> 19059
+1  ->    16
+2  ->    88
+3  ->    48
+4  ->    72
+5  ->    32
+6  ->    88
+7  ->    16
+8  ->    64
+9  ->    16
+10 ->    64
+12 ->    48
+14 ->     8
+16 ->    24
+18 ->     8
+20 ->    24
+24 ->     8
+```
+
+The largest local-offset machines retain 24 states. None has a reversible route shell.
+
+## The eight 14-state operations
+
+Exactly eight operations retain 14 states, and all eight select the **same exact 14 raw physical machines**:
+
+```
+canonical
+F2+I1
+B1+H1
+B1+F2+H1+I1
+B1+E1+H2
+B1+E1+F2+H2+I1
+B2+H2
+B2+F2+H2+I1
+```
+
+Only **canonical** admits the reversible three-route shell.
+
+This is a useful distinction between physical-family reconstruction and transition reconstruction: seven alternative local rules recover the same 14 physical masters and terminal `100`, yet all seven distort the intermediate computation enough to lose the independently derived route structure.
+
+## All route-capable operations
+
+Out of 19,683 operations, only six admit any three-class shell of three distinct ternary permutations:
+
+```
+canonical                  14 states   120 / 012 / 102
+C1                          7 states   120 / 012 / 102
+C2                          7 states   120 / 012 / 102
+A1+B2+G2+H2                12 states   102 / 012 / 120
+A1+B2+C1+G2+H2              6 states   102 / 012 / 120
+A1+B2+C2+G2+H2              6 states   102 / 012 / 120
+```
+
+Therefore:
+
+> canonical is the unique maximum-retention route-capable operation in the entire 3^9 local-offset family.
+
+This is stronger than the one- and two-cell results. It is not merely that canonical wins near its immediate neighborhood. Every independent cyclic depth rewrite at every physical cell has now been exhausted.
+
+## The best alternate route machine
+
+The strongest noncanonical route-capable sibling is:
+
+```
+A1+B2+G2+H2
+12 states
+route shell 102 / 012 / 120
+terminal 100
+```
+
+It is genuinely a different physical family:
+
+- only 2 of its 12 states are canonical states;
+- 10 are new raw-compatible states;
+- 12 canonical states are excluded.
+
+So this is a real alternative machine, not a gauge copy. It has the same carrier, same Q4 selector field, same two-pass budget, a reversible three-route layer, and the same terminal, but it retains fewer raw-compatible states.
+
+The already declared maximum-retention criterion therefore has concrete discriminatory force here: 14 beats 12 without requiring the expected endpoint or expected route orientation.
+
+## Consequence for the broader-alternative queue
+
+This closes one natural hostile family completely.
+
+Within **all cell-local cyclic rewrites of first-pass selector depth**:
+
+- terminal `100` is extremely non-discriminating because the canonical second pass already makes it available to 96 raw candidates;
+- raw-state retention alone is also insufficient because route-degenerate machines reach 24 states;
+- exact physical-master recovery alone is insufficient because seven noncanonical rules recover the same 14 masters;
+- reversible-route structure alone is insufficient because a genuine 12-state sibling survives;
+- **route structure plus maximum raw-state retention uniquely selects canonical**.
+
+That combination is not a post-hoc endpoint target. Both ingredients were independently motivated earlier: route reversibility/distinction in Experiment 278 and maximum raw-state retention in Experiment 253.
+
+The family is now exhausted rather than sampled. Further cell-local first-pass offset work would add no information unless a new physical constraint changes the model class.
