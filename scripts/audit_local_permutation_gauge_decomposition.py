@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Experiment 302: decompose the local-S3 route-max fork into gauge structure.
+"""Experiment 312: decompose the local-S3 route-max fork into gauge structure.
 
-Experiment 301 broadens the reused local operation to an arbitrary selector
+Experiment 311 broadens the reused local operation to an arbitrary selector
 permutation g_j at every A-I cell. At the 14-state route maximum it finds four
 64-operation equivalence classes. Two have invariant terminal 100:
 
@@ -254,7 +254,7 @@ def main() -> None:
         )
 
     # Explain the 2^6 multiplicity of each invariant-100 route-max class from
-    # Experiment 301. Every subset of these six local involutions leaves the
+    # Experiment 311. Every subset of these six local involutions leaves the
     # entire canonical survivor/output mapping unchanged.
     letters = tuple(GAUGE_GENERATORS)
     canonical_orbit = set()
@@ -319,7 +319,7 @@ def main() -> None:
                 c_col,
             )
 
-    print("Experiment 302")
+    print("Experiment 312")
     print("canonical / A-sibling overlap:", len(common), "/ 14")
     print("paired physical replacements:", len(paired))
     print("Q4 residues changed in every replacement: 82, 91")
@@ -333,7 +333,7 @@ def main() -> None:
     print("RESULT: A:102 changes only the unobserved A-stack representative for four states")
     print("RESULT: its first-pass depth is restored by the A transposition")
     print("RESULT: its residual second-pass q shift is hidden by the existing f1 q0/d1 = q1/d1 equality")
-    print("RESULT: the Experiment-301 invariant-100 fork is a coupled gauge, not a new functional machine")
+    print("RESULT: the Experiment-311 invariant-100 fork is a coupled gauge, not a new functional machine")
 
 
 if __name__ == "__main__":
