@@ -560,6 +560,8 @@ Experiment 256 enumerates all 2^9 per-stack Q4 polarity assignments rather than 
 
 Experiment 257 returns to the 832-state optional-pulse primary closure family from Experiment 255. Requiring only that, within each external quarter, the three depth frames have equal total minority-pulse counts reduces 832 exactly to the canonical 14 states. Every survivor then has frame weight 3 and no missing pulses. Thus exact one-pulse-per-column POS3 need not be imposed directly inside this tested parent: the weaker combination "zero-or-one pulse per column + quarter-local frame-weight balance" recovers it after recursive closure. This is a bounded alternative grammar, not a raw observation.
 
+Experiment 258 exhaustively searches the 36 possible pairwise equalities among the nine frame weights. No set of five or fewer frame-weight equalities eliminates all 818 noncanonical optional-pulse survivors; the natural within-quarter balance rule uses six equalities and does eliminate all 818. Six is therefore the exact cardinality minimum in this equality family. The quarter-local rule is a structurally natural minimum witness, though not claimed to be the unique six-equality solution.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
