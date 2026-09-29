@@ -43,9 +43,10 @@ Once the bot is in the server:
 3. Enter the server ID.
 4. The workflow defaults to the exact channel name `stickers-solving` for the first INSIDE archive. Change or clear that field as needed; exact channel/thread IDs can also be supplied.
 5. If both channel names and IDs are blank, the script attempts every text-capable channel visible to the bot.
-6. Choose whether to include archived public threads and download attachments.
-7. Run the workflow.
-8. Download the resulting `discord-export-<guild-id>` Actions artifact.
+6. Leave **Anonymize authors** enabled unless you specifically need identities. It is enabled by default and pseudonymizes posters before any export file is written.
+7. Choose whether to include archived public threads and download attachments.
+8. Run the workflow.
+9. Download the resulting `discord-export-<guild-id>` Actions artifact.
 
 The artifact is retained for seven days by default. The workflow does not commit Discord content to Git.
 
@@ -62,9 +63,17 @@ discord-export/
         <attachment-id>--<filename>
 ```
 
-Each channel JSON file preserves the Discord message objects returned by the API, including message IDs, timestamps, authors, replies/references, embeds, reactions and attachment metadata when Discord supplies them.
+Each channel JSON file preserves the Discord message structure returned by the API, including message IDs, timestamps, replies/references, embeds, reactions and attachment metadata when Discord supplies them. When anonymization is enabled, Discord user identity metadata is replaced before serialization.
 
-`manifest.json` records the guild identity, channel IDs/names and exported message counts. The bot token is never written to output.
+`manifest.json` records the guild identity, channel IDs/names, exported message counts, and whether author anonymization was enabled. The bot token is never written to output.
+
+## Author anonymization
+
+The workflow defaults to anonymizing posters. Each Discord user ID is converted to a stable per-run pseudonym such as `poster-a13f909a2b`. The salt used to make those pseudonyms is generated in memory and is not stored in the artifact, so the archive contains no lookup table back to Discord user IDs.
+
+The anonymizer removes usernames, global/display names, avatars, member nicknames and guild-membership metadata from author/user structures. User mentions represented as Discord `<@user-id>` tokens are rewritten to the same anonymous aliases when the referenced user is present in the message data. Nested referenced messages are sanitized as well.
+
+This protects the identity metadata supplied structurally by Discord. It cannot reliably remove a person's name if somebody typed that name as ordinary prose inside a message, or if an attachment itself visibly contains identifying information. Attachment filenames are preserved because changing them can damage evidence provenance.
 
 ## Scope and limitations
 
