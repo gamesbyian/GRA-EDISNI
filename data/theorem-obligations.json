@@ -31,9 +31,11 @@
     "T3a",
     "G6",
     "G7",
+    "G8",
     "T2",
     "T2b",
     "T2c",
+    "T2d",
     "T3",
     "T4",
     "T5",
@@ -80,6 +82,13 @@
       "script": "scripts/audit_q4_arbitrary_selector_route.py",
       "covers": [
         "T2c"
+      ]
+    },
+    {
+      "id": "q4-physical-codebook",
+      "script": "scripts/audit_q4_physical_codebook.py",
+      "covers": [
+        "T2d"
       ]
     },
     {
