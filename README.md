@@ -36,7 +36,7 @@ Assume no new sticker will ever surface. The current 65 observed H108 residues p
 
 Structural prediction comes before semantics. Under the preferred exact-POS3 grammar there are 14 physical state masters; Experiment 280 shows the same transducer has four transition-equivalent primary completion gauges (56 masters total) if that physical grammar is weakened. Do not select a state or gauge because it produces an attractive word, image, or number.
 
-The current mechanism is a typed registered selector/routing/canonicalization machine. The terminal `100` is mechanically established; downstream plaintext is not.
+The current mechanism is a typed registered selector/routing/canonicalization machine. The terminal `100` is mechanically established; downstream plaintext is not. Any external-consumer search must follow `docs/external-consumer-audit.md`: the external artifact supplies the cue first, rather than treating `100` or the 14 hidden states as generic keys.
 
 ## Canonical responsibility split
 
