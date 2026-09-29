@@ -219,6 +219,8 @@ frame 9
 ---//////
 ```
 
+There is also a simple sanity check on whether this deserves to be called a terminal: apply the selector operation again. Experiment 279 shows `100` is unchanged. The equally large nonlinear `102` sibling found in Experiment 268 is not stable at all; every state moves from `102` to `100` on the next application. So a solver can recognize `100` as the fixed point of the recursive process rather than stopping merely because two passes happened to produce a uniform word.
+
 Experiment 244 broadens this step over all 729 pairs of ternary coordinate maps `B(f(S),g(S),j)`. Twenty-five arbitrary map pairs can manufacture some invariant POS3 terminal, but exactly one shell-preserving permutation pair survives: identity/identity, and its terminal is `100`.
 
 That makes selector reuse a plausible discovered operation rather than a post-hoc way to force the known endpoint.
