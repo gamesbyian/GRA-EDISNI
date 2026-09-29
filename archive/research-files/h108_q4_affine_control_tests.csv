@@ -1,0 +1,17 @@
+affine_rule,tested_positions,matches,match_rate,contradiction_positions
+0 xor 1*Q1 xor 0*Q2 xor 0*Q3,7,5,0.7142857142857143,9 17
+0 xor 1*Q1 xor 1*Q2 xor 0*Q3,6,4,0.6666666666666666,4 9
+1 xor 0*Q1 xor 0*Q2 xor 0*Q3,11,7,0.6363636363636364,5 15 20 27
+0 xor 0*Q1 xor 0*Q2 xor 1*Q3,8,5,0.625,9 11 20
+0 xor 0*Q1 xor 1*Q2 xor 0*Q3,8,5,0.625,9 11 16
+0 xor 1*Q1 xor 0*Q2 xor 1*Q3,5,3,0.6,9 20
+1 xor 1*Q1 xor 1*Q2 xor 1*Q3,5,3,0.6,5 15
+1 xor 0*Q1 xor 1*Q2 xor 1*Q3,7,4,0.5714285714285714,5 15 16
+0 xor 0*Q1 xor 1*Q2 xor 1*Q3,7,3,0.42857142857142855,9 11 17 20
+0 xor 1*Q1 xor 1*Q2 xor 1*Q3,5,2,0.4,9 17 20
+1 xor 1*Q1 xor 0*Q2 xor 1*Q3,5,2,0.4,5 15 17
+1 xor 0*Q1 xor 0*Q2 xor 1*Q3,8,3,0.375,5 15 16 17 27
+1 xor 0*Q1 xor 1*Q2 xor 0*Q3,8,3,0.375,4 5 15 17 20
+0 xor 0*Q1 xor 0*Q2 xor 0*Q3,11,4,0.36363636363636365,4 8 9 11 14 16 17
+1 xor 1*Q1 xor 1*Q2 xor 0*Q3,6,2,0.3333333333333333,5 15 17 20
+1 xor 1*Q1 xor 0*Q2 xor 0*Q3,7,2,0.2857142857142857,4 5 14 15 20
