@@ -39,3 +39,5 @@ jobs:
         run: python scripts/audit_raw_operation_family.py
       - name: Audit Q4 shared POS3 polarity
         run: python scripts/audit_q4_pos3_polarity.py
+      - name: Audit optional-pulse primary grammar
+        run: python scripts/audit_primary_optional_pulse.py
