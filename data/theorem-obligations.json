@@ -9,7 +9,8 @@
     "G1",
     "G3",
     "G5",
-    "G6"
+    "G6",
+    "G7"
   ],
   "forbidden_terminal_ancestor_classes": [
     "R",
@@ -29,8 +30,10 @@
     "G5",
     "T3a",
     "G6",
+    "G7",
     "T2",
     "T2b",
+    "T2c",
     "T3",
     "T4",
     "T5",
@@ -70,6 +73,13 @@
       "script": "scripts/audit_q4_independent_polarity_route.py",
       "covers": [
         "T2b"
+      ]
+    },
+    {
+      "id": "q4-arbitrary-selector-route",
+      "script": "scripts/audit_q4_arbitrary_selector_route.py",
+      "covers": [
+        "T2c"
       ]
     },
     {
