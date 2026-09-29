@@ -287,6 +287,8 @@ Experiment 275 gives a useful confirmation check that does not require spotting 
 
 Experiment 276 makes the warning visible at the next worksheet step. If the centre-pileup reading is carried through the selector operation, every surviving physical state produces the same first-pass output. The three-way functional collapse that makes the recursive mechanism legible simply disappears. The distributed-column reading, by contrast, produces three clean first-pass classes. So a solver need not prefer POS3 because it is visually prettier: it is the interpretation that preserves an actual three-way computation.
 
+Experiment 280 adds an important humility check. Not every non-POS3 deviation can be rejected by computation. Two tiny deviations live in cells that the selector never addresses: H↔F in q0,d0 and I↔E in q1,d1. They are also entirely unobserved in the public corpus. Toggling either or both leaves the whole 14→3→1 computation unchanged. A human choosing exact one-per-column POS3 is therefore also choosing the simplest uniform physical code and fixing a real two-bit gauge. That is a plausible authoring inference, but it should not be retold as something recursion proved.
+
 
 ## Reconciliation with the earlier physical-entry work
 
