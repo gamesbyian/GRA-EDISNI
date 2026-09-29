@@ -23,3 +23,5 @@ jobs:
         run: python scripts/audit_first_pass.py
       - name: Audit terminal selector reuse
         run: python scripts/audit_terminal_reuse.py
+      - name: Audit raw primary constraints
+        run: python scripts/audit_primary_raw_constraints.py
