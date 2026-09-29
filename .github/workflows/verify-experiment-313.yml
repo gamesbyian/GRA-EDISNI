@@ -1,0 +1,23 @@
+name: Verify Experiment 313
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    paths:
+      - "scripts/audit_local_2d_translation_reuse.py"
+      - "scripts/enumerate_raw_machine.py"
+      - "data/observations.csv"
+      - "docs/experiment-313-local-2d-translation-reuse.md"
+      - ".github/workflows/verify-experiment-313.yml"
+
+jobs:
+  verify-local-2d-translation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Exhaust reused cell-local 2D translations
+        run: python scripts/audit_local_2d_translation_reuse.py

@@ -160,6 +160,10 @@ Reject families whose extra state dependence or parameter freedom grows faster t
 - 312 explains the only serious invariant-`100` sibling, `A:102`, as a coupled physical-label/operation gauge supported only by unobserved A-stack cells plus the already-established `f1` symbol equality. It is not a second functional machine.
 
 Together with Experiments 303–305, this means the **state-independent global bijection lane and the natural cell-local selector-relabeling lane are both substantially closed**. Future Priority-5 work should not merely add more local exception knobs. It needs a genuinely different, tightly bounded grammar with an independent motivation.
+
+**Experiment 313 closes the clean translation bridge between those lanes.** It exhausts all `9^9 = 387,420,489` reused per-cell translations `F_j(q,S)=(q+a_j,S+b_j)`. Raw retention reaches 24, but every operation above 14 states is route-degenerate. The route maximum remains 14 across 396 physical rules / 10 observational classes. Exactly one class preserves the canonical 14 physical states, route shell and invariant terminal `100`; its 36 physical rules are exact operation gauges over all 216 raw-compatible candidates. The gauge factorization is F q-shift ×3, E q-shift ×3, and independent B/H identity-vs-`(q+1,d-1)` bits.
+
+This closes local additive address freedom as a source of functional rivals. Do not spend more Priority-5 effort on extra affine constants or pass-specific local exceptions. A next adversarial family needs a genuinely different compact rationale, such as tightly bounded state dependence or coordinate coupling, rather than additional address-translation knobs.
 ## Priority 6 — archival/manufacturing lane
 ### Priority 6A — historical method archaeology
 
