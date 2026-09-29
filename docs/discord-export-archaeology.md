@@ -144,3 +144,18 @@ Highest-value remaining work from this archive:
 4. locate frozen historical predictions that can be checked against genuinely later physical stickers;
 5. scan `solving-breakout`, `tldr`, and `inside` for independently motivated operations or physical/manufacturing clues relevant to the sticker machine;
 6. preserve the most important small text/code assets by content hash and source path, without vendoring the full export.
+
+
+## First-party cover clue recovered
+
+The archive preserves an embedded iam8bit tweet, ID `1203007268930764800`, describing the standalone physical edition as including an exclusive poster and a reversible slip cover with a **hidden clue**, and saying that this version is the one included with the Collector's Edition.
+
+This upgrades the cover lane materially. It is no longer based only on community belief or generic CE completeness: the publisher/vendor explicitly advertised a hidden clue on that artifact.
+
+The export also carries larger cover assets than the previously discussed low-quality scans:
+
+- `assets/INSIDE_A-5d197786f158c567.JPG` — blob `875403acac93d83a8acae97e14240c35b88d33ab`;
+- `assets/INSIDE_B-80fbff1237c37913.JPG` — blob `d533d4161f0572b65d134d54f4fa6477029f2d64`;
+- `assets/Cover_blend-dfb43cdd555596a7.jpg` and `assets/Cover_blend_mirrored-c2fb3d0f85f5b014.jpg` preserve historical overlay/mirroring attempts.
+
+Action: run a bounded structural re-audit directly on the best archived A/B source images before asking owners for new scans. Preserve the historical failed overlay/UV work as negative controls.
