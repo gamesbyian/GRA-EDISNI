@@ -29,6 +29,17 @@ from enumerate_raw_machine import (
 
 SERIAL_ORDER = "ABCDEFGHI"
 
+# Experiment 260's gauge generators are part of the reusable result surface.
+# Keep them at module scope so downstream audits can import the factorization
+# without executing the exhaustive closure search in main().
+A = 1 << SERIAL_ORDER.index("A")
+C = 1 << SERIAL_ORDER.index("C")
+D = 1 << SERIAL_ORDER.index("D")
+FI = (
+    (1 << SERIAL_ORDER.index("F"))
+    | (1 << SERIAL_ORDER.index("I"))
+)
+
 
 def mask_for(polarity):
     mask = 0
@@ -106,14 +117,6 @@ def main() -> None:
 
     assert len(maximal) == 8
     assert len(sibling) == 8
-
-    A = 1 << SERIAL_ORDER.index("A")
-    C = 1 << SERIAL_ORDER.index("C")
-    D = 1 << SERIAL_ORDER.index("D")
-    FI = (
-        (1 << SERIAL_ORDER.index("F"))
-        | (1 << SERIAL_ORDER.index("I"))
-    )
 
     gauge = xor_span((A, C, FI))
     assert len(gauge) == 8
