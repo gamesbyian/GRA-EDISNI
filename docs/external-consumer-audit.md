@@ -74,6 +74,8 @@ The Discord export now preserves two direct implementation precedents for this c
 
 The `ARG / tldr` chronology adds that this consumer was stateful: after `MULTIPLEPROBESDISPATCHED` had been accepted, a later incorrect submission in the same browser reportedly still appended the unlocked successful page. Together with the printer JavaScript's persistent client GUID, this suggests progression could be keyed per client/session. Therefore a candidate external consumer should be allowed to behave as a **state transition/unlock interface**, not only as a one-shot decoder.
 
+An official Xbox Wire article from 3 Jan 2019 independently describes the same ARG architecture: printer strings were to be correctly sorted/decoded, the resulting text entered into a seemingly ordinary subscription box on Playdead's site, and the site returned the next corrupted image/PDF artifact. It further states that Playdead had indirect systems for gauging solver progress and that platform-specific code sets accumulated while the secret remained solvable from the beginning. Source: https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/. This raises confidence in the **consumer/unlock** pattern itself, while leaving the CE foreground's actual endpoint unknown.
+
 Search for exact homologues of the solved machine:
 
 - ternary positional rails;
