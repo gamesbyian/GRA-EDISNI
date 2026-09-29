@@ -1,33 +1,139 @@
 # Current Research State
 
-_Last compacted from the canonical Google Docs after Experiment 208._
+_Last compacted from the canonical Google Results through Experiment 240._
 
-## One-paragraph status
+## Status
 
-The current closed-corpus model is a registered ternary selector/routing/canonicalization machine over an H108 sticker master. The physical serial supplies a natural 4×3×3×3 address. The first 81 residues form nine slash/dash primary 3×3 frames; the final 27 form a slash/dot Q4 selector. Primary registration normalizes the nine frames to a compact ternary lattice with only two primary variables. Q4 selects depth, first-stage regeneration produces a three-state control `p`, a priority-free two-request relation constrains that state, `210` routes `p` to quarter `q=2-p`, completed Q3 supplies the route family `102/012/120`, and reusing Q4 canonicalizes every legal state to frame 9 / payload `100` / raw `---//////`. No completion-invariant semantic plaintext has been established.
+The closed-corpus mechanical crack is substantially complete.
 
-## Physical addressing
+The preferred model is one serial-addressed ternary positional machine with:
+
+- one four-bit constrained hidden state `H=(X,Y,Z,G)`;
+- one shared three-position code primitive `POS3`;
+- one primary memory generator;
+- one Q4 selector generator;
+- one recursive address-substitution operation used twice;
+- one canonical Q3 route shell;
+- one rank-1 terminal `100`;
+- one frozen observer bus that recovers the hidden state.
+
+No downstream completion-invariant plaintext, URL, instruction, image, or lore phrase has been established.
+
+The internal semantic branch is closed at the current evidence level. Reopen it only if an external physical/archive/ARG clue independently supplies a consumer for the terminal object.
+
+## Closed-corpus posture
+
+Assume no additional sticker will ever surface.
+
+The current object is symbolically complete:
+
+- 65 observed H108 residues;
+- 30 additional residues forced by the machine;
+- 13 variable state-register residues;
+- 14 legal complete H108 masters;
+- 95 invariant H108 residues total.
+
+The remaining uncertainty is which of 14 legal physical states was authored. Generic compression does not select one, and the transition does not need one selected.
+
+## Hidden state: preferred normal form
+
+Use Boolean state:
+
+```
+H = (X,Y,Z,G)
+```
+
+with one validity clause:
+
+```
+Y AND Z -> X
+```
+
+Equivalently, the only forbidden functional word is:
+
+```
+XYZ = 011
+```
+
+Gauge `G` is free, so the two forbidden physical words are `0110` and `0111`.
+
+There are exactly 14 legal physical states.
+
+Decode native variables:
+
+```
+x = 1 + X
+
+y = 2                  if Y=1
+y = Z                  if Y=0
+
+g = 2G
+```
+
+Grant rails:
+
+```
+P0 = Y AND NOT Z
+P1 = NOT X AND NOT Y
+P2 = X AND (NOT Y OR Z)
+```
+
+Exactly one `P_i` is 1 for every legal state.
+
+The forbidden word `011` gives `P0=P1=P2=0`: the unrepaired Q4 baseline `210`.
+
+## Carrier/address layer
 
 For H108 residue `r in 1..108`:
 
 ```
-Q = floor((r-1)/27)             # quarter 0..3
-d = floor(((r-1) mod 27)/9)    # depth/frame row 0..2
-j = (r-1) mod 9                 # A-I serial image class
+Q = floor((r-1)/27)
+d = floor(((r-1) mod 27)/9)
+j = (r-1) mod 9
 ```
 
-The solved A-I image maps `j` into physical 3×3 coordinates.
+so:
 
-Observed vocabulary zoning:
+```
+r-1 = 27Q + 9d + j
+```
 
-- residues 1–81: slash/dash only;
-- residues 82–108: slash/dot only.
+The serial background cycle is exactly A–I with period 9.
 
-All 82 classified stickers obey the serial→A-I cadence exactly.
+Physical A-I layout:
 
-## Primary normalized lattice
+```
+I A B
+C D E
+F G H
+```
 
-Normalized ternary payloads by quarter × depth:
+The foreground period is 108.
+
+Residues:
+
+- 1–81: slash/dash primary memory;
+- 82–108: slash/dot Q4 selector memory.
+
+## Shared ternary primitive
+
+Define:
+
+```
+POS3(v; exceptional, background)
+```
+
+as three physical positions with the exceptional symbol at ternary position `v` and background symbol at the other two positions.
+
+Primary columns and Q4 depth stacks use the same representation family:
+
+> ternary value = position of the exceptional member of a three-cell rail.
+
+This replaces separate “primary one-hot” and “Q4 one-slash” code concepts with one common positional code.
+
+## Primary memory
+
+Normalized ternary payload lattice:
 
 ```
 112   212   0x0
@@ -35,71 +141,140 @@ Normalized ternary payloads by quarter × depth:
 1y2   022   100
 ```
 
+Substitute:
+
+```
+x = 1+X
+y = 2Y + (1-Y)Z
+```
+
+Frame polarity:
+
+```
+minority symbol is dash iff d <= q
+otherwise minority symbol is slash
+```
+
+The supplied local registration axiom is:
+
+> the two outer minority rows of a frame at depth `d` do not equal `d`.
+
+Recursion derives the T `100/110/111` polarity staircase. Do not treat the staircase as an independent supplied premise.
+
+### Route/cross normal form
+
+The fixed primary tensor compresses to:
+
+- Q1 left route: `120`;
+- Q2 left route: `201 = 120^-1`;
+- right route: `220` in every quarter;
+- Q3 left route: `101`, the non-self complement of right `220`;
+- centre plane: terminal `100` on middle row and main diagonal, `102` on middle column, with state ports `x,y` on anti-diagonal endpoints.
+
+## Q4 selector
+
+Recovered functional selector field in physical layout:
+
+```
+2   A   2
+g   D   0
+1   G   2
+```
+
 with:
 
 ```
-x in {1,2}
-y in {0,1,2}
-X = [x=2]
-Y = [y=2]
+A = 2 - P0
+D = 1 + P1
+G_control = 2*P2
+g = 2G
 ```
 
-Registration: in frame depth `d`, the two outer cells of physical row `d` are majority. Minority-row positions become ternary payload digits.
+Legal control cores:
 
-## Q4
+```
+p=0 -> 110
+p=1 -> 220
+p=2 -> 212
+```
 
-Q4 is exactly one slash per depth stack.
-
-Functional centre-column baseline:
+Their unrepaired common baseline is:
 
 ```
 210
 ```
 
-The three legal control cores are:
+Broad inverse searches recover the cores, baseline, seven-state legality relation, scaffold, and terminal from operation. The only physical selector freedom left is the transition-invisible C gauge.
+
+Q4 decomposes into:
+
+- 19 operation-forced scaffold/check cells;
+- 8 latent p/g cells.
+
+All 11 currently observed Q4 cells are reproduced by the operationally reconstructed selector family.
+
+## Recursive transition
+
+First pass substitutes selector depth into the inner macro address:
 
 ```
-p=0: 110
-p=1: 220
-p=2: 212
+(q,d,j) -> (q,S(j),j)
 ```
 
-with C-stack gauge `g in {0,2}` functionally irrelevant to transition behavior.
+producing three registered surfaces `O_q`.
 
-Experiment 208 inverse result: inside the 48-member natural single-defect family, requiring both legal first-stage O1 regeneration and legal rank-1 second-stage canonicalization uniquely forces baseline `210` and cores `110/220/212`.
-
-## Request/grant relation
-
-Gauge-quotiented legal states:
+Their normalized payloads depend only on `p`:
 
 ```
-(x,y,p)
-(1,0,1)
-(1,1,1)
-(1,2,0)
-(2,0,2)
-(2,1,2)
-(2,2,0)
-(2,2,2)
+p=0: 102 / 002 / 120
+p=1: 102 / 012 / 100
+p=2: 102 / 022 / 100
 ```
 
-Boolean quotient:
+The first recursion erases `x`, fine `y`, and `g`. Hidden-state dependence drops from rank 14 to rank 3.
+
+## Request/grant object
+
+With:
 
 ```
-X=0,Y=0 -> p=1
-X=0,Y=1 -> p=0
-X=1,Y=0 -> p=2
-X=1,Y=1 -> p in {0,2}
+X=[x=2]
+Y=[y=2]
 ```
 
-Standard-object match: two-request priority-free MUTEX arbiter plus explicit middle idle/fallback state.
+the compatibility relation is:
+
+```
+00 -> p=1
+01 -> p=0
+10 -> p=2
+11 -> p in {0,2}
+```
+
+In routed-quarter order `q=0,1,2`, eligibility is:
+
+```
+E = [X, NOR(X,Y), Y]
+```
+
+Standard-object match:
+
+> two-request priority-free MUTEX arbiter plus explicit middle idle/fallback state.
+
+This relation is derived by selector/primary operational compatibility, not stored as a lookup table.
 
 ## Routing
 
-`210` gives:
+Recovered baseline:
 
 ```
-q = 2 - p
+210
+```
+
+routes:
+
+```
+q = 2-p
 ```
 
 Completed Q3 route table:
@@ -110,121 +285,86 @@ q=1 -> 012
 q=2 -> 120
 ```
 
-Each row is a permutation of `012` and self-labels in its centre.
+Human inverse derivation:
 
-Human inverse reconstruction:
-
-- q=1 is fallback, so neutral route is identity `012`;
+- q=1 is no-request fallback, so route is identity `012`;
 - q=2 is the unique loopless/derangement route, forcing `120`;
-- uniqueness of that derangement forces q=0 to `102`.
+- uniqueness of the derangement forces q=0 to `102`.
 
-Q1 left route is `120`; Q2 left route is `201=120^-1`.
+Q3 contains a transposition, identity, and 3-cycle. Q1/Q2 are the two opposite 3-cycles.
+
+## One-hot / thermometer conversion
+
+Q4 stores `p` as one-hot rails `P0,P1,P2`.
+
+Route/terminal layers expose:
+
+```
+b = [p!=0] = P1 OR P2
+s = [p=2]  = P2
+```
+
+so:
+
+```
+p=0 -> 00
+p=1 -> 10
+p=2 -> 11
+```
+
+and inverse:
+
+```
+P0 = NOT b
+P1 = b AND NOT s
+P2 = s
+```
+
+Prepending the fixed 1 gives:
+
+```
+100
+110
+111
+```
+
+which is exactly the T staircase. These are recodings of one ternary state, not independent confirmations.
 
 ## Terminal
 
-Second selector reuse gives:
+Second selector reuse substitutes the selector into both macro digits:
 
 ```
-U(r,c) = B(S(r,c), S(r,c), r, c)
+(q,S(j),j) -> (S(j),S(j),j)
 ```
 
-so the terminal step samples only diagonal primary frames 1, 5, 9.
-
-Every legal state terminates at:
+or:
 
 ```
-normalized payload: 100
-primary frame:      9
-raw A-I word:       ---//////
+U(j) = B(S(j),S(j),j)
+```
+
+Every legal state yields:
+
+```
+frame 9
+payload 100
+raw A-I word ---//////
+```
+
+Transition rank:
+
+```
+14 -> 3 -> 1
 ```
 
 `100` is also the p-order indicator of the unique derangement route class.
 
-Causal caveat: the second selector physically generates the terminal. The derangement indicator is an exact certificate/description, not a separately demonstrated physical circuit.
+The terminal is mechanically generated by selector reuse. The derangement identity is a certificate/description, not a separately demonstrated physical circuit.
 
-## State hierarchy
+## Observer
 
-Physical state:
-
-```
-P = (x,y,p,g)
-|P| = 14
-```
-
-Gauge quotient:
-
-```
-F = (x,y,p)
-|F| = 7
-```
-
-Control quotient:
-
-```
-C = (X,Y,p)
-|C| = 5
-```
-
-Routed state:
-
-```
-R = q
-|R| = 3
-```
-
-Terminal:
-
-```
-|T| = 1
-```
-
-Treat `14 -> 7 -> 5 -> 3 -> 1` as an information-compression ladder. In particular, 5→3 forgets request context after grant selection; it is not a pre-grant bisimulation quotient.
-
-## Thirteen-cell latent register
-
-Only 13 of the 43 physically unobserved residues remain variable. The other 30 are forced.
-
-Binary convention:
-
-- primary slash=0, dash=1;
-- Q4 slash=0, dot=1.
-
-Exact register:
-
-```
-22  = X
-25  = NOT X
-
-55  = [y=0]
-58  = [y=1]
-61  = [y=2] = Y
-
-84  = [g=2]
-102 = [g=0]
-
-100 = P0 = [p=0]
-91  = NOT P0
-
-94  = P1 = [p=1]
-103 = NOT P1
-
-88  = P2 = [p=2]
-106 = NOT P2
-```
-
-`55/58/61` and `P0/P1/P2` are one-hot.
-
-Every legal 13-bit codeword has Hamming weight 6. There are exactly 14 codewords; minimum Hamming distance is 2. This is state redundancy/observability, not a general error-correcting code.
-
-The whole 108-cell symbol census is completion-invariant:
-
-```
-slash : dash : dot = 54 : 36 : 18 = 3 : 2 : 1
-```
-
-## Frozen observer
-
-Same-quarter query vector:
+Frozen same-quarter observer:
 
 ```
 0 0 X
@@ -232,7 +372,7 @@ Same-quarter query vector:
 Y 0 0
 ```
 
-Q4-target query vector:
+Frozen Q4-target observer:
 
 ```
 0 0 (X AND Y AND P0)
@@ -240,43 +380,141 @@ Q4-target query vector:
 NOT([y=1]) 1 NOT(P0)
 ```
 
-where `G=[g=2]`.
+Information-optimal postprocessing:
 
-Minimum query sets:
+```
+X = S3
+Y = S7
+G = Q5
+Z = NOT Q7 OR (S3 AND S7 AND Q9)
+```
 
-- 3 queries recover five-state control `(X,Y,p)`;
-- 4 recover seven functional states `(x,y,p)`;
-- 5 recover all 14 physical states `(x,y,p,g)`.
+Thus the 18 raw query bits reduce exactly to the optimal four-bit state word `X,Y,Z,G`.
 
-Observer and transition are complementary:
+Raw-query minima:
 
-- observer preserves all 14 distinctions;
-- transition progressively erases them and ends rank 1.
+- 3 queries recover the 5-state control quotient;
+- 4 recover the 7 functional states;
+- 5 recover all 14 physical states.
 
-## Algebraic closure
+With Boolean postprocessing, 4 bits are information-theoretically optimal for 14 states.
 
-Native map convention: ternary word `abc` means `0→a,1→b,2→c`.
+The pointer bus has no unexplained semantic capacity left: it is a redundant state observer.
 
-`120` and `102` generate `S3`.
+## Physical latent register
 
-Adding terminal `100` generates the full 27-element transformation monoid `T3`.
+Variable residues:
 
-The set `{120,102,100}` is minimum-size for `T3`: two permutation generators plus one singular map.
+```
+22,25,
+55,58,61,
+84,88,91,94,100,102,103,106
+```
 
-This is mathematical closure only. Arbitrary physical composition is not demonstrated.
+Interpretation:
 
-## What is NOT solved
+```
+22  = X
+25  = NOT X
 
-- which of the 14 physical completions is the authored one;
-- whether one authored completion even matters beyond the transition quotient;
-- any downstream plaintext, URL, place, instruction, or lore phrase;
-- whether frame-9 canonicalization is the intended final endpoint or precedes one independently cued semantic operation;
-- any physical cycle-index microchannel.
+55  = [y=0]
+58  = [y=1]
+61  = [y=2]
 
-Generic simplicity does not choose a completion.
+84  = G
+102 = NOT G
 
-## Strongest current interpretation
+100 = P0
+91  = NOT P0
+94  = P1
+103 = NOT P1
+88  = P2
+106 = NOT P2
+```
 
-A serial-addressed visual master contains a compact registered three-state control machine. It reconstructs a legal grant, routes it through a complete three-state permutation shell, and canonicalizes all legal states to a unique loopless certificate/state `100`.
+All 14 legal codewords have Hamming weight 6 and minimum distance 2.
 
-That is already a coherent crack. Further work should make the structural description smaller or derive new completion-invariant consequences, not force English out of it.
+Global symbol census for every complete master:
+
+```
+slash : dash : dot = 54 : 36 : 18 = 3 : 2 : 1
+```
+
+## Algebraic characterization
+
+Under native map notation `abc = (0->a,1->b,2->c)`:
+
+- `120` and `102` generate `S3`;
+- adding terminal `100` generates the full 27-map transformation monoid `T3`;
+- `{120,102,100}` is a minimum-size generating set.
+
+This is mathematical closure only.
+
+Experiment 211 closes ordinary map composition as the physical selector mechanism. Physical irreversibility is recursive spatial selection, not generic transformation composition.
+
+## Evidence/axiom status
+
+Preferred irreducible transition-side supplied set:
+
+1. serial/H108/A-I carrier geometry;
+2. primary physical column positional code;
+3. local outer no-self depth registration;
+4. Q4 as depth-indexed POS3 selector encoding;
+5. recursive application of selector to primary memory;
+6. reuse of the same selector on regenerated surfaces;
+7. canonical-shell/permutation preservation when reconstructing Q4 without raw Q4 cell placements.
+
+Increasingly theorem-level rather than separately supplied:
+
+- T polarity staircase;
+- 210 baseline;
+- p self-label;
+- arbiter table;
+- NOR fallback;
+- Q3 table;
+- route cycle spectrum;
+- thermometer code;
+- terminal `100`;
+- derangement certificate;
+- T3 closure.
+
+The frozen pointer observer is a separate preregistered readout module, not part of the transition generator.
+
+## Mechanical completion
+
+Experiment 237 provides a single typed transducer specification.
+
+Experiment 238 audits it for hidden lookup tables and finds no large unexplained table or state-selection step within the investigated native low-complexity families.
+
+Experiment 239 independently reimplements the four-bit generator and checks it against the live public ledger:
+
+- 82 classified stickers;
+- 65 distinct H108 residues;
+- 82/82 serial→A-I matches;
+- zero repeated-residue conflicts;
+- 82/82 foreground symbols compatible;
+- 14 generated physical states;
+- exact 95 invariant / 13 variable split.
+
+## Semantic stopping point
+
+Experiment 240 audits established INSIDE ARG consumer families against terminal `100` / `---//////`.
+
+Every established family is:
+
+- already applied and negative;
+- dimension/carrier mismatched;
+- state-dependent internal readout;
+- or requires a new discretionary choice.
+
+The attractive complemented-binary terminal `000111111 = 63 = '?'` is explicitly post-hoc and not promoted.
+
+Current endpoint:
+
+```
+frame 9 / normalized 100 / raw ---//////
+```
+
+Treat this as the mechanically generated acceptance/canonical state.
+
+A semantic epilogue remains possible only if new independent information specifies how to consume it.
