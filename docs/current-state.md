@@ -462,7 +462,7 @@ Preferred irreducible transition-side supplied set:
 4. Q4 as depth-indexed POS3 selector encoding;
 5. recursive application of selector to primary memory;
 6. reuse of the same selector on regenerated surfaces;
-7. canonical-shell/permutation preservation when reconstructing Q4 without raw Q4 cell placements.
+7. no additional Q4 scaffold premise is required for the final 14-state family: Experiments 250–252 reconstruct the surviving selector cores directly from raw Q4 stack constraints plus recursive POS3 closure.
 
 Increasingly theorem-level rather than separately supplied:
 
@@ -520,6 +520,37 @@ All 18 outer primary trits are among the 25 observation-forced values and all sa
 Experiment 247 tests the sole unobserved polarity entry against bounded integer linear-threshold completions `[a*q+b*d+c>=0]`. Both binary completions are possible in that broader family, but the current staircase is the unique global minimum-L1 primitive rule: `q-d>=0` (cost 2). The alternate completion first appears as `2q-d>=0` (cost 3). This is a bounded simplicity result, not an absolute proof over all polarity grammars.
 
 Experiment 249 removes each of the 54 distinct observed primary residues in turn and reruns the raw reconstruction. Thirty residues affect at least one headline metric, but no single deletion changes more than one forced frame polarity and/or one forced trit: the worst case moves from 8 forced polarities / 25 forced trits to 7 / 24. The primary reconstruction is therefore not dependent on any single public residue.
+
+Experiments 250–253 move the proof below both finished state parameterizations.
+
+From raw sticker constraints alone under POS3 + the established polarity staircase:
+
+- the primary region has exactly 6 compatible ternary payload completions;
+- Q4 has exactly 36 one-slash-per-depth-stack selector completions;
+- their Cartesian product contains 216 raw-compatible candidate machines.
+
+Applying the current first selector pass and requiring only valid POS3 output reduces 216→20. Reusing the selector and requiring only a valid POS3 terminal reduces 20→14. The terminal payload was not supplied as a filter, yet every one of the 14 survivors yields `100`. Their complete 108-symbol masters are exactly equal to the 14 masters emitted by both prior implementations.
+
+Constraint-flow analysis shows:
+
+- first-pass closure forces the raw-unobserved Q4 C cell from `{0,1,2}` to the binary gauge `{0,2}`;
+- first-pass closure reduces the A/D/G control space to five cores;
+- second-pass closure rejects exactly the six first-pass states with `A=0`;
+- the surviving A/D/G cores are exactly `110`, `220`, and `212`;
+- the request/grant compatibility relation emerges directly from the surviving `(x,y)` ports versus those three control cores.
+
+Thus the Q4 control formulas and arbiter table are descriptive normal forms of the closure result, not assumptions needed to recover the legal state family.
+
+Experiment 253 then reopens the recursion itself on the raw 216-machine parent space. Over all `6^4=1296` shell-preserving two-pass permutation tuples
+
+```
+first:  B(f(q), g(S), j)
+second: B(h(S), k(S), j)
+```
+
+42 operation tuples yield a nonempty completion-invariant POS3 terminal. The maximum number of raw-compatible states retained by any such tuple is 14. Exactly six tuples attain that maximum: `g=h=k=identity`, while `f` ranges over the six relabelings of external q. Every maximal tuple terminates at `100`. Fixing the physical q labels leaves the all-identity recursion uniquely.
+
+This materially reduces circularity in the recursion argument: the canonical two-pass operation can be selected from the raw parent space by shell preservation plus maximum retention of raw-compatible physical states, without first assuming the solved 14-state model.
 
 ## Mechanical completion
 
