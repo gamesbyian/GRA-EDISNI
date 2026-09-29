@@ -1,11 +1,16 @@
 {
-  "schema_version": 2,
-  "source_checkpoint": "Google Results through Experiment 240",
+  "schema_version": 3,
+  "source_checkpoint": "repository through Experiment 286",
   "closed_corpus": true,
   "mechanical_status": "substantially complete",
   "semantic_status": "internal semantic branch closed without an independent consumer",
   "hidden_state": {
-    "bits": ["X", "Y", "Z", "G"],
+    "bits": [
+      "X",
+      "Y",
+      "Z",
+      "G"
+    ],
     "validity": "Y & Z -> X",
     "forbidden_functional_word": "011",
     "physical_state_count": 14,
@@ -21,14 +26,42 @@
   "carrier": {
     "foreground_period": 108,
     "background_period": 9,
-    "primary_range": [1, 81],
-    "q4_range": [82, 108],
+    "primary_range": [
+      1,
+      81
+    ],
+    "q4_range": [
+      82,
+      108
+    ],
     "address": "r-1 = 27*q + 9*d + j",
-    "serial_order": ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+    "serial_order": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
     "physical_layout": [
-      ["I", "A", "B"],
-      ["C", "D", "E"],
-      ["F", "G", "H"]
+      [
+        "I",
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D",
+        "E"
+      ],
+      [
+        "F",
+        "G",
+        "H"
+      ]
     ]
   },
   "positional_code": {
@@ -37,9 +70,21 @@
   },
   "primary": {
     "payload_lattice": [
-      ["112", "212", "0x0"],
-      ["212", "002", "100"],
-      ["1y2", "022", "100"]
+      [
+        "112",
+        "212",
+        "0x0"
+      ],
+      [
+        "212",
+        "002",
+        "100"
+      ],
+      [
+        "1y2",
+        "022",
+        "100"
+      ]
     ],
     "x": "1+X",
     "y": "2*Y + (1-Y)*Z",
@@ -50,13 +95,49 @@
       "q2_left": "201",
       "right_all_quarters": "220",
       "q3_left": "101"
+    },
+    "registration_status": "derived/representative-level; exact column POS3 fixes the preferred physical gauge",
+    "physical_completion_gauge": {
+      "bits": 2,
+      "settings": 4,
+      "generators": [
+        {
+          "frame": "q0,d0",
+          "move": "H<->F",
+          "residues": [
+            8,
+            6
+          ]
+        },
+        {
+          "frame": "q1,d1",
+          "move": "I<->E",
+          "residues": [
+            45,
+            41
+          ]
+        }
+      ],
+      "transition_invisible": true
     }
   },
   "q4": {
     "field_layout": [
-      ["2", "A", "2"],
-      ["g", "D", "0"],
-      ["1", "G_control", "2"]
+      [
+        "2",
+        "A",
+        "2"
+      ],
+      [
+        "g",
+        "D",
+        "0"
+      ],
+      [
+        "1",
+        "G_control",
+        "2"
+      ]
     ],
     "formulas": {
       "A": "2-P0",
@@ -71,24 +152,60 @@
     },
     "baseline": "210",
     "fixed_cell_count": 19,
-    "variable_cell_count": 8
+    "variable_cell_count": 8,
+    "polarity_gauge": {
+      "bits": 3,
+      "settings": 8,
+      "generators": [
+        "A",
+        "C",
+        "F+I"
+      ],
+      "preferred_representative": "all slash-exception",
+      "transition_invisible_within_14_state_family": true
+    }
   },
   "first_pass": {
     "address_substitution": "(q,d,j)->(q,S(j),j)",
     "payloads_by_p": {
-      "0": ["102", "002", "120"],
-      "1": ["102", "012", "100"],
-      "2": ["102", "022", "100"]
+      "0": [
+        "102",
+        "002",
+        "120"
+      ],
+      "1": [
+        "102",
+        "012",
+        "100"
+      ],
+      "2": [
+        "102",
+        "022",
+        "100"
+      ]
     },
     "hidden_rank": 3
   },
   "grant_relation": {
-    "eligibility_q_order": ["X", "NOR(X,Y)", "Y"],
+    "eligibility_q_order": [
+      "X",
+      "NOR(X,Y)",
+      "Y"
+    ],
     "table": {
-      "00": [1],
-      "01": [0],
-      "10": [2],
-      "11": [0, 2]
+      "10": [
+        2
+      ],
+      "11": [
+        0,
+        2
+      ],
+      "00": [
+        1
+      ],
+      "01": [
+        0
+      ]
     }
   },
   "route": {
@@ -105,11 +222,32 @@
     "frame": 9,
     "payload": "100",
     "raw_serial_word": "---//////",
-    "hidden_rank": 1
+    "hidden_rank": 1,
+    "stability": "fixed point under repeated selector reuse; competing 102 branch lies on period-2 orbit 102<->100"
   },
   "observer": {
-    "same_quarter": ["0", "0", "X", "1", "0", "0", "Y", "0", "0"],
-    "q4_target": ["0", "0", "X&Y&P0", "1", "G", "P0", "!Y1", "1", "!P0"],
+    "same_quarter": [
+      "0",
+      "0",
+      "X",
+      "1",
+      "0",
+      "0",
+      "Y",
+      "0",
+      "0"
+    ],
+    "q4_target": [
+      "0",
+      "0",
+      "X&Y&P0",
+      "1",
+      "G",
+      "P0",
+      "!Y1",
+      "1",
+      "!P0"
+    ],
     "optimal_state_bits": {
       "X": "S3",
       "Y": "S7",
@@ -118,22 +256,93 @@
     },
     "rank": 14
   },
-  "latent_register_residues": [22,25,55,58,61,84,88,91,94,100,102,103,106],
+  "latent_register_residues": [
+    22,
+    25,
+    55,
+    58,
+    61,
+    84,
+    88,
+    91,
+    94,
+    100,
+    102,
+    103,
+    106
+  ],
   "master_anatomy": {
-    "invariant_residues": 95,
-    "variable_residues": 13,
-    "observed_residues": 65,
-    "forced_unobserved_residues": 30,
-    "symbol_census": {
-      "slash": 54,
-      "dash": 36,
-      "dot": 18
+    "preferred_representative": {
+      "invariant_residues": 95,
+      "variable_residues": 13,
+      "observed_residues": 65,
+      "forced_unobserved_residues": 30,
+      "symbol_census": {
+        "slash": 54,
+        "dash": 36,
+        "dot": 18
+      }
+    },
+    "gauge_quotient": {
+      "physical_gauge_bits": 5,
+      "physical_gauge_settings": 32,
+      "hidden_states_per_setting": 14,
+      "distinct_complete_masters": 448,
+      "operation_gauge_bits": 1,
+      "total_gauge_bits": 6,
+      "total_gauge_settings": 64,
+      "state_operation_representations": 896,
+      "union_variable_residues": [
+        6,
+        8,
+        22,
+        25,
+        41,
+        45,
+        55,
+        58,
+        61,
+        82,
+        84,
+        87,
+        88,
+        90,
+        91,
+        93,
+        94,
+        96,
+        99,
+        100,
+        102,
+        103,
+        105,
+        106,
+        108
+      ]
     }
   },
   "algebra": {
-    "s3_generators": ["120", "102"],
-    "t3_generators": ["120", "102", "100"],
+    "s3_generators": [
+      "120",
+      "102"
+    ],
+    "t3_generators": [
+      "120",
+      "102",
+      "100"
+    ],
     "t3_size": 27,
     "physical_composition_status": "closed; selector dynamics are not ordinary map composition"
+  },
+  "recursion_gauge": {
+    "bits": 1,
+    "settings": 2,
+    "operation": "f_1 identity vs swap(0,1) when S=1",
+    "support": [
+      "A",
+      "D",
+      "F"
+    ],
+    "reason_invisible": "q0,d1 and q1,d1 store identical symbols on every S=1-reachable cell"
   }
 }
