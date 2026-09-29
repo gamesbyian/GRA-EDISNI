@@ -283,6 +283,8 @@ That gives a plausible human sequence:
 
 The remaining earlier discovery question is now the H108/A–I framing itself, not POS3 orientation.
 
+Experiment 274 adds a second, genuinely raw-facing cue before full POS3 commitment. Normalize the observed slash/dash marks only to minority/majority using the frame polarities, then compare the nine sparse physical frames pairwise. Exactly two frame pairs have the strongest conflict-free support available in the corpus: four positions observed in both frames, no normalized conflicts, and eight of nine physical positions covered across the pair. They are `q0,d1=q1,d0` and `q1,d2=q2,d2`. Those are precisely two repeated motifs in the canonical primary tensor. In the weaker frame-weight-three + centroid parent, extending both partial repeats to exact frame equality removes the only 14-state centre-column sibling and leaves the canonical 14 states. A human route can therefore treat repeated sparse motifs as a recognition cue rather than needing to invent one-pulse-per-column from nothing. The inferential jump is still real: partial compatibility does not logically prove full equality.
+
 
 ## Reconciliation with the earlier physical-entry work
 
