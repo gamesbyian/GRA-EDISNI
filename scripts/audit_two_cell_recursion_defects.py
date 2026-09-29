@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Experiment 297: exhaust up-to-two-cell first-pass recursion defects.
+"""Experiment 307: exhaust up-to-two-cell first-pass recursion defects.
 
-Experiment 296 found:
+Experiment 306 found:
   * no single first-pass depth defect preserves the exact canonical transducer;
   * one A+1 defect retains 16 states and terminal 100 but destroys the clean
     three-class reversible route layer.
@@ -282,7 +282,7 @@ def main() -> None:
     assert all(result["terminals"] == Counter({"100": 20}) for result in max_siblings)
     assert all(not result["shells"] for result in max_siblings)
 
-    print("Experiment 297")
+    print("Experiment 307")
     print("zero/one/two-cell first-pass configurations:", len(results))
     print("outcome distribution (states, terminal cardinality):")
     for key in sorted(distribution):
