@@ -164,6 +164,10 @@ Together with Experiments 303–305, this means the **state-independent global b
 **Experiment 313 closes the clean translation bridge between those lanes.** It exhausts all `9^9 = 387,420,489` reused per-cell translations `F_j(q,S)=(q+a_j,S+b_j)`. Raw retention reaches 24, but every operation above 14 states is route-degenerate. The route maximum remains 14 across 396 physical rules / 10 observational classes. Exactly one class preserves the canonical 14 physical states, route shell and invariant terminal `100`; its 36 physical rules are exact operation gauges over all 216 raw-compatible candidates. The gauge factorization is F q-shift ×3, E q-shift ×3, and independent B/H identity-vs-`(q+1,d-1)` bits.
 
 This closes local additive address freedom as a source of functional rivals. Do not spend more Priority-5 effort on extra affine constants or pass-specific local exceptions. A next adversarial family needs a genuinely different compact rationale, such as tightly bounded state dependence or coordinate coupling, rather than additional address-translation knobs.
+
+**Experiment 314 tests that smallest state-dependent coupling and closes it too.** For `F_j(q,S)=(q+c_j S,S)` over all `3^9 = 19,683` reused per-cell shears, raw retention reaches 20 but every >14-state operation is route-degenerate. Exactly 99 operations are route-capable; nine reach 14 states, and all nine are exactly observationally canonical. Their only freedom is independent E/F coefficients: E is invisible because `S_E=0`, while F depth 1 stores slash at q=0,1,2 for every raw-compatible primary payload.
+
+**Priority-5 stopping rule:** do not broaden next to arbitrary per-cell functions merely because quotient enumeration is possible. The global-bijection, local-selector-permutation, local-translation and minimal selector-controlled shear families now all collapse to the same functional machine plus explainable gauges. Reopen broader state-dependent operation search only when an independent structural clue licenses a compact new grammar.
 ## Priority 6 — archival/manufacturing lane
 ### Priority 6A — historical method archaeology
 
