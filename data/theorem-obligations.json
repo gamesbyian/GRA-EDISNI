@@ -30,6 +30,7 @@
     "T3a",
     "G6",
     "T2",
+    "T2b",
     "T3",
     "T4",
     "T5",
@@ -62,6 +63,13 @@
       "script": "scripts/audit_q3_route_shell.py",
       "covers": [
         "T5"
+      ]
+    },
+    {
+      "id": "q4-independent-polarity-route",
+      "script": "scripts/audit_q4_independent_polarity_route.py",
+      "covers": [
+        "T2b"
       ]
     },
     {
