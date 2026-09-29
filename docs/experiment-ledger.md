@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **240**.
+Latest indexed experiment: **246**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -253,6 +253,7 @@ Latest indexed experiment: **240**.
 | 243 | exact full-master equivalence of Boolean and native implementations |
 | 244 | broad second-pass coordinate-map audit; identity/identity unique under shell-preserving permutations |
 | 245 | broad first-pass coordinate-map audit; selector-depth identity forced, with only external-q relabeling freedom |
+| 246 | raw primary reconstruction: 8/9 frame polarities and 25/27 trits forced; outer no-self demoted to theorem |
 
 ## Current frontier
 
@@ -261,7 +262,7 @@ Latest indexed experiment: **240**.
 - **216–220:** endpoint-free inverse reconstruction, broad primary inverse audit, T/T' observer discrimination, complete Q4 surface prediction, axiom ablation.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
-- **241–245:** theorem graph, independent native implementation, exact implementation equivalence, and broader first/second-pass recursion uniqueness audits.
+- **241–246:** theorem graph, independent native implementation, exact implementation equivalence, broader first/second-pass recursion uniqueness audits, and raw primary axiom reduction.
 
 ## Status shorthand
 
