@@ -17,3 +17,5 @@ jobs:
         run: python scripts/verify_machine.py
       - name: Verify independent native-state model
         run: python scripts/verify_native_model.py
+      - name: Compare independent master families exactly
+        run: python scripts/compare_models.py
