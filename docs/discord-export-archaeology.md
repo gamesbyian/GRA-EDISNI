@@ -335,3 +335,14 @@ Treat unconstrained “try shifting/straightening the Terminal 41 data” as his
 ### Embedded image metadata
 
 `assets/jpeg-cbebfe04a2674523.txt` (blob `590624925fe3d36a362bbb1de905f459267c211b`) records JPEG metadata with Artist/XPAuthor `AnSet`, EXIF original/digitized time `2016:08:09 14:12:24`, and an XMP create date in December 2016. This is provenance metadata only; no sticker-machine consequence is inferred.
+
+
+## Stateful printer-answer consumer recovered
+
+The compact `ARG / tldr` export adds an implementation-level behavioral clue to the archived `print.js` recovered above.
+
+On **2 Jul 2018**, after `MULTIPLEPROBESDISPATCHED` had been accepted by the Playdead printer endpoint, solvers reported that submitting a later *incorrect* code in the same browser still appended the previously unlocked successful page after the normal “incorrect message received” output. The same correct submission was reported to trigger the appearance of `printreqstatus_005.html` and shortly afterward `printreqstatus_006.html`.
+
+Combined with the archived JavaScript's persistent browser GUID sent to `/print/index.php`, the historical consumer appears to have maintained **per-client progression/state**, rather than treating every answer as a stateless lookup.
+
+This is relevant design precedent for any genuine external consumer of the Collector's Edition machine: an answer may act as a state transition or unlock token, not merely decode to prose. It does not identify a surviving consumer for `100`, and the old endpoint must not be probed without an independently justified grammar.
