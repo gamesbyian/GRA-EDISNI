@@ -256,3 +256,18 @@ Key points:
 This does **not** establish recoverability of the missing image payload; the archive still records expert and community assessments that too much entropy is missing for normal JPEG recovery. It does, however, mean the old "server-side corruption, nothing more can be done" statement is too strong.
 
 High-value bounded follow-up: compare every preserved 534brn capture byte-for-byte, reconstruct only deterministic JPEG/EXIF fields, and quantify exactly which bytes are information-theoretically lost versus merely transformed by ANSI/UTF-8/HTML handling. Do not use guessed image content as evidence.
+
+
+## 534brn capture inventory is now explicit
+
+The preserved damaged-image material is no longer represented only by prose references. See `data/discord-534brn-captures.json` for a content-addressed inventory of every currently identified 534brn capture family and derived artifact in the export.
+
+Notable deduplication findings:
+
+- three differently named "original" HTML files are byte-identical at blob `ce55c03e...`;
+- four `534brn..._1` HTML names are byte-identical at `f12c02c4...`;
+- three later `message-*.txt` names are byte-identical at `9580913d...`;
+- the historical `534brn...png` and both `StickerSolution` names are the same blob `2d9fd5b6...`;
+- a BMP and two JPG filenames are all the same 3.96 MB blob `21649d1b...`, so historical filename extensions cannot be trusted as format evidence.
+
+The later partial capture `9580913d...` is especially useful: even through the connector's lossy text view it visibly contains standard JPEG Huffman-table strings and ends with literal `pe^!02un`. Its archived provenance says it omits the beginning/end but avoided some HTML-parser damage. The next experiment must operate on raw bytes, not Unicode-decoded text.
