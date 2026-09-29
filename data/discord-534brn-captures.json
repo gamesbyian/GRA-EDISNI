@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "source_repository": "gamesbyian/playdead-unofficial-exports",
+  "source_ref": "master",
+  "source_commit": "5e5897e2ce70dad5a2bd85e459770637cb36610f",
+  "purpose": "Inventory preserved 534brn9653f9j8mmd/JPEG-related captures and derived artifacts without vendoring the large/raw corpus.",
+  "caution": [
+    "Path names in the export are historical attachment filenames, not proof of originality.",
+    "Identical blob SHA means byte-identical Git content even when multiple attachment filenames exist.",
+    "The legacy HTML captures are known to have passed through text/HTML handling; do not treat replacement characters as original JPEG bytes.",
+    "Derived BMP/JPG/PNG artifacts may be reconstruction or visualization outputs rather than original payload captures."
+  ],
+  "capture_groups": [
+    {
+      "role": "legacy HTML capture family A",
+      "blob_sha": "ce55c03ee972954f6e80f55a1a279bb85024f99b",
+      "size": 12140,
+      "paths": [
+        "assets/534brn9653f9j8mmd-e0ee238cabfbe164.html",
+        "assets/534brn9653f9j8mmd-fbcdf27a073c9d74.html",
+        "assets/534brn9653f9j8mmd_original-4f038b969c841fd7.html"
+      ],
+      "status": "preserved; decoding through connector fails as strict UTF-8, consistent with binary/text corruption"
+    },
+    {
+      "role": "legacy HTML capture family B",
+      "blob_sha": "f12c02c49f4c3f7589419fe8e20d655f7b95a9f4",
+      "size": 16922,
+      "paths": [
+        "assets/534brn9653f9j8mmd-7c3eebcee8a70c62.html",
+        "assets/534brn9653f9j8mmd_1-9014735779444bc3.html",
+        "assets/534brn9653f9j8mmd_1-ab20b1ccc9bf47cf.html",
+        "assets/534brn9653f9j8mmd_1-bac4b3079355c1bb.html"
+      ],
+      "status": "preserved duplicate family; known HTML/text-wrapper handling requires exact byte comparison outside UTF-8 text APIs"
+    },
+    {
+      "role": "historical experiment HTML",
+      "blob_sha": "35eb550d0b7600761fd44ce41b44ba494c00e228",
+      "size": 17017,
+      "paths": [
+        "assets/534brn9653f9j8mmd_experiment-1a30be864899ab2f.html"
+      ],
+      "status": "derived/experimental; keep separate from source captures"
+    },
+    {
+      "role": "historical hidden HTML",
+      "blob_sha": "88dca8c56036c12d80aec4ecaab2b0abcce1ab50",
+      "size": 16915,
+      "paths": [
+        "assets/534brn9653f9j8mmd_hidden-401c403366cd5aed.html",
+        "assets/534brn9653f9j8mmd_hidden-45a0c62492c9ab34.html"
+      ],
+      "status": "duplicate derived/alternate capture family"
+    },
+    {
+      "role": "cleaner partial JPEG-body capture discussed July-August 2026",
+      "blob_sha": "9580913d043ca3efd54a01a38a9cff5767ea8ee7",
+      "size": 8760,
+      "paths": [
+        "assets/message-630970294e9fb0ce.txt",
+        "assets/message-a6f5fdf85ad2968c.txt",
+        "assets/message-f97625a02d768aa4.txt"
+      ],
+      "observed_structure": [
+        "begins after the SOI/EXIF region near JPEG quantization/Huffman data",
+        "contains recognizable standard JPEG Huffman symbol strings",
+        "ends with literal pe^!02un"
+      ],
+      "status": "high-value partial capture; lacks beginning/end according to archived discussion; exact raw-byte materialization needed for forensic comparison"
+    },
+    {
+      "role": "XMP metadata fragment",
+      "blob_sha": "b6f5ffed946d9d19dfd0a5d90a8b18759a90c496",
+      "size": 2804,
+      "paths": [
+        "assets/message-0e4be448bc32b1bf.txt"
+      ],
+      "observed_structure": [
+        "XMP packet",
+        "CreateDate 2016-12-16T14:12:24.351",
+        "dc:creator AnSet"
+      ],
+      "status": "metadata fragment; potentially useful for deterministic header reconstruction, not image payload evidence"
+    },
+    {
+      "role": "derived large bitmap/JPEG family",
+      "blob_sha": "21649d1be4d63bb541a1de506098a1f3e0d99943",
+      "size": 3963914,
+      "paths": [
+        "assets/534brn9653f9j8mmd-1d6905b88dafcb0e.bmp",
+        "assets/534brn9653f9j8mmd-ec9713cd42aff3d5.jpg",
+        "assets/534brn9653f9j8mmd_1-aca19785b4c4e832.jpg"
+      ],
+      "status": "same Git blob stored under multiple extensions; therefore extension alone is unreliable. Treat as derived artifact pending format-signature inspection."
+    },
+    {
+      "role": "historical solution/visualization image",
+      "blob_sha": "2d9fd5b60faa3d5fdb25ebc63ab3f77be3138b46",
+      "size": 767381,
+      "paths": [
+        "assets/534brn9653f9j8mmd-985ba09db545de5d.png",
+        "assets/StickerSolution-dc12d5e516ca4922.png",
+        "assets/StickerSolution-f19fd331a635aebf.png"
+      ],
+      "status": "same image under multiple names; historical solution/visualization, not raw damaged JPEG"
+    }
+  ],
+  "next_exact_tests": [
+    "Materialize/download raw bytes for each unique capture SHA; never round-trip through a text decoder.",
+    "Compute byte-level common-prefix/common-suffix and alignment across source-capture families.",
+    "Classify replacement-character regions, HTML entity transformations, CR/NUL transformations, and genuinely absent ranges separately.",
+    "Rebuild only JPEG fields fixed by standards or independently preserved metadata.",
+    "Report recoverable byte constraints and entropy loss before attempting any image-content reconstruction."
+  ]
+}
