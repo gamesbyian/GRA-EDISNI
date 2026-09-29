@@ -128,6 +128,12 @@ def main() -> int:
         default=[],
         help="Restrict export to one or more channel/thread IDs.",
     )
+    parser.add_argument(
+        "--channel-name",
+        action="append",
+        default=[],
+        help="Restrict export to one or more exact channel/thread names.",
+    )
     parser.add_argument("--download-attachments", action="store_true")
     parser.add_argument(
         "--include-archived-public-threads",
@@ -159,10 +165,22 @@ def main() -> int:
             except RuntimeError as exc:
                 print(f"warning: archived threads for {channel['id']}: {exc}")
 
-    wanted = set(args.channel_id)
+    wanted_ids = set(args.channel_id)
+    wanted_names = set(args.channel_name)
+    if wanted_names:
+        available_names = {str(c.get("name") or "") for c in by_id.values()}
+        missing_names = sorted(wanted_names - available_names)
+        if missing_names:
+            raise SystemExit(
+                "Requested channel/thread name(s) not visible to bot: "
+                + ", ".join(missing_names)
+            )
+
     selected = [
         c for cid, c in by_id.items()
-        if not wanted or cid in wanted
+        if (not wanted_ids and not wanted_names)
+        or cid in wanted_ids
+        or str(c.get("name") or "") in wanted_names
     ]
     selected.sort(key=lambda c: (int(c.get("position", 0)), str(c.get("id"))))
 
