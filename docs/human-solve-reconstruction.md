@@ -104,15 +104,15 @@ in `q` rows and `d` columns.
 
 The single missing entry is `q=1,d=2`.
 
-The simplest completion is visibly the lower-triangular rule:
+A human has two legitimate routes from here. The quick visual hypothesis is the lower-triangular rule:
 
 ```
 minority is dash iff d <= q
 ```
 
-Experiment 247 makes that statement precise: among small integer linear-threshold rules fitting the eight observed cells, `q-d>=0` is the unique minimum-coefficient completion.
+Experiment 247 shows that `q-d>=0` is the unique minimum-coefficient linear-threshold completion, and Experiment 261 shows slash-minority is locally more determined.
 
-This is a plausible human inference, not a need for group theory or global optimization.
+More importantly, Experiment 277 means the solver does not need to *assume* either heuristic. Carry both locally valid polarities forward into the selector test. The slash-minority branch produces 20 valid first-pass machines and the canonical 14-state closure. The dash-minority branch has 12 raw primary payloads × 36 selectors = 432 candidate machines, and every one fails first-pass POS3. The recursive operation therefore supplies the missing polarity. The staircase can be noticed early as a good guess, then becomes a theorem once the selector is tried.
 
 ### 7. Let the raw corpus reveal almost the entire ternary primary — D
 
