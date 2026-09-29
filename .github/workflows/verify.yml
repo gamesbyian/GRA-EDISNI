@@ -49,6 +49,8 @@ jobs:
         run: python scripts/audit_primary_frame_weight_three.py
       - name: Audit transition-invisible primary gauge
         run: python scripts/audit_primary_invisible_gauge.py
+      - name: Audit primary gauge transport
+        run: python scripts/audit_primary_gauge_transport.py
       - name: Audit centered primary sibling
         run: python scripts/audit_primary_centroid_sibling.py
       - name: Audit raw normalized frame repeats
