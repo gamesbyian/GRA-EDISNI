@@ -44,3 +44,6 @@ The pack fails if:
 ## What this does not claim
 
 A green proof pack does not prove that the supplied grammars are the uniquely intended human assumptions. Priority 1 and Priority 4 still attack that problem. It proves a more practical property: the current stated theorem chain is internally wired the way the documentation says it is, and the independent executable realizations still agree on the machine family and terminal.
+## Gauge-aware handoff
+
+The machine-readable spec now distinguishes the preferred exact-POS3 physical representative from the closed-corpus gauge quotient established through Experiment 286. `data/machine-spec.json` records 14 hidden states, 32 physical gauge settings / 448 complete masters, and one additional operation-only gauge bit for 64 total representation settings. `scripts/verify_machine_spec.py` checks those handoff counts, while the proof-pack manifest now runs `scripts/audit_full_gauge_quotient.py` so future edits cannot silently collapse the quotient back to a falsely unique physical surface.
