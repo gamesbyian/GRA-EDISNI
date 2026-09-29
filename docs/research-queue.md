@@ -26,10 +26,12 @@ The current mechanical model is compact, but some uniqueness statements remain c
 
 Remaining high-value ingredients:
 
-- primary local column-POS3 grammar;
-- outer no-self registration;
+- primary local column-POS3 grammar itself;
+- the single unresolved frame-polarity completion at `q=1,d=2` under weaker-than-staircase grammars;
 - canonical Q3 shell orientation;
 - broader recursion parents that are not expressible as independent ternary coordinate maps.
+
+**Experiment 246 removes outer no-self registration from this list.** Under POS3, raw observations force 8/9 frame polarities. With the established `d<=q` staircase, they force 25/27 primary trits, including all 18 outer trits; all 18 already satisfy no-self.
 
 Goal: determine whether the present transducer remains uniquely or near-uniquely selected without smuggling in its own representation.
 
@@ -72,6 +74,8 @@ Independent implementations must reproduce:
 Disagreement is a bug or hidden assumption and should stop downstream work.
 
 ## Priority 4 — human solve reconstruction
+
+Experiment 246 materially improves the likely human entry path: the primary object can now be presented as “the stickers visibly determine almost the entire ternary lattice” rather than as a heavily inferred reconstruction.
 
 Now that the machine is theoremized, reconstruct the shortest plausible human path without using conclusions before they are discoverable.
 
