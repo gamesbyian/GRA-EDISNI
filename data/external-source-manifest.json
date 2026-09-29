@@ -286,6 +286,30 @@
       "source": "multiple public GitHub repos",
       "path": "data/inside-technical-tools.json",
       "note": "Catalogs adjacent manipulation/inspection tools, including reference-only unlicensed repos."
+    },
+    {
+      "id": "canonical-binary-asset-manifest",
+      "kind": "binary_asset_manifest",
+      "status": "vendored",
+      "source": "twinysam/INSIDE-ARG git tree",
+      "path": "data/canonical-binary-asset-manifest.json",
+      "note": "170 exact binary assets catalogued: 169 sticker images + 1 Terminal 41 transmission PNG, each with blob SHA, byte size and raw URL."
+    },
+    {
+      "id": "external-asset-fetcher",
+      "kind": "automation",
+      "status": "vendored",
+      "source": "project-authored",
+      "path": "scripts/fetch_external_assets.py",
+      "note": "Standard-library downloader verifies raw files against Git blob SHA and byte size."
+    },
+    {
+      "id": "external-asset-fetch-workflow",
+      "kind": "github_actions_workflow",
+      "status": "vendored",
+      "source": "project-authored",
+      "path": ".github/workflows/fetch-external-arg-assets.yml",
+      "note": "Manual GHA workflow downloads verified external binaries and stores them as workflow artifacts rather than Git history."
     }
   ]
 }
