@@ -1,0 +1,21 @@
+name: Verify Experiment 296
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_single_cell_recursion_defects.py"
+      - "scripts/enumerate_raw_machine.py"
+      - "data/observations.csv"
+      - "docs/alternative-machine-single-cell-defects.md"
+      - ".github/workflows/verify-experiment-296.yml"
+
+jobs:
+  verify-experiment-296:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run single-cell recursion-defect audit
+        run: python scripts/audit_single_cell_recursion_defects.py
