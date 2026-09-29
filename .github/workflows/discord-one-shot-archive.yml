@@ -1,0 +1,103 @@
+name: One-shot Discord archive
+
+on:
+  workflow_dispatch:
+    inputs:
+      guild_id:
+        description: "Discord server (guild) ID"
+        required: true
+        type: string
+      channel_ids:
+        description: "Optional comma-separated channel/thread IDs; blank = all bot-visible text channels"
+        required: false
+        type: string
+      include_archived_public_threads:
+        description: "Include archived public threads"
+        required: true
+        default: true
+        type: boolean
+      download_attachments:
+        description: "Download attachment files into the export artifact"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate inputs
+        env:
+          GUILD_ID: ${{ inputs.guild_id }}
+          CHANNEL_IDS: ${{ inputs.channel_ids }}
+        run: |
+          python - <<'PY'
+          import os, re
+          guild = os.environ["GUILD_ID"].strip()
+          if not re.fullmatch(r"\d{15,22}", guild):
+              raise SystemExit("guild_id must be a Discord snowflake")
+          raw = os.environ.get("CHANNEL_IDS", "").strip()
+          if raw:
+              for value in raw.split(","):
+                  if not re.fullmatch(r"\d{15,22}", value.strip()):
+                      raise SystemExit(f"invalid channel/thread ID: {value!r}")
+          PY
+
+      - name: Archive permitted Discord history
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          GUILD_ID: ${{ inputs.guild_id }}
+          CHANNEL_IDS: ${{ inputs.channel_ids }}
+          INCLUDE_ARCHIVED: ${{ inputs.include_archived_public_threads }}
+          DOWNLOAD_ATTACHMENTS: ${{ inputs.download_attachments }}
+        run: |
+          set -euo pipefail
+          args=(--guild-id "$GUILD_ID" --output discord-export)
+
+          if [[ "$INCLUDE_ARCHIVED" == "true" ]]; then
+            args+=(--include-archived-public-threads)
+          fi
+          if [[ "$DOWNLOAD_ATTACHMENTS" == "true" ]]; then
+            args+=(--download-attachments)
+          fi
+          if [[ -n "${CHANNEL_IDS// }" ]]; then
+            IFS=',' read -ra ids <<< "$CHANNEL_IDS"
+            for id in "${ids[@]}"; do
+              id="${id//[[:space:]]/}"
+              args+=(--channel-id "$id")
+            done
+          fi
+
+          python scripts/discord_archive.py "${args[@]}"
+
+      - name: Summarize export
+        if: always()
+        run: |
+          if [[ -f discord-export/manifest.json ]]; then
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          m = json.loads(Path("discord-export/manifest.json").read_text())
+          print(f"Channels: {m['exported_channel_count']}")
+          print(f"Messages: {m['exported_message_count']}")
+          PY
+          fi
+
+      - name: Upload private workflow artifact
+        if: always() && hashFiles('discord-export/**') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: discord-export-${{ inputs.guild_id }}
+          path: discord-export/
+          retention-days: 7
+          if-no-files-found: error
