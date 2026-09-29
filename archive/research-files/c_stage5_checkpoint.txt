@@ -1,0 +1,31 @@
+C stage 5: mapping the registered reveal into the canonical community assembly
+
+Recovered source
+- Exact bytes of the public final assembled image linked from the INSIDE-ARG README (Imgur 846shEE.jpg) were recovered through a temporary Google Doc image bridge and DOCX media extraction. The bridge document was deleted afterward.
+- Recovered image dimensions: 947 x 1000 JPEG.
+
+Coordinate mapping
+- Working C tile bounds in the assembled image: x=77..340, y=363..644 (264 x 282 pixels).
+- The community C crop is polarity-inverted relative to the edited physical source family, confirming the expected same-background geometry. Direct resize correlations (community crop vs inverted rectified source) were 0.145 for 003, 0.572 for 021, 0.577 for 066, and 0.165 for 156. The near tie of 021/066 means the final montage source itself cannot be uniquely identified from this correlation, and the white foreground may have been normalized editorially.
+
+Registered slash-hidden reveal regions mapped into assembly coordinates
+1. Upper reveal: normalized C x=481..770, y=277..477 -> assembled x≈183..247, y≈428..475.
+2. Lower reveal: normalized C x=281..564, y=611..809 -> assembled x≈139..201, y≈507..553.
+
+Historical 6 question
+- The public chronology explicitly states that the April 6 dash-C exposure made previously concealed characters clearer and gave more evidence for a digit 6.
+- The recovered final community image plus current public README history does not preserve an explicit character-coordinate annotation tying either reveal patch to the exact glyph position of the 6 in dat/534brn9653f9j8mmd.
+- Visual inspection of the two high-confidence reveal patches shows coherent halftone structure but does not independently establish a recognizable digit 6 at a defensible confidence level.
+- Therefore: the exact C-to-assembly mapping is now established, but “lower reveal patch = the historical 6” remains unproven. Do not promote that attribution without a surviving Discord screenshot/message attachment, an archived annotated reconstruction, or a new full-image character segmentation that independently locates the glyph lattice.
+
+Artifacts
+- community_assembled_printer.jpg (recovered final public assembly)
+- community_C_crop.png
+- community_assembly_C_reveal_overlay.png
+- community_assembly_with_strict_C_composite.png
+- community_C_original_vs_strict_reconstruction.png
+- c_reveal_to_assembly_coordinates.csv
+- c_stage5_checkpoint.txt
+
+Next recommended bounded step
+- Begin exact-source latent reconstruction beyond C, prioritizing a class with slash/dash/dot coverage, so the full nine-piece background can be reconstructed from directly exposed physical pixels. In parallel, search repository history/public mirrors specifically for the April 6 Discord attachments or annotated URL-reading images before attempting bespoke character fitting.
