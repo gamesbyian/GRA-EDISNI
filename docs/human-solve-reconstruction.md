@@ -203,6 +203,8 @@ Only afterwards need the solver notice that this is the compact relation `q=2-p`
 
 ### 12. Reuse the selector once more — H
 
+Experiment 291 makes this second use testable rather than ceremonial. From the 20 first-pass candidates, simply reading q=0, q=1, or q=2 keeps all 20 and leaves three different words. Using q=S is the only equally simple choice that actually filters the family: it leaves 14 and every survivor yields the same word `100`.
+
 The first pass produced three q-indexed selected surfaces. Use the same selector to choose q as well as depth:
 
 ```

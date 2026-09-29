@@ -107,6 +107,8 @@ jobs:
         run: python scripts/audit_q4_ac_gauge_support.py
       - name: Audit human coordinate-copy operations
         run: python scripts/audit_human_coordinate_copy.py
+      - name: Audit human second selector choice
+        run: python scripts/audit_human_second_selection.py
       - name: Verify machine-spec drift
         run: python scripts/verify_machine_spec.py
       - name: Verify executable proof pack

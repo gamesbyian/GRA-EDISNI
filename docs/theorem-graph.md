@@ -139,6 +139,8 @@ Experiment 288 separates that nearby branch from the exact functional quotient u
 Experiment 289 explains why Q4 A and C, unlike F+I, remain inside the exact quotient. Both corresponding Q4 stacks are completely unobserved, and switching their exceptional-symbol polarity leaves the surviving selector-depth set exactly unchanged. Since the recursive machine consumes selector depth rather than the printed slash/dot polarity, A/C change physical marks only and induce no transition change. Their physical supports are A={82,91,100} and C={84,93,102}.
 
 Experiment 290 supplies a human-scale derivation of G5 inside the literal coordinate-copy family. Of `(q,q)`, `(q,S)`, `(S,q)`, and `(S,S)`, only `(q,S)` both depends on `S`, preserves external-q structure, and yields more than one valid output family. The alternatives are respectively selector-blind/rank-1, impossible, and q-collapsed/rank-1. This does not replace the broader uniqueness audits of Experiments 245/266, but it explains why the canonical substitution is discoverable without arbitrary-map search.
+
+Experiment 291 gives G6 the same human-scale derivation. After G5 has produced 20 valid q-indexed machines, fixed q choices 0/1/2 keep all 20 and each leave three output payloads. Setting q=S is uniquely both selective and completion-invariant: it leaves 14 valid machines and one payload, `100`. Thus the simple address-copy family discovers both recursive substitutions without terminal targeting.
 4. **T7–T11:** the lower-level constraint/enumeration target is now satisfied by Experiments 250–251; use it as the preferred independence oracle for future state-family changes.
 5. **R1:** keep observer evidence quarantined when auditing transition uniqueness.
 
