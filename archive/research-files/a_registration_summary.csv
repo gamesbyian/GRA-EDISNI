@@ -1,0 +1,2 @@
+reference,target,angle_deg,scale,tx_px,ty_px,common_visible_dotmap_r,shift_null_n,shift_null_p_ge,footprint_pixels,slash_mask_pixels,dash_mask_pixels,joint_hidden_pixels,strict_coverage_fraction,strict_coverage_percent
+154 slash,334 dash,0.25,1.0,4,6,0.36151457994262043,1188,0.0008410428931875525,546750,40664,47340,12650,0.9768632830361226,97.68632830361226

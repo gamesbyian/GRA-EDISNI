@@ -1,0 +1,49 @@
+A stage 6: first non-C exact-source multi-exposure reconstruction
+
+Purpose
+- Test whether the physical multi-exposure reconstruction method that succeeded on class C generalizes to another background class.
+- Choose class A because the public repo contains community-edited examples of both foreground states: #154 slash and #334 dash.
+
+Exact sources
+- #154 edited JPEG recovered from images/stickers/edited/154.jpg via temporary Google Doc bridge + DOCX media extraction.
+- #334 edited PNG recovered from images/stickers/edited/334.png through the same bridge.
+- Temporary bridge docs were deleted after extraction.
+
+Rectification and registration
+- Both images were perspective-rectified to the sticker boundary at 900x900.
+- Registration used only a bounded near-identity transform after rectification: about +0.25 degree rotation, scale 1.000, translation +4 px x / +6 px y at 900px scale.
+- Foreground symbols, serial-number region, and borders were excluded from the texture comparison.
+- A black-hat halftone/dot map gave common-visible correlation r=0.3615 after alignment.
+- Against 1,188 nontrivial spatial translations, the exploratory shift null gave p≈0.00084. Treat as a registration diagnostic, not a formal significance claim, because texture is spatially autocorrelated and the transform was tuned on this pair.
+
+Strict physical reconstruction
+- Use #154 slash as base.
+- Replace only pixels physically obscured by #154's slash with registered #334 pixels where #334's dash does not obscure them.
+- Leave pixels obscured by both foregrounds unresolved/black.
+- No inpainting, generative filling, or non-rigid deformation.
+- Safe common footprint strict coverage: 97.6863%.
+- Jointly hidden footprint pixels: 12,650.
+- This is materially better than the C two-source pair (~96.38%), but it is still a real-photo measurement and should not be generalized to every class without registration.
+
+Interpretation
+- The multi-exposure method generalizes beyond class C: independently photographed slash/dash copies of class A can be registered on the shared halftone background with a strong translation-null discriminator and used to recover complementary regions under the foreground marks.
+- Unlike C, class A currently has no dot examples in the public ledger, so slash+dash is the maximum available foreground-state diversity for this class.
+- The remaining jointly hidden central overlap is expected from the geometry of the two opaque marks.
+
+Archival search in parallel
+- Git history confirms the May 13 2020 documentation commit already recorded the April 6 C-dash event and the statement that it strengthened a number-6 reading.
+- Public web searches for the two Discord message IDs (696749987991650315 and 696860529813094420) did not surface mirrored attachments or annotated screenshots.
+- The recovered public assembly still lacks coordinate-level evidence tying a specific C reveal patch to the 6. Keep that attribution unresolved.
+
+Artifacts
+- 154_rect.png
+- 334_rect.png
+- 334_aligned_to_154.png
+- a_strict_154_334_composite.png
+- a_strict_154_334_provenance.png
+- a_registration_summary.csv
+- a_stage6_checkpoint.txt
+
+Next bounded step
+- Map the strict A reconstruction into the canonical assembly and compare whether it improves path-bearing detail in A without using inpainting.
+- Then move to a class with all three physical foreground symbols (prefer B, D, E, G, H, or I) and use at least one slash, dash, and dot exposure. The B source set (#245 slash, #182 dash, #092 dot) has been recovered but raw #092 is much lower effective texture resolution; either add a better B source or choose another three-symbol class with higher-quality photographs.
