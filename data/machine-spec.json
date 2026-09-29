@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "source_checkpoint": "repository through Experiment 287",
+  "source_checkpoint": "repository through Experiment 296",
   "closed_corpus": true,
   "mechanical_status": "substantially complete",
   "semantic_status": "internal semantic branch closed without an independent consumer",
@@ -271,7 +271,23 @@
         "../"
       ],
       "recovered_rule": "slash iff physical depth d equals selector value S",
-      "evidence_role": "Q4 marks are holdout physical-encoding evidence after Experiment 294; shared-codebook symmetry fixes the residual two-bit physical gauge"
+      "evidence_role": "Q4 marks are holdout physical-encoding evidence after Experiment 294; shared-codebook symmetry fixes the residual two-bit physical gauge",
+      "label_symmetry_stress_test": {
+        "experiment": 296,
+        "compatible_codebooks_before_symmetry": 4,
+        "identity_survivors": 4,
+        "swap_0_1_survivors": 2,
+        "nontrivial_relabelings_moving_label_2": 4,
+        "survivors_for_each_relabeling_moving_label_2": 1,
+        "ternary_3_cycle_survivors": 1,
+        "recovered_codewords_by_selector": [
+          "/..",
+          "./.",
+          "../"
+        ],
+        "interpretation": "the residual E[0,2]/E[1,2] gauge is exactly a label-2 asymmetry; any single simultaneous selector/depth relabeling that moves label 2 fixes it",
+        "caution": "label-equivariance is an authoring-symmetry prior, not an additional observation"
+      }
     }
   },
   "first_pass": {
