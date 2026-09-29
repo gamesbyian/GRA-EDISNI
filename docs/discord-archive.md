@@ -41,10 +41,11 @@ Once the bot is in the server:
 1. In Discord, enable Developer Mode if necessary and copy the server ID.
 2. Open GitHub Actions -> **One-shot Discord archive** -> **Run workflow**.
 3. Enter the server ID.
-4. Optionally provide a comma-separated list of channel/thread IDs. If left blank, the script attempts every text-capable channel visible to the bot.
-5. Choose whether to include archived public threads and download attachments.
-6. Run the workflow.
-7. Download the resulting `discord-export-<guild-id>` Actions artifact.
+4. The workflow defaults to the exact channel name `stickers-solving` for the first INSIDE archive. Change or clear that field as needed; exact channel/thread IDs can also be supplied.
+5. If both channel names and IDs are blank, the script attempts every text-capable channel visible to the bot.
+6. Choose whether to include archived public threads and download attachments.
+7. Run the workflow.
+8. Download the resulting `discord-export-<guild-id>` Actions artifact.
 
 The artifact is retained for seven days by default. The workflow does not commit Discord content to Git.
 
