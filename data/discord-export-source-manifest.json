@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "source": {
+    "upstream_repository": "twinysam/playdead-unofficial-exports",
+    "working_fork": "gamesbyian/playdead-unofficial-exports",
+    "inspected_ref": "master",
+    "inspected_commit": "5e5897e2ce70dad5a2bd85e459770637cb36610f",
+    "export_cutoff": "2026-09-28"
+  },
+  "chat_exports": [
+    {
+      "name": "ARG / solving",
+      "channel_id": "461275582970462209",
+      "text_path": "Playdead Unofficial - ARG - solving [461275582970462209].txt",
+      "text_blob_sha": "1889cc948f86f5a4455de0d7310b15cdb1b88b5c",
+      "message_count": 51835
+    },
+    {
+      "name": "ARG / solving-breakout",
+      "channel_id": "463106924708233216",
+      "text_path": "Playdead Unofficial - ARG - solving-breakout [463106924708233216].txt",
+      "text_blob_sha": "064f6aba55e11b4aaf3759f1da672c2ee19e7f17"
+    },
+    {
+      "name": "ARG / tldr",
+      "channel_id": "462637922944811028",
+      "text_path": "Playdead Unofficial - ARG - tldr [462637922944811028].txt",
+      "text_blob_sha": "20600a0756002ef7a7f2994b2a5e7b7e4852333d"
+    },
+    {
+      "name": "General / inside",
+      "channel_id": "461275526716194818",
+      "text_path": "Playdead Unofficial - General - inside [461275526716194818].txt",
+      "text_blob_sha": "ed2956da2fdcd812311ff787e088a38a27130e13"
+    }
+  ],
+  "missing_high_value_channel": {
+    "name": "stickers-solving",
+    "status": "not present in inspected export",
+    "intended_collection": "authorized one-shot Discord bot if moderators approve"
+  },
+  "key_assets": [
+    {
+      "path": "assets/unknown-c89e81cb90765451.png",
+      "blob_sha": "91268fd6700f0f8fc01527f51e63f8c2f6cb7e43",
+      "discord_attachment_id": "690395145094299678",
+      "role": "March 2020 nine-piece sticker background assembly"
+    },
+    {
+      "path": "assets/StickerSolution-dc12d5e516ca4922.png",
+      "blob_sha": "2d9fd5b60faa3d5fdb25ebc63ab3f77be3138b46",
+      "role": "April 2020 historical sticker-background solution graphic"
+    },
+    {
+      "path": "assets/stickers_csv-c3400f31325053ee.csv",
+      "blob_sha": "2cd736aa296a1a82b1d3e48ac550c961f1efc41b",
+      "role": "historical 108-period visualization/data"
+    },
+    {
+      "path": "assets/sticker_random_gen-62dad1a83c441653.py",
+      "blob_sha": "6e4789aedd0b2ea4dd68fd97768aaccecd5a509a",
+      "role": "May 2026 Sticker Studio source"
+    },
+    {
+      "path": "assets/stickers_graph-d76961da71021825.png",
+      "blob_sha": "6878a6901d181abc485524e16f769c2bab23bd97",
+      "role": "May 2026 historical technique graph"
+    }
+  ],
+  "chronology": [
+    {
+      "date": "2020-02-01",
+      "claim": "community explicitly records row-major image order I,A,B,C,D,E,F,G,H and A=001, hence I=000"
+    },
+    {
+      "date": "2020-04-28",
+      "claim": "StickerSolution graphic records IAB/CDE/FGH and dat/534brn9653f9j8mmd"
+    },
+    {
+      "date": "2021-03-25",
+      "claim": "earliest explicit statement found that sticker repeat minimum is 108"
+    },
+    {
+      "date": "2021-12-11",
+      "claim": "formal 108 candidate-period argument and 12-cell-row / 12x9 rendering"
+    },
+    {
+      "date": "2022-01-26",
+      "claim": "foreground 108 rendering explicitly starts with sticker 0 at top left"
+    }
+  ]
+}
