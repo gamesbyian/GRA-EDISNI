@@ -151,6 +151,8 @@ The difference is only the symbol alphabet and the axis along which the three po
 
 This is the first major “recognition” moment: primary and Q4 are two instances of one positional code.
 
+There is also a whole-object checksum-like cue for the physical polarity. With exact primary POS3, the primary contributes 45 slashes and 36 dashes. If every Q4 stack uses slash as its exceptional member, Q4 contributes 9 slashes and 18 dots, giving the complete master the unusually clean ratio `54:36:18 = 3:2:1`. Experiment 281 shows any dot-exception stack breaks that ratio. This is not a logical proof from the sparse corpus, but it is a conspicuous physical regularity pointing to the same all-slash interpretation.
+
 ### 9. Treat Q4 as a selector, not a message — H
 
 Use each Q4 ternary value `S(j)` as an address into the three primary depths at the same physical position `j`:
