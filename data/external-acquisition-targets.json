@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-29",
+  "purpose": "Acquisition targets for automated/public and authenticated-local external evidence harvesting.",
+  "sources": [
+    {
+      "id": "youtube-iam8bit-ce-unboxing",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=zhCdGdqCIRU",
+      "public": true,
+      "priority": "critical",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Official iam8bit INSIDE Collector's Edition unboxing; packaging/sticker handling."
+    },
+    {
+      "id": "youtube-inside-gaming-ce-unboxing",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=AO2YQCl5qFM",
+      "public": true,
+      "priority": "critical",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical ledger says sticker lost but partially visible in footage."
+    },
+    {
+      "id": "youtube-oddheader-2026-mystery",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=ZqYhhptmhmo",
+      "public": true,
+      "priority": "critical",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Current owner-discovery wave; comments are a recurring snapshot target."
+    },
+    {
+      "id": "youtube-ledger-01-eXxklNxsVWw",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=eXxklNxsVWw",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical owner/unboxing video referenced by sticker ledger."
+    },
+    {
+      "id": "youtube-ledger-02-Mhxynz-LoAI",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=Mhxynz-LoAI",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical owner/unboxing video referenced by sticker ledger."
+    },
+    {
+      "id": "youtube-ledger-03-fu7gmuJQKXM",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=fu7gmuJQKXM",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical owner/unboxing video referenced by sticker ledger."
+    },
+    {
+      "id": "youtube-ledger-04-jQUf8yhqEc4",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=jQUf8yhqEc4",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical owner/unboxing video referenced by sticker ledger."
+    },
+    {
+      "id": "youtube-ledger-05-ahCmqg1hhSA",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=ahCmqg1hhSA",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical owner/unboxing video referenced by sticker ledger."
+    },
+    {
+      "id": "youtube-ledger-06-G4z5r4rZH2w",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=G4z5r4rZH2w",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical owner/unboxing video referenced by sticker ledger."
+    },
+    {
+      "id": "youtube-ledger-07-Pbkq8Ey_s0k",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=Pbkq8Ey_s0k",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical owner/unboxing video referenced by sticker ledger."
+    },
+    {
+      "id": "youtube-ledger-08-d23bAqGtImo",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=d23bAqGtImo",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Ledger lead; known useful interval begins around 00:07:22."
+    },
+    {
+      "id": "youtube-ledger-09-Y7OqMKBbM2Y",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=Y7OqMKBbM2Y",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical owner/unboxing video referenced by sticker ledger."
+    },
+    {
+      "id": "youtube-ledger-10-uP5nSeyac_o",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=uP5nSeyac_o",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical owner/unboxing video referenced by sticker ledger."
+    },
+    {
+      "id": "youtube-ledger-11-gqlQaHgRaHg",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=gqlQaHgRaHg",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Historical owner/unboxing video referenced by sticker ledger."
+    },
+    {
+      "id": "facebook-group-limited-printed-games",
+      "kind": "facebook",
+      "url": "https://www.facebook.com/groups/1321230431268681",
+      "public": false,
+      "priority": "critical",
+      "auth_required": true,
+      "search_terms": [
+        "INSIDE",
+        "Playdead",
+        "iam8bit",
+        "RealDoll",
+        "Huddle",
+        "Collector's Edition"
+      ],
+      "note": "Sticker #002 was recovered here."
+    },
+    {
+      "id": "facebook-group-ledger-collector",
+      "kind": "facebook",
+      "url": "https://www.facebook.com/groups/1527275480936152",
+      "public": false,
+      "priority": "high",
+      "auth_required": true,
+      "search_terms": [
+        "INSIDE",
+        "Playdead",
+        "iam8bit",
+        "RealDoll",
+        "Huddle",
+        "Collector's Edition"
+      ]
+    },
+    {
+      "id": "facebook-story-ledger-lead",
+      "kind": "facebook",
+      "url": "https://www.facebook.com/story.php?story_fbid=1422016306591561&id=100063496151489",
+      "public": false,
+      "priority": "high",
+      "auth_required": true
+    },
+    {
+      "id": "facebook-shared-post-ledger-lead",
+      "kind": "facebook",
+      "url": "https://www.facebook.com/share/p/19GJT1NVQS/",
+      "public": false,
+      "priority": "high",
+      "auth_required": true
+    },
+    {
+      "id": "instagram-01-B6EECojHUKZ",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/B6EECojHUKZ/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+    },
+    {
+      "id": "instagram-02-B6MBw1Ph6Xy",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/B6MBw1Ph6Xy/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+    },
+    {
+      "id": "instagram-03-B6EPt76gdVC",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/B6EPt76gdVC/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+    },
+    {
+      "id": "instagram-04-B6L7QtEpsUF",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/B6L7QtEpsUF/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+    },
+    {
+      "id": "instagram-05-B_-c0SXprLV",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/B_-c0SXprLV/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+    },
+    {
+      "id": "instagram-06-CcLKjmguPXt",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/CcLKjmguPXt/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+    },
+    {
+      "id": "instagram-07-Cl3oSShIixS",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/Cl3oSShIixS/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+    },
+    {
+      "id": "instagram-08-B5_hdYslfQh",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/B5_hdYslfQh/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+    },
+    {
+      "id": "instagram-09-DQVUxWqD9M3",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/DQVUxWqD9M3/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+    },
+    {
+      "id": "x-kaydhendricks",
+      "kind": "twitter",
+      "url": "https://twitter.com/KaydHendricks/status/1205585260207050753",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Save attached media plus thread/reply context."
+    },
+    {
+      "id": "x-theannathered",
+      "kind": "twitter",
+      "url": "https://twitter.com/TheAnnaTheRed/status/1205249189577314306",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Save attached media plus thread/reply context."
+    },
+    {
+      "id": "x-hubalubalu",
+      "kind": "twitter",
+      "url": "https://twitter.com/hubalubalu/status/1205723032225890304",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Save attached media plus thread/reply context."
+    },
+    {
+      "id": "x-triplizard",
+      "kind": "twitter",
+      "url": "https://twitter.com/triplizard/status/1222277716554043392",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Save attached media plus thread/reply context."
+    },
+    {
+      "id": "x-itsamefernando",
+      "kind": "twitter",
+      "url": "https://twitter.com/ItsaMeFernando/status/1266191839104692224",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Save attached media plus thread/reply context."
+    },
+    {
+      "id": "x-minnmax",
+      "kind": "twitter",
+      "url": "https://twitter.com/MinnMaxShow/status/1457204412879802378",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Save attached media plus thread/reply context."
+    },
+    {
+      "id": "x-kingskylark",
+      "kind": "twitter",
+      "url": "https://twitter.com/KingSkylark/status/1268611241657823232",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Save attached media plus thread/reply context."
+    },
+    {
+      "id": "vk-bigdafymonster",
+      "kind": "vk",
+      "url": "https://vk.com/bigdaffymonster",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "note": "Russian-language owner trail; inspect historical photos for accidental packaging/sticker visibility."
+    },
+    {
+      "id": "terminal41-saf-dat-col",
+      "kind": "direct",
+      "url": "https://raw.githubusercontent.com/twinysam/INSIDE-ARG/master/terminal41.link/dat/saf_dat_col.html",
+      "public": true,
+      "priority": "critical",
+      "media": true,
+      "expected_size": 1986163,
+      "expected_git_blob_sha1": "349b818fce618ef55c404bedfb602b1d03f29a48",
+      "suggested_filename": "saf_dat_col.html",
+      "note": "Exact raw file; do not open/resave before verification."
+    }
+  ]
+}
