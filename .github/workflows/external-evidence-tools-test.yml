@@ -30,6 +30,12 @@ jobs:
           printf 'hello evidence\n' > /tmp/evidence.txt
           expected="$(git hash-object /tmp/evidence.txt)"
           python scripts/external_evidence/verify_git_blob.py /tmp/evidence.txt "$expected" --size 15
+      - name: Verify committed Terminal 41 saf_dat_col
+        run: |
+          python scripts/external_evidence/verify_git_blob.py \
+            archive/external/twinysam-inside-arg/terminal41.link/dat/saf_dat_col.html \
+            349b818fce618ef55c404bedfb602b1d03f29a48 \
+            --size 1986163
       - name: Exercise lead discovery
         shell: bash
         run: |
