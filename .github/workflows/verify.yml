@@ -45,6 +45,8 @@ jobs:
         run: python scripts/audit_primary_frame_weight_three.py
       - name: Audit centered primary sibling
         run: python scripts/audit_primary_centroid_sibling.py
+      - name: Audit raw normalized frame repeats
+        run: python scripts/audit_raw_frame_repeats.py
       - name: Audit Q4 polarity assignment boundary
         run: python scripts/audit_q4_polarity_assignments.py
       - name: Audit primary frame-balance recovery
