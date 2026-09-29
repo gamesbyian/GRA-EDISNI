@@ -172,3 +172,21 @@ Lower priority for unconstrained “maybe convert it to X” searches.
 Experiments 21 and 61 already inventoried INSIDE puzzle techniques during the present investigation. This archival pass adds **dated primary-community provenance** and a cleaner split between techniques that demonstrably solved historical stages and techniques that were merely proposed.
 
 Future revisions of the human-solve narrative should use this source when describing what a historically informed solver could reasonably have tried without hindsight.
+
+
+## Official 2019 description corroborates the historical solve grammar
+
+The Discord archive preserves a long quotation whose source can now be identified exactly: Xbox Wire's **3 Jan 2019** article, *The As-Yet Unsolved Secret in Inside*, credited to Microsoft's Glenn Gregory.
+
+The official article independently states that the printer output had to be **correctly sorted and deciphered**, after which the resulting text was entered into an ordinary-looking email-subscription box on Playdead's site to receive the next corrupted image/PDF artifact. It also says that nearly every platform release had its own printer codes while the secret nevertheless remained solvable from the beginning.
+
+Two design facts are especially useful:
+
+1. **ordering can be a first-class step** before interpretation, consistent with the archived margin/check-bit reconstruction;
+2. **an intermediate result can be an input token for an external consumer**, which then emits the next artifact rather than plaintext being the endpoint.
+
+The article also says Playdead had systems through which the solving party communicated progress indirectly to the developer. That makes server-side progression/telemetry a documented part of the historical ARG ecology, not merely a community inference from the archived JavaScript.
+
+Source: https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/
+
+This remains a design-vocabulary prior. It does not identify the Collector's Edition foreground's consumer or authorize arbitrary submissions of `100`.
