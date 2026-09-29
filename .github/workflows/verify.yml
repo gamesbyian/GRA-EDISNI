@@ -45,3 +45,5 @@ jobs:
         run: python scripts/audit_q4_polarity_assignments.py
       - name: Audit primary frame-balance recovery
         run: python scripts/audit_primary_frame_balance.py
+      - name: Audit primary frame-balance minimality
+        run: python scripts/audit_primary_balance_minimality.py
