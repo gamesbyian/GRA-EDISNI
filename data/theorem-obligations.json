@@ -7,7 +7,6 @@
     "O1",
     "O2",
     "G1",
-    "G2",
     "G3",
     "G5",
     "G6"
@@ -21,7 +20,7 @@
     "O1",
     "O2",
     "G1",
-    "G2",
+    "T0",
     "T1",
     "T1a",
     "T1b",
@@ -51,6 +50,13 @@
     "S2"
   ],
   "checks": [
+    {
+      "id": "final-primary-polarity",
+      "script": "scripts/audit_final_primary_polarity.py",
+      "covers": [
+        "T0"
+      ]
+    },
     {
       "id": "primary-raw-constraints",
       "script": "scripts/audit_primary_raw_constraints.py",
