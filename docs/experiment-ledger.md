@@ -283,6 +283,7 @@ Latest indexed experiment: **255**.
 | 273 | centered-first-moment primary audit: frame-weight-three closure collapses to a 14+14 fork, canonical POS3 versus one q=1,d=0 center-column pileup sibling hidden at unobserved residues 28,33,34,35 |
 | 274 | raw normalized frame-repeat audit: exactly two frame pairs have maximal conflict-free support; enforcing both inside the 28-state centroid parent selects the canonical 14 and rejects every center-pileup sibling |
 | 275 | primary projection-factorization audit: both centroid branches start with the full 2×3 x/y product, but recursive closure preserves all six coordinates only for the canonical branch; the sibling deletes (1,2) and redistributes multiplicities |
+| 276 | primary-fork functional-rank audit: canonical branch retains three first-pass functional outputs and A/C/D/G selector variation; all 14 pileup siblings collapse to one first-pass output and only C/G selector variation |
 
 ## Current frontier
 
@@ -292,7 +293,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–275:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
+- **250–276:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
 
 ## Status shorthand
 
