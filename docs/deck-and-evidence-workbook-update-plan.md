@@ -530,3 +530,23 @@ Final sanity conclusions:
 - keep research-frontier churn mostly in the workbook/appendix unless it changes the public explanatory story.
 
 Before artifact editing begins, re-run the freshness gate above.
+
+---
+
+## Implementation checkpoint — 2026-09-29
+
+The plan has now been implemented on this branch.
+
+Deliverables:
+
+- `deliverables/INSIDE_Collector_Edition_Sticker_Mystery_Updated_2026-09-29.pptx`
+- `deliverables/INSIDE_Sticker_Mystery_Verification_Pack_Updated_2026-09-29.xlsx`
+
+Implementation notes:
+
+- the deck grew from 44 to 51 slides, preserving the existing visual system while adding the planned raw-primary, Q4 gauge, terminal-dynamics, hidden-state, raw-reconstruction, Q4-inverse, and paper-and-pencil-path material;
+- the workbook is now the single maintained spreadsheet supplement and contains 14 sheets, including START HERE, CLAIMS MAP, EVIDENCE RECORDS, EXPERIMENT FRONTIER, RAW RECONSTRUCTION, PRIMARY STRUCTURE, Q4 SELECTOR & GAUGES, ROUTING & TERMINAL, HIDDEN STATE, WITNESSES & ROBUSTNESS, HUMAN SOLVE, PREDICTIONS, BOUNDARIES, and SOURCES & REPRO;
+- the legacy supplementary CSV remains archive-only; its useful rows were absorbed into EVIDENCE RECORDS rather than maintained as a second current spreadsheet;
+- live PR results are explicitly labelled as provisional in the deck/workbook where relevant: PR #31 / Experiment 293, PR #32 / Experiments 292, 294–295, and PR #34 / Experiments 296–298;
+- the updated deck was rendered and visually inspected after generation; the workbook received targeted table/error inspection plus rendered checks of the landing, Q4, claims/frontier surfaces;
+- the temporary transfer workflow used while committing binary deliverables was removed after the artifacts landed.
