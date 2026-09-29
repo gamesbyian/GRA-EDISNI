@@ -53,3 +53,5 @@ jobs:
         run: python scripts/audit_q4_polarity_gauge.py
       - name: Audit ambiguous primary frame parsimony
         run: python scripts/audit_ambiguous_frame_parsimony.py
+      - name: Audit raw-first POS3 cue
+        run: python scripts/audit_raw_first_pos3_cue.py
