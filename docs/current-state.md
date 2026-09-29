@@ -570,6 +570,12 @@ Experiment 261 revisits the only primary frame whose polarity is not directly fo
 
 Experiment 262 removes even the solved `q,d` labels from that human-path test. Using only the unique 34-residue minimum witness arranged as nine consecutive 9-residue physical frames, eight frames admit exactly one POS3 polarity. The ninth admits both, but with completion counts 1 versus 8. Choosing the viable, locally most-determined polarity therefore reproduces all nine staircase polarities before the staircase itself is shown. This makes the staircase plausibly recognizable as a consequence of local visual constraints rather than a prerequisite clever guess.
 
+Experiment 263 asks how a human would know which direction the three-cell POS3 rails run. Among four natural 3x3 line partitions, physical columns are the only orientation compatible with exact POS3 across all nine full-corpus primary frames; rows fit five frames and the two wraparound diagonal families fit four each. On the sparse 34-residue witness all four remain compatible, but columns force eight frame polarities versus 4/4/3.
+
+Experiment 264 broadens that orientation audit to all 280 unlabeled partitions of the nine physical cells into three 3-cell rails. Raw exact-POS3 compatibility alone leaves four partitions, so column orientation is not a pure combinatorial theorem. However, physical columns are the only surviving partition composed of the actual three straight parallel rails. Geometry is therefore a real model-selection input rather than decorative hindsight.
+
+Experiment 265 separates discovery from validation. Using only the 34-residue witness, 168 of the 280 rail partitions remain compatible across all nine frames; five maximize polarity determinacy at 8/9 frames. Revealing the 20 held-out observed primary residues eliminates four of those five. Physical columns are the sole partition that generalizes to all nine full-corpus frames. This gives a hindsight-resistant route to the POS3 rail orientation.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
