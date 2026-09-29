@@ -266,6 +266,7 @@ Latest indexed experiment: **255**.
 | 256 | full Q4 polarity-word audit: 8 maximal 14-state/100 patterns expose B,D,E,G,H as closure-critical slash spine |
 | 257 | optional-pulse frame-balance audit: quarter-local equal frame weights recover exactly the 14-state exact-POS3 family |
 | 258 | frame-balance minimality: six pairwise frame-weight equalities are necessary and sufficient; natural per-quarter balance is cardinality-minimal |
+| 259 | exact minimum raw-primary witness: unique 34-residue subset preserves all 8 forced polarities and 25 forced trits |
 
 ## Current frontier
 
@@ -275,7 +276,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–258:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
+- **250–259:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
 
 ## Status shorthand
 
