@@ -25,15 +25,17 @@ The internal semantic branch is closed at the current evidence level. Reopen it 
 
 Assume no additional sticker will ever surface.
 
-The current object is symbolically complete:
+Under the preferred exact-column-POS3 grammar, the current object is symbolically complete:
 
 - 65 observed H108 residues;
-- 30 additional residues forced by the machine;
+- 30 additional residues fixed by the preferred physical completion;
 - 13 variable state-register residues;
 - 14 legal complete H108 masters;
-- 95 invariant H108 residues total.
+- 95 invariant H108 residues within that gauge setting.
 
-The remaining uncertainty is which of 14 legal physical states was authored. Generic compression does not select one, and the transition does not need one selected.
+Experiment 280 separates this preferred physical representative from the transducer itself. In the weaker frame-weight-three parent, the same 14→3→1 machine has four transition-equivalent primary gauge settings, giving 56 complete masters total. The two gauge bits affect only unobserved residues {6,8} and {41,45}; all four cells are unreachable by the selector at their frame depths. Within each gauge setting the same 13 state-register residues vary and the same 95/13 split holds. Across all four settings, 17 residues vary.
+
+Thus there are two different uncertainties: the machine has 14 legal hidden states, while its closed-corpus physical completion also carries two transition-invisible primary gauge bits unless exact POS3 is adopted as authoring grammar.
 
 ## Hidden state: preferred normal form
 
@@ -579,6 +581,8 @@ Experiment 268 broadens the same-operation recursion to 1,296 nonlinear selector
 Experiment 269 tests the earlier retraction/reset interpretation directly. Within the same 1,296-map nonlinear family, idempotence leaves six address resets before looking at terminal values; requiring nonempty two-pass POS3 closure leaves exactly one, the canonical identity operation. It retains the same 14 physical masters and terminates at `100`. The `102` sibling from Experiment 268 is excluded because its conditional quarter swap oscillates under repetition. Idempotence is therefore a compact structural selector for the canonical recursion, but it remains an operation-grammar premise rather than independent sticker evidence.
 
 Experiment 279 asks for less than global idempotence. Reapply the same selector-conditioned q rewrite once more after the second-pass invariant surface and demand only that the terminal surface remain unchanged. Of Experiment 268's four maximum-retention operations, exactly two are surface-stable. Both terminate at `100` and select the same canonical 14 masters; their only difference is the transition-invisible `f_1` gauge. The two `102` branches are surface-unstable: every one of their 14 states maps `102→100` on the third application. Thus `100` is the unique fixed endpoint inside this nonlinear parent even when full address-map idempotence is not imposed.
+
+Experiment 280 returns to the full frame-weight-three primary parent and groups its 1,548 recursively closed states by nine-frame column-occupancy signature. Eighty-four physical signature families occur. Exactly four reproduce the canonical operational invariants simultaneously: 14 states, the same 4/4/6 rank-3 first-pass output multiset, six selector fields, all six `(x,y)` primary combinations, and invariant terminal `100`. The four settings are the exact-POS3 family plus independent toggles at `q0,d0` and `q1,d1`. The first moves the fixed minority cell between H and F, changing only residues 8/6; the second moves it between I and E, changing only 45/41. All four residues are absent from the public corpus. More strongly, selector values at F/H are fixed to 1/2 so depth 0 there is never read, while selector values at I/E are fixed to 2/0 so depth 1 there is never read. The gauge is therefore transition-invisible by construction, not merely empirically tied on current tests. Exact column POS3 chooses the distributed representative and reduces the 56 gauge-expanded masters to the preferred 14.
 
 Experiment 270 revisits the three transition-invisible Q4 polarity gauge bits from Experiment 260 using only the physical 3×3 artwork. Across all 16 recursively closed polarity words, the authored all-slash word is the unique minimum in four preregistered locality costs: number of dot-exception stacks, orthogonal polarity boundaries, mixed rows, and mixed columns. This ranking does not inspect selector depths, hidden states, recursion outputs, or terminal values. Together with Experiment 254, which shows that raw observations force slash once one shared exceptional-symbol polarity is assumed, this makes the all-slash completion the unique globally homogeneous representative of the closure family. Physical simplicity is an authoring prior, not a new observation.
 
