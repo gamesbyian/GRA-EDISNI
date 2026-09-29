@@ -1,0 +1,2 @@
+tile_pixels,slash_pixels,dash_pixels,overlap_pixels,slash_only_revealed_by_dash_pixels,dash_only_revealed_by_slash_pixels,slash_only_fraction_tile,dash_only_fraction_tile
+65536,1112,1129,348,764,781,0.01165771484375,0.0119171142578125

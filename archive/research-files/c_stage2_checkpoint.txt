@@ -1,0 +1,10 @@
+C-class slash/dash source inventory and occlusion checkpoint
+
+Class C occupies residues 3,12,21,30,39,48,57,66,75,84,93,102.
+Current H108 class-C sequence by unit: ---///-/-???. Nine of twelve master cells are known: 5 dash, 4 slash, 0 dot, 3 unknown.
+Physical source instances: 003, 021, 039, 066, 156, 183, 282, 336, 354, 597. This is unusually balanced for a same-background comparison: five dash and five slash physical sources (two slash sources occupy the same H108 residue 66).
+Community edited images exist for 003 dash, 021 dash, 066 slash, and 156 slash.
+Public chronology identifies 021 (6 Apr 2020) as the C-dash source that exposed characters partly concealed by previous C slashes and strengthened the reading of a 6.
+Visual inspection of edited 021 vs edited 066/156 confirms the same C halftone field under complementary dash/slash occlusion.
+c_slash_dash_reveal_difference.png is a standardized-geometry diagnostic on the recovered C tile: red is hidden by slash but exposed by dash, blue hidden by dash but exposed by slash, yellow hidden by both.
+This makes C the best class for multi-exposure latent reconstruction. Exact source-byte registration remains the next computational step; the connector can display the GitHub images but does not currently materialize repository image bytes into the analysis container.
