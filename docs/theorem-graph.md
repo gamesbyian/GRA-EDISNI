@@ -1,6 +1,6 @@
 # Mechanical theorem graph
 
-_Status: Experiment 241, post-240 proof-pack pass._
+_Status: Experiment 241 theorem graph, now paired with the executable proof pack in `scripts/verify_proof_pack.py`._
 
 This document separates supplied observations/grammars from derived consequences in the current closed-corpus machine. It is intentionally narrower than the historical Results document: the goal is to make circular support and redundant premises obvious.
 
