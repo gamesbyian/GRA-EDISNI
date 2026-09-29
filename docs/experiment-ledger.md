@@ -299,7 +299,7 @@ Latest indexed experiment: **255**.
 | 289 | Q4 A/C gauge-support audit: A and C stacks are entirely unobserved, and flipping either polarity leaves all six surviving selector-depth fields plus first-pass/terminal outputs unchanged |
 | 290 | human coordinate-copy audit: among (q,q), (q,S), (S,q), (S,S), only (q,S) is selector-sensitive, q-preserving, and nondegenerate; it leaves 20 first-pass states and canonical reuse reduces to 14/100 |
 | 291 | human second-selection audit: fixed q=0/1/2 each preserve all 20 first-pass machines with three outputs, while q=S uniquely reduces 20→14 and gives one invariant payload 100 |
-| 293 | weaker-input-POS3 recovery: from common frame weight plus the two strongest raw-supported exact frame repeats and quarter-local aggregate column balance, recursive closure leaves exactly 14 weight-3 states; all are exact source POS3 and terminal 100, while the common-weight-4 branch is eliminated |
+| 293 | weaker-input-POS3 recovery: common frame weight + two raw-supported exact repeats + three quarter aggregate-balance tests recover exactly the canonical 14 source-POS3 states and eliminate weight 4; exhaustive subset ablation shows all five regularities are jointly necessary inside this tested parent |
 
 ## Current frontier
 
