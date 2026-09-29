@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "source_checkpoint": "repository through Experiment 296",
+  "source_checkpoint": "repository through Experiment 305",
   "closed_corpus": true,
   "mechanical_status": "substantially complete",
   "semantic_status": "internal semantic branch closed without an independent consumer",
@@ -475,5 +475,33 @@
       "F"
     ],
     "reason_invisible": "q0,d1 and q1,d1 store identical symbols on every S=1-reachable cell"
+  },
+  "global_address_uniqueness": {
+    "experiments": [
+      303,
+      304,
+      305
+    ],
+    "family": "all state-independent bijections of the native 3x3 ternary address carrier reused on both recursive passes",
+    "total_bijections": 362880,
+    "route_capable_bijections": 30,
+    "maximum_route_capable_raw_states": 14,
+    "co_maximal_operations": [
+      "identity",
+      "f1 gauge: swap (0,1)<->(1,1)"
+    ],
+    "co_maximal_equivalent": true,
+    "route_shell": [
+      "120",
+      "012",
+      "102"
+    ],
+    "terminal": "100",
+    "conclusion": "canonical recursive address operation is unique modulo the established f1 observational gauge among every global carrier bijection",
+    "singular_negative_control": {
+      "experiment": 304,
+      "quadratic_maps": 531441,
+      "lesson": "non-bijective maps can game raw-state retention by erasing address information; full carrier preservation is substantive"
+    }
   }
 }

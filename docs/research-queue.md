@@ -132,20 +132,23 @@ Do not require group theory, T3, MDL, or observer algebra for the intended path.
 
 ## Priority 5 — broader alternative-machine search
 
-Experiments 250–253 now provide a compact adversarial harness: start from the 216 raw-compatible machines rather than the solved 14-state family, then ask which grammars/operations maximize raw-state retention while achieving structural closure. Prefer this harness for future alternative-machine work.
+Experiments 250–253 provide the compact adversarial harness: start from the 216 raw-compatible machines rather than the solved 14-state family, then ask which grammars/operations maximize raw-state retention while achieving structural closure.
 
-Construct nearby machines that preserve:
+**Recovered canonical integration: Experiments 303–305 substantially close the global carrier-preserving operation lane.** They had been merged earlier but fell out of the compact ledger/queue during later reconciliation.
 
-- the same carrier/address geometry;
-- ternary positional coding;
-- similar state burden;
-- similar recursion budget.
+- Experiment 303 searches all 3,888 degree<=2 bijections of the native ternary address plane. Raw retention alone admits an 18-state quadratic sibling ending at `102`, but it has no reversible route shell. No genuinely quadratic bijection is route-capable.
+- Experiment 304 removes bijectivity across all 531,441 quadratic maps and proves why carrier preservation matters: singular maps can retain all 216 raw candidates, and six singular route-capable maps retain 20 states by erasing address information. Among route-capable maps using all nine addresses, only identity and a q-label swap survive.
+- Experiment 305 removes the algebraic restriction entirely and exhausts all `9! = 362,880` global address permutations. Only 30 preserve a reversible route shell. Exactly two attain the maximum routed retention of 14: canonical identity and the already-explained `f1` observational gauge swapping `(0,1)<->(1,1)`. They produce the identical 14-state family, route shell `120/012/102`, and terminal `100`.
 
-Ask whether equally simple alternatives explain all observed cells but terminate elsewhere or lack the current route structure.
+Therefore **do not spend more work on state-independent global bijections of the nine-address carrier**. That family is exhaustively closed modulo the known `f1` gauge.
 
-This is the strongest remaining closed-corpus adversarial test.
+Remaining Priority-5 work, if pursued, must broaden in a genuinely different direction while keeping a comparable description budget, for example:
 
-Use exact enumeration or SAT/SMT-style constraint solving if the family becomes too large for direct loops.
+- bounded state-dependent operations with an independently motivated tiny control surface;
+- operations that alter the representation grammar rather than merely relabeling the global address plane;
+- matched-complexity alternatives that preserve full carrier information, ternary positional coding, and a comparable two-pass recursion budget.
+
+Reject families whose extra state dependence or parameter freedom grows faster than the constraints they explain. Use exact enumeration or SAT/SMT only when the parent family remains tightly preregistered.
 
 ## Priority 6 — archival/manufacturing lane
 ### Priority 6A — historical method archaeology
