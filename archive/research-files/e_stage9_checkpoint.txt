@@ -1,0 +1,18 @@
+E three-symbol exact-source replication checkpoint
+
+Sources: #338 dash, #032 slash, #095 dot, exact public repository bytes.
+All were perspective-rectified to 900x900 and registered on halftone-density structure with symbol/serial/border regions excluded.
+
+Bounded registration to #338 dash reference:
+- #032 slash: angle +0.275 deg, scale 0.98475, tx +0.37 px, ty -2.61 px; full-resolution optimization correlation ~0.404. Recomputed 225px common-background correlation ~0.419; 500-shift diagnostic null max ~0.351, empirical one-sided finite-sample fraction 1/501 ~0.001996.
+- #095 dot: angle -0.031 deg, scale 1.00799, tx -5.14 px, ty +6.25 px; full-resolution optimization correlation ~0.361. Recomputed 225px correlation ~0.355; 500-shift diagnostic null max ~0.299, empirical fraction 1/501 ~0.001996.
+
+Actual foreground masks detected directly from physical photographs:
+- dash + slash direct-exposure coverage: 97.997558%
+- dash + slash + dot: 98.007326%
+- dot marginal gain: 0.009768 percentage points = 48 pixels
+- jointly hidden after all three: 9,792 pixels
+
+Interpretation: the class-H near-zero dot marginal contribution replicates in class E with a separate set of physical photographs. Because the foreground mark geometry is intended to be common across classes, these are physical confirmations of a global geometric fact rather than statistically independent design decisions. Dot is almost entirely nested in the slash/dash jointly-hidden zone and is therefore poorly configured as a third background-reveal state. This supports, but does not prove, a separable foreground H108 master whose symbols need not derive semantics from local background visibility.
+
+Artifacts: e_sources_contact.png, 032_rect.png, 338_rect.png, 095_rect.png, 032_aligned_to_338.png, 095_aligned_to_338.png, e_registration_summary.csv, e_registration_shift_null.csv, e_strict_338_032_095_composite.png, e_strict_338_032_095_provenance.png, e_three_symbol_coverage.csv, e_stage9_checkpoint.txt.
