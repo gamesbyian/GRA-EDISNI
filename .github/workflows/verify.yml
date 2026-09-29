@@ -35,3 +35,5 @@ jobs:
         run: python scripts/compare_raw_reconstruction.py
       - name: Audit raw constraint flow
         run: python scripts/audit_raw_constraint_flow.py
+      - name: Select recursion from raw candidate space
+        run: python scripts/audit_raw_operation_family.py
