@@ -7,8 +7,13 @@ on:
         description: "Discord server (guild) ID"
         required: true
         type: string
+      channel_names:
+        description: "Comma-separated exact channel/thread names"
+        required: false
+        default: "stickers-solving"
+        type: string
       channel_ids:
-        description: "Optional comma-separated channel/thread IDs; blank = all bot-visible text channels"
+        description: "Optional comma-separated channel/thread IDs"
         required: false
         type: string
       include_archived_public_threads:
@@ -40,6 +45,7 @@ jobs:
         env:
           GUILD_ID: ${{ inputs.guild_id }}
           CHANNEL_IDS: ${{ inputs.channel_ids }}
+          CHANNEL_NAMES: ${{ inputs.channel_names }}
         run: |
           python - <<'PY'
           import os, re
@@ -69,6 +75,12 @@ jobs:
           fi
           if [[ "$DOWNLOAD_ATTACHMENTS" == "true" ]]; then
             args+=(--download-attachments)
+          fi
+          if [[ -n "${CHANNEL_NAMES// }" ]]; then
+            IFS=',' read -ra names <<< "$CHANNEL_NAMES"
+            for name in "${names[@]}"; do
+              args+=(--channel-name "$name")
+            done
           fi
           if [[ -n "${CHANNEL_IDS// }" ]]; then
             IFS=',' read -ra ids <<< "$CHANNEL_IDS"
