@@ -201,6 +201,43 @@
         "102"
       ],
       "functional_ablation_experiment": 292
+    },
+    "abstract_selector_inverse": {
+      "experiment": 294,
+      "raw_q4_observations_used": false,
+      "expected_terminal_used_as_filter": false,
+      "expected_core_location_used_as_filter": false,
+      "selector_maps": 19683,
+      "core_location_candidates": 84,
+      "first_pass_pos3_pairs": 288,
+      "second_pass_pos3_pairs": 208,
+      "terminal_distribution": {
+        "100": 28,
+        "102": 84,
+        "110": 24,
+        "112": 72
+      },
+      "route_capable_core_locations": [
+        "ADG"
+      ],
+      "scaffold_coordinate_order": "BCEFHI",
+      "route_capable_scaffolds": [
+        "200122",
+        "220122"
+      ],
+      "states_per_scaffold": 7,
+      "recovered_core_words": [
+        "110",
+        "220",
+        "212"
+      ],
+      "recovered_terminal": "100",
+      "recovered_route_shell": [
+        "120",
+        "012",
+        "102"
+      ],
+      "remaining_abstract_selector_gauge": "C=0 or 2"
     }
   },
   "first_pass": {
