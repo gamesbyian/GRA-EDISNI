@@ -19,17 +19,19 @@ The mechanical transducer is the current baseline. Do not reopen semantic fishin
 
 The current mechanical model is compact, but some uniqueness statements remain conditional on declared native families.
 
-**Progress through Experiment 245:** the recursion assumptions have been materially hardened.
+**Progress through Experiment 253:** the recursion assumptions have been materially hardened.
 
 - First pass: in the 729-member family `B(f(q),g(S),j)`, POS3 validity plus p-factorization leaves 49 broad survivors; restricting both coordinate maps to shell-preserving permutations forces `g=identity`, leaving only the six relabelings of external q. Fixing physical q labels leaves the canonical identity/identity substitution uniquely.
 - Second pass: in the 729-member family `B(f(S),g(S),j)`, 25 arbitrary-map pairs produce completion-invariant POS3 terminals, but the permutation-preserving subfamily has exactly one survivor: identity/identity, yielding terminal `100`.
+- Raw-space two-pass audit: Experiment 253 searches all 1,296 shell-preserving `B(f(q),g(S),j)` / `B(h(S),k(S),j)` operation tuples over the 216 raw candidate machines. Of 42 tuples producing a nonempty invariant POS3 terminal, maximum raw-state retention is 14; exactly six tuples attain it, differing only by external-q relabeling. Fixing physical q labels leaves the canonical all-identity recursion unique.
 
 Remaining high-value ingredients:
 
 - primary local column-POS3 grammar itself;
 - the single unresolved frame-polarity completion at `q=1,d=2` under weaker-than-staircase grammars (Experiment 247 shows `d<=q` is the unique cheapest bounded linear-threshold completion);
 - canonical Q3 shell orientation;
-- broader recursion parents that are not expressible as independent ternary coordinate maps.
+- broader recursion parents that are not expressible as shell-preserving ternary coordinate permutations;
+- Q4 grammars weaker than one-slash-per-depth-stack POS3.
 
 **Experiment 246 removes outer no-self registration from this list.** Under POS3, raw observations force 8/9 frame polarities. With the established `d<=q` staircase, they force 25/27 primary trits, including all 18 outer trits; all 18 already satisfy no-self.
 
@@ -60,7 +62,9 @@ This is partly epistemic hygiene and partly a route to discovering remaining red
 
 **Experiments 242–243 satisfy the first major independence target.** `scripts/verify_native_model.py` reconstructs the machine in native `(x,y,p,g)` coordinates from the request/grant relation and shares no generator code with the Boolean `XYZG` implementation. `scripts/compare_models.py` then confirms exact equality of the full 14-master sets.
 
-Still desirable: a genuine constraint/enumeration implementation reconstructed from lower-level axioms rather than either state parameterization.
+**Experiments 250–251 satisfy the lower-level constraint/enumeration target.** `scripts/enumerate_raw_machine.py` starts from 6 raw-compatible primary payloads × 36 raw-compatible Q4 selectors = 216 candidates, then uses recursive POS3 closure to recover exactly 14 states and terminal `100`. `scripts/compare_raw_reconstruction.py` proves that this set is exactly equal to both prior 14-master implementations.
+
+This raw enumerator is now the preferred independence oracle for future changes to state-family logic.
 
 Independent implementations must reproduce:
 
@@ -101,6 +105,8 @@ Explicitly identify which steps are visible from raw marks and which require hyp
 Do not require group theory, T3, MDL, or observer algebra for the intended path.
 
 ## Priority 5 — broader alternative-machine search
+
+Experiments 250–253 now provide a compact adversarial harness: start from the 216 raw-compatible machines rather than the solved 14-state family, then ask which grammars/operations maximize raw-state retention while achieving structural closure. Prefer this harness for future alternative-machine work.
 
 Construct nearby machines that preserve:
 
