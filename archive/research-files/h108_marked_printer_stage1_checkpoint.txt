@@ -1,0 +1,31 @@
+H108 marked-printer interaction checkpoint
+
+Inputs:
+- Canonical H108 fold (65 known residues)
+- Canonical tile geometry I A B / C D E / F G H
+- Recovered inpainted printer reconstruction derived from prior saved mask/inpaint pairs
+- Standardized slash/dash/dot foreground templates derived from recovered sticker masks
+
+Main result:
+- Simple foreground-symbol sampling of the underlying printer image is not supported by quarter-preserving permutation tests.
+- gray inside-minus-annulus: p=0.261
+- edge inside-minus-annulus: p=0.809
+- high-pass texture inside-minus-annulus: p=0.822
+- directional grayscale variation: p=0.415
+- directional edge mean: p=0.289
+
+Interpretation:
+- No evidence that observed slash/dash/dot placements preferentially target bright/dark, edge-rich, textured, or directional image regions.
+- This demotes simple symbol-as-sampler/operator models on the reconstructed printer image.
+- Public INSIDE ARG chronology documents a C-tile dash variant that exposed characters previously partly concealed by a slash, directly supporting a literal occlusion/reveal role for foreground marks.
+- Because the current background contains inpainted estimates under foreground marks, this is a controlled screening test, not final pixel-level proof.
+
+Q4:
+- Known Q4 dots were projected onto corresponding image coordinates and earlier H108 bands.
+- Their image-space sampling shows no positive texture/edge signal.
+- Keep Q4 selector hypotheses active primarily against cross-band symbol/data structures or independently motivated sources, not this repeating printer background.
+
+Next bounded experiment:
+- Use multiple physical sticker photos of the same image classes but different foreground marks, especially C slash vs C dash.
+- Rectify/register them, reconstruct a latent background without relying on one inpaint, and measure exact reveal/occlusion of the known dat/534brn9653f9j8mmd path strokes.
+- This directly tests whether foreground variation is merely production/serial overlay or intentionally controls legibility.
