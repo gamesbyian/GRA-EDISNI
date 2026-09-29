@@ -1,0 +1,70 @@
+name: Temporary cover source audit
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  cover-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install image tools
+        run: python -m pip install --quiet pillow
+      - name: Fetch archived cover sources
+        run: |
+          mkdir -p /tmp/cover-source cover-audit
+          curl -fL --retry 3 -o /tmp/cover-source/A.jpg 'https://raw.githubusercontent.com/gamesbyian/playdead-unofficial-exports/master/assets/INSIDE_A-5d197786f158c567.JPG'
+          curl -fL --retry 3 -o /tmp/cover-source/B.jpg 'https://raw.githubusercontent.com/gamesbyian/playdead-unofficial-exports/master/assets/INSIDE_B-80fbff1237c37913.JPG'
+      - name: Render audit views
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageEnhance, ImageChops, ImageOps, ImageStat
+
+          out = Path("cover-audit")
+          out.mkdir(exist_ok=True)
+          imgs = {}
+          for key in ("A", "B"):
+              im = Image.open(f"/tmp/cover-source/{key}.jpg").convert("RGB")
+              imgs[key] = im
+              print(key, im.size, ImageStat.Stat(im).mean)
+              thumb = im.copy()
+              thumb.thumbnail((2200, 2200), Image.Resampling.LANCZOS)
+              thumb.save(out / f"{key}-overview.jpg", quality=92)
+              gray = ImageOps.grayscale(thumb)
+              ImageOps.autocontrast(gray, cutoff=0.2).save(out / f"{key}-gray-autocontrast.png")
+              for channel, name in zip(thumb.split(), ("R","G","B")):
+                  ImageOps.autocontrast(channel, cutoff=0.2).save(out / f"{key}-{name}-autocontrast.png")
+              for factor in (2, 4):
+                  ImageEnhance.Contrast(thumb).enhance(factor).save(out / f"{key}-contrast-{factor}.jpg", quality=92)
+
+          # Produce a rough same-size difference only if dimensions match.
+          if imgs["A"].size == imgs["B"].size:
+              a, b = imgs["A"], imgs["B"]
+              diff = ImageChops.difference(a,b)
+              d = diff.copy()
+              d.thumbnail((2200,2200), Image.Resampling.LANCZOS)
+              ImageOps.autocontrast(d, cutoff=0.2).save(out / "AB-difference.png")
+
+          # Write exact source metadata.
+          (out / "metadata.txt").write_text(
+              "\n".join([
+                  f"A size={imgs['A'].size}",
+                  f"B size={imgs['B'].size}",
+              ]) + "\n",
+              encoding="utf-8",
+          )
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cover-source-audit
+          path: cover-audit/
+          retention-days: 3
