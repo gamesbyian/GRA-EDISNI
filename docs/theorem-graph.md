@@ -55,12 +55,27 @@ The Boolean near-cube is a compression of the native relation, not a premise req
 
 Experiment 255 tests a broader primary grammar in which each primary column may contain zero or one minority-symbol pulse. Raw observations allow 1,536 such primary completions. With the 36 Q4 selectors, recursive POS3 closure leaves 832 states. Every survivor still terminates at `100`, but only 14 have one occupied minority pulse in all 27 columns.
 
-Therefore G1 has two distinct roles:
+Experiment 257 shows that direct exact-POS3 occupancy is not the only compact route back to those 14 states. Inside the 832-state optional-pulse closure family, require only that the three depth frames within each external quarter have equal total pulse count. That coarser quarter-local balance condition leaves exactly 14 states, all with frame weight 3 and therefore with every primary column occupied.
 
-- **exact-state role:** exact POS3 is needed to select the canonical 14-state physical family;
-- **endpoint role:** exact POS3 is not needed for terminal `100` inside the tested zero-or-one-pulse parent grammar.
+Therefore G1 has three distinct statuses:
+
+- **raw parent:** zero-or-one pulse per column is a broader tested grammar;
+- **exact-state selection:** direct exact POS3 or the weaker quarter-local frame-weight balance both recover the canonical 14-state family inside that parent;
+- **endpoint robustness:** even without either exact-state selector, all 832 recursively closed states terminate at `100`.
 
 This distinction prevents overclaiming uniqueness while strengthening the terminal's robustness.
+
+## Q4 polarity boundary
+
+Experiment 256 enumerates every slash-exception/dot-exception assignment over the nine Q4 stacks. Raw marks allow 256 of the 512 polarity words. Only 16 survive recursive closure:
+
+- 8 maximal words retain 14 states and terminate at `100`;
+- 8 sibling words retain 12 states and terminate at `110`;
+- the remaining 240 raw-compatible polarity words admit no recursively closed state.
+
+Across every maximal 14-state word, B/D/E/G/H are forced slash-exception. A/C/F/I vary across the maximal family. The decisive branch bit is D: changing D to dot-exception produces the 12-state/`110` sibling while B/E/G/H remain slash-exception.
+
+Thus the globally shared-polarity form of G3 is sufficient but not minimal for the transition. It remains a compact physical-completion rule, but the mechanics expose a smaller five-stack polarity spine. Any claim that the full Q4 surface is uniquely reconstructed must therefore identify an independent reason to align the four mechanically freer A/C/F/I stack polarities.
 
 ## Observer branch
 
@@ -91,8 +106,8 @@ A1–A2 describe closure properties. A3 prevents them from being silently promot
 
 ## Immediate proof obligations exposed by this graph
 
-1. **G1/G2:** Experiment 255 shows zero-or-one-pulse weakening does not recover the exact 14-state family, although terminal `100` survives; broader primary grammars should distinguish exact-family uniqueness from endpoint robustness.
-2. **G3:** Experiment 254 reduces the supplied commitment to shared-polarity Q4 POS3; test grammars that weaken shared orientation itself without exploding the closure family.
+1. **G1/G2:** Experiment 257 supplies a weaker sufficient exact-family rule inside the optional-pulse parent: quarter-local equal frame weights. Test whether this balance can itself be derived from raw visibility, carrier symmetry, or recursion rather than supplied as a new grammar.
+2. **G3:** Experiment 256 shows global shared Q4 polarity is stronger than necessary. The next target is the B/D/E/G/H slash-exception spine and, separately, whether any independent physical or symmetry argument fixes A/C/F/I to the canonical slash-exception orientation.
 3. **G5/G6:** extend Experiment 253 beyond shell-preserving coordinate permutations. Within that raw-space family the canonical recursion is unique up to external-q relabeling under maximal raw-state retention.
 4. **T7–T11:** the lower-level constraint/enumeration target is now satisfied by Experiments 250–251; use it as the preferred independence oracle for future state-family changes.
 5. **R1:** keep observer evidence quarantined when auditing transition uniqueness.
