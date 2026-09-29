@@ -19,7 +19,25 @@ Public Discord export:
 
 The export preserves exact message IDs and attached images.
 
-## 2023: twelve 3×3 blocks explicitly proposed
+## 2022: the twelve-frame decomposition is already present
+
+On **22 Dec 2022**, the discussion is explicitly using a 12×9 foreground rendering. In the message group anchored at:
+
+`1055674055233118248`
+
+a solver says:
+
+> “I tried doing a 3x3 grid for each row but got nothing”
+
+A 12×9 rendering has twelve nine-cell rows, so applying one 3×3 grid to each row is exactly the present project's **twelve 3×3 frame** decomposition. The attempt produced no semantic result, which is useful anti-hindsight evidence: the geometry was available long before the present mechanism, but the later local positional grammar had not been recognized.
+
+On **23 Dec 2022**, message:
+
+`1055973624135295086`
+
+adds that in the 12×9 representation “each column corresponds to symbols with one of the 9 patterns.” In context, the community was already using the period-9 physical/background cadence to motivate the 12×9 registration, again without discovering the later machine.
+
+## 2023: twelve 3×3 blocks stated explicitly
 
 On **12 Oct 2023**, message:
 
@@ -42,7 +60,7 @@ The important historical fact is not whether that rendering solved anything. It 
 2. the 108-cell foreground;
 3. a decomposition of that foreground into **twelve 3×3 blocks**.
 
-This predates the present typed-machine reconstruction by years.
+This restates and makes visually explicit the December-2022 decomposition. Both predate the present typed-machine reconstruction by years.
 
 ## 2026: 9×12 and alphabet split sharpen the same geometry
 
@@ -78,12 +96,12 @@ F G H
 
 Experiment 302 already established the physical A–I registration historically.
 
-Experiment 315 now establishes that applying **3×3 framing to the foreground itself** was also independently proposed in the historical community, including the exact twelve-block decomposition.
+Experiment 315 now establishes that applying **3×3 framing to the foreground itself** was independently proposed in the historical community by December 2022, including the exact twelve-block decomposition, and was later restated explicitly as twelve 3×3 squares.
 
 Therefore the human-plausibility classification can be sharpened:
 
 - the A–I 3×3 carrier: historically solved and source-recovered;
-- the 108 → twelve 3×3 foreground framing: historically attested exploration by Oct 2023;
+- the 108 → twelve 3×3 foreground framing: historically attested exploration by Dec 2022 and stated explicitly as twelve squares by Oct 2023;
 - the 81+27 → nine primary-like blocks plus three tail blocks split: explicitly articulated by May 2026;
 - the later POS3 occupancy grammar, Q4 selector interpretation, recursive address substitution, route shell, and terminal `100`: still present-project deductions.
 
