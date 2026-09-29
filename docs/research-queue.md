@@ -30,7 +30,7 @@ Remaining high-value ingredients:
 - primary local column-POS3 grammar itself;
 - the single unresolved frame-polarity completion at `q=1,d=2` under weaker-than-staircase grammars (Experiment 247 shows `d<=q` is the unique cheapest bounded linear-threshold completion);
 - canonical Q3 shell orientation;
-- broader recursion parents that are not expressible as shell-preserving ternary coordinate permutations;
+- broader recursion parents beyond independent coordinate permutations. Experiment 266 now closes the full coupled affine-bijection family for the first pass: maximal retention forbids q/S mixing and forces d'=S. Experiment 267 shows singular affine parents are not informative because raw-state retention is gamed by maps that erase S;
 - Q4 polarity grammars below the Experiment-260 factorization: three transition-preserving gauge bits {A}, {C}, {F+I} plus functional D. The unresolved physical question is why the authored completion would choose the all-slash gauge origin rather than another member of the same 14-state/100 cube.
 
 **Experiment 246 removes outer no-self registration from this list.** Under POS3, raw observations force 8/9 frame polarities. With the established `d<=q` staircase, they force 25/27 primary trits, including all 18 outer trits; all 18 already satisfy no-self.
@@ -91,7 +91,7 @@ Experiment 257 gives the human-path search a new candidate cue: within each quar
 
 **Experiments 259–265 substantially close the raw-primary human-entry gap.** A unique 34-residue witness preserves the 8/25 reconstruction; local determinacy recovers the last frame polarity; columns are uniquely selected among natural line orientations; and a 34-residue discovery / 20-residue holdout split selects physical columns from all 280 cell partitions without using the validation data to choose them.
 
-The remaining earlier human-discovery bottleneck is now the H108/A–I framing itself: why a fresh solver should fold serials mod 108, arrange consecutive groups of nine into the physical A–I 3×3 layout, and distinguish the 9 primary slash/dash frames from the 3 Q4 slash/dot frames. Check the earlier 170s–190s experiments before reopening this lane; do not duplicate already-closed factorization work.
+The earlier H108/A–I human-entry lane has now been reconciled against canonical Experiments 184–190 and should be treated as substantially closed. Those experiments already derive the native `4×3×3×3` address from serial cadence + H108 + physical A–I artwork, identify the exact first-81/final-27 alphabet boundary, orient quarter/depth by local structure, and show Q4 depth stacks are readable directly from raw serial rows before physical image assembly. Do not reopen this lane without a genuinely new discriminator.
 
 Now that the machine is theoremized, reconstruct the shortest plausible human path without using conclusions before they are discoverable.
 
