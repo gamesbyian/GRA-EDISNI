@@ -41,6 +41,8 @@ jobs:
         run: python scripts/audit_q4_pos3_polarity.py
       - name: Audit optional-pulse primary grammar
         run: python scripts/audit_primary_optional_pulse.py
+      - name: Audit frame-weight-three primary parent
+        run: python scripts/audit_primary_frame_weight_three.py
       - name: Audit Q4 polarity assignment boundary
         run: python scripts/audit_q4_polarity_assignments.py
       - name: Audit primary frame-balance recovery
