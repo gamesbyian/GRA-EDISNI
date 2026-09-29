@@ -134,6 +134,23 @@ The ordering clue is not only a retrospective analogy supplied in 2026. The arch
 - **23–24 Dec 2022:** after more rearrangement attempts, a participant summarizes the earlier picture-puzzle precedent as important information living in one mark type while dashes/slashes functioned as a background element "to help us arrange it correctly."
 
 This is valuable anti-hindsight evidence. Long before the present typed-machine interpretation, solvers already regarded **registration marks / boundary regularities / symbol-role separation** as plausible Playdead grammar for this exact sticker foreground. It does not validate any particular modern arrangement, but it lowers the epistemic cost of asking whether one symbol family is structural rather than payload.
+## Frozen May-2026 sticker predictions versus September claims
+
+The export preserves a useful prospective discriminator that should remain quarantined until the physical claims are verified.
+
+On **13 May 2026**, the attached `sticker_random_gen-62dad1a83c441653.py` froze a community heuristic prediction table. In that table:
+
+- residue **103** is predicted `Y` (dot) with confidence `0.854`;
+- residue **45** is predicted `G` (slash) with confidence `0.625`.
+
+On **27 Sep 2026**, long after that file was posted, two YouTube commenters were reported in `#solving` as claiming:
+
+- `•427`, which maps to residue `427 mod 108 = 103` and therefore **agrees** with the frozen May prediction;
+- `•369`, which maps to residue `369 mod 108 = 45` and therefore **disagrees** with the frozen May prediction.
+
+Neither claim had a confirming sticker photograph in the exported discussion. The community itself explicitly asked for confirmation and expressed skepticism about the 369 claim. Therefore neither may enter `data/observations.csv` or be counted as validation yet.
+
+This pair is valuable precisely because the predictions predate the claims. If either physical sticker is later photographed with provenance, score it against the frozen May artifact before updating any model. Do not tune the current machine using the claimed symbols first.
 ## Other-channel leads
 
 The late `#solving` export preserves several non-sticker discoveries and loose ends that may matter only if they supply an independently motivated external consumer:
