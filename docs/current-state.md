@@ -459,7 +459,7 @@ Preferred irreducible transition-side supplied set:
 1. serial/H108/A-I carrier geometry;
 2. primary physical column positional code;
 3. primary frame-polarity staircase (minority dash iff `d<=q`), with 8/9 entries directly forced by the corpus under POS3;
-4. Q4 as depth-indexed POS3 selector encoding;
+4. Q4 as a depth-indexed shared-polarity POS3 selector; the shared exceptional-symbol polarity is forced by raw observations to slash;
 5. recursive application of selector to primary memory;
 6. reuse of the same selector on regenerated surfaces;
 7. no additional Q4 scaffold premise is required for the final 14-state family: Experiments 250–252 reconstruct the surviving selector cores directly from raw Q4 stack constraints plus recursive POS3 closure.
@@ -551,6 +551,10 @@ second: B(h(S), k(S), j)
 42 operation tuples yield a nonempty completion-invariant POS3 terminal. The maximum number of raw-compatible states retained by any such tuple is 14. Exactly six tuples attain that maximum: `g=h=k=identity`, while `f` ranges over the six relabelings of external q. Every maximal tuple terminates at `100`. Fixing the physical q labels leaves the all-identity recursion uniquely.
 
 This materially reduces circularity in the recursion argument: the canonical two-pass operation can be selected from the raw parent space by shell preservation plus maximum retention of raw-compatible physical states, without first assuming the solved 14-state model.
+
+Experiment 254 weakens the Q4 grammar. If each depth stack may independently choose slash-exception or dot-exception POS3 polarity, raw data permit 7,776 physical Q4 completions / 1,944 distinct selector-depth maps, and recursive closure expands to 52 logical states with two terminals, `100` and `110`. A shared orientation across all nine stacks is therefore doing real work. However, the orientation need not be supplied as “slash”: under the weaker shared-polarity grammar, raw observations admit 36 slash-exception completions and zero dot-exception completions. The current one-slash selector family is thus observationally forced once shared Q4 polarity is assumed.
+
+Experiment 255 weakens the primary grammar from exactly one minority cell per column to zero-or-one minority cell. Raw observations then admit 1,536 primary completions; with the 36 Q4 selectors there are 55,296 raw candidate machines. Recursive POS3 closure leaves 832 states, all of which still terminate at `100`. Exactly 14 of the 832 have all 27 primary columns occupied by one minority cell, and those are the canonical exact-POS3 family. Therefore exact primary POS3 is genuinely needed to select the 14-state physical family, but terminal `100` is invariant over a much broader missing-pulse primary grammar.
 
 ## Mechanical completion
 
