@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **240**.
+Latest indexed experiment: **249**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -248,6 +248,15 @@ Latest indexed experiment: **240**.
 | 238 | hidden-lookup audit and Engine-F mechanical completion checkpoint |
 | 239 | independent live-ledger regression of the four-bit generator |
 | 240 | final constrained audit of established INSIDE ARG consumers |
+| 241 | explicit mechanical theorem/dependency graph and proof-obligation split |
+| 242 | independent native-state x/y/p/g implementation from request/grant relation |
+| 243 | exact full-master equivalence of Boolean and native implementations |
+| 244 | broad second-pass coordinate-map audit; identity/identity unique under shell-preserving permutations |
+| 245 | broad first-pass coordinate-map audit; selector-depth identity forced, with only external-q relabeling freedom |
+| 246 | raw primary reconstruction: 8/9 frame polarities and 25/27 trits forced; outer no-self demoted to theorem |
+| 247 | final primary polarity bit: d<=q is unique minimum-cost bounded linear-threshold completion |
+| 248 | hindsight-controlled shortest plausible human mechanical solve reconstruction |
+| 249 | leave-one-residue-out robustness of raw primary reconstruction |
 
 ## Current frontier
 
@@ -256,6 +265,7 @@ Latest indexed experiment: **240**.
 - **216–220:** endpoint-free inverse reconstruction, broad primary inverse audit, T/T' observer discrimination, complete Q4 surface prediction, axiom ablation.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
+- **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
 
 ## Status shorthand
 

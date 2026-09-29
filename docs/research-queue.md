@@ -19,13 +19,19 @@ The mechanical transducer is the current baseline. Do not reopen semantic fishin
 
 The current mechanical model is compact, but some uniqueness statements remain conditional on declared native families.
 
-Attack the remaining supplied ingredients one at a time with broader but still bounded parents:
+**Progress through Experiment 245:** the recursion assumptions have been materially hardened.
 
-- primary local column-POS3 grammar;
-- outer no-self registration;
-- recursive address substitution;
-- reuse of the same selector on the second pass;
-- canonical Q3 shell orientation.
+- First pass: in the 729-member family `B(f(q),g(S),j)`, POS3 validity plus p-factorization leaves 49 broad survivors; restricting both coordinate maps to shell-preserving permutations forces `g=identity`, leaving only the six relabelings of external q. Fixing physical q labels leaves the canonical identity/identity substitution uniquely.
+- Second pass: in the 729-member family `B(f(S),g(S),j)`, 25 arbitrary-map pairs produce completion-invariant POS3 terminals, but the permutation-preserving subfamily has exactly one survivor: identity/identity, yielding terminal `100`.
+
+Remaining high-value ingredients:
+
+- primary local column-POS3 grammar itself;
+- the single unresolved frame-polarity completion at `q=1,d=2` under weaker-than-staircase grammars (Experiment 247 shows `d<=q` is the unique cheapest bounded linear-threshold completion);
+- canonical Q3 shell orientation;
+- broader recursion parents that are not expressible as independent ternary coordinate maps.
+
+**Experiment 246 removes outer no-self registration from this list.** Under POS3, raw observations force 8/9 frame polarities. With the established `d<=q` staircase, they force 25/27 primary trits, including all 18 outer trits; all 18 already satisfy no-self.
 
 Goal: determine whether the present transducer remains uniquely or near-uniquely selected without smuggling in its own representation.
 
@@ -33,7 +39,9 @@ Stop a branch when extra parameter freedom grows faster than the constraints it 
 
 ## Priority 2 — proof pack / theorem graph
 
-Turn Experiments 215, 220, 231, 233, 237, and 238 into a machine-checkable dependency graph.
+**Experiment 241 completed the first explicit dependency graph** in `docs/theorem-graph.md`. Continue turning the graph into executable assertions and use it to expose hidden circularity.
+
+The graph currently integrates Experiments 215, 220, 231, 233, 237, and 238 and separates:
 
 For each current claim mark:
 
@@ -50,12 +58,11 @@ This is partly epistemic hygiene and partly a route to discovering remaining red
 
 ## Priority 3 — independent implementations
 
-Create at least two implementations that do not share generator code:
+**Experiments 242–243 satisfy the first major independence target.** `scripts/verify_native_model.py` reconstructs the machine in native `(x,y,p,g)` coordinates from the request/grant relation and shares no generator code with the Boolean `XYZG` implementation. `scripts/compare_models.py` then confirms exact equality of the full 14-master sets.
 
-- coordinate/direct formula generator;
-- constraint/enumeration implementation reconstructed from axioms.
+Still desirable: a genuine constraint/enumeration implementation reconstructed from lower-level axioms rather than either state parameterization.
 
-Both must reproduce:
+Independent implementations must reproduce:
 
 - 14 legal masters;
 - all 82 classified stickers;
@@ -67,6 +74,12 @@ Both must reproduce:
 Disagreement is a bug or hidden assumption and should stop downstream work.
 
 ## Priority 4 — human solve reconstruction
+
+Experiment 246 materially improves the likely human entry path: the primary object can now be presented as “the stickers visibly determine almost the entire ternary lattice” rather than as a heavily inferred reconstruction.
+
+**Experiment 248 now records a hindsight-controlled human solve in `docs/human-solve-reconstruction.md`.** It marks each step as direct visibility, strong inference, hypothesis test, or confirmation-only. The remaining human-path bottleneck is earlier than recursion: finding the smallest raw-sticker view that makes POS3 conspicuous without arranging the evidence according to the solved model.
+
+Experiment 249 shows the raw primary reconstruction is robust to every single observed primary-residue deletion; no deletion worsens the 8-polarity/25-trit reconstruction beyond 7/24.
 
 Now that the machine is theoremized, reconstruct the shortest plausible human path without using conclusions before they are discoverable.
 

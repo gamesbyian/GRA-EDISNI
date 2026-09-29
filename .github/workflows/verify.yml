@@ -13,5 +13,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Verify closed-corpus machine
+      - name: Verify canonical closed-corpus machine
         run: python scripts/verify_machine.py
+      - name: Verify independent native-state model
+        run: python scripts/verify_native_model.py
+      - name: Compare independent master families exactly
+        run: python scripts/compare_models.py
+      - name: Audit first-pass address substitution
+        run: python scripts/audit_first_pass.py
+      - name: Audit terminal selector reuse
+        run: python scripts/audit_terminal_reuse.py
+      - name: Audit raw primary constraints
+        run: python scripts/audit_primary_raw_constraints.py
+      - name: Audit primary polarity completion
+        run: python scripts/audit_polarity_completion.py
+      - name: Audit primary leave-one-out robustness
+        run: python scripts/audit_primary_leave_one_out.py

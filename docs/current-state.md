@@ -458,7 +458,7 @@ Preferred irreducible transition-side supplied set:
 
 1. serial/H108/A-I carrier geometry;
 2. primary physical column positional code;
-3. local outer no-self depth registration;
+3. primary frame-polarity staircase (minority dash iff `d<=q`), with 8/9 entries directly forced by the corpus under POS3;
 4. Q4 as depth-indexed POS3 selector encoding;
 5. recursive application of selector to primary memory;
 6. reuse of the same selector on regenerated surfaces;
@@ -466,6 +466,7 @@ Preferred irreducible transition-side supplied set:
 
 Increasingly theorem-level rather than separately supplied:
 
+- outer no-self registration;
 - T polarity staircase;
 - 210 baseline;
 - p self-label;
@@ -479,6 +480,46 @@ Increasingly theorem-level rather than separately supplied:
 - T3 closure.
 
 The frozen pointer observer is a separate preregistered readout module, not part of the transition generator.
+
+## Post-240 uniqueness hardening
+
+Experiments 241–246 sharpen the status of the recursion, implementation, and primary-grammar assumptions without changing the preferred machine.
+
+Experiment 241 makes the dependency structure explicit in `docs/theorem-graph.md`, separating physical observations, supplied local grammars, derived theorems, observer-only facts, algebraic descriptions, and the semantic stopping statement.
+
+Experiments 242–243 provide a second implementation in native `(x,y,p,g)` coordinates. It derives the 14-state family directly from the request/grant relation rather than the Boolean `XYZG` Horn normal form. The two implementations independently reproduce the corpus-facing invariants and emit exactly the same set of 14 complete 108-symbol masters.
+
+Experiment 245 broadens the first recursion to:
+
+```
+B(f(q), g(S(j)), j)
+```
+
+for all 27 ternary maps `f` and `g` (729 ordered pairs). Requiring valid POS3 outputs and dependence only on selector class `p` leaves 49 broad survivors. Restricting both coordinate maps to permutations leaves exactly six: `g` is forced to identity and `f` is any permutation of the three external q labels. Once the physical q labels are held fixed, identity/identity is the sole survivor.
+
+Experiment 244 broadens the terminal reuse to:
+
+```
+B(f(S(j)), g(S(j)), j)
+```
+
+over the same 729 ordered map pairs. Twenty-five arbitrary-map pairs yield a completion-invariant valid POS3 terminal, so completion invariance alone is not unique. Under canonical-shell/permutation preservation, however, exactly one pair survives:
+
+```
+f = identity
+g = identity
+terminal = 100
+```
+
+Thus the current first and second address substitutions are now unique inside a substantially broader shell-preserving coordinate-map family. This does **not** prove uniqueness over every conceivable recursion grammar; the remaining queue explicitly targets broader non-coordinate-map parents.
+
+Experiment 246 reconstructs the primary payload directly from the classified corpus under POS3 while initially leaving each frame polarity free. Eight of the nine frame polarities are forced by observations. The sole ambiguity is frame `q=1,d=2`, exactly the missing upper-triangle entry in the global `d<=q` staircase. Applying that staircase forces 25 of the 27 primary trits directly from raw observations; the only unresolved positions are the already-known state ports `x=(q0,d2,c1)` and `y=(q2,d0,c1)`.
+
+All 18 outer primary trits are among the 25 observation-forced values and all satisfy minority-row `!= d`. The former “outer no-self registration” therefore adds no independent constraint once POS3 and the frame-polarity staircase are in place. It should be treated as a derived corpus fact rather than a separate supplied axiom.
+
+Experiment 247 tests the sole unobserved polarity entry against bounded integer linear-threshold completions `[a*q+b*d+c>=0]`. Both binary completions are possible in that broader family, but the current staircase is the unique global minimum-L1 primitive rule: `q-d>=0` (cost 2). The alternate completion first appears as `2q-d>=0` (cost 3). This is a bounded simplicity result, not an absolute proof over all polarity grammars.
+
+Experiment 249 removes each of the 54 distinct observed primary residues in turn and reruns the raw reconstruction. Thirty residues affect at least one headline metric, but no single deletion changes more than one forced frame polarity and/or one forced trit: the worst case moves from 8 forced polarities / 25 forced trits to 7 / 24. The primary reconstruction is therefore not dependent on any single public residue.
 
 ## Mechanical completion
 
