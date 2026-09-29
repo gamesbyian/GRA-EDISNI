@@ -89,7 +89,9 @@ Experiment 249 shows the raw primary reconstruction is robust to every single ob
 
 Experiment 257 gives the human-path search a new candidate cue: within each quarter, equal minority-pulse counts across the three depth frames are sufficient, together with optional-pulse columns and recursive closure, to recover exact POS3. Experiment 258 proves that six frame-weight equalities are the minimum possible in the entire pairwise-equality family, and the natural quarter-local rule hits that minimum.
 
-**Experiment 259 identifies the exact minimum verification view:** 34 distinct primary residues uniquely suffice to preserve all eight raw-forced frame polarities and all 25 raw-forced primary trits once H108/POS3 is being tested. Experiment 261 adds a simple local cue at the only polarity-ambiguous frame: the current slash-minority choice gives one exact POS3 completion while the alternate gives two. Use the 34-residue witness plus this determinacy cue to design the next raw-first human-discoverability view. Do not misstate the witness as a minimum discovery corpus; the representation is still assumed.
+**Experiments 259–265 substantially close the raw-primary human-entry gap.** A unique 34-residue witness preserves the 8/25 reconstruction; local determinacy recovers the last frame polarity; columns are uniquely selected among natural line orientations; and a 34-residue discovery / 20-residue holdout split selects physical columns from all 280 cell partitions without using the validation data to choose them.
+
+The remaining earlier human-discovery bottleneck is now the H108/A–I framing itself: why a fresh solver should fold serials mod 108, arrange consecutive groups of nine into the physical A–I 3×3 layout, and distinguish the 9 primary slash/dash frames from the 3 Q4 slash/dot frames. Check the earlier 170s–190s experiments before reopening this lane; do not duplicate already-closed factorization work.
 
 Now that the machine is theoremized, reconstruct the shortest plausible human path without using conclusions before they are discoverable.
 
