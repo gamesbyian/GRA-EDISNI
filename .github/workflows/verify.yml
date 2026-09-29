@@ -37,3 +37,5 @@ jobs:
         run: python scripts/audit_raw_constraint_flow.py
       - name: Select recursion from raw candidate space
         run: python scripts/audit_raw_operation_family.py
+      - name: Audit Q4 shared POS3 polarity
+        run: python scripts/audit_q4_pos3_polarity.py
