@@ -282,3 +282,56 @@ Therefore no provenance-backed physical observation currently in the canonical c
 The Sep-2026 text reports for residues 103 and 45 remain interesting precisely because both positions were outside that frozen 65-residue set, but neither belongs in `observations.csv` until a photograph or equivalent provenance is recovered.
 
 Consequence: do not quote retrospective performance of the May predictor on the current 82-row corpus as prospective validation. The only presently available out-of-freeze tests are the quarantined later claims.
+
+
+## Additional terminal/gateway artifact archaeology
+
+A second pass over the small text/code attachments recovered several exact historical implementation details that are worth preserving because they constrain what kinds of “external consumer” Playdead actually used elsewhere.
+
+### Printer endpoint was an active server-side input consumer
+
+`assets/print-b58746938d8d0071.txt` (blob `87e11d4878bc4fd0a3db204f820820d3dcabc45d`) is client-side JavaScript for the historical printer page. It does not decode input locally. Instead it:
+
+1. reads the submitted string;
+2. POSTs `{ in: <input>, id: <local GUID>, check: 'true' }` to `/print/index.php`;
+3. on acceptance, POSTs the same input and GUID again without `check:true`;
+4. inserts the server response into the printed page.
+
+Failed and empty submissions render explicit “incorrect message received” / “no message received” printer text.
+
+This is concrete historical precedent for a Playdead ARG endpoint acting as a **server-side validator/consumer of a compact prior-stage answer**, rather than every stage being self-decoding plaintext. It does not identify a surviving endpoint for the sticker terminal `100`, but it is a materially relevant design-vocabulary fact for `docs/external-consumer-audit.md`.
+
+### Gateway email explicitly demanded an authentication input
+
+`assets/Gateway_status_report.eml_redacted-2f6dcc6739e9117b.txt` (blob `d1bfa40a2fcc8f46cea7d5be0b99e6d8046412ed`) preserves a June-2018 “Gateway status report.” Decoding the visible binary yields labels including:
+
+- `gateway: playdead.com`;
+- `gateway auth.:_______`;
+- `___required//////////`;
+- a second gateway-auth line ending in `rejected///////`;
+- `rejection reason:____`;
+- `_comms handle input//`.
+
+The email also embeds a JPEG attachment whose metadata names **Andreas Normand Grøntved** as creator. Preserve this as first-party/provenance context for the old gateway artifact, not as evidence about the Collector's Edition sticker mechanism itself.
+
+Together with the printer JavaScript, this strengthens a narrow historical statement: Playdead's ARG infrastructure sometimes expected an externally obtained answer to be submitted to an active consumer that returned success/failure state.
+
+### Safety-data strings recovered at exact source paths
+
+`assets/INSIDE_saf_dat_col_interesting-50a465eb636416ab.txt` (blob `31f744647c40c6431b3ebd9de9aac0392eefd049`) preserves readable islands extracted from the historical Terminal 41 safety-data page, including:
+
+- `repo/dat/breach_contribution_reg`;
+- `fsd5t355gf`;
+- `GATE/81/connect[chk]` with `chk stat. [FAIL[1]]`.
+
+These strings were already known in community lore, but the export supplies a durable content-addressed source rather than a paraphrase. They remain unresolved external artifacts. Do not use them as generic keys against `100` without a cue supplied by the artifact itself.
+
+### Historical geometric straightening attempt is reproducible
+
+`assets/saf_straightened_band.setup-e3c0718ba65d9561.json` (blob `e39e4962701576f83254047b613ab1b7848bce4d`) is a `saf-byte-workbench` setup containing hundreds of explicit per-position shift points and `shiftFill: "wrap"`. It records a substantial community attempt to geometrically straighten/re-register a band in the safety-data carrier.
+
+Treat unconstrained “try shifting/straightening the Terminal 41 data” as historically attempted territory. A future revisit should need a specific registration clue or a reproducible objective, not visual fishing.
+
+### Embedded image metadata
+
+`assets/jpeg-cbebfe04a2674523.txt` (blob `590624925fe3d36a362bbb1de905f459267c211b`) records JPEG metadata with Artist/XPAuthor `AnSet`, EXIF original/digitized time `2016:08:09 14:12:24`, and an XMP create date in December 2016. This is provenance metadata only; no sticker-machine consequence is inferred.
