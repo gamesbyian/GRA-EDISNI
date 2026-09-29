@@ -167,6 +167,29 @@ def main() -> None:
     assert q4_inverse["recovered_route_shell"] == ["120", "012", "102"]
     assert q4_inverse["remaining_abstract_selector_gauge"] == "C=0 or 2"
 
+    q4_code = spec["q4"]["physical_codebook_holdout"]
+    assert q4_code["experiment"] == 295
+    assert q4_code["depends_on_experiment"] == 294
+    assert q4_code["recovered_fixed_selector"] == {
+        "B": 2,
+        "E": 0,
+        "F": 1,
+        "H": 2,
+        "I": 2,
+    }
+    assert q4_code["q4_observation_records_used"] == 9
+    assert q4_code["distinct_codebook_entries_observed"] == 6
+    assert q4_code["compatible_shared_codebooks"] == 8
+    assert q4_code["pairwise_distinct_codeword_survivors"] == 8
+    assert q4_code["all_nonuniform_codeword_survivors"] == 6
+    assert q4_code["equal_row_weight_survivors"] == 1
+    assert q4_code["cyclic_equivariant_survivors"] == 1
+    assert q4_code["minimum_slash_survivors"] == 1
+    assert q4_code["recovered_codewords_by_selector"] == ["/..", "./.", "../"]
+    assert q4_code["recovered_rule"] == (
+        "slash iff physical depth d equals selector value S"
+    )
+
     assert spec["recursion_gauge"]["bits"] == 1
 
     expected_census = Counter({
@@ -192,6 +215,7 @@ def main() -> None:
     print("OK(spec): corrected coupled gauge-family metadata is internally consistent")
     print("OK(spec): Experiment 292 shared-polarity ablation is recorded")
     print("OK(spec): Experiment 294 abstract-selector inverse is recorded")
+    print("OK(spec): Experiment 295 physical-codebook holdout is recorded")
     print("OK(spec): terminal handoff fields remain canonical")
 
 
