@@ -249,11 +249,19 @@
         "H": 2,
         "I": 2
       },
-      "q4_observation_records_used": 9,
-      "distinct_codebook_entries_observed": 6,
-      "compatible_shared_codebooks": 8,
-      "pairwise_distinct_codeword_survivors": 8,
-      "all_nonuniform_codeword_survivors": 6,
+      "fixed_scaffold_q4_observation_records": 9,
+      "fixed_scaffold_distinct_codebook_entries_observed": 6,
+      "fixed_scaffold_compatible_shared_codebooks": 8,
+      "full_q4_observation_records": 11,
+      "recovered_selector_fields_tested": 6,
+      "full_family_forced_codebook_entries": 7,
+      "full_family_compatible_shared_codebooks": 4,
+      "residual_physical_codebook_gauge_entries": [
+        "E[0,2]",
+        "E[1,2]"
+      ],
+      "pairwise_distinct_codeword_survivors": 4,
+      "all_nonuniform_codeword_survivors": 4,
       "equal_row_weight_survivors": 1,
       "cyclic_equivariant_survivors": 1,
       "minimum_slash_survivors": 1,
@@ -263,7 +271,7 @@
         "../"
       ],
       "recovered_rule": "slash iff physical depth d equals selector value S",
-      "evidence_role": "holdout physical encoding check; shared-codebook symmetry remains an authoring premise"
+      "evidence_role": "Q4 marks are holdout physical-encoding evidence after Experiment 294; shared-codebook symmetry fixes the residual two-bit physical gauge"
     }
   },
   "first_pass": {
