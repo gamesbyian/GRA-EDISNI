@@ -193,13 +193,9 @@ q=1 -> 012
 q=2 -> 120
 ```
 
-A human-friendly way to see the completion is:
+A human-friendly way to test the completion no longer needs the arbiter interpretation. There are only 27 ways to pick one q-indexed output from each of the three first-pass classes. Ask for a proper route shell: each chosen ternary word should be a reversible permutation, and the three functional classes should not all route the same way. Exactly one choice survives, selecting `120 / 012 / 102` at q choices `2 / 1 / 0`.
 
-- the middle/no-request case is identity `012`;
-- the high case is the unique 3-cycle with no fixed point, `120`;
-- the remaining case is `102`.
-
-The request/grant or arbiter interpretation is explanatory confirmation. It is not required to perform the mechanical solve.
+Only afterwards need the solver notice that this is the compact relation `q=2-p`, with one 3-cycle, identity, and transposition. The request/grant or arbiter interpretation is explanatory confirmation rather than a prerequisite.
 
 ### 12. Reuse the selector once more — H
 
