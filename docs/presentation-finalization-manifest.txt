@@ -1,0 +1,87 @@
+INSIDE presentation secret prototype
+====================================
+Payload: IAN WALLACE SAYS HELLO
+Alphabet: space=0, A=1, ..., Z=26; each value encoded as three base-3 trits, big-endian.
+Glyphs: dot=0, dash=1, slash=2.
+Prime slides with a second glyph: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
+Within two-glyph slides: read top-to-bottom, then left-to-right.
+Spatial channel: register the 12x9 marker surfaces; the union of all 66 occupied cells spells 100.
+Registration surface: x=10.62in, y=6.35in, pitch=0.11in, 12 columns x 9 rows.
+Opacity: 11%. Shuffle seed: 43. Both are prime-number choices.
+
+Character values / trits:
+   'I' ->  9 -> 100
+   'A' ->  1 -> 001
+   'N' -> 14 -> 112
+   ' ' ->  0 -> 000
+   'W' -> 23 -> 212
+   'A' ->  1 -> 001
+   'L' -> 12 -> 110
+   'L' -> 12 -> 110
+   'A' ->  1 -> 001
+   'C' ->  3 -> 010
+   'E' ->  5 -> 012
+   ' ' ->  0 -> 000
+   'S' -> 19 -> 201
+   'A' ->  1 -> 001
+   'Y' -> 25 -> 221
+   'S' -> 19 -> 201
+   ' ' ->  0 -> 000
+   'H' ->  8 -> 022
+   'E' ->  5 -> 012
+   'L' -> 12 -> 110
+   'L' -> 12 -> 110
+   'O' -> 15 -> 120
+
+Slide assignments:
+  slide 01: #01: trit=1 cell=(7,8)
+  slide 02: #02: trit=0 cell=(6,2) | #03: trit=0 cell=(8,7)
+  slide 03: #04: trit=0 cell=(4,10) | #05: trit=0 cell=(7,1)
+  slide 04: #06: trit=1 cell=(0,6)
+  slide 05: #07: trit=1 cell=(0,11) | #08: trit=1 cell=(1,11)
+  slide 06: #09: trit=2 cell=(0,8)
+  slide 07: #10: trit=0 cell=(0,1) | #11: trit=0 cell=(0,10)
+  slide 08: #12: trit=0 cell=(6,1)
+  slide 09: #13: trit=2 cell=(4,4)
+  slide 10: #14: trit=1 cell=(8,0)
+  slide 11: #15: trit=2 cell=(5,7) | #16: trit=0 cell=(5,8)
+  slide 12: #17: trit=0 cell=(3,4)
+  slide 13: #18: trit=1 cell=(0,4) | #19: trit=1 cell=(7,7)
+  slide 14: #20: trit=1 cell=(0,5)
+  slide 15: #21: trit=0 cell=(2,4)
+  slide 16: #22: trit=1 cell=(1,8)
+  slide 17: #23: trit=1 cell=(3,8) | #24: trit=0 cell=(6,11)
+  slide 18: #25: trit=0 cell=(1,0)
+  slide 19: #26: trit=0 cell=(2,1) | #27: trit=1 cell=(5,2)
+  slide 20: #28: trit=0 cell=(8,10)
+  slide 21: #29: trit=1 cell=(6,4)
+  slide 22: #30: trit=0 cell=(7,2)
+  slide 23: #31: trit=0 cell=(3,11) | #32: trit=1 cell=(8,2)
+  slide 24: #33: trit=2 cell=(3,2)
+  slide 25: #34: trit=0 cell=(4,8)
+  slide 26: #35: trit=0 cell=(6,8)
+  slide 27: #36: trit=0 cell=(4,2)
+  slide 28: #37: trit=2 cell=(8,6)
+  slide 29: #38: trit=0 cell=(1,4) | #39: trit=1 cell=(4,1)
+  slide 30: #40: trit=0 cell=(3,1)
+  slide 31: #41: trit=0 cell=(1,1) | #42: trit=1 cell=(5,11)
+  slide 32: #43: trit=2 cell=(5,1)
+  slide 33: #44: trit=2 cell=(1,7)
+  slide 34: #45: trit=1 cell=(2,8)
+  slide 35: #46: trit=2 cell=(6,7)
+  slide 36: #47: trit=0 cell=(8,5)
+  slide 37: #48: trit=1 cell=(7,11) | #49: trit=0 cell=(8,11)
+  slide 38: #50: trit=0 cell=(2,7)
+  slide 39: #51: trit=0 cell=(5,4)
+  slide 40: #52: trit=0 cell=(0,2)
+  slide 41: #53: trit=2 cell=(4,7) | #54: trit=2 cell=(4,11)
+  slide 42: #55: trit=0 cell=(8,4)
+  slide 43: #56: trit=1 cell=(2,2) | #57: trit=2 cell=(8,9)
+  slide 44: #58: trit=1 cell=(2,11)
+  slide 45: #59: trit=1 cell=(0,9)
+  slide 46: #60: trit=0 cell=(4,5)
+  slide 47: #61: trit=1 cell=(0,7) | #62: trit=1 cell=(3,7)
+  slide 48: #63: trit=0 cell=(8,8)
+  slide 49: #64: trit=1 cell=(8,1)
+  slide 50: #65: trit=2 cell=(7,4)
+  slide 51: #66: trit=0 cell=(1,2)
