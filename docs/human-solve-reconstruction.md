@@ -32,6 +32,8 @@ Do not begin with plaintext. The serial number is behaving like an address.
 
 The foreground has a 108-state repeat structure while the image class repeats every 9. Experiment 297 and the full Discord export add useful historical control here. The period-9 A–I image carrier was explicit by February 2020; the earliest explicit community statement found that the foreground repeat has minimum length 108 is 25 March 2021; on 11 December 2021 the community published a formal candidate-period argument and a 108-symbol rendering with row length 12. The supplied community master exactly round-trips the same 82-record corpus, so this is not new data, but it shows the fold was genuinely discoverable without hindsight from the later routing interpretation.
 
+The archive also improves the *historical motivation* for treating geometry and boundaries as meaningful. On 26 January 2022, while discussing the 108 foreground rendering, a solver explicitly compared its conspicuous empty/boundary structure to the side pixels of the older Xbox printer puzzle and suggested that such marks could indicate the intended message format/resolution. On 24 December 2022 another solver summarized the older picture-puzzle pattern as: dots carried important information while dashes/slashes helped arrange the image correctly. These are community hypotheses rather than proofs of the present machine, but they show that a solver at the time already had a Playdead-specific reason to inspect registration structure instead of treating the 108 symbols as a flat cipher string.
+
 Factor:
 
 ```
