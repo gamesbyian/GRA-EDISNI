@@ -150,6 +150,16 @@ Remaining Priority-5 work, if pursued, must broaden in a genuinely different dir
 
 Reject families whose extra state dependence or parameter freedom grows faster than the constraints they explain. Use exact enumeration or SAT/SMT only when the parent family remains tightly preregistered.
 
+
+**Recovered local-recursion lane: Experiments 306–312 close the main cell-local families.** These experiments were originally merged on an isolated branch with colliding numbers 296–302; the canonical reconciliation renumbers them without changing their results.
+
+- 306–308 exhaust one-cell, two-cell and then all `3^9` first-pass cyclic depth-offset defects. Local exceptions can retain more raw states, but the larger siblings lose the reversible route structure; canonical uniquely maximizes routed retention in the cyclic-offset family.
+- 309 demonstrates why pass-specific decoders are too permissive: across `9^9` local second-pass q/d rewrites, **4,320** distinct rules reproduce the canonical 14 states and terminal `100`. Endpoint agreement is therefore weak evidence without genuine recursive reuse.
+- 310 restores same-operation reuse and recovers canonical as the unique maximum-retention routed rule in the `3^9` local cyclic family.
+- 311 broadens each cell to an arbitrary selector permutation in `S3`, covering `6^9 = 10,077,696` reused local rules. Strict literal uniqueness breaks at the 14-state route maximum, but the survivors form four gauge classes.
+- 312 explains the only serious invariant-`100` sibling, `A:102`, as a coupled physical-label/operation gauge supported only by unobserved A-stack cells plus the already-established `f1` symbol equality. It is not a second functional machine.
+
+Together with Experiments 303–305, this means the **state-independent global bijection lane and the natural cell-local selector-relabeling lane are both substantially closed**. Future Priority-5 work should not merely add more local exception knobs. It needs a genuinely different, tightly bounded grammar with an independent motivation.
 ## Priority 6 — archival/manufacturing lane
 ### Priority 6A — historical method archaeology
 
