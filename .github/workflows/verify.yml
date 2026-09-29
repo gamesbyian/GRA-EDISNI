@@ -55,3 +55,5 @@ jobs:
         run: python scripts/audit_ambiguous_frame_parsimony.py
       - name: Audit raw-first POS3 cue
         run: python scripts/audit_raw_first_pos3_cue.py
+      - name: Audit all POS3 rail partitions
+        run: python scripts/audit_all_pos3_partitions.py
