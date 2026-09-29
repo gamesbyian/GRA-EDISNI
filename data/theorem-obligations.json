@@ -3,44 +3,133 @@
   "purpose": "Executable proof-pack obligations for the canonical closed-corpus theorem chain.",
   "theorem_graph": "docs/theorem-graph.md",
   "terminal_target": "T6",
-  "required_transition_inputs": ["O1", "O2", "G1", "G2", "G3", "G5", "G6"],
-  "forbidden_terminal_ancestor_classes": ["R", "A", "S"],
+  "required_transition_inputs": [
+    "O1",
+    "O2",
+    "G1",
+    "G2",
+    "G3",
+    "G5",
+    "G6"
+  ],
+  "forbidden_terminal_ancestor_classes": [
+    "R",
+    "A",
+    "S"
+  ],
   "required_nodes": [
-    "O1", "O2", "G1", "G2", "T1", "T1a", "T1b",
-    "G3", "T2a", "G5", "T3a", "G6", "T2", "T3", "T4", "T5", "T6",
-    "T7", "T8", "T9", "T10", "T11", "T12",
-    "R1", "R2", "R3", "A1", "A2", "A3", "S1", "S2"
+    "O1",
+    "O2",
+    "G1",
+    "G2",
+    "T1",
+    "T1a",
+    "T1b",
+    "G3",
+    "T2a",
+    "G5",
+    "T3a",
+    "G6",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9",
+    "T10",
+    "T11",
+    "T12",
+    "R1",
+    "R2",
+    "R3",
+    "A1",
+    "A2",
+    "A3",
+    "S1",
+    "S2"
   ],
   "checks": [
     {
       "id": "primary-raw-constraints",
       "script": "scripts/audit_primary_raw_constraints.py",
-      "covers": ["T1", "T1a", "T1b"]
+      "covers": [
+        "T1",
+        "T1a",
+        "T1b"
+      ]
     },
     {
       "id": "canonical-model",
       "script": "scripts/verify_machine.py",
-      "covers": ["T3", "T5", "T6", "T8", "T10", "T11", "T12", "R2", "R3", "A1", "A2", "A3"]
+      "covers": [
+        "T3",
+        "T5",
+        "T6",
+        "T8",
+        "T10",
+        "T11",
+        "T12",
+        "R2",
+        "R3",
+        "A1",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "id": "machine-spec-drift",
+      "script": "scripts/verify_machine_spec.py",
+      "covers": [
+        "T7",
+        "T8",
+        "T11"
+      ]
     },
     {
       "id": "native-independent-model",
       "script": "scripts/verify_native_model.py",
-      "covers": ["T3", "T6", "T8", "T11"]
+      "covers": [
+        "T3",
+        "T6",
+        "T8",
+        "T11"
+      ]
     },
     {
       "id": "cross-implementation-equality",
       "script": "scripts/compare_models.py",
-      "covers": ["T7", "T8", "T9", "T11"]
+      "covers": [
+        "T7",
+        "T8",
+        "T9",
+        "T11"
+      ]
     },
     {
       "id": "raw-constraint-reconstruction",
       "script": "scripts/enumerate_raw_machine.py",
-      "covers": ["T1", "T1b", "T2a", "T3a", "T2", "T3", "T6", "T11"]
+      "covers": [
+        "T1",
+        "T1b",
+        "T2a",
+        "T3a",
+        "T2",
+        "T3",
+        "T6",
+        "T11"
+      ]
     },
     {
       "id": "raw-vs-parameterized-equality",
       "script": "scripts/compare_raw_reconstruction.py",
-      "covers": ["T2", "T7", "T8", "T11"]
+      "covers": [
+        "T2",
+        "T7",
+        "T8",
+        "T11"
+      ]
     }
   ]
 }
