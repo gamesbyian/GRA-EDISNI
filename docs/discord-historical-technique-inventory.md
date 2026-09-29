@@ -67,6 +67,22 @@ A later 2026 game-file discovery independently found an audio asset at `andreas/
 
 Thus bidirectional image/audio carrier tricks are part of the demonstrated design vocabulary. They still require an external cue before being applied to H108.
 
+### Edge/margin marks as ordering metadata
+
+A newly supplied Discord screenshot/conversation about the older PC printer puzzle adds a useful detail that the compact TL;DR omits: the apparently decorative marks at the left/right margins of the reconstructed image were used to constrain the **ordering of rows**.
+
+The public archive independently supports that interpretation. On 9 Jul 2018, solvers describe an "alternating interlaced pattern" that limits the possible arrangements, call the "distribution of margin slashes" a key feature, and explicitly change line order while trying to recover the image. By 11 Jul the TL;DR records that rearranging the PC long strings reveals an acorn plus "41". The user's contemporary screenshot shows the assembled red/blue image with a regular set of red edge pixels on both sides, while the paired raw-string screenshot shows the rows before spatial assembly.
+
+This is a distinct historical design pattern:
+
+1. the payload rows themselves are ambiguous in order;
+2. sparse edge/margin marks act as registration metadata;
+3. satisfying those boundary constraints makes a coherent image emerge;
+4. the coherent image then participates in a later externally cued transform (the Game-of-Life acorn seed at generation 41).
+
+That is stronger and more specific than generic "rearrange rows until something looks nice." It shows Playdead using **boundary structure to constrain a permutation**.
+
+For the Collector's Edition work, this should raise attention to any side-channel ordering marks, edge pixels, image-class boundaries, envelope/print registration marks, or other data adjacent to the `/ - •` foreground. It does **not** license arbitrary row permutation of H108: any such operation still needs an independent boundary cue.
 ### Conway's Game of Life overlay
 
 The PC answer `LIFEDETECTED` had initially been guessed. In 2021, a later solver supplied a proper construction:
