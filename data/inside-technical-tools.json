@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-29",
+  "purpose": "Adjacent INSIDE inspection/manipulation tooling useful to ARG archaeology.",
+  "projects": [
+    {
+      "repo": "sashaok123/playdead-INSIDE-FreeCam",
+      "status": "vendored",
+      "license": "present upstream and preserved",
+      "capabilities": [
+        "360-degree camera rotation",
+        "free-flight camera",
+        "freeze/slow motion",
+        "runtime memory patching"
+      ],
+      "preserved": [
+        {
+          "path": "README.md",
+          "sha": "54280244c4a987b989901226e00163da3bdeedc9"
+        },
+        {
+          "path": "INSIDE_Gamepad_FreeCam.CT",
+          "sha": "81cff2849081da38ff31c5e3b0b8cfada092c1d4"
+        },
+        {
+          "path": "architecture.md",
+          "sha": "e19f5282d6536f985c073d8a230139ad4ef9f900"
+        },
+        {
+          "path": "RELEASE_NOTES_v1.1.0.md",
+          "sha": "5eca0c04f2e5b7b46d5cea3ec011cc5a368222b6"
+        },
+        {
+          "path": "LICENSE",
+          "sha": "fdddb29aa445bf3d6a5d843d6dd77e10a9f99657"
+        }
+      ]
+    },
+    {
+      "repo": "PietHelzel/inside_hacks",
+      "status": "reference-only",
+      "license": "no obvious license found in audited tree",
+      "capabilities": [
+        "checkpoint loading",
+        "savestates",
+        "runtime value editing"
+      ],
+      "notable_files": [
+        {
+          "path": "src/widgets/checkpoint_loader.rs",
+          "sha": "b95611ff192d1e842da9ab9638253b479e28f387",
+          "size": 2896
+        },
+        {
+          "path": "src/widgets/savestate.rs",
+          "sha": "cfe4b0a5aed0b8807ed2eb40c2ae85de7c751a57",
+          "size": 2544
+        },
+        {
+          "path": "src/widgets/valueeditor.rs",
+          "sha": "9d24ccfa6e48c1af9f54d65bae11308444e0994d",
+          "size": 3255
+        }
+      ]
+    },
+    {
+      "repo": "PietHelzel/inside_position_manip",
+      "status": "reference-only",
+      "license": "no obvious license found in audited tree",
+      "capabilities": [
+        "position manipulation",
+        "velocity manipulation",
+        "breath variable editing",
+        "value locking"
+      ],
+      "notable_files": [
+        {
+          "path": "README.md",
+          "sha": "ddc6ad7ec2d3e919b90a9e5bafd9d6fc4fd56331"
+        },
+        {
+          "path": "src/api.rs",
+          "sha": "4897f986b46387583ac8ac1f613fbc0018a8dfad"
+        },
+        {
+          "path": "src/input_handler.rs",
+          "sha": "e0d59ac4653b0ff941b1cf846807d6c29ec3ae71"
+        }
+      ]
+    },
+    {
+      "repo": "PietHelzel/inside-autosplitter",
+      "status": "reference-only",
+      "license": "no obvious license found in audited tree",
+      "capabilities": [
+        "game-state/memory observation for speedrun splits"
+      ],
+      "notable_files": [
+        {
+          "path": "INSIDE.asl",
+          "sha": "2328673abd998543c16d465b6cb4641309d5bace",
+          "size": 6872
+        }
+      ]
+    }
+  ]
+}
