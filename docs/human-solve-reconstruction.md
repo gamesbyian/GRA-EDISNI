@@ -225,6 +225,8 @@ There is also a simple sanity check on whether this deserves to be called a term
 
 Experiment 284 adds a useful warning: applying the selector yet again sends those `102` alternatives back to `102`, and they continue alternating forever. So the natural stopping test is genuinely “the surface no longer changes,” not “keep iterating until everything happens to equal 100.”
 
+Experiment 285 also explains why two stable address rules still survive that test. Their only difference is whether q0 and q1 are swapped when the selector says 1. But selector value 1 can occur only at A, D, and F, and those cells contain the same symbol in q0,d1 and q1,d1. The swap is therefore literally invisible on the object. A human should choose the identity rule because it is the simpler address operation, not because the stickers contain evidence distinguishing the two.
+
 Experiment 244 broadens this step over all 729 pairs of ternary coordinate maps `B(f(S),g(S),j)`. Twenty-five arbitrary map pairs can manufacture some invariant POS3 terminal, but exactly one shell-preserving permutation pair survives: identity/identity, and its terminal is `100`.
 
 That makes selector reuse a plausible discovered operation rather than a post-hoc way to force the known endpoint.
