@@ -209,6 +209,42 @@
       "kind": "social_manifest",
       "status": "pending",
       "note": "Facebook, Reddit, X, Instagram, YouTube, eBay, ResetEra, PriceCharting, CollectedIt, PSNProfiles, VK, MistARG and multilingual leads."
+    },
+    {
+      "id": "terminal41-transmission-png",
+      "kind": "binary_asset",
+      "status": "manual-download-required",
+      "source": "twinysam/INSIDE-ARG",
+      "path": "terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+      "blob_sha": "127d8772912ffc499e5afaffe321d5bab7e920df",
+      "size_bytes": 19360240,
+      "note": "High-priority Terminal 41 transmission image; binary media cannot be ingested via current text connector."
+    },
+    {
+      "id": "terminal41-saf-dat-col",
+      "kind": "large_text_asset",
+      "status": "manual-download-required",
+      "source": "twinysam/INSIDE-ARG",
+      "path": "terminal41.link/dat/saf_dat_col.html",
+      "blob_sha": "349b818fce618ef55c404bedfb602b1d03f29a48",
+      "size_bytes": 1986163,
+      "note": "Exact source needed for Tier 29 byte/mojibake-reversal reproduction; connector returns empty body."
+    },
+    {
+      "id": "fork-archaeology-census",
+      "kind": "research_lineage",
+      "status": "vendored",
+      "source": "multiple INSIDE-ARG forks",
+      "path": "archive/external/fork-archaeology/README.md",
+      "note": "Catalogs nine public fork states and deduplicates identical historical snapshots."
+    },
+    {
+      "id": "fork-sticker-ledger-history",
+      "kind": "historical_snapshots",
+      "status": "vendored",
+      "source": "multiple INSIDE-ARG forks",
+      "path": "archive/external/fork-archaeology/sticker-ledgers/",
+      "note": "Distinct historical sticker-ledger blobs preserved for chronology reconstruction."
     }
   ]
 }
