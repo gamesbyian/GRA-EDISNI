@@ -282,3 +282,19 @@ That gives a plausible human sequence:
 6. only then write the ternary digits and notice the global staircase.
 
 The remaining earlier discovery question is now the H108/A–I framing itself, not POS3 orientation.
+
+
+## Reconciliation with the earlier physical-entry work
+
+Experiments 184–190 already answer the remaining pre-POS3 framing questions strongly enough that this lane should not be reopened as if it were missing.
+
+The physical route is:
+
+1. serial numbers and A–I artwork are coupled exactly by the period-9 cadence;
+2. H108 folds the foreground into twelve consecutive A–I rows;
+3. the alphabet changes exactly at the 81/27 boundary, giving nine slash/dash rows plus three slash/dot rows;
+4. the serial hierarchy therefore supplies the native 4×3×3×3 address directly;
+5. later local registration/recursion distinguishes the two inner ternary axes as quarter then depth rather than an arbitrary transpose;
+6. in Q4, the three repeated A–I rows already form nine raw serial stacks separated by 9, so the depth-selector idea can be noticed before the A–I values are placed into final physical image-space.
+
+Combined with Experiments 259–265, the human path is now unusually well staged from raw object to POS3 orientation without requiring tensor notation or hindsight from the terminal. The remaining genuinely weak human step is no longer address discovery or rail orientation; it is whether the author expected solvers to promote the locally visible one-of-three patterns into recursive address substitution.
