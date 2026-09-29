@@ -1,5 +1,8 @@
 # Experiment 306 — Single-cell recursion-defect audit
 
+> **Canonical numbering note:** this research lane was originally merged from isolated PR #34 using provisional experiment numbers 296–302. Those IDs later collided with canonical Q4/Discord work. The reconciliation pass of 2026-09-29 preserves the experiments unchanged and renumbers the lane 306–312.
+
+
 ## Question
 
 How brittle is the current two-pass selector operation to the smallest possible local rewrite?
