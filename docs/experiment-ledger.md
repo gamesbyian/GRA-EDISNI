@@ -293,6 +293,7 @@ Latest indexed experiment: **255**.
 | 283 | primary gauge metric-family audit: exact lower-envelope enumeration over diagonal cost λ∈[1,2] selects zero gauge uniquely for every λ>1; only q1,d1 ties at the Chebyshev boundary λ=1 |
 | 284 | repeated-recursion orbit audit: the two 100 maximum-retention branches are fixed points, while the two 102 branches alternate exactly 102↔100 and never converge |
 | 285 | f1 recursion-gauge support audit: S=1 occurs only at A/D/F, where q0,d1 and q1,d1 symbols are identical in every legal state; the surviving swap is an exact observational gauge |
+| 286 | full gauge-quotient audit: 2 primary physical bits × 3 Q4 polarity bits × 1 operation bit form a six-bit gauge; 32 physical settings yield 448 corpus-compatible masters and f1 doubles representations without changing masters |
 
 ## Current frontier
 
@@ -302,7 +303,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–285:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
+- **250–286:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
 
 ## Status shorthand
 
