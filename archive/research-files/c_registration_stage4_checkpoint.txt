@@ -1,0 +1,25 @@
+C-class exact-source registration checkpoint
+
+Source recovery:
+Actual public repository bytes for edited 003, 021, 066, and 156 were recovered losslessly through a temporary Google Docs image bridge and extracted from exported DOCX media. Source dimensions recovered: 003 434x481 JPEG; 021 1398x2048 JPEG; 066 1471x1472 JPEG; 156 516x513 PNG.
+
+Registration:
+Each photo was first rectified to its sticker boundary, then a masked halftone-density representation was aligned to 003 using a bounded affine transform. Foreground symbols, bottom serial numbers, borders, and the red annotations on edited 066 were excluded from the registration signal. Density-map correlations to 003 after alignment were approximately 0.597 for 021, 0.700 for 066, and 0.394 for lower-quality 156.
+
+Independent replication of hidden content:
+The strongest test compares two independent dash photographs (003 and 021) only inside regions that the 066 slash physically obscures. Their aligned halftone-density correlation is 0.477 across 67,355 pixels. A 1,000-shift spatial null gives p≈0.0040. The lower of the two slash-hidden reveal patches is especially stable: r=0.590 across 33,510 pixels; 3,000-shift null p≈0.000333. Independently, the two slash photographs 066 and 156 agree inside regions hidden by the 021 dash at r=0.437 across 64,501 pixels; 1,000-shift null p≈0.0030.
+
+Interpretation:
+This quantitatively reproduces the historical claim that changing C from slash to dash exposes real underlying background information. The revealed detail is independently present in two separate dash photographs, and the converse slash-only detail independently repeats in two slash photographs. Therefore the complementary reveal is not an inpainting artifact, glare artifact, or one-photo accident.
+
+Actual physical-mask coverage:
+After registration, a dash+slash pair recovers about 96.2-96.4% of the common analysis footprint without using pixels beneath either opaque foreground. For 003+066 the strict coverage is 96.38% with 30,292 pixels still jointly hidden. This corrects the earlier ~99.5% standardized-template estimate; the real photographed foreground marks are larger and overlap more than the normalized stage-2 geometry suggested.
+
+Strict composite:
+c_strict_003_066_composite.png uses 003 wherever genuinely exposed, fills only 003-obscured pixels from registered 066 where 066 is genuinely exposed, and leaves jointly hidden pixels empty. No inpainting or generative fill is used.
+
+Current limitation:
+The public chronology says the April 6 dash-C exposure strengthened a reading of the digit 6. The lower slash-hidden region is the best-reproduced new dash-only patch (r≈0.590), and visually contains coherent halftone structure, but this stage does not yet assign that patch to a specific character position independently. Do not claim the digit 6 has been independently localized until the C tile is registered into the full nine-tile path coordinate system.
+
+Next:
+Register the reconstructed C tile into the full canonical 3x3 printer assembly and map the known dat/534brn9653f9j8mmd character path onto the C coordinate frame. Then test whether the lower high-confidence dash-only patch corresponds to the historically disputed 6. If that succeeds, repeat exact-source bridging and affine registration for the other eight classes, prioritizing classes with slash/dash/dot coverage.
