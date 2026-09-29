@@ -13,7 +13,8 @@ The mechanical transducer is the current baseline. Do not reopen semantic fishin
 3. expose a new completion-invariant native operation;
 4. improve reproducibility / independent verification;
 5. reconstruct the intended human solve with fewer assumptions;
-6. recover genuinely independent archival/manufacturing evidence.
+6. recover genuinely independent archival/manufacturing evidence;
+7. audit independently motivated external artifacts for an exact structural consumer of the solved machine.
 
 ## Priority 1 — broaden uniqueness audits
 
@@ -158,6 +159,26 @@ Useful question:
 > Did production merely replicate the 108-state master, or does a surviving source artifact reveal how that master was authored?
 
 Do not treat generic 108-up printing examples as an explanation of the internal machine.
+
+### Priority 6B — evidence-gated external-consumer lane
+
+This is a bounded parallel lane, not permission to reopen semantic fishing.
+
+Use `docs/external-consumer-audit.md` as the protocol. The external artifact must supply the cue first; do not assume that a downstream consumer exists.
+
+Priority order:
+
+1. reversible PS4 cover / sleeve, using the best available scans and artifact-native registration anchors;
+2. Collector's Edition printed/structured materials, then the sculpture only if it exposes an independently addressable structure;
+3. historical ARG and platform-specific assets, searched for exact machine homologues rather than reused decoder recipes;
+4. archived Terminal 41 source/assets/routes, if recoverable, inspected structurally before any parameter testing;
+5. later Playdead / Project 3 material only when it independently exposes a machine fingerprint.
+
+High-value fingerprints include native 3/9/27/108 organization, exceptional-position ternary rails, recursive address substitution, `120/012/102`, `210`, a justified `14->3->1` collapse, or `100` inside an independently ternary positional context.
+
+Keep these hypotheses quarantined unless an external cue licenses them: observer `XYZG` as payload, `100/110/111` as audio parameters, arbitrary API/path trials, generic base/ASCII/Morse/Braille conversions, and free-form 3x3 overlays.
+
+A negative result is valid. If the bounded targets contain no independently registered consumer, leave `100` as the project endpoint.
 
 ## Closed branches
 
