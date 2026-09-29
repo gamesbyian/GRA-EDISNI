@@ -1,6 +1,6 @@
 # Current Research State
 
-_Last compacted from the canonical Google Results through Experiment 240._
+_Compacted repository state reconciled through Experiment 305._
 
 ## Status
 
@@ -18,6 +18,8 @@ The preferred model is one serial-addressed ternary positional machine with:
 - one frozen observer bus that recovers the hidden state.
 
 No downstream completion-invariant plaintext, URL, instruction, image, or lore phrase has been established.
+
+Experiments 303–305 close the broadest current state-independent recursion alternative family. Exhausting every one of the `9! = 362,880` global bijections of the native nine-cell ternary address carrier leaves only 30 route-capable operations; the maximum routed raw-state retention is 14, attained only by canonical identity and the already-explained `f1` equality gauge swapping `(0,1)<->(1,1)`. Those two operations produce the same 14 states, first-pass families, route shell `120/012/102`, and terminal `100`. Singular maps can game retention by erasing address information, so full-carrier preservation remains a substantive requirement. See `docs/global-address-bijection-audit.md`.
 
 The internal semantic branch is closed at the current evidence level. Reopen it only if an external physical/archive/ARG clue independently supplies a consumer for the terminal object. The bounded protocol for doing that without semantic overfitting is `docs/external-consumer-audit.md`: external evidence must supply the cue first, and failure to find a consumer leaves `100` as the valid project endpoint.
 
