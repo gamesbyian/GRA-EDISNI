@@ -63,3 +63,5 @@ jobs:
         run: python scripts/audit_affine_first_pass.py
       - name: Audit affine retention degeneracy
         run: python scripts/audit_affine_degeneracy.py
+      - name: Audit nonlinear fiber-preserving recursion
+        run: python scripts/audit_fiber_preserving_recursion.py
