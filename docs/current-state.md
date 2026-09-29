@@ -155,11 +155,9 @@ minority symbol is dash iff d <= q
 otherwise minority symbol is slash
 ```
 
-The supplied local registration axiom is:
+This staircase is now derived rather than supplied. Under exact POS3, raw observations fix eight of the nine frame polarities. Only `q=1,d=2` admits both slash-minority and dash-minority locally. Experiment 277 carries both branches into the first selector substitution: the slash-minority branch yields 20 first-pass survivors and the canonical 14-state final family, while all 432 raw-compatible machines in the dash-minority branch fail first-pass POS3 closure. Thus recursion fixes the ninth polarity and the compact `d<=q` rule describes the resulting pattern.
 
-> the two outer minority rows of a frame at depth `d` do not equal `d`.
-
-Recursion derives the T `100/110/111` polarity staircase. Do not treat the staircase as an independent supplied premise.
+The former outer no-self/registration condition is also downstream: all 18 outer primary trits are already observation-forced once the derived polarity pattern is in place.
 
 ### Route/cross normal form
 
@@ -458,14 +456,14 @@ Preferred irreducible transition-side supplied set:
 
 1. serial/H108/A-I carrier geometry;
 2. primary physical column positional code;
-3. primary frame-polarity staircase (minority dash iff `d<=q`), with 8/9 entries directly forced by the corpus under POS3;
-4. Q4 as a depth-indexed shared-polarity POS3 selector; the shared exceptional-symbol polarity is forced by raw observations to slash;
-5. recursive application of selector to primary memory;
-6. reuse of the same selector on regenerated surfaces;
-7. no additional Q4 scaffold premise is required for the final 14-state family: Experiments 250–252 reconstruct the surviving selector cores directly from raw Q4 stack constraints plus recursive POS3 closure.
+3. Q4 as a depth-indexed shared-polarity POS3 selector; the shared exceptional-symbol polarity is forced by raw observations to slash;
+4. recursive application of selector to primary memory;
+5. reuse of the same selector on regenerated surfaces;
+6. no additional Q4 scaffold premise is required for the final 14-state family: Experiments 250–252 reconstruct the surviving selector cores directly from raw Q4 stack constraints plus recursive POS3 closure.
 
 Increasingly theorem-level rather than separately supplied:
 
+- primary frame-polarity staircase: 8/9 entries are raw-forced under POS3 and Experiment 277 derives the ninth from first-pass recursive viability;
 - outer no-self registration;
 - T polarity staircase;
 - 210 baseline;
@@ -597,6 +595,8 @@ Experiment 274 asks whether the corpus itself suggests a discriminator for that 
 Experiment 275 attacks the same fork through coordinate factorization rather than frame repetition. Before recursion, both centroid branches contain six raw-compatible primary payloads and both span the complete Cartesian product `x∈{1,2} × y∈{0,1,2}`. After recursive closure, the canonical branch still projects onto all six primary coordinate pairs, with state multiplicities 2/2/2/2/2/4. The centre-pileup sibling retains only five primary payloads: `(x=1,y=2)` disappears entirely, while `(2,0)` and `(2,1)` inflate to four states each so the branch still totals 14. Thus the sibling preserves gross state count and terminal `100` only by introducing a cross-layer exclusion that is absent from the raw primary family. Projection preservation is not direct observation, but it is a compact structural discriminator independent of Experiment 274's frame-repeat inference.
 
 Experiment 276 compares the operational rank of the same two 14-state branches. The canonical branch has three distinct first-pass output triples with multiplicities 4/4/6: `102/002/120`, `102/012/100`, and `102/022/100`, reproducing the established rank-3 functional quotient. The centre-pileup sibling has first-pass rank 1: all 14 states map immediately to `102/022/100`. Canonical surviving selector fields vary at A/C/D/G and number six; sibling selector fields vary only at C/G and number four. Thus the sibling's equal physical state count is misleading: it has already erased all control-class diversity before the second pass. Under the machine interpretation, the canonical branch is the unique nondegenerate transducer in this 14+14 fork.
+
+Experiment 277 removes the last supplied primary-polarity completion. Under exact POS3, raw marks force eight frame polarities and leave only `q=1,d=2` ambiguous. Slash-minority at that frame admits six raw primary payloads, 20 first-pass recursive survivors, and the canonical 14 final states. Dash-minority admits twelve raw primary payloads, hence 432 payload×selector candidates, but zero survive the first selector substitution as valid dash-POS3 surfaces. The full `d<=q` staircase is therefore derived from raw POS3 constraints plus first-pass recursion rather than supplied as a ninth-frame completion rule.
 
 ## Mechanical completion
 
