@@ -323,6 +323,7 @@ Latest indexed experiment: **255**.
 | 312 | local-permutation gauge decomposition: the Experiment-311 A:102 fork changes only unobserved A-stack cells and is cancelled by the local transposition plus the established f1 equality; each invariant-100 route-max class is a 2^6 operation-gauge orbit, so the fork is coupled label/operation gauge rather than a second functional machine |
 | 313 | reused cell-local 2D translation audit: exhausts all 9^9 = 387,420,489 same-operation rules F_j(q,S)=(q+a_j,S+b_j); raw retention reaches 24 but every >14-state sibling is route-degenerate, routed retention tops out at 14 across 396 physical rules / 10 observational classes, and exactly one class preserves the canonical 14 states, route shell 120/012/102, and invariant terminal 100; that class contains 36 exact local operation gauges |
 | 314 | selector-controlled local q-shear audit: exhausts all 3^9 = 19,683 reused rules F_j(q,S)=(q+c_j S,S); raw retention reaches 20 but all >14-state rules are route-degenerate, exactly 99 are route-capable, and all nine route-max 14-state rules are observationally canonical; the sole freedom is independent ternary E/F shear gauges, explained by S_E=0 and q-invariant slash at F depth 1 |
+| 315 | historical foreground 3×3 provenance: Dec-2022 message group 1055674055233118248 applies one 3×3 grid to each row of the 12×9 foreground, already yielding the exact twelve-frame decomposition; 1055973624135295086 ties the 12×9 columns to the nine repeating patterns; 1162212809568964608 (Oct 2023) restates the result as twelve 3×3 squares; 1502960920568135761 (May 2026) sharpens this into nine slash/dash blocks plus three slash/dot blocks; upgrades human-discovery provenance only, not POS3/selector/recursion evidence |
 
 ## Current frontier
 
@@ -332,7 +333,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–314:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–315:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
