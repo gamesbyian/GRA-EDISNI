@@ -71,6 +71,32 @@ def manhattan_cost(partition):
     return total
 
 
+
+
+
+def connected_group(group):
+    points = {divmod(index, 3) for index in group}
+    seen = {next(iter(points))}
+    changed = True
+    while changed:
+        changed = False
+        for row, col in tuple(seen):
+            for dr, dc in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                neighbor = (row + dr, col + dc)
+                if neighbor in points and neighbor not in seen:
+                    seen.add(neighbor)
+                    changed = True
+    return seen == points
+
+
+def straight_group(group):
+    points = [divmod(index, 3) for index in group]
+    return (
+        len({row for row, _col in points}) == 1
+        or len({col for _row, col in points}) == 1
+    )
+
+
 def main() -> None:
     survivors = closure_survivors()
     assert len(survivors) == 832
@@ -108,6 +134,35 @@ def main() -> None:
     best_count = min(record[1] for record in records)
     best = [record for record in records if record[1] == best_count]
 
+    assert best_count == 14
+    assert len(exact) == 90
+    assert len(best) == 90
+
+    min_geometry = min(record[3] for record in exact)
+    simple_exact = [record for record in exact if record[3] == min_geometry]
+    assert min_geometry == 12
+    assert len(simple_exact) == 5
+
+    connected_exact = [
+        record
+        for record in exact
+        if all(connected_group(group) for group in record[0])
+    ]
+    assert len(connected_exact) == 5
+
+    straight_partitions = [
+        record
+        for record in records
+        if all(straight_group(group) for group in record[0])
+    ]
+    assert len(straight_partitions) == 2
+    assert {record[0] for record in straight_partitions} == {natural, depths}
+
+    straight_exact = [record for record in straight_partitions if record[2]]
+    assert len(straight_exact) == 1
+    assert straight_exact[0][0] == natural
+    assert next(record for record in records if record[0] == depths)[1] == 50
+
     print("Experiment 271")
     print("3+3+3 frame partitions:", len(partitions))
     print("minimum survivor count:", best_count)
@@ -117,13 +172,18 @@ def main() -> None:
     depth_record = next(record for record in records if record[0] == depths)
     print("depth-column partition:", depth_record)
 
-    if exact:
-        min_geometry = min(record[3] for record in exact)
-        simple_exact = [record for record in exact if record[3] == min_geometry]
-        print("minimum geometry cost among exact partitions:", min_geometry)
-        print("exact partitions at minimum geometry cost:", len(simple_exact))
-        for partition, count, _is_exact, cost in simple_exact:
-            print(" ", partition, "states=", count, "geometry=", cost)
+    print("minimum geometry cost among exact partitions:", min_geometry)
+    print("exact partitions at minimum geometry cost:", len(simple_exact))
+    print("connected exact partitions:", len(connected_exact))
+    print("straight-axis partitions:", len(straight_partitions))
+    print("straight-axis exact partitions:", len(straight_exact))
+    for partition, count, _is_exact, cost in simple_exact:
+        print(" ", partition, "states=", count, "geometry=", cost)
+
+    print("RESULT: abstract balance is non-unique: 90/280 partitions recover 14 states")
+    print("RESULT: only five exact partitions attain minimum geometry / full connectivity")
+    print("RESULT: of the two straight parallel-axis partitions, only physical quarters recover 14 states")
+    print("RESULT: depth columns retain 50 states")
 
     print("RESULT DATA: exact partitions")
     for partition, count, _is_exact, cost in exact:
