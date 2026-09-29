@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **249**.
+Latest indexed experiment: **253**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -257,6 +257,10 @@ Latest indexed experiment: **249**.
 | 247 | final primary polarity bit: d<=q is unique minimum-cost bounded linear-threshold completion |
 | 248 | hindsight-controlled shortest plausible human mechanical solve reconstruction |
 | 249 | leave-one-residue-out robustness of raw primary reconstruction |
+| 250 | raw-constraint enumeration: 216 candidate machines collapse 20→14 under recursive POS3 closure; terminal 100 emerges |
+| 251 | exact equality of raw-reconstructed, Boolean, and native 14-master sets |
+| 252 | raw constraint-flow anatomy: C gauge, ADG core recovery, and request/grant relation emerge from closure |
+| 253 | raw-space recursion audit: canonical two-pass operation is unique up to external-q relabeling among maximal shell-preserving solutions |
 
 ## Current frontier
 
@@ -266,6 +270,7 @@ Latest indexed experiment: **249**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
+- **250–253:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, and non-circular raw-space recursion selection.
 
 ## Status shorthand
 
