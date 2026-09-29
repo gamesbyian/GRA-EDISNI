@@ -30,7 +30,9 @@ Do not begin with plaintext. The serial number is behaving like an address.
 
 ### 2. Fold foreground marks modulo 108 — D/S
 
-The foreground has a 108-state repeat structure while the image class repeats every 9. Experiment 297 adds useful historical control here: a community investigator reports independently reaching 108 entries and a 9-column view from overlap plus image numbering years before the present machine model. The supplied community master exactly round-trips the same 82-record corpus, so this is not new data, but it shows the fold itself was genuinely discoverable without hindsight from the later routing interpretation.
+The foreground has a 108-state repeat structure while the image class repeats every 9. Experiment 297 and the full Discord export add useful historical control here. The period-9 A–I image carrier was explicit by February 2020; the earliest explicit community statement found that the foreground repeat has minimum length 108 is 25 March 2021; on 11 December 2021 the community published a formal candidate-period argument and a 108-symbol rendering with row length 12. The supplied community master exactly round-trips the same 82-record corpus, so this is not new data, but it shows the fold was genuinely discoverable without hindsight from the later routing interpretation.
+
+The archive also improves the *historical motivation* for treating geometry and boundaries as meaningful. On 26 January 2022, while discussing the 108 foreground rendering, a solver explicitly compared its conspicuous empty/boundary structure to the side pixels of the older Xbox printer puzzle and suggested that such marks could indicate the intended message format/resolution. On 24 December 2022 another solver summarized the older picture-puzzle pattern as: dots carried important information while dashes/slashes helped arrange the image correctly. These are community hypotheses rather than proofs of the present machine, but they show that a solver at the time already had a Playdead-specific reason to inspect registration structure instead of treating the 108 symbols as a flat cipher string.
 
 Factor:
 
@@ -79,6 +81,8 @@ That split lands exactly on:
 ```
 
 This is a much stronger clue than any letter-like resemblance in arbitrary reshapes.
+
+The Discord chronology makes this especially strong as a human-discovery step. On **26 January 2022**, while the foreground was still unsolved, a solver explicitly proposed that the first **81** slash/dash cells might be one object and the following **27** slash/dot cells a separate checksum-like region, motivated by the powers-of-three geometry and the nine sticker backgrounds. The checksum interpretation did not survive, but the 81+27 boundary itself was seen directly. On **29 October 2023**, solvers again singled out “why are yellows only at the bottom?” as the likely big clue and compared that asymmetry to the visual aids used by the PC/Xbox printer puzzles. This is anti-hindsight evidence for noticing the alphabet boundary, not independent evidence for the later selector semantics.
 
 ### 5. Read primary columns as ternary positional code — S
 
@@ -301,7 +305,7 @@ That gives a plausible human sequence:
 5. recover frame polarity locally;
 6. only then write the ternary digits and notice the global staircase.
 
-The earlier H108/A–I framing question is now materially reduced by Experiment 297: period 108, width 9, and zero-phase orientation are historically attested community discoveries. The remaining discovery question is the transition from that preregistered carrier view to the finer three-cell POS3 rail interpretation.
+The earlier H108/A–I framing question is now materially reduced by Experiment 297 plus the full archive: the A–I background phase is historically attested in February 2020, H108 explicitly by March 2021, the 12×9 rendering by December 2021, and sticker-0/top-left foreground phase explicitly by January 2022. The remaining discovery question is the transition from that historically available carrier view to the finer three-cell POS3 rail interpretation.
 
 Experiment 274 adds a second, genuinely raw-facing cue before full POS3 commitment. Normalize the observed slash/dash marks only to minority/majority using the frame polarities, then compare the nine sparse physical frames pairwise. Exactly two frame pairs have the strongest conflict-free support available in the corpus: four positions observed in both frames, no normalized conflicts, and eight of nine physical positions covered across the pair. They are `q0,d1=q1,d0` and `q1,d2=q2,d2`. Those are precisely two repeated motifs in the canonical primary tensor. In the weaker frame-weight-three + centroid parent, extending both partial repeats to exact frame equality removes the only 14-state centre-column sibling and leaves the canonical 14 states. A human route can therefore treat repeated sparse motifs as a recognition cue rather than needing to invent one-pulse-per-column from nothing. The inferential jump is still real: partial compatibility does not logically prove full equality.
 

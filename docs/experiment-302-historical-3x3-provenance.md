@@ -36,11 +36,23 @@ The preserved Discord identifiers are useful archival anchors:
 
 The public repository therefore establishes that a labeled nine-piece assembly existed in March 2020, years before the present sticker-machine reconstruction.
 
-## What could not be re-read independently
+## Source-pixel recovery from the 2026 Discord export
 
-The original Discord CDN attachment now returns unavailable/expired through the available public archive path, and the historical Imgur mirror is likewise not retrievable through the current research tooling.
+The 2026 public Discord export removes the previous source-access block.
 
-Therefore this pass does **not** independently re-read the exact tile orientation from the 2020 pixels.
+The exported `#solving` transcript contains the 20 Mar 2020 attachment URL:
+
+`https://media.discordapp.net/attachments/461275582970462209/690395145094299678/unknown.png`
+
+and resolves it to the locally archived asset:
+
+`assets/unknown-c89e81cb90765451.png`
+
+in `twinysam/playdead-unofficial-exports` / the working fork `gamesbyian/playdead-unofficial-exports`. At the inspected fork head `5e5897e2ce70dad5a2bd85e459770637cb36610f`, the asset blob SHA is:
+
+`91268fd6700f0f8fc01527f51e63f8c2f6cb7e43`
+
+The image is readable and visibly carries the historical A–I annotations. The old CDN/Imgur availability problem is therefore closed.
 
 The project's current physical registration remains:
 
@@ -50,30 +62,60 @@ C D E
 F G H
 ```
 
-That orientation is already used and independently supported elsewhere in the present investigation, but Experiment 302 does not pretend to have re-verified it from the dead historical attachment.
+The export also resolves the convention question directly from dated chat, rather than from visual inference.
 
-This distinction matters:
+On **1 Feb 2020**, before the final C tile was recovered, the community states that its arbitrary A–I labels are arranged, “starting top left, from left to right, working down”:
 
-- **historically attested:** labels A–I existed, all nine pieces were assembled, the image was recognized as the printer, and this all happened by March 2020;
-- **not independently recovered in this pass:** the exact A–I spatial order visible in the historical assembly image.
+```
+I A B
+C D E
+F G H
+```
+
+The same discussion says `A = 001`, hence `I = 000`. On **23 Feb 2020** the mapping is restated explicitly as `001=A`, `002=B`, `003=C`, “etc.” This independently fixes the serial/background convention:
+
+```
+serial mod 9: 0 1 2 3 4 5 6 7 8
+image class:  I A B C D E F G H
+```
+
+This is exactly the project's current registered physical carrier. The current `IAB/CDE/FGH` layout is therefore directly historically attested, not reconstructed only in hindsight.
+
+A second archived asset makes the historical interpretation even less ambiguous:
+
+- `assets/StickerSolution-dc12d5e516ca4922.png`
+- identical duplicate: `assets/StickerSolution-f19fd331a635aebf.png`
+
+The `#tldr` export posts this on **28 Apr 2020** under the caption “The Sticker Puzzle Solution.” The image itself labels the 3×3 pieces in the exact row-major order `IAB/CDE/FGH` and prints the recovered destination:
+
+`dat/534brn9653f9j8mmd`
+
+with the historical Terminal 41 URL beneath it. This closes the provenance chain from numbered sticker image classes -> nine-piece printer assembly -> recovered text/path.
+
+Crucially, this “Sticker Puzzle Solution” refers to the **faint background-image layer** on the numbered stickers. It does not solve or semantically decode the separate foreground `/ - •` master that the present project models as H108.
+
+This distinction now becomes:
+
+- **historically attested and source-recovered:** labels A–I existed; the exact top-left/row-major order was `IAB/CDE/FGH`; `A=001` and `I=000`; all nine pieces were assembled; the image was recognized as the printer; and the final source attachment is readable;
+- **present-project work:** the later 4×3×3×3 address semantics, POS3 rails, Q4 selector, recursion, routing, and terminal remain modern deductions rather than historical community discoveries.
 
 ## Epistemic consequence
 
 The September-27 handoff's "blocked pending labeled A–I order" condition can now be refined.
 
-The historical existence and date of the labeled complete assembly are no longer missing. What remains missing is a live copy of the actual labeled image, or an independently archived transcription of its exact orientation.
+The historical existence, date, and source pixels of the labeled complete assembly are no longer missing.
 
 That means:
 
 1. the human-solve chronology can safely say that the nine-piece image puzzle and A–I labeling were solved/available in 2020;
-2. the current machine may continue using its established physical layout;
-3. anti-hindsight claims should not say the exact current `IAB/CDE/FGH` orientation was independently re-read from the March-2020 artifact in this audit;
-4. once the Discord archival bot or another archive recovers message `690395145245425724` or attachment `690395145094299678`, the remaining orientation check becomes a simple visual provenance comparison rather than a research problem.
+2. the current machine's `IAB/CDE/FGH` physical layout is directly supported by dated historical community text;
+3. anti-hindsight claims may cite both the recovered attachment and the explicit February-2020 row-major ordering / serial-label convention;
+4. no remaining source or convention gap exists for the nine-image carrier orientation itself.
 
 ## Status
 
-**Partial recovery / provenance milestone.**
+**Complete historical carrier-provenance recovery.**
 
-The historical assembly event and exact source identifiers are recovered. The original pixels required to independently verify the A–I orientation are still unavailable.
+The historical assembly event, source identifiers, original exported pixels, row-major A–I spatial order, and serial/image-class phase convention are all recovered. The exact current `IAB/CDE/FGH` carrier is historically attested by February 2020.
 
-Do not spend closed-corpus computation trying to infer what the missing screenshot showed. Recover the source artifact instead.
+This closes the orientation-provenance gap without adding any evidence for the later machine grammar.

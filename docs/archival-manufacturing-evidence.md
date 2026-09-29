@@ -117,6 +117,7 @@ Sources:
 - contemporary December 2019 shipping/unboxing thread: https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/now_shipping_finally/
 - owner comparison, 2019-12-23: https://www.reddit.com/r/PlaydeadsInside/comments/eers0x
 - 2026 packaging clarification: https://www.reddit.com/r/PlaydeadsInside/comments/1l5x8rb/does_anyone_know_where_i_can_get_the_inside/
+- public Discord export, `ARG / solving`: on 12 Jul 2020 an owner says they “threw that crucial black envelope away,” contemporaneously confirming the community's understanding that the coded material was attached to the disposable black game-envelope/wrap rather than the durable Huddle box.
 
 This sharply changes the manufacturing map:
 
@@ -140,6 +141,8 @@ Source:
 - https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/now_shipping_finally/
 
 Evidence status: **contemporaneous secondhand quotation**, not a first-party archived iam8bit post. It should not be treated as equivalent to a primary source unless the original Instagram exchange is recovered.
+
+The September-2026 public Discord export independently preserves the same witness reporting the point in real time. On 17 Dec 2019, `nathe26` corrects the claim that there were 2,000 Collector's Editions: iam8bit “said they wouldn't reveal how many collectors but that they are numbered in their own way.” The `General / inside` export also preserves a 15 Dec 2019 version of the same recollection. This does not create a second witness, but it substantially improves chronology/provenance for the reported iam8bit wording.
 
 Nevertheless, it is highly diagnostic. In December 2019, before the community had reconstructed the current H108 machinery, iam8bit reportedly distinguished the numbers from ordinary edition numbering. That supports investigating the three-digit value as an intentionally designed code/address rather than assuming it denotes copy count.
 
@@ -244,3 +247,18 @@ The archival lane should now focus on the **iam8bit/Playdead CE-specific black-g
 The most valuable single artifact is no longer "another sticker." It is a surviving **sticker production source**: an imposition sheet, variable-data file, spreadsheet, script, print proof, or vendor job record.
 
 That artifact could independently answer questions the closed public corpus cannot: total generated serial range, whether the H108 cycle was intentional, how variants were selected, and whether the coded stickers were authored as one algorithmic production object.
+
+
+### First-party reversible-cover clue preserved in Discord export
+
+The September-2026 Discord export preserves an embed of iam8bit tweet `1203007268930764800`. The tweet describes the standalone physical edition as including an exclusive poster and a reversible slip cover with a **hidden clue**, and says that this same version is included with the Collector's Edition.
+
+This is materially stronger than the community's repeated recollection that “the clue is on the cover.” Treat the reversible slip cover as a first-party-advertised clue-bearing artifact.
+
+The archive also preserves multiple cover photographs/scans, including large assets:
+
+- `assets/INSIDE_A-5d197786f158c567.JPG` — blob `875403acac93d83a8acae97e14240c35b88d33ab`, ~6.3 MB;
+- `assets/INSIDE_B-80fbff1237c37913.JPG` — blob `d533d4161f0572b65d134d54f4fa6477029f2d64`, ~9.4 MB;
+- historical `Cover_blend` and mirrored-blend attempts.
+
+The archive's contemporaneous discussion confirms that the community knew of the cover clue in December 2019 and performed several generic visual/light experiments. A fresh audit should therefore start from the best archived source pixels and preregistered structural cues, not repeat generic enhancement.
