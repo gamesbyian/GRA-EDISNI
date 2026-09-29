@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "source_checkpoint": "repository through Experiment 312",
+  "source_checkpoint": "repository through Experiment 313",
   "closed_corpus": true,
   "mechanical_status": "substantially complete",
   "semantic_status": "internal semantic branch closed without an independent consumer",
@@ -524,5 +524,28 @@
     "residual_invariant_100_fork": "A:102",
     "interpretation": "coupled latent A-label / operation gauge; not a distinct functional machine",
     "conclusion": "canonical is the simplest globally uniform representative of the maximum-retention routed functional machine; natural local-relabel alternatives are closed modulo explained gauges"
+  },
+  "local_2d_translation_reuse": {
+    "experiment": 313,
+    "operation": "F_j(q,S)=(q+a_j,S+b_j) mod 3, reused on both passes",
+    "physical_operations": 387420489,
+    "exact_signature_quotient": [
+      230,
+      729,
+      47
+    ],
+    "quotient_combinations": 7880490,
+    "maximum_raw_states": 24,
+    "maximum_route_states": 14,
+    "route_max_physical_operations": 396,
+    "route_max_observational_classes": 10,
+    "canonical_equivalent_operations": 36,
+    "canonical_gauges": {
+      "F": "q translation 0/1/2, depth unchanged",
+      "E": "q translation 0/1/2, depth unchanged",
+      "B": "identity or (q+1,d-1)",
+      "H": "identity or (q+1,d-1)"
+    },
+    "conclusion": "canonical 14-state routed terminal-100 machine is unique within the reused local 2D translation family up to 36 exact operation gauges"
   }
 }
