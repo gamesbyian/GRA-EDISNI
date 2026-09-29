@@ -25,16 +25,17 @@ This document separates supplied observations/grammars from derived consequences
 | T1a | T | All 18 outer primary trits are observation-forced and satisfy minority-row `!=d`; the old outer no-self rule is therefore derived rather than an additional premise. | T1 |
 | T1b | T | The primary payload family reduces to `112 212 0x0 / 212 002 100 / 1y2 022 100`, with the route/cross normal form described in current-state. | T1, T1a |
 | G3 | G | Q4 is a depth-indexed POS3 selector encoded by one slash per depth stack. | O2 |
-| G4 | G | Q4 reconstruction preserves the canonical shell/permutation structure when raw Q4 placements do not determine a cell. | G3, T1b |
-| T2 | T | Q4 reconstructs to the `p/g` selector family with control cores `110/220/212` and baseline `210`. | G3, G4, T1b |
-| G5 | G | First recursive application substitutes selector depth into the primary address: `(q,d,j)->(q,S(j),j)`. | T1b, T2 |
-| T3 | T | First recursion has exactly three functional outputs, indexed only by `p`; hidden-state rank falls 14→3. | G5, T1, T2 |
-| T4 | T | Operational compatibility yields the request/grant relation `00->1, 01->0, 10->2, 11->{0,2}`, equivalently eligibility `[X,NOR(X,Y),Y]`. | T3 |
+| T2a | T | Raw Q4 observations under G3 admit exactly 36 selector completions. | O2, G3 |
+| G5 | G | First recursive application substitutes selector depth into the primary address: `(q,d,j)->(q,S(j),j)`. | T1b, T2a |
+| T3a | T | Cartesian product of the 6 raw-compatible primary payloads and 36 raw-compatible selectors gives 216 candidate machines; first-pass POS3 closure leaves 20. | T1b, T2a, G5 |
+| G6 | G | The same selector is reused on the regenerated surfaces: `(q,S(j),j)->(S(j),S(j),j)`. | G5 |
+| T2 | T | Second-pass POS3 closure reduces 20→14 and reconstructs the Q4 control family: C is a free {0,2} gauge and A/D/G cores are exactly `110/220/212`. | T3a, G6 |
+| T3 | T | The 14 survivors have exactly three first-pass functional outputs; hidden-state dependence falls 14→3. | T2, G5 |
+| T4 | T | The request/grant relation `00->1, 01->0, 10->2, 11->{0,2}`, equivalently eligibility `[X,NOR(X,Y),Y]`, emerges from surviving primary ports versus the three reconstructed control cores. | T2, T3 |
 | T5 | T | `210` supplies route reindex `q=2-p`; Q3 completes to `102/012/120`. | T3, T4 |
-| G6 | G | The same selector is reused on the regenerated surfaces: `(q,S(j),j)->(S(j),S(j),j)`. | T2, G5 |
-| T6 | T | Second reuse canonicalizes every legal state to frame 9 / payload `100` / raw `---//////`; hidden-state rank falls 3→1. | G6, T3, T5 |
+| T6 | T | Every one of the 14 second-pass survivors canonicalizes to frame 9 / payload `100` / raw `---//////`; terminal `100` is not used as a selection filter. | T2, G6 |
 
-The present transition-side supplied set is therefore **O1–O2 + G1–G6**, but Experiment 246 materially weakens G2: eight of its nine frame polarities are directly forced by the corpus under POS3, leaving only the single missing upper-triangle frame to the global staircase rule. The former outer no-self grammar is no longer in the supplied set. Everything T1–T6 is downstream and must not be counted as independent evidence for those premises.
+Taking the two recursive operations G5–G6 as the operation grammar, the present transition-side supplied set is **O1–O2 + G1–G3 + G5–G6**. Experiment 246 materially weakens G2: eight of its nine frame polarities are directly forced by the corpus under POS3, leaving only one upper-triangle completion to the global staircase rule. Experiments 250–252 remove the former Q4 canonical-shell reconstruction premise from the minimal generation chain: the surviving Q4 scaffold/control family is recovered by closure from the 36 raw selector completions. The former outer no-self grammar is likewise theorem-level.
 
 ## State and storage chain
 
@@ -79,9 +80,9 @@ A1–A2 describe closure properties. A3 prevents them from being silently promot
 ## Immediate proof obligations exposed by this graph
 
 1. **G1/G2:** broaden beyond POS3 and test whether the ninth frame polarity can be derived from a still-weaker global grammar than the triangular staircase.
-2. **G4:** isolate exactly how much Q4 reconstruction uniqueness depends on canonical-shell preservation.
-3. **G5/G6:** extend Experiments 244–245 beyond independent ternary coordinate maps; current shell-preserving coordinate-map families are unique up to q relabeling.
-4. **T7–T11:** add a lower-level constraint/enumeration implementation beyond the now-completed native-state independent generator.
+2. **G3:** broaden Q4 beyond one-slash-per-depth-stack POS3 and measure whether recursion itself selects the positional selector grammar.
+3. **G5/G6:** extend Experiment 253 beyond shell-preserving coordinate permutations. Within that raw-space family the canonical recursion is unique up to external-q relabeling under maximal raw-state retention.
+4. **T7–T11:** the lower-level constraint/enumeration target is now satisfied by Experiments 250–251; use it as the preferred independence oracle for future state-family changes.
 5. **R1:** keep observer evidence quarantined when auditing transition uniqueness.
 
-Experiment 241 does not change the preferred machine. It sharpens the frontier by identifying six genuine transition-side grammar commitments and makes the state-language conversion explicitly downstream of the request/grant relation.
+Experiment 241 created the graph; Experiments 246 and 250–253 have since reduced it. The current raw-constraint chain no longer needs outer no-self or a separately supplied Q4 scaffold/control reconstruction, and the state-language conversions are downstream descriptions of the 14-state closure family.
