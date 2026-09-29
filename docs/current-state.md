@@ -568,6 +568,8 @@ Experiment 260 factorizes the 16 Q4 polarity words from Experiment 256. The eigh
 
 Experiment 261 revisits the only primary frame whose polarity is not directly forced by raw observations under exact POS3, `q=1,d=2`. The current slash-minority polarity admits exactly one local payload completion, `100`; the alternate dash-minority polarity admits two completions because its centre column remains ambiguous. This supplies a human-readable local parsimony cue that independently agrees with the global `d<=q` staircase completion, though parsimony itself is not promoted to an authoring axiom.
 
+Experiment 262 removes even the solved `q,d` labels from that human-path test. Using only the unique 34-residue minimum witness arranged as nine consecutive 9-residue physical frames, eight frames admit exactly one POS3 polarity. The ninth admits both, but with completion counts 1 versus 8. Choosing the viable, locally most-determined polarity therefore reproduces all nine staircase polarities before the staircase itself is shown. This makes the staircase plausibly recognizable as a consequence of local visual constraints rather than a prerequisite clever guess.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
