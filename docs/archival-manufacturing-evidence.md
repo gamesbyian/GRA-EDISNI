@@ -128,6 +128,22 @@ This sharply changes the manufacturing map:
 
 The best archival target is therefore the work order or source file for the **CE black game wrap and seal**, not the main rigid box.
 
+### 7A. Contemporary Discord narrows the black-wrap assembly sequence
+
+The public Discord export adds two useful contemporaneous observations to the later packaging reconstruction.
+
+On **17 Dec 2019**, while owners were first examining shipped editions, a participant notes that the game did **not** arrive inside the obvious game-sized slot in the main Collector's Edition box and infers that the separately wrapped game package was added later in the pack-out sequence. This is a community manufacturing inference rather than a first-party production statement, but it is temporally close to fulfillment and consistent with the later owner-described packaging stack.
+
+On **18 Feb 2020**, an owner reports checking their original uncompressed unboxing footage and confirms that the sticker's faint background image was already present at unboxing. They explicitly use this to reject theories that the image developed later through light/oxygen exposure.
+
+Consequences:
+
+- preserve the hypothesis that the coded black game wrap/seal was a **late CE-specific kitting step**, while marking the exact operator as unresolved;
+- treat the faint A–I background as printed/applied production content, not a post-unboxing chemical/light effect;
+- source-quality original unboxing footage is a useful manufacturing record because it can freeze the as-shipped state before stickers were handled or discarded.
+
+These points strengthen the priority on iam8bit/Playdead pack-out records and original owner footage without elevating community inference into a first-party claim.
+
 ### 8. Contemporaneous iam8bit response says the editions were "numbered... in their own way"
 
 In the December 2019 shipping thread, an owner reports asking iam8bit via Instagram how many units were produced. The reported iam8bit reply was:
