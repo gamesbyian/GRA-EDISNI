@@ -97,3 +97,81 @@ An agent can then hash, catalogue, deduplicate, add provenance metadata, and pro
 If you already use `yt-dlp` or `gallery-dl` locally, authenticated sources can be attempted with those tools using browser-derived cookies **only on your own machine**. Keep their cookie/profile data outside the repository.
 
 There is no requirement to do this. A normal logged-in browser plus saved originals/screenshots is sufficient for the human-only sources.
+
+
+## Authenticated YouTube lane
+
+GitHub-hosted runners currently hit YouTube's anti-bot gate for the critical unboxing videos. The harvester supports an authenticated Netscape-format cookie jar without storing the Google password.
+
+### Recommended setup
+
+1. On a computer you control, create or use a dedicated Chrome/Chromium profile.
+2. Log into the dedicated research-only YouTube/Google account in that profile.
+3. Install current `yt-dlp` locally.
+4. From a terminal, run a harmless metadata-only command that both reads browser cookies and writes a standalone cookie jar:
+
+   ```bash
+   yt-dlp \
+     --cookies-from-browser chrome \
+     --cookies youtube-cookies.txt \
+     --skip-download \
+     "https://www.youtube.com/watch?v=zhCdGdqCIRU"
+   ```
+
+   If the dedicated account lives in a non-default Chrome profile, use yt-dlp's browser-profile syntax appropriate to that installation.
+
+5. Confirm `youtube-cookies.txt` exists and is non-empty. Do **not** commit it.
+
+### Local use
+
+Run:
+
+```bash
+python scripts/external_evidence/harvest_public.py \
+  --source-id youtube-iam8bit-ce-unboxing \
+  --youtube-cookies /path/to/youtube-cookies.txt
+```
+
+Add `--include-media` when the metadata-only pass succeeds and the original video stream is desired.
+
+The same cookie path may instead be supplied through:
+
+```bash
+export YTDLP_COOKIES_FILE=/path/to/youtube-cookies.txt
+```
+
+### GitHub Actions use
+
+If authenticated harvesting from GitHub-hosted runners remains acceptable for the dedicated research account, store the cookie jar as a repository Actions secret, never as a tracked file.
+
+On Linux/macOS:
+
+```bash
+base64 -w 0 youtube-cookies.txt
+```
+
+On systems whose `base64` lacks `-w`:
+
+```bash
+base64 < youtube-cookies.txt | tr -d '\n'
+```
+
+Create a repository Actions secret named:
+
+`YOUTUBE_COOKIES_B64`
+
+Paste only the resulting base64 text into that secret. The manual `External evidence public harvest` workflow will materialize it into `$RUNNER_TEMP`, chmod it to 0600, point `yt-dlp` at it, and never include that temporary cookie file in the uploaded evidence artifact.
+
+Cookies can expire or be invalidated by Google. If an authenticated run returns `login-required-or-antibot`, refresh the local cookie jar and replace the secret.
+
+### Security boundary
+
+Do not put the account password in:
+
+- GitHub secrets for this workflow;
+- command-line arguments;
+- workflow inputs;
+- issues or PR comments;
+- repository files.
+
+Only the temporary cookie jar is needed for automated YouTube acquisition.
