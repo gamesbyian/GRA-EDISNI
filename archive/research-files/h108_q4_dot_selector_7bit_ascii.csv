@@ -1,0 +1,7 @@
+data_quarter,bit_order,known_bit_pattern,possible_values,printable_ascii_count,printable_ascii,alnum_ascii
+1,forward,1?0?1?0,8,8,DFLNdfln,DFLNdfln
+1,reverse,0?1?0?1,8,4,139;,139
+2,forward,1?00?01,4,4,AEae,AEae
+2,reverse,10?00?1,4,4,ACQS,ACQS
+3,forward,??00?11,8,6,#'CGcg,CGcg
+3,reverse,11?00??,8,8,`abcpqrs,abcpqrs
