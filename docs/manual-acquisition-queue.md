@@ -105,3 +105,16 @@ For social posts: original images/video plus a screenshot or text export showing
 For group searches: screenshots/exports of relevant posts and comments, preserving visible timestamps and URLs.
 
 Do not spend time downloading material already preserved in PR #55's Discord-export lane.
+
+## Newly surfaced acquisition targets
+
+- iam8bit official making-of / Collector's Edition contents reveal
+  https://www.youtube.com/watch?v=8vG2A0BjMiY
+  Why: canonical ARG history identifies this as the December 12, 2019 reveal of the CE contents; preserve highest-quality video and metadata.
+
+- BigDusty backup-canvas Railway image
+  https://insideargmap-production.up.railway.app/canvas/main/images/5a69e3c5-595f-478d-b4c8-6639a8fc7de0
+  Expected SHA-256: `985350223de9fefc660d90389c33ba27c98316d28ee12bf8f9d0a19d6d782759`
+  Expected MIME: `image/png`
+  Expected size: 114,418 bytes
+  Why: transient image referenced only by BigDusty's `backups/canvas` historical state.
