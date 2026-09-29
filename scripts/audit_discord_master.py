@@ -75,6 +75,25 @@ def main() -> None:
     counts = Counter(master)
     first_dot = master.index(".")
 
+    def period_is_consistent(period: int) -> bool:
+        seen: dict[int, str] = {}
+        for row in rows:
+            key = int(row["serial"]) % period
+            symbol = row["symbol"]
+            if key in seen and seen[key] != symbol:
+                return False
+            seen[key] = symbol
+        return True
+
+    max_serial = max(int(row["serial"]) for row in rows)
+    consistent_periods = [
+        period for period in range(1, max_serial + 1)
+        if period_is_consistent(period)
+    ]
+    carrier_aligned_periods = [
+        period for period in consistent_periods if period % 9 == 0
+    ]
+
     assert len(rows) == 82
     assert len(by_residue) == 65
     assert len(overlaps) == 15
@@ -87,6 +106,8 @@ def main() -> None:
     assert counts["."] == 7
     assert counts[" "] == 43
     assert first_dot == 85
+    assert consistent_periods[0] == 108
+    assert carrier_aligned_periods[0] == 108
 
     print("Experiment 297 - Discord 108-cell provenance/registration audit")
     print(f"master length: {len(master)}")
@@ -102,6 +123,14 @@ def main() -> None:
     print(f"Discord-master mismatches: {len(symbol_mismatches)}")
     print(f"background-cycle mismatches: {len(image_mismatches)}")
     print(f"first dot at community index / serial residue: {first_dot}")
+    print(
+        f"smallest foreground-consistent period through serial {max_serial}: "
+        f"{consistent_periods[0]}"
+    )
+    print(
+        "smallest foreground-consistent period also aligned to period-9 "
+        f"background carrier: {carrier_aligned_periods[0]}"
+    )
     print("registration: serial 0 mod 108 -> master index 0")
     print("background: serial 0 mod 9 -> image class I (registered top-left)")
     print(
