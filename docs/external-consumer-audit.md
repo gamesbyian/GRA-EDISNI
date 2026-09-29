@@ -70,6 +70,8 @@ The sculpture can be inspected for the same fingerprints, but visual resemblance
 
 Revisit archived printer outputs, site assets, scripts, route names, downloadable files, and platform-specific puzzle material as **external structure**, not as a library of old decoder recipes.
 
+The Discord export now preserves two direct implementation precedents for this class of consumer. Historical printer JavaScript in `assets/print-b58746938d8d0071.txt` POSTs a candidate answer to `/print/index.php`, first as a validation request and then again to retrieve server-generated print content. A June-2018 gateway-status email separately exposes binary-decoded labels for `gateway auth`, `required`, `rejected`, and `comms handle input`. These establish that Playdead did use active answer-consuming endpoints elsewhere in the ARG. They **do not** imply that `100` should be sprayed at old endpoints; an independently surviving input grammar or endpoint cue is still required.
+
 Search for exact homologues of the solved machine:
 
 - ternary positional rails;
