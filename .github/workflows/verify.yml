@@ -49,6 +49,8 @@ jobs:
         run: python scripts/audit_raw_frame_repeats.py
       - name: Audit primary projection factorization
         run: python scripts/audit_primary_projection_factorization.py
+      - name: Audit primary fork functional rank
+        run: python scripts/audit_primary_functional_rank.py
       - name: Audit Q4 polarity assignment boundary
         run: python scripts/audit_q4_polarity_assignments.py
       - name: Audit primary frame-balance recovery
