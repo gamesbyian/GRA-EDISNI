@@ -50,6 +50,7 @@ Results:
 - zero disagreements between the Discord sparse master and the repository observations;
 - foreground counts: 36 slash, 22 dash, 7 dot, 43 unknown;
 - first dot at community index / serial residue 85.
+- among every candidate foreground period from 1 through the current maximum observed serial 597, 108 is the smallest period consistent with all symbol collisions; it is also the smallest consistent period divisible by the independent background period 9.
 
 The same audit checks the independent image/background labels. Every repository record obeys:
 
