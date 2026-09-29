@@ -245,6 +245,14 @@
       "source": "multiple INSIDE-ARG forks",
       "path": "archive/external/fork-archaeology/sticker-ledgers/",
       "note": "Distinct historical sticker-ledger blobs preserved for chronology reconstruction."
+    },
+    {
+      "id": "social-evidence-index",
+      "kind": "machine_readable_link_index",
+      "status": "vendored",
+      "source": "twinysam/INSIDE-ARG stickers.md",
+      "path": "data/social-evidence-index.json",
+      "note": "192 deduplicated public provenance/media links categorized across X/Twitter, Reddit, YouTube, eBay, Instagram, Facebook, ResetEra, PriceCharting, CollectedIt and VK."
     }
   ]
 }
