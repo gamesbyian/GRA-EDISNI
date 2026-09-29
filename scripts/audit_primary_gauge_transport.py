@@ -26,7 +26,6 @@ from __future__ import annotations
 
 from itertools import permutations, product
 
-from generate_master import primary_payload_lattice, HiddenState
 
 
 def cells_from_word(word):
