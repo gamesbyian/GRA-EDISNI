@@ -1,4 +1,4 @@
-# Experiment 296 — Single-cell recursion-defect audit
+# Experiment 306 — Single-cell recursion-defect audit
 
 ## Question
 
@@ -129,9 +129,9 @@ python scripts/audit_single_cell_recursion_defects.py
 The script asserts the full 54-operation outcome distribution, the seven exact equality gauges, and the route-degeneracy of the unique >14-state invariant-terminal sibling.
 
 
-# Experiment 297 — Up-to-two-cell first-pass defect audit
+# Experiment 307 — Up-to-two-cell first-pass defect audit
 
-Experiment 296 found that one local first-pass exception could retain 16 raw-compatible states and terminal `100`, but only by expanding the functional quotient and breaking reversible routing. Experiment 297 asks whether **two** local exceptions can repair that weakness.
+Experiment 306 found that one local first-pass exception could retain 16 raw-compatible states and terminal `100`, but only by expanding the functional quotient and breaking reversible routing. Experiment 307 asks whether **two** local exceptions can repair that weakness.
 
 ## Parent family
 
@@ -255,12 +255,12 @@ That suggests a productive general rule for future alternative-machine searches:
 
 > retain route structure as an independent model-selection criterion, and treat terminal agreement alone as weak evidence.
 
-It also reinforces the stopping signal from Experiment 296. Expanding to arbitrary cell-local exceptions rapidly creates representational siblings, while the structurally meaningful discriminator remains the same reversible route shell already derived independently.
+It also reinforces the stopping signal from Experiment 306. Expanding to arbitrary cell-local exceptions rapidly creates representational siblings, while the structurally meaningful discriminator remains the same reversible route shell already derived independently.
 
 
-# Experiment 298 — Full 3^9 first-pass local-offset closure
+# Experiment 308 — Full 3^9 first-pass local-offset closure
 
-Experiments 296–297 suggested that local exception freedom grows rapidly, but the family is still small enough to close exactly.
+Experiments 306–307 suggested that local exception freedom grows rapidly, but the family is still small enough to close exactly.
 
 At every A–I cell independently choose:
 
@@ -377,9 +377,9 @@ That combination is not a post-hoc endpoint target. Both ingredients were indepe
 The family is now exhausted rather than sampled. Further cell-local first-pass offset work would add no information unless a new physical constraint changes the model class.
 
 
-# Experiment 299 — Full second-pass local address closure
+# Experiment 309 — Full second-pass local address closure
 
-Experiment 298 closed all cell-local cyclic depth rewrites on the first pass. Experiment 299 turns the telescope around and asks how identifiable the **terminal pass** is if it is allowed its own local address rule.
+Experiment 308 closed all cell-local cyclic depth rewrites on the first pass. Experiment 309 turns the telescope around and asks how identifiable the **terminal pass** is if it is allowed its own local address rule.
 
 At each A–I cell independently choose both coordinates:
 
@@ -470,14 +470,14 @@ It is:
 
 > the **same simple selector-address operation is reused** recursively.
 
-Experiment 299 deliberately removes that uniform-reuse constraint and shows exactly what happens: identification evaporates.
+Experiment 309 deliberately removes that uniform-reuse constraint and shows exactly what happens: identification evaporates.
 
 That makes pass-to-pass rule reuse a substantive structural premise rather than cosmetic elegance.
 
 
-# Experiment 300 — Same local operator reused on both passes
+# Experiment 310 — Same local operator reused on both passes
 
-Experiment 299's huge ambiguity suggests the obvious hostile control: keep cell-local freedom, but require it to describe an actual recursive operation rather than a special terminal decoder.
+Experiment 309's huge ambiguity suggests the obvious hostile control: keep cell-local freedom, but require it to describe an actual recursive operation rather than a special terminal decoder.
 
 At each cell choose one depth offset:
 
@@ -574,9 +574,9 @@ The meaningful model class is not “anything cell-local that happens to termina
 Within the complete cyclic local-depth family, that combination now selects canonical uniquely.
 
 
-# Experiment 301 — Arbitrary local selector permutations
+# Experiment 311 — Arbitrary local selector permutations
 
-Experiment 300 still restricted every local selector rewrite to a cyclic shift. Experiment 301 broadens each A–I cell to an arbitrary permutation of `{0,1,2}`, while preserving the crucial same-operation-reuse rule:
+Experiment 310 still restricted every local selector rewrite to a cyclic shift. Experiment 311 broadens each A–I cell to an arbitrary permutation of `{0,1,2}`, while preserving the crucial same-operation-reuse rule:
 
 ```
 g_j ∈ S3
@@ -656,7 +656,7 @@ So strict uniqueness does **not** survive the move from local cyclic shifts to a
 That does not mean the rival is equally explanatory. Canonical remains the unique globally uniform / zero-exception operation. But the A sibling is close enough that it needs to be explained rather than dismissed by description length alone.
 
 
-# Experiment 302 — Gauge decomposition of the A-swap fork
+# Experiment 312 — Gauge decomposition of the A-swap fork
 
 The A:102 rival looks serious at the functional level. Its physical difference turns out to be extremely localized.
 
@@ -740,7 +740,7 @@ All 64 combinations therefore produce the exact same canonical survivor/output m
 
 Adding `A:102` to every member creates a second disjoint 64-operation orbit, all producing the exact same A-sibling survivor/output mapping.
 
-Together these two 64-element cosets exhaust the invariant-`100`, 14-state route-max fork found in Experiment 301.
+Together these two 64-element cosets exhaust the invariant-`100`, 14-state route-max fork found in Experiment 311.
 
 ## Consequence
 
