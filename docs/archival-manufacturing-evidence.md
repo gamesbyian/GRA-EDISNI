@@ -98,6 +98,57 @@ Manufacturing implication:
 
 This gives a concrete provenance test: locate photos/video of an **unwrapped but not yet finally sealed** CE during production. If coded stickers are absent at that stage, the application point can be localized even further.
 
+### 7. The coded seal is on the CE-specific black-wrapped game, not the main Huddle box
+
+Contemporaneous and later owner reports localize the sticker more precisely than the generic phrase "seals the wrapping."
+
+A December 2019 owner describes the numbered sticker as being on the **black envelope containing the game**. A 2026 owner/community clarification gives the packaging stack explicitly:
+
+- open the outer shipping carton;
+- inside are two sealed items;
+- a brown-paper-wrapped main Collector's Edition box;
+- a **black-paper-wrapped PS4 game**;
+- the coded numbered/symbol sticker seals that black wrapping.
+
+Most importantly, an owner who obtained both a CE and a basic physical copy reported that the **basic copy had no brown wrapping and no numbered sticker**.
+
+Sources:
+
+- contemporary December 2019 shipping/unboxing thread: https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/now_shipping_finally/
+- owner comparison, 2019-12-23: https://www.reddit.com/r/PlaydeadsInside/comments/eers0x
+- 2026 packaging clarification: https://www.reddit.com/r/PlaydeadsInside/comments/1l5x8rb/does_anyone_know_where_i_can_get_the_inside/
+
+This sharply changes the manufacturing map:
+
+1. the sticker is **not intrinsic to the ordinary 2,000-copy PS4 production run**;
+2. it is **not attached to the silicone Huddle**;
+3. it is attached during a CE-specific operation that takes an ordinary physical game and gives it bespoke black wrapping plus the coded seal;
+4. whoever performed that wrapping operation is now the highest-value unknown vendor/person in the provenance chain.
+
+The best archival target is therefore the work order or source file for the **CE black game wrap and seal**, not the main rigid box.
+
+### 8. Contemporaneous iam8bit response says the editions were "numbered... in their own way"
+
+In the December 2019 shipping thread, an owner reports asking iam8bit via Instagram how many units were produced. The reported iam8bit reply was:
+
+> "They are numbered... in their own way. And no 😉"
+
+The "no" referred to whether iam8bit would reveal the production quantity.
+
+Source:
+
+- https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/now_shipping_finally/
+
+Evidence status: **contemporaneous secondhand quotation**, not a first-party archived iam8bit post. It should not be treated as equivalent to a primary source unless the original Instagram exchange is recovered.
+
+Nevertheless, it is highly diagnostic. In December 2019, before the community had reconstructed the current H108 machinery, iam8bit reportedly distinguished the numbers from ordinary edition numbering. That supports investigating the three-digit value as an intentionally designed code/address rather than assuming it denotes copy count.
+
+Archival target created by this clue:
+
+- recover the original Instagram DM/screenshot if the owner still has it;
+- search iam8bit support/marketing archives for the wording;
+- ask iam8bit directly what "numbered... in their own way" referred to.
+
 ## Responsibility map
 
 Current public evidence supports this working split:
@@ -111,7 +162,7 @@ Current public evidence supports this working split:
 | Premium box / foam / printed inserts | unknown supplier(s) | unresolved | high |
 | Coded-sticker artwork/master generation | unknown | unresolved | highest |
 | Sticker printing | unknown | unresolved | highest |
-| Sticker application / final wrapping or box assembly | unknown | unresolved | highest; community documentation places sticker on wrapping |
+| Sticker application / black-game-wrap sealing | unknown CE-specific kitting operation | unresolved | highest; absent from ordinary physical edition |
 | Final CE fulfillment | likely iam8bit-managed, exact vendor unresolved | medium | high |
 
 ## Records worth finding
@@ -173,7 +224,7 @@ These are concrete observations that would materially test the current machine r
 
 ## Current conclusion
 
-The archival lane should now focus on **iam8bit/Playdead packaging and assembly records**, not on RealDoll's silicone fabrication process.
+The archival lane should now focus on the **iam8bit/Playdead CE-specific black-game-wrap and sealing operation**, not on RealDoll's silicone fabrication process or the ordinary PS4 manufacturing run.
 
 The most valuable single artifact is no longer "another sticker." It is a surviving **sticker production source**: an imposition sheet, variable-data file, spreadsheet, script, print proof, or vendor job record.
 
