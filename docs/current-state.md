@@ -37,6 +37,8 @@ Experiment 280 separates this preferred physical representative from the transdu
 
 Experiment 282 adds a physical-space discriminator for this two-bit gauge. Ignore POS3 occupancy and recursion, treat each frame's three minority cells as indistinguishable tokens, and measure minimum Manhattan transport between orthogonally adjacent frames in the 3×3 `(q,d)` lattice. The preferred zero-gauge representative is uniquely smoothest across all six `(x,y)` primary payloads. Flipping q0,d0 H→F raises that frame's local transport from 2 to 6; flipping q1,d1 I→E raises 11 to 15. Summed over all frame-lattice edges and all six payloads, the four gauge costs are 172, 196, 196, and 220. This does not make the gauge empirically observed, but it supplies an authoring prior independent of exact one-per-column POS3.
 
+Experiment 283 checks whether that result is an artifact of choosing Manhattan distance. Let orthogonal token motion cost 1 and diagonal motion cost λ from 1 to 2. By exactly enumerating all assignment-cost line intersections, the zero gauge is the unique minimum on every interval for λ>1. At the boundary λ=1, the q1,d1 I↔E flip ties the zero gauge, while any q0,d0 H↔F flip remains worse. Thus the first gauge bit is geometry-selected throughout the whole metric family; the second is selected whenever diagonal movement is treated as even slightly more expensive than an orthogonal move.
+
 Thus there are two different uncertainties: the machine has 14 legal hidden states, while its closed-corpus physical completion also carries two transition-invisible primary gauge bits unless exact POS3 is adopted as authoring grammar.
 
 ## Hidden state: preferred normal form

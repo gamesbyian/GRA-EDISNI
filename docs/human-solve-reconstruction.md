@@ -293,6 +293,8 @@ Experiment 280 adds an important humility check. Not every non-POS3 deviation ca
 
 Experiment 282 gives the human solver another reason to make that choice. Forget columns for a moment and simply ask how far the three minority marks have to move as neighboring primary frames change. The all-POS3 completion is the unique smoothest member of the four transition-equivalent gauges under minimum Manhattan transport. Each invisible pulse swap independently makes its local neighborhood jumpier. This is still a simplicity judgment, but it is visually native to the 3×3 frame sheet and does not depend on knowing the recursive answer.
 
+Experiment 283 checks that this is not a peculiarity of Manhattan distance. As long as diagonal movement costs even slightly more than one orthogonal step, the same all-POS3 completion remains uniquely smoothest. Only under the extreme rule that a diagonal is exactly as cheap as an orthogonal move does the I↔E gauge bit become invisible to the smoothness score. So the cue is reasonably robust rather than metric-picked.
+
 
 ## Reconciliation with the earlier physical-entry work
 
