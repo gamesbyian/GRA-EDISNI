@@ -58,9 +58,7 @@ and maps it to the local export asset:
 
 That image is directly readable from the fork and is therefore no longer a dead-source artifact.
 
-**Caution:** do not silently rewrite the project's registered `IAB/CDE/FGH` carrier from a visual glance at this screenshot. The screenshot visibly carries A–I annotations, but Experiment 302's remaining question is an exact mapping between historical tile labels, image assembly, serial phase, and the project's registered carrier convention. That comparison should be made explicitly before changing any machine coordinate statement.
-
-Action: update Experiment 302 from “pixels unavailable” to “source pixels recovered; exact orientation reconciliation pending/available for direct audit.”
+That source-access problem is now fully closed by Experiment 302. The same archived transcript explicitly states the row-major order `I,A,B,C,D,E,F,G,H` in message `673020569905528835`, immediately after the A–I labeling message `673020230200721428`. The discussion also states `A=001`, hence `I=000`, fixing the serial/background phase. The current `IAB/CDE/FGH` carrier is therefore directly historically attested rather than inferred from a modern visual read.
 
 ## Historical Sticker Studio
 
@@ -129,8 +127,8 @@ Implication for current sticker work: preserve and inspect ancillary/boundary in
 
 The ordering clue is not only a retrospective analogy supplied in 2026. The archived `#solving` discussion shows the community making the connection while the sticker foreground was still unsolved:
 
-- **26 Jan 2022:** after rendering the 108-chain from sticker 0, a participant calls out a conspicuous empty bottom row. Another says it may be analogous to the side pixels of the older Xbox code, "kind of a hint to indicate the format/resolution of the message."
-- **27 Jan 2022:** a participant explicitly asks whether the first nine rows could be arranged "as same as we did it acorn." The idea is exploratory and was not a demonstrated solve.
+- **26 Jan 2022:** after rendering the 108-chain from sticker 0, a participant calls out a conspicuous empty bottom row. In message `935891168124887100`, another says it may be analogous to the side pixels of the older printer-code puzzle, "kind of a hint to indicate the format/resolution of the message."
+- **27 Jan 2022:** message `936157143273443359` explicitly asks whether the first nine rows could be arranged "as same as we did it acorn." A nearby quoted restatement of the boundary-pixel idea is preserved at `936154496030097418`. These were exploratory suggestions, not demonstrated sticker solves.
 - **23–24 Dec 2022:** after more rearrangement attempts, a participant summarizes the earlier picture-puzzle precedent as important information living in one mark type while dashes/slashes functioned as a background element "to help us arrange it correctly."
 
 This is valuable anti-hindsight evidence. Long before the present typed-machine interpretation, solvers already regarded **registration marks / boundary regularities / symbol-role separation** as plausible Playdead grammar for this exact sticker foreground. It does not validate any particular modern arrangement, but it lowers the epistemic cost of asking whether one symbol family is structural rather than payload.
@@ -186,12 +184,13 @@ When using this corpus:
 
 Highest-value remaining work from this archive:
 
-1. exact orientation reconciliation using the recovered March-2020 A–I attachment;
-2. systematic attachment-to-message indexing for sticker-specific scripts/images;
-3. chronology extraction for when 108, zero phase, 9-column rendering, 81/27 zoning, and specific transform families first appeared;
-4. locate frozen historical predictions that can be checked against genuinely later physical stickers;
-5. scan `solving-breakout`, `tldr`, and `inside` for independently motivated operations or physical/manufacturing clues relevant to the sticker machine;
-6. preserve the most important small text/code assets by content hash and source path, without vendoring the full export.
+1. systematic attachment-to-message indexing for sticker-specific scripts/images;
+2. continue chronology extraction for specific transform families beyond the already-fixed 108 / zero-phase / 9-column / 81+27 milestones;
+3. locate additional frozen historical predictions that can be checked against genuinely later physical stickers;
+4. continue scanning `solving-breakout`, `tldr`, and `inside` for independently motivated operations or physical/manufacturing clues relevant to the sticker machine;
+5. preserve the most important small text/code assets by content hash and source path, without vendoring the full export.
+
+Completed during this pass: the March-2020 carrier-orientation gap is closed, and the 2018 PC-code edge-ordering provenance now has exact Discord message IDs.
 
 
 ## First-party cover clue recovered
