@@ -35,16 +35,29 @@ def load_manifest(path: Path) -> list[dict]:
     return json.loads(path.read_text(encoding="utf-8"))["sources"]
 
 
-def run(cmd: list[str], cwd: Path) -> subprocess.CompletedProcess[str]:
+def run(
+    cmd: list[str],
+    cwd: Path,
+    timeout: int | None = None,
+) -> subprocess.CompletedProcess[str]:
     print("+", " ".join(cmd), flush=True)
-    proc = subprocess.run(
-        cmd,
-        cwd=cwd,
-        text=True,
-        check=False,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-    )
+    try:
+        proc = subprocess.run(
+            cmd,
+            cwd=cwd,
+            text=True,
+            check=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            timeout=timeout,
+        )
+    except subprocess.TimeoutExpired as exc:
+        output = exc.stdout or ""
+        if isinstance(output, bytes):
+            output = output.decode("utf-8", errors="replace")
+        message = f"{output}\nTimed out after {timeout}s".strip()
+        print(message, flush=True)
+        return subprocess.CompletedProcess(cmd, 124, stdout=message)
     if proc.stdout:
         print(proc.stdout, end="" if proc.stdout.endswith("\n") else "\n", flush=True)
     return proc
@@ -52,6 +65,8 @@ def run(cmd: list[str], cwd: Path) -> subprocess.CompletedProcess[str]:
 
 def classify_extractor_failure(proc: subprocess.CompletedProcess[str]) -> str:
     output = (proc.stdout or "").lower()
+    if proc.returncode == 124 or "timed out after" in output:
+        return "timeout"
     if "sign in to confirm you" in output and "not a bot" in output:
         return "login-required-or-antibot"
     if "429" in output or "too many requests" in output:
@@ -141,6 +156,7 @@ def harvest_gallery(source: dict, root: Path) -> dict:
             source["url"],
         ],
         cwd=Path.cwd(),
+        timeout=180,
     )
     if proc.returncode != 0:
         return {
