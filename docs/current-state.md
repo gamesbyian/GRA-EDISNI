@@ -578,6 +578,8 @@ Experiment 265 separates discovery from validation. Using only the 34-residue wi
 
 Experiment 266 broadens the first recursive address substitution beyond independent coordinate permutations to all 432 affine bijections of the joint ternary address plane `(q,S)`. Of these, 402 retain no raw-compatible machine at all. Maximum first-pass retention remains 20 states and is achieved by exactly six maps. Every maximum-retention map has `d'=S` exactly and changes only the external quarter label by one of its six affine permutations. No genuine q/S mixing survives at maximum retention. Fixing the physical q labels again leaves the canonical identity substitution. This is a stronger bounded uniqueness result than Experiment 253 for the first pass.
 
+Experiment 267 deliberately drops affine bijectivity as a negative control. Across all 729 affine maps, 24 singular maps retain all 216 raw candidates, but every one erases selector `S` from both output coordinates. They appear to outperform the real recursion only because they discard the very information the selector is supposed to route. Therefore maximum raw-state retention is meaningful only inside a shell/address-preserving parent family; without that structural constraint, the metric rewards information destruction.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
