@@ -247,3 +247,18 @@ The archival lane should now focus on the **iam8bit/Playdead CE-specific black-g
 The most valuable single artifact is no longer "another sticker." It is a surviving **sticker production source**: an imposition sheet, variable-data file, spreadsheet, script, print proof, or vendor job record.
 
 That artifact could independently answer questions the closed public corpus cannot: total generated serial range, whether the H108 cycle was intentional, how variants were selected, and whether the coded stickers were authored as one algorithmic production object.
+
+
+### First-party reversible-cover clue preserved in Discord export
+
+The September-2026 Discord export preserves an embed of iam8bit tweet `1203007268930764800`. The tweet describes the standalone physical edition as including an exclusive poster and a reversible slip cover with a **hidden clue**, and says that this same version is included with the Collector's Edition.
+
+This is materially stronger than the community's repeated recollection that “the clue is on the cover.” Treat the reversible slip cover as a first-party-advertised clue-bearing artifact.
+
+The archive also preserves multiple cover photographs/scans, including large assets:
+
+- `assets/INSIDE_A-5d197786f158c567.JPG` — blob `875403acac93d83a8acae97e14240c35b88d33ab`, ~6.3 MB;
+- `assets/INSIDE_B-80fbff1237c37913.JPG` — blob `d533d4161f0572b65d134d54f4fa6477029f2d64`, ~9.4 MB;
+- historical `Cover_blend` and mirrored-blend attempts.
+
+The archive's contemporaneous discussion confirms that the community knew of the cover clue in December 2019 and performed several generic visual/light experiments. A fresh audit should therefore start from the best archived source pixels and preregistered structural cues, not repeat generic enhancement.
