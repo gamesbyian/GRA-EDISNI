@@ -287,6 +287,8 @@ Experiment 274 adds a second, genuinely raw-facing cue before full POS3 commitme
 
 Experiment 275 gives a useful confirmation check that does not require spotting those repeats. In the weak centroid parent, both the distributed and centre-pileup interpretations initially permit all six combinations of the two visibly free primary coordinates `x` and `y`. Running the recursive selection preserves that complete `2×3` primary domain only for the distributed-column interpretation. The pileup interpretation unexpectedly bans one otherwise raw-legal primary combination and compensates with extra selector multiplicity elsewhere. For a human solver, that is a strong warning that the pileup reading is coupling independent-looking parts of the object for no visible reason.
 
+Experiment 276 makes the warning visible at the next worksheet step. If the centre-pileup reading is carried through the selector operation, every surviving physical state produces the same first-pass output. The three-way functional collapse that makes the recursive mechanism legible simply disappears. The distributed-column reading, by contrast, produces three clean first-pass classes. So a solver need not prefer POS3 because it is visually prettier: it is the interpretation that preserves an actual three-way computation.
+
 
 ## Reconciliation with the earlier physical-entry work
 
