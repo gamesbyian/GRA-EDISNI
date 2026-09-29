@@ -59,3 +59,5 @@ jobs:
         run: python scripts/audit_all_pos3_partitions.py
       - name: Validate POS3 rails on holdout data
         run: python scripts/audit_pos3_partition_holdout.py
+      - name: Audit coupled affine first-pass recursion
+        run: python scripts/audit_affine_first_pass.py
