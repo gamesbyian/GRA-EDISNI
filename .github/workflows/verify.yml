@@ -19,3 +19,7 @@ jobs:
         run: python scripts/verify_native_model.py
       - name: Compare independent master families exactly
         run: python scripts/compare_models.py
+      - name: Audit first-pass address substitution
+        run: python scripts/audit_first_pass.py
+      - name: Audit terminal selector reuse
+        run: python scripts/audit_terminal_reuse.py
