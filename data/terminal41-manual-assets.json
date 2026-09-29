@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-29",
+  "scope": "Terminal 41 assets not currently vendored as exact bytes",
+  "assets": [
+    {
+      "id": "terminal41-transmission-png",
+      "source_repo": "twinysam/INSIDE-ARG",
+      "path": "terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+      "blob_sha": "127d8772912ffc499e5afaffe321d5bab7e920df",
+      "size_bytes": 19360240,
+      "raw_url": "https://raw.githubusercontent.com/twinysam/INSIDE-ARG/master/terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+      "status": "manual-download-required",
+      "reason": "Binary asset; GitHub text connector cannot ingest non-UTF-8 media.",
+      "priority": "high"
+    },
+    {
+      "id": "terminal41-saf-dat-col",
+      "source_repo": "twinysam/INSIDE-ARG",
+      "path": "terminal41.link/dat/saf_dat_col.html",
+      "blob_sha": "349b818fce618ef55c404bedfb602b1d03f29a48",
+      "size_bytes": 1986163,
+      "raw_url": "https://raw.githubusercontent.com/twinysam/INSIDE-ARG/master/terminal41.link/dat/saf_dat_col.html",
+      "status": "manual-download-required",
+      "reason": "Connector returned an empty body for this ~1.99 MB asset; exact bytes are needed for byte-reversal reproduction.",
+      "priority": "critical"
+    }
+  ]
+}
