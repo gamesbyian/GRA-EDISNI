@@ -4,7 +4,7 @@ _Date: 2026-09-29_
 
 ## Purpose
 
-Experiment 297 changed the epistemic status of the earliest carrier steps. The community reconstruction shows that the 108-cell repeat, 9-column / 12-row view, and sticker-zero/background registration were historically available before the present machine reconstruction.
+Experiment 297 changed the epistemic status of the earliest carrier steps. The full Discord export now dates those front-end discoveries more precisely. The nine-state A–I background carrier and its `IAB/CDE/FGH` registration were explicit in February 2020. The foreground corpus was retrospectively sufficient to recover H108 before 2021, but the earliest explicit community statement found so far that the sticker repeat has minimum length 108 is **25 March 2021**. A formal 108-period argument and 12×9 rendering follow on **11 December 2021**.
 
 The research queue therefore marked chronology-sensitive Experiments **7, 38, 89, 100, 171, 188, 191, and 192** for re-audit.
 
@@ -26,9 +26,9 @@ Experiment 297 adds evidence to question 3 for the carrier layer only. It does n
 
 **Numerics remain valid.** The early/late split still demonstrates that the pre-2021 corpus is sufficient to recover H108 under the stated period search and that later stickers agree with already-fixed H108 residues.
 
-**Interpretive correction:** H108 should no longer be presented here as merely a structure that the present investigation can retrospectively recover from the 2020 corpus. The Discord provenance shows that the community had in fact reached the 108/9 carrier independently in the historical period.
+**Interpretive correction:** keep two timelines separate. The pre-2021 corpus is sufficient to recover H108 under the present exact-period test, but the full archive does **not** show the community explicitly identifying 108 during 2020. The earliest explicit statement found is 25 March 2021: “the lowest size for a repeating string is 108, based on the data we have.” On 11 December 2021 the community independently formalized the candidate-period elimination, argued for 108, and rendered the 108 symbols with a 12-cell row length.
 
-The quasi-holdout remains useful as a corpus-robustness calculation. It is no longer evidence that the current investigation uniquely discovered H108.
+The quasi-holdout therefore remains prospective with respect to the community's actual H108 discovery date, while also showing that the necessary physical evidence existed earlier.
 
 ### Experiment 38 — corrected chronology quasi-holdout for the broader primary one-hot model
 
@@ -40,7 +40,7 @@ The early corpus's compatibility with the primary column structure and the 4/4 l
 
 **Unchanged mechanically.** The later-confirmed recursive predictions remain same-corpus leave-era-out robustness.
 
-**Premise clarification:** H108 and zero-phase carrier registration can now be treated as historically available inputs to a 2020-era solver rather than hindsight inventions of the present project. The recursive-registration operation itself remains a modern reconstruction.
+**Premise clarification:** the period-9 A–I background carrier and its `IAB/CDE/FGH` phase were historically available in 2020. H108 itself should be treated as an independently discovered community input only from March 2021 onward, with the explicit 12×9 rendering documented in December 2021. The recursive-registration operation remains a modern reconstruction.
 
 ### Experiment 100 — chronology rewind of the self-labelling p state
 
@@ -50,13 +50,11 @@ Nothing in the Discord material independently supplies those cores, the p state,
 
 ### Experiment 171 — chronology and the distinct roles of frames 2 and 8
 
-Its opening statement should be strengthened from:
+Its opening statement should remain a statement about **recoverability**, not be upgraded to 2020 historical discovery:
 
-> by the end of 2020 H108 was recoverable
+> by the end of 2020 the public sticker corpus was already sufficient to recover H108 under the present period test.
 
-to:
-
-> by the historical 2020-era community record H108/9 registration was not merely recoverable but already known.
+The archive then supplies the actual discovery chronology: explicit H108 by 25 March 2021, followed by the formal 108/12×9 treatment on 11 December 2021.
 
 All later statements about 72 primary completions, 144 depth selectors, 56 recursive completions, centre cores, frame 2, and frame 8 remain present-project retrospective reconstruction.
 
@@ -72,7 +70,9 @@ This is now the clean boundary between **historically known carrier geometry** a
 
 The temporal unlock ladder remains valid for the **specific present proofs**:
 
-- 2020-era: carrier H108/9 is historically known; deeper machine remains underdetermined.
+- 2020-era: the A–I period-9 background carrier and exact `IAB/CDE/FGH` registration are historically known; the foreground corpus is sufficient for retrospective H108 recovery, but explicit community H108 discovery is not yet attested.
+- 25 Mar 2021: earliest explicit H108 statement found in the full export.
+- 11 Dec 2021: formal 108-cycle argument and 12×9 rendering are documented.
 - 24 Dec 2025: the present native-Q4 short proof becomes complete under the declared sibling family.
 - 9 Mar 2026: the present 43-residue deep-machine witness becomes complete.
 
@@ -82,8 +82,12 @@ The wording should not imply that the community lacked H108 until the current in
 
 Level 1 should be upgraded from counterfactual recoverability to historical attestation:
 
-**Level 1 — carrier architecture historically visible**
-- by the 2020-era community record, 108 periodicity, the 9-column / 12-row rendering, and sticker-zero/background registration were already known.
+**Level 1a — background carrier historically visible in 2020**
+- period-9 image classes, `IAB/CDE/FGH`, and serial phase `000→I`, `001→A`, etc. were explicit community knowledge.
+
+**Level 1b — foreground H108 historically visible in 2021**
+- 25 Mar 2021: explicit minimum repeat length 108;
+- 11 Dec 2021: formal candidate-period argument, 108 master visualization, and 12×9 rendering.
 
 Levels 2 and 3 remain unchanged:
 - late 2025 for the present native-local short endpoint proof;
@@ -109,7 +113,8 @@ That distinction should govern future historical claims.
 
 When summarizing the old chronology experiments:
 
-- describe H108/9/zero-phase as historically attested community structure;
+- distinguish the 2020 period-9 A–I carrier from the later foreground H108 discovery;
+- date the earliest explicit H108 statement currently found to 25 Mar 2021 and the formal 108/12×9 treatment to 11 Dec 2021;
 - keep the early/late calculations as robustness checks, not discovery credit;
 - preserve 2025/2026 unlock dates only for the specific present selector/machine proofs they actually gate;
 - do not claim Discord independently validates terminal `100`.
