@@ -155,6 +155,8 @@ There is also a whole-object checksum-like cue for the physical polarity. With e
 
 ### 9. Treat Q4 as a selector, not a message — H
 
+There is now a particularly small way to discover the operation rather than guess it. With primary coordinates `(q,d)` and a visible ternary selector `S`, try the four literal coordinate copies `(q,q)`, `(q,S)`, `(S,q)`, `(S,S)`. Experiment 290 shows three fail immediately as useful selector operations: `(q,q)` ignores Q4, `(S,q)` produces no valid raw machine, and `(S,S)` erases external-quarter structure. `(q,S)` alone remains selector-sensitive and nondegenerate.
+
 Use each Q4 ternary value `S(j)` as an address into the three primary depths at the same physical position `j`:
 
 ```
