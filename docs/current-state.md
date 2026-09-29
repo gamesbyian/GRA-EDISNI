@@ -480,6 +480,38 @@ Increasingly theorem-level rather than separately supplied:
 
 The frozen pointer observer is a separate preregistered readout module, not part of the transition generator.
 
+## Post-240 uniqueness hardening
+
+Experiments 241–245 sharpen the status of the recursion and implementation assumptions without changing the preferred machine.
+
+Experiment 241 makes the dependency structure explicit in `docs/theorem-graph.md`, separating physical observations, supplied local grammars, derived theorems, observer-only facts, algebraic descriptions, and the semantic stopping statement.
+
+Experiments 242–243 provide a second implementation in native `(x,y,p,g)` coordinates. It derives the 14-state family directly from the request/grant relation rather than the Boolean `XYZG` Horn normal form. The two implementations independently reproduce the corpus-facing invariants and emit exactly the same set of 14 complete 108-symbol masters.
+
+Experiment 245 broadens the first recursion to:
+
+```
+B(f(q), g(S(j)), j)
+```
+
+for all 27 ternary maps `f` and `g` (729 ordered pairs). Requiring valid POS3 outputs and dependence only on selector class `p` leaves 49 broad survivors. Restricting both coordinate maps to permutations leaves exactly six: `g` is forced to identity and `f` is any permutation of the three external q labels. Once the physical q labels are held fixed, identity/identity is the sole survivor.
+
+Experiment 244 broadens the terminal reuse to:
+
+```
+B(f(S(j)), g(S(j)), j)
+```
+
+over the same 729 ordered map pairs. Twenty-five arbitrary-map pairs yield a completion-invariant valid POS3 terminal, so completion invariance alone is not unique. Under canonical-shell/permutation preservation, however, exactly one pair survives:
+
+```
+f = identity
+g = identity
+terminal = 100
+```
+
+Thus the current first and second address substitutions are now unique inside a substantially broader shell-preserving coordinate-map family. This does **not** prove uniqueness over every conceivable recursion grammar; the remaining queue explicitly targets broader non-coordinate-map parents.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
