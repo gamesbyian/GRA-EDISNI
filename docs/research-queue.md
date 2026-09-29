@@ -31,9 +31,11 @@ Remaining high-value ingredients:
 - the single unresolved frame-polarity completion at `q=1,d=2` under weaker-than-staircase grammars (Experiment 247 shows `d<=q` is the unique cheapest bounded linear-threshold completion);
 - canonical Q3 shell orientation;
 - broader recursion parents that are not expressible as shell-preserving ternary coordinate permutations;
-- Q4 grammars weaker than one-slash-per-depth-stack POS3.
+- Q4 polarity grammars weaker than the Experiment 256 five-stack closure-critical spine, especially rules that explain why A/C/F/I are physically slash-exception in the canonical completion.
 
 **Experiment 246 removes outer no-self registration from this list.** Under POS3, raw observations force 8/9 frame polarities. With the established `d<=q` staircase, they force 25/27 primary trits, including all 18 outer trits; all 18 already satisfy no-self.
+
+**Experiments 256–257 sharpen both POS3 boundaries.** Q4 no longer needs globally shared polarity for the transition: eight per-stack polarity words preserve the full 14-state/`100` closure, all sharing slash-exception B/D/E/G/H; D polarity separates that family from a 12-state/`110` sibling. On the primary side, the 832-state optional-pulse closure collapses exactly to the canonical 14 states if each quarter merely has equal pulse count across its three depth frames. This supplies a weaker sufficient grammar than direct exact-POS3 occupancy, though it is still a model-class choice rather than raw evidence.
 
 Goal: determine whether the present transducer remains uniquely or near-uniquely selected without smuggling in its own representation.
 
@@ -84,6 +86,8 @@ Experiment 246 materially improves the likely human entry path: the primary obje
 **Experiment 248 now records a hindsight-controlled human solve in `docs/human-solve-reconstruction.md`.** It marks each step as direct visibility, strong inference, hypothesis test, or confirmation-only. The remaining human-path bottleneck is earlier than recursion: finding the smallest raw-sticker view that makes POS3 conspicuous without arranging the evidence according to the solved model.
 
 Experiment 249 shows the raw primary reconstruction is robust to every single observed primary-residue deletion; no deletion worsens the 8-polarity/25-trit reconstruction beyond 7/24.
+
+Experiment 257 gives the human-path search a new candidate cue: within each quarter, equal minority-pulse counts across the three depth frames are sufficient, together with optional-pulse columns and recursive closure, to recover exact POS3. Test whether this balance is visually discoverable before assuming a solver would formulate one-pulse-per-column directly.
 
 Now that the machine is theoremized, reconstruct the shortest plausible human path without using conclusions before they are discoverable.
 
