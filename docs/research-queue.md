@@ -95,6 +95,8 @@ Experiment 257 gives the human-path search a new candidate cue: within each quar
 
 The earlier H108/A–I human-entry lane has now been reconciled against canonical Experiments 184–190 and should be treated as substantially closed. Those experiments already derive the native `4×3×3×3` address from serial cadence + H108 + physical A–I artwork, identify the exact first-81/final-27 alphabet boundary, orient quarter/depth by local structure, and show Q4 depth stacks are readable directly from raw serial rows before physical image assembly. Do not reopen this lane without a genuinely new discriminator.
 
+**Blind worksheet infrastructure now makes future human-path claims easier to audit.** `scripts/render_human_worksheet.py` renders only the classified observation ledger folded into twelve consecutive A–I blocks and physical artwork frames, deliberately withholding q/d labels, POS3 orientation, solved trits, selector values, recursion and the terminal. Use `docs/blind-human-worksheet.md` as the starting artifact for fresh-solver or fresh-agent recognition tests so later conclusions are not smuggled into the presentation.
+
 Now that the machine is theoremized, reconstruct the shortest plausible human path without using conclusions before they are discoverable.
 
 Current likely path:
