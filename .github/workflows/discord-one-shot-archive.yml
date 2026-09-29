@@ -64,6 +64,7 @@ jobs:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           GUILD_ID: ${{ inputs.guild_id }}
           CHANNEL_IDS: ${{ inputs.channel_ids }}
+          CHANNEL_NAMES: ${{ inputs.channel_names }}
           INCLUDE_ARCHIVED: ${{ inputs.include_archived_public_threads }}
           DOWNLOAD_ATTACHMENTS: ${{ inputs.download_attachments }}
         run: |
