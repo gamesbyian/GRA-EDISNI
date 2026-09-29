@@ -105,6 +105,12 @@ jobs:
         run: python scripts/audit_fi_route_obstruction.py
       - name: Explain Q4 A/C gauge support
         run: python scripts/audit_q4_ac_gauge_support.py
+      - name: Audit independent Q4 polarity route
+        run: python scripts/audit_q4_independent_polarity_route.py
+      - name: Recover Q4 core and terminal from arbitrary selectors
+        run: python scripts/audit_q4_arbitrary_selector_route.py
+      - name: Recover physical Q4 POS3 codebook from holdout marks
+        run: python scripts/audit_q4_physical_codebook.py
       - name: Audit weaker input POS3 recovery
         run: python scripts/audit_weaker_input_pos3.py
       - name: Audit human coordinate-copy operations
