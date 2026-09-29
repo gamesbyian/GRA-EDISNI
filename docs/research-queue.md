@@ -87,7 +87,9 @@ Experiment 246 materially improves the likely human entry path: the primary obje
 
 Experiment 249 shows the raw primary reconstruction is robust to every single observed primary-residue deletion; no deletion worsens the 8-polarity/25-trit reconstruction beyond 7/24.
 
-Experiment 257 gives the human-path search a new candidate cue: within each quarter, equal minority-pulse counts across the three depth frames are sufficient, together with optional-pulse columns and recursive closure, to recover exact POS3. Test whether this balance is visually discoverable before assuming a solver would formulate one-pulse-per-column directly.
+Experiment 257 gives the human-path search a new candidate cue: within each quarter, equal minority-pulse counts across the three depth frames are sufficient, together with optional-pulse columns and recursive closure, to recover exact POS3. Experiment 258 proves that six frame-weight equalities are the minimum possible in the entire pairwise-equality family, and the natural quarter-local rule hits that minimum.
+
+**Experiment 259 identifies the exact minimum verification view:** 34 distinct primary residues uniquely suffice to preserve all eight raw-forced frame polarities and all 25 raw-forced primary trits once H108/POS3 is being tested. Use this 34-residue witness to design the next human-discoverability/contact-sheet experiment. Do not misstate it as a minimum discovery corpus; the representation is still assumed.
 
 Now that the machine is theoremized, reconstruct the shortest plausible human path without using conclusions before they are discoverable.
 
