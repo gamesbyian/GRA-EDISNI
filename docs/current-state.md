@@ -1,6 +1,6 @@
 # Current Research State
 
-_Compacted repository state reconciled through Experiment 305._
+_Compacted repository state reconciled through Experiment 312._
 
 ## Status
 
@@ -20,6 +20,8 @@ The preferred model is one serial-addressed ternary positional machine with:
 No downstream completion-invariant plaintext, URL, instruction, image, or lore phrase has been established.
 
 Experiments 303–305 close the broadest current state-independent recursion alternative family. Exhausting every one of the `9! = 362,880` global bijections of the native nine-cell ternary address carrier leaves only 30 route-capable operations; the maximum routed raw-state retention is 14, attained only by canonical identity and the already-explained `f1` equality gauge swapping `(0,1)<->(1,1)`. Those two operations produce the same 14 states, first-pass families, route shell `120/012/102`, and terminal `100`. Singular maps can game retention by erasing address information, so full-carrier preservation remains a substantive requirement. See `docs/global-address-bijection-audit.md`.
+
+Experiments 306–312 close the corresponding natural cell-local recursion families. Pass-specific terminal rewrites are massively underidentified: 4,320 different second-pass local rules can reproduce the canonical 14 states and terminal `100`. Requiring the same operation to be reused on both passes restores discrimination. Under all `6^9 = 10,077,696` cell-local selector permutations, the remaining route-max invariant-`100` fork is an explained coupled A-label / operation gauge involving unobserved A-stack cells and the existing `f1` symbol-equality gauge. The canonical rule is therefore the simplest globally uniform representative of the routed functional machine, while the closed corpus cannot select every printed/local gauge representative. See `docs/alternative-machine-single-cell-defects.md`.
 
 The internal semantic branch is closed at the current evidence level. Reopen it only if an external physical/archive/ARG clue independently supplies a consumer for the terminal object. The bounded protocol for doing that without semantic overfitting is `docs/external-consumer-audit.md`: external evidence must supply the cue first, and failure to find a consumer leaves `100` as the valid project endpoint.
 

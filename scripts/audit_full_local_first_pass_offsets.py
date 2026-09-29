@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Experiment 298: close the full cell-local first-pass offset family.
+"""Experiment 308: close the full cell-local first-pass offset family.
 
-Experiments 296-297 probe one and two cell-local deviations from the canonical
+Experiments 306-307 probe one and two cell-local deviations from the canonical
 first-pass depth selection. This experiment removes the defect-count bound.
 
 At each of the nine physical A-I cells independently choose:
@@ -315,7 +315,7 @@ def main() -> None:
     assert len(maxima) == 8
     assert all(not result[3] for result in maxima)
 
-    print("Experiment 298")
+    print("Experiment 308")
     print("full cell-local first-pass offset family:", len(results))
     print("terminal-valid raw candidates before first-pass closure:", len(raw))
     print("survivor distribution:")

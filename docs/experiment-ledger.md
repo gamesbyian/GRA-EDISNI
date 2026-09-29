@@ -314,6 +314,13 @@ Latest indexed experiment: **255**.
 | 303 | quadratic global-address bijection audit: among 3,888 degree<=2 bijections of the ternary 3×3 address plane, raw retention alone admits an 18-state quadratic sibling ending at 102, but only two bijections preserve any three-distinct reversible route structure; identity retains 14 states, q-label swap 0↔1 retains 7, and no genuinely quadratic bijection is route-capable |
 | 304 | all quadratic address-map negative control: among all 531,441 degree<=2 maps, singular maps can retain all 216 raw candidates and six singular route-capable maps retain 20 states by collapsing the carrier; requiring the full nine-address image leaves only identity (14 states) and q-label swap 0↔1 (7), demonstrating that carrier preservation is a substantive constraint |
 | 305 | complete global address-bijection audit: exhausts all 9! = 362,880 carrier permutations reused on both passes; only 30 preserve a reversible route shell, maximum routed retention is 14, and exactly identity plus the already-explained f1 swap (0,1)↔(1,1) attain it with the same 14 states, route shell 120/012/102, and terminal 100; canonical recursion is unique modulo f1 among every global carrier bijection |
+| 306 | one-cell recursion-defect audit: no single first-pass depth defect preserves the exact canonical machine; seven second-pass defects are exact symbol-equality gauges, and the sole invariant >14-state sibling is route-degenerate |
+| 307 | up-to-two-cell first-pass defect audit: three two-cell defects preserve the exact 14 masters but destroy the route shell; canonical uniquely maximizes retention among route-capable configurations |
+| 308 | exhaustive first-pass local cyclic-offset audit: all 3^9 = 19,683 cell-local depth-offset rules are tested; eight retain 14 states and select the same physical masters, but only canonical preserves a reversible route shell at the maximum |
+| 309 | arbitrary second-pass local-address audit: exact factorized search covers all 9^9 = 387,420,489 pass-specific terminal rules; 4,320 distinct rules reproduce the canonical 14 states and terminal 100, proving endpoint agreement alone cannot identify the recursive operation |
+| 310 | same-operation local-offset reuse audit: requiring one cell-local cyclic rule to be reused on both passes collapses the ambiguity; canonical is the unique maximum-retention route-capable rule, while every >14-state sibling is route-degenerate |
+| 311 | arbitrary cell-local S3 selector-permutation audit: among 6^9 = 10,077,696 reused local rules, route maximum remains 14 but 256 operations attain it in four gauge classes; the nearest invariant-100 A:102 class preserves the functional route machine while changing four physical states |
+| 312 | local-permutation gauge decomposition: the Experiment-311 A:102 fork changes only unobserved A-stack cells and is cancelled by the local transposition plus the established f1 equality; each invariant-100 route-max class is a 2^6 operation-gauge orbit, so the fork is coupled label/operation gauge rather than a second functional machine |
 
 ## Current frontier
 
@@ -323,7 +330,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–305:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–312:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 

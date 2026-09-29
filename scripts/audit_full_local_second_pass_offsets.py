@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Experiment 299: exhaust the full cell-local second-pass address family.
+"""Experiment 309: exhaust the full cell-local second-pass address family.
 
-Experiments 296-298 closed local deviations in the first selector pass while
+Experiments 306-308 closed local deviations in the first selector pass while
 keeping the second pass canonical. This audit holds the first pass canonical and
 allows the SECOND pass to rewrite both address coordinates independently at
 every physical A-I cell.
@@ -342,7 +342,7 @@ def main() -> None:
     assert invariant_exact == 178_200
     assert terminal_100_exact == 4_320
 
-    print("Experiment 299")
+    print("Experiment 309")
     print("full second-pass local address family:", total_operations)
     print("exact column-signature quotient:", [len(x) for x in signature_counts])
     print("quotient combinations evaluated:", 10 * 270 * 4)

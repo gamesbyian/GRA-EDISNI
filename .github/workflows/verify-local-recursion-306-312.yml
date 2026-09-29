@@ -1,6 +1,8 @@
-name: Verify Experiments 296-302
+name: Verify Experiments 306-312
 
 on:
+  push:
+    branches: ["main"]
   pull_request:
     paths:
       - "scripts/audit_single_cell_recursion_defects.py"
@@ -13,7 +15,7 @@ on:
       - "scripts/enumerate_raw_machine.py"
       - "data/observations.csv"
       - "docs/alternative-machine-single-cell-defects.md"
-      - ".github/workflows/verify-experiment-296.yml"
+      - ".github/workflows/verify-local-recursion-306-312.yml"
 
 jobs:
   verify-experiment-296:

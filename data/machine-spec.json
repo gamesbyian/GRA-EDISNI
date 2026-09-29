@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "source_checkpoint": "repository through Experiment 305",
+  "source_checkpoint": "repository through Experiment 312",
   "closed_corpus": true,
   "mechanical_status": "substantially complete",
   "semantic_status": "internal semantic branch closed without an independent consumer",
@@ -503,5 +503,26 @@
       "quadratic_maps": 531441,
       "lesson": "non-bijective maps can game raw-state retention by erasing address information; full carrier preservation is substantive"
     }
+  },
+  "local_recursion_alternatives": {
+    "experiments": [
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312
+    ],
+    "first_pass_cyclic_family": 19683,
+    "pass_specific_second_pass_family": 387420489,
+    "pass_specific_rules_reproducing_canonical_14_and_terminal_100": 4320,
+    "same_operation_cyclic_result": "canonical is unique maximum-retention route-capable rule",
+    "local_s3_family": 10077696,
+    "local_s3_route_max_states": 14,
+    "residual_route_max_classes": 4,
+    "residual_invariant_100_fork": "A:102",
+    "interpretation": "coupled latent A-label / operation gauge; not a distinct functional machine",
+    "conclusion": "canonical is the simplest globally uniform representative of the maximum-retention routed functional machine; natural local-relabel alternatives are closed modulo explained gauges"
   }
 }

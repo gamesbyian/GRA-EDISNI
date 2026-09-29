@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Experiment 300: exhaust cell-local depth offsets under same-operation reuse.
+"""Experiment 310: exhaust cell-local depth offsets under same-operation reuse.
 
-Experiment 299 shows that if the second selector pass is allowed its own
+Experiment 309 shows that if the second selector pass is allowed its own
 arbitrary cell-specific q/d rewrites, the terminal operation becomes massively
 underidentified. That grammar quietly abandons a central property of the
 mechanical model: the same selector-address operation is reused recursively.
@@ -328,7 +328,7 @@ def main() -> None:
         if item is not canonical
     )
 
-    print("Experiment 300")
+    print("Experiment 310")
     print("same-operation local depth-offset family:", len(outcomes))
     print("route-capable operations:", len(route_capable))
     print("route-capable state distribution:", dict(sorted(Counter(
