@@ -45,7 +45,7 @@ def main() -> None:
     states = legal_states()
     masters = [generate_master(state) for state in states]
 
-    assert spec["schema_version"] == 2
+    assert spec["schema_version"] == 3
     assert spec["closed_corpus"] is True
 
     hidden = spec["hidden_state"]
@@ -112,10 +112,24 @@ def main() -> None:
     assert relation == expected_relation
 
     variable = variable_residues(masters)
-    anatomy = spec["master_anatomy"]
+    anatomy = spec["master_anatomy"]["preferred_representative"]
     assert variable == spec["latent_register_residues"]
     assert anatomy["variable_residues"] == len(variable) == 13
     assert anatomy["invariant_residues"] == 108 - len(variable) == 95
+
+    quotient = spec["master_anatomy"]["gauge_quotient"]
+    assert quotient["physical_gauge_bits"] == 5
+    assert quotient["physical_gauge_settings"] == 32
+    assert quotient["hidden_states_per_setting"] == 14
+    assert quotient["distinct_complete_masters"] == 448
+    assert quotient["operation_gauge_bits"] == 1
+    assert quotient["total_gauge_bits"] == 6
+    assert quotient["total_gauge_settings"] == 64
+    assert quotient["state_operation_representations"] == 896
+
+    assert spec["primary"]["physical_completion_gauge"]["bits"] == 2
+    assert spec["q4"]["polarity_gauge"]["bits"] == 3
+    assert spec["recursion_gauge"]["bits"] == 1
 
     expected_census = Counter({
         "/": anatomy["symbol_census"]["slash"],
@@ -136,7 +150,8 @@ def main() -> None:
     print("OK(spec): carrier geometry matches executable generator")
     print("OK(spec): primary payload template matches every legal state")
     print("OK(spec): Q4 control cores and request/grant table match runtime states")
-    print("OK(spec): latent register, 95/13 split, and 54/36/18 census match")
+    print("OK(spec): preferred latent register, 95/13 split, and 54/36/18 census match")
+    print("OK(spec): six-bit gauge quotient metadata is internally consistent")
     print("OK(spec): terminal handoff fields remain canonical")
 
 

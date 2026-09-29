@@ -150,6 +150,11 @@
         "T8",
         "T11"
       ]
+    },
+    {
+      "id": "full-gauge-quotient",
+      "script": "scripts/audit_full_gauge_quotient.py",
+      "covers": []
     }
   ]
 }
