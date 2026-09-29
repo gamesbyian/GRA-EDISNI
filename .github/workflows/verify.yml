@@ -13,5 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Verify closed-corpus machine
+      - name: Verify canonical closed-corpus machine
         run: python scripts/verify_machine.py
+      - name: Verify independent native-state model
+        run: python scripts/verify_native_model.py
