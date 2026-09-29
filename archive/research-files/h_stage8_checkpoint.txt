@@ -1,0 +1,20 @@
+H three-symbol exact-source reconstruction checkpoint
+
+Sources: #179 dash, #296 slash, #413 dot, exact public repository bytes.
+All were perspective-rectified to 900x900 and registered on halftone-density structure with symbol/serial/border regions excluded.
+
+Bounded registration to #179 dash reference:
+- #296 slash: angle +0.697 deg, scale 0.98146, tx -2.88 px, ty +3.41 px, full-resolution common-visible optimization score ~0.454. Recomputed 225px density correlation ~0.493; 500-shift diagnostic null max 0.450, empirical one-sided fraction 1/501 ~0.001996.
+- #413 dot: angle +0.665 deg, scale 0.99980, tx +3.80 px, ty -7.10 px, full-resolution score ~0.294. Recomputed 225px density correlation ~0.342; 500-shift diagnostic null max 0.302, empirical one-sided fraction 1/501 ~0.001996.
+
+Actual foreground masks were detected from the photographs as the largest dark connected central component and conservatively dilated. On the conservative safe footprint:
+- dash + slash direct-exposure coverage: 98.3124%
+- dash + slash + dot direct-exposure coverage: 98.3146%
+- dot marginal gain: 0.00224 percentage points, only 11 pixels
+- jointly hidden after all three: 8,282 pixels
+
+Interpretation: H validates a three-source physical registration, but the dot is almost completely geometrically nested within the area already hidden by slash/dash. It is therefore essentially useless as a third background-reveal exposure in this class. This weighs against treating the three foreground symbols primarily as an image-reveal code and is compatible with a separable production master where foreground symbol values have their own semantics/design cycle while differing marks incidentally expose different background regions.
+
+The shift-null values are registration diagnostics, not formal iid p-values, because texture is spatially autocorrelated and transforms were selected on the same image family.
+
+Artifacts: h_rectified_contact.png, 296_aligned_to_179.png, 413_aligned_to_179.png, h_actual_symbol_masks.png, h_strict_179_296_413_composite_v2.png, h_strict_179_296_413_provenance_v2.png, h_three_symbol_coverage_v2.csv, h_registration_shift_null.csv, h_registration_summary.csv.
