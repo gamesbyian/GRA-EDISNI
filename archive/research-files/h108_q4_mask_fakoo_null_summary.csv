@@ -1,0 +1,3 @@
+test_family,operations,observed_best_dead_glyphs,null_trials,fraction_null_with_zero_dead_glyphs,interpretation,observed_min_total_candidates,p_value_more_constrained_or_better
+Q4 mask/key operations + Fakoo compatibility,"raw,xor,xnor,and,or,data_and_notkey,key_and_notdata",0,5000,1.0,No signal; broad mask operations make compatibility trivial with current missingness,,
+XOR/XNOR only + Fakoo compatibility,"xor,xnor",0,20000,0.97655,No signal,79.0,0.9244

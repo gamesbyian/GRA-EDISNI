@@ -1,0 +1,13 @@
+separator_symbol,zero_symbol,one_symbol,bit_width,phases_with_any_valid_completion,example_phases,max_completion_count
+/,-,•,7,0,,0
+/,-,•,8,0,,0
+/,•,-,7,0,,0
+/,•,-,8,0,,0
+-,/,•,7,0,,0
+-,/,•,8,0,,0
+-,•,/,7,0,,0
+-,•,/,8,0,,0
+•,/,-,7,0,,0
+•,/,-,8,0,,0
+•,-,/,7,0,,0
+•,-,/,8,0,,0
