@@ -107,6 +107,8 @@ jobs:
         run: python scripts/audit_q4_ac_gauge_support.py
       - name: Audit independent Q4 polarity route
         run: python scripts/audit_q4_independent_polarity_route.py
+      - name: Recover Q4 core and terminal from arbitrary selectors
+        run: python scripts/audit_q4_arbitrary_selector_route.py
       - name: Audit human coordinate-copy operations
         run: python scripts/audit_human_coordinate_copy.py
       - name: Audit human second selector choice
