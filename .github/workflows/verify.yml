@@ -29,3 +29,5 @@ jobs:
         run: python scripts/audit_polarity_completion.py
       - name: Audit primary leave-one-out robustness
         run: python scripts/audit_primary_leave_one_out.py
+      - name: Reconstruct machine from raw constraints
+        run: python scripts/enumerate_raw_machine.py
