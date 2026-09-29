@@ -346,3 +346,14 @@ On **2 Jul 2018**, after `MULTIPLEPROBESDISPATCHED` had been accepted by the Pla
 Combined with the archived JavaScript's persistent browser GUID sent to `/print/index.php`, the historical consumer appears to have maintained **per-client progression/state**, rather than treating every answer as a stateless lookup.
 
 This is relevant design precedent for any genuine external consumer of the Collector's Edition machine: an answer may act as a state transition or unlock token, not merely decode to prose. It does not identify a surviving consumer for `100`, and the old endpoint must not be probed without an independently justified grammar.
+
+
+## Historical empty-window clue sharpened to residues 99–107
+
+The archive makes the old “empty bottom row” observation more precise.
+
+On **6 Jan 2024**, a solver explains that the conspicuous nine-cell black block in the community rendering corresponds to having found **no stickers numbered 99 through 107 modulo 108**. They explicitly say the community suspected that this absence might help solvers recognize the 108-period structure.
+
+This is not evidence that those residues were never manufactured: discovery is heavily biased and later observations can fill historical gaps. Its value is human-solve provenance. Before the present machine model, solvers were already treating a **nine-cell contiguous absence at the end of the 108 carrier** as potentially intentional registration information rather than merely missing data.
+
+Keep this separate from the current Q4 interpretation. It supports discoverability of the 9-cell framing clue, not the machine semantics derived later.
