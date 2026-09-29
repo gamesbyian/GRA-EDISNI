@@ -94,6 +94,8 @@ Disagreement is a bug or hidden assumption and should stop downstream work.
 
 **Experiment 297 materially changes the status of the earliest human-entry steps.** A user-supplied historical Discord reconstruction independently reached the 108-position period, 9-column / 12-row view, and sticker-0 phase before the present machine model. The preserved community master is an exact same-corpus round trip of all 82 repository observations, so it must not be counted as a blind validation set; its value is chronology and anti-hindsight evidence. The separate A–I image cycle also matches serial mod 9 with zero mismatches and places serial 0 on I, the registered top-left cell. Treat H108/9-column/zero-phase registration as externally motivated carrier structure, then continue to derive POS3 and deeper machine claims from the corpus.
 
+**Discord archaeology now supplies an additional anti-hindsight prior for the next human step.** The 2018 PC/Xbox printer work used side/margin structure to constrain row order, and archived Jan/Dec-2022 sticker discussions explicitly invoked that precedent when interpreting the 108 foreground. This does not license arbitrary rearrangement and is not evidence for POS3 by itself. It does mean future blind-human tests should expose raw boundary/registration structure rather than hiding it, and should ask whether a solver independently separates structural marks from payload before being shown the ternary model.
+
 
 Experiment 246 materially improves the likely human entry path: the primary object can now be presented as “the stickers visibly determine almost the entire ternary lattice” rather than as a heavily inferred reconstruction.
 
