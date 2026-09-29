@@ -209,11 +209,13 @@ def main() -> None:
     repeat_counts = {}
     final_counts = {}
     final = {}
+    survivors_by_weight = {}
 
     for weight in admissible_weights:
         payloads = list(enumerate_primary(candidates_by_weight[weight]))
         payload_counts[weight] = len(payloads)
         survivors = recursive_survivors(payloads, selectors)
+        survivors_by_weight[weight] = survivors
         closure_counts[weight] = len(survivors)
 
         repeated = [
@@ -248,32 +250,61 @@ def main() -> None:
         ("102", "022", "100"): 6,
     })
 
-    # Prove that all three quarter-balance conditions are necessary inside the
-    # repeated-frame k=3 family. Any subset of <=2 leaves noncanonical states.
-    repeated3 = [
-        item
-        for item in recursive_survivors(
-            list(enumerate_primary(candidates_by_weight[3])),
-            selectors,
-        )
-        if raw_repeat_motifs(item[0])
-    ]
-    assert len(repeated3) == 208
+    # Treat the two repeat continuations plus the three quarter-balance tests
+    # as five explicit authoring regularities. The full five-rule set is the
+    # unique subset that recovers exactly the canonical source-POS3 family
+    # while eliminating the weight-4 branch.
+    conditions = (
+        ("repeat q0d1=q1d0", lambda payload: payload[(0, 1)] == payload[(1, 0)]),
+        ("repeat q1d2=q2d2", lambda payload: payload[(1, 2)] == payload[(2, 2)]),
+        ("q0 aggregate-column balance", lambda payload: quarter_has_equal_pair(payload, 0)),
+        ("q1 aggregate-column balance", lambda payload: quarter_has_equal_pair(payload, 1)),
+        ("q2 aggregate-column balance", lambda payload: quarter_has_equal_pair(payload, 2)),
+    )
 
-    for size in range(3):
-        for quarters in combinations(range(3), size):
-            selected = [
-                item
-                for item in repeated3
-                if all(
-                    quarter_has_equal_pair(item[0], q)
-                    for q in quarters
-                )
-            ]
-            assert not (
-                len(selected) == 14
-                and all(exact_column_pos3(item[0]) for item in selected)
+    def selected_by(weight, active):
+        return [
+            item
+            for item in survivors_by_weight[weight]
+            if all(conditions[index][1](item[0]) for index in active)
+        ]
+
+    full = tuple(range(len(conditions)))
+    assert selected_by(3, full) == canonical
+    assert selected_by(4, full) == []
+
+    # Single-condition ablations quantify what each rule excludes.
+    single_omission_counts = {}
+    for omitted in full:
+        active = tuple(index for index in full if index != omitted)
+        selected3 = selected_by(3, active)
+        selected4 = selected_by(4, active)
+        single_omission_counts[conditions[omitted][0]] = (
+            len(selected3),
+            len(selected4),
+        )
+        assert sum(exact_column_pos3(item[0]) for item in selected3) == 14
+
+    assert single_omission_counts == {
+        "repeat q0d1=q1d0": (56, 4),
+        "repeat q1d2=q2d2": (22, 0),
+        "q0 aggregate-column balance": (48, 0),
+        "q1 aggregate-column balance": (28, 4),
+        "q2 aggregate-column balance": (30, 0),
+    }
+
+    # Stronger subset audit: no proper subset of the five rules both recovers
+    # exactly 14 source-POS3 states and eliminates common weight 4.
+    for size in range(len(conditions)):
+        for active in combinations(full, size):
+            selected3 = selected_by(3, active)
+            selected4 = selected_by(4, active)
+            exact_recovery = (
+                len(selected3) == 14
+                and all(exact_column_pos3(item[0]) for item in selected3)
+                and not selected4
             )
+            assert not exact_recovery
 
     print("Experiment 293")
     print("raw-compatible common frame weights:", admissible_weights)
@@ -283,9 +314,12 @@ def main() -> None:
     print("after equal-pair aggregate balance in all three quarters:", final_counts)
     print("weight-3 survivors are exact input POS3:", all(exact_column_pos3(x[0]) for x in canonical))
     print("weight-3 terminal counts:", dict(Counter(x[3] for x in canonical)))
+    print("single-condition omission counts (weight3, weight4):")
+    for name, counts in single_omission_counts.items():
+        print(f"  {name}: {counts}")
     print("RESULT: exact source POS3 emerges without imposing one minority per input column")
     print("RESULT: common weight 4 is eliminated completely")
-    print("RESULT: all three quarter aggregate-balance conditions are necessary in this parent")
+    print("RESULT: all five repeat/balance regularities are jointly subset-minimal in this parent")
     print("CAUTION: uniform frame weight, repeat continuation, and aggregate balance remain authoring-grammar assumptions")
 
 
