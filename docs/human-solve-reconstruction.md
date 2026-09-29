@@ -70,6 +70,8 @@ Experiment 297 verifies the registration directly across all 82 records: serial 
 
 The 108-fold now becomes twelve 3×3 frames: four groups of three.
 
+Experiment 315 shows this exact geometric move is historically attested rather than merely hindsight-plausible. On 22 Dec 2022, the message group anchored at `1055674055233118248` says the 12×9 foreground was tried as “a 3x3 grid for each row,” which is already twelve 3×3 frames. The next day, `1055973624135295086` notes that each 12×9 column corresponds to one of the nine repeating patterns. On 12 Oct 2023, `1162212809568964608` makes the decomposition explicit as “twelve squares.” On 10 May 2026, `1502960920568135761` sharpens it into nine slash/dash 3×3 blocks plus three slash/dot blocks. None of these discussions found POS3 or the selector machine, but they show a technically capable solver had already reached the physical framing used below.
+
 ### 4. Split the 9+3 foreground alphabets — D
 
 Residues 1–81 use slash/dash. Residues 82–108 use slash/dot.
