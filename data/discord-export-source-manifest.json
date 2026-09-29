@@ -85,6 +85,21 @@
       "path": "assets/Cover_blend_mirrored-c2fb3d0f85f5b014.jpg",
       "blob_sha": "9dfc550f1fd8abf04c3807d148cd2f0c36d38182",
       "role": "historical mirrored cover overlay attempt"
+    },
+    {
+      "path": "assets/unknown-3fdb8af3d8114c74.png",
+      "blob_sha": "454a15c532352dd4969f8acf6d2a56d7a28f3c73",
+      "role": "Jan 2022 phase-zero 108 foreground rendering accompanying 81+27 / 3x3 precursor discussion"
+    },
+    {
+      "path": "assets/image-f8fbaab2ca7dc5b5.png",
+      "blob_sha": "fd2645109481daefde246c1658ef2c500cdbac67",
+      "role": "Oct 2023 foreground rendered as twelve 3x3 squares"
+    },
+    {
+      "path": "assets/twelve_3x3_squares-cccbc93870291d33.png",
+      "blob_sha": "2e976a35b2ac7bb9170351cfb45f3dddaeb3e75f",
+      "role": "May 2026 explicit nine slash-dash plus three slash-dot 3x3 block rendering"
     }
   ],
   "chronology": [
@@ -113,8 +128,33 @@
       "claim": "foreground 108 rendering explicitly starts with sticker 0 at top left"
     },
     {
+      "date": "2022-01-26",
+      "message_id": "935882996660183041",
+      "claim": "community explicitly links three foreground symbols, solved 3x3 nine-image carrier, and 81+27 powers-of-three split"
+    },
+    {
       "date": "2022-02-24",
       "claim": "dedicated UV inspection of sticker/envelope reported negative"
+    },
+    {
+      "date": "2022-12-22",
+      "message_id": "1055674055233118248",
+      "claim": "12x9 foreground is explicitly tried as one 3x3 grid per row, yielding the exact twelve-frame decomposition"
+    },
+    {
+      "date": "2022-12-23",
+      "message_id": "1055973624135295086",
+      "claim": "community notes each 12x9 column corresponds to one of the nine repeating patterns"
+    },
+    {
+      "date": "2023-10-12",
+      "message_id": "1162212809568964608",
+      "claim": "foreground decomposition is explicitly described as twelve 3x3 squares"
+    },
+    {
+      "date": "2026-05-10",
+      "message_id": "1502960920568135761",
+      "claim": "9x12 layout is explicitly described as nine slash-dash 3x3 blocks plus three slash-dot blocks"
     }
   ],
   "first_party_archive_refs": [

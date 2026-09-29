@@ -126,7 +126,16 @@ The 2023/2026 community geometry did **not** establish:
 
 No old screenshot or message should be counted as an independent statistical validation of those later deductions because it uses the same physical sticker corpus.
 
+## Targeted POS3-provenance search
+
+A bounded lexical scan of the exported `#solving` and `#solving-breakout` discussions searched sticker/108/3×3 contexts for language around columns, rows, single/one slash/dash/dot, position, and exceptional members.
+
+It recovered the framing history above, including the Dec-2022 statement that 12×9 columns correspond to the nine repeating patterns, but found **no pre-current-reconstruction statement of the later POS3 rule itself**: no clear claim that each relevant three-cell rail has exactly one exceptional symbol whose position carries a ternary value.
+
+This is a bounded negative result, not proof of historical absence. It prevents the present provenance audit from silently upgrading POS3 merely because older solvers drew the same boxes.
+
 ## Consequence
+
 
 Move the “twelve 3×3 foreground frames” step in the human-solve narrative from a merely hindsight-plausible factorization to a historically attested geometric move.
 
