@@ -105,6 +105,8 @@ jobs:
         run: python scripts/audit_fi_route_obstruction.py
       - name: Explain Q4 A/C gauge support
         run: python scripts/audit_q4_ac_gauge_support.py
+      - name: Audit independent Q4 polarity route
+        run: python scripts/audit_q4_independent_polarity_route.py
       - name: Audit human coordinate-copy operations
         run: python scripts/audit_human_coordinate_copy.py
       - name: Audit human second selector choice
