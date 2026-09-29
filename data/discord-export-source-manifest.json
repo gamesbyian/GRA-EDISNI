@@ -207,5 +207,31 @@
       "id": "1203007268930764800",
       "claim": "standalone physical edition includes an exclusive poster and reversible slip cover with a hidden clue; same version included with Collector's Edition"
     }
+  ],
+  "external_documents": [
+    {
+      "title": "INSIDE PRINTER SECRET",
+      "provider": "Google Docs",
+      "document_id": "1vlpah0LdCRpJe-OfhnkaiBIcmepGXust5BMbaFJGGt8",
+      "role": "contemporaneous printer-puzzle working document; explicitly describes acorn geometry as row-order preservation and records platform solve pipelines"
+    },
+    {
+      "title": "Inside Collector's Edition Numbers",
+      "provider": "Google Docs",
+      "document_id": "1ccgEU722Kz5kDrq0wmA5pd6Du05qAaWNN7kRaTlG9jU",
+      "role": "superseded historical sticker ledger snapshot; useful for chronology/provenance, with known 597 transcription superseded by upstream 2021 correction"
+    },
+    {
+      "title": "terminal41.link journal",
+      "provider": "Google Docs",
+      "document_id": "1V9TsI8D-NG191aNplbQxnteboUc_TYl0IViFtkwDKWA",
+      "role": "contemporaneous Terminal41 page chronology separating apparent timed/platform-release updates from later answer-triggered progression"
+    },
+    {
+      "title": "Inside ARG Picture Code",
+      "provider": "Google Docs",
+      "document_id": "1NLwy0T4pvNRrR08oZsBzVNqmQyL4qhSrHvIHhCANwLw",
+      "role": "historical picture-code document whose readable export is mostly embedded JPEG bytes/metadata; overlaps recovered AnSet image provenance"
+    }
   ]
 }
