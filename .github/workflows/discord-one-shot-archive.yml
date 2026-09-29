@@ -26,6 +26,11 @@ on:
         required: true
         default: true
         type: boolean
+      anonymize_authors:
+        description: "Pseudonymize Discord posters before writing the artifact"
+        required: true
+        default: true
+        type: boolean
 
 permissions:
   contents: read
@@ -67,6 +72,7 @@ jobs:
           CHANNEL_NAMES: ${{ inputs.channel_names }}
           INCLUDE_ARCHIVED: ${{ inputs.include_archived_public_threads }}
           DOWNLOAD_ATTACHMENTS: ${{ inputs.download_attachments }}
+          ANONYMIZE_AUTHORS: ${{ inputs.anonymize_authors }}
         run: |
           set -euo pipefail
           args=(--guild-id "$GUILD_ID" --output discord-export)
@@ -76,6 +82,9 @@ jobs:
           fi
           if [[ "$DOWNLOAD_ATTACHMENTS" == "true" ]]; then
             args+=(--download-attachments)
+          fi
+          if [[ "$ANONYMIZE_AUTHORS" == "true" ]]; then
+            args+=(--anonymize-authors)
           fi
           if [[ -n "${CHANNEL_NAMES// }" ]]; then
             IFS=',' read -ra names <<< "$CHANNEL_NAMES"
