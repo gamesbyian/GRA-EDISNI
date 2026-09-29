@@ -200,3 +200,10 @@ The preserved Column Shift Tool treats rows 1–9 of the 12×9 view as nine vert
 The P1/P2 combination file records a very large semantic pairing search and explicitly reports no convincing SPACE/INSIDE-themed sentence. Keep it as negative semantic-search archaeology, not as a lead.
 
 Finally, the supplied September-27 verification handoff is cautious same-corpus work rather than a claimed solve. It independently records the 108/65/43 bookkeeping, repeat consistency, dot clustering, negative literal printer-string and LIFEDETECTED tests, straight-layout Braille negatives, and a then-blocked jigsaw branch awaiting the community's labeled 3×3 image order. Its stopping-point chronology is useful when deciding whether later recovered Discord material is genuinely new to that investigation.
+
+
+## Historical nine-piece assembly provenance — Experiment 302
+
+The public twinysam/INSIDE-ARG chronology preserves a March 2020 trail for the sticker-image puzzle: labels A–I were already in use, the background was recognized as the in-game printer, the first C-class image completed the nine-piece set on 19 March, and the complete assembly was posted immediately afterward. The original complete-assembly Discord message is `690395145245425724` in channel `461275582970462209`; its referenced attachment is `690395145094299678/unknown.png`, with historical Imgur mirror `846shEE.jpg`.
+
+The provenance milestone is deliberately partial. The public chronology verifies that a labeled complete assembly existed in 2020, but the original attachment and mirror are not currently retrievable through the available archive path, so Experiment 302 does not claim to have independently re-read the exact A–I spatial order from those pixels. The project's current physical registration `IAB/CDE/FGH` remains established elsewhere. If the Discord archival workflow recovers the original attachment, the remaining task is a direct visual comparison, not a new inference problem.
