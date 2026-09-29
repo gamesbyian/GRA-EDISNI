@@ -24,8 +24,8 @@ This document separates supplied observations/grammars from derived consequences
 | T1 | T | Under G1–G2, raw observations force 25/27 primary payload trits; the only unresolved trits are `x=(q0,d2,c1)∈{1,2}` and `y=(q2,d0,c1)∈{0,1,2}`. | O2, G1, G2 |
 | T1a | T | All 18 outer primary trits are observation-forced and satisfy minority-row `!=d`; the old outer no-self rule is therefore derived rather than an additional premise. | T1 |
 | T1b | T | The primary payload family reduces to `112 212 0x0 / 212 002 100 / 1y2 022 100`, with the route/cross normal form described in current-state. | T1, T1a |
-| G3 | G | Q4 is a depth-indexed POS3 selector encoded by one slash per depth stack. | O2 |
-| T2a | T | Raw Q4 observations under G3 admit exactly 36 selector completions. | O2, G3 |
+| G3 | G | Q4 uses one shared-polarity POS3 orientation across all nine depth stacks. | O2 |
+| T2a | T | Raw Q4 observations force the shared exceptional symbol to slash (36 compatible slash-exception completions, zero dot-exception completions), yielding exactly 36 selector completions. | O2, G3 |
 | G5 | G | First recursive application substitutes selector depth into the primary address: `(q,d,j)->(q,S(j),j)`. | T1b, T2a |
 | T3a | T | Cartesian product of the 6 raw-compatible primary payloads and 36 raw-compatible selectors gives 216 candidate machines; first-pass POS3 closure leaves 20. | T1b, T2a, G5 |
 | G6 | G | The same selector is reused on the regenerated surfaces: `(q,S(j),j)->(S(j),S(j),j)`. | G5 |
@@ -35,7 +35,7 @@ This document separates supplied observations/grammars from derived consequences
 | T5 | T | `210` supplies route reindex `q=2-p`; Q3 completes to `102/012/120`. | T3, T4 |
 | T6 | T | Every one of the 14 second-pass survivors canonicalizes to frame 9 / payload `100` / raw `---//////`; terminal `100` is not used as a selection filter. | T2, G6 |
 
-Taking the two recursive operations G5–G6 as the operation grammar, the present transition-side supplied set is **O1–O2 + G1–G3 + G5–G6**. Experiment 246 materially weakens G2: eight of its nine frame polarities are directly forced by the corpus under POS3, leaving only one upper-triangle completion to the global staircase rule. Experiments 250–252 remove the former Q4 canonical-shell reconstruction premise from the minimal generation chain: the surviving Q4 scaffold/control family is recovered by closure from the 36 raw selector completions. The former outer no-self grammar is likewise theorem-level.
+Taking the two recursive operations G5–G6 as the operation grammar, the present transition-side supplied set is **O1–O2 + G1–G3 + G5–G6**. Experiment 246 materially weakens G2: eight of its nine frame polarities are directly forced by the corpus under POS3, leaving only one upper-triangle completion to the global staircase rule. Experiment 254 materially weakens G3: only shared Q4 POS3 polarity is supplied; the slash-exception orientation is forced by observations. Experiments 250–252 remove the former Q4 canonical-shell reconstruction premise from the minimal generation chain: the surviving Q4 scaffold/control family is recovered by closure from the 36 raw selector completions. The former outer no-self grammar is likewise theorem-level.
 
 ## State and storage chain
 
@@ -49,6 +49,18 @@ Taking the two recursive operations G5–G6 as the operation grammar, the presen
 | T12 | T | The latent register has weight 6 and minimum Hamming distance 2. | T10 |
 
 The Boolean near-cube is a compression of the native relation, not a premise required to generate the machine.
+
+
+## Robustness boundary beyond the exact state family
+
+Experiment 255 tests a broader primary grammar in which each primary column may contain zero or one minority-symbol pulse. Raw observations allow 1,536 such primary completions. With the 36 Q4 selectors, recursive POS3 closure leaves 832 states. Every survivor still terminates at `100`, but only 14 have one occupied minority pulse in all 27 columns.
+
+Therefore G1 has two distinct roles:
+
+- **exact-state role:** exact POS3 is needed to select the canonical 14-state physical family;
+- **endpoint role:** exact POS3 is not needed for terminal `100` inside the tested zero-or-one-pulse parent grammar.
+
+This distinction prevents overclaiming uniqueness while strengthening the terminal's robustness.
 
 ## Observer branch
 
@@ -79,8 +91,8 @@ A1–A2 describe closure properties. A3 prevents them from being silently promot
 
 ## Immediate proof obligations exposed by this graph
 
-1. **G1/G2:** broaden beyond POS3 and test whether the ninth frame polarity can be derived from a still-weaker global grammar than the triangular staircase.
-2. **G3:** broaden Q4 beyond one-slash-per-depth-stack POS3 and measure whether recursion itself selects the positional selector grammar.
+1. **G1/G2:** Experiment 255 shows zero-or-one-pulse weakening does not recover the exact 14-state family, although terminal `100` survives; broader primary grammars should distinguish exact-family uniqueness from endpoint robustness.
+2. **G3:** Experiment 254 reduces the supplied commitment to shared-polarity Q4 POS3; test grammars that weaken shared orientation itself without exploding the closure family.
 3. **G5/G6:** extend Experiment 253 beyond shell-preserving coordinate permutations. Within that raw-space family the canonical recursion is unique up to external-q relabeling under maximal raw-state retention.
 4. **T7–T11:** the lower-level constraint/enumeration target is now satisfied by Experiments 250–251; use it as the preferred independence oracle for future state-family changes.
 5. **R1:** keep observer evidence quarantined when auditing transition uniqueness.
