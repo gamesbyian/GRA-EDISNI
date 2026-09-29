@@ -82,6 +82,8 @@ That split lands exactly on:
 
 This is a much stronger clue than any letter-like resemblance in arbitrary reshapes.
 
+The Discord chronology makes this especially strong as a human-discovery step. On **26 January 2022**, while the foreground was still unsolved, a solver explicitly proposed that the first **81** slash/dash cells might be one object and the following **27** slash/dot cells a separate checksum-like region, motivated by the powers-of-three geometry and the nine sticker backgrounds. The checksum interpretation did not survive, but the 81+27 boundary itself was seen directly. On **29 October 2023**, solvers again singled out “why are yellows only at the bottom?” as the likely big clue and compared that asymmetry to the visual aids used by the PC/Xbox printer puzzles. This is anti-hindsight evidence for noticing the alphabet boundary, not independent evidence for the later selector semantics.
+
 ### 5. Read primary columns as ternary positional code — S
 
 In the slash/dash region, each physical column behaves as a 3-position code: one row is exceptional, so its row index is a ternary digit.
