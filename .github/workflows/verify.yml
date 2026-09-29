@@ -31,3 +31,5 @@ jobs:
         run: python scripts/audit_primary_leave_one_out.py
       - name: Reconstruct machine from raw constraints
         run: python scripts/enumerate_raw_machine.py
+      - name: Compare raw reconstruction to prior generators
+        run: python scripts/compare_raw_reconstruction.py
