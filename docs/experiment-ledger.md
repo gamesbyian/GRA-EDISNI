@@ -308,6 +308,7 @@ Latest indexed experiment: **255**.
 | 297 | historical Discord 108/9 provenance audit: supplied community master round-trips all 82 records exactly; 65 unique residues, 15 overlap cells / 17 extra records, zero conflicts, and exact serial-mod-9 A–I registration with 0→I; re-running the early period test makes 108 the smallest symbol-consistent period through serial 597 and the smallest compatible multiple of 9; upgrades H108/9-column/zero-phase chronology and human plausibility but is explicitly same-corpus evidence, not a blind machine replication |
 | 298 | historical Discord Column Shift Tool audit: exhausts all 65,536 tail-constrained shift vectors under four preregistered generic structure scores and computes exact full-8^9 null distributions; admissible winners miss every unrestricted optimum and are expected somewhere in 65,536 trials (family-level probabilities 0.999823–~1), closing generic visual/structural column shifting as a negative historical transform unless an independent clue supplies a narrower target |
 | 299 | Discord chronology re-audit: revisits Experiments 7, 38, 89, 100, 171, 188, 191, and 192 after the historical 108/9 provenance recovery; upgrades H108/9-column/zero-phase from hindsight-recoverable to historically attested carrier knowledge while leaving POS3, Q4 selection, recursion, route shell, terminal 100, and the late-2025/March-2026 proof-sufficiency thresholds as present-project results |
+| 300 | historical Discord Sticker Studio prediction audit: exact leave-one-out reproduction of the recovered mod-54, multi-period, weighted-zoned, and weighted-cross-zone heuristics shows none beats the tool's own 60.0% zone-majority baseline (best heuristic 56.9%; historical default multi-period 47.7%); guessed cells remain quarantined and the old predictor families are promoted to formal negative controls |
 
 ## Current frontier
 
@@ -317,7 +318,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–299:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–300:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 

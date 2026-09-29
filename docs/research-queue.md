@@ -160,7 +160,7 @@ Newly recovered executable artifacts sharpen this lane:
 
 - reproduce the historical interval scanner as provenance, but treat its printed endpoint totals (including 648) as arithmetic extrapolations rather than production evidence;
 - **completed in Experiment 298:** the supplied Column Shift Tool is frozen and all **65,536 admissible** tail-constrained vectors were exhausted under four preregistered generic structure scores, with exact full-`8^9` null distributions. The constrained family misses every unrestricted optimum and its winners are expected somewhere in a 65,536-trial search. Treat generic column shifting as a closed negative historical transform; reopen only if an independent clue specifies a narrower statistic or operation before output inspection;
-- mine the preserved Sticker Studio for dated methods and negative controls, while keeping every model-filled cell outside the observation ledger;
+- **completed in Experiment 300:** the preserved Sticker Studio's mod-54, multi-period, weighted-zoned and cross-zone predictors were reproduced under leave-one-out scoring; none beats the tool's own zone-majority baseline, so model-filled cells remain quarantined and these predictor families are now formal historical negative controls;
 - retain the P1/P2 phrase search as a negative semantic-search artifact unless an independent clue supplies its composition rule;
 - recover the labeled community 3×3 assembly/order referenced as missing in the September-27 handoff and use its date/provenance to separate historical availability from later reconstruction.
 
