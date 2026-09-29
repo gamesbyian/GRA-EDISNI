@@ -310,6 +310,7 @@ Latest indexed experiment: **255**.
 | 299 | Discord chronology re-audit: revisits Experiments 7, 38, 89, 100, 171, 188, 191, and 192 after the historical 108/9 provenance recovery; upgrades H108/9-column/zero-phase from hindsight-recoverable to historically attested carrier knowledge while leaving POS3, Q4 selection, recursion, route shell, terminal 100, and the late-2025/March-2026 proof-sufficiency thresholds as present-project results |
 | 300 | historical Discord Sticker Studio prediction audit: exact leave-one-out reproduction of the recovered mod-54, multi-period, weighted-zoned, and weighted-cross-zone heuristics shows none beats the tool's own 60.0% zone-majority baseline (best heuristic 56.9%; historical default multi-period 47.7%); guessed cells remain quarantined and the old predictor families are promoted to formal negative controls |
 | 301 | historical Discord interval-scanner reproduction: exact reimplementation of the archived C++ scan finds only offsets 108,125,197,216,254; 108 is the smallest contradiction-free tested exact offset with support, while the printed totals 648/625/788/648/762 are merely the next multiples above serial 597 and therefore not production evidence |
+| 302 | historical 3×3 assembly provenance recovery: public INSIDE-ARG chronology plus preserved Discord IDs establish A-I labeling and a complete nine-piece assembly by 19 Mar 2020; the original Discord attachment (690395145094299678) and Imgur mirror are currently unavailable, so the exact historical pixel orientation is not falsely claimed as independently re-read; current IAB/CDE/FGH registration remains a separate established project fact pending source recovery |
 
 ## Current frontier
 
@@ -319,7 +320,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–301:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–302:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
