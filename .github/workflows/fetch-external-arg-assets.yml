@@ -1,0 +1,52 @@
+name: Fetch external ARG assets
+
+on:
+  workflow_dispatch:
+    inputs:
+      category:
+        description: "Asset category (blank = all; e.g. sticker-image or terminal41-media)"
+        required: false
+        default: ""
+      max_bytes:
+        description: "Skip files larger than this many bytes (0 = unlimited)"
+        required: false
+        default: "0"
+      limit:
+        description: "Maximum number of files to fetch (0 = unlimited)"
+        required: false
+        default: "0"
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and verify assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(
+            --manifest data/canonical-binary-asset-manifest.json
+            --output external-assets
+            --max-bytes "${{ inputs.max_bytes }}"
+            --limit "${{ inputs.limit }}"
+          )
+          if [[ -n "${{ inputs.category }}" ]]; then
+            args+=(--category "${{ inputs.category }}")
+          fi
+          python scripts/fetch_external_assets.py "${args[@]}"
+
+      - name: Upload verified assets
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: inside-arg-external-assets
+          path: external-assets/
+          if-no-files-found: warn
+          retention-days: 30
