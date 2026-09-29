@@ -127,3 +127,132 @@ python scripts/audit_single_cell_recursion_defects.py
 ```
 
 The script asserts the full 54-operation outcome distribution, the seven exact equality gauges, and the route-degeneracy of the unique >14-state invariant-terminal sibling.
+
+
+# Experiment 297 — Up-to-two-cell first-pass defect audit
+
+Experiment 296 found that one local first-pass exception could retain 16 raw-compatible states and terminal `100`, but only by expanding the functional quotient and breaking reversible routing. Experiment 297 asks whether **two** local exceptions can repair that weakness.
+
+## Parent family
+
+Keep the second pass canonical.
+
+For the first pass, allow depth `S(j)` to be shifted by `+1` or `+2` at zero, one, or two distinct A–I cells.
+
+The complete family has:
+
+```
+1
++ 9*2
++ C(9,2)*2^2
+= 163 configurations
+```
+
+Every configuration is enumerated exactly.
+
+## Results
+
+The final-state / terminal-cardinality distribution is:
+
+```
+(0,0):   128
+(2,1):     2
+(3,1):     2
+(4,1):     5
+(5,1):     4
+(6,1):     3
+(7,1):     2
+(8,1):     3
+(10,1):    2
+(12,1):    3
+(14,1):    4
+(16,1):    2
+(18,1):    1
+(20,1):    2
+```
+
+So local exceptions can indeed manufacture larger invariant-terminal families. The two maximum-retention configurations are:
+
+```
+A1 + D1
+A1 + D2
+```
+
+Both retain 20 raw-compatible states and terminal `100` for every survivor.
+
+Neither has a valid three-class reversible route shell.
+
+## Exact 14-master siblings
+
+Three two-cell configurations preserve the **exact same 14 physical masters** and terminal `100` while altering the first-pass computation:
+
+```
+B1 + H1
+B2 + H2
+F2 + I1
+```
+
+Their first-pass families are:
+
+```
+B1+H1:
+  102 / 002 / 122
+  102 / 012 / 102
+  102 / 022 / 102
+
+B2+H2:
+  100 / 002 / 122
+  100 / 012 / 102
+  100 / 022 / 102
+
+F2+I1:
+  102 / 202 / 120
+  102 / 212 / 100
+  102 / 222 / 100
+```
+
+All three fail the route criterion.
+
+- `B1+H1` forces duplicate reversible choice `102` across classes.
+- `B2+H2` contains a functional family with no reversible word at all.
+- `F2+I1` again forces duplicate `102` routes.
+
+So identical physical masters and identical terminal do not imply an equivalent intermediate machine.
+
+## Route-capable configurations
+
+Across all 163 zero/one/two-cell configurations, only three admit the Experiment-278 route criterion:
+
+```
+canonical : 14 states
+C1        :  7 states
+C2        :  7 states
+```
+
+All three expose the same unique route shell:
+
+```
+120 / 012 / 102
+```
+
+The canonical operation therefore **uniquely maximizes raw-state retention among route-capable configurations** in this local-defect family.
+
+This is a considerably stronger adversarial statement than merely observing that local defects tend to fail. Some local variants retain 18 or 20 states and some preserve the exact 14 masters, but once the independently motivated reversible route layer is required, canonical wins cleanly.
+
+## What this says about Priority 5
+
+The local-exception family is useful precisely because it is hostile to the preferred model:
+
+- tiny description changes can preserve terminal `100`;
+- tiny changes can preserve the exact physical 14-master family;
+- tiny changes can even retain **more** raw-compatible states.
+
+The endpoint and raw-state retention are therefore insufficient discriminators by themselves.
+
+The route layer continues to do real work. In the full 163-member family, it leaves canonical at 14 states and only two damaged seven-state C siblings.
+
+That suggests a productive general rule for future alternative-machine searches:
+
+> retain route structure as an independent model-selection criterion, and treat terminal agreement alone as weak evidence.
+
+It also reinforces the stopping signal from Experiment 296. Expanding to arbitrary cell-local exceptions rapidly creates representational siblings, while the structurally meaningful discriminator remains the same reversible route shell already derived independently.
