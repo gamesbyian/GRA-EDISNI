@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "source_checkpoint": "repository through Experiment 286",
+  "source_checkpoint": "repository through Experiment 287",
   "closed_corpus": true,
   "mechanical_status": "substantially complete",
   "semantic_status": "internal semantic branch closed without an independent consumer",
@@ -162,7 +162,8 @@
         "F+I"
       ],
       "preferred_representative": "all slash-exception",
-      "transition_invisible_within_14_state_family": true
+      "transition_invisible_within_14_state_family": false,
+      "note": "A/C are exact canonical-first-pass gauges; F+I is a coupled alternative branch that changes first-pass words and is incompatible with the primary q0,d0 H<->F flip."
     }
   },
   "first_pass": {
@@ -284,41 +285,47 @@
       }
     },
     "gauge_quotient": {
-      "physical_gauge_bits": 5,
-      "physical_gauge_settings": 32,
-      "hidden_states_per_setting": 14,
-      "distinct_complete_masters": 448,
-      "operation_gauge_bits": 1,
-      "total_gauge_bits": 6,
-      "total_gauge_settings": 64,
-      "state_operation_representations": 896,
-      "union_variable_residues": [
-        6,
-        8,
-        22,
-        25,
-        41,
-        45,
-        55,
-        58,
-        61,
-        82,
-        84,
-        87,
-        88,
-        90,
-        91,
-        93,
-        94,
-        96,
-        99,
-        100,
-        102,
-        103,
-        105,
-        106,
-        108
-      ]
+      "exact_transducer": {
+        "physical_gauge_bits": 4,
+        "physical_gauge_settings": 16,
+        "hidden_states_per_setting": 14,
+        "distinct_complete_masters": 224,
+        "operation_gauge_bits": 1,
+        "total_gauge_bits": 5,
+        "total_representation_settings": 32
+      },
+      "broader_recursive_family": {
+        "viable_physical_settings": 24,
+        "distinct_complete_masters": 336,
+        "operation_gauge_settings": 2,
+        "total_representation_settings": 48,
+        "state_operation_representations": 672,
+        "coupling_constraint": "NOT(primary q0,d0 H<->F flip AND Q4 F+I polarity flip)",
+        "altered_branch": "8 viable F+I settings retain 14 states, rank 3, terminal 100 but replace middle first-pass 0x2 words with 2x2 words",
+        "union_variable_residues": [
+          6,
+          8,
+          22,
+          25,
+          41,
+          45,
+          55,
+          58,
+          61,
+          82,
+          84,
+          88,
+          91,
+          93,
+          94,
+          99,
+          100,
+          102,
+          103,
+          105,
+          106
+        ]
+      }
     }
   },
   "algebra": {
