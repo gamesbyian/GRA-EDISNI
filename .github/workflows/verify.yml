@@ -25,3 +25,5 @@ jobs:
         run: python scripts/audit_terminal_reuse.py
       - name: Audit raw primary constraints
         run: python scripts/audit_primary_raw_constraints.py
+      - name: Audit primary polarity completion
+        run: python scripts/audit_polarity_completion.py
