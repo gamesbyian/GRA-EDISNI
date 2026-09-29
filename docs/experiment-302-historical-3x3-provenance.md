@@ -36,11 +36,23 @@ The preserved Discord identifiers are useful archival anchors:
 
 The public repository therefore establishes that a labeled nine-piece assembly existed in March 2020, years before the present sticker-machine reconstruction.
 
-## What could not be re-read independently
+## Source-pixel recovery from the 2026 Discord export
 
-The original Discord CDN attachment now returns unavailable/expired through the available public archive path, and the historical Imgur mirror is likewise not retrievable through the current research tooling.
+The 2026 public Discord export removes the previous source-access block.
 
-Therefore this pass does **not** independently re-read the exact tile orientation from the 2020 pixels.
+The exported `#solving` transcript contains the 20 Mar 2020 attachment URL:
+
+`https://media.discordapp.net/attachments/461275582970462209/690395145094299678/unknown.png`
+
+and resolves it to the locally archived asset:
+
+`assets/unknown-c89e81cb90765451.png`
+
+in `twinysam/playdead-unofficial-exports` / the working fork `gamesbyian/playdead-unofficial-exports`. At the inspected fork head `5e5897e2ce70dad5a2bd85e459770637cb36610f`, the asset blob SHA is:
+
+`91268fd6700f0f8fc01527f51e63f8c2f6cb7e43`
+
+The image is readable and visibly carries the historical A–I annotations. The old CDN/Imgur availability problem is therefore closed.
 
 The project's current physical registration remains:
 
@@ -50,30 +62,30 @@ C D E
 F G H
 ```
 
-That orientation is already used and independently supported elsewhere in the present investigation, but Experiment 302 does not pretend to have re-verified it from the dead historical attachment.
+However, recovering the pixels does **not** by itself license a silent coordinate rewrite. The historical image's visible A–I labels, the serial mod-9 phase convention, and the project's registered physical carrier convention must be reconciled explicitly. In particular, a visual tile-label ordering need not be identical to the serial-address ordering used later in the machine model.
 
-This distinction matters:
+This distinction now becomes:
 
-- **historically attested:** labels A–I existed, all nine pieces were assembled, the image was recognized as the printer, and this all happened by March 2020;
-- **not independently recovered in this pass:** the exact A–I spatial order visible in the historical assembly image.
+- **historically attested and source-recovered:** labels A–I existed, all nine pieces were assembled, the image was recognized as the printer, the exact exported attachment is readable, and this all happened by March 2020;
+- **remaining audit:** map the visible historical tile labels through the community's serial/background convention and compare that mapping exactly with the project's registered `IAB/CDE/FGH` carrier.
 
 ## Epistemic consequence
 
 The September-27 handoff's "blocked pending labeled A–I order" condition can now be refined.
 
-The historical existence and date of the labeled complete assembly are no longer missing. What remains missing is a live copy of the actual labeled image, or an independently archived transcription of its exact orientation.
+The historical existence, date, and source pixels of the labeled complete assembly are no longer missing.
 
 That means:
 
 1. the human-solve chronology can safely say that the nine-piece image puzzle and A–I labeling were solved/available in 2020;
-2. the current machine may continue using its established physical layout;
-3. anti-hindsight claims should not say the exact current `IAB/CDE/FGH` orientation was independently re-read from the March-2020 artifact in this audit;
-4. once the Discord archival bot or another archive recovers message `690395145245425724` or attachment `690395145094299678`, the remaining orientation check becomes a simple visual provenance comparison rather than a research problem.
+2. the current machine may continue using its established physical layout pending the explicit convention reconciliation;
+3. anti-hindsight claims may now cite the recovered attachment itself, while still avoiding any unsupported claim that its visible label order is automatically the same coordinate convention as the current `IAB/CDE/FGH` registration;
+4. the remaining orientation check is now a bounded provenance comparison, not a source-recovery problem.
 
 ## Status
 
-**Partial recovery / provenance milestone.**
+**Source recovered / orientation-convention reconciliation pending.**
 
-The historical assembly event and exact source identifiers are recovered. The original pixels required to independently verify the A–I orientation are still unavailable.
+The historical assembly event, source identifiers, and original exported pixels are recovered. The only remaining issue is an exact mapping between the historical visible labels and the current serial/carrier coordinate convention.
 
-Do not spend closed-corpus computation trying to infer what the missing screenshot showed. Recover the source artifact instead.
+Do not infer the mapping from aesthetics. Resolve it from dated message context, serial/image-class phase evidence, and the recovered pixels.
