@@ -287,6 +287,7 @@ Latest indexed experiment: **255**.
 | 277 | final primary-polarity derivation: the alternate q=1,d=2 dash-minority branch has 12 raw POS3 payloads × 36 selectors but zero first-pass survivors; recursion uniquely forces slash-minority and derives the full d<=q staircase |
 | 278 | Q3 route-shell derivation: among all 27 one-output-per-functional-family choices, requiring three distinct ternary permutations uniquely selects q choices (2,1,0) and shell 120/012/102 |
 | 279 | terminal fixed-point audit: of four maximum-retention nonlinear recursions, both 102 branches move 102→100 on a third application; exactly two stable branches remain, both terminal 100 and differing only by invisible f1 gauge |
+| 280 | primary completion-gauge audit: four 14-state frame-weight-three families reproduce the identical canonical transducer; two independent unobserved/unaddressed pulse swaps at residues 6↔8 and 41↔45 form a transition-invisible two-bit physical gauge, expanding 14 preferred masters to 56 gauge-equivalent masters |
 
 ## Current frontier
 
@@ -296,7 +297,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–279:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
+- **250–280:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
 
 ## Status shorthand
 

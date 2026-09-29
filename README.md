@@ -34,7 +34,7 @@ python scripts/verify_machine.py
 
 Assume no new sticker will ever surface. The current 65 observed H108 residues plus the reconstructed symbolic family are the critical path.
 
-Structural prediction comes before semantics. Do not select one of the 14 physical completions because it produces an attractive word, image, or number.
+Structural prediction comes before semantics. Under the preferred exact-POS3 grammar there are 14 physical state masters; Experiment 280 shows the same transducer has four transition-equivalent primary completion gauges (56 masters total) if that physical grammar is weakened. Do not select a state or gauge because it produces an attractive word, image, or number.
 
 The current mechanism is a typed registered selector/routing/canonicalization machine. The terminal `100` is mechanically established; downstream plaintext is not.
 
