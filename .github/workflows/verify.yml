@@ -33,3 +33,5 @@ jobs:
         run: python scripts/enumerate_raw_machine.py
       - name: Compare raw reconstruction to prior generators
         run: python scripts/compare_raw_reconstruction.py
+      - name: Audit raw constraint flow
+        run: python scripts/audit_raw_constraint_flow.py
