@@ -111,6 +111,31 @@
       "path": "assets/twelve_3x3_squares-cccbc93870291d33.png",
       "blob_sha": "2e976a35b2ac7bb9170351cfb45f3dddaeb3e75f",
       "role": "May 2026 explicit nine slash-dash plus three slash-dot 3x3 block rendering"
+    },
+    {
+      "path": "assets/print-b58746938d8d0071.txt",
+      "blob_sha": "87e11d4878bc4fd0a3db204f820820d3dcabc45d",
+      "role": "historical printer client showing server-side /print/index.php validation/response flow"
+    },
+    {
+      "path": "assets/Gateway_status_report.eml_redacted-2f6dcc6739e9117b.txt",
+      "blob_sha": "d1bfa40a2fcc8f46cea7d5be0b99e6d8046412ed",
+      "role": "June 2018 gateway-authentication email with binary status text and embedded printer image"
+    },
+    {
+      "path": "assets/INSIDE_saf_dat_col_interesting-50a465eb636416ab.txt",
+      "blob_sha": "31f744647c40c6431b3ebd9de9aac0392eefd049",
+      "role": "content-addressed extraction of readable Terminal 41 safety-data strings including fsd5t355gf and GATE/81"
+    },
+    {
+      "path": "assets/saf_straightened_band.setup-e3c0718ba65d9561.json",
+      "blob_sha": "e39e4962701576f83254047b613ab1b7848bce4d",
+      "role": "historical saf-byte-workbench geometric straightening/registration attempt"
+    },
+    {
+      "path": "assets/jpeg-cbebfe04a2674523.txt",
+      "blob_sha": "590624925fe3d36a362bbb1de905f459267c211b",
+      "role": "archived JPEG metadata report with creator/date provenance"
     }
   ],
   "chronology": [
