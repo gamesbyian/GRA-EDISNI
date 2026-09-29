@@ -62,12 +62,29 @@ C D E
 F G H
 ```
 
-However, recovering the pixels does **not** by itself license a silent coordinate rewrite. The historical image's visible A–I labels, the serial mod-9 phase convention, and the project's registered physical carrier convention must be reconciled explicitly. In particular, a visual tile-label ordering need not be identical to the serial-address ordering used later in the machine model.
+The export also resolves the convention question directly from dated chat, rather than from visual inference.
+
+On **1 Feb 2020**, before the final C tile was recovered, the community states that its arbitrary A–I labels are arranged, “starting top left, from left to right, working down”:
+
+```
+I A B
+C D E
+F G H
+```
+
+The same discussion says `A = 001`, hence `I = 000`. On **23 Feb 2020** the mapping is restated explicitly as `001=A`, `002=B`, `003=C`, “etc.” This independently fixes the serial/background convention:
+
+```
+serial mod 9: 0 1 2 3 4 5 6 7 8
+image class:  I A B C D E F G H
+```
+
+This is exactly the project's current registered physical carrier. The current `IAB/CDE/FGH` layout is therefore directly historically attested, not reconstructed only in hindsight.
 
 This distinction now becomes:
 
-- **historically attested and source-recovered:** labels A–I existed, all nine pieces were assembled, the image was recognized as the printer, the exact exported attachment is readable, and this all happened by March 2020;
-- **remaining audit:** map the visible historical tile labels through the community's serial/background convention and compare that mapping exactly with the project's registered `IAB/CDE/FGH` carrier.
+- **historically attested and source-recovered:** labels A–I existed; the exact top-left/row-major order was `IAB/CDE/FGH`; `A=001` and `I=000`; all nine pieces were assembled; the image was recognized as the printer; and the final source attachment is readable;
+- **present-project work:** the later 4×3×3×3 address semantics, POS3 rails, Q4 selector, recursion, routing, and terminal remain modern deductions rather than historical community discoveries.
 
 ## Epistemic consequence
 
@@ -78,14 +95,14 @@ The historical existence, date, and source pixels of the labeled complete assemb
 That means:
 
 1. the human-solve chronology can safely say that the nine-piece image puzzle and A–I labeling were solved/available in 2020;
-2. the current machine may continue using its established physical layout pending the explicit convention reconciliation;
-3. anti-hindsight claims may now cite the recovered attachment itself, while still avoiding any unsupported claim that its visible label order is automatically the same coordinate convention as the current `IAB/CDE/FGH` registration;
-4. the remaining orientation check is now a bounded provenance comparison, not a source-recovery problem.
+2. the current machine's `IAB/CDE/FGH` physical layout is directly supported by dated historical community text;
+3. anti-hindsight claims may cite both the recovered attachment and the explicit February-2020 row-major ordering / serial-label convention;
+4. no remaining source or convention gap exists for the nine-image carrier orientation itself.
 
 ## Status
 
-**Source recovered / orientation-convention reconciliation pending.**
+**Complete historical carrier-provenance recovery.**
 
-The historical assembly event, source identifiers, and original exported pixels are recovered. The only remaining issue is an exact mapping between the historical visible labels and the current serial/carrier coordinate convention.
+The historical assembly event, source identifiers, original exported pixels, row-major A–I spatial order, and serial/image-class phase convention are all recovered. The exact current `IAB/CDE/FGH` carrier is historically attested by February 2020.
 
-Do not infer the mapping from aesthetics. Resolve it from dated message context, serial/image-class phase evidence, and the recovered pixels.
+This closes the orientation-provenance gap without adding any evidence for the later machine grammar.
