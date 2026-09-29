@@ -65,9 +65,33 @@
       "path": "assets/stickers_graph-d76961da71021825.png",
       "blob_sha": "6878a6901d181abc485524e16f769c2bab23bd97",
       "role": "May 2026 historical technique graph"
+    },
+    {
+      "path": "assets/INSIDE_A-5d197786f158c567.JPG",
+      "blob_sha": "875403acac93d83a8acae97e14240c35b88d33ab",
+      "role": "large archived reversible-cover source image A"
+    },
+    {
+      "path": "assets/INSIDE_B-80fbff1237c37913.JPG",
+      "blob_sha": "d533d4161f0572b65d134d54f4fa6477029f2d64",
+      "role": "large archived reversible-cover source image B"
+    },
+    {
+      "path": "assets/Cover_blend-dfb43cdd555596a7.jpg",
+      "blob_sha": "57317ff5961a4e4d3de2e25e112b226996c4aae2",
+      "role": "historical cover overlay attempt"
+    },
+    {
+      "path": "assets/Cover_blend_mirrored-c2fb3d0f85f5b014.jpg",
+      "blob_sha": "9dfc550f1fd8abf04c3807d148cd2f0c36d38182",
+      "role": "historical mirrored cover overlay attempt"
     }
   ],
   "chronology": [
+    {
+      "date": "2019-12-15",
+      "claim": "owner reports generic blacklight/UV inspection of reversible cover with no obvious result"
+    },
     {
       "date": "2020-02-01",
       "claim": "community explicitly records row-major image order I,A,B,C,D,E,F,G,H and A=001, hence I=000"
@@ -87,6 +111,17 @@
     {
       "date": "2022-01-26",
       "claim": "foreground 108 rendering explicitly starts with sticker 0 at top left"
+    },
+    {
+      "date": "2022-02-24",
+      "claim": "dedicated UV inspection of sticker/envelope reported negative"
+    }
+  ],
+  "first_party_archive_refs": [
+    {
+      "kind": "iam8bit_tweet_embed",
+      "id": "1203007268930764800",
+      "claim": "standalone physical edition includes an exclusive poster and reversible slip cover with a hidden clue; same version included with Collector's Edition"
     }
   ]
 }
