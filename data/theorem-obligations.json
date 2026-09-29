@@ -13,6 +13,11 @@
   ],
   "checks": [
     {
+      "id": "primary-raw-constraints",
+      "script": "scripts/audit_primary_raw_constraints.py",
+      "covers": ["T1", "T1a", "T1b"]
+    },
+    {
       "id": "canonical-model",
       "script": "scripts/verify_machine.py",
       "covers": ["T3", "T5", "T6", "T8", "T10", "T11", "T12", "R2", "R3", "A1", "A2", "A3"]
