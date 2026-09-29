@@ -459,10 +459,10 @@ Preferred irreducible transition-side supplied set:
 1. serial/H108/A-I carrier geometry;
 2. primary physical column positional code;
 3. primary frame-polarity staircase (minority dash iff `d<=q`), with 8/9 entries directly forced by the corpus under POS3;
-4. Q4 as depth-indexed POS3 selector encoding;
+4. Q4 as a depth-indexed shared-polarity POS3 selector; the shared exceptional-symbol polarity is forced by raw observations to slash;
 5. recursive application of selector to primary memory;
 6. reuse of the same selector on regenerated surfaces;
-7. canonical-shell/permutation preservation when reconstructing Q4 without raw Q4 cell placements.
+7. no additional Q4 scaffold premise is required for the final 14-state family: Experiments 250–252 reconstruct the surviving selector cores directly from raw Q4 stack constraints plus recursive POS3 closure.
 
 Increasingly theorem-level rather than separately supplied:
 
@@ -520,6 +520,65 @@ All 18 outer primary trits are among the 25 observation-forced values and all sa
 Experiment 247 tests the sole unobserved polarity entry against bounded integer linear-threshold completions `[a*q+b*d+c>=0]`. Both binary completions are possible in that broader family, but the current staircase is the unique global minimum-L1 primitive rule: `q-d>=0` (cost 2). The alternate completion first appears as `2q-d>=0` (cost 3). This is a bounded simplicity result, not an absolute proof over all polarity grammars.
 
 Experiment 249 removes each of the 54 distinct observed primary residues in turn and reruns the raw reconstruction. Thirty residues affect at least one headline metric, but no single deletion changes more than one forced frame polarity and/or one forced trit: the worst case moves from 8 forced polarities / 25 forced trits to 7 / 24. The primary reconstruction is therefore not dependent on any single public residue.
+
+Experiments 250–253 move the proof below both finished state parameterizations.
+
+From raw sticker constraints alone under POS3 + the established polarity staircase:
+
+- the primary region has exactly 6 compatible ternary payload completions;
+- Q4 has exactly 36 one-slash-per-depth-stack selector completions;
+- their Cartesian product contains 216 raw-compatible candidate machines.
+
+Applying the current first selector pass and requiring only valid POS3 output reduces 216→20. Reusing the selector and requiring only a valid POS3 terminal reduces 20→14. The terminal payload was not supplied as a filter, yet every one of the 14 survivors yields `100`. Their complete 108-symbol masters are exactly equal to the 14 masters emitted by both prior implementations.
+
+Constraint-flow analysis shows:
+
+- first-pass closure forces the raw-unobserved Q4 C cell from `{0,1,2}` to the binary gauge `{0,2}`;
+- first-pass closure reduces the A/D/G control space to five cores;
+- second-pass closure rejects exactly the six first-pass states with `A=0`;
+- the surviving A/D/G cores are exactly `110`, `220`, and `212`;
+- the request/grant compatibility relation emerges directly from the surviving `(x,y)` ports versus those three control cores.
+
+Thus the Q4 control formulas and arbiter table are descriptive normal forms of the closure result, not assumptions needed to recover the legal state family.
+
+Experiment 253 then reopens the recursion itself on the raw 216-machine parent space. Over all `6^4=1296` shell-preserving two-pass permutation tuples
+
+```
+first:  B(f(q), g(S), j)
+second: B(h(S), k(S), j)
+```
+
+42 operation tuples yield a nonempty completion-invariant POS3 terminal. The maximum number of raw-compatible states retained by any such tuple is 14. Exactly six tuples attain that maximum: `g=h=k=identity`, while `f` ranges over the six relabelings of external q. Every maximal tuple terminates at `100`. Fixing the physical q labels leaves the all-identity recursion uniquely.
+
+This materially reduces circularity in the recursion argument: the canonical two-pass operation can be selected from the raw parent space by shell preservation plus maximum retention of raw-compatible physical states, without first assuming the solved 14-state model.
+
+Experiment 254 weakens the Q4 grammar. If each depth stack may independently choose slash-exception or dot-exception POS3 polarity, raw data permit 7,776 physical Q4 completions / 1,944 distinct selector-depth maps, and recursive closure expands to 52 logical states with two terminals, `100` and `110`. A shared orientation across all nine stacks is therefore doing real work. However, the orientation need not be supplied as “slash”: under the weaker shared-polarity grammar, raw observations admit 36 slash-exception completions and zero dot-exception completions. The current one-slash selector family is thus observationally forced once shared Q4 polarity is assumed.
+
+Experiment 255 weakens the primary grammar from exactly one minority cell per column to zero-or-one minority cell. Raw observations then admit 1,536 primary completions; with the 36 Q4 selectors there are 55,296 raw candidate machines. Recursive POS3 closure leaves 832 states, all of which still terminate at `100`. Exactly 14 of the 832 have all 27 primary columns occupied by one minority cell, and those are the canonical exact-POS3 family. Therefore exact primary POS3 is genuinely needed to select the 14-state physical family, but terminal `100` is invariant over a much broader missing-pulse primary grammar.
+
+Experiment 256 enumerates all 2^9 per-stack Q4 polarity assignments rather than comparing only the globally shared and fully independent extremes. Raw marks admit 256 polarity words; only 16 survive recursive closure. Eight retain the full 14-state family and terminal `100`, while eight form a 12-state sibling terminating at `110`. In every maximal 14-state word, B/D/E/G/H are slash-exception; A/C/F/I may vary across the surviving maximal family. The D-stack polarity is the decisive separator between the 14-state/`100` and 12-state/`110` branches. Therefore globally shared Q4 polarity is stronger than the transition mechanics require, even though it remains a compact rule for the canonical physical completion.
+
+Experiment 257 returns to the 832-state optional-pulse primary closure family from Experiment 255. Requiring only that, within each external quarter, the three depth frames have equal total minority-pulse counts reduces 832 exactly to the canonical 14 states. Every survivor then has frame weight 3 and no missing pulses. Thus exact one-pulse-per-column POS3 need not be imposed directly inside this tested parent: the weaker combination "zero-or-one pulse per column + quarter-local frame-weight balance" recovers it after recursive closure. This is a bounded alternative grammar, not a raw observation.
+
+Experiment 258 exhaustively searches the 36 possible pairwise equalities among the nine frame weights. No set of five or fewer frame-weight equalities eliminates all 818 noncanonical optional-pulse survivors; the natural within-quarter balance rule uses six equalities and does eliminate all 818. Six is therefore the exact cardinality minimum in this equality family. The quarter-local rule is a structurally natural minimum witness, though not claimed to be the unique six-equality solution.
+
+Experiment 259 solves the human-facing raw-evidence minimization exactly within the established H108/POS3 representation. Because the nine primary frames are independent for the Experiment-246 reconstruction constraints, each frame can be minimized exhaustively. The unique global minimum contains 34 distinct observed primary residues and preserves every one of the eight corpus-forced frame polarities plus all 25 corpus-forced primary trits. This is a minimum verification witness for the representation, not a claim that a solver could discover H108/POS3 from those 34 stickers alone.
+
+Experiment 260 factorizes the 16 Q4 polarity words from Experiment 256. The eight 14-state/`100` words form an exact three-bit XOR gauge cube generated by independent A and C polarity flips plus one coupled F+I flip. The eight 12-state/`110` sibling words are exactly that same gauge cube with D polarity toggled. Thus Q4 polarity uncertainty cleanly separates into three transition-preserving physical gauge bits and one functional D branch bit.
+
+Experiment 261 revisits the only primary frame whose polarity is not directly forced by raw observations under exact POS3, `q=1,d=2`. The current slash-minority polarity admits exactly one local payload completion, `100`; the alternate dash-minority polarity admits two completions because its centre column remains ambiguous. This supplies a human-readable local parsimony cue that independently agrees with the global `d<=q` staircase completion, though parsimony itself is not promoted to an authoring axiom.
+
+Experiment 262 removes even the solved `q,d` labels from that human-path test. Using only the unique 34-residue minimum witness arranged as nine consecutive 9-residue physical frames, eight frames admit exactly one POS3 polarity. The ninth admits both, but with completion counts 1 versus 8. Choosing the viable, locally most-determined polarity therefore reproduces all nine staircase polarities before the staircase itself is shown. This makes the staircase plausibly recognizable as a consequence of local visual constraints rather than a prerequisite clever guess.
+
+Experiment 263 asks how a human would know which direction the three-cell POS3 rails run. Among four natural 3x3 line partitions, physical columns are the only orientation compatible with exact POS3 across all nine full-corpus primary frames; rows fit five frames and the two wraparound diagonal families fit four each. On the sparse 34-residue witness all four remain compatible, but columns force eight frame polarities versus 4/4/3.
+
+Experiment 264 broadens that orientation audit to all 280 unlabeled partitions of the nine physical cells into three 3-cell rails. Raw exact-POS3 compatibility alone leaves four partitions, so column orientation is not a pure combinatorial theorem. However, physical columns are the only surviving partition composed of the actual three straight parallel rails. Geometry is therefore a real model-selection input rather than decorative hindsight.
+
+Experiment 265 separates discovery from validation. Using only the 34-residue witness, 168 of the 280 rail partitions remain compatible across all nine frames; five maximize polarity determinacy at 8/9 frames. Revealing the 20 held-out observed primary residues eliminates four of those five. Physical columns are the sole partition that generalizes to all nine full-corpus frames. This gives a hindsight-resistant route to the POS3 rail orientation.
+
+Experiment 266 broadens the first recursive address substitution beyond independent coordinate permutations to all 432 affine bijections of the joint ternary address plane `(q,S)`. Of these, 402 retain no raw-compatible machine at all. Maximum first-pass retention remains 20 states and is achieved by exactly six maps. Every maximum-retention map has `d'=S` exactly and changes only the external quarter label by one of its six affine permutations. No genuine q/S mixing survives at maximum retention. Fixing the physical q labels again leaves the canonical identity substitution. This is a stronger bounded uniqueness result than Experiment 253 for the first pass.
+
+Experiment 267 deliberately drops affine bijectivity as a negative control. Across all 729 affine maps, 24 singular maps retain all 216 raw candidates, but every one erases selector `S` from both output coordinates. They appear to outperform the real recursion only because they discard the very information the selector is supposed to route. Therefore maximum raw-state retention is meaningful only inside a shell/address-preserving parent family; without that structural constraint, the metric rewards information destruction.
 
 ## Mechanical completion
 

@@ -24,17 +24,18 @@ This document separates supplied observations/grammars from derived consequences
 | T1 | T | Under G1–G2, raw observations force 25/27 primary payload trits; the only unresolved trits are `x=(q0,d2,c1)∈{1,2}` and `y=(q2,d0,c1)∈{0,1,2}`. | O2, G1, G2 |
 | T1a | T | All 18 outer primary trits are observation-forced and satisfy minority-row `!=d`; the old outer no-self rule is therefore derived rather than an additional premise. | T1 |
 | T1b | T | The primary payload family reduces to `112 212 0x0 / 212 002 100 / 1y2 022 100`, with the route/cross normal form described in current-state. | T1, T1a |
-| G3 | G | Q4 is a depth-indexed POS3 selector encoded by one slash per depth stack. | O2 |
-| G4 | G | Q4 reconstruction preserves the canonical shell/permutation structure when raw Q4 placements do not determine a cell. | G3, T1b |
-| T2 | T | Q4 reconstructs to the `p/g` selector family with control cores `110/220/212` and baseline `210`. | G3, G4, T1b |
-| G5 | G | First recursive application substitutes selector depth into the primary address: `(q,d,j)->(q,S(j),j)`. | T1b, T2 |
-| T3 | T | First recursion has exactly three functional outputs, indexed only by `p`; hidden-state rank falls 14→3. | G5, T1, T2 |
-| T4 | T | Operational compatibility yields the request/grant relation `00->1, 01->0, 10->2, 11->{0,2}`, equivalently eligibility `[X,NOR(X,Y),Y]`. | T3 |
+| G3 | G | Q4 uses one shared-polarity POS3 orientation across all nine depth stacks. | O2 |
+| T2a | T | Raw Q4 observations force the shared exceptional symbol to slash (36 compatible slash-exception completions, zero dot-exception completions), yielding exactly 36 selector completions. | O2, G3 |
+| G5 | G | First recursive application substitutes selector depth into the primary address: `(q,d,j)->(q,S(j),j)`. | T1b, T2a |
+| T3a | T | Cartesian product of the 6 raw-compatible primary payloads and 36 raw-compatible selectors gives 216 candidate machines; first-pass POS3 closure leaves 20. | T1b, T2a, G5 |
+| G6 | G | The same selector is reused on the regenerated surfaces: `(q,S(j),j)->(S(j),S(j),j)`. | G5 |
+| T2 | T | Second-pass POS3 closure reduces 20→14 and reconstructs the Q4 control family: C is a free {0,2} gauge and A/D/G cores are exactly `110/220/212`. | T3a, G6 |
+| T3 | T | The 14 survivors have exactly three first-pass functional outputs; hidden-state dependence falls 14→3. | T2, G5 |
+| T4 | T | The request/grant relation `00->1, 01->0, 10->2, 11->{0,2}`, equivalently eligibility `[X,NOR(X,Y),Y]`, emerges from surviving primary ports versus the three reconstructed control cores. | T2, T3 |
 | T5 | T | `210` supplies route reindex `q=2-p`; Q3 completes to `102/012/120`. | T3, T4 |
-| G6 | G | The same selector is reused on the regenerated surfaces: `(q,S(j),j)->(S(j),S(j),j)`. | T2, G5 |
-| T6 | T | Second reuse canonicalizes every legal state to frame 9 / payload `100` / raw `---//////`; hidden-state rank falls 3→1. | G6, T3, T5 |
+| T6 | T | Every one of the 14 second-pass survivors canonicalizes to frame 9 / payload `100` / raw `---//////`; terminal `100` is not used as a selection filter. | T2, G6 |
 
-The present transition-side supplied set is therefore **O1–O2 + G1–G6**, but Experiment 246 materially weakens G2: eight of its nine frame polarities are directly forced by the corpus under POS3, leaving only the single missing upper-triangle frame to the global staircase rule. The former outer no-self grammar is no longer in the supplied set. Everything T1–T6 is downstream and must not be counted as independent evidence for those premises.
+Taking the two recursive operations G5–G6 as the operation grammar, the present transition-side supplied set is **O1–O2 + G1–G3 + G5–G6**. Experiment 246 materially weakens G2: eight of its nine frame polarities are directly forced by the corpus under POS3, leaving only one upper-triangle completion to the global staircase rule. Experiment 254 materially weakens G3: only shared Q4 POS3 polarity is supplied; the slash-exception orientation is forced by observations. Experiments 250–252 remove the former Q4 canonical-shell reconstruction premise from the minimal generation chain: the surviving Q4 scaffold/control family is recovered by closure from the 36 raw selector completions. The former outer no-self grammar is likewise theorem-level.
 
 ## State and storage chain
 
@@ -48,6 +49,33 @@ The present transition-side supplied set is therefore **O1–O2 + G1–G6**, but
 | T12 | T | The latent register has weight 6 and minimum Hamming distance 2. | T10 |
 
 The Boolean near-cube is a compression of the native relation, not a premise required to generate the machine.
+
+
+## Robustness boundary beyond the exact state family
+
+Experiment 255 tests a broader primary grammar in which each primary column may contain zero or one minority-symbol pulse. Raw observations allow 1,536 such primary completions. With the 36 Q4 selectors, recursive POS3 closure leaves 832 states. Every survivor still terminates at `100`, but only 14 have one occupied minority pulse in all 27 columns.
+
+Experiment 257 shows that direct exact-POS3 occupancy is not the only compact route back to those 14 states. Inside the 832-state optional-pulse closure family, require only that the three depth frames within each external quarter have equal total pulse count. That coarser quarter-local balance condition leaves exactly 14 states, all with frame weight 3 and therefore with every primary column occupied.
+
+Therefore G1 has three distinct statuses:
+
+- **raw parent:** zero-or-one pulse per column is a broader tested grammar;
+- **exact-state selection:** direct exact POS3 or the weaker quarter-local frame-weight balance both recover the canonical 14-state family inside that parent;
+- **endpoint robustness:** even without either exact-state selector, all 832 recursively closed states terminate at `100`.
+
+This distinction prevents overclaiming uniqueness while strengthening the terminal's robustness.
+
+## Q4 polarity boundary
+
+Experiment 256 enumerates every slash-exception/dot-exception assignment over the nine Q4 stacks. Raw marks allow 256 of the 512 polarity words. Only 16 survive recursive closure:
+
+- 8 maximal words retain 14 states and terminate at `100`;
+- 8 sibling words retain 12 states and terminate at `110`;
+- the remaining 240 raw-compatible polarity words admit no recursively closed state.
+
+Across every maximal 14-state word, B/D/E/G/H are forced slash-exception. A/C/F/I vary across the maximal family. Experiment 260 factorizes that variation exactly: the maximal family is a 3-bit XOR gauge cube generated by independent A and C polarity flips plus one coupled F+I flip. The 12-state/`110` sibling family is precisely the same gauge cube with D polarity toggled.
+
+Thus the globally shared-polarity form of G3 is sufficient but not minimal for the transition. It remains a compact physical-completion rule, but the mechanics separate Q4 polarity into three transition-preserving gauge bits and one functional D branch bit. Any claim that the full Q4 surface is uniquely reconstructed must therefore identify an independent reason to select the all-slash gauge origin.
 
 ## Observer branch
 
@@ -78,10 +106,10 @@ A1–A2 describe closure properties. A3 prevents them from being silently promot
 
 ## Immediate proof obligations exposed by this graph
 
-1. **G1/G2:** broaden beyond POS3 and test whether the ninth frame polarity can be derived from a still-weaker global grammar than the triangular staircase.
-2. **G4:** isolate exactly how much Q4 reconstruction uniqueness depends on canonical-shell preservation.
-3. **G5/G6:** extend Experiments 244–245 beyond independent ternary coordinate maps; current shell-preserving coordinate-map families are unique up to q relabeling.
-4. **T7–T11:** add a lower-level constraint/enumeration implementation beyond the now-completed native-state independent generator.
+1. **G1/G2:** Experiment 257 supplies a weaker sufficient exact-family rule inside the optional-pulse parent: quarter-local equal frame weights. Test whether this balance can itself be derived from raw visibility, carrier symmetry, or recursion rather than supplied as a new grammar.
+2. **G3:** Experiment 260 reduces the surviving Q4 physical ambiguity to a three-bit polarity gauge generated by A, C and coupled F+I. The next target is not generic orientation search but a specific question: whether any independent physical, manufacturing, symmetry, or human-solve cue selects the all-slash gauge origin.
+3. **G5/G6:** Experiment 266 extends first-pass G5 to all 432 coupled affine bijections of the `(q,S)` plane. Maximum raw-state retention still forces `d'=S` and leaves only external-q relabeling, so genuine affine q/S mixing is closed. Experiment 267 shows why the bijective/shell-preserving boundary is essential: singular affine maps can retain all 216 raw states only by erasing S. For further broadening, require an explicit information-preservation criterion rather than naked retention.
+4. **T7–T11:** the lower-level constraint/enumeration target is now satisfied by Experiments 250–251; use it as the preferred independence oracle for future state-family changes.
 5. **R1:** keep observer evidence quarantined when auditing transition uniqueness.
 
-Experiment 241 does not change the preferred machine. It sharpens the frontier by identifying six genuine transition-side grammar commitments and makes the state-language conversion explicitly downstream of the request/grant relation.
+Experiment 241 created the graph; Experiments 246 and 250–253 have since reduced it. The current raw-constraint chain no longer needs outer no-self or a separately supplied Q4 scaffold/control reconstruction, and the state-language conversions are downstream descriptions of the 14-state closure family.

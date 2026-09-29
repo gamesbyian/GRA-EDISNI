@@ -29,3 +29,37 @@ jobs:
         run: python scripts/audit_polarity_completion.py
       - name: Audit primary leave-one-out robustness
         run: python scripts/audit_primary_leave_one_out.py
+      - name: Reconstruct machine from raw constraints
+        run: python scripts/enumerate_raw_machine.py
+      - name: Compare raw reconstruction to prior generators
+        run: python scripts/compare_raw_reconstruction.py
+      - name: Audit raw constraint flow
+        run: python scripts/audit_raw_constraint_flow.py
+      - name: Select recursion from raw candidate space
+        run: python scripts/audit_raw_operation_family.py
+      - name: Audit Q4 shared POS3 polarity
+        run: python scripts/audit_q4_pos3_polarity.py
+      - name: Audit optional-pulse primary grammar
+        run: python scripts/audit_primary_optional_pulse.py
+      - name: Audit Q4 polarity assignment boundary
+        run: python scripts/audit_q4_polarity_assignments.py
+      - name: Audit primary frame-balance recovery
+        run: python scripts/audit_primary_frame_balance.py
+      - name: Audit primary frame-balance minimality
+        run: python scripts/audit_primary_balance_minimality.py
+      - name: Audit minimum primary witness
+        run: python scripts/audit_minimum_primary_witness.py
+      - name: Audit Q4 polarity gauge factorization
+        run: python scripts/audit_q4_polarity_gauge.py
+      - name: Audit ambiguous primary frame parsimony
+        run: python scripts/audit_ambiguous_frame_parsimony.py
+      - name: Audit raw-first POS3 cue
+        run: python scripts/audit_raw_first_pos3_cue.py
+      - name: Audit all POS3 rail partitions
+        run: python scripts/audit_all_pos3_partitions.py
+      - name: Validate POS3 rails on holdout data
+        run: python scripts/audit_pos3_partition_holdout.py
+      - name: Audit coupled affine first-pass recursion
+        run: python scripts/audit_affine_first_pass.py
+      - name: Audit affine retention degeneracy
+        run: python scripts/audit_affine_degeneracy.py

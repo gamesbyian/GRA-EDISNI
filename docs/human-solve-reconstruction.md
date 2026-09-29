@@ -260,8 +260,41 @@ This path is short enough to be human-plausible and keeps every large conceptual
 
 The weakest human-discovery step is still the first recognition of POS3 itself. Once POS3 is noticed, Experiment 246 shows that the primary reconstruction becomes unusually constrained.
 
-The next best human-path research target is therefore not “how would someone guess recursion?” but:
+Experiment 259 now gives an exact answer to the narrower verification version of that question: once H108/POS3 is being tested, a unique set of 34 distinct primary residues preserves all eight raw-forced frame polarities and all 25 raw-forced trits. See `docs/minimum-primary-witness.md`.
 
-> What is the smallest raw-sticker view in which POS3 becomes conspicuous without already arranging the data according to the solved model?
+Experiment 261 also improves the last ambiguous primary frame. At `q=1,d=2`, the current slash-minority polarity yields one exact POS3 payload completion, while the alternate dash-minority polarity leaves two. A human can therefore prefer the current completion by local determinacy even before noticing the global `d<=q` threshold rule.
 
-That question can be attacked with blinded layouts and progressive-reveal worksheets.
+Experiment 262 answers the first version of that question positively inside the candidate grammar. In `docs/raw-first-primary-witness.md`, the 34 residues are shown only as nine consecutive sparse 3×3 physical frames. Eight frames eliminate one polarity outright under exact POS3; the ninth resolves by local completion count 1 versus 8. A solver can therefore recover the entire polarity sequence before seeing the `q,d` lattice or the global staircase.
+
+Experiments 263–265 now push one step earlier, into discovery of the rail orientation itself.
+
+Among the four natural parallel-line partitions of a 3×3 frame, only physical columns fit exact POS3 across all nine full-corpus primary frames. Broadening to every one of the 280 possible 3+3+3 cell partitions leaves four combinatorial survivors, but physical columns are the only one made of three straight parallel rails.
+
+More importantly, the 34-residue witness can be used as a genuine discovery set rather than merely a retrospective illustration. It nominates five partitions that both fit all nine sparse frames and maximize polarity determinacy. The other 20 observed primary residues then act as holdout evidence: four candidates fail, while physical columns alone generalize to all nine full frames.
+
+That gives a plausible human sequence:
+
+1. fold to consecutive 9-residue physical frames;
+2. test simple three-cell rail organizations;
+3. notice that columns are exceptionally constraining;
+4. use more stickers as validation rather than as part of the original guess;
+5. recover frame polarity locally;
+6. only then write the ternary digits and notice the global staircase.
+
+The remaining earlier discovery question is now the H108/A–I framing itself, not POS3 orientation.
+
+
+## Reconciliation with the earlier physical-entry work
+
+Experiments 184–190 already answer the remaining pre-POS3 framing questions strongly enough that this lane should not be reopened as if it were missing.
+
+The physical route is:
+
+1. serial numbers and A–I artwork are coupled exactly by the period-9 cadence;
+2. H108 folds the foreground into twelve consecutive A–I rows;
+3. the alphabet changes exactly at the 81/27 boundary, giving nine slash/dash rows plus three slash/dot rows;
+4. the serial hierarchy therefore supplies the native 4×3×3×3 address directly;
+5. later local registration/recursion distinguishes the two inner ternary axes as quarter then depth rather than an arbitrary transpose;
+6. in Q4, the three repeated A–I rows already form nine raw serial stacks separated by 9, so the depth-selector idea can be noticed before the A–I values are placed into final physical image-space.
+
+Combined with Experiments 259–265, the human path is now unusually well staged from raw object to POS3 orientation without requiring tensor notation or hindsight from the terminal. The remaining genuinely weak human step is no longer address discovery or rail orientation; it is whether the author expected solvers to promote the locally visible one-of-three patterns into recursive address substitution.
