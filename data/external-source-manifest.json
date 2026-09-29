@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-29",
+  "purpose": "External evidence/research corpus inventory for the INSIDE ARG and Collector's Edition sticker investigation.",
+  "active_discord_pr": 55,
+  "sources": [
+    {
+      "id": "bigdusty-readme",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map",
+      "path": "README.md",
+      "ref": "main",
+      "blob_sha": "c694bcda497eabf133ba9dd97b335f4f733c6258",
+      "dest": "archive/external/bigdusty/README.md"
+    },
+    {
+      "id": "bigdusty-stickers",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map",
+      "path": "data/puzzles/stickers.md",
+      "ref": "main",
+      "blob_sha": "532bc7c158ea0798e8f9ea61e1c3ddaca212b9e6",
+      "dest": "archive/external/bigdusty/puzzles/stickers.md"
+    },
+    {
+      "id": "bigdusty-terminal41",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map",
+      "path": "data/puzzles/terminal41.md",
+      "ref": "main",
+      "blob_sha": "d65654471243a5045762d36748934aa379cfdc7e",
+      "dest": "archive/external/bigdusty/puzzles/terminal41.md"
+    },
+    {
+      "id": "bigdusty-printer",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map",
+      "path": "data/puzzles/printer.md",
+      "ref": "main",
+      "blob_sha": "a10c0968a47e6df68973dad8321bf8e9e3207ae3",
+      "dest": "archive/external/bigdusty/puzzles/printer.md"
+    },
+    {
+      "id": "bigdusty-viewgate",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map",
+      "path": "data/puzzles/viewgate-22char.md",
+      "ref": "main",
+      "blob_sha": "8cc4c65236c3fabeb2e7f0d04757b38948c87abe",
+      "dest": "archive/external/bigdusty/puzzles/viewgate-22char.md"
+    },
+    {
+      "id": "bigdusty-breach",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map",
+      "path": "data/puzzles/breach-hashes.md",
+      "ref": "main",
+      "blob_sha": "457822d393e9a1b5a2edd34e2971eb4a18b0e886",
+      "dest": "archive/external/bigdusty/puzzles/breach-hashes.md"
+    },
+    {
+      "id": "bigdusty-transmission",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map",
+      "path": "data/puzzles/transmission.md",
+      "ref": "main",
+      "blob_sha": "445e3c1cc8793a2bffee037e41b55509facedc7c",
+      "dest": "archive/external/bigdusty/puzzles/transmission.md"
+    },
+    {
+      "id": "bigdusty-block-descriptions",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map",
+      "path": "data/block_descriptions_full.json",
+      "ref": "main",
+      "blob_sha": "b813a2e836cd31875c48372784ce4f17b28beb8d",
+      "dest": "archive/external/bigdusty/data/block_descriptions_full.json"
+    },
+    {
+      "id": "bigdusty-canvas",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map",
+      "path": "data/canvas.canvas",
+      "ref": "main",
+      "blob_sha": "dc30d3381132c60deecabccabb71748698d437ad",
+      "dest": "archive/external/bigdusty/data/canvas.canvas"
+    },
+    {
+      "id": "twinysam-readme",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "twinysam/INSIDE-ARG",
+      "path": "readme.md",
+      "ref": "master",
+      "blob_sha": "97476d5b0a47a51eee05bb4a6cfee657ad922218",
+      "dest": "archive/external/twinysam-inside-arg/readme.md"
+    },
+    {
+      "id": "twinysam-stickers",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "twinysam/INSIDE-ARG",
+      "path": "stickers.md",
+      "ref": "master",
+      "blob_sha": "0b12cea77679ff937611dade334a60c6807dfb46",
+      "dest": "archive/external/twinysam-inside-arg/stickers.md"
+    },
+    {
+      "id": "twinysam-raezores",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "twinysam/INSIDE-ARG",
+      "path": "raezores-research.md",
+      "ref": "master",
+      "blob_sha": "2ff09eeff1f15985f2e6823d794641e19c01f53e",
+      "dest": "archive/external/twinysam-inside-arg/raezores-research.md"
+    },
+    {
+      "id": "rt-archive-inside-gaming-features",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "shiruken/rt-archive",
+      "path": "docs/inside-gaming-features/data.json",
+      "ref": "main",
+      "blob_sha": "b4058e89d1484319a97f7348a370368b63666c2d",
+      "dest": "archive/external/rt-archive/inside-gaming-features-data.json",
+      "note": "Contains 2020-01-25 'The Inside Collector's Edition' entry."
+    },
+    {
+      "id": "inside-noclip-readme",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "abarichello/inside-noclip",
+      "path": "README.md",
+      "ref": "master",
+      "blob_sha": "b7f38ac15fa780bd52fd700c45c1994b1fa49780",
+      "dest": "archive/external/inside-noclip/README.md"
+    },
+    {
+      "id": "inside-noclip-table",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "abarichello/inside-noclip",
+      "path": "INSIDE.CT",
+      "ref": "master",
+      "blob_sha": "68922793e043fc6976e9cb075fdf102828c9f279",
+      "dest": "archive/external/inside-noclip/INSIDE.CT"
+    },
+    {
+      "id": "inside-noclip-lua",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "abarichello/inside-noclip",
+      "path": "asm.lua",
+      "ref": "master",
+      "blob_sha": "b125bd542b20305794810ad56ed92bfdc31cfda6",
+      "dest": "archive/external/inside-noclip/asm.lua"
+    },
+    {
+      "id": "inside-noclip-license",
+      "kind": "github_blob",
+      "status": "vendored",
+      "source": "abarichello/inside-noclip",
+      "path": "LICENSE",
+      "ref": "master",
+      "blob_sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "dest": "archive/external/inside-noclip/LICENSE"
+    },
+    {
+      "id": "discord-export-recovery",
+      "kind": "project_pr",
+      "status": "handled_elsewhere",
+      "source": "gamesbyian/GRA-EDISNI#55",
+      "note": "Canonical lane for Discord export archaeology; avoid duplicate vendoring."
+    },
+    {
+      "id": "bigdusty-tier29",
+      "kind": "missing_repro_asset",
+      "status": "pending",
+      "source": "BigDusty local paths",
+      "note": "Tier 29 mojibake/byte reversal scripts, logs, exact input blob and recovered 42x42 Sleep BMP."
+    },
+    {
+      "id": "twinysam-terminal41-mirror",
+      "kind": "github_subtree",
+      "status": "pending",
+      "source": "twinysam/INSIDE-ARG",
+      "path": "terminal41.link/",
+      "note": "Prioritise saf_dat_col, breach registry, viewgate, printreqstatus and 534brn9653f9j8mmd assets."
+    },
+    {
+      "id": "inside-gaming-ce-video",
+      "kind": "video",
+      "status": "pending",
+      "source": "Inside Gaming / Rooster Teeth archive",
+      "note": "Acquire best surviving copy; extract and cluster sticker-region frames."
+    },
+    {
+      "id": "social-owner-hunt-corpus",
+      "kind": "social_manifest",
+      "status": "pending",
+      "note": "Facebook, Reddit, X, Instagram, YouTube, eBay, ResetEra, PriceCharting, CollectedIt, PSNProfiles, VK, MistARG and multilingual leads."
+    }
+  ]
+}
