@@ -299,7 +299,10 @@ Latest indexed experiment: **255**.
 | 289 | Q4 A/C gauge-support audit: A and C stacks are entirely unobserved, and flipping either polarity leaves all six surviving selector-depth fields plus first-pass/terminal outputs unchanged |
 | 290 | human coordinate-copy audit: among (q,q), (q,S), (S,q), (S,S), only (q,S) is selector-sensitive, q-preserving, and nondegenerate; it leaves 20 first-pass states and canonical reuse reduces to 14/100 |
 | 291 | human second-selection audit: fixed q=0/1/2 each preserve all 20 first-pass machines with three outputs, while q=S uniquely reduces 20→14 and gives one invariant payload 100 |
+| 292 | independent-Q4-polarity route audit: 256 raw-compatible polarity words → 16 recursive closures → 8 maximum 14-state words → exactly 4 route-capable words 0/A/C/A+C; shared polarity is not functionally required |
 | 293 | weaker-input-POS3 recovery: common frame weight + two raw-supported exact repeats + three quarter aggregate-balance tests recover exactly the canonical 14 source-POS3 states and eliminate weight 4; exhaustive subset ablation shows all five regularities are jointly necessary inside this tested parent |
+| 294 | arbitrary-selector route inverse: all 19,683 ternary Q4 fields × six primary payloads give 288 first-pass and 208 second-pass POS3 pairs; across all 84 possible three-cell core locations, the reversible-route criterion uniquely selects A/D/G with the real scaffold modulo C gauge, cores 110/220/212, seven-state compatibility, terminal 100, and shell 120/012/102 without raw Q4 cells or a target terminal |
+| 295 | Q4 physical-codebook holdout audit: Experiment-294 fixed scaffold first leaves 8 shared E[S,d] codebooks; requiring the full recovered selector family to reproduce all 11 Q4 observations forces 7/9 entries and leaves a two-bit gauge E[0,2]/E[1,2] across 4 codebooks; distinct/nonuniform rows remain non-unique, but either equal row weight or cyclic depth/value equivariance uniquely yields /.., ./., ../ (slash iff d=S), with minimum slash count agreeing as a simplicity prior |
 
 ## Current frontier
 
