@@ -580,6 +580,10 @@ Experiment 266 broadens the first recursive address substitution beyond independ
 
 Experiment 267 deliberately drops affine bijectivity as a negative control. Across all 729 affine maps, 24 singular maps retain all 216 raw candidates, but every one erases selector `S` from both output coordinates. They appear to outperform the real recursion only because they discard the very information the selector is supposed to route. Therefore maximum raw-state retention is meaningful only inside a shell/address-preserving parent family; without that structural constraint, the metric rewards information destruction.
 
+Experiment 268 broadens the same-operation recursion to 1,296 nonlinear selector-fiber-preserving bijections of the form `d'=g(S)`, `q'=f_S(q)`, allowing a different quarter permutation for each selector value and reusing the exact same map on the second pass. Maximum final retention is still 14 states, but four operations attain it. All four select exactly the same canonical 14 physical H108 masters. Two produce invariant terminal `100`; two produce invariant terminal `102`. One binary freedom, `f_1: identity <-> swap(0,1)`, is transition-invisible on the selected family. A second, `f_2: identity <-> swap(0,2)`, toggles the endpoint `100 <-> 102`. Thus the physical master family is robust in this broader nonlinear parent, while endpoint uniqueness depends on the hierarchical first-pass premise that selector substitution preserves the outer quarter coordinate.
+
+Experiment 269 tests the earlier retraction/reset interpretation directly. Within the same 1,296-map nonlinear family, idempotence leaves six address resets before looking at terminal values; requiring nonempty two-pass POS3 closure leaves exactly one, the canonical identity operation. It retains the same 14 physical masters and terminates at `100`. The `102` sibling from Experiment 268 is excluded because its conditional quarter swap oscillates under repetition. Idempotence is therefore a compact structural selector for the canonical recursion, but it remains an operation-grammar premise rather than independent sticker evidence.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
@@ -609,12 +613,12 @@ Every established family is:
 
 The attractive complemented-binary terminal `000111111 = 63 = '?'` is explicitly post-hoc and not promoted.
 
-Current endpoint:
+Preferred hierarchical endpoint:
 
 ```
 frame 9 / normalized 100 / raw ---//////
 ```
 
-Treat this as the mechanically generated acceptance/canonical state.
+Under the native inside-out address substitution, this is the mechanically generated acceptance/canonical state. Experiment 268 shows that the wider selector-fiber-preserving family admits an equally large 14-state sibling ending at `102`; Experiment 269 removes that sibling once recursive selection is required to behave as an idempotent reset. The physical 14-master reconstruction is robust across the broader family, while `100` is uniquely selected only after the structural recursion grammar is specified.
 
-A semantic epilogue remains possible only if new independent information specifies how to consume it.
+A semantic epilogue remains possible only if independent information both supports the intended recursion grammar and specifies how to consume its terminal.
