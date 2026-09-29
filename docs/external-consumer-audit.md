@@ -47,6 +47,8 @@ First-pass questions:
 
 Do not grid-search arbitrary overlays for attractive fragments. A registration must be justified by the physical artwork itself.
 
+Historical-export update (2026-09-29): the Discord archive shows that generic UV/blacklight inspection was tried by an owner in December 2019 with no obvious result, and later dedicated UV inspection of the sticker/envelope in 2022 was also negative. The community additionally tried scene matching, 12:12 timing, case/plastic viewing, lighting-angle/translucency ideas, and cover overlays without a conclusive result. Do not spend new effort repeating those generic operations unless a new physical cue specifies a materially different test. The unresolved part of this target is source-quality imaging plus bounded structural inspection; historical participants repeatedly described the available cover scans as low quality.
+
 ### 2. Collector's Edition printed and structured materials
 
 Audit printed packaging, art cards/inserts, labels, sleeve material, and other structured CE components before treating the sculpture itself as a code surface.
