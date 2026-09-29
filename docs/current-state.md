@@ -19,7 +19,7 @@ The preferred model is one serial-addressed ternary positional machine with:
 
 No downstream completion-invariant plaintext, URL, instruction, image, or lore phrase has been established.
 
-The internal semantic branch is closed at the current evidence level. Reopen it only if an external physical/archive/ARG clue independently supplies a consumer for the terminal object.
+The internal semantic branch is closed at the current evidence level. Reopen it only if an external physical/archive/ARG clue independently supplies a consumer for the terminal object. The bounded protocol for doing that without semantic overfitting is `docs/external-consumer-audit.md`: external evidence must supply the cue first, and failure to find a consumer leaves `100` as the valid project endpoint.
 
 ## Closed-corpus posture
 
