@@ -539,8 +539,8 @@ The plan has now been implemented on this branch.
 
 Deliverables:
 
-- `deliverables/INSIDE_Collector_Edition_Sticker_Mystery_Updated_2026-09-29.pptx`
-- `deliverables/INSIDE_Sticker_Mystery_Verification_Pack_Updated_2026-09-29.xlsx`
+- `deliverables/INSIDE_Collector_Edition_Sticker_Mystery_v2.pptx`
+- `deliverables/INSIDE_Sticker_Mystery_Verification_Pack_v2.xlsx`
 
 Implementation notes:
 
