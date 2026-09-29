@@ -168,6 +168,25 @@ Archival target created by this clue:
 - search iam8bit support/marketing archives for the wording;
 - ask iam8bit directly what "numbered... in their own way" referred to.
 
+
+
+### 8A. Historical high-serial inference was visibly underdetermined
+
+The Discord archive preserves a useful warning against turning sticker serials into production-count claims.
+
+On **17 Mar 2020**, a solver speculated that iam8bit might have produced about 600 units, retained the end of the run, and happened to use sticker 597 in its own unboxing. This was explicitly speculation, not manufacturing evidence.
+
+By **13 Sep 2022**, the community had located about 70 confirmed sticker images plus many lost/unknown owners, yet (apart from iam8bit's 597) essentially none of the discovered stickers lay above 478. A contemporaneous calculation noted that, **if** all numbers 001–597 existed and the 70 discoveries were an independent uniform sample, the chance of all 70 falling in 001–478 would be about 0.000017%. The calculation is arithmetically useful but its sampling model is not credible: owner discovery came through correlated social-media searches, auctions, unboxing videos, Discord contacts, and repeated hunting by the same people.
+
+Consequences:
+
+- sticker **597 proves a high serial exists**, but by itself does not prove 597 units were manufactured;
+- the absence of many 479–596 discoveries cannot safely bound production because the recovered-owner corpus is heavily ascertainment-biased;
+- the old “about 500/600 copies” language should remain manufacturing speculation unless independently sourced;
+- serial-range inference should be based on the generated label/code space or production records, not owner-sample frequencies.
+
+The later 108-cycle reconstruction makes this distinction still more important: a generated code space can extend beyond the number of packages actually sold, and a highest observed serial need not be an edition count.
+
 ### 9. iam8bit publicly describes substantial physical-production work as in-house
 
 In a 2020 GamesRadar feature about boutique physical releases, Jon Gibson and Amanda White describe iam8bit's operating model for its Legacy Cartridge Collection. They say the in-house iam8bit team manages creative, restoration, **print production, fulfilment, shipping, sales, and business**, while specialized partners handle cartridge engineering/fabrication.
