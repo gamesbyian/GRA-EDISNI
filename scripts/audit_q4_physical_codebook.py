@@ -45,6 +45,7 @@ FIXED_SELECTOR = {
     "H": 2,
     "I": 2,
 }
+CORE_WORDS = ("110", "220", "212")
 
 
 def code_bit(mask: int, selector: int, depth: int) -> int:
@@ -120,7 +121,7 @@ def main() -> None:
         (2, 2): SLASH,
     }
 
-    compatible = [
+    fixed_compatible = [
         mask
         for mask in range(1 << 9)
         if all(
@@ -128,24 +129,96 @@ def main() -> None:
             for (selector, depth), observed_symbol in constraints.items()
         )
     ]
-    assert len(compatible) == 8
+    assert len(fixed_compatible) == 8
 
-    # Basic ternary distinguishability is far too weak: all eight holdout-
-    # compatible codebooks already have three distinct physical codewords.
+    # Now reintroduce the state-dependent A/D/G positions without guessing a
+    # hidden state. Experiment 294 recovered all three functional core words
+    # and both C-gauge representatives, so a shared physical codebook that is
+    # compatible with the full machine must reproduce every classified Q4 mark
+    # for every recovered selector field.
+    selector_fields = []
+    for c_gauge in (0, 2):
+        for core in CORE_WORDS:
+            selector_fields.append(
+                {
+                    "A": int(core[0]),
+                    "D": int(core[1]),
+                    "G": int(core[2]),
+                    "B": 2,
+                    "C": c_gauge,
+                    "E": 0,
+                    "F": 1,
+                    "H": 2,
+                    "I": 2,
+                }
+            )
+
+    q4_observations = []
+    for record in rows:
+        residue = int(record["residue"])
+        if residue < 82:
+            continue
+        offset = residue - 82
+        q4_observations.append(
+            (
+                SERIAL_ORDER[offset % 9],
+                offset // 9,
+                record["symbol"],
+            )
+        )
+
+    compatible = []
+    for mask in fixed_compatible:
+        if all(
+            symbol(mask, field[letter], depth) == observed_symbol
+            for field in selector_fields
+            for letter, depth, observed_symbol in q4_observations
+        ):
+            compatible.append(mask)
+
+    assert len(q4_observations) == 11
+    assert len(selector_fields) == 6
+    assert len(compatible) == 4
+
+    forced_entries = {}
+    variable_entries = []
+    for selector in range(3):
+        for depth in range(3):
+            values = {
+                symbol(mask, selector, depth)
+                for mask in compatible
+            }
+            if len(values) == 1:
+                forced_entries[(selector, depth)] = next(iter(values))
+            else:
+                variable_entries.append((selector, depth))
+
+    assert forced_entries == {
+        (0, 0): SLASH,
+        (0, 1): DOT,
+        (1, 0): DOT,
+        (1, 1): SLASH,
+        (2, 0): DOT,
+        (2, 1): DOT,
+        (2, 2): SLASH,
+    }
+    assert variable_entries == [(0, 2), (1, 2)]
+
+    # Basic ternary distinguishability is still too weak: all four full-family
+    # compatible codebooks already have distinct, nonuniform physical rows.
     distinct_rows = [
         mask
         for mask in compatible
         if len({codeword(mask, selector) for selector in range(3)}) == 3
     ]
-    assert len(distinct_rows) == 8
+    assert len(distinct_rows) == 4
 
-    # Even requiring every codeword to be nonuniform leaves six alternatives.
     nonuniform_rows = [
         mask
         for mask in compatible
         if all(row_weight(mask, selector) in (1, 2) for selector in range(3))
     ]
-    assert len(nonuniform_rows) == 6
+    assert len(nonuniform_rows) == 4
 
     equal_weight = [
         mask
@@ -193,9 +266,12 @@ def main() -> None:
     print("Experiment-294 fixed scaffold selector values:", FIXED_SELECTOR)
     print("fixed-scaffold Q4 observations:", len(fixed_observations))
     print("distinct shared-codebook entries observed:", len(constraints))
-    print("holdout-compatible 3x3 binary codebooks:", len(compatible))
+    print("fixed-scaffold-compatible codebooks:", len(fixed_compatible))
+    print("full recovered-family compatible codebooks:", len(compatible))
+    print("forced shared-codebook entries:", forced_entries)
+    print("remaining physical-codebook gauge entries:", variable_entries)
     print(
-        "compatible codebooks:",
+        "full-family compatible codebooks:",
         [
             tuple(codeword(mask, selector) for selector in range(3))
             for mask in compatible
@@ -215,6 +291,8 @@ def main() -> None:
         "minimum-slash survivors:",
         [tuple(codeword(mask, s) for s in range(3)) for mask in minimum_weight],
     )
+    print("RESULT: raw Q4 marks + the recovered selector family force 7/9 codebook entries")
+    print("RESULT: only E[0,2] and E[1,2] remain as a two-bit physical-codebook gauge")
     print("RESULT: two independent symmetry criteria recover /.., ./., ../")
     print("RESULT: physical Q4 one-slash POS3 need not be supplied directly")
     print("RESULT: raw Q4 scaffold marks become holdout evidence after Experiment 294")
