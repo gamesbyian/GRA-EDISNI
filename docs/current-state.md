@@ -576,6 +576,8 @@ Experiment 264 broadens that orientation audit to all 280 unlabeled partitions o
 
 Experiment 265 separates discovery from validation. Using only the 34-residue witness, 168 of the 280 rail partitions remain compatible across all nine frames; five maximize polarity determinacy at 8/9 frames. Revealing the 20 held-out observed primary residues eliminates four of those five. Physical columns are the sole partition that generalizes to all nine full-corpus frames. This gives a hindsight-resistant route to the POS3 rail orientation.
 
+Experiment 266 broadens the first recursive address substitution beyond independent coordinate permutations to all 432 affine bijections of the joint ternary address plane `(q,S)`. Of these, 402 retain no raw-compatible machine at all. Maximum first-pass retention remains 20 states and is achieved by exactly six maps. Every maximum-retention map has `d'=S` exactly and changes only the external quarter label by one of its six affine permutations. No genuine q/S mixing survives at maximum retention. Fixing the physical q labels again leaves the canonical identity substitution. This is a stronger bounded uniqueness result than Experiment 253 for the first pass.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
