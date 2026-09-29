@@ -1,0 +1,44 @@
+name: External evidence tool checks
+
+on:
+  pull_request:
+    paths:
+      - "scripts/external_evidence/**"
+      - "data/external-acquisition-targets.json"
+      - ".github/workflows/external-evidence-*.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile Python helpers
+        run: python -m py_compile scripts/external_evidence/*.py
+      - name: Parse acquisition manifest
+        run: python -m json.tool data/external-acquisition-targets.json >/dev/null
+      - name: Exercise Git blob verifier
+        shell: bash
+        run: |
+          printf 'hello evidence\n' > /tmp/evidence.txt
+          expected="$(git hash-object /tmp/evidence.txt)"
+          python scripts/external_evidence/verify_git_blob.py /tmp/evidence.txt "$expected" --size 15
+      - name: Exercise lead discovery
+        shell: bash
+        run: |
+          mkdir -p /tmp/evidence-leads
+          printf '%s\n' 'https://example.invalid/new-lead' > /tmp/evidence-leads/sample.txt
+          python scripts/external_evidence/discover_leads.py /tmp/evidence-leads --output /tmp/leads.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          payload = json.loads(Path('/tmp/leads.json').read_text())
+          assert payload['count'] == 1, payload
+          PY
