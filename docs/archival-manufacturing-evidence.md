@@ -117,6 +117,7 @@ Sources:
 - contemporary December 2019 shipping/unboxing thread: https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/now_shipping_finally/
 - owner comparison, 2019-12-23: https://www.reddit.com/r/PlaydeadsInside/comments/eers0x
 - 2026 packaging clarification: https://www.reddit.com/r/PlaydeadsInside/comments/1l5x8rb/does_anyone_know_where_i_can_get_the_inside/
+- public Discord export, `ARG / solving`: on 12 Jul 2020 an owner says they “threw that crucial black envelope away,” contemporaneously confirming the community's understanding that the coded material was attached to the disposable black game-envelope/wrap rather than the durable Huddle box.
 
 This sharply changes the manufacturing map:
 
@@ -140,6 +141,8 @@ Source:
 - https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/now_shipping_finally/
 
 Evidence status: **contemporaneous secondhand quotation**, not a first-party archived iam8bit post. It should not be treated as equivalent to a primary source unless the original Instagram exchange is recovered.
+
+The September-2026 public Discord export independently preserves the same witness reporting the point in real time. On 17 Dec 2019, `nathe26` corrects the claim that there were 2,000 Collector's Editions: iam8bit “said they wouldn't reveal how many collectors but that they are numbered in their own way.” The `General / inside` export also preserves a 15 Dec 2019 version of the same recollection. This does not create a second witness, but it substantially improves chronology/provenance for the reported iam8bit wording.
 
 Nevertheless, it is highly diagnostic. In December 2019, before the community had reconstructed the current H108 machinery, iam8bit reportedly distinguished the numbers from ordinary edition numbering. That supports investigating the three-digit value as an intentionally designed code/address rather than assuming it denotes copy count.
 
