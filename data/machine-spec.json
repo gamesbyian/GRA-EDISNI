@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "source_checkpoint": "Google Results through Experiment 208",
+  "closed_corpus": true,
+  "addressing": {
+    "period": 108,
+    "background_period": 9,
+    "primary_residues": [1, 81],
+    "q4_residues": [82, 108],
+    "formula": "r-1 = 27*Q + 9*d + j"
+  },
+  "primary_lattice": [
+    ["112", "212", "0x0"],
+    ["212", "002", "100"],
+    ["1y2", "022", "100"]
+  ],
+  "variables": {
+    "x": [1, 2],
+    "y": [0, 1, 2],
+    "g": [0, 2],
+    "X": "x==2",
+    "Y": "y==2"
+  },
+  "legal_functional_states": [
+    [1, 0, 1],
+    [1, 1, 1],
+    [1, 2, 0],
+    [2, 0, 2],
+    [2, 1, 2],
+    [2, 2, 0],
+    [2, 2, 2]
+  ],
+  "q4": {
+    "rule": "exactly one slash per depth stack",
+    "centre_baseline": "210",
+    "p_cores": {
+      "0": "110",
+      "1": "220",
+      "2": "212"
+    }
+  },
+  "grant_relation": {
+    "00": [1],
+    "01": [0],
+    "10": [2],
+    "11": [0, 2]
+  },
+  "route": {
+    "q_formula": "2-p",
+    "q3_rows": {
+      "0": "102",
+      "1": "012",
+      "2": "120"
+    },
+    "q1_left": "120",
+    "q2_left": "201"
+  },
+  "terminal": {
+    "payload": "100",
+    "frame": 9,
+    "raw_serial_word": "---//////"
+  },
+  "latent_register": {
+    "22": "X",
+    "25": "not X",
+    "55": "y==0",
+    "58": "y==1",
+    "61": "y==2",
+    "84": "g==2",
+    "102": "g==0",
+    "100": "p==0",
+    "91": "p!=0",
+    "94": "p==1",
+    "103": "p!=1",
+    "88": "p==2",
+    "106": "p!=2"
+  },
+  "observer": {
+    "same_quarter": ["0", "0", "X", "1", "0", "0", "Y", "0", "0"],
+    "q4_target": ["0", "0", "X&Y&P0", "1", "G", "P0", "!Y1", "1", "!P0"]
+  },
+  "state_counts": {
+    "physical": 14,
+    "functional": 7,
+    "control": 5,
+    "routed": 3,
+    "terminal": 1
+  },
+  "derived_invariants": {
+    "latent_code_weight": 6,
+    "latent_code_min_distance": 2,
+    "symbol_census": {
+      "slash": 54,
+      "dash": 36,
+      "dot": 18
+    },
+    "transformation_monoid_size": 27
+  }
+}
