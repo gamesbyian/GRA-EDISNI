@@ -1,9 +1,10 @@
-name: Verify Experiment 296
+name: Verify Experiments 296-297
 
 on:
   pull_request:
     paths:
       - "scripts/audit_single_cell_recursion_defects.py"
+      - "scripts/audit_two_cell_recursion_defects.py"
       - "scripts/enumerate_raw_machine.py"
       - "data/observations.csv"
       - "docs/alternative-machine-single-cell-defects.md"
@@ -19,3 +20,5 @@ jobs:
           python-version: "3.12"
       - name: Run single-cell recursion-defect audit
         run: python scripts/audit_single_cell_recursion_defects.py
+      - name: Run two-cell first-pass defect audit
+        run: python scripts/audit_two_cell_recursion_defects.py
