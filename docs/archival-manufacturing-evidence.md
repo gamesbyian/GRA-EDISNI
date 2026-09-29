@@ -187,6 +187,27 @@ Consequences:
 
 The later 108-cycle reconstruction makes this distinction still more important: a generated code space can extend beyond the number of packages actually sold, and a highest observed serial need not be an edition count.
 
+
+
+### 8B. Sticker serial was not a simple preorder-sequence number
+
+The archived Discord chronology supplies a useful discriminator against the simplest fulfillment model.
+
+On **12 Jul 2020**, the sticker-hunting lead reports that an owner who had **preordered within roughly ten minutes** of the Collector's Edition preorder opening turned out to have sticker **144**, not a near-zero serial. This is a community report about the owner's preorder timing rather than an iam8bit order record, so preserve it at that evidentiary level.
+
+If accurate, it makes a direct mapping such as:
+
+`sticker serial = preorder/order sequence`
+
+very unlikely. It is compatible with several other mechanisms:
+
+- labels were generated in a fixed pool and assigned non-sequentially;
+- pack-out order differed substantially from preorder order;
+- stickers were shuffled/randomized before application;
+- the serial belongs to an authored code/address space rather than a unit sequence.
+
+This does not tell us which mechanism was used, but it creates a concrete question for production records: **was sticker identity assigned to an order, or was it determined independently during CE-specific wrapping/pack-out?**
+
 ### 9. iam8bit publicly describes substantial physical-production work as in-house
 
 In a 2020 GamesRadar feature about boutique physical releases, Jon Gibson and Amanda White describe iam8bit's operating model for its Legacy Cartridge Collection. They say the in-house iam8bit team manages creative, restoration, **print production, fulfilment, shipping, sales, and business**, while specialized partners handle cartridge engineering/fabrication.
