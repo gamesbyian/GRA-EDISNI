@@ -584,6 +584,8 @@ Experiment 268 broadens the same-operation recursion to 1,296 nonlinear selector
 
 Experiment 269 tests the earlier retraction/reset interpretation directly. Within the same 1,296-map nonlinear family, idempotence leaves six address resets before looking at terminal values; requiring nonempty two-pass POS3 closure leaves exactly one, the canonical identity operation. It retains the same 14 physical masters and terminates at `100`. The `102` sibling from Experiment 268 is excluded because its conditional quarter swap oscillates under repetition. Idempotence is therefore a compact structural selector for the canonical recursion, but it remains an operation-grammar premise rather than independent sticker evidence.
 
+Experiment 270 revisits the three transition-invisible Q4 polarity gauge bits from Experiment 260 using only the physical 3×3 artwork. Across all 16 recursively closed polarity words, the authored all-slash word is the unique minimum in four preregistered locality costs: number of dot-exception stacks, orthogonal polarity boundaries, mixed rows, and mixed columns. This ranking does not inspect selector depths, hidden states, recursion outputs, or terminal values. Together with Experiment 254, which shows that raw observations force slash once one shared exceptional-symbol polarity is assumed, this makes the all-slash completion the unique globally homogeneous representative of the closure family. Physical simplicity is an authoring prior, not a new observation.
+
 ## Mechanical completion
 
 Experiment 237 provides a single typed transducer specification.
