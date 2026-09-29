@@ -389,3 +389,27 @@ This qualifies the “active consumer” precedent:
 - historical endpoint chronology must distinguish **time/platform-release gates** from **answer-triggered unlocks**.
 
 That distinction should carry into any search for a modern consumer of terminal \`100\`: server state changes alone do not prove causation by a submitted token.
+
+
+## Historical sticker-ledger drift audit: 597 discrepancy resolved
+
+The recovered legacy Google Doc \`Inside Collector's Edition Numbers\` records sticker **597** as:
+
+\`/597 · image C · iam8bit YouTube\`
+
+while canonical \`data/observations.csv\` records:
+
+\`597 · - · image C\`
+
+This initially looked like source drift worth quarantining. Git history resolves it cleanly.
+
+On **10 Oct 2021**, upstream \`twinysam/INSIDE-ARG\` commit \`5f1fa6f8db746519d9e83f524a2eb54baeb2aab6\`, titled **“Fixing two mistakes of symbol descriptions (306 • and 597 -)”**, explicitly changes the sticker-ledger entry for 597 from slash to dash and 306 from dash to dot. The current upstream ledger and our canonical observations agree with those corrections.
+
+Therefore:
+
+- **do not change canonical 597**; dash is the later explicit correction;
+- treat the old Google Doc as a valuable historical snapshot, not automatically authoritative over later source corrections;
+- provenance mining must compare recovered snapshots against subsequent Git history before promoting discrepancies;
+- the same audit confirms canonical **306 = dot** is also a deliberate later correction.
+
+This is a useful example of why frozen historical documents are excellent for chronology but can preserve superseded transcription errors.
