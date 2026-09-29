@@ -11,6 +11,7 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -106,7 +107,12 @@ def harvest_direct(source: dict, root: Path) -> dict:
     return result
 
 
-def harvest_youtube(source: dict, root: Path, include_media: bool) -> dict:
+def harvest_youtube(
+    source: dict,
+    root: Path,
+    include_media: bool,
+    cookies_file: Path | None = None,
+) -> dict:
     if shutil.which("yt-dlp") is None:
         raise RuntimeError("yt-dlp is not installed")
 
@@ -124,6 +130,10 @@ def harvest_youtube(source: dict, root: Path, include_media: bool) -> dict:
         "--paths", str(out_dir),
         "--output", "%(id)s/%(title).200B [%(id)s].%(ext)s",
     ]
+    if cookies_file is not None:
+        if not cookies_file.is_file():
+            raise RuntimeError(f"YouTube cookies file not found: {cookies_file}")
+        cmd += ["--cookies", str(cookies_file)]
     if source.get("comments"):
         cmd += ["--write-comments"]
     if not include_media or not source.get("media", True):
@@ -197,6 +207,13 @@ def main() -> int:
     parser.add_argument("--include-media", action="store_true")
     parser.add_argument("--include-social", action="store_true",
                         help="Attempt public gallery-dl acquisition for Instagram/Twitter/VK.")
+    parser.add_argument(
+        "--youtube-cookies",
+        type=Path,
+        default=Path(os.environ["YTDLP_COOKIES_FILE"]) if os.environ.get("YTDLP_COOKIES_FILE") else None,
+        help="Optional Netscape-format cookie jar for authenticated YouTube extraction. "
+             "May also be supplied via YTDLP_COOKIES_FILE.",
+    )
     args = parser.parse_args()
 
     sources = load_manifest(args.manifest)
@@ -223,7 +240,14 @@ def main() -> int:
                 record.update(harvest_direct(source, args.output))
                 record["classification"] = "ok"
             elif source["kind"] == "youtube":
-                record.update(harvest_youtube(source, args.output, args.include_media))
+                record.update(
+                    harvest_youtube(
+                        source,
+                        args.output,
+                        args.include_media,
+                        cookies_file=args.youtube_cookies,
+                    )
+                )
                 record["classification"] = record.pop("classification_override", "ok")
             elif source["kind"] in {"instagram", "twitter", "vk", "facebook"}:
                 if not args.include_social:
