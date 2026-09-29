@@ -264,8 +264,10 @@ Experiment 259 now gives an exact answer to the narrower verification version of
 
 Experiment 261 also improves the last ambiguous primary frame. At `q=1,d=2`, the current slash-minority polarity yields one exact POS3 payload completion, while the alternate dash-minority polarity leaves two. A human can therefore prefer the current completion by local determinacy even before noticing the global `d<=q` threshold rule.
 
-The remaining discovery question is narrower and cleaner:
+Experiment 262 answers the first version of that question positively inside the candidate grammar. In `docs/raw-first-primary-witness.md`, the 34 residues are shown only as nine consecutive sparse 3×3 physical frames. Eight frames eliminate one polarity outright under exact POS3; the ninth resolves by local completion count 1 versus 8. A solver can therefore recover the entire polarity sequence before seeing the `q,d` lattice or the global staircase.
 
-> Can a solver notice the exceptional-position / frame-balance structure from a raw-first rendering of the 34-residue witness, before seeing solved ternary digits or the compact lattice?
+The next discovery question moves one step earlier:
 
-The next worksheet should therefore show the nine sparse physical 3×3 frames first, then progressively reveal frame polarity, minority positions, and only finally the ternary lattice.
+> What raw presentation makes the one-exception-per-column POS3 idea itself noticeable, before the solver has been told to test it?
+
+The useful next worksheets should compare several non-solved presentations of the same marks: serial order, consecutive 9-frame physical layouts, and perhaps column-oriented strips, while withholding ternary labels and recursion.
