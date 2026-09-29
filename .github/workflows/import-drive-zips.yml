@@ -1,0 +1,31 @@
+name: Import oversized Drive archives
+on:
+  push:
+    paths:
+      - '.github/workflows/import-drive-zips.yml'
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download exact archived ZIPs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p archive/research-files
+          curl -fL --retry 3 'https://sdmntprwestus3.oaiusercontent.com/files/00000000-4320-81fd-8658-02bfa0cc4474/raw?se=2026-09-29T04%3A28%3A52Z&sp=r&sv=2026-02-06&sr=b&scid=ad56ac13-680d-5af4-a002-0c8016a7378e&skoid=fadb8e47-d3c7-4c79-a9c3-970d9af3b213&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-29T03%3A58%3A59Z&ske=2026-09-30T03%3A58%3A59Z&sks=b&skv=2026-02-06&sig=gTyy6zllbB0gHamvLwhE/GIiusZVXYJZ9h4lonx947c%3D' -o archive/research-files/h108_marked_printer_stage1_artifacts.zip
+          curl -fL --retry 3 'https://sdmntprwestus.oaiusercontent.com/files/00000000-ba0c-8230-b9b8-a21795ea50f8/raw?se=2026-09-29T04%3A28%3A56Z&sp=r&sv=2026-02-06&sr=b&scid=2eb5c3d6-dfbc-5977-ac50-8bac77f0ade6&skoid=fadb8e47-d3c7-4c79-a9c3-970d9af3b213&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-29T04%3A03%3A48Z&ske=2026-09-30T04%3A03%3A48Z&sks=b&skv=2026-02-06&sig=%2BgGrHY4C2bb6q/Ta8t23oIj%2BIzf8fR5pf6lNgHLFfGE%3D' -o archive/research-files/INSIDE_Sticker_Cipher_Research_Artifacts.zip
+          test "$(stat -c%s archive/research-files/h108_marked_printer_stage1_artifacts.zip)" = "11617658"
+          test "$(stat -c%s archive/research-files/INSIDE_Sticker_Cipher_Research_Artifacts.zip)" = "21053771"
+      - name: Commit archives
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive/research-files/*.zip
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Archive oversized Drive research bundles"
+          git push
