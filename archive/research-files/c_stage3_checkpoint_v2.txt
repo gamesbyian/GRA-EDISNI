@@ -1,0 +1,8 @@
+Corrected multi-exposure checkpoint
+- Public stickers.md has 82 classified sticker entries.
+- The apparent 81-vs-82 discrepancy was a parser-format issue: #476 is written '(symb - img: H)' without the usual colon after 'symb', so the first strict parser omitted it.
+- Correct H inventory: slash 3 (#125,#296,#449), dash 4 (#053,#179,#242,#476), dot 2 (#206,#413), total 9.
+- C correction still stands: #444 makes C 11 physical photos, 6 dash + 5 slash.
+- Every image class A-I has both slash and dash exposures; B,D,E,G,H,I also have dots.
+- Total public classified stickers = 82, matching the canonical research dataset count.
+- Standardized stage-2 geometry implies slash+dash physical exposures can in principle expose ~99.469% of a normalized tile; the approximate three-symbol common-mask estimate is ~99.509% exposed.

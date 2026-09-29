@@ -1,0 +1,9 @@
+C-class / all-class multi-exposure checkpoint
+- Correction: public ledger also contains #444, class C, dash, discovered 23 Mar 2025.
+- C therefore has 11 public physical photos: 6 dash, 5 slash. H108 master residue 12 has two dash observations (#336, #444); residue 66 has two slash observations (#066, #282).
+- Current public stickers.md parses to 81 classified sticker entries; canonical research dataset is 82, so the public-ledger count and canonical dataset should not be conflated without identifying the extra canonical source.
+- Public multi-exposure coverage by class:
+  A: slash+dash; B: slash+dash+dot; C: slash+dash; D: slash+dash+dot; E: slash+dash+dot; F: slash+dash; G: slash+dash+dot; H: slash+dash+dot; I: slash+dash+dot.
+- Thus every one of the 9 background classes has at least slash and dash physical exposures, and 6/9 have all three symbol types.
+- Using the standardized stage-2 symbol geometry, slash+dash leave only 348/65536 (~0.531%) of a normalized tile jointly occluded. A three-symbol template estimate leaves ~322/65536 (~0.491%) jointly occluded.
+- Therefore, if registration across physical photos is robust, nearly the entire nine-tile background can in principle be reconstructed from real exposed pixels, without inpainting. This is a strong methodological reason to build a multi-source latent reconstruction before any further symbol-over-background semantic tests.

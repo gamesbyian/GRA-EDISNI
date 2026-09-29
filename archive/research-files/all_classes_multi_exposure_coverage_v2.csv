@@ -1,0 +1,10 @@
+class,photos_public_ledger,slash_photos,dash_photos,dot_photos,symbol_variants,variant_count,estimated_common_occlusion_fraction,estimated_reconstructable_fraction_without_inpainting,geometry_note
+A,7,2,5,0,/-,2,0.00531005859375,0.99468994140625,exact stage2 slash-dash geometry
+B,13,11,1,1,/-•,3,0.004913330078125,0.995086669921875,approx all-three template
+C,11,5,6,0,/-,2,0.00531005859375,0.99468994140625,exact stage2 slash-dash geometry
+D,7,3,3,1,/-•,3,0.004913330078125,0.995086669921875,approx all-three template
+E,8,5,2,1,/-•,3,0.004913330078125,0.995086669921875,approx all-three template
+F,12,9,3,0,/-,2,0.00531005859375,0.99468994140625,exact stage2 slash-dash geometry
+G,5,3,1,1,/-•,3,0.004913330078125,0.995086669921875,approx all-three template
+H,9,3,4,2,/-•,3,0.004913330078125,0.995086669921875,approx all-three template
+I,10,6,3,1,/-•,3,0.004913330078125,0.995086669921875,approx all-three template
