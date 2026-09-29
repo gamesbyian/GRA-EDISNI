@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 296: audit one-cell defects around the canonical recursion.
+"""Experiment 306: audit one-cell defects around the canonical recursion.
 
 Purpose
 -------
@@ -291,7 +291,7 @@ def main() -> None:
         (),
     ]
 
-    print("Experiment 296")
+    print("Experiment 306")
     print("raw candidate machines:", len(raw))
     print("one-cell defect operations:", len(results))
     print("survivor distributions by role:")
