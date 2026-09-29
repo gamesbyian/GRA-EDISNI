@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "source_checkpoint": "repository through Experiment 313",
+  "source_checkpoint": "repository through Experiment 314",
   "closed_corpus": true,
   "mechanical_status": "substantially complete",
   "semantic_status": "internal semantic branch closed without an independent consumer",
@@ -547,5 +547,20 @@
       "H": "identity or (q+1,d-1)"
     },
     "conclusion": "canonical 14-state routed terminal-100 machine is unique within the reused local 2D translation family up to 36 exact operation gauges"
+  },
+  "local_selector_shear": {
+    "experiment": 314,
+    "operation": "F_j(q,S)=(q+c_j*S,S) mod 3, reused on both passes",
+    "physical_operations": 19683,
+    "maximum_raw_states": 20,
+    "route_capable_operations": 99,
+    "maximum_route_states": 14,
+    "route_max_operations": 9,
+    "route_max_equivalent_to_canonical": true,
+    "gauge_coefficients": {
+      "E": "c_E arbitrary in F3; selector S_E=0 so shear is inactive",
+      "F": "c_F arbitrary in F3; at depth 1 all q values are slash for every raw-compatible primary payload"
+    },
+    "conclusion": "minimal selector-dependent local q shear introduces only exact E/F operation gauges, not a functional rival"
   }
 }

@@ -1,0 +1,23 @@
+name: Verify Experiment 314
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    paths:
+      - "scripts/audit_local_selector_shear.py"
+      - "scripts/enumerate_raw_machine.py"
+      - "data/observations.csv"
+      - "docs/experiment-314-local-selector-shear.md"
+      - ".github/workflows/verify-experiment-314.yml"
+
+jobs:
+  verify-local-selector-shear:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Exhaust selector-controlled local shears
+        run: python scripts/audit_local_selector_shear.py
