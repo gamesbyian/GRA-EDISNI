@@ -1,0 +1,4 @@
+test,result,interpretation
+"Fixed 18 sextets, standard Base64 alphabet, fixed residue-1 phase",No sextet fully determined with current coverage,18-character six-bit stream remains underconstrained
+"Lowercase+digit URL-token compatibility, all 6 bit phases × inversion × stream reversal × within-sextet bit reversal",Best scheme still has 1 sextet with no lowercase/digit candidate,No complete 18-character lowercase/digit token is compatible under this family
+"Known ARG token 534brn9653f9j8mmd aligned to first or last 17 of 18 sextets, with inversion/reversal/bit-order variants",Best known-bit agreement 37/64 = 57.8%; quarter-preserving optimized null p≈0.945,Strongly no evidence that H108 directly re-encodes this known token as standard Base64 sextets

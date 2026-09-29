@@ -1,0 +1,2 @@
+test,transforms_tested,observed_best,observed_matches,observed_rate,quarter_preserving_unit_null_trials,null_median_best_rate,null_95pct_best_rate,p_value,conclusion
+12 successive 3x3 binary units as frames under one fixed D4 transform,8 D4 spatial transforms × optional complement,identity + complement,24/39,0.6153846153846154,50000,0.625,0.6923076923,0.581248375,No evidence for a simple repeated spatial transform / animation rule
