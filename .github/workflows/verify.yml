@@ -111,6 +111,8 @@ jobs:
         run: python scripts/audit_q4_arbitrary_selector_route.py
       - name: Recover physical Q4 POS3 codebook from holdout marks
         run: python scripts/audit_q4_physical_codebook.py
+      - name: Stress-test Q4 codebook label symmetry
+        run: python scripts/audit_q4_label_symmetry.py
       - name: Audit weaker input POS3 recovery
         run: python scripts/audit_weaker_input_pos3.py
       - name: Audit human coordinate-copy operations

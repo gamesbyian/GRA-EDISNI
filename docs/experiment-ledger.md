@@ -304,6 +304,8 @@ Latest indexed experiment: **255**.
 | 294 | arbitrary-selector route inverse: all 19,683 ternary Q4 fields × six primary payloads give 288 first-pass and 208 second-pass POS3 pairs; across all 84 possible three-cell core locations, the reversible-route criterion uniquely selects A/D/G with the real scaffold modulo C gauge, cores 110/220/212, seven-state compatibility, terminal 100, and shell 120/012/102 without raw Q4 cells or a target terminal |
 | 295 | Q4 physical-codebook holdout audit: Experiment-294 fixed scaffold first leaves 8 shared E[S,d] codebooks; requiring the full recovered selector family to reproduce all 11 Q4 observations forces 7/9 entries and leaves a two-bit gauge E[0,2]/E[1,2] across 4 codebooks; distinct/nonuniform rows remain non-unique, but either equal row weight or cyclic depth/value equivariance uniquely yields /.., ./., ../ (slash iff d=S), with minimum slash count agreeing as a simplicity prior |
 
+| 296 | Q4 label-symmetry stress test: among the four Experiment-295 shared codebooks, swap(0,1) leaves two survivors while every nontrivial simultaneous selector/depth relabeling that moves label 2 uniquely selects /.., ./., ../; either 3-cycle alone fixes the full two-bit gauge |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
