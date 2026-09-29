@@ -307,6 +307,8 @@ Experiment 282 gives the human solver another reason to make that choice. Forget
 
 Experiment 283 checks that this is not a peculiarity of Manhattan distance. As long as diagonal movement costs even slightly more than one orthogonal step, the same all-POS3 completion remains uniquely smoothest. Only under the extreme rule that a diagonal is exactly as cheap as an orthogonal move does the I↔E gauge bit become invisible to the smoothness score. So the cue is reasonably robust rather than metric-picked.
 
+Experiment 293 supplies a useful boundary rather than a shorter human route. Exact source POS3 can be recovered without imposing one-pulse-per-column directly if a solver instead assumes common frame weight, promotes both strongest sparse-frame repeats to exact equality, and imposes one aggregate column-balance relation in each quarter. Those five regularities are jointly subset-minimal in that tested parent: remove any one and extra non-POS3 states return. That makes the construction a legitimate weaker composite authoring grammar, but not a simpler discovery story. For the human reconstruction, direct recognition of the three physical column rails remains the cleaner hypothesis to test.
+
 
 ## Reconciliation with the earlier physical-entry work
 
