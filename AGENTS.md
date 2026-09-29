@@ -16,6 +16,18 @@ Use `docs/experiment-ledger.md` to check whether an idea has already been tested
 
 Do not begin a session by rereading large tails of the Google Docs.
 
+Baseline verification:
+
+```bash
+python scripts/verify_machine.py
+```
+
+For proof-chain or model-structure changes, also run:
+
+```bash
+python scripts/verify_proof_pack.py
+```
+
 ## Evidence discipline
 
 Keep these categories separate:

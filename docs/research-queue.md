@@ -45,6 +45,8 @@ Stop a branch when extra parameter freedom grows faster than the constraints it 
 
 **Experiment 241 completed the first explicit dependency graph** in `docs/theorem-graph.md`. Continue turning the graph into executable assertions and use it to expose hidden circularity.
 
+**Executable proof-pack work now operationalizes that directive.** `scripts/verify_proof_pack.py` parses the theorem graph, rejects cycles/unknown references, quarantines observer/algebra/semantic nodes from terminal T6, requires executable coverage for every theorem on the T6 dependency path, and runs the independent canonical/native/raw reconstruction checks declared in `data/theorem-obligations.json`.
+
 The graph currently integrates Experiments 215, 220, 231, 233, 237, and 238 and separates:
 
 For each current claim mark:
