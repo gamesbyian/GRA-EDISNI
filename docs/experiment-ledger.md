@@ -281,6 +281,7 @@ Latest indexed experiment: **255**.
 | 271 | exhaustive 3+3+3 frame-balance partitions: 90/280 abstract groupings recover 14 states, but physical quarter rows are the unique exact solution among the two straight parallel-axis partitions; depth columns leave 50 |
 | 272 | frame-weight-three primary parent: dropping column occupancy yields 1,296 raw primaries and 1,548 recursively closed states, all terminal 100; only 14 retain exact column POS3 |
 | 273 | centered-first-moment primary audit: frame-weight-three closure collapses to a 14+14 fork, canonical POS3 versus one q=1,d=0 center-column pileup sibling hidden at unobserved residues 28,33,34,35 |
+| 274 | raw normalized frame-repeat audit: exactly two frame pairs have maximal conflict-free support; enforcing both inside the 28-state centroid parent selects the canonical 14 and rejects every center-pileup sibling |
 
 ## Current frontier
 
@@ -290,7 +291,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–273:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
+- **250–274:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening/spine localization, and primary-POS3 robustness plus frame-balance recovery.
 
 ## Status shorthand
 
