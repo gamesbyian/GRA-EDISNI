@@ -81,6 +81,19 @@ image class:  I A B C D E F G H
 
 This is exactly the project's current registered physical carrier. The current `IAB/CDE/FGH` layout is therefore directly historically attested, not reconstructed only in hindsight.
 
+A second archived asset makes the historical interpretation even less ambiguous:
+
+- `assets/StickerSolution-dc12d5e516ca4922.png`
+- identical duplicate: `assets/StickerSolution-f19fd331a635aebf.png`
+
+The `#tldr` export posts this on **28 Apr 2020** under the caption “The Sticker Puzzle Solution.” The image itself labels the 3×3 pieces in the exact row-major order `IAB/CDE/FGH` and prints the recovered destination:
+
+`dat/534brn9653f9j8mmd`
+
+with the historical Terminal 41 URL beneath it. This closes the provenance chain from numbered sticker image classes -> nine-piece printer assembly -> recovered text/path.
+
+Crucially, this “Sticker Puzzle Solution” refers to the **faint background-image layer** on the numbered stickers. It does not solve or semantically decode the separate foreground `/ - •` master that the present project models as H108.
+
 This distinction now becomes:
 
 - **historically attested and source-recovered:** labels A–I existed; the exact top-left/row-major order was `IAB/CDE/FGH`; `A=001` and `I=000`; all nine pieces were assembled; the image was recognized as the printer; and the final source attachment is readable;
