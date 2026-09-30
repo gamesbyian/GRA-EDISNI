@@ -46,7 +46,11 @@ Strong independent channels: printed serial/phase, solved A-I 3x3 geometry, the 
 
 Experiment 317 completes the first low-description tail test. Without POS3, recursion, route criteria, or model-filled cells, the three-cell tail is globally compatible with **exactly one slash per A-I class** and leaves 36 completions; the opposite exactly-one-dot polarity has zero completions because H already has two observed dots. B/E/F/H/I already force slash positions 2/0/1/2/2. See `docs/experiment-317-tail-metadata-observation-audit.md`.
 
-Next R2 tests: compare the simplest meanings of that marked position (consecutive body chunk, physical body column/rail, or fixed mask tied to A-I geometry), plus literal-symbol geometry and support-mask-aware master-edge analysis. Do not use recursive-machine survival as the selection criterion.
+Experiment 318 replays the two direct spatial meanings of that selector on the observation-only 3x3 body: row/chunk and column/rail. Both survive all 36 tail completions, and the current corpus does not discriminate between them. See `docs/experiment-318-tail-selector-spatial-replay.md`.
+
+Experiment 319 closes the preregistered "fixed masks tied to A-I geometry" branch without sweeping masks. The solved `IAB/CDE/FGH` geometry indexes **between image classes**, while the nine body positions index **successive H108 occurrences within one fixed class**. Raw evidence supplies no body-position -> A-I bijection; projecting background rows onto the body would require choosing among 1,680 ordered 3+3+3 partitions (or 362,880 full bijections). See `docs/experiment-319-background-geometry-mask-domain-audit.md`.
+
+Next R2 tests: literal-symbol geometry and support-mask-aware master-edge analysis. Reopen background-derived body masks only if independent evidence supplies the missing domain bridge. Do not use recursive-machine survival as the selection criterion.
 
 #### R3 — solved-puzzle operation replay
 
