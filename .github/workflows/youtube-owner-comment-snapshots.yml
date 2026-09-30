@@ -1,0 +1,78 @@
+name: YouTube owner comment snapshots
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/youtube-owner-comment-snapshots.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  comments:
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        source_id:
+          - youtube-inside-gaming-ce-unboxing
+          - youtube-oddheader-2026-mystery
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install yt-dlp with EJS support
+        run: python -m pip install --disable-pip-version-check "yt-dlp[default]"
+      - name: Materialize YouTube cookie jar
+        shell: bash
+        env:
+          YOUTUBE_COOKIES_B64: ${{ secrets.YOUTUBE_COOKIES_B64 }}
+        run: |
+          set -euo pipefail
+          test -n "$YOUTUBE_COOKIES_B64"
+          cookie_file="${RUNNER_TEMP}/youtube-cookies.txt"
+          printf '%s' "$YOUTUBE_COOKIES_B64" | base64 --decode > "$cookie_file"
+          chmod 600 "$cookie_file"
+          echo "YTDLP_COOKIES_FILE=$cookie_file" >> "$GITHUB_ENV"
+      - name: Resolve URL
+        id: source
+        shell: bash
+        run: |
+          url="$(python - <<'PY'
+          import json
+          sid = "${{ matrix.source_id }}"
+          data = json.load(open("data/external-acquisition-targets.json", encoding="utf-8"))
+          print(next(s["url"] for s in data["sources"] if s["id"] == sid))
+          PY
+          )"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+      - name: Snapshot comments and metadata only
+        shell: bash
+        run: |
+          set -euo pipefail
+          out="evidence-work/${{ matrix.source_id }}/comments"
+          mkdir -p "$out"
+          yt-dlp \
+            --js-runtimes node \
+            --cookies "$YTDLP_COOKIES_FILE" \
+            --skip-download \
+            --write-comments \
+            --write-info-json \
+            --write-description \
+            --no-write-subs \
+            --no-write-auto-subs \
+            --paths "$out" \
+            --output "%(id)s/%(title).200B [%(id)s].%(ext)s" \
+            "${{ steps.source.outputs.url }}"
+      - name: Upload comment snapshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: youtube-comments-${{ matrix.source_id }}-${{ github.run_id }}
+          path: evidence-work/${{ matrix.source_id }}/comments/
+          if-no-files-found: warn
+          retention-days: 14
