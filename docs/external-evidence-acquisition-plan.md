@@ -424,3 +424,6 @@ Use `.github/workflows/targeted-youtube-media-recon.yml` when one specific YouTu
 Current first candidate: `youtube-ledger-07-Pbkq8Ey_s0k` (L17). Metadata shows a 172-second Kyle Hilliard recording-booth video; the canonical ledger confirms his CE/sticker was later lost but records no symbol. This is a proportionate one-source visual check.
 
 Do not escalate `youtube-ledger-01-eXxklNxsVWw` merely for frames: it is the 2025 Oddheader retrospective and its value is owner/comment discovery. Do not escalate `youtube-ledger-08-d23bAqGtImo` merely because the Huddle appears at 7:22: later owner contact already establishes the sticker was lost and only supplies a ~90%-sure slash recollection, not physical imagery.
+
+
+For lightweight owner discovery, use `.github/workflows/targeted-youtube-comments.yml` to snapshot one manifest-listed YouTube source without re-running the hard-coded Inside Gaming/Oddheader pair. The first high-value candidate is `youtube-ledger-01-eXxklNxsVWw`: its 2025 Oddheader retrospective demonstrably caused later owner contributions 072 and 476, and the canonical ledger still contains unresolved commenter U45.
