@@ -462,3 +462,9 @@ For historical videos that are not CE unboxings but merely contain a Huddle or o
 This was validated on L17 / `Pbkq8Ey_s0k`: run `36666370632` reviewed the complete 172-second source and found no CE packaging, black wrapping, or numbered sticker anywhere in the video. Full-resolution escalation is therefore not justified for that source.
 
 The same reusable lane is now being applied to L30 / `d23bAqGtImo`, whose Huddle is historically visible around 7:22. The purpose is narrowly to determine whether sticker-bearing packaging appears anywhere near the Huddle or elsewhere in the source before spending on denser acquisition.
+
+### Owner-comment snapshot lane
+
+The YouTube comment workflow is now single-target rather than a fixed two-video matrix. It supports the 2025 Oddheader roundup (`eXxklNxsVWw`), Inside Gaming, and the 2026 Oddheader mystery video, with manual dispatch for future refreshes.
+
+The 2025 Oddheader roundup is a high-value owner-discovery source because its historical comments already led to physical sticker observations 072 and 476 plus unresolved U45. A fresh authenticated comment snapshot is therefore being mined for additional owner claims, serial/symbol reports, or replies that resolve U45. Current run: `36667932888`.
