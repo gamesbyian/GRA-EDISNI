@@ -1,0 +1,101 @@
+# Experiment 320 — Full reset classification of supplied theorem premises
+
+_Status: completed R4 premise audit, 30 Sep 2026._
+
+## Question
+
+R4 requires every supplied premise in the current theorem graph to be classified as:
+
+- directly observed;
+- historically motivated;
+- a generic simplicity prior;
+- selected because it preserves the machine;
+- genuinely derived from independent evidence.
+
+The point is not to relitigate downstream theorems. It is to identify the exact places where the incumbent still asks the solver to choose a grammar.
+
+## Scope
+
+The current transition-side supplied set in `docs/theorem-graph.md` is:
+
+`O1, O2, G1, G3, G5, G6, G7`.
+
+Later hardening has already removed several former premises. Primary polarity, outer no-self registration, Q4 scaffold/control words, route orientation, terminal `100`, hidden-state structure, and most gauge choices are theorem-level or downstream consequences inside the incumbent family.
+
+The structured classification is canonicalized in:
+
+`data/reset-premise-classification.json`
+
+and checked by:
+
+`python scripts/verify_reset_premise_classification.py`
+
+## Result
+
+| node | reset classification | circularity risk | reason |
+|---|---|---|---|
+| O1 | directly observed | low | H108 and A-I period-9 are corpus-supported structural facts |
+| O2 | mixed | low | the 81/27 alphabet boundary is observed; `27q+9d+j` is a convenient coordinate factorization, not independently authored semantics |
+| G1 | generic simplicity prior | medium | 3x3/straight-rail geometry and holdouts support it, but exceptional-position ternary meaning is still a local code choice |
+| G3 | historically motivated | medium | historical 9+3 body/index thinking plus Experiment 317 independently support a one-of-three tail-index family, but not its downstream meaning |
+| G5 | generic simplicity prior | medium-high | literal coordinate-copy and broad uniqueness audits make it compact, but no external cue says “copy selector depth into the body address” |
+| G6 | selected because it preserves the machine | high | repeated selector reuse is chosen because it is selectively completion-invariant; no independent self-application cue is known |
+| G7 | selected because it preserves the machine | very high | distinct reversible ternary routes are an explicit model-class filter and currently lack an independent route/permutation cue |
+
+No surviving **transition grammar** is classified as “genuinely derived from independent evidence.” That is not a defect in the theorem graph. Premises that became independently derivable have mostly already migrated to T-nodes. It means the remaining reset burden sits exactly at the grammar-entry points.
+
+## Important split inside G3
+
+G3 should no longer be treated as one indivisible assumption.
+
+Experiment 317 independently supports a compact physical fact-family:
+
+> each A-I tail is compatible with one slash marking one of three positions.
+
+Historical discussion also supplies a pre-machine 9+3 body/index interpretation.
+
+Those facts raise the prior for a one-of-three tail index. They do **not** establish:
+
+- that the position is a ternary number;
+- that it selects a body depth;
+- that it addresses the primary lattice;
+- that it is reused recursively.
+
+So R4 promotes the **tail-index architecture** while keeping the **selector semantics** live.
+
+## Highest-priority circularity targets
+
+### G7 first
+
+G7 is the strongest circularity risk because it is both downstream and highly selective. It turns “three functional families exist” into a specific reversible route shell and rejects nearby branches on that basis.
+
+Until a sticker-native or ARG-native route/permutation cue is found, route survival should be reported as conditional on G7 rather than as independent confirmation of the upstream machine.
+
+### G6 second
+
+The second selector application is compact and produces a completion-invariant fixed point, but that is still a machine-internal reason to prefer self-reuse.
+
+The useful next rivals are not arbitrary maps. They are equally simple operations that consume the first-pass surface once without reapplying the same selector.
+
+### G5 third
+
+G5 is better motivated than G6/G7 because literal coordinate-copy families and broad bijection audits independently converge on it **inside recursive-address models**. The missing evidence is earlier: why should the tail be an address/depth substitution at all?
+
+## Auxiliary supplied premises
+
+Two non-core premises remain explicitly quarantined:
+
+- **G8**, the shared/symmetric Q4 physical codebook prior, is a generic authoring-simplicity prior used for physical reconstruction, not a raw observation.
+- **R1**, the preregistered observer pointer geometry, remains readout-only. Its evidence is safe only while it is not fed back into transition selection.
+
+## R4 disposition
+
+R4's classification requirement is now complete for the current theorem graph.
+
+The next R4 action is no longer “classify more nodes.” It is to execute targeted rival tests in this order:
+
+1. weaken or independently motivate G7;
+2. test simple non-self-reuse alternatives to G6;
+3. test nonrecursive, historically motivated uses of the G3 tail before assuming G5.
+
+That ordering follows circularity risk, not incumbent downstream elegance.
