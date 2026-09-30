@@ -2,6 +2,8 @@
 
 _Status: completed, 30 Sep 2026._
 
+> **Evidentiary correction (Experiment 340):** the family was selected using the complete observed corpus before this leave-one-out analysis. Any forced singleton prediction is therefore guaranteed to match the hidden original symbol whenever the full corpus fits the family. The numerical result below is preserved, but `4/4 correct` is **not independent validation**. See `docs/experiment-340-row-selector-holdout-selection.md`.
+
 ## Question
 
 Experiment 329 froze an exploratory rival family:
