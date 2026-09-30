@@ -13,6 +13,6 @@ The seed corpus is the community-maintained `gamesbyian/INSIDE-ARG` fork. Its `s
 
 Future independently recovered photographs should be added as new manifest rows only after their physical serial association is verified. Byte-identical mirrors should add provenance, not duplicate observational weight.
 
-Current seed coverage: **81 / 81 ledger serials** with at least one community original; **144 original files** and **16 community-derived files**.
+Current seed coverage: **82 / 82 ledger serials** with at least one community original; **145 original files** and **16 community-derived files**.
 
 Future analysis must read `manifest.csv`. Recursive filename guessing is prohibited.

@@ -11,5 +11,5 @@ Consensus reconstructions from registered sticker photographs. `A.png`..`I.png` 
 | E | 16 | reference=338 |
 | F | 21 | reference=402 |
 | G | 9 | reference=475 |
-| H | 12 | reference=053 |
+| H | 13 | reference=053 |
 | I | 16 | reference=072 |
