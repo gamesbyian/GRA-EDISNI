@@ -63,7 +63,8 @@
         "cross_reference": "No exact 427 entry or @Douleur873 match found in the current canonical sticker-ledger snapshot or repository-index search; still requires photo provenance before any observation promotion.",
         "h108_residue": 103,
         "current_model_comparison": "Current frozen matrix treats residue 103 as state-dependent, with dot preferred in 10/14 canonical states and slash in 4/14. The unverified dot claim is compatible with the modal prediction but does not validate it without a photo.",
-        "acquisition_value": "high hidden-state discriminator; physical photo required"
+        "acquisition_value": "high hidden-state discriminator; physical photo required",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
       },
       "disposition": "Keep quarantined until a provenance-backed physical photo is obtained."
     },
@@ -83,7 +84,8 @@
         "cross_reference": "No exact 369 entry or @Byokugen match found in the current canonical sticker-ledger snapshot or repository-index search; still requires photo provenance before any observation promotion.",
         "h108_residue": 45,
         "current_model_comparison": "Current frozen matrix predicts residue 45 as invariant dash (14/14 canonical states) in the primary region. The unverified dot claim therefore conflicts sharply with the present model if literally correct.",
-        "acquisition_value": "very-high model-discriminator; physical photo required"
+        "acquisition_value": "very-high model-discriminator; physical photo required",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
       },
       "disposition": "Prioritize physical-photo verification. Keep quarantined until then; do not use the claim to alter observations or the machine model."
     },
@@ -95,7 +97,8 @@
         "comment_id": "UgzFs6_zSD3eV3V73nt4AaABAg",
         "note": "Commenter states they own an unopened Collector's Edition; a reply explains the sticker can be photographed after opening only the shipping box.",
         "author_handle": "@time_travel_01",
-        "author_channel_id": "UCOmPvJtTwjSjUvLpadhTgZg"
+        "author_channel_id": "UCOmPvJtTwjSjUvLpadhTgZg",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
       },
       "disposition": "Potential outreach/manual follow-up."
     },
@@ -107,7 +110,8 @@
         "comment_id": "UgyOwdnmkkeDWUPvrQV4AaABAg",
         "note": "Commenter states they bought the Collector's Edition; replies request a sticker photo.",
         "author_handle": "@cultuschoco",
-        "author_channel_id": "UCpeOVxUNHnTIuPDPPuy7lYw"
+        "author_channel_id": "UCpeOVxUNHnTIuPDPPuy7lYw",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
       },
       "disposition": "Potential outreach/manual follow-up."
     },
@@ -119,7 +123,8 @@
         "comment_id": "UgzXd5SXuH-Z1GFWUaV4AaABAg",
         "note": "Commenter states they have a copy but do not want to open it; reply explains only the outer shipping box needs opening.",
         "author_handle": "@z304legend",
-        "author_channel_id": "UCKtzDazuuujDRLh_xxrLyLg"
+        "author_channel_id": "UCKtzDazuuujDRLh_xxrLyLg",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
       },
       "disposition": "Potential outreach/manual follow-up."
     },
@@ -132,7 +137,8 @@
         "note": "Commenter says they already contributed their sticker to the puzzle.",
         "author_handle": "@billlee1821",
         "author_channel_id": "UCpe7zl2OD4jBb4OKkxFbd8g",
-        "cross_reference": "Exact handle was not found in repository-index search. The commenter explicitly says the sticker was already contributed, so do not prioritize outreach without a separate identity/ledger match."
+        "cross_reference": "Exact handle was not found in repository-index search. The commenter explicitly says the sticker was already contributed, so do not prioritize outreach without a separate identity/ledger match.",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
       },
       "disposition": "Cross-reference historical ledger/Discord before contacting; likely already represented."
     },
