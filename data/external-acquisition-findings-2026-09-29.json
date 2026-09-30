@@ -947,7 +947,11 @@
         "probable_public_handle_cross_reference": {
           "handle": "Divorced Cougar",
           "basis": "Contemporaneous public MinnMax supporter listings in 2022 explicitly render the supporter as 'Divorced Cougar (Mike M)'.",
-          "confidence_note": "Strong contextual match to the on-air 'Mike M' bidder but not explicitly linked to the auction by the stream itself."
+          "confidence_note": "Strong contextual match to the on-air 'Mike M' bidder but not explicitly linked to the auction by the stream itself.",
+          "sources": [
+            "https://www.patreon.com/posts/introducing-four-69552060",
+            "Public 2022 MinnMax show descriptions/supporter lists that render 'Divorced Cougar (Mike M)'"
+          ]
         }
       },
       "disposition": "Use 'Mike M' as the recovered U27 winner token and 'Divorced Cougar' only as a probable MinnMax-community handle. Do not treat this as a verified personal identity or initiate duplicate outreach; Ben Hanson already notified the winner historically."
@@ -989,7 +993,8 @@
             "page_title": "Inside [Collector's Edition] | Item, Box, and Manual | Playstation 4",
             "includes": "Item, Box, and Manual",
             "condition": "Normal wear",
-            "displayed_total_value_usd": 592.63
+            "displayed_total_value_usd": 592.63,
+            "page_sha256": "1d8ef78ec5807c559e31579c15bb280be005c6f28c2b7c20ad2b827a87556106"
           },
           {
             "canonical_entry": "U42",
@@ -998,7 +1003,8 @@
             "page_title": "Inside [Collector's Edition] | Item, Box, and Manual | Playstation 4",
             "includes": "Item, Box, and Manual",
             "condition": "Normal wear",
-            "displayed_total_value_usd": 592.63
+            "displayed_total_value_usd": 592.63,
+            "page_sha256": "86677146ffb05b2fa6bb1e167dc3fb0d6f893e052e2e4c707d38616f8431fe81"
           },
           {
             "canonical_entry": "U43",
@@ -1007,7 +1013,8 @@
             "page_title": "Inside [Collector's Edition] | New Item, Box, and Manual | Playstation 4",
             "includes": "New Item, Box, and Manual",
             "condition": "Normal wear",
-            "displayed_total_value_usd": 1341.06
+            "displayed_total_value_usd": 1341.06,
+            "page_sha256": "ebf16f710bb5da6be48de2f44b1b51dcc3444b8d9b16f22c542f7c589b596fb6"
           }
         ],
         "image_result": "All three pages reference the same generic PriceCharting INSIDE Collector's Edition cover-art image, not owner-uploaded sticker photographs."
