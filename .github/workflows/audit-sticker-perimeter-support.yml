@@ -1,0 +1,33 @@
+name: Audit physical sticker perimeter support
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_full_photo_perimeter_support.py"
+      - "scripts/build_background_tile_masters.py"
+      - "archive/stickers/**"
+      - ".github/workflows/audit-sticker-perimeter-support.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install image dependencies
+        run: python -m pip install --disable-pip-version-check numpy opencv-python-headless pillow
+      - name: Audit recoverable physical perimeter
+        run: |
+          python scripts/audit_full_photo_perimeter_support.py \
+            --json artifacts/perimeter-support/report.json \
+            --csv artifacts/perimeter-support/photos.csv
+      - name: Upload audit result
+        uses: actions/upload-artifact@v4
+        with:
+          name: perimeter-support-audit
+          path: artifacts/perimeter-support/
+          if-no-files-found: error
