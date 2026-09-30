@@ -1,0 +1,64 @@
+name: Build A-I background tile masters
+
+on:
+  push:
+    branches:
+      - chatgpt/background-tile-masters-2026-09-29
+    paths:
+      - "scripts/build_background_tile_masters.py"
+      - ".github/workflows/build-background-tile-masters.yml"
+      - "docs/background-tile-master-process.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Acquire public sticker corpora
+        shell: bash
+        run: |
+          mkdir -p .tmp/background-tile-sources
+          git clone --depth 1 https://github.com/twinysam/INSIDE-ARG.git .tmp/background-tile-sources/INSIDE-ARG
+          git clone --depth 1 https://github.com/gamesbyian/playdead-unofficial-exports.git .tmp/background-tile-sources/playdead-unofficial-exports || true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install image dependencies
+        run: python -m pip install --disable-pip-version-check numpy opencv-python-headless
+
+      - name: Build registered consensus masters
+        run: |
+          rm -rf artifacts/background-tile-masters
+          python scripts/build_background_tile_masters.py             .             .tmp/background-tile-sources/INSIDE-ARG             .tmp/background-tile-sources/playdead-unofficial-exports             --out artifacts/background-tile-masters
+
+      - name: Upload reconstruction bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: background-tile-masters
+          path: artifacts/background-tile-masters/
+          if-no-files-found: error
+
+      - name: Commit generated masters to this branch
+        shell: bash
+        run: |
+          git add artifacts/background-tile-masters
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Generate A-I background tile masters"
+          git push origin HEAD:${{ github.ref_name }}
