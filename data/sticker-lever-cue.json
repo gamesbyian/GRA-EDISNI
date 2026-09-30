@@ -10,6 +10,18 @@
     "image_assets": [
       "assets/INSIDE_B-f038cdd5970802f8.JPG",
       "assets/unknown-70a6031fe54449cd.png"
+    ],
+    "historical_first_linkage_date": "2020-04-23",
+    "historical_explicit_mapping_date": "2021-03-21",
+    "lineage": [
+      {
+        "date": "2020-04-23",
+        "summary": "Community identifies the three sticker marks on the advertised hidden-clue cover, compares their arrangement with the secret-ending lever, proposes entering the ordered CE symbols into the lever, and proposes printed copy number as the likely order."
+      },
+      {
+        "date": "2021-03-21",
+        "summary": "The same idea is restated explicitly as dot-left, dash-right, slash-top matching lever left/right/up."
+      }
     ]
   },
   "historical_claim": {
@@ -34,6 +46,18 @@
   "epistemic_status": {
     "mapping": "historically attested, independently motivated by an in-world/packaging clue; source images should remain separately inspectable",
     "sticker_as_lever_code": "candidate consumer hypothesis, not established",
-    "normal_code_replay": "tested and closed in Experiment 342 for canonical contiguous forward/reverse readings"
+    "normal_code_replay": "Structurally closed by Experiment 343: the 81/27 alphabets make every contiguous forward/reverse/rotated placement of the normal 14-command bunker password impossible regardless of unknown cells.",
+    "serial_order": "Printed copy number is physical evidence; using ascending copy number as lever-command order is historically attested community inference, not an explicit developer instruction."
+  },
+  "experiment_343": {
+    "zone_mapping": {
+      "1-81": "U/R only",
+      "82-108": "U/L only"
+    },
+    "forward_starts": 0,
+    "reverse_starts": 0,
+    "cyclic_rotations_with_any_start": 0,
+    "reverse_cyclic_rotations_with_any_start": 0,
+    "consequence": "The weak five-observation cyclic hit from Experiment 342 is closed once directly observed zone alphabets are enforced."
   }
 }
