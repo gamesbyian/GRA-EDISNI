@@ -1,10 +1,6 @@
 name: Public social evidence sweep
 
 on:
-  pull_request:
-    paths:
-      - ".github/workflows/public-social-evidence-sweep.yml"
-      - "data/external-acquisition-targets.json"
   workflow_dispatch:
 
 permissions:
