@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "experiment": 325,
+  "question": "Can the current canonical background masters validly test for a PC-style physical edge/margin check-bit channel?",
+  "sources": [
+    "docs/background-tile-master-process.md",
+    "scripts/build_background_tile_masters.py",
+    "scripts/build_846shee_evidence_masters.py",
+    "artifacts/background-tile-masters/README.md",
+    "artifacts/background-tile-evidence-masters/README.md",
+    "archive/project-files/inside_tile_seam_metrics.csv"
+  ],
+  "consensus_master_geometry": {
+    "rectified_sticker_canvas": "1200x1200 nominal",
+    "background_crop_fraction": {
+      "x": [
+        0.1,
+        0.9
+      ],
+      "y": [
+        0.12,
+        0.76
+      ]
+    },
+    "physical_perimeter_preserved": false,
+    "serial_region_preserved": false,
+    "purpose": "common background-print field above serial, with foreground symbol masked",
+    "consequence": "cannot test sticker-border, wrapper-edge, or physical margin marks"
+  },
+  "historical_846shee_geometry": {
+    "source": "already assembled historical composite",
+    "crops": "tile cells measured from 1455x1536 composite",
+    "physical_perimeter_preserved": false,
+    "purpose": "preserve directly visible background artwork evidence after community assembly",
+    "consequence": "crop edges are assembly/artwork boundaries, not original sticker margins"
+  },
+  "existing_seam_metrics": {
+    "interpretation": "strongly validate canonical IAB/CDE/FGH artwork continuity",
+    "edge_percentile": 99.998,
+    "second_channel_evidence": false,
+    "reason": "seam continuity measures ordinary background artwork matching at assembly boundaries"
+  },
+  "conclusion": "Current master products are suitable for artwork registration and seam continuity but are structurally incapable of testing a PC-style physical sticker edge/check-bit channel. That question requires original full-sticker photographs re-rectified with the physical perimeter retained.",
+  "next_valid_test": {
+    "inputs": "manifest-authorized original photos only",
+    "preprocessing": "rectify full sticker quadrilateral, preserve a preregistered perimeter band and serial exclusion separately",
+    "required_outputs": [
+      "per-edge support coverage",
+      "cross-copy repeatability by A-I class",
+      "candidate edge marks separated from ordinary artwork continuity"
+    ],
+    "fail_closed": "if edge support or geometric registration is insufficient, record untestable rather than infer marks"
+  }
+}
