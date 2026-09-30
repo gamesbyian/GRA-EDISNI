@@ -76,7 +76,11 @@ This is evidence that the incumbent's extra grammar buys predictive sharpness, b
 
 #### R6 — expected-player-information audit
 
-Reconstruct what one owner, the pooled community, and later archivists could each have known. Test whether the puzzle may be globally simple but underdetermined in the surviving 82-sticker sample.
+**Initial audit completed in Experiment 324.** See `docs/experiment-324-expected-player-information.md` and `data/expected-player-information.json`.
+
+A single CE owner possesses only one serialized sticker fragment, so the puzzle is necessarily communal beyond the local object. Early pooling demonstrably solved the nine-class background layer without anything resembling all ~600 copies. The current archive has 82 physical records / 65 distinct H108 residues / 43 unobserved residues, and the one-slash tail family alone still has 36 completions. The incumbent's sharpness therefore comes from structural grammar applied to an incomplete corpus, not near-complete physical collection.
+
+Operating consequence: treat "communal" and "collection-complete" as different claims. Prefer intended-solve hypotheses that can become discoverable from a modest pooled sample plus an explicit registration/operation cue; do not assume Playdead expected all ~600 serials or even all 108 unique foreground cells.
 
 ### Prediction-matrix operating rule
 
