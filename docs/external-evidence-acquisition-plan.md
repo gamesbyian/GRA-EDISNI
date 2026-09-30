@@ -281,11 +281,11 @@ Snapshot: 2026-09-29. This section is the execution-facing status surface for PR
 
 ### Do now in PR #57
 
-- **Inside Gaming CE unboxing:** full media has been acquired successfully. A preserved historical YouTube comment explicitly points to **1:17** as the sticker moment, so current visual mining is now bounded around that timestamp rather than whole-video scanning. Generate a fine reconnaissance window first, then extract every native frame only across the smallest confirmed sticker-visible interval.
-- **Historical YouTube ledger corpus:** metadata/description/thumbnail sweep is complete for the 11 ledger videos. The separate iam8bit making-of/reveal is age-restricted for the current research account and remains unresolved. Next, acquire full media only for the actual CE unboxing videos and generate reconnaissance frames; skip unrelated ledger references unless their metadata gives a concrete reason.
-- **Public social corpus:** first broad sweep is complete. Several X/Twitter targets yielded original media and metadata; all Instagram post attempts resolved to login-required and remain manual/authenticated-browser work; VK produced no useful media in the public lane. Continue mining the successful X originals and do not count tiny classification-only artifacts as acquisitions.
+- **Inside Gaming CE unboxing:** full media and native-frame forensics are complete enough for current purposes. Canonical lost entry L14 is slash-confirmed; the serial zone is physically occluded by fingers throughout the useful sequence. L14 background-tile classification is paused while PR #61 builds canonical A-I masters.
+- **Historical YouTube ledger corpus:** metadata/description/thumbnail sweep is complete for all 11 ledger videos. Authenticated CE-media reconnaissance is complete for 02/03/04/05/06/09/10/11; targeted forensics are recorded for the lost/unresolved entries. Video 07 (L17) is the remaining justified one-source media candidate; videos 01 and 08 are owner/provenance sources rather than frame-mining targets. The separate iam8bit making-of/reveal remains age-restricted.
+- **Public social corpus:** broad sweep and first-pass mining are complete. Eight X/Twitter targets yielded original media; only ItsaMeFernando contained a readable sticker and independently reconfirmed canonical 324 = slash. Other X targets are now classified against canonical provenance. Instagram remains login-required, VK produced no useful media, and tiny classification-only outputs are not acquisitions.
 - **Lead discovery:** run URL/account discovery over every acquired text/JSON/caption/comment artifact and reconcile new leads into the manifest after review.
-- **Oddheader comments:** a full authenticated snapshot is now preserved (3,173 comments in the mined run). It surfaced fresh owner leads plus the unverified 427=dot and 369=dot claims; both remain quarantined until physical photos exist. The video itself is human-reviewed negative for unknown sticker imagery.
+- **Oddheader comments:** a full authenticated snapshot is preserved (3,180 comments in the current artifact). The normalized queue is `data/oddheader-owner-leads-2026-09-29.json`. Unverified 369=dot is the highest-value verification lead because it would contradict the current invariant residue-45 dash prediction if physically confirmed; 427=dot is a useful residue-103 hidden-state discriminator. Both remain quarantined until physical photos exist.
 
 ### Already acquired / resolved enough to stop reacquiring
 
@@ -293,7 +293,7 @@ Snapshot: 2026-09-29. This section is the execution-facing status surface for PR
 - **iam8bit CE unboxing (zhCdGdqCIRU):** authenticated metadata/description/thumbnail acquisition works. Human review says the video contains no unknown sticker information, so no further frame archaeology is planned absent a new concrete reason.
 - **Oddheader 2026 video:** authenticated metadata/caption/comment acquisition works. Human review says the video contains no unknown sticker information; retain it for owner/comment provenance only.
 - **YouTube auth/tooling:** dedicated research-account cookies plus Node/EJS challenge solving work on GitHub-hosted Actions.
-- **Public X proof-of-path:** the KaydHendricks status has successfully yielded original media and metadata; expand this to the rest of the X queue.
+- **Public X proof-of-path:** completed across the current queue; statuses now distinguish original-media acquisitions, no-media extractor results, and already-canonical provenance.
 
 ### Human-only / external dependency
 
@@ -325,8 +325,8 @@ PR #56 owns the canonical external archive, canonical binary-asset manifest, Ter
 - Acquire all listed YouTube metadata/captions/thumbnails/comments.
 - Acquire best available source streams where practical.
 - Fetch and verify `saf_dat_col.html`.
-- Fetch and verify Terminal 41 transmission PNG.
-- Attempt public gallery-dl capture of Instagram/X/VK targets.
+- Terminal 41 transmission PNG/raw-archive acquisition is delegated to PR #56; consume its result rather than duplicating it.
+- Public gallery-dl social sweep completed; do not repeat broadly unless extractor behavior changes or a concrete new target appears.
 - Record login-required failures explicitly.
 - Generate broad video contact sheets.
 
@@ -334,10 +334,10 @@ PR #56 owns the canonical external archive, canonical binary-asset manifest, Ter
 
 Human review on 2026-09-29 established that the iam8bit Collector's Edition unboxing and the Oddheader INSIDE mystery video contain no unknown sticker information. Keep them as provenance/context sources, but do not spend further frame-archaeology budget on them unless new evidence gives a concrete reason to revisit.
 
-- Identify the Inside Gaming sticker interval and extract every native frame around it.
+- Inside Gaming/L14 native-frame forensic pass completed; serial is geometrically occluded and background classification is paused pending PR #61 A-I masters.
 - Run frame ranking/deduplication and preserve the full dense source set.
 - Preserve Oddheader metadata/comments for owner-discovery and historical context, not sticker-frame discovery.
-- Review public social acquisitions for CE/sticker visibility.
+- Public social acquisitions reviewed and reconciled against canonical provenance.
 - Promote valuable originals and provenance records into the external archive.
 
 ### Phase D: authenticated/manual recovery
