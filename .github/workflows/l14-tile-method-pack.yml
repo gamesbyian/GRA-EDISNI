@@ -1,0 +1,46 @@
+name: L14 tile method pack
+
+on:
+  push:
+    branches:
+      - "chatgpt/external-evidence-harvester-2026-09-29"
+    paths:
+      - ".github/workflows/l14-tile-method-pack.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract tile-analysis method files
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p method-pack
+          unzip -l archive/research-files/INSIDE_Sticker_Cipher_Research_Artifacts.zip > method-pack/archive-list.txt
+          python - <<'PY'
+          import zipfile, pathlib, re
+          src = pathlib.Path("archive/research-files/INSIDE_Sticker_Cipher_Research_Artifacts.zip")
+          out = pathlib.Path("method-pack/extracted")
+          out.mkdir(parents=True, exist_ok=True)
+          rx = re.compile(r"(tile|mask|background|seam|sticker)", re.I)
+          with zipfile.ZipFile(src) as z:
+              for info in z.infolist():
+                  if info.is_dir() or not rx.search(info.filename):
+                      continue
+                  if info.file_size > 5_000_000:
+                      continue
+                  target = out / pathlib.Path(info.filename).name
+                  target.write_bytes(z.read(info))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: l14-tile-method-${{ github.run_id }}
+          path: method-pack/
+          if-no-files-found: error
+          retention-days: 14
