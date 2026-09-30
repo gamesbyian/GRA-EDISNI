@@ -445,6 +445,52 @@
         "current_resolution": "The 2026 statement strengthens ownership/contribution provenance but still does not identify which canonical sticker was theirs."
       },
       "disposition": "Resolve historical submission identity before outreach or any observation change. Do not create a new sticker observation from the owner's recollection alone."
+    },
+    {
+      "id": "l12-youtube-native-forensic-review",
+      "source_id": "youtube-ledger-05-ahCmqg1hhSA",
+      "source_url": "https://www.youtube.com/watch?v=ahCmqg1hhSA",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-unreadable",
+      "evidence": {
+        "ledger_entry": "L12",
+        "approximate_timestamp_seconds": 124,
+        "source_resolution": "1920x1080",
+        "source_frame_rate": 60,
+        "review_window": "approximately 120.5-128.5 seconds, including 10 fps and native-frame inspection around the historical 124 s pointer",
+        "visual_result": "The white CE sticker is shown repeatedly on the black wrapping. The foreground mark is consistently dash-like. No stable serial numerals are readable in the available source frames."
+      },
+      "disposition": "Retain L12 as lost with symbol '-' and unknown serial. Do not promote enhancement artifacts into a serial; a better/original source would be required."
+    },
+    {
+      "id": "l13-youtube-native-forensic-review",
+      "source_id": "youtube-ledger-06-G4z5r4rZH2w",
+      "source_url": "https://www.youtube.com/watch?v=G4z5r4rZH2w",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-unreadable",
+      "evidence": {
+        "ledger_entry": "L13",
+        "approximate_timestamp_seconds": 143,
+        "source_resolution": "1920x1080",
+        "source_frame_rate": 60,
+        "review_window": "approximately 139-147 seconds, including native-frame inspection around the historical 143 s pointer",
+        "visual_result": "The sticker face is unusually clear and confirms the dash-like foreground mark. Across the stable front-facing interval, no defensible serial digits appear on the visible sticker face."
+      },
+      "disposition": "Retain L13 as lost with symbol '-' and unknown serial. The source itself corroborates the historical owner's statement that no clear number could be read from the footage."
+    },
+    {
+      "id": "l35-youtube-native-forensic-review",
+      "source_id": "youtube-ledger-09-Y7OqMKBbM2Y",
+      "source_url": "https://www.youtube.com/watch?v=Y7OqMKBbM2Y",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-unreadable",
+      "evidence": {
+        "ledger_entry": "L35",
+        "alternate_entry": "U02",
+        "approximate_timestamp_seconds": 129,
+        "source_resolution": "1920x1080",
+        "source_frame_rate": 60,
+        "review_window": "approximately 125-135 seconds, including dense 10 fps/native-frame inspection around the historical pointer",
+        "visual_result": "The white CE sticker appears while the presenter reaches into the black wrapping. The dash-like foreground mark is visible in several frames, but the small-number region is repeatedly obscured by hand/forearm and motion blur; no stable numeral strokes are recoverable."
+      },
+      "disposition": "Retain L35/U02 as lost with symbol '-' and unknown serial. Further processing of this encode is low value without alternate/raw footage."
     }
   ]
 }
