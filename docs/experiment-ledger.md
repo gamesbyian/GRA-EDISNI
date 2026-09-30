@@ -277,7 +277,7 @@ Latest indexed experiment: **325**.
 | 267 | singular-affine negative control: unconstrained retention is maximized by 24 maps that erase selector S entirely; shell preservation is necessary to avoid trivial winners |
 | 268 | nonlinear fiber-preserving same-operation audit: 4 maximal 14-state operations select the same physical masters; endpoint splits 100/102 unless outer q is preserved |
 | 269 | idempotent-retraction audit: among the nonlinear fiber-preserving family, idempotence plus two-pass POS3 closure uniquely selects the canonical identity recursion and terminal 100 |
-| 270 | Q4 gauge physical-simplicity audit: all-slash is the unique minimum in polarity flips, physical domain walls, mixed rows, and mixed columns across all 16 recursively closed polarity words |
+| 270 | Q4 gauge physical-simplicity audit: all-slash uniquely minimizes polarity flips, physical domain walls, and mixed rows; mixed columns alone ties with C+F+I (the full left-column flip), while all-slash remains the unique simultaneous four-metric zero and unique minimum total cost across all 16 recursively closed polarity words |
 | 271 | exhaustive 3+3+3 frame-balance partitions: 90/280 abstract groupings recover 14 states, but physical quarter rows are the unique exact solution among the two straight parallel-axis partitions; depth columns leave 50 |
 | 272 | frame-weight-three primary parent: dropping column occupancy yields 1,296 raw primaries and 1,548 recursively closed states, all terminal 100; only 14 retain exact column POS3 |
 | 273 | centered-first-moment primary audit: frame-weight-three closure collapses to a 14+14 fork, canonical POS3 versus one q=1,d=0 center-column pileup sibling hidden at unobserved residues 28,33,34,35 |
