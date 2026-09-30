@@ -437,7 +437,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Save attached media plus thread/reply context."
+      "note": "Save attached media plus thread/reply context.",
+      "acquisition_status": "no-media-found",
+      "mining_status": "canonical-lost-owner-provenance",
+      "status_note": "Public sweep produced only a status artifact. Canonical ledger identifies this owner trail as L41/U15 and records later confirmation that the sticker is lost."
     },
     {
       "id": "vk-bigdafymonster",
@@ -522,7 +525,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Historical owner/provenance lead; preserve original media and thread context."
+      "note": "Historical owner/provenance lead; preserve original media and thread context.",
+      "acquisition_status": "no-media-found",
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Public sweep produced only a status artifact. Canonical ledger already identifies this provenance chain as physical sticker 047 = slash, background B."
     },
     {
       "id": "x-surginis",
@@ -532,7 +538,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Historical owner/provenance lead; preserve original media and thread context."
+      "note": "Historical owner/provenance lead; preserve original media and thread context.",
+      "acquisition_status": "no-media-found",
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Public sweep produced only a status artifact. Canonical ledger already ties this status URL/provenance chain to physical sticker 123 = slash, background F."
     },
     {
       "id": "x-sassyredgloves",
@@ -542,7 +551,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Historical owner/provenance lead; preserve original media and thread context."
+      "note": "Historical owner/provenance lead; preserve original media and thread context.",
+      "acquisition_status": "no-media-found",
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Public sweep produced only a status artifact. Canonical ledger already ties this source to physical sticker 231 = slash, background F."
     },
     {
       "id": "x-nicelyneatly",
@@ -564,7 +576,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Historical owner/provenance lead; preserve original media and thread context."
+      "note": "Historical owner/provenance lead; preserve original media and thread context.",
+      "acquisition_status": "no-media-found",
+      "mining_status": "canonical-lost-alias",
+      "status_note": "Public sweep produced only a status artifact. Canonical ledger resolves this owner as L16, now cross-identified with L11, sticker lost."
     },
     {
       "id": "x-nintendude794-2020",
@@ -574,7 +589,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Historical owner/provenance lead; preserve original media and thread context."
+      "note": "Historical owner/provenance lead; preserve original media and thread context.",
+      "acquisition_status": "no-media-found",
+      "mining_status": "canonical-lost-alias",
+      "status_note": "Public sweep produced only a status artifact. Canonical ledger uses this later post to confirm L16/L11 owner identity and lost status."
     }
   ]
 }
