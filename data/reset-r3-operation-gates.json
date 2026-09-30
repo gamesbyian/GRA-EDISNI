@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "experiment": 338,
+  "generated": "2026-09-30",
+  "purpose": "R3 evidence gate matrix for historically demonstrated INSIDE ARG operation families",
+  "statuses": [
+    "licensed_now",
+    "pending_specific_evidence",
+    "closed_until_cue",
+    "already_tested"
+  ],
+  "gates": [
+    {
+      "id": "metadata_ordering",
+      "precedent": "iOS timestamp ordering",
+      "sticker_evidence": [
+        "printed serial number",
+        "H108/mod9 registration"
+      ],
+      "status": "already_tested",
+      "allowed_now": [
+        "serial/H108 ordering",
+        "historically attested fixed 12x9 and 3x3 organizations"
+      ],
+      "prohibited_without_new_cue": [
+        "free row permutations",
+        "alternate serial reordering chosen for attractive output"
+      ],
+      "note": "Existing metadata supports registration, not an independently motivated alternative permutation."
+    },
+    {
+      "id": "boundary_constrained_permutation",
+      "precedent": "PC/acorn side structure constraining row order",
+      "sticker_evidence": [
+        "background seam continuity",
+        "physical sticker perimeter potentially recoverable from original photos"
+      ],
+      "status": "pending_specific_evidence",
+      "dependency": "full-photo perimeter support audit",
+      "allowed_now": [
+        "measure whether perimeter evidence is observable",
+        "record any repeated physical edge feature before interpreting it"
+      ],
+      "prohibited_without_new_cue": [
+        "permute rows using invented check bits",
+        "treat cropped tile-master seams as physical sticker-margin evidence"
+      ]
+    },
+    {
+      "id": "geometry_then_secondary_read",
+      "precedent": "Xbox geometry before Braille; CE background assembly before path",
+      "sticker_evidence": [
+        "IAB/CDE/FGH background assembly",
+        "historical 12x9 / twelve-3x3 foreground organization",
+        "9+3 body/index proposal"
+      ],
+      "status": "licensed_now",
+      "allowed_now": [
+        "observation-only 9+3 spatial tests",
+        "row/chunk and column/rail meanings with frozen rules",
+        "prospective/holdout validation of preregistered spatial rivals"
+      ],
+      "prohibited_without_new_cue": [
+        "arbitrary background-to-body bijections",
+        "free rotations/reflections chosen after output inspection"
+      ],
+      "note": "Experiment 319 closed background-row masks absent a domain bridge; Experiment 318 left direct body row/column readings live."
+    },
+    {
+      "id": "code_as_operation",
+      "precedent": "Switch output specifying controller actions",
+      "sticker_evidence": [
+        "slash/dot tail is a distinct 27-cell alphabet zone",
+        "historical tail-as-visual-aid/body-index proposal"
+      ],
+      "status": "licensed_now",
+      "allowed_now": [
+        "test simple preregistered actions directly encoded by the one-of-three tail index"
+      ],
+      "prohibited_without_new_cue": [
+        "invent multi-step action languages",
+        "interpret terminal 100 as an instruction merely because it is compact"
+      ],
+      "note": "The tail may encode an operation; the exact operation must remain independently motivated."
+    },
+    {
+      "id": "prior_stage_output_as_selector",
+      "precedent": "Terminal 41 RGB values selecting later layers",
+      "sticker_evidence": [
+        "solved background path dat/534brn9653f9j8mmd"
+      ],
+      "status": "pending_specific_evidence",
+      "dependency": "an exact parameter or registration rule emitted by another artifact",
+      "allowed_now": [
+        "inspect independently recovered artifact content for an explicit selector/key",
+        "test an exact supplied parameter once found"
+      ],
+      "prohibited_without_new_cue": [
+        "use arbitrary previous ARG answers as keys",
+        "treat 534brn filename/path characters as a key without an artifact-native instruction"
+      ],
+      "note": "The background path is an output/location, not itself an established foreground key."
+    },
+    {
+      "id": "exact_value_or_class_filter",
+      "precedent": "Terminal 41 exact RGB filtering",
+      "sticker_evidence": [],
+      "status": "closed_until_cue",
+      "allowed_now": [
+        "apply exact filtering only if a sticker or linked artifact supplies the value/class before inspection"
+      ],
+      "prohibited_without_new_cue": [
+        "sweep numeric values",
+        "borrow 41/RGB values from unrelated solved stages"
+      ]
+    },
+    {
+      "id": "externally_cued_generative_transform",
+      "precedent": "acorn + 41 -> Game of Life generation 41",
+      "sticker_evidence": [],
+      "status": "closed_until_cue",
+      "allowed_now": [
+        "run a named transform only when the sticker system exposes both transform identity and required parameters"
+      ],
+      "prohibited_without_new_cue": [
+        "Game of Life sweeps",
+        "cellular automata searches",
+        "generation-number fishing"
+      ]
+    },
+    {
+      "id": "in_world_reference_overlay",
+      "precedent": "E. E. Cummings text used as externally identified overlay source",
+      "sticker_evidence": [],
+      "status": "closed_until_cue",
+      "allowed_now": [
+        "overlay/select from a specific text or artwork only if the puzzle identifies that source"
+      ],
+      "prohibited_without_new_cue": [
+        "try arbitrary poems/texts/images",
+        "optimize overlays for readable fragments"
+      ]
+    },
+    {
+      "id": "carrier_conversion",
+      "precedent": "image/audio and spectrogram-style ARG transitions",
+      "sticker_evidence": [
+        "literal slash/dash/dot shapes"
+      ],
+      "status": "closed_until_cue",
+      "allowed_now": [
+        "convert carrier only when a sticker-native or linked artifact cue specifies audio/image/media semantics"
+      ],
+      "prohibited_without_new_cue": [
+        "spectrogram/audio/bitmap conversion sweeps"
+      ]
+    },
+    {
+      "id": "cross_artifact_consumer",
+      "precedent": "historical website/printer endpoints consuming solved-stage inputs",
+      "sticker_evidence": [
+        "no independently registered foreground consumer currently known"
+      ],
+      "status": "pending_specific_evidence",
+      "dependency": "external artifact with independently visible input grammar or matching structural fingerprint",
+      "allowed_now": [
+        "bounded audit of explicitly clue-bearing artifacts under docs/external-consumer-audit.md"
+      ],
+      "prohibited_without_new_cue": [
+        "spray 100/XYZG/route words into URLs or endpoints",
+        "generic semantic conversions"
+      ]
+    }
+  ],
+  "summary": {
+    "licensed_now": [
+      "geometry_then_secondary_read",
+      "code_as_operation"
+    ],
+    "pending_specific_evidence": [
+      "boundary_constrained_permutation",
+      "prior_stage_output_as_selector",
+      "cross_artifact_consumer"
+    ],
+    "closed_until_cue": [
+      "exact_value_or_class_filter",
+      "externally_cued_generative_transform",
+      "in_world_reference_overlay",
+      "carrier_conversion"
+    ],
+    "already_tested": [
+      "metadata_ordering"
+    ]
+  }
+}
