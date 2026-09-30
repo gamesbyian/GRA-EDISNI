@@ -1,7 +1,9 @@
 name: Persist L14 forensic review bundle
 
 on:
-  pull_request:
+  push:
+    branches:
+      - "chatgpt/external-evidence-harvester-2026-09-29"
     paths:
       - ".github/workflows/persist-l14-forensics.yml"
       - "scripts/external_evidence/reproduce_l14_forensics.py"
@@ -11,13 +13,11 @@ permissions:
 
 jobs:
   persist:
-    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -110,4 +110,4 @@ EOF
             exit 0
           fi
           git commit -m "archive: preserve L14 forensic review bundle"
-          git push origin "HEAD:${{ github.head_ref }}"
+          git push origin HEAD
