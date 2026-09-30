@@ -70,6 +70,12 @@ The sculpture can be inspected for the same fingerprints, but visual resemblance
 
 Revisit archived printer outputs, site assets, scripts, route names, downloadable files, and platform-specific puzzle material as **external structure**, not as a library of old decoder recipes.
 
+The Discord export now preserves two direct implementation precedents for this class of consumer. Historical printer JavaScript in `assets/print-b58746938d8d0071.txt` POSTs a candidate answer to `/print/index.php`, first as a validation request and then again to retrieve server-generated print content. A June-2018 gateway-status email separately exposes binary-decoded labels for `gateway auth`, `required`, `rejected`, and `comms handle input`. These establish that Playdead did use active answer-consuming endpoints elsewhere in the ARG. They **do not** imply that `100` should be sprayed at old endpoints; an independently surviving input grammar or endpoint cue is still required.
+
+The `ARG / tldr` chronology adds that this consumer was stateful: after `MULTIPLEPROBESDISPATCHED` had been accepted, a later incorrect submission in the same browser reportedly still appended the unlocked successful page. Together with the printer JavaScript's persistent client GUID, this suggests progression could be keyed per client/session. Therefore a candidate external consumer should be allowed to behave as a **state transition/unlock interface**, not only as a one-shot decoder.
+
+An official Xbox Wire article from 3 Jan 2019 independently describes the same ARG architecture: printer strings were to be correctly sorted/decoded, the resulting text entered into a seemingly ordinary subscription box on Playdead's site, and the site returned the next corrupted image/PDF artifact. It further states that Playdead had indirect systems for gauging solver progress and that platform-specific code sets accumulated while the secret remained solvable from the beginning. Source: https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/. This raises confidence in the **consumer/unlock** pattern itself, while leaving the CE foreground's actual endpoint unknown.
+
 Search for exact homologues of the solved machine:
 
 - ternary positional rails;
