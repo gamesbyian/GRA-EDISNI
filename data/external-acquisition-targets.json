@@ -700,6 +700,126 @@
       "acquisition_status": "acquired-page",
       "mining_status": "verified-owner-provenance-no-sticker",
       "status_note": "Archived forum page acquired in run 36670045345. Squee's 2018-06-06 post explicitly says 'I bought this...' and links the iam8bit INSIDE CE product page; no sticker/CE photo attached. U44 remains unresolved."
+    },
+    {
+      "id": "owner-u35-grifteskymfning-psnprofiles",
+      "kind": "forum",
+      "url": "https://forum.psnprofiles.com/topic/58584-inside-developer-playdead-teams-up-with-sex-doll-maker-for-375-collector%E2%80%99s-edition/",
+      "public": true,
+      "priority": "high",
+      "media": false,
+      "comments": true,
+      "note": "Canonical U35. Mine the historical forum page/profile context for CE ownership or linked media. Owner already contacted on forum/X; do not duplicate outreach.",
+      "acquisition_status": "not-acquired",
+      "mining_status": "unresolved-owner-public-evidence"
+    },
+    {
+      "id": "owner-u36-medusamadmann77-reddit",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/NintendoSwitch/comments/836nk0/human_fall_flat_physical_copy_available_now_on/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Canonical U36. Preserve the old thread/comment chain confirming MedusaMadMann77 bought the INSIDE CE. Reddit DM already sent; no duplicate outreach.",
+      "acquisition_status": "public-indexed",
+      "mining_status": "unresolved-owner-public-evidence"
+    },
+    {
+      "id": "owner-u37-alltailsnolegs-reddit",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/comment/falotig/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Canonical U37. Preserve the pre-ARG shipping comment and any linked context/media. Owner already contacted; no duplicate outreach.",
+      "acquisition_status": "public-indexed",
+      "mining_status": "unresolved-owner-public-evidence"
+    },
+    {
+      "id": "owner-u38-thin-the-herd-reddit",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/PlaydeadsInside/comments/8cxiy8/comment/dxiw3qo/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Canonical U38. Preserve the 2018 preorder confirmation and thread context. Owner already contacted; no duplicate outreach.",
+      "acquisition_status": "public-indexed",
+      "mining_status": "unresolved-owner-public-evidence"
+    },
+    {
+      "id": "owner-u40-playstation-instagram",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/B6OwioShsmZ/",
+      "public": true,
+      "priority": "medium",
+      "media": true,
+      "comments": true,
+      "note": "Canonical U40. Unique PlayStation-account CE/Huddle image proves access to the object but not ownership/sticker survival. Existing DM outreach got no response; preserve original media if accessible.",
+      "acquisition_status": "login-required",
+      "mining_status": "unresolved-provenance-not-confirmed-owner"
+    },
+    {
+      "id": "owner-u41-lvncqw-pricecharting",
+      "kind": "webpage",
+      "url": "https://www.pricecharting.com/offer/s4hp2rqeszu4sclke5sxb2u7ii",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": false,
+      "note": "Canonical U41 confirmed-owner marketplace/history post. Preserve page and any images; forum admin already contacted, so no duplicate outreach.",
+      "acquisition_status": "not-acquired",
+      "mining_status": "unresolved-owner-public-evidence"
+    },
+    {
+      "id": "owner-u42-vrxqyq-pricecharting",
+      "kind": "webpage",
+      "url": "https://www.pricecharting.com/offer/gt56nwyslris4hj7jnqdaqua3q",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": false,
+      "note": "Canonical U42 confirmed-owner marketplace/history post. Preserve page and any images; forum admin already contacted, so no duplicate outreach.",
+      "acquisition_status": "not-acquired",
+      "mining_status": "unresolved-owner-public-evidence"
+    },
+    {
+      "id": "owner-u43-jotonic-pricecharting",
+      "kind": "webpage",
+      "url": "https://www.pricecharting.com/offer/t4qv3uzf6dr25bmlcxiqabvfyy",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": false,
+      "note": "Canonical U43 confirmed-owner marketplace/history post. Preserve page/images and linked public identity only; admin/Twitter outreach already occurred.",
+      "acquisition_status": "not-acquired",
+      "mining_status": "unresolved-owner-public-evidence"
+    },
+    {
+      "id": "owner-u46-outsidexbox-comments",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=bNx16AWyjD8",
+      "public": true,
+      "priority": "high",
+      "media": false,
+      "comments": true,
+      "note": "Canonical U46 owner lead lives in comments, not video imagery: @stephensinnott2591 says they have the Huddle. Owner already contacted on Facebook; snapshot comments/replies only, no duplicate outreach.",
+      "acquisition_status": "metadata-needed",
+      "mining_status": "unresolved-owner-comment-source"
+    },
+    {
+      "id": "owner-u47-shaxai-reddit",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/oddheader/comments/1wmvl0x/comment/pbfcnyi/",
+      "public": true,
+      "priority": "critical",
+      "media": true,
+      "comments": true,
+      "note": "Canonical U47. Shaxai reports two sealed INSIDE Collector's Editions. Replies/DM follow-ups already sent on 2026-09-22 and 2026-09-26; preserve public thread/media only and do not duplicate outreach.",
+      "acquisition_status": "public-indexed",
+      "mining_status": "unresolved-current-owner-two-sealed-copies"
     }
   ]
 }
