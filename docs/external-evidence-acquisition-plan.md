@@ -384,3 +384,31 @@ The historical acquisition sweeps have moved from “running” to a mined/manua
 - PR #56 remains the archival-intake/vendor owner. This branch should consume or hand off provenance, not duplicate its raw-source promotion decisions.
 
 Near-term mining order: finish reviewing the already-acquired CE recon artifacts before any new dense downloads; cross-reference Oddheader owner leads against canonical/Discord ownership history; then pursue only sources that can plausibly add a new physical sticker or owner provenance.
+
+
+### Lost-sticker video forensics and owner-lead sweep
+
+The existing authenticated artifacts now support a targeted lost-entry forensic lane without new downloads:
+
+- **L12 / ahCmqg1hhSA**: dash reconfirmed around 124 s. Native 10 fps review plus perspective rectification does not resolve a serial.
+- **L13 / G4z5r4rZH2w**: dash reconfirmed around 143 s. The serial-print zone is physically exposed in several relatively frontal frames; registered/rectified inspection yields only unstable gray blobs, not defensible numeral strokes. This is a strong candidate for original/raw-footage recovery because geometry is not the limiting factor.
+- **L35 / Y7OqMKBbM2Y**: dash reconfirmed around 129 s. Motion/obliquity destroys serial detail; no serial is defensible.
+- **L11 / jQUf8yhqEc4**: the acquired source has been inspected through the high-probability unboxing/black-wrapping phase to roughly 356 s, with dense inspection around 156-228 s. No defensible sticker face, symbol, or serial was recovered.
+- **221 / Mhxynz-LoAI** is already a canonical physical observation (221 = slash, background E); do not spend new acquisition effort merely re-proving it.
+
+Oddheader owner discovery now has a finite, provenance-stable shortlist rather than a generic comment-mining task:
+
+- 427 = dot, @Douleur873: unverified claim, no photo.
+- 369 = dot, @Byokugen: unverified claim, no photo.
+- @HAL-iv2kd: says a newly bought CE sticker was discarded; remembers slash and thinks one serial digit was 4. Recollection only.
+- @time_travel_01: says they own an unopened CE.
+- @cultuschoco: says they bought a CE for themselves.
+- @BOBDOLE480: says a friend owns an unopened CE.
+- @Blorbious: says they have a sealed box.
+- @z304legend: says they have a copy but do not want to open it.
+- @jakeduggins5141: said they had a copy/card but explicitly declined follow-up; do not prioritize further outreach.
+- @billlee1821: says their sticker was already contributed; resolve identity/history before any outreach.
+
+Exact-handle checks against the current canonical sticker-ledger snapshot found no match for the newly surfaced owner handles above. That absence is not proof that their stickers are new; Discord identity drift and different usernames remain possible.
+
+Acquisition priority from this point should favor owner/photo provenance and original/raw footage for L13 over additional generic corpus accumulation.
