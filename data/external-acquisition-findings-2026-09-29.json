@@ -57,7 +57,10 @@
         "comment_id": "Ugx-aLQYmmJA6RKJAtN4AaABAg",
         "claimed_serial": 427,
         "claimed_symbol": ".",
-        "photo_present": false
+        "photo_present": false,
+        "author_handle": "@Douleur873",
+        "author_channel_id": "UC2RMnOHzSAkeVzTRrmNAiBQ",
+        "cross_reference": "No exact 427 entry or @Douleur873 match found in the current canonical sticker-ledger snapshot or repository-index search; still requires photo provenance before any observation promotion."
       },
       "disposition": "Keep quarantined until a provenance-backed physical photo is obtained."
     },
@@ -71,7 +74,10 @@
         "claimed_serial": 369,
         "claimed_symbol": ".",
         "photo_present": false,
-        "followup_comment_id": "UgyYote2bg23cfKNwpZ4AaABAg.Ab4GZ0uFxbcAbGge2CQqJI"
+        "followup_comment_id": "UgyYote2bg23cfKNwpZ4AaABAg.Ab4GZ0uFxbcAbGge2CQqJI",
+        "author_handle": "@Byokugen",
+        "author_channel_id": "UCWmWZS4F8b-SNyYhGtaGkuA",
+        "cross_reference": "No exact 369 entry or @Byokugen match found in the current canonical sticker-ledger snapshot or repository-index search; still requires photo provenance before any observation promotion."
       },
       "disposition": "Keep quarantined until a provenance-backed physical photo is obtained."
     },
@@ -81,7 +87,9 @@
       "status": "owner-lead",
       "evidence": {
         "comment_id": "UgzFs6_zSD3eV3V73nt4AaABAg",
-        "note": "Commenter states they own an unopened Collector's Edition; a reply explains the sticker can be photographed after opening only the shipping box."
+        "note": "Commenter states they own an unopened Collector's Edition; a reply explains the sticker can be photographed after opening only the shipping box.",
+        "author_handle": "@time_travel_01",
+        "author_channel_id": "UCOmPvJtTwjSjUvLpadhTgZg"
       },
       "disposition": "Potential outreach/manual follow-up."
     },
@@ -91,7 +99,9 @@
       "status": "owner-lead",
       "evidence": {
         "comment_id": "UgyOwdnmkkeDWUPvrQV4AaABAg",
-        "note": "Commenter states they bought the Collector's Edition; replies request a sticker photo."
+        "note": "Commenter states they bought the Collector's Edition; replies request a sticker photo.",
+        "author_handle": "@cultuschoco",
+        "author_channel_id": "UCpeOVxUNHnTIuPDPPuy7lYw"
       },
       "disposition": "Potential outreach/manual follow-up."
     },
@@ -101,7 +111,9 @@
       "status": "owner-lead",
       "evidence": {
         "comment_id": "UgzXd5SXuH-Z1GFWUaV4AaABAg",
-        "note": "Commenter states they have a copy but do not want to open it; reply explains only the outer shipping box needs opening."
+        "note": "Commenter states they have a copy but do not want to open it; reply explains only the outer shipping box needs opening.",
+        "author_handle": "@z304legend",
+        "author_channel_id": "UCKtzDazuuujDRLh_xxrLyLg"
       },
       "disposition": "Potential outreach/manual follow-up."
     },
@@ -111,7 +123,10 @@
       "status": "owner-lead-existing-contribution",
       "evidence": {
         "comment_id": "UgySYmPpNBDSzRyeX2d4AaABAg",
-        "note": "Commenter says they already contributed their sticker to the puzzle."
+        "note": "Commenter says they already contributed their sticker to the puzzle.",
+        "author_handle": "@billlee1821",
+        "author_channel_id": "UCpe7zl2OD4jBb4OKkxFbd8g",
+        "cross_reference": "Exact handle was not found in repository-index search. The commenter explicitly says the sticker was already contributed, so do not prioritize outreach without a separate identity/ledger match."
       },
       "disposition": "Cross-reference historical ledger/Discord before contacting; likely already represented."
     },
