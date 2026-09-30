@@ -58,7 +58,11 @@ Test only historically demonstrated operation classes whose required parameters 
 
 #### R4 — incumbent assumption burn-down
 
-Classify every theorem-graph premise by evidentiary type. Any premise retained chiefly because it preserves the machine becomes a circularity-risk target.
+**Premise classification completed in Experiment 320.** See `docs/experiment-320-reset-premise-classification.md` and `data/reset-premise-classification.json`.
+
+The current transition-side supplied set is only `O1, O2, G1, G3, G5, G6, G7`. O1 is direct observation; O2 is mixed observation/convenient coordinates; G1 and G5 are generic simplicity priors; G3 is historically motivated and now independently supported at the one-of-three tail-index level; G6 and G7 are the principal machine-preservation/circularity risks. No surviving transition grammar is yet classified as genuinely independently derived.
+
+Next R4 attacks, in order: weaken or independently motivate G7; test simple non-self-reuse rivals to G6; then test nonrecursive historically motivated uses of the G3 tail before assuming G5.
 
 #### R5 — cross-family holdout comparison
 
