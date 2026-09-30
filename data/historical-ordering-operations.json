@@ -4,12 +4,32 @@
   "purpose": "R1 observation-era operation ledger for ordering/acorn lineage",
   "entries": [
     {
-      "period": "2018-07",
-      "object": "PC printer",
-      "operation": "row permutation constrained by side/margin marks",
-      "status": "successful",
+      "date_range": "2018-06-30 to 2018-07-11",
+      "object": "Xbox/PC printer ordering lineage",
+      "operation": "rearrange printer lines; visible bell/side structure was believed to constrain ordering, and a particular PC ordering reveals acorn + 41",
+      "status": "historically attested ordering mechanism; exact original 'check-bit' wording not yet primary-anchored",
       "parameters_supplied_by_artifact": true,
-      "transfer_to_stickers": "seek independent boundary/registration channel; do not free-permute"
+      "primary_anchors": [
+        {
+          "source_repo": "gamesbyian/playdead-unofficial-exports",
+          "source_file": "Playdead Unofficial - ARG - tldr [462637922944811028].txt",
+          "timestamp": "2018-06-30 20:05",
+          "evidence": "community hypothesis explicitly says the lines must be rearranged to reveal a hidden message within the bell shape"
+        },
+        {
+          "source_repo": "gamesbyian/playdead-unofficial-exports",
+          "source_file": "Playdead Unofficial - ARG - tldr [462637922944811028].txt",
+          "timestamp": "2018-06-30 20:07",
+          "evidence": "community explicitly says the bell shape is believed partly responsible for keeping line order consistent"
+        },
+        {
+          "source_repo": "gamesbyian/playdead-unofficial-exports",
+          "source_file": "Playdead Unofficial - ARG - tldr [462637922944811028].txt",
+          "timestamp": "2018-07-11 10:07",
+          "evidence": "TLDR records that rearranging PC long strings into a particular order reveals an acorn and 41"
+        }
+      ],
+      "transfer_to_stickers": "seek independently visible ordering/registration structure; do not free-permute"
     },
     {
       "period": "2018-07",
@@ -17,7 +37,10 @@
       "operation": "recognize acorn and 41",
       "status": "successful",
       "parameters_supplied_by_artifact": true,
-      "transfer_to_stickers": "a reconstructed object may cue a later transform"
+      "transfer_to_stickers": "a reconstructed object may cue a later transform",
+      "date": "2018-07-11",
+      "source_file": "Playdead Unofficial - ARG - tldr [462637922944811028].txt",
+      "source_timestamp": "2018-07-11 10:07"
     },
     {
       "period": "post-2018 reconstruction",
