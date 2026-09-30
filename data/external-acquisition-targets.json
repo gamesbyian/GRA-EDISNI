@@ -635,6 +635,71 @@
       "acquisition_status": "acquired-upstream",
       "mining_status": "mined-deep-pass",
       "status_note": "Previously missing #stickers-solving export recovered at upstream commit 928242dc and deeply mined for provenance, predictions, model corrections, attachments, owner leads and manufacturing clues. Remaining work should be targeted, not another broad sweep; PR #56 owns archival incorporation."
+    },
+    {
+      "id": "owner-u27-minnmax-2022-winner",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=RMERjiTz3kg&t=25145s",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Canonical U27 unresolved owner trail. Mine the 2022 MinnMax charity-stream winner identity/nickname and public reply context only; Ben Hanson already notified the winner historically, so do not duplicate outreach.",
+      "acquisition_status": "not-acquired",
+      "mining_status": "unresolved-owner-public-evidence",
+      "status_note": "Separate from canonical sticker 413, which came from a 2021 MinnMax auction. U27 is the later 2022 CE winner whose sticker remains unknown."
+    },
+    {
+      "id": "owner-u32-koreanb-sale-2020",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/GameSale/comments/k4wyvu/us_hoem_switch_dock_iam8bit_inside_collectors/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Canonical U32 provenance. Preserve the original KoreanB_B_Q INSIDE CE sale post and any surviving linked images/comments. Owner was contacted repeatedly already; do not duplicate outreach.",
+      "acquisition_status": "public-indexed",
+      "mining_status": "unresolved-owner-provenance",
+      "status_note": "Historical seller KoreanB_B_Q. Separate 2020 sale posts also publicly show this owner selling the CE; later 2024 post documents transfer to skorba71."
+    },
+    {
+      "id": "owner-u32-skorba71-transfer-2024",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/GameSale/comments/1csyklf/us_h_ps5_ps4_switch_xbox_collectors_editions/",
+      "public": true,
+      "priority": "critical",
+      "media": true,
+      "comments": true,
+      "note": "Canonical U32 current-owner transfer trail. Mine public post/images/comments for the INSIDE CE sale from KoreanB_B_Q to skorba71. Both users have already been contacted historically; do not duplicate outreach.",
+      "acquisition_status": "public-indexed",
+      "mining_status": "unresolved-current-owner-provenance",
+      "status_note": "Canonical ledger records skorba71 as purchaser and says a later eBay message was sent on 2026-08-17 without reply. Public evidence mining may still recover packaging/sticker visibility."
+    },
+    {
+      "id": "owner-u33-doctornowhere-x",
+      "kind": "twitter",
+      "url": "https://x.com/doctornowhere_/status/1821955671203393814",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Canonical U33 unresolved CE owner trail. Preserve original media/thread and inspect for packaging/sticker visibility; owner has already been contacted on X/Instagram/Discord, so do not duplicate outreach.",
+      "acquisition_status": "not-acquired",
+      "mining_status": "unresolved-owner-public-evidence",
+      "status_note": "Post shows the Huddle/CE ownership, but sticker status remains unknown."
+    },
+    {
+      "id": "owner-u44-squee-forum",
+      "kind": "forum",
+      "url": "https://watmm-archive.com/t/95249/3",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Canonical U44 unresolved owner trail. User Squee explicitly confirmed buying the CE. Mine page/profile-linked public material for CE/sticker/packaging evidence only; email outreach already occurred without response.",
+      "acquisition_status": "not-acquired",
+      "mining_status": "unresolved-owner-public-evidence",
+      "status_note": "Stable forum source for U44; no sticker evidence currently recorded."
     }
   ]
 }
