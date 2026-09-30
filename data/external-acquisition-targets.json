@@ -645,9 +645,9 @@
       "media": true,
       "comments": true,
       "note": "Canonical U27 unresolved owner trail. Mine the 2022 MinnMax charity-stream winner identity/nickname and public reply context only; Ben Hanson already notified the winner historically, so do not duplicate outreach.",
-      "acquisition_status": "not-acquired",
+      "acquisition_status": "narrow-window-probe-running",
       "mining_status": "unresolved-owner-public-evidence",
-      "status_note": "Separate from canonical sticker 413, which came from a 2021 MinnMax auction. U27 is the later 2022 CE winner whose sticker remains unknown."
+      "status_note": "Known winner-announcement timestamp ~6:59:05. Actions run 36670228373 is acquiring only 25120-25190s at <=720p plus 2-fps frames; no full seven-hour stream download."
     },
     {
       "id": "owner-u32-koreanb-sale-2020",
