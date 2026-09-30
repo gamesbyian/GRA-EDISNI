@@ -97,11 +97,18 @@ def main() -> None:
     assert scored[0] == (0, 0, 0, 0)
     assert all(scored[mask] != (0, 0, 0, 0) for mask in closure if mask)
 
+    axis_winners = []
     for axis in range(4):
         best = min(score[axis] for score in scored.values())
         winners = {mask for mask, score in scored.items() if score[axis] == best}
         assert best == 0
-        assert winners == {0}
+        axis_winners.append(winners)
+
+    # Hamming weight, domain walls, and mixed rows uniquely prefer zero.
+    # Mixed columns alone has one expected tie: C+F+I flips the complete
+    # left physical column I/C/F, leaving every column internally homogeneous.
+    assert axis_winners[:3] == [{0}, {0}, {0}]
+    assert axis_winners[3] == {0, C | FI}
 
     # Even if the four costs are collapsed to a simple unweighted sum, the
     # unique minimum remains the authored all-slash polarity.
@@ -123,7 +130,9 @@ def main() -> None:
             f"{weight:>14} | {walls:>5} | {rows:>10} | {cols:>10}"
         )
 
-    print("RESULT: all-slash is the unique minimum on every preregistered locality measure")
+    print("RESULT: all-slash uniquely minimizes flips, domain walls, and mixed rows")
+    print("RESULT: mixed columns alone ties all-slash with C+F+I, the full left-column flip")
+    print("RESULT: all-slash is the unique simultaneous four-metric zero and unique minimum total cost")
     print("RESULT: physical homogeneity selects the zero gauge origin without using terminal output")
     print("RESULT: the same criterion also rejects the D-flipped 12-state sibling")
     print("CAUTION: physical simplicity is a compact authoring prior, not a new sticker observation")
