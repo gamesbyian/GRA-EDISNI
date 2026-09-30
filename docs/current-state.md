@@ -2,7 +2,20 @@
 
 _Compacted repository state reconciled through Experiment 314._
 
-## Status
+## Epistemic-reset status
+
+As of 30 Sep 2026, the repository is intentionally re-evaluating the sticker mystery from observation-first and historical-operation-first premises. The detailed ternary transducer below is retained intact as the strongest developed **incumbent hypothesis family**, but it is no longer the default ontology for new research.
+
+During this reset:
+
+- raw sticker facts and historically attested operations take precedence over machine vocabulary when generating hypotheses;
+- neighboring solved INSIDE ARG puzzles are being mined for operation-level design grammar;
+- simpler spatial, ordering, layered-registration, lookup, cross-puzzle and externally cued families must receive cheap discriminating tests;
+- machine-derived claims such as POS3, Q4 selector semantics, recursive routing, hidden state and terminal `100` remain available for prospective validation but do not count as independent evidence for themselves.
+
+See `docs/sticker-epistemic-reset.md` and `docs/arg-puzzle-mechanics-corpus.md`. The material below records the incumbent mechanical result and should be read in that status.
+
+## Incumbent mechanical status
 
 The closed-corpus mechanical crack is substantially complete.
 
