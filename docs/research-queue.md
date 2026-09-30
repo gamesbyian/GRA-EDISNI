@@ -70,7 +70,9 @@ Next R4 attack: test nonrecursive, historically motivated uses of the G3 tail be
 
 #### R5 — cross-family holdout comparison
 
-Reuse the holdout harness to compare distinct grammar families rather than only variants of the incumbent machine.
+**First cross-family comparison completed in Experiment 323.** On the 11 physically observed Q4 residues, the observation-only one-slash tail-index family forces 3/11 withheld symbols and leaves 8/11 ambiguous, with zero exclusions. The incumbent reconstruction forces 10/11 and leaves 1/11 ambiguous, also with zero exclusions. See `docs/experiment-323-cross-family-q4-holdout.md`.
+
+This is evidence that the incumbent's extra grammar buys predictive sharpness, but it does not falsify the simpler family. Row/chunk and column/rail meanings remain live because they share the same tail-cell predictions. Further R5 work should seek holdouts or independent historical structures on which G5 and a nonrecursive tail use make genuinely different predictions, rather than rewarding the incumbent merely for making more assumptions.
 
 #### R6 — expected-player-information audit
 
