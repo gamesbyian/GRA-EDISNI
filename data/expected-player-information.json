@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "experiment": 324,
+  "question": "what information could one owner, pooled contemporary solvers, and later archivists actually possess?",
+  "physical_starting_point": {
+    "one_collectors_edition": "one serialized sticker sealing the package/wrapper",
+    "immediately_visible": [
+      "serial number",
+      "one foreground mark",
+      "one faint background tile/class instance",
+      "package orientation/context"
+    ],
+    "unavailable_to_one_owner": [
+      "nine-class background assembly",
+      "foreground recurrence period",
+      "81/27 alphabet split",
+      "9+3 per-class trace",
+      "cross-owner repeat agreement"
+    ]
+  },
+  "information_tiers": [
+    {
+      "tier": "single_owner",
+      "scope": "one physical copy",
+      "can_establish": [
+        "local sticker appearance",
+        "serial",
+        "foreground symbol",
+        "faint image fragment",
+        "placement/orientation of that copy"
+      ],
+      "cannot_establish": [
+        "A-I cycle",
+        "IAB/CDE/FGH assembly",
+        "H108",
+        "81/27 split",
+        "tail-index architecture"
+      ],
+      "implication": "the CE sticker puzzle necessarily expects pooling, publication, or some external cross-copy source if it is intended to progress beyond one fragment"
+    },
+    {
+      "tier": "early_pooled_background",
+      "period": "February-April 2020",
+      "can_establish": [
+        "period-9 A-I background carrier",
+        "serial phase / zero registration",
+        "IAB/CDE/FGH physical assembly",
+        "background-layer path dat/534brn9653f9j8mmd"
+      ],
+      "cannot_establish": [
+        "foreground POS3",
+        "tail selector semantics",
+        "recursive address substitution",
+        "terminal 100"
+      ],
+      "implication": "a small pooled cross-copy set was sufficient for the solved background layer; the same sticker physically carries a proven communal spatial puzzle"
+    },
+    {
+      "tier": "pre_2021_foreground_corpus",
+      "period": "by end of 2020, retrospective sufficiency",
+      "can_establish": [
+        "enough foreground observations to recover H108 under the later period search"
+      ],
+      "historical_recognition": "earliest explicit minimum-108 community statement currently anchored to 25 March 2021; later formal period work followed",
+      "implication": "separate raw evidentiary sufficiency from what solvers had actually recognized"
+    },
+    {
+      "tier": "community_geometry",
+      "period": "2021-2023",
+      "can_establish": [
+        "108/12x9 organization",
+        "twelve 3x3 foreground squares as a historically explored layout",
+        "81/27 slash-dash versus slash-dot asymmetry",
+        "tail as possible visual aid/barrier"
+      ],
+      "cannot_establish": [
+        "exceptional-position ternary code",
+        "G5 address substitution",
+        "G6 selector-conditioned q readout"
+      ],
+      "implication": "the front-end carrier and special-tail architecture were discoverable without the modern machine"
+    },
+    {
+      "tier": "pre_machine_9_plus_3",
+      "period": "22 May 2026",
+      "can_establish": [
+        "historical 9+3 body/index proposal",
+        "second layer as selector/index in a broad sense"
+      ],
+      "cannot_establish": [
+        "physical-depth meaning",
+        "recursive reuse",
+        "route semantics"
+      ],
+      "implication": "body-plus-selector architecture has independent human provenance"
+    },
+    {
+      "tier": "current_archive",
+      "period": "30 September 2026",
+      "corpus_size_physical_records": 82,
+      "distinct_h108_residues": 65,
+      "missing_h108_residues": 43,
+      "one_slash_tail_completions": 36,
+      "incumbent_complete_masters_preferred_gauge": 14,
+      "implication": "the surviving corpus remains physically incomplete; the incumbent gains sharpness by structural grammar, not by possessing a near-complete 108-cell physical master"
+    }
+  ],
+  "design_inferences": [
+    {
+      "inference": "communal pooling was required",
+      "confidence": "high",
+      "basis": "one copy contains one serialized sticker fragment, while the solved background requires multiple A-I variants"
+    },
+    {
+      "inference": "near-complete ~600 physical collection was required",
+      "confidence": "unsupported",
+      "basis": "foreground repeats on H108 and historical background solution used a small variant set; no evidence requires all serials"
+    },
+    {
+      "inference": "near-complete 108 unique foreground cells were required",
+      "confidence": "unsupported",
+      "basis": "current 65-residue corpus is incomplete yet supports multiple substantial structures; intended missing organization may have been supplied by a clue rather than brute-force completion"
+    },
+    {
+      "inference": "some cross-copy structure was intended to replace missing raw cells",
+      "confidence": "plausible",
+      "basis": "Playdead precedent and the solved background use metadata/geometry to organize sparse pooled fragments, but no foreground-specific operation cue has yet been identified"
+    }
+  ],
+  "reset_conclusion": "Treat the puzzle as communal but not as a collection-completion task. Prefer hypotheses that explain how a modest pooled sample plus an explicit cue could unlock the foreground. Penalize hypotheses that silently require reconstructing hundreds of unobserved symbols before any operation becomes discoverable."
+}
