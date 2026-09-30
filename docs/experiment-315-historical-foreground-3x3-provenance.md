@@ -21,7 +21,7 @@ The export preserves exact message IDs and attached images.
 
 ## January 2022 precursor: 3×3 carrier + 81+27 powers of three
 
-On **26 Jan 2022**, message `935882996660183041` explicitly connects three facts while the foreground is unsolved: there are three foreground symbols; the nine sticker background images were solved as a 3×3 square; and `81 + 27 = 108`, with both components powers of three. The attached rendering is explicitly phase-anchored with sticker 0 at the top left.
+On **26 Jan 2022**, message `935882996660183041` explicitly connects three facts while the foreground is unsolved: there are three foreground symbols; the nine sticker background images were solved as a 3×3 square; and `81 + 27 = 108`, with both components powers of three. The attached rendering is explicitly phase-anchored with sticker 0 at the top left. The message also explicitly proposes that perhaps only the first 81 cells form one object.
 
 This does not yet state the twelve-frame decomposition, but it supplies a historically attested reason to treat 3×3 and 81+27 as native structure rather than a modern algebraic convenience.
 
