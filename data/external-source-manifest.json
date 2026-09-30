@@ -310,6 +310,43 @@
       "source": "project-authored",
       "path": ".github/workflows/fetch-external-arg-assets.yml",
       "note": "Manual GHA workflow downloads verified external binaries and stores them as workflow artifacts rather than Git history."
+    },
+    {
+      "id": "public-research-lineage",
+      "kind": "research_lineage_index",
+      "status": "vendored",
+      "path": "data/public-research-lineage.json",
+      "note": "Structured index of Game Detectives, MistARG, Steam, Reddit and recent experiment/hypothesis lineage."
+    },
+    {
+      "id": "terminal41-complete-text-mirror",
+      "kind": "source_tree",
+      "status": "vendored",
+      "source": "twinysam/INSIDE-ARG",
+      "path": "archive/external/twinysam-inside-arg/terminal41.link/",
+      "note": "73/74 Terminal41 source-tree files preserved exactly; sole holdout is the 19.36 MB transmission PNG binary."
+    },
+    {
+      "id": "bigdusty-extra-data-tools",
+      "kind": "supporting_research_assets",
+      "status": "vendored",
+      "source": "sashaok123/BigDusty_INSIDE_ARG_Map",
+      "path": "archive/external/bigdusty/",
+      "note": "Added raw block metadata, hotspots/arrows, annotation/contact-sheet/migration tools and upstream license."
+    },
+    {
+      "id": "external-binary-asset-manifests",
+      "kind": "binary_asset_index",
+      "status": "vendored",
+      "path": "data/external-binary-asset-manifests.json",
+      "note": "Catalogs 251 BigDusty block assets and 83 top-level twinysam sticker files with blob SHAs/sizes/URLs."
+    },
+    {
+      "id": "terminal41-source-tree",
+      "kind": "source_tree_index",
+      "status": "vendored",
+      "path": "data/terminal41-source-tree.json",
+      "note": "Exact 74-file Terminal41 source-tree inventory with blob SHAs and sizes."
     }
   ]
 }
