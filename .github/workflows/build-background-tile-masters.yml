@@ -87,7 +87,6 @@ jobs:
             --out artifacts/background-tile-evidence-masters
 
       - name: Commit 846shEE source and evidence masters
-        if: github.event_name == 'push'
         run: |
           git add archive/stickers/historical-composites/846shEE.jpg \
                   artifacts/background-tile-evidence-masters
