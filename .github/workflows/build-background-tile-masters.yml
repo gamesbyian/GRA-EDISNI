@@ -6,12 +6,14 @@ on:
       - chatgpt/background-tile-masters-2026-09-29
     paths:
       - "scripts/build_background_tile_candidates.py"
+      - "scripts/build_846shee_evidence_masters.py"
       - "scripts/sync_canonical_sticker_archive.py"
       - ".github/workflows/build-background-tile-masters.yml"
       - "docs/background-tile-master-process.md"
   pull_request:
     paths:
       - "scripts/build_background_tile_candidates.py"
+      - "scripts/build_846shee_evidence_masters.py"
       - "scripts/sync_canonical_sticker_archive.py"
       - ".github/workflows/build-background-tile-masters.yml"
       - "docs/background-tile-master-process.md"
@@ -72,6 +74,31 @@ jobs:
           name: canonical-sticker-corpus
           path: archive/stickers/
           if-no-files-found: error
+
+      - name: Build 846shEE evidence-preserving masters
+        run: |
+          mkdir -p archive/stickers/historical-composites
+          curl --fail --location --retry 3 \
+            https://i.imgur.com/846shEE.jpg \
+            --output archive/stickers/historical-composites/846shEE.jpg
+          rm -rf artifacts/background-tile-evidence-masters
+          python scripts/build_846shee_evidence_masters.py \
+            archive/stickers/historical-composites/846shEE.jpg \
+            --out artifacts/background-tile-evidence-masters
+
+      - name: Commit 846shEE source and evidence masters
+        if: github.event_name == 'push'
+        run: |
+          git add archive/stickers/historical-composites/846shEE.jpg \
+                  artifacts/background-tile-evidence-masters
+          if git diff --cached --quiet; then
+            echo "846shEE evidence masters already current."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Preserve 846shEE evidence masters"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
 
       - name: Build fail-closed review candidates
         run: |
