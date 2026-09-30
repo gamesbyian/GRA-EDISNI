@@ -475,3 +475,23 @@ Exact file properties:
 A first bounded signal audit found no obvious spectrogram text/image payload. The filename/path therefore remains interesting provenance, but “image” should not be promoted to a hidden-picture claim without an independent decoding cue.
 
 The next archival question is exact source-code/event provenance for \`Game2#6585 (681347534)\` and what in-game object/action triggers this sound. The targeted Discord clue-context extractor now searches for the asset name, \`superSecret\`, \`SecretProbeFlicker\`, input 22, and morse-terminal discussion.
+
+
+A first spectrogram audit shows no obvious text/image payload, which is consistent with the historical solve: the image is encoded directly in the **raw PCM sample values**, not as a spectrogram.
+
+The expanded Discord window recovers the complete 27 Mar 2026 solution chronology. At 13:23, \`darkmatter_11\` recognizes that waveform values can be grouped as RGB triplets. At 13:42 they report the corrected dimensions as **610×376**; at 13:55 they say they took the waveform as values between -1 and 1 and made an RGB image in Mathematica. The solved image attachment is preserved as \`assets/image_wav-4eb8725b7ff41261.png\`, exactly 610×376.
+
+The structure is independently reproducible from the archived WAV:
+
+\`688,080 samples = 610 × 376 × 3\`
+
+with zero remainder. Direct RGB reconstruction from the sample stream yields coherent Project 3 concept art, turning the dimensional factorization into a strong structural certificate rather than a visual guess. A deterministic verifier in the export-analysis repo is comparing candidate normalization conventions against the exact Discord solve PNG.
+
+The same discussion records two provenance constraints:
+
+- a 2018 GOG build reportedly still contains the asset;
+- on 31 Mar 2026, \`ghaith2025\` reports the image audio is present in launch-day PS4 files compiled before release.
+
+Those remain community reports until independently reproduced from dated builds, but they make a Collector's-Edition-only origin unlikely. The next high-value question is exact Wwise/source-code/event provenance for \`Game2#6585 (681347534)\` and whether any in-game object or event references it.
+
+The March discussion also tested several other suspicious WAVs and concluded they were likely Wwise convolution impulse responses rather than image carriers. This is a useful negative control: filename/path plus waveform oddity is insufficient; the exact sample-count/image reconstruction is what distinguishes the genuine \`superSecret/image\` file.
