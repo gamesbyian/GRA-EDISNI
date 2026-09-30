@@ -70,6 +70,8 @@ Experiment 331 compares the frozen row family to the incumbent without changing 
 
 Experiment 332 factors the frozen row readout as a native `3×3×2` token: tail-selected row × exceptional position × exceptional-symbol polarity. This yields exactly 18 abstract states, structurally isomorphic in cardinality to Pigpen's two 3×3 tic-tac-toe grids. B/C/E/I are already fully fixed tokens under physical observations. Do **not** promote this to a standard Pigpen alphabet: a full 26-letter Pigpen also requires an independent 8-state X-grid family, which the current rule does not supply.
 
+Experiment 333 tests the simplest possible use of the solved background 3×3 as the missing mapping: direct coordinate copy up to rotation/reflection. It fails strongly. C and I are distinct background coordinates but are already fixed to the same foreground token coordinate (2,1), differing only in binary polarity, so no injective background-coordinate→token-coordinate map exists at all; 0/8 D4 transforms survive. Keep background-art roles limited to independently evidenced masks/order/transform cues rather than coordinate identification.
+
 #### R3 — solved-puzzle operation replay
 
 Test only historically demonstrated operation classes whose required parameters can be supplied independently. Preserve negative results. No broad visual-target optimization.
