@@ -1,0 +1,57 @@
+name: L14 tile reference pack
+
+on:
+  push:
+    branches:
+      - "chatgpt/external-evidence-harvester-2026-09-29"
+    paths:
+      - ".github/workflows/l14-tile-reference-pack.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch normalized historical sticker references
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p tile-reference-pack/edited
+          base="https://raw.githubusercontent.com/twinysam/INSIDE-ARG/master/images/stickers/edited"
+          for file in \
+            003.jpg 021.jpg 032.jpg 059.jpg 066.jpg 095.jpg 097.png \
+            154.jpg 156.png 171.jpg 182.png 242.jpg 245.png 312.jpg 328.jpg 334.png
+          do
+            curl -L --fail --retry 3 -o "tile-reference-pack/edited/$file" "$base/$file"
+          done
+          cp archive/research-files/tiles_with_masks.png tile-reference-pack/
+          cat > tile-reference-pack/classes.csv <<'EOF'
+serial,class
+003,C
+021,C
+032,E
+059,E
+066,C
+095,E
+097,G
+154,A
+156,C
+171,I
+182,B
+242,H
+245,B
+312,F
+328,D
+334,A
+EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: l14-tile-reference-${{ github.run_id }}
+          path: tile-reference-pack/
+          if-no-files-found: error
+          retention-days: 14
