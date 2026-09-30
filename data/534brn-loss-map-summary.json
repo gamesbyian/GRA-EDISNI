@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "experiment": 331,
+  "upstream_repository": "gamesbyian/playdead-unofficial-exports",
+  "upstream_commit": "5e5897e2ce70dad5a2bd85e459770637cb36610f",
+  "pairwise": {
+    "A_vs_B": {
+      "known_conflict": 0,
+      "left_known_right_unknown": 238,
+      "left_unknown_right_known": 391,
+      "both_unknown": 1757
+    },
+    "P_vs_B": {
+      "known_conflict": 0,
+      "left_known_right_unknown": 99,
+      "left_unknown_right_known": 99,
+      "both_unknown": 1877
+    }
+  },
+  "B_payload": {
+    "range": "JFIF through pe^!02un",
+    "unknown_tokens_before_cross_capture_recovery": 1995,
+    "B_unknown_recovered_by_A": 238,
+    "B_unknown_recovered_by_P": 99,
+    "B_unknown_recovered_by_either": 248,
+    "B_unknown_recovered_by_both": 89,
+    "both_known_and_agree": 79,
+    "both_known_but_conflict": 10,
+    "safe_exact_recoveries": 238,
+    "remaining_unknown_after_safe_union": 1757
+  },
+  "conflict_positions": [
+    {
+      "b_from_jfif": 8644,
+      "a_value_hex": "5b",
+      "p_value_hex": "59"
+    },
+    {
+      "b_from_jfif": 8646,
+      "a_value_hex": "59",
+      "p_value_hex": "61"
+    },
+    {
+      "b_from_jfif": 9530,
+      "a_value_hex": "65",
+      "p_value_hex": "21"
+    },
+    {
+      "b_from_jfif": 9532,
+      "a_value_hex": "22",
+      "p_value_hex": "1c"
+    },
+    {
+      "b_from_jfif": 9535,
+      "a_value_hex": "21",
+      "p_value_hex": "4f"
+    },
+    {
+      "b_from_jfif": 9543,
+      "a_value_hex": "4f",
+      "p_value_hex": "50"
+    },
+    {
+      "b_from_jfif": 9549,
+      "a_value_hex": "50",
+      "p_value_hex": "c9"
+    },
+    {
+      "b_from_jfif": 9550,
+      "a_value_hex": "09",
+      "p_value_hex": "a3"
+    },
+    {
+      "b_from_jfif": 9551,
+      "a_value_hex": "51",
+      "p_value_hex": "4f"
+    },
+    {
+      "b_from_jfif": 11657,
+      "a_value_hex": "53",
+      "p_value_hex": "d0"
+    }
+  ],
+  "interpretation": [
+    "A/B and P/B have zero aligned known-known conflicts under the declared conservative normalization.",
+    "238 B-unknown positions receive a safe exact byte from A and/or P.",
+    "10 positions where A and P both provide known but incompatible bytes remain unknown.",
+    "No image pixels or entropy bytes are guessed."
+  ]
+}
