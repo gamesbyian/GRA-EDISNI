@@ -62,7 +62,9 @@ Test only historically demonstrated operation classes whose required parameters 
 
 The current transition-side supplied set is only `O1, O2, G1, G3, G5, G6, G7`. O1 is direct observation; O2 is mixed observation/convenient coordinates; G1 and G5 are generic simplicity priors; G3 is historically motivated and now independently supported at the one-of-three tail-index level; G6 and G7 are the principal machine-preservation/circularity risks. No surviving transition grammar is yet classified as genuinely independently derived.
 
-Next R4 attacks, in order: weaken or independently motivate G7; test simple non-self-reuse rivals to G6; then test nonrecursive historically motivated uses of the G3 tail before assuming G5.
+Experiment 321 materially weakens G7. The canonical `(2,1,0) -> 120/012/102` shell follows from two generic non-collapse priors: each selected word preserves all three ternary labels, and the three functional families collectively use all three q indices. Mutual route distinctness and route semantics are no longer required as premises. See `docs/experiment-321-g7-information-preservation.md`.
+
+Next R4 attacks, in order: test simple non-self-reuse rivals to G6; then test nonrecursive historically motivated uses of the G3 tail before assuming G5. G7 remains a generic simplicity prior, but is no longer the leading circularity risk.
 
 #### R5 — cross-family holdout comparison
 
