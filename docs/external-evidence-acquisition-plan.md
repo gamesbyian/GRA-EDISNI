@@ -281,7 +281,7 @@ Snapshot: 2026-09-29. This section is the execution-facing status surface for PR
 
 ### Do now in PR #57
 
-- **Inside Gaming CE unboxing:** authenticated full-media harvest is active now. When the artifact lands, locate the partially visible lost sticker, extract a bounded dense native-frame window, preserve all source frames, and generate review aids.
+- **Inside Gaming CE unboxing:** full media has been acquired successfully. A preserved historical YouTube comment explicitly points to **1:17** as the sticker moment, so current visual mining is now bounded around that timestamp rather than whole-video scanning. Generate a fine reconnaissance window first, then extract every native frame only across the smallest confirmed sticker-visible interval.
 - **Historical YouTube ledger corpus:** harvest metadata/thumbnails first for all remaining ledger videos plus the official iam8bit making-of/reveal; then acquire media/comments where they can add owner/sticker provenance.
 - **Public social corpus:** run the public extractor across all X/Twitter, Instagram, and VK targets; preserve successful originals and classify blocked/no-media targets for manual follow-up.
 - **Lead discovery:** run URL/account discovery over every acquired text/JSON/caption/comment artifact and reconcile new leads into the manifest after review.
