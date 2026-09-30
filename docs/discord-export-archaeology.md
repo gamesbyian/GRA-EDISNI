@@ -206,3 +206,203 @@ The export also carries larger cover assets than the previously discussed low-qu
 - `assets/Cover_blend-dfb43cdd555596a7.jpg` and `assets/Cover_blend_mirrored-c2fb3d0f85f5b014.jpg` preserve historical overlay/mirroring attempts.
 
 Action: run a bounded structural re-audit directly on the best archived A/B source images before asking owners for new scans. Preserve the historical failed overlay/UV work as negative controls.
+
+## Stickers-solving channel creation provenance
+
+The missing `#stickers-solving` export is now historically explained rather than merely observed as absent.
+
+In the archived `ARG / solving` text, on **22 Sep 2026 at 19:12**, santiface posts a pinned message:
+
+> "to better organize the solving efforts I made two new channels: #sticker-hunting ... and #stickers-solving"
+
+Later `#solving` messages on 25 and 28 Sep explicitly redirect sticker work into `#stickers-solving`.
+
+Therefore:
+
+- `#stickers-solving` is a genuinely separate channel, not a rename of `#solving`;
+- it was created only six days before the export repository's 28 Sep cutoff;
+- the public export appears to have captured the long-lived legacy channels but not these newly split sticker channels;
+- the authorized one-shot bot remains useful specifically for this late-created gap.
+
+This also means that essentially all sticker work before 22 Sep 2026 should still be recoverable from the exported `#solving` / `#solving-breakout` corpus.
+
+## Strong historical precursor to the modern 81+27 / selector interpretation
+
+A particularly important `#solving-breakout` message predates the present machine model.
+
+On **22 May 2026 at 16:32**, lime8159, discussing a 9x12 sticker orientation, proposes that:
+
+- the **first 9 bits** could encode one number / larger domain;
+- the **last 3 bits** could encode a second number / smaller subset.
+
+This is not the present machine and should not be retrofitted as one. But it is unusually close in *structural vocabulary* to the modern decomposition of each 12-cell stripe into a 9-cell primary region plus a 3-cell selector region. Together with the January-2022 observation of an 81-cell slash/dash zone followed by a 27-cell slash/dot zone, it is strong anti-hindsight evidence that the raw corpus itself suggested hierarchical 9+3 structure to independent solvers.
+
+Action: treat 9+3 hierarchical decomposition as historically discoverable from the carrier, while keeping the exact POS3 / selector semantics derived from the modern executable model.
+
+## Late 534brn/JPEG forensic recovery lane
+
+The 2025–2026 archive contains a more advanced forensic lane than the older "JPG is irrecoverable" summary suggests.
+
+Key points:
+
+- **20 Dec 2025:** a solver identifies ordinary JPEG structures in the damaged payload, including EXIF/TIFF metadata, Huffman tables and quantization tables, and argues parts of the header can be reconstructed.
+- **18 Mar 2026:** a solver explicitly questions whether the UTF-8 replacement corruption happened server-side or during scraping/saving.
+- **14 Jul 2026:** eropkol identifies a better historical capture linked from an April-2020 Discord message, claiming it avoids some HTML-parser damage but lacks the beginning/end.
+- **21 Jul–2 Aug 2026:** the group reconstructs substantial header/EXIF structure, identifies the file as grayscale JPEG-like data, and preserves a cleaner text capture as `assets/message-630970294e9fb0ce.txt`.
+- **18 Aug 2026:** the original discoverer reports that only two people saw the page before the terminal shutdown and that the surviving copy may have been captured through a Chromebook, leaving the corruption provenance genuinely ambiguous.
+
+This does **not** establish recoverability of the missing image payload; the archive still records expert and community assessments that too much entropy is missing for normal JPEG recovery. It does, however, mean the old "server-side corruption, nothing more can be done" statement is too strong.
+
+High-value bounded follow-up: compare every preserved 534brn capture byte-for-byte, reconstruct only deterministic JPEG/EXIF fields, and quantify exactly which bytes are information-theoretically lost versus merely transformed by ANSI/UTF-8/HTML handling. Do not use guessed image content as evidence.
+
+## 534brn capture inventory is now explicit
+
+The preserved damaged-image material is no longer represented only by prose references. See `data/discord-534brn-captures.json` for a content-addressed inventory of every currently identified 534brn capture family and derived artifact in the export.
+
+Notable deduplication findings:
+
+- three differently named "original" HTML files are byte-identical at blob `ce55c03e...`;
+- four `534brn..._1` HTML names are byte-identical at `f12c02c4...`;
+- three later `message-*.txt` names are byte-identical at `9580913d...`;
+- the historical `534brn...png` and both `StickerSolution` names are the same blob `2d9fd5b6...`;
+- a BMP and two JPG filenames are all the same 3.96 MB blob `21649d1b...`, so historical filename extensions cannot be trusted as format evidence.
+
+The later partial capture `9580913d...` is especially useful: even through the connector's lossy text view it visibly contains standard JPEG Huffman-table strings and ends with literal `pe^!02un`. Its archived provenance says it omits the beginning/end but avoided some HTML-parser damage. The next experiment must operate on raw bytes, not Unicode-decoded text.
+
+## Frozen May-2026 table versus the current canonical corpus
+
+A direct cross-check closes an easy-to-misstate prospective-validation question.
+
+The current canonical `data/observations.csv` contains **82 physical sticker observations but only 65 distinct H108 residues**. After mapping canonical residue 108 to the Sticker Studio's zero-indexed residue 0, those 65 residue positions are exactly the 65 entries hard-coded in the archived May-2026 `KNOWN` table.
+
+Therefore no provenance-backed physical observation currently in the canonical corpus supplies a genuinely new residue against which the May prediction table can be scored prospectively. The additional rows are repeat-cycle confirmations of already-known residues.
+
+The Sep-2026 text reports for residues 103 and 45 remain interesting precisely because both positions were outside that frozen 65-residue set, but neither belongs in `observations.csv` until a photograph or equivalent provenance is recovered.
+
+Consequence: do not quote retrospective performance of the May predictor on the current 82-row corpus as prospective validation. The only presently available out-of-freeze tests are the quarantined later claims.
+
+## Additional terminal/gateway artifact archaeology
+
+A second pass over the small text/code attachments recovered several exact historical implementation details that are worth preserving because they constrain what kinds of “external consumer” Playdead actually used elsewhere.
+
+### Printer endpoint was an active server-side input consumer
+
+`assets/print-b58746938d8d0071.txt` (blob `87e11d4878bc4fd0a3db204f820820d3dcabc45d`) is client-side JavaScript for the historical printer page. It does not decode input locally. Instead it:
+
+1. reads the submitted string;
+2. POSTs `{ in: <input>, id: <local GUID>, check: 'true' }` to `/print/index.php`;
+3. on acceptance, POSTs the same input and GUID again without `check:true`;
+4. inserts the server response into the printed page.
+
+Failed and empty submissions render explicit “incorrect message received” / “no message received” printer text.
+
+This is concrete historical precedent for a Playdead ARG endpoint acting as a **server-side validator/consumer of a compact prior-stage answer**, rather than every stage being self-decoding plaintext. It does not identify a surviving endpoint for the sticker terminal `100`, but it is a materially relevant design-vocabulary fact for `docs/external-consumer-audit.md`.
+
+### Gateway email explicitly demanded an authentication input
+
+`assets/Gateway_status_report.eml_redacted-2f6dcc6739e9117b.txt` (blob `d1bfa40a2fcc8f46cea7d5be0b99e6d8046412ed`) preserves a June-2018 “Gateway status report.” Decoding the visible binary yields labels including:
+
+- `gateway: playdead.com`;
+- `gateway auth.:_______`;
+- `___required//////////`;
+- a second gateway-auth line ending in `rejected///////`;
+- `rejection reason:____`;
+- `_comms handle input//`.
+
+The email also embeds a JPEG attachment whose metadata names **Andreas Normand Grøntved** as creator. Preserve this as first-party/provenance context for the old gateway artifact, not as evidence about the Collector's Edition sticker mechanism itself.
+
+Together with the printer JavaScript, this strengthens a narrow historical statement: Playdead's ARG infrastructure sometimes expected an externally obtained answer to be submitted to an active consumer that returned success/failure state.
+
+### Safety-data strings recovered at exact source paths
+
+`assets/INSIDE_saf_dat_col_interesting-50a465eb636416ab.txt` (blob `31f744647c40c6431b3ebd9de9aac0392eefd049`) preserves readable islands extracted from the historical Terminal 41 safety-data page, including:
+
+- `repo/dat/breach_contribution_reg`;
+- `fsd5t355gf`;
+- `GATE/81/connect[chk]` with `chk stat. [FAIL[1]]`.
+
+These strings were already known in community lore, but the export supplies a durable content-addressed source rather than a paraphrase. They remain unresolved external artifacts. Do not use them as generic keys against `100` without a cue supplied by the artifact itself.
+
+### Historical geometric straightening attempt is reproducible
+
+`assets/saf_straightened_band.setup-e3c0718ba65d9561.json` (blob `e39e4962701576f83254047b613ab1b7848bce4d`) is a `saf-byte-workbench` setup containing hundreds of explicit per-position shift points and `shiftFill: "wrap"`. It records a substantial community attempt to geometrically straighten/re-register a band in the safety-data carrier.
+
+Treat unconstrained “try shifting/straightening the Terminal 41 data” as historically attempted territory. A future revisit should need a specific registration clue or a reproducible objective, not visual fishing.
+
+### Embedded image metadata
+
+`assets/jpeg-cbebfe04a2674523.txt` (blob `590624925fe3d36a362bbb1de905f459267c211b`) records JPEG metadata with Artist/XPAuthor `AnSet`, EXIF original/digitized time `2016:08:09 14:12:24`, and an XMP create date in December 2016. This is provenance metadata only; no sticker-machine consequence is inferred.
+
+## Stateful printer-answer consumer recovered
+
+The compact `ARG / tldr` export adds an implementation-level behavioral clue to the archived `print.js` recovered above.
+
+On **2 Jul 2018**, after `MULTIPLEPROBESDISPATCHED` had been accepted by the Playdead printer endpoint, solvers reported that submitting a later *incorrect* code in the same browser still appended the previously unlocked successful page after the normal “incorrect message received” output. The same correct submission was reported to trigger the appearance of `printreqstatus_005.html` and shortly afterward `printreqstatus_006.html`.
+
+Combined with the archived JavaScript's persistent browser GUID sent to `/print/index.php`, the historical consumer appears to have maintained **per-client progression/state**, rather than treating every answer as a stateless lookup.
+
+This is relevant design precedent for any genuine external consumer of the Collector's Edition machine: an answer may act as a state transition or unlock token, not merely decode to prose. It does not identify a surviving consumer for `100`, and the old endpoint must not be probed without an independently justified grammar.
+
+## Historical empty-window clue sharpened to residues 99–107
+
+The archive makes the old “empty bottom row” observation more precise.
+
+On **6 Jan 2024**, a solver explains that the conspicuous nine-cell black block in the community rendering corresponds to having found **no stickers numbered 99 through 107 modulo 108**. They explicitly say the community suspected that this absence might help solvers recognize the 108-period structure.
+
+This is not evidence that those residues were never manufactured: discovery is heavily biased and later observations can fill historical gaps. Its value is human-solve provenance. Before the present machine model, solvers were already treating a **nine-cell contiguous absence at the end of the 108 carrier** as potentially intentional registration information rather than merely missing data.
+
+Keep this separate from the current Q4 interpretation. It supports discoverability of the 9-cell framing clue, not the machine semantics derived later.
+
+## Public Google Docs recover the original puzzle rationale
+
+The Discord URL inventory led to several still-readable historical Google Docs. These are stronger than later chat recollection because they preserve the working notes produced while the original printer ARG was active.
+
+### \`INSIDE PRINTER SECRET\`
+
+Public document ID: \`1vlpah0LdCRpJe-OfhnkaiBIcmepGXust5BMbaFJGGt8\`.
+
+The document states explicitly that rearranging the 32 long PC printer strings into a specific order reveals the acorn/41 image, and records the then-leading hypothesis that:
+
+- the **dots** carry the encoded message;
+- the **acorn shape serves as a method of preserving the correct order of the strings**.
+
+That is unusually direct historical support for the registration interpretation behind the later Discord “margin/check-bit” explanations. In a solved Playdead puzzle, geometry could be the ordering scaffold while a secondary symbol layer carried the payload.
+
+The same document records analogous multi-stage consumers on other platforms: Xbox geometry → Braille → password; iOS time-of-day ordering → 5×5 glyphs → password; Switch controller actions → RGB codes. Each accepted password/code then caused Playdead/Terminal41 state to advance.
+
+### \`terminal41.link journal\`
+
+Public document ID: \`1V9TsI8D-NG191aNplbQxnteboUc_TYl0IViFtkwDKWA\`.
+
+This contemporaneous journal is useful because it separates **scheduled/server-side site changes** from changes solvers could confidently attribute to submitted answers. In late June 2018, multiple Terminal41 pages changed around platform-release dates even though the author says the community was unaware of doing anything to trigger them. The journal explicitly warns that early \`printreqstatus\`/breachlog changes may therefore have been time/release driven.
+
+This qualifies the “active consumer” precedent:
+
+- the archived printer JavaScript and later accepted-answer behavior demonstrate genuine submitted-input handling;
+- not every Terminal41 page transition was necessarily caused by solver input;
+- historical endpoint chronology must distinguish **time/platform-release gates** from **answer-triggered unlocks**.
+
+That distinction should carry into any search for a modern consumer of terminal \`100\`: server state changes alone do not prove causation by a submitted token.
+
+## Historical sticker-ledger drift audit: 597 discrepancy resolved
+
+The recovered legacy Google Doc \`Inside Collector's Edition Numbers\` records sticker **597** as:
+
+\`/597 · image C · iam8bit YouTube\`
+
+while canonical \`data/observations.csv\` records:
+
+\`597 · - · image C\`
+
+This initially looked like source drift worth quarantining. Git history resolves it cleanly.
+
+On **10 Oct 2021**, upstream \`twinysam/INSIDE-ARG\` commit \`5f1fa6f8db746519d9e83f524a2eb54baeb2aab6\`, titled **“Fixing two mistakes of symbol descriptions (306 • and 597 -)”**, explicitly changes the sticker-ledger entry for 597 from slash to dash and 306 from dash to dot. The current upstream ledger and our canonical observations agree with those corrections.
+
+Therefore:
+
+- **do not change canonical 597**; dash is the later explicit correction;
+- treat the old Google Doc as a valuable historical snapshot, not automatically authoritative over later source corrections;
+- provenance mining must compare recovered snapshots against subsequent Git history before promoting discrepancies;
+- the same audit confirms canonical **306 = dot** is also a deliberate later correction.
+
+This is a useful example of why frozen historical documents are excellent for chronology but can preserve superseded transcription errors.
