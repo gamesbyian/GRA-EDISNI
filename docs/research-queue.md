@@ -44,7 +44,9 @@ Refinement targets remain exact 2018 side/check-bit message anchors and any pre-
 
 Strong independent channels: printed serial/phase, solved A-I 3x3 geometry, the 81/27 alphabet boundary, and the literal slash/dash/dot shapes. Background seam continuity validates the physical A-I assembly but has not yet exposed a separate check-bit layer. Packaging orientation and foreground-to-artwork registration remain unmeasured.
 
-Next R2 tests: observation-only background-position overlays, low-description tail-as-metadata operations, literal-symbol geometry, and support-mask-aware master-edge analysis.
+Experiment 317 completes the first low-description tail test. Without POS3, recursion, route criteria, or model-filled cells, the three-cell tail is globally compatible with **exactly one slash per A-I class** and leaves 36 completions; the opposite exactly-one-dot polarity has zero completions because H already has two observed dots. B/E/F/H/I already force slash positions 2/0/1/2/2. See `docs/experiment-317-tail-metadata-observation-audit.md`.
+
+Next R2 tests: compare the simplest meanings of that marked position (consecutive body chunk, physical body column/rail, or fixed mask tied to A-I geometry), plus literal-symbol geometry and support-mask-aware master-edge analysis. Do not use recursive-machine survival as the selection criterion.
 
 #### R3 — solved-puzzle operation replay
 

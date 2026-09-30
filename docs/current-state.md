@@ -10,6 +10,7 @@ During this reset:
 
 - raw sticker facts and historically attested operations take precedence over machine vocabulary when generating hypotheses;
 - neighboring solved INSIDE ARG puzzles are being mined for operation-level design grammar;
+- Experiment 317 gives the first reset-era positive structural result: on observation-only 9+3 A-I traces, an exact-one-slash three-position tail code is compatible with all physical marks and has 36 completions, while exact-one-dot is contradicted; this supports a one-of-three tail-index family independently of the incumbent recursion;
 - simpler spatial, ordering, layered-registration, lookup, cross-puzzle and externally cued families must receive cheap discriminating tests;
 - machine-derived claims such as POS3, Q4 selector semantics, recursive routing, hidden state and terminal `100` remain available for prospective validation but do not count as independent evidence for themselves.
 
