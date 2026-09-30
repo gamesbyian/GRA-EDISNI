@@ -57,6 +57,7 @@ jobs:
           rm -rf artifacts/background-tile-masters
           python scripts/build_background_tile_masters.py \
             --manifest archive/stickers/manifest.csv \
+            --repair-from .tmp/background-tile-sources/INSIDE-ARG \
             --out artifacts/background-tile-masters
 
       - name: Upload reconstruction bundle
