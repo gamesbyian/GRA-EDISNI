@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Reproduce the non-generative L14 / Inside Gaming forensic review bundle.
 
-All outputs are derived only from source video pixels (plus the known #324
+All outputs are deterministically derived only from source video pixels (plus the known #324
 sticker photo used as a layout/degradation reference). No generative model,
 inpainting, super-resolution synthesis, or OCR reconstruction is used.
 """
