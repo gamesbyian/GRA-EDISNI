@@ -49,6 +49,13 @@ jobs:
             --community-repo .tmp/background-tile-sources/INSIDE-ARG \
             --dest archive/stickers
 
+      - name: Upload canonical sticker corpus
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-sticker-corpus
+          path: archive/stickers/
+          if-no-files-found: error
+
       - name: Build fail-closed review candidates
         run: |
           rm -rf artifacts/background-tile-candidates-v2
