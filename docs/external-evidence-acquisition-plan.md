@@ -514,3 +514,20 @@ A canonical-ledger cross-check substantially reduced the apparent blocked-social
 - The VK lead `bigdaffymonster` is already canonical L40/U34; the owner confirmed through VK on 2026-05-04 that the sticker was lost. Failed public VK media extraction is archival-only.
 
 This means the genuinely research-blocking social work is now concentrated in **new-owner discovery** and unresolved current claims (notably the unsupported 369 and 427 claims, U45 identity resolution, PsychOsmosis, and other unopened/current-owner leads), rather than recovery of every historical Instagram/Facebook/VK original.
+
+### Unresolved-owner acquisition checkpoint
+
+A canonical Uxx coverage audit showed that the acquisition manifest had accumulated many resolved historical social URLs while omitting several genuinely unresolved owners. The manifest now explicitly tracks recent/public U27, U32, U33, U35-U38, U40-U47 sources where evidence can still be mined without duplicating owner outreach.
+
+Results from focused probes:
+
+- **U27 / MinnMax 2022 charity auction:** a narrow media probe plus English auto-caption transcript recovers the winning bidder token as **Mike M**. During the INSIDE CE auction the hosts repeatedly address Mike/Mike M, perform "going once / going twice", thank Mike after the close, and later state the item was sold. The video only displays an official iam8bit prize card and contains no winner sticker image. Contemporaneous public MinnMax supporter listings identify community supporter **Divorced Cougar (Mike M)**; treat that as a strong contextual handle match, not an explicitly verified auction identity. Ben Hanson already notified the winner historically, so do not duplicate outreach.
+- **U33 / doctornowhere:** original 1536x2048 X media acquired. It confirms the Huddle and red INSIDE CE box in the owner's possession but exposes no sticker-bearing black wrap/game surface.
+- **U44 / Squee:** the archived 2018 forum page is acquired and pins the ownership statement to Squee's "I bought this..." post linking the iam8bit CE. No sticker photo appears.
+- **U46 / Stephen Sinnott:** authenticated snapshot contains 615 comments and preserves `@stephensinnott2591` / `UCm2r-OsdlwU_eU8FDOMTs3Q` saying "I have the Huddle." The captured reply thread contains no sticker number/photo.
+- **U41-U43 / PriceCharting:** all three public offer pages are now acquired. They verify collection/listing provenance for `lvncqw`, `vrxqyq`, and `jotonic`; all display the same generic product cover image rather than owner sticker media. U43 is labelled "New Item, Box, and Manual", which is marketplace metadata and must not be converted into a sticker-survival claim.
+- **U32 Reddit:** direct repository fetch is reproducibly HTTP 403, but stable public/index evidence preserves KoreanB_B_Q's 2020 sale history. Current purchaser `skorba71` remains unresolved and already contacted.
+- **U35 / PSNProfiles:** direct fetch is HTTP 403.
+- **U40 / PlayStation Instagram:** public extraction hit repeated HTTP 429 and yielded no media. This remains provenance/access evidence, not a confirmed owner sticker.
+
+The operating priority is now unresolved **current-owner evidence**, not archival perfection for sources whose sticker status is already canonical. Existing outreach history must be checked before any contact recommendation.
