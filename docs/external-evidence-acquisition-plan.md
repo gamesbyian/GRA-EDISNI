@@ -531,3 +531,16 @@ Results from focused probes:
 - **U40 / PlayStation Instagram:** public extraction hit repeated HTTP 429 and yielded no media. This remains provenance/access evidence, not a confirmed owner sticker.
 
 The operating priority is now unresolved **current-owner evidence**, not archival perfection for sources whose sticker status is already canonical. Existing outreach history must be checked before any contact recommendation.
+
+
+### Safe handoff after stalled-session recovery
+
+The acquisition branch is checkpointed and should be resumed from the current unresolved-owner queue rather than by repeating broad historical sweeps.
+
+1. **Do not touch L14 tile classification yet.** PR #61 is still actively building the canonical A-I background masters. The Inside Gaming source has already been exhausted for symbol/serial evidence: L14 is slash, serial remains physically occluded, and only background classification remains worth revisiting after #61 lands.
+2. **Highest-value public owner work:** U47/Shaxai (two sealed CEs), U36-U38 historical Reddit owners, U32/skorba71, U35 PSNProfiles, U45 identity reconciliation, U46 Stephen Sinnott, and the fresh PsychOsmosis packaging lead. Check existing outreach history before proposing any contact.
+3. **Quarantine unsupported symbol claims:** Oddheader-comment claims 369 = dot and 427 = dot remain text-only claims with no physical photo. Keep them out of canonical physical evidence until independently substantiated.
+4. **Keep archival-only sources low priority.** Historical Instagram/Facebook/VK sources whose sticker status is already canonical are worth preserving eventually, but they should not displace unresolved-current-owner work.
+5. **Avoid rerunning completed broad media sweeps.** Historical YouTube, social, and Discord corpus passes already have durable findings/status entries. Use single-source probes only when a concrete unresolved question justifies them.
+6. **CI interpretation:** the acquisition-specific checks are green at this checkpoint. Repository-wide `Verify machine` fails later in `audit_q4_gauge_physical_simplicity.py` at `assert winners == {0}`; this is outside the acquisition tooling changed here. Do not babysit that run from this branch.
+7. **Branch state:** PR #57 is intentionally not rebased/merged here because it is substantially ahead of and behind current `main`, while PRs #56 and #61 are active adjacent lanes. Reconcile only when those active lanes are quiet enough to avoid losing work.
