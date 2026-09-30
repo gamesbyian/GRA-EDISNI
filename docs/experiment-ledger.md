@@ -348,6 +348,7 @@ Latest indexed experiment: **325**.
 | 336 | frozen row-selector physical discriminator expansion: the only new prospective invariants versus the incumbent are C-tail residue 84=. and 102=/; through serial 600 these map to ten unseen physical stickers 84/102/192/210/300/318/408/426/516/534; any residue-84 slash or residue-102 dot now falsifies the frozen rival without retuning, and the alternative-family predictions are preserved separately in data/frozen-row-selector-predictions.json |
 | 337 | exact 534brn A/B/P loss-map alignment: pinned raw blobs are compared with A question marks and B/P U+FFFD replacements treated as unknown tokens; A/B and P/B show zero aligned known-byte conflicts, cross-capture union safely recovers 238 exact bytes at positions unknown in B, preserves 10 A/P disagreements as unknown, and reduces the JFIF-to-terminal unresolved count from 1,995 to 1,757 without JPEG or pixel guessing |
 | 338 | R3 operation evidence-gate matrix: classifies ten historically demonstrated Playdead operation families as licensed now, pending specific evidence, closed until cue, or already tested; only geometry-then-secondary-read and simple code-as-operation are currently licensed, while Life/filter/overlay/carrier-conversion families are explicitly dormant absent sticker-native parameters |
+| 339 | row-selector null calibration: the post-hoc Experiment-329 `row>0,column=0` asymmetry occurs in 55,766/200,000 (27.883%) global fixed-mask/census permutations and 44,807/200,000 (22.404%) within-class matched permutations; exact 12/0 occurs 4.316% and 3.230% respectively but was not preregistered, so the discovery contrast is weak retrospective evidence while the frozen family's later holdout and residue-84/102 prospective tests remain valid |
 
 ## Current frontier
 
@@ -357,7 +358,7 @@ Latest indexed experiment: **325**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–338:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–339:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
