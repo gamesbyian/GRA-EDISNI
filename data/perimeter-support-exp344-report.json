@@ -1,0 +1,29 @@
+{
+  "experiment": 344,
+  "source_workflow_run": 36777513388,
+  "source_artifact_id": 11127420173,
+  "purpose": "observability only; no edge-symbol search",
+  "manifest_originals": 82,
+  "usable_full_perimeter_photos": 35,
+  "tiles_with_two_or_more_usable_photos": ["A","B","C","D","E","F","G","H","I"],
+  "replicated_tile_count": 9,
+  "all_nine_tiles_replicated": true,
+  "preregistered_geometry_rules": {
+    "minimum_corner_clearance_fraction_of_short_image_axis": 0.005,
+    "minimum_detected_side_pixels": 160,
+    "maximum_side_ratio": 1.35,
+    "accepted_area_fraction": [0.12, 0.98]
+  },
+  "tiles": {
+    "A": {"original_photos":7,"usable_full_perimeter_photos":5,"replicated_perimeter_support":true,"status_counts":{"quadrilateral-aspect-risk":1,"source-border-risk":1,"usable":5}},
+    "B": {"original_photos":13,"usable_full_perimeter_photos":4,"replicated_perimeter_support":true,"status_counts":{"edge-resolution-low":1,"source-border-risk":8,"usable":4}},
+    "C": {"original_photos":11,"usable_full_perimeter_photos":3,"replicated_perimeter_support":true,"status_counts":{"edge-resolution-low":1,"quadrilateral-aspect-risk":2,"source-border-risk":5,"usable":3}},
+    "D": {"original_photos":7,"usable_full_perimeter_photos":4,"replicated_perimeter_support":true,"status_counts":{"source-border-risk":3,"usable":4}},
+    "E": {"original_photos":8,"usable_full_perimeter_photos":3,"replicated_perimeter_support":true,"status_counts":{"source-border-risk":5,"usable":3}},
+    "F": {"original_photos":12,"usable_full_perimeter_photos":4,"replicated_perimeter_support":true,"status_counts":{"source-border-risk":8,"usable":4}},
+    "G": {"original_photos":5,"usable_full_perimeter_photos":2,"replicated_perimeter_support":true,"status_counts":{"source-border-risk":3,"usable":2}},
+    "H": {"original_photos":9,"usable_full_perimeter_photos":5,"replicated_perimeter_support":true,"status_counts":{"source-border-risk":4,"usable":5}},
+    "I": {"original_photos":10,"usable_full_perimeter_photos":5,"replicated_perimeter_support":true,"status_counts":{"edge-resolution-low":1,"source-border-risk":4,"usable":5}}
+  },
+  "interpretation_rule": "A later stable-edge-feature test is justified only for tiles with at least two independently usable full-perimeter photographs. Unreplicated tiles remain untestable rather than negative."
+}
