@@ -61,7 +61,7 @@ jobs:
           PY
           )"
           echo "url=$url" >> "$GITHUB_OUTPUT"
-      - name: Harvest metadata, thumbnail and English captions
+      - name: Harvest metadata and thumbnail
         shell: bash
         run: |
           set -euo pipefail
@@ -75,9 +75,6 @@ jobs:
             --write-info-json \
             --write-description \
             --write-thumbnail \
-            --write-subs \
-            --write-auto-subs \
-            --sub-langs "en.*,en,-live_chat" \
             --paths "$out" \
             --output "%(id)s/%(title).200B [%(id)s].%(ext)s" \
             "${{ steps.source.outputs.url }}" \
