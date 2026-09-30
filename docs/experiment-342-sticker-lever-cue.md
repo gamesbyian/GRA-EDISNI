@@ -2,6 +2,8 @@
 
 _Status: completed bounded R3 consumer test, 30 Sep 2026._
 
+> **Experiment 343 follow-up:** a deeper historical pass finds the same cover/sticker/lever linkage already explicit on 23 Apr 2020, with printed copy number proposed as the likely symbol order. More importantly, the direct 81/27 symbol alphabets prove that the known 14-command bunker password cannot occur in any contiguous H108 window under this mapping, even after reversal or cyclic rotation. The single five-observation cyclic sensitivity hit reported below is therefore closed once zone alphabets are enforced. See `docs/experiment-343-lever-lineage-boundary.md`.
+
 ## Why this matters
 
 The reset has been asking for an **independent consumer** of the three sticker marks rather than assigning them abstract numerical meaning because a model likes the result.

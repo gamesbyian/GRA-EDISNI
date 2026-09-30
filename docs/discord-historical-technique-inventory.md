@@ -125,7 +125,7 @@ This is the historical technique closest to the present foreground-master work b
 
 A bounded review of the full public `ARG / solving` export recovered a sticker-specific consumer hypothesis that predates the present machine work.
 
-On **21 Mar 2021**, `aperson1` explicitly connected the unresolved Collector's Edition foreground symbols to imagery on the CE reversible sleeve. The discussion describes an otherwise inaccessible sentry-board perspective with the three marks positioned:
+The same idea is documented at least as early as **23 Apr 2020**. In that discussion, `aperson1` identifies the three CE sticker marks on the advertised hidden-clue cover, compares their arrangement with the secret-ending lever, proposes entering the ordered CE symbols into that lever, and `santiface` proposes printed copy number as the likely ordering. On **21 Mar 2021**, `aperson1` restates the relationship more explicitly and assigns the positional mapping below. The discussion describes an otherwise inaccessible sentry-board perspective with the three marks positioned:
 
 ```
 dot   = left
@@ -150,7 +150,7 @@ This is not a demonstrated historical solve. It is stronger than generic specula
 . -> left
 ```
 
-Experiment 342 tests and rejects the cheapest version, direct contiguous replay of the already-known 14-input bunker password, while preserving the broader lever-consumer family for tests where an independent source supplies ordering or selection.
+Experiments 342–343 close the cheapest version, direct contiguous replay of the already-known 14-input bunker password. Experiment 343 strengthens that negative from sparse observations to a complete alphabet-boundary proof: the 81 slash/dash cells map only to U/R and the 27 slash/dot cells only to U/L, so no start, reversal, or cyclic rotation can contain the known password. The broader lever-consumer family remains live for a different command word or when an independent source supplies selection/traversal.
 
 This candidate should therefore be treated differently from unconstrained "try a cipher" proposals: the operation has a historical external cue, but the sequence extraction remains unsolved.
 
