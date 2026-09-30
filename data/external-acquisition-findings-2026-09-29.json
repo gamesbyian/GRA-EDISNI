@@ -513,6 +513,21 @@
         "visual_result": "The black wrapping is removed and manipulated extensively, but no frame in the high-value handling interval exposes a readable numbered CE sticker. The remainder of the video concentrates on the Huddle, art cards and contents rather than presenting the sticker."
       },
       "disposition": "Keep L11/L16 as a lost/unknown sticker entry. Do not infer symbol or serial from this source; pursue alternate social photos/raw footage instead."
+    },
+    {
+      "id": "oddheader-owner-lead-u45-hoodratthings",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-existing-unknown-entry",
+      "evidence": {
+        "comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg",
+        "author_handle": "@hoodratthings4088",
+        "author_channel_id": "UCSfDy7vqionpbw5Z8-eHexw",
+        "comment_text_summary": "Commenter says they still have a copy and contributed their codes years ago.",
+        "reply_comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg.Ab7HRDQrJ4FAbGYH8uwZ4m",
+        "reply_author": "@Raezores",
+        "canonical_cross_reference": "Current twinysam/INSIDE-ARG ledger already tracks this owner as U45, based on an older YouTube comment, with identity/sticker status still unresolved."
+      },
+      "disposition": "Do not treat as a fresh owner or initiate duplicate generic outreach. This is the same U45 lead; only a reply that supplies sticker number/photo or prior submission identity would advance evidence."
     }
   ]
 }
