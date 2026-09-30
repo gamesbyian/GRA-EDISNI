@@ -76,6 +76,8 @@ Experiment 334 enumerates the only bounded conventional Pigpen subalphabet mappi
 
 Experiment 335 quantifies the semantic-selection hazard: the current token uncertainties permit 900 distinct A-R strings under each of the 16 global codebooks, and the sets are disjoint, for **14,400 unique nine-letter candidate strings** before any language criterion. Freeze this branch here. Do not dictionary-search or language-rank these outputs. Reopen conventional Pigpen only if an independent cue fixes registration/family or new physical evidence reduces token uncertainty; otherwise continue the broader non-semantic 9+3 work.
 
+Experiment 336 operationalizes the broader frozen row rival without touching Pigpen semantics. Its only new cross-family residue predictions versus the incumbent are 84=. and 102=/, repeating through physical serials 84/192/300/408/516 and 102/210/318/426/534. All ten exact serials are currently unseen. Store and consult `data/frozen-row-selector-predictions.json`; any residue-84 slash or residue-102 dot is a preregistered falsification of this frozen rival.
+
 #### R3 — solved-puzzle operation replay
 
 Test only historically demonstrated operation classes whose required parameters can be supplied independently. Preserve negative results. No broad visual-target optimization.
