@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **324**.
+Latest indexed experiment: **325**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -334,6 +334,7 @@ Latest indexed experiment: **324**.
 | 322 | full one-shot G6 selector-map audit: exhausts all 27 q=f(S) maps after the 20 G5 first-pass candidates; 8 maps give nonempty completion-invariant outputs, but maximum retention 14 is achieved only by 002 and identity 012, both yielding 100 on the exact same 14 machines and differing solely by the known S=1 f1 observational gauge |
 | 323 | first cross-family Q4 holdout comparison: exact-one-slash tail-index-only reconstruction versus incumbent on the same 11 withheld observed Q4 residues; tail-only forces 3/11 and leaves 8 ambiguous, incumbent forces 10/11 and leaves 1 ambiguous, and neither family excludes any true symbol, so incumbent grammar is more constraining while the nonrecursive rival remains compatible |
 | 324 | expected-player-information audit: separates single-owner, pooled contemporary, retrospective, and present-archive information states; one owner has only one sticker fragment, early pooling solved the A-I background without near-complete collection, and the current 82-record/65-residue corpus still leaves 43 H108 cells physically unseen, arguing against assumptions that all ~600 or all 108 unique cells were required |
+| 325 | physical edge-channel observability audit: consensus background masters deliberately crop to x=10–90%, y=12–76% of the rectified sticker and discard the physical perimeter, while 846shEE masters are crops from an already assembled composite; existing seam continuity validates artwork registration but cannot test a second margin/check-bit channel, which remains unmeasured pending a full-photo perimeter-preserving audit |
 
 ## Current frontier
 
@@ -343,7 +344,7 @@ Latest indexed experiment: **324**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–324:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–325:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
