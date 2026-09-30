@@ -193,6 +193,78 @@
         "visual_result": "The video opens the Collector's Edition and handles the game case, box, black wrapping, and Huddle figure, but the reconnaissance review contains no defensible view of the numbered CE sticker."
       },
       "disposition": "Treat as reviewed negative for sticker acquisition; do not acquire or re-mine denser media absent a concrete candidate timestamp or better source."
+    },
+    {
+      "id": "youtube-l12-ahCmqg1hhSA-native-forensic",
+      "source_id": "youtube-ledger-05-ahCmqg1hhSA",
+      "source_url": "https://www.youtube.com/watch?v=ahCmqg1hhSA",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-unresolved",
+      "evidence": {
+        "ledger_entry": "L12",
+        "canonical_symbol": "-",
+        "historical_timestamp_seconds": 124,
+        "native_review_window": "approximately 121-129 seconds at 10 fps",
+        "methods": [
+          "native-frame extraction",
+          "multi-frame visual review",
+          "white-sticker perspective rectification"
+        ],
+        "result": "Dash is clearly visible in multiple native frames. The sticker is exposed, but the small serial-print area never resolves into stable, defensible numeral strokes across the useful frames."
+      },
+      "disposition": "Retain L12 as lost with dash; do not infer a serial from this source. Revisit only if a better/original source appears."
+    },
+    {
+      "id": "youtube-l13-G4z5r4rZH2w-native-forensic",
+      "source_id": "youtube-ledger-06-G4z5r4rZH2w",
+      "source_url": "https://www.youtube.com/watch?v=G4z5r4rZH2w",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-region-exposed-unresolved",
+      "evidence": {
+        "ledger_entry": "L13",
+        "canonical_symbol": "-",
+        "historical_timestamp_seconds": 143,
+        "native_review_window": "approximately 140-148 seconds at 10 fps",
+        "methods": [
+          "native-frame extraction",
+          "multi-frame visual review",
+          "white-sticker perspective rectification",
+          "registered median inspection"
+        ],
+        "result": "Dash is unambiguous. The serial-print zone is physically visible in several relatively frontal frames and produces faint gray marks after rectification, but the marks do not resolve into repeatable numeral strokes at source resolution. No serial is defensible."
+      },
+      "disposition": "Preserve as a stronger negative than simple occlusion: the serial region is exposed but resolution/compression is insufficient. Original/raw footage would be the highest-value follow-up."
+    },
+    {
+      "id": "youtube-l35-Y7OqMKBbM2Y-native-forensic",
+      "source_id": "youtube-ledger-09-Y7OqMKBbM2Y",
+      "source_url": "https://www.youtube.com/watch?v=Y7OqMKBbM2Y",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-unresolved",
+      "evidence": {
+        "ledger_entry": "L35",
+        "canonical_alias": "U02",
+        "canonical_symbol": "-",
+        "historical_timestamp_seconds": 129,
+        "native_review_window": "approximately 126-134 seconds at 10 fps",
+        "methods": [
+          "native-frame extraction",
+          "multi-frame visual review",
+          "white-sticker perspective rectification"
+        ],
+        "result": "Dash is visible as previously reported. The sticker is moving and oblique during the useful interval; rectified frames do not preserve enough serial-region detail for a defensible reading."
+      },
+      "disposition": "Retain L35/U02 as confirmed lost with dash; do not infer a serial from this source."
+    },
+    {
+      "id": "youtube-ledger-02-Mhxynz-LoAI-canonical-existing",
+      "source_id": "youtube-ledger-02-Mhxynz-LoAI",
+      "source_url": "https://www.youtube.com/watch?v=Mhxynz-LoAI",
+      "status": "canonical-physical-observation-already-represented",
+      "evidence": {
+        "serial": 221,
+        "symbol": "/",
+        "background": "E",
+        "ledger_note": "The canonical community ledger already ties this video to physical sticker 221 = slash, background E."
+      },
+      "disposition": "Do not spend acquisition budget re-proving this source unless provenance quality becomes a separate need."
     }
   ]
 }
