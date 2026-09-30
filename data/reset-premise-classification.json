@@ -82,13 +82,16 @@
     {
       "id": "G6",
       "class": "G",
-      "primary_evidentiary_type": "selected_because_it_preserves_the_machine",
+      "primary_evidentiary_type": "generic_simplicity_prior",
       "secondary_support": [
-        "Experiment 291 literal-copy test makes q=S uniquely selective and completion-invariant"
+        "Experiment 322 exhaustive 27-map q=f(S) family",
+        "maximum completion-invariant retention leaves 002 and 012",
+        "the two optimal maps are identical modulo established f1 observational gauge",
+        "Experiment 291 human-scale constant-versus-identity comparison"
       ],
-      "circularity_risk": "high",
-      "claim": "reuse the same selector on regenerated surfaces: (q,S(j),j)->(S(j),S(j),j)",
-      "reset_action": "target with non-self-reuse rival families and historical language search for repeat/apply-again/self-application cues"
+      "circularity_risk": "medium_high",
+      "claim": "after G5, consume the remaining q coordinate with a deterministic selector-conditioned map q=f(S); maximum-retention completion invariance is unique modulo the known f1 gauge",
+      "reset_action": "retain as a generic selector-conditioned information-reduction prior; seek independent motivation for using the tail as a second address selector at all"
     },
     {
       "id": "G7",
@@ -136,16 +139,14 @@
     "generic_simplicity_grammar_nodes": [
       "G1",
       "G5",
+      "G6",
       "G7"
     ],
-    "machine_preservation_risk_nodes": [
-      "G6"
-    ],
+    "machine_preservation_risk_nodes": [],
     "independently_derived_transition_grammar_nodes": [],
     "highest_priority_circularity_targets": [
-      "G6",
       "G5"
     ]
   },
-  "last_updated_experiment": 321
+  "last_updated_experiment": 322
 }
