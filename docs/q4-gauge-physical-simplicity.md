@@ -16,9 +16,13 @@ actual 3×3 artwork geometry and four simple locality costs:
 - number of mixed physical rows;
 - number of mixed physical columns.
 
-The all-slash word is the unique zero-cost member under every measure. No
-selector depth, recursion result, terminal payload, hidden state, or route table
-is consulted.
+The all-slash word uniquely minimizes flipped-stack count, orthogonal domain
+walls, and mixed physical rows. Mixed columns alone has one exact tie:
+`C+F+I`, which flips the entire left physical column `I/C/F` and therefore
+leaves each column internally homogeneous. Across the full four-metric tuple,
+and under the simple unweighted sum of the four costs, all-slash is uniquely
+minimal. No selector depth, recursion result, terminal payload, hidden state, or
+route table is consulted.
 
 This does not turn physical simplicity into new empirical evidence. It does,
 however, make the authoring choice much less mysterious: the transition-visible
