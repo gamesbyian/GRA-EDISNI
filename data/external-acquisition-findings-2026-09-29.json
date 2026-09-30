@@ -153,16 +153,20 @@
       "id": "youtube-ledger-03-fu7gmuJQKXM-reviewed-negative",
       "source_id": "youtube-ledger-03-fu7gmuJQKXM",
       "source_url": "https://www.youtube.com/watch?v=fu7gmuJQKXM",
-      "status": "human-reviewed-negative",
+      "status": "canonical-physical-observation-existing-video-sampling-negative",
       "evidence": {
         "title": "Inside Collector's Edition Unboxing",
         "uploader": "Blue Rupees",
         "upload_date": "2019-12-16",
         "source_duration_seconds": 388,
         "review_method": "Successful authenticated full-media acquisition; complete source sampled every 2 seconds across 0-386 seconds and visually reviewed.",
-        "visual_result": "The presenter opens the shipping/collector box and spends the remainder of the video handling the Huddle figure. No defensible view of the numbered sticker on the black-wrapped game appears in the sampled full-source review."
+        "visual_result": "The presenter opens the shipping/collector box and spends the remainder of the video handling the Huddle figure. No defensible view of the numbered sticker on the black-wrapped game appears in the sampled full-source review.",
+        "serial": 242,
+        "symbol": "-",
+        "background": "H",
+        "canonical_context": "Canonical community ledger ties this YouTube source to physical sticker 242 = dash, background H. The present 2-second whole-video sampling did not itself yield a defensible serial read, so that sampling result must not be confused with absence of canonical physical evidence."
       },
-      "disposition": "Treat as reviewed negative for sticker acquisition; do not re-download or densify absent a concrete candidate timestamp."
+      "disposition": "Treat 242 = dash, H as already canonical. Do not re-download merely to re-prove it; preserve the video as source provenance."
     },
     {
       "id": "public-x-sweep-2026-09-29-mined",
@@ -186,19 +190,26 @@
       "disposition": "Keep the original-media provenance; do not promote any new sticker observation from this sweep."
     },
     {
-      "id": "youtube-ledger-11-gqlQaHgRaHg-reviewed-negative",
+      "id": "youtube-u01-gqlQaHgRaHg-native-forensic",
       "source_id": "youtube-ledger-11-gqlQaHgRaHg",
       "source_url": "https://www.youtube.com/watch?v=gqlQaHgRaHg",
-      "status": "human-reviewed-negative",
+      "status": "canonical-lost-or-unresolved-entry-symbol-confirmed-serial-occluded",
       "evidence": {
         "title": "The Inside/Real Doll CE: Our Weirdest Unboxing Ever",
         "uploader": "IGN",
         "upload_date": "2019-12-19",
-        "source_duration_seconds": 374,
-        "review_method": "Successful authenticated reconnaissance artifact; complete source sampled every 2 seconds across the full run and visually reviewed.",
-        "visual_result": "The video opens the Collector's Edition and handles the game case, box, black wrapping, and Huddle figure, but the reconnaissance review contains no defensible view of the numbered CE sticker."
+        "ledger_entry": "U01",
+        "canonical_symbol": "/",
+        "historical_timestamp_seconds": 52,
+        "native_review_window": "approximately 48-58 seconds, with dense 10 fps inspection around the useful exposure",
+        "methods": [
+          "native-frame extraction",
+          "dense multi-frame visual review",
+          "conservative crop/enlargement"
+        ],
+        "result": "The white CE sticker is visibly exposed on the black wrapping and the slash is unambiguous in multiple adjacent native frames around 53.1-53.4 s. The presenter's fingers cover the lower/serial side of the sticker throughout the useful exposure; no defensible serial digits are available from these frames."
       },
-      "disposition": "Treat as reviewed negative for sticker acquisition; do not acquire or re-mine denser media absent a concrete candidate timestamp or better source."
+      "disposition": "Treat U01 as slash-confirmed with serial unresolved/occluded. Do not infer a serial. A different camera angle, still, or original alternate footage would be required."
     },
     {
       "id": "youtube-l12-ahCmqg1hhSA-native-forensic",
