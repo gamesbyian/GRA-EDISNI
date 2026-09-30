@@ -72,8 +72,8 @@
       "captions": true,
       "note": "Historical owner/unboxing video referenced by sticker ledger.",
       "acquisition_status": "acquired",
-      "mining_status": "human-reviewed-negative",
-      "status_note": "Authenticated full media acquired; complete 388s source reviewed at 2s sampling with no defensible numbered-sticker view."
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Canonical ledger identifies physical sticker 242 = dash, background H. Whole-video 2s sampling did not independently resolve the serial; preserve as provenance, not as a negative source."
     },
     {
       "id": "youtube-ledger-04-jQUf8yhqEc4",
@@ -178,8 +178,8 @@
       "captions": true,
       "note": "Historical owner/unboxing video referenced by sticker ledger.",
       "acquisition_status": "acquired",
-      "mining_status": "human-reviewed-negative",
-      "status_note": "Authenticated reconnaissance acquired; complete 374s source reviewed at 2s sampling with no defensible numbered-sticker view."
+      "mining_status": "lost-or-unresolved-entry-native-forensics-complete",
+      "status_note": "Canonical U01 slash reconfirmed in dense native frames around 53.1-53.4s. Presenter fingers occlude the lower/serial side throughout the useful exposure; serial remains unresolved."
     },
     {
       "id": "facebook-group-limited-printed-games",
