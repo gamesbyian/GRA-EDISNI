@@ -2,6 +2,11 @@
 
 Most public acquisition is handled by `scripts/external_evidence/` and GitHub Actions. The remaining work requires a logged-in human browser or a local machine that can access that browser session.
 
+## Current division of labour
+
+Use automated PR #57 acquisition now for YouTube and publicly extractable X/Instagram/VK sources. Use this manual guide only for sources that genuinely require a logged-in human browser or for refreshing the dedicated YouTube cookie jar. PR #56 owns archival promotion/vendor decisions and is currently active, so do not manually duplicate binary/archive acquisition already being handled there.
+
+
 ## Do not send authentication material to the repository
 
 Do **not** commit, paste into issues, upload to Actions, or send in chat:
@@ -71,7 +76,7 @@ For each failed target:
 
 ### 4. Oddheader comments
 
-Public automation should attempt comments first. If YouTube withholds comments from the extractor, manually review the Oddheader September 2026 INSIDE mystery video and capture owner reports that mention having a Collector's Edition, sticker, serial/number, photo, packaging, or willingness to inspect their copy.
+Authenticated automation now reaches the Oddheader metadata/caption/comment surface. Human review has established that the video itself contains no unknown sticker imagery, so do not spend time frame-mining it. Keep the comment stream as an owner-discovery source and capture reports that mention having a Collector's Edition, sticker, serial/number, photo, packaging, or willingness to inspect a copy.
 
 Do not limit review to those keywords if a comment obviously contains new provenance.
 
@@ -101,7 +106,7 @@ There is no requirement to do this. A normal logged-in browser plus saved origin
 
 ## Authenticated YouTube lane
 
-GitHub-hosted runners currently hit YouTube's anti-bot gate for the critical unboxing videos. The harvester supports an authenticated Netscape-format cookie jar without storing the Google password.
+GitHub-hosted runners originally hit YouTube's anti-bot gate for the critical unboxing videos. That path is now working with a dedicated research-only YouTube cookie jar plus yt-dlp's Node/EJS challenge solver. The Google password is not stored or used by the workflow.
 
 ### Recommended setup
 
@@ -162,7 +167,7 @@ Create a repository Actions secret named:
 
 Paste only the resulting base64 text into that secret. The manual `External evidence public harvest` workflow will materialize it into `$RUNNER_TEMP`, chmod it to 0600, point `yt-dlp` at it, and never include that temporary cookie file in the uploaded evidence artifact.
 
-Cookies can expire or be invalidated by Google. If an authenticated run returns `login-required-or-antibot`, refresh the local cookie jar and replace the secret.
+Cookies can expire or be invalidated by Google. If an authenticated run returns `login-required-or-antibot`, refresh the local cookie jar and replace the secret. Current successful runs have reached metadata/comments/subtitles; HTTP 429 after that is a rate-limit issue, not an authentication failure.
 
 ### Security boundary
 
