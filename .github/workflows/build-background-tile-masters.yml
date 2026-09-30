@@ -33,12 +33,11 @@ jobs:
           ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
           fetch-depth: 0
 
-      - name: Acquire community repositories
+      - name: Acquire upstream community repository for sync/audit
         shell: bash
         run: |
           mkdir -p .tmp/background-tile-sources
           git clone --depth 1 https://github.com/gamesbyian/INSIDE-ARG.git .tmp/background-tile-sources/INSIDE-ARG
-          git clone --depth 1 https://github.com/gamesbyian/playdead-unofficial-exports.git .tmp/background-tile-sources/playdead-unofficial-exports || true
 
       - uses: actions/setup-python@v5
         with:
@@ -53,29 +52,12 @@ jobs:
             --community-repo .tmp/background-tile-sources/INSIDE-ARG \
             --dest archive/stickers
 
-      - name: Expand source corpus from the community sticker ledger
-        continue-on-error: true
-        run: |
-          rm -rf .tmp/background-tile-corpus
-          python scripts/collect_background_tile_sources.py \
-            --community-repo .tmp/background-tile-sources/INSIDE-ARG \
-            --out .tmp/background-tile-corpus \
-            --harvest-web \
-            --timeout 25
-
       - name: Build registered consensus masters
         run: |
           rm -rf artifacts/background-tile-masters
           python scripts/build_background_tile_masters.py \
             archive/stickers/originals \
             --out artifacts/background-tile-masters
-
-      - name: Preserve source acquisition manifest
-        if: always()
-        run: |
-          if [[ -f .tmp/background-tile-corpus/source-manifest.csv ]]; then
-            cp .tmp/background-tile-corpus/source-manifest.csv artifacts/background-tile-masters/source-manifest.csv
-          fi
 
       - name: Upload reconstruction bundle
         uses: actions/upload-artifact@v4
