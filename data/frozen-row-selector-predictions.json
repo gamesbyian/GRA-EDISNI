@@ -7,24 +7,48 @@
     "selection": "slash position selects one consecutive three-cell body row",
     "selected_row": "exactly one mark differs from the other two"
   },
-  "provenance_caution": "The one-exception criterion was introduced after row/column outputs had been inspected. It is not pristine preregistered evidence and must not be tuned further.",
+  "provenance_caution": "The one-exception criterion was introduced after row/column outputs had been inspected. Experiment 339 finds the qualitative row-survives/column-dies asymmetry in roughly one quarter of matched null permutations, so the discovery basis is weak/post-hoc. The family remains frozen only for post-freeze holdout and prospective falsification; it must not be tuned further.",
   "prospective_residue_predictions": {
     "84": ".",
     "93": ".",
     "102": "/"
   },
   "incumbent_comparison": {
-    "93": "already invariant dot",
     "84": "variable in incumbent family",
+    "93": "already invariant dot",
     "102": "variable in incumbent family"
   },
-  "primary_discriminators": [84, 102],
+  "primary_discriminators": [
+    84,
+    102
+  ],
   "physical_serials_1_600": {
-    "84": [84, 192, 300, 408, 516],
-    "102": [102, 210, 318, 426, 534]
+    "84": [
+      84,
+      192,
+      300,
+      408,
+      516
+    ],
+    "102": [
+      102,
+      210,
+      318,
+      426,
+      534
+    ]
   },
   "falsification": {
     "84": "slash falsifies frozen row-selector family",
     "102": "dot falsifies frozen row-selector family"
+  },
+  "retrospective_null_calibration": {
+    "experiment": 339,
+    "global_fixed_mask_row_positive_column_zero_fraction": 0.27883,
+    "within_class_matched_row_positive_column_zero_fraction": 0.224035,
+    "exact_12_0_global_fraction": 0.043155,
+    "exact_12_0_within_class_fraction": 0.032295,
+    "exact_count_caution": "The exact 12/0 outcome was not preregistered and is not a confirmatory p-value.",
+    "evidentiary_status": "weak retrospective discovery; post-freeze holdout and prospective predictions remain frozen"
   }
 }
