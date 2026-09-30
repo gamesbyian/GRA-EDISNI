@@ -801,6 +801,67 @@
         "status_note": "Interactive exploratory transform only; no decoded image/message or independent validation is recorded in the surrounding channel."
       },
       "disposition": "Preserve as a historical transform hypothesis, not as an established structural rule."
+    },
+    {
+      "id": "discord-original-background-relief-groups-2020",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-primary-community-provenance",
+      "evidence": {
+        "source_repo": "twinysam/playdead-unofficial-exports",
+        "source_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "source_file": "Playdead Unofficial - ARG - tldr [462637922944811028].txt",
+        "timestamp": "2020-03-20 00:54",
+        "author": "elronodelp",
+        "observation": "High-resolution photos showed sticker relief/background patterns could be categorized into nine groups A-I. A representative from each group was processed and assembled into another perspective of the initial Morse printer.",
+        "attached_images": [
+          "assets/unknown.png-era export attachment",
+          "assets/unknown-2.png-era export attachment"
+        ]
+      },
+      "disposition": "Use as historical provenance for the existence and purpose of the A-I relief classes; modern canonical tile masters should still be built from physical-photo evidence."
+    },
+    {
+      "id": "discord-original-sticker-puzzle-solution-composite-2020",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-solved-structure-provenance",
+      "evidence": {
+        "source_repo": "twinysam/playdead-unofficial-exports",
+        "source_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "source_file": "Playdead Unofficial - ARG - tldr [462637922944811028].txt",
+        "timestamp": "2020-04-28 15:54",
+        "author": "pitch_bright",
+        "attachment": "assets/StickerSolution-dc12d5e516ca4922.png",
+        "attachment_blob_sha": "2d9fd5b60faa3d5fdb25ebc63ab3f77be3138b46",
+        "visual_structure": "I A B / C D E / F G H",
+        "solved_path": "dat/534brn9653f9j8mmd/",
+        "note": "This is stronger historical provenance for the A-I spatial order than the 2026 recollection because it is the contemporaneous posted solution composite."
+      },
+      "disposition": "Treat the composite as authoritative historical layout provenance, not as a substitute for modern per-tile master reconstruction."
+    },
+    {
+      "id": "discord-108-lineage-earliest-surviving-export",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-provenance",
+      "evidence": {
+        "source_repo": "twinysam/playdead-unofficial-exports",
+        "source_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "source_file": "Playdead Unofficial - ARG - solving-breakout [463106924708233216].txt",
+        "earliest_surviving_exchange": [
+          "2022-12-23 18:14 lime8159: posted 'stickers as a 3x36'",
+          "2022-12-23 23:09 lime8159: rendered 216 instead of 108",
+          "2022-12-23 23:28 lime8159: explained that if it repeats every 108 then 216 only adds redundant data",
+          "2022-12-24 23:27 lime8159: said they were 'kinda confident' it repeats at 108 while cautioning that 12x9 dimensions were not established"
+        ],
+        "later_quantification": {
+          "timestamp": "2023-11-03",
+          "author": "lime8159",
+          "attachment": "assets/sequence_prob-bb1047802f422f07.txt",
+          "attachment_blob_sha": "68d1bbf829c1eaf13b8bb965b753e0c411121032",
+          "claimed_108_probability": "about 1e-8 under that historical calculation",
+          "caveat": "aperson1 independently reported a less extreme but still sub-0.1% result; this historical probability is provenance, not the current project's validated null."
+        }
+      },
+      "disposition": "Credit lime8159 as the earliest surviving explicit 108-layout/probability lineage found in this export, without claiming this proves original invention outside the surviving corpus."
     }
   ]
 }
