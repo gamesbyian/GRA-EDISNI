@@ -128,6 +128,22 @@ This sharply changes the manufacturing map:
 
 The best archival target is therefore the work order or source file for the **CE black game wrap and seal**, not the main rigid box.
 
+### 7A. Contemporary Discord narrows the black-wrap assembly sequence
+
+The public Discord export adds two useful contemporaneous observations to the later packaging reconstruction.
+
+On **17 Dec 2019**, while owners were first examining shipped editions, a participant notes that the game did **not** arrive inside the obvious game-sized slot in the main Collector's Edition box and infers that the separately wrapped game package was added later in the pack-out sequence. This is a community manufacturing inference rather than a first-party production statement, but it is temporally close to fulfillment and consistent with the later owner-described packaging stack.
+
+On **18 Feb 2020**, an owner reports checking their original uncompressed unboxing footage and confirms that the sticker's faint background image was already present at unboxing. They explicitly use this to reject theories that the image developed later through light/oxygen exposure.
+
+Consequences:
+
+- preserve the hypothesis that the coded black game wrap/seal was a **late CE-specific kitting step**, while marking the exact operator as unresolved;
+- treat the faint A–I background as printed/applied production content, not a post-unboxing chemical/light effect;
+- source-quality original unboxing footage is a useful manufacturing record because it can freeze the as-shipped state before stickers were handled or discarded.
+
+These points strengthen the priority on iam8bit/Playdead pack-out records and original owner footage without elevating community inference into a first-party claim.
+
 ### 8. Contemporaneous iam8bit response says the editions were "numbered... in their own way"
 
 In the December 2019 shipping thread, an owner reports asking iam8bit via Instagram how many units were produced. The reported iam8bit reply was:
@@ -151,6 +167,42 @@ Archival target created by this clue:
 - recover the original Instagram DM/screenshot if the owner still has it;
 - search iam8bit support/marketing archives for the wording;
 - ask iam8bit directly what "numbered... in their own way" referred to.
+
+### 8A. Historical high-serial inference was visibly underdetermined
+
+The Discord archive preserves a useful warning against turning sticker serials into production-count claims.
+
+On **17 Mar 2020**, a solver speculated that iam8bit might have produced about 600 units, retained the end of the run, and happened to use sticker 597 in its own unboxing. This was explicitly speculation, not manufacturing evidence.
+
+By **13 Sep 2022**, the community had located about 70 confirmed sticker images plus many lost/unknown owners, yet (apart from iam8bit's 597) essentially none of the discovered stickers lay above 478. A contemporaneous calculation noted that, **if** all numbers 001–597 existed and the 70 discoveries were an independent uniform sample, the chance of all 70 falling in 001–478 would be about 0.000017%. The calculation is arithmetically useful but its sampling model is not credible: owner discovery came through correlated social-media searches, auctions, unboxing videos, Discord contacts, and repeated hunting by the same people.
+
+Consequences:
+
+- sticker **597 proves a high serial exists**, but by itself does not prove 597 units were manufactured;
+- the absence of many 479–596 discoveries cannot safely bound production because the recovered-owner corpus is heavily ascertainment-biased;
+- the old “about 500/600 copies” language should remain manufacturing speculation unless independently sourced;
+- serial-range inference should be based on the generated label/code space or production records, not owner-sample frequencies.
+
+The later 108-cycle reconstruction makes this distinction still more important: a generated code space can extend beyond the number of packages actually sold, and a highest observed serial need not be an edition count.
+
+### 8B. Sticker serial was not a simple preorder-sequence number
+
+The archived Discord chronology supplies a useful discriminator against the simplest fulfillment model.
+
+On **12 Jul 2020**, the sticker-hunting lead reports that an owner who had **preordered within roughly ten minutes** of the Collector's Edition preorder opening turned out to have sticker **144**, not a near-zero serial. This is a community report about the owner's preorder timing rather than an iam8bit order record, so preserve it at that evidentiary level.
+
+If accurate, it makes a direct mapping such as:
+
+`sticker serial = preorder/order sequence`
+
+very unlikely. It is compatible with several other mechanisms:
+
+- labels were generated in a fixed pool and assigned non-sequentially;
+- pack-out order differed substantially from preorder order;
+- stickers were shuffled/randomized before application;
+- the serial belongs to an authored code/address space rather than a unit sequence.
+
+This does not tell us which mechanism was used, but it creates a concrete question for production records: **was sticker identity assigned to an order, or was it determined independently during CE-specific wrapping/pack-out?**
 
 ### 9. iam8bit publicly describes substantial physical-production work as in-house
 

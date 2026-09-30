@@ -37,7 +37,18 @@
   "missing_high_value_channel": {
     "name": "stickers-solving",
     "status": "not present in inspected export",
-    "intended_collection": "authorized one-shot Discord bot if moderators approve"
+    "intended_collection": "authorized one-shot Discord bot if moderators approve",
+    "created_at": "2026-09-22T19:12:00",
+    "creation_source": {
+      "channel": "ARG / solving",
+      "channel_id": "461275582970462209",
+      "text_blob_sha": "1889cc948f86f5a4455de0d7310b15cdb1b88b5c",
+      "note": "Pinned message says #sticker-hunting and #stickers-solving were newly created to split sticker work."
+    },
+    "later_redirects": [
+      "2026-09-25T02:21:00",
+      "2026-09-28T02:21:00"
+    ]
   },
   "key_assets": [
     {
@@ -100,6 +111,31 @@
       "path": "assets/twelve_3x3_squares-cccbc93870291d33.png",
       "blob_sha": "2e976a35b2ac7bb9170351cfb45f3dddaeb3e75f",
       "role": "May 2026 explicit nine slash-dash plus three slash-dot 3x3 block rendering"
+    },
+    {
+      "path": "assets/print-b58746938d8d0071.txt",
+      "blob_sha": "87e11d4878bc4fd0a3db204f820820d3dcabc45d",
+      "role": "historical printer client showing server-side /print/index.php validation/response flow"
+    },
+    {
+      "path": "assets/Gateway_status_report.eml_redacted-2f6dcc6739e9117b.txt",
+      "blob_sha": "d1bfa40a2fcc8f46cea7d5be0b99e6d8046412ed",
+      "role": "June 2018 gateway-authentication email with binary status text and embedded printer image"
+    },
+    {
+      "path": "assets/INSIDE_saf_dat_col_interesting-50a465eb636416ab.txt",
+      "blob_sha": "31f744647c40c6431b3ebd9de9aac0392eefd049",
+      "role": "content-addressed extraction of readable Terminal 41 safety-data strings including fsd5t355gf and GATE/81"
+    },
+    {
+      "path": "assets/saf_straightened_band.setup-e3c0718ba65d9561.json",
+      "blob_sha": "e39e4962701576f83254047b613ab1b7848bce4d",
+      "role": "historical saf-byte-workbench geometric straightening/registration attempt"
+    },
+    {
+      "path": "assets/jpeg-cbebfe04a2674523.txt",
+      "blob_sha": "590624925fe3d36a362bbb1de905f459267c211b",
+      "role": "archived JPEG metadata report with creator/date provenance"
     }
   ],
   "chronology": [
@@ -155,6 +191,14 @@
       "date": "2026-05-10",
       "message_id": "1502960920568135761",
       "claim": "9x12 layout is explicitly described as nine slash-dash 3x3 blocks plus three slash-dot blocks"
+    },
+    {
+      "date": "2026-05-22",
+      "claim": "historical solver proposes 9x12 hierarchy where first 9 cells encode a larger domain and last 3 a smaller subset"
+    },
+    {
+      "date": "2026-09-22",
+      "claim": "#stickers-solving and #sticker-hunting created as separate channels; legacy export does not include them"
     }
   ],
   "first_party_archive_refs": [
@@ -162,6 +206,57 @@
       "kind": "iam8bit_tweet_embed",
       "id": "1203007268930764800",
       "claim": "standalone physical edition includes an exclusive poster and reversible slip cover with a hidden clue; same version included with Collector's Edition"
+    }
+  ],
+  "external_documents": [
+    {
+      "title": "INSIDE PRINTER SECRET",
+      "provider": "Google Docs",
+      "document_id": "1vlpah0LdCRpJe-OfhnkaiBIcmepGXust5BMbaFJGGt8",
+      "role": "contemporaneous printer-puzzle working document; explicitly describes acorn geometry as row-order preservation and records platform solve pipelines"
+    },
+    {
+      "title": "Inside Collector's Edition Numbers",
+      "provider": "Google Docs",
+      "document_id": "1ccgEU722Kz5kDrq0wmA5pd6Du05qAaWNN7kRaTlG9jU",
+      "role": "superseded historical sticker ledger snapshot; useful for chronology/provenance, with known 597 transcription superseded by upstream 2021 correction"
+    },
+    {
+      "title": "terminal41.link journal",
+      "provider": "Google Docs",
+      "document_id": "1V9TsI8D-NG191aNplbQxnteboUc_TYl0IViFtkwDKWA",
+      "role": "contemporaneous Terminal41 page chronology separating apparent timed/platform-release updates from later answer-triggered progression"
+    },
+    {
+      "title": "Inside ARG Picture Code",
+      "provider": "Google Docs",
+      "document_id": "1NLwy0T4pvNRrR08oZsBzVNqmQyL4qhSrHvIHhCANwLw",
+      "role": "historical picture-code document whose readable export is mostly embedded JPEG bytes/metadata; overlaps recovered AnSet image provenance"
+    }
+  ],
+  "live_external_resources": [
+    {
+      "kind": "google_drive_folder",
+      "id": "1-381gKXFGrEi-JdQBSL9MvcxDEbayVAi",
+      "first_discord_date": "2018-06-30",
+      "role": "still-live original MOV/MP4 printer-investigation recordings from active June/July 2018 solving period",
+      "sample": {
+        "file_id": "1_Zbz01f9WuAQxZ-YyfpeDqIsHNBqeKlS",
+        "title": "IMG_2327.TRIM.MOV",
+        "size": 15725021,
+        "sha256": "c3e165617b0a9716e385dde4d2835bfd6963f3fd6c4dba1c6cf3054c4efe0d8a"
+      },
+      "acquisition_owner": "external-evidence lane (#56/#57); do not vendor large video corpus here"
+    },
+    {
+      "kind": "google_drive_asset",
+      "id": "1GlBTcDQoYpEKQdVVjHw4iiBsc8Vk3C7K",
+      "source_folder_id": "1mitP9wjW0HS1vSUWig5vO2fZlMyd1ie9",
+      "logical_path": "andreas/superSecret/image (Game2#6585 (681347534)).wav",
+      "role": "literal superSecret/image audio asset recovered from 2026 named-path dump; trigger/source-code context unresolved",
+      "size": 1376204,
+      "sha256": "2392baa9dd6261e6a9711e42379c0d412f623ee9269cb8b4094045ed2d0ef335",
+      "media": "mono PCM s16le 48000 Hz, 14.335 s"
     }
   ]
 }
