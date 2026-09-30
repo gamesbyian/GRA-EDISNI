@@ -415,3 +415,12 @@ Acquisition priority from this point should favor owner/photo provenance and ori
 
 
 The normalized owner/provenance work queue is now `data/oddheader-owner-leads-2026-09-29.json`. It records stable YouTube comment/channel IDs, claim type, photo status, canonical-handle cross-reference result, H108/model relevance where applicable, priority, and the next evidence action. Future agents should update that queue rather than re-mining the entire Oddheader snapshot from scratch.
+
+
+### Single-source manual media escalation
+
+Use `.github/workflows/targeted-youtube-media-recon.yml` when one specific YouTube source has passed lightweight triage and deserves full media. It is manual-dispatch only, validates an exact manifest `source_id`, acquires only that source, creates whole-source sample/scene reconnaissance, and can optionally create a bounded 5 fps focus window. This prevents a single justified lead from re-running the historical eight-video batch.
+
+Current first candidate: `youtube-ledger-07-Pbkq8Ey_s0k` (L17). Metadata shows a 172-second Kyle Hilliard recording-booth video; the canonical ledger confirms his CE/sticker was later lost but records no symbol. This is a proportionate one-source visual check.
+
+Do not escalate `youtube-ledger-01-eXxklNxsVWw` merely for frames: it is the 2025 Oddheader retrospective and its value is owner/comment discovery. Do not escalate `youtube-ledger-08-d23bAqGtImo` merely because the Huddle appears at 7:22: later owner contact already establishes the sticker was lost and only supplies a ~90%-sure slash recollection, not physical imagery.
