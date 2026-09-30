@@ -689,6 +689,65 @@
         "caveat": "These predictions belong to the community model documented in the channel at that time; they are not promoted as current-project predictions or facts."
       },
       "disposition": "Preserve prospectively. If any of these physical stickers appears later, score the historical prediction before updating any model."
+    },
+    {
+      "id": "discord-stickers-solving-community-model-audit-retraction",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-negative-result",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-25 21:48",
+        "author": "kappa_neuro",
+        "corrected_script": "assets/sticker_random_gen_New-76238d3b824aa689.py",
+        "corrected_script_blob_sha": "808cbaa525b6bf5b823512ffacb1813eae62b4f1",
+        "leave_one_out_results": {
+          "zone_majority_baseline_percent": 60,
+          "mod54_percent": 56.9,
+          "old_main_model_percent": 52.3
+        },
+        "retraction": "The earlier 84.6% accuracy claim was explicitly declared wrong; the model's confidence was also described as inverted, with higher confidence associated with more errors.",
+        "final_ui_change": "Predictions were demoted to pale experimental guesses; confidence heatmap became a per-known-cell model check; 'hard residues' became an equal-uncertainty wanted-sticker list."
+      },
+      "disposition": "Do not reuse the older prediction/confidence screenshots or 84.6% figure as validated evidence. Treat the final corrected script and leave-one-out audit as the terminal state of this community model lineage."
+    },
+    {
+      "id": "discord-stickers-solving-interval-script-retracted",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-negative-result",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-25 20:03-20:23",
+        "author": "architype_",
+        "attached_source": "assets/inside_sticker_code_interval-7459874c016f4e7c.txt",
+        "source_blob_sha": "bcfad8ce2dff6fead5b0a7b80f736e18d0d93d5a",
+        "failure": "The author discovered the period-checking logic only compared the next loop and effectively skipped validation when the corresponding next cell was unknown, producing false candidate intervals.",
+        "cross_check": "A 125-repeat visualization immediately showed multiple inconsistencies compared with 108, triggering the bug discovery."
+      },
+      "disposition": "Treat candidate repeat lengths produced by this attached C++ source as invalid historical output unless independently recomputed with corrected logic."
+    },
+    {
+      "id": "discord-stickers-solving-3x4-piece-layout-retired",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-negative-result",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-28",
+        "jigsaw_order": "I A B / C D E / F G H",
+        "result": "All six block variants assembled in the documented jigsaw order produced no picture. The discussion explicitly notes there was no evidence that each background piece's 12 stickers should form a 3x4 sub-block, and later says to retire that idea."
+      },
+      "disposition": "Do not revive the 3x4-per-piece image layout as a supported structure absent new physical/layout evidence."
+    },
+    {
+      "id": "discord-stickers-solving-fractionated-morse-status",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-hypothesis-partially-negative",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-28",
+        "result": "Straight-through fractionated-Morse reading was reported ruled out for all three separator choices. A column-wise/dash-separator variant survived a run-rule check at that moment, but later participants argued ordinary ternary/fractionated-Morse families fit poorly because dots are concentrated in the 108-cycle tail rather than spread across all three symbols.",
+        "caveat": "The surviving column-wise variant was not established as a solve and remained speculative."
+      },
+      "disposition": "Record straight-through fractionated Morse as a historical negative; keep any rearranged/column-wise variant merely as an unconfirmed hypothesis."
     }
   ]
 }
