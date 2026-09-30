@@ -201,7 +201,8 @@ serial,kind,url,path,status,sha256,note
 118,gallery-dl,https://www.ebay.com/itm/WOW-INSIDE-COLLECTOR-s-EDITION-PS4-Realdoll-NEW-FACTORY-SEALED/184517821835?hash=item2af61e858b:g:ApAAAOSwwz1foCDh,,exit-64,,[gallery-dl][error] Unsupported URL 'https://www.ebay.com/itm/WOW-INSIDE-COLLECTOR-s-EDITION-PS4-Realdoll-NEW-FACTORY-SEALED/184517821835?hash=item2af61e858b:g:ApAAAOSwwz1foCDh' 
 118,html,https://www.ebay.com/itm/WOW-INSIDE-COLLECTOR-s-EDITION-PS4-Realdoll-NEW-FACTORY-SEALED/184517821835?hash=item2af61e858b:g:ApAAAOSwwz1foCDh,,fetch-failed,,<HTTPError 403: 'Forbidden'>
 123,gallery-dl,https://twitter.com/Surginis/status/1205049792268787712,,exit-0,,[twitter][info] No results for https://twitter.com/Surginis/status/1205049792268787712 
-125,gallery-dl,https://www.instagram.com/mattpopcollector182/,,timeout,,
+125,gallery-dl,https://www.instagram.com/mattpopcollector182/,,exit-4,,[instagram][error] NotFoundError: Requested user could not be found 
+125,html-image,https://static.cdninstagram.com/rsrc.php/v4/yD/r/R0fBIMurK8v.png,.tmp/background-tile-corpus/125/html/125_000.png,ok,b421b00fd1791a1d1ab70dd1e9667f40ca79a8c8673989864f1be092295cd7da,https://www.instagram.com/mattpopcollector182/
 125,gallery-dl,https://twitter.com/CrossingSouls18/status/971872926537412608,.tmp/background-tile-corpus/125/gallery-dl/twitter/CrossingSouls18/125_001.jpg,ok,b26a153ac68b6dd402d6b2dd32491cb47f55946581c637c6adde111c2112c820,
 125,gallery-dl,https://www.reddit.com/user/Project3Matt_/,.tmp/background-tile-corpus/125/gallery-dl/twitter/CrossingSouls18/125_001.jpg,ok,b26a153ac68b6dd402d6b2dd32491cb47f55946581c637c6adde111c2112c820,
 126,gallery-dl,https://www.reddit.com/user/enioli98/,,exit-4,,"[reddit][error] ""You've been blocked by network security."" "
@@ -219,12 +220,14 @@ serial,kind,url,path,status,sha256,note
 179,html,https://www.ebay.com/usr/roma_kreu?ul_noapp=true,,fetch-failed,,<HTTPError 403: 'Forbidden'>
 183,gallery-dl,https://www.ebay.com/itm/224122475778?ul_noapp=true,,exit-64,,[gallery-dl][error] Unsupported URL 'https://www.ebay.com/itm/224122475778?ul_noapp=true' 
 183,html,https://www.ebay.com/itm/224122475778?ul_noapp=true,,fetch-failed,,<HTTPError 403: 'Forbidden'>
-187,gallery-dl,https://www.instagram.com/p/B6EECojHUKZ/,,timeout,,
+187,gallery-dl,https://www.instagram.com/p/B6EECojHUKZ/,,exit-4,,[instagram][error] HTTP redirect to login page (https://www.instagram.com/accounts/login/) 
+187,html-image,https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/657962830_18577876294015627_7371902599909546937_n.jpg?stp=c288.0.864.864a_dst-jpg_e35_s640x640_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=4AgIxmbNxeYQ7kNvwFX9m8K&_nc_oc=AdqtvcFCYOIU6L11a9t53suCnjbKoh874Sjcdl5zZC4MjRTlFYq-fpkcFWx7dVHB00I&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=8_Zbc6x-r7A73C-Fr84XLA&_nc_ss=7860f&oh=00_AQO92GPZim7h2f6yCn3SoPz3_8sX_K1o2StGhb-CfZTIcA&oe=6AC24711,.tmp/background-tile-corpus/187/html/187_000.jpg,ok,ca310cd84a9ebcb538d47d16c0a5eb45184ccaaa70e09e3a932e9a6d7886440f,https://www.instagram.com/p/B6EECojHUKZ/
 206,gallery-dl,https://twitter.com/triplizard/status/1222277716554043392,.tmp/background-tile-corpus/206/gallery-dl/twitter/triplizard/206_001.jpg,ok,72bb6fd6eda1687a2748139da05cce0a0e59222cf3a6b4f8cd61c22c9837a547,
 221,gallery-dl,https://www.youtube.com/watch?v=Mhxynz-LoAI,,exit-64,,[gallery-dl][error] Unsupported URL 'https://www.youtube.com/watch?v=Mhxynz-LoAI' 
 223,gallery-dl,https://archive.ph/IhWIn,,exit-64,,[gallery-dl][error] Unsupported URL 'https://archive.ph/IhWIn' 
 223,html,https://archive.ph/IhWIn,,fetch-failed,,<HTTPError 429: 'Too Many Requests'>
-223,gallery-dl,https://www.instagram.com/p/DQVUxWqD9M3/,,timeout,,
+223,gallery-dl,https://www.instagram.com/p/DQVUxWqD9M3/,,exit-4,,[instagram][error] HTTP redirect to login page (https://www.instagram.com/accounts/login/) 
+223,html-image,https://scontent-iad3-1.cdninstagram.com/v/t51.71878-15/572682587_696400046363521_1157592017735289897_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=ip2s0uHvq_MQ7kNvwHsoqrN&_nc_oc=AdrJMLQOlFOzeRbOZCM0AxUTNFVBJ-4BXmRfvVEk6ZaC3yBT93-00KtGostPX2J8KtY&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=z16EBfW-lNxqdfU-GXB39Q&_nc_ss=7860f&oh=00_AQOf0LXCgxQP8ABdLDsOQc72gAS9xF242PXZCrWM5WO0tw&oe=6AC263D5,.tmp/background-tile-corpus/223/html/223_000.jpg,ok,017cebc9bdad10741ab09f464ff92791ef510ba711f7622093452b7da7df2587,https://www.instagram.com/p/DQVUxWqD9M3/
 223,gallery-dl,https://www.facebook.com/story.php?story_fbid=1422016306591561&id=100063496151489,,exit-16,,[facebook][error] AuthRequired: authenticated cookies needed to access this profile ('This content isn't available right now') 
 223,gallery-dl,https://youtube.com/@johnnyiucci?si=9WCZZ0qS48pz5tC_,,exit-64,,[gallery-dl][error] Unsupported URL 'https://youtube.com/@johnnyiucci?si=9WCZZ0qS48pz5tC_' 
 223,html-image,https://yt3.googleusercontent.com/qyGzqXNTFwaLbd4Llf92qRBRcInCXeVYBzqAgYjgoh2GXKG0xx1gSVFaO7FHpcqo5WWVQveD=s900-c-k-c0x00ffffff-no-rj,.tmp/background-tile-corpus/223/html/223_000.jpg,ok,8d39d4fa7e95f3e292c6a3e10ca9745f1525bd213bdde1c225b0bd991cd8ef93,https://youtube.com/@johnnyiucci?si=9WCZZ0qS48pz5tC_
@@ -238,7 +241,8 @@ serial,kind,url,path,status,sha256,note
 282,html,https://www.ebay.com/itm/293628731906?ul_noapp=true,,fetch-failed,,<HTTPError 403: 'Forbidden'>
 296,gallery-dl,https://www.resetera.com/threads/remember-that-expensive-mysterious-inside-collectors-edition-heres-whats-inside-it.158896/page-2,,exit-64,,[gallery-dl][error] Unsupported URL 'https://www.resetera.com/threads/remember-that-expensive-mysterious-inside-collectors-edition-heres-whats-inside-it.158896/page-2' 
 296,html,https://www.resetera.com/threads/remember-that-expensive-mysterious-inside-collectors-edition-heres-whats-inside-it.158896/page-2,,fetch-failed,,<HTTPError 403: 'Forbidden'>
-296,gallery-dl,https://www.instagram.com/p/B6MBw1Ph6Xy/,,timeout,,
+296,gallery-dl,https://www.instagram.com/p/B6MBw1Ph6Xy/,,exit-4,,[instagram][error] HTTP redirect to login page (https://www.instagram.com/accounts/login/) 
+296,html-image,https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/627814449_18314763091255250_3469942589488499605_n.jpg?stp=c288.0.864.864a_dst-jpg_e35_s640x640_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=rlluTcDazJkQ7kNvwHrl1g0&_nc_oc=AdrQbZYNYBQUGMjpw-sTJw6KZi59zC_B-vwkge8JEWxz9kXBUC-74n8OcoepbrNULGY&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=pP0IBLWjUlpfTruTyEv8zg&_nc_ss=7860f&oh=00_AQNibpX-2yri1YXdF519ggMfXnJeeQhEblOPB5NWtU7Npw&oe=6AC2672E,.tmp/background-tile-corpus/296/html/296_000.jpg,ok,fc843e294f05f40144a22e5e647a1b49b6fc0933eb6ab5fa3b537ff07e34a425,https://www.instagram.com/p/B6MBw1Ph6Xy/
 306,gallery-dl,https://www.reddit.com/user/wormy_Burroughs/](https://www.reddit.com/user/wormy_Burroughs/,,exit-64,,[gallery-dl][error] Unsupported URL 'https://www.reddit.com/user/wormy_Burroughs/](https://www.reddit.com/user/wormy_Burroughs/' 
 306,html,https://www.reddit.com/user/wormy_Burroughs/](https://www.reddit.com/user/wormy_Burroughs/,,fetch-failed,,<HTTPError 403: 'Blocked'>
 312,gallery-dl,https://www.reddit.com/r/LimitedPrintGames/comments/ev88p1/comment/ffuqf0j/,,exit-4,,"[reddit][error] ""You've been blocked by network security."" "
@@ -260,7 +264,8 @@ serial,kind,url,path,status,sha256,note
 324,gallery-dl,https://www.reddit.com/r/MattDinniman/comments/1lljk8e/first_thing_i_thought_of/,.tmp/background-tile-corpus/324/gallery-dl/twitter/ItsaMeFernando/324_002.jpg,ok,6c92c2b57dbc504a7c0ecac8a6736788f668c6f8a64e5572d5d088844b6a499d,
 333,gallery-dl,https://www.ebay.com/itm/154592369029?,,exit-64,,[gallery-dl][error] Unsupported URL 'https://www.ebay.com/itm/154592369029?' 
 333,html,https://www.ebay.com/itm/154592369029?,,fetch-failed,,<HTTPError 403: 'Forbidden'>
-334,gallery-dl,https://www.instagram.com/bathroomgamers/?hl=nb,,timeout,,
+334,gallery-dl,https://www.instagram.com/bathroomgamers/?hl=nb,,exit-4,,[instagram][error] NotFoundError: Requested user could not be found 
+334,html-image,https://static.cdninstagram.com/rsrc.php/v4/yD/r/R0fBIMurK8v.png,.tmp/background-tile-corpus/334/html/334_000.png,ok,b421b00fd1791a1d1ab70dd1e9667f40ca79a8c8673989864f1be092295cd7da,https://www.instagram.com/bathroomgamers/?hl=nb
 338,gallery-dl,https://twitter.com/NicelyNeatly/status/1220526726863654912,.tmp/background-tile-corpus/338/gallery-dl/twitter/NicelyNeatly/338_001.jpg,ok,e38a5198388284d353630a791e872c2e3d4380c37086702569af5872a7a6f693,
 338,gallery-dl,https://www.resetera.com/threads/anyone-else-randomly-receive-black-and-green-postcards-that-are-art-of-an-arg-event-and-say-theyre-coming-likely-fortnite-related.430745/page-5,.tmp/background-tile-corpus/338/gallery-dl/twitter/NicelyNeatly/338_001.jpg,ok,e38a5198388284d353630a791e872c2e3d4380c37086702569af5872a7a6f693,
 339,gallery-dl,https://www.ebay.com/itm/203074386800?,,exit-64,,[gallery-dl][error] Unsupported URL 'https://www.ebay.com/itm/203074386800?' 
@@ -276,7 +281,8 @@ serial,kind,url,path,status,sha256,note
 364,gallery-dl,https://www.reddit.com/r/PlaydeadsInside/comments/gxx2zo/the_sticker_from_the_collectors_edition_of_inside/,,exit-4,,"[reddit][error] ""You've been blocked by network security."" "
 364,html,https://www.reddit.com/r/PlaydeadsInside/comments/gxx2zo/the_sticker_from_the_collectors_edition_of_inside/,,fetch-failed,,<HTTPError 403: 'Blocked'>
 366,gallery-dl,https://twitter.com/_anthonynash/status/1208975146557591553,,exit-0,,[twitter][info] No results for https://twitter.com/_anthonynash/status/1208975146557591553 
-384,gallery-dl,https://www.instagram.com/p/B_-c0SXprLV/,,timeout,,
+384,gallery-dl,https://www.instagram.com/p/B_-c0SXprLV/,,exit-4,,[instagram][error] HTTP redirect to login page (https://www.instagram.com/accounts/login/) 
+384,html-image,https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/616245454_18086171576111753_8822715639869903718_n.jpg?stp=c216.0.648.648a_dst-jpg_e35_s640x640_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=w71zkpTv-PYQ7kNvwFBuANq&_nc_oc=Adq4CT_m0lOULVIfpMZ1zHchxQOmh68fwIKyztdqLnetoqSJSjyOF1chAB4dLNTjrxo&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=4pRfhyirdJ04_pwxNZI7qw&_nc_ss=7860f&oh=00_AQPNyWLY8NtSekGrrM0fNQsyBh01tBNCh_kWzB06k1KWZw&oe=6AC23EB3,.tmp/background-tile-corpus/384/html/384_000.jpg,ok,05d4f3f243970d98984156046577b34a81e1681db3230de40f6d07957235ae4c,https://www.instagram.com/p/B_-c0SXprLV/
 413,gallery-dl,https://twitter.com/_The_Starkiller,,exit-16,,[twitter][error] AuthRequired: authenticated cookies needed to access this timeline 
 413,html,https://twitter.com/_The_Starkiller,,fetch-failed,,<HTTPError 403: 'Forbidden'>
 413,gallery-dl,https://twitter.com/MinnMaxShow/status/1457204412879802378,.tmp/background-tile-corpus/413/gallery-dl/twitter/MinnMaxShow/413_001.jpg,ok,eff7d271a2076c2a81e78bc9472486e11bdf7bfad937b9832b93bce0235162b2,
@@ -289,14 +295,9 @@ serial,kind,url,path,status,sha256,note
 444,html,https://www.ebay.com/itm/205387386884?nordt=true&rt=nc&mkrid=711-53200-19255-0&campid=5336510469&customid=noId&toolid=10001,,fetch-failed,,<HTTPError 403: 'Forbidden'>
 445,gallery-dl,https://archive.ph/8i5qC,,exit-64,,[gallery-dl][error] Unsupported URL 'https://archive.ph/8i5qC' 
 445,html,https://archive.ph/8i5qC,,fetch-failed,,<HTTPError 429: 'Too Many Requests'>
-450,gallery-dl,https://twitter.com/Kshpoople,.tmp/background-tile-corpus/450/gallery-dl/twitter/Kshpoople/450_001.jpg,ok,caf07b50e8991fba72bd00ad2758d4461188a008f35a7aa415484d8a7e1d0f33,
-450,gallery-dl,https://twitter.com/Kshpoople,.tmp/background-tile-corpus/450/gallery-dl/twitter/Kshpoople/450_003.jpg,ok,a7f70232a2399cb681259f240f217a93422a3383a20c9e197a1558c41455c605,
-450,gallery-dl,https://twitter.com/Kshpoople,.tmp/background-tile-corpus/450/gallery-dl/twitter/Kshpoople/450_004.jpg,ok,7e70f7588f10c9dc33f01f7d86ed8a00a0a234660b8f39be27e464ba17faf644,
-450,gallery-dl,https://twitter.com/Kshpoople,.tmp/background-tile-corpus/450/gallery-dl/twitter/Kshpoople/450_002.jpg,ok,2a783a8dae06e9d30c1f704cb8959b053c6d34c53e74e55e6ccfd1c5e058f828,
-450,gallery-dl,https://twitter.com/kshpoople/status/971242314248151041?s=21&t=_R58M_GSZBum-nAklzV7_w,.tmp/background-tile-corpus/450/gallery-dl/twitter/Kshpoople/450_001.jpg,ok,caf07b50e8991fba72bd00ad2758d4461188a008f35a7aa415484d8a7e1d0f33,
-450,gallery-dl,https://twitter.com/kshpoople/status/971242314248151041?s=21&t=_R58M_GSZBum-nAklzV7_w,.tmp/background-tile-corpus/450/gallery-dl/twitter/Kshpoople/450_003.jpg,ok,a7f70232a2399cb681259f240f217a93422a3383a20c9e197a1558c41455c605,
-450,gallery-dl,https://twitter.com/kshpoople/status/971242314248151041?s=21&t=_R58M_GSZBum-nAklzV7_w,.tmp/background-tile-corpus/450/gallery-dl/twitter/Kshpoople/450_004.jpg,ok,7e70f7588f10c9dc33f01f7d86ed8a00a0a234660b8f39be27e464ba17faf644,
-450,gallery-dl,https://twitter.com/kshpoople/status/971242314248151041?s=21&t=_R58M_GSZBum-nAklzV7_w,.tmp/background-tile-corpus/450/gallery-dl/twitter/Kshpoople/450_002.jpg,ok,2a783a8dae06e9d30c1f704cb8959b053c6d34c53e74e55e6ccfd1c5e058f828,
+450,gallery-dl,https://twitter.com/Kshpoople,,exit-16,,[twitter][error] AuthRequired: authenticated cookies needed to access this timeline 
+450,html,https://twitter.com/Kshpoople,,fetch-failed,,<HTTPError 403: 'Forbidden'>
+450,gallery-dl,https://twitter.com/kshpoople/status/971242314248151041?s=21&t=_R58M_GSZBum-nAklzV7_w,,exit-0,,[twitter][info] No results for https://twitter.com/kshpoople/status/971242314248151041?s=21&t=_R58M_GSZBum-nAklzV7_w 
 470,gallery-dl,https://www.ebay.ca/itm/376334499280,,exit-64,,[gallery-dl][error] Unsupported URL 'https://www.ebay.ca/itm/376334499280' 
 470,html,https://www.ebay.ca/itm/376334499280,,fetch-failed,,<HTTPError 403: 'Forbidden'>
 470,gallery-dl,https://www.reddit.com/r/PlaydeadsInside/comments/1l5x8rb/comment/mzmjghm/?context=3&share_id=M5F57k78WmQTcdcz7Z5Vp&utm_content=1&utm_medium=ios_app&utm_name=ioscss&utm_source=share&utm_term=1,,exit-4,,"[reddit][error] ""You've been blocked by network security."" "
