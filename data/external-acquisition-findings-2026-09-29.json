@@ -321,6 +321,18 @@
         "cross_reference": "Exact handle not found in the current canonical sticker-ledger snapshot."
       },
       "disposition": "Do not prioritize further outreach absent a new invitation from the owner."
+    },
+    {
+      "id": "youtube-l11-jQUf8yhqEc4-partial-forensic",
+      "source_id": "youtube-ledger-04-jQUf8yhqEc4",
+      "source_url": "https://www.youtube.com/watch?v=jQUf8yhqEc4",
+      "status": "canonical-lost-entry-partially-mined-no-readable-sticker",
+      "evidence": {
+        "ledger_entry": "L11",
+        "review_scope": "Authenticated full source is acquired. The unboxing/opening and black-wrapping handling phase has been reviewed from the start through approximately 356 seconds, including dense 5 fps review around 156-228 seconds.",
+        "result": "The black wrapping and package contents are repeatedly visible, but no defensible numbered sticker face or symbol was recovered in the reviewed handling phase."
+      },
+      "disposition": "Do not re-download. Continue only from the existing artifact if later footage or historical context gives a specific reason; the high-probability unboxing window is already negative."
     }
   ]
 }
