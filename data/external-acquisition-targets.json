@@ -56,7 +56,10 @@
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Historical owner/unboxing video referenced by sticker ledger."
+      "note": "Historical owner/unboxing video referenced by sticker ledger.",
+      "acquisition_status": "acquired",
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Canonical ledger already identifies physical sticker 221 = slash, background E; deprioritized for further frame mining."
     },
     {
       "id": "youtube-ledger-03-fu7gmuJQKXM",
@@ -81,7 +84,10 @@
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Historical owner/unboxing video referenced by sticker ledger."
+      "note": "Historical owner/unboxing video referenced by sticker ledger.",
+      "acquisition_status": "acquired",
+      "mining_status": "partially-mined",
+      "status_note": "L11 known lost entry. Initial 2-second review covered the opening/package phase through roughly 196s; no defensible sticker serial/symbol recovered yet. Continue from existing source artifact rather than re-downloading."
     },
     {
       "id": "youtube-ledger-05-ahCmqg1hhSA",
@@ -92,7 +98,10 @@
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Historical owner/unboxing video referenced by sticker ledger."
+      "note": "Historical owner/unboxing video referenced by sticker ledger.",
+      "acquisition_status": "acquired",
+      "mining_status": "lost-entry-native-forensics-complete",
+      "status_note": "L12 dash reconfirmed around 124s; serial remains unresolved after native 10fps multi-frame rectification."
     },
     {
       "id": "youtube-ledger-06-G4z5r4rZH2w",
@@ -103,7 +112,10 @@
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Historical owner/unboxing video referenced by sticker ledger."
+      "note": "Historical owner/unboxing video referenced by sticker ledger.",
+      "acquisition_status": "acquired",
+      "mining_status": "lost-entry-native-forensics-complete",
+      "status_note": "L13 dash reconfirmed around 143s. Serial-print region is exposed in several frames but remains below defensible digit resolution after registration/rectification."
     },
     {
       "id": "youtube-ledger-07-Pbkq8Ey_s0k",
@@ -136,7 +148,10 @@
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Historical owner/unboxing video referenced by sticker ledger."
+      "note": "Historical owner/unboxing video referenced by sticker ledger.",
+      "acquisition_status": "acquired",
+      "mining_status": "lost-entry-native-forensics-complete",
+      "status_note": "L35/U02 dash reconfirmed around 129s; moving/oblique serial region remains unreadable after rectification."
     },
     {
       "id": "youtube-ledger-10-uP5nSeyac_o",
