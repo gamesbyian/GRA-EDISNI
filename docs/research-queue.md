@@ -66,6 +66,10 @@ Experiment 329 adds one exploratory but sharply testable refinement: if the one-
 
 Experiment 330 immediately validates that frozen rival by leave-one-out on all 54 observed body residues. It forces only four cells (5=/, 66=/, 72=-, 74=-), all correctly, and excludes none. Keep the family frozen; do not add fit-improving rules. Its main value is prospective discrimination, especially C residues 84 and 102.
 
+Experiment 331 compares the frozen row family to the incumbent without changing either. Seven of nine selector domains match exactly (B,D,E,F,G,H,I); A is broader in the row family and C is narrower. Six of the incumbent's 14 preferred hidden states satisfy the full frozen row rule, and the cross-family intersection adds only two new invariants: 84=. and 102=/. This makes those C-tail residues the cleanest acquisition discriminators.
+
+Experiment 332 factors the frozen row readout as a native `3×3×2` token: tail-selected row × exceptional position × exceptional-symbol polarity. This yields exactly 18 abstract states, structurally isomorphic in cardinality to Pigpen's two 3×3 tic-tac-toe grids. B/C/E/I are already fully fixed tokens under physical observations. Do **not** promote this to a standard Pigpen alphabet: a full 26-letter Pigpen also requires an independent 8-state X-grid family, which the current rule does not supply.
+
 #### R3 — solved-puzzle operation replay
 
 Test only historically demonstrated operation classes whose required parameters can be supplied independently. Preserve negative results. No broad visual-target optimization.
