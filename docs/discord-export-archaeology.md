@@ -415,3 +415,63 @@ The public \`#solving\` export contains matching historical discussion from 9 Ju
 On **27 Jan 2022**, message \`936157143273443359\` explicitly asks whether the first nine rows could be arranged "as same as we did it acorn." A nearby restatement of the boundary-pixel idea is preserved at \`936154496030097418\`. These were exploratory suggestions, not demonstrated sticker solves.
 
 These anchors strengthen the historical claim narrowly: boundary structure and the earlier acorn ordering method were both available to sticker solvers before the present machine reconstruction.
+
+
+## Live historical Google Drive sources recovered
+
+The full URL-context extraction recovered a still-live public Google Drive folder that was posted repeatedly during the active printer investigation:
+
+\`https://drive.google.com/drive/folders/1-381gKXFGrEi-JdQBSL9MvcxDEbayVAi\`
+
+Exact Discord chronology:
+
+- 30 Jun 2018 11:50 — \`dodo0303\` posts a direct file link for \`IMG_2327.TRIM.MOV\`;
+- 30 Jun 2018 12:54 — \`dodo0303\` posts the containing Drive folder;
+- 30 Jun 2018 15:04 — the folder is reposted in \`#solving\`;
+- 1 Jul 2018 18:58 — \`dodo0303\` posts it again;
+- 1 Jul 2018 19:33 — \`pitch_bright\` posts the folder in \`#solving-breakout\`.
+
+The live folder currently exposes a sequence of original MOV/MP4 gameplay recordings created on 30 Jun–1 Jul 2018. The surviving inventory includes phone captures named \`IMG_2327.TRIM.MOV\` through \`IMG_2414.TRIM.MOV\` plus two screen recordings. This is a higher-provenance source for historical printer output than later re-encoded YouTube compilations.
+
+One source file was acquired exactly for validation:
+
+- Drive file ID: \`1_Zbz01f9WuAQxZ-YyfpeDqIsHNBqeKlS\`
+- title: \`IMG_2327.TRIM.MOV\`
+- Drive size: 15,725,021 bytes
+- created: 2018-06-30T14:41:21.228Z
+- modified: 2018-06-30T14:50:18.755Z
+- SHA-256: \`c3e165617b0a9716e385dde4d2835bfd6963f3fd6c4dba1c6cf3054c4efe0d8a\`
+- media: H.264 886×1920 at 60 fps with AAC audio, duration 43.873 s.
+
+A visual spot-check confirms it is an INSIDE gameplay recording from the printer investigation, not an unrelated file.
+
+Several individually linked 1 Jul 2018 iOS recordings are now dead at Drive while their historical Discord embeds survive. For example, \`1tmxJdJVtSyxys3DIR5BfhetdlMNPd3sk\` was embedded as “Inside iOS printer code.mp4” recorded at 12:30 PM but now returns 404. This makes acquisition of the still-live folder worthwhile as preservation, not merely convenience.
+
+Do not vendor the video corpus into this repository. The external-evidence acquisition lane in PRs #56/#57 has been notified so immutable originals, hashes, and provenance can be preserved outside normal Git history.
+
+## 2026 audio-asset dump exposes a literal \`superSecret/image\` source path
+
+The URL ledger also recovered the public Drive folder shared on 27 Mar 2026 when \`probablynotbeard\` published INSIDE audio assets with recovered context names and paths:
+
+\`https://drive.google.com/drive/folders/1mitP9wjW0HS1vSUWig5vO2fZlMyd1ie9\`
+
+The Discord message explicitly says that these context names allowed \`@ghaith\` to discover one file stored in a folder called \`supersecret\`.
+
+The live Drive hierarchy confirms this independently:
+
+\`andreas/superSecret/image (Game2#6585 (681347534)).wav\`
+
+The \`superSecret\` folder contains exactly that one WAV in the current public dump.
+
+Exact file properties:
+
+- Drive file ID: \`1GlBTcDQoYpEKQdVVjHw4iiBsc8Vk3C7K\`
+- size: 1,376,204 bytes
+- modified source timestamp: 2026-03-27T04:40:49Z in the Drive dump
+- SHA-256: \`2392baa9dd6261e6a9711e42379c0d412f623ee9269cb8b4094045ed2d0ef335\`
+- format: mono PCM signed 16-bit little-endian, 48 kHz
+- duration: 14.335 s.
+
+A first bounded signal audit found no obvious spectrogram text/image payload. The filename/path therefore remains interesting provenance, but “image” should not be promoted to a hidden-picture claim without an independent decoding cue.
+
+The next archival question is exact source-code/event provenance for \`Game2#6585 (681347534)\` and what in-game object/action triggers this sound. The targeted Discord clue-context extractor now searches for the asset name, \`superSecret\`, \`SecretProbeFlicker\`, input 22, and morse-terminal discussion.
