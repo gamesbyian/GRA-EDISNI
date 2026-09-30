@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "experiment": 320,
+  "source": "docs/theorem-graph.md",
+  "scope": "supplied premises under epistemic-reset R4",
+  "categories": [
+    "directly_observed",
+    "historically_motivated",
+    "generic_simplicity_prior",
+    "selected_because_it_preserves_the_machine",
+    "genuinely_derived_from_independent_evidence",
+    "mixed"
+  ],
+  "transition_premises": [
+    {
+      "id": "O1",
+      "class": "O",
+      "primary_evidentiary_type": "directly_observed",
+      "circularity_risk": "low",
+      "claim": "foreground period 108 and background A-I period 9",
+      "basis": [
+        "physical/public corpus",
+        "historical prior community recovery"
+      ],
+      "reset_action": "retain as Layer-0 structural fact; continue distinguishing period detection from intended decoding-unit semantics"
+    },
+    {
+      "id": "O2",
+      "class": "O",
+      "primary_evidentiary_type": "mixed",
+      "circularity_risk": "low",
+      "claim": "81/27 alphabet split plus coordinate factorization r-1=27q+9d+j",
+      "components": [
+        {
+          "claim": "residues 1-81 slash/dash and 82-108 slash/dot",
+          "type": "directly_observed"
+        },
+        {
+          "claim": "27q+9d+j coordinate factorization",
+          "type": "generic_simplicity_prior"
+        }
+      ],
+      "reset_action": "retain observed alphabet boundary; treat q/d/j coordinates as convenient organization rather than authored semantics"
+    },
+    {
+      "id": "G1",
+      "class": "G",
+      "primary_evidentiary_type": "generic_simplicity_prior",
+      "secondary_support": [
+        "historically_motivated 12x3x3 organization",
+        "raw straight-rail and holdout robustness",
+        "multiple weaker-parent reconstructions"
+      ],
+      "circularity_risk": "medium",
+      "claim": "primary three-cell columns use exceptional-position ternary POS3",
+      "reset_action": "compare against non-positional local grammars and any historically motivated spatial/ordering rival; do not count downstream terminal/route survival as independent support"
+    },
+    {
+      "id": "G3",
+      "class": "G",
+      "primary_evidentiary_type": "historically_motivated",
+      "secondary_support": [
+        "Experiment 317 observation-only exact-one-slash compatibility",
+        "historical 9+3 body/index proposal"
+      ],
+      "circularity_risk": "medium",
+      "claim": "the final 27 cells represent one ternary depth-selector value per A-I position by exceptional depth",
+      "reset_action": "preserve one-of-three tail-index family as independently motivated; continue testing selector meaning separately from exceptional-depth encoding and recursion"
+    },
+    {
+      "id": "G5",
+      "class": "G",
+      "primary_evidentiary_type": "generic_simplicity_prior",
+      "secondary_support": [
+        "Experiment 290 literal-coordinate-copy family",
+        "broader affine/bijection uniqueness audits"
+      ],
+      "circularity_risk": "medium_high",
+      "claim": "first recursive application copies selector depth into the primary address: (q,d,j)->(q,S(j),j)",
+      "reset_action": "seek a pre-machine or external cue for address/depth substitution; compare against equally simple nonrecursive uses of the tail"
+    },
+    {
+      "id": "G6",
+      "class": "G",
+      "primary_evidentiary_type": "selected_because_it_preserves_the_machine",
+      "secondary_support": [
+        "Experiment 291 literal-copy test makes q=S uniquely selective and completion-invariant"
+      ],
+      "circularity_risk": "high",
+      "claim": "reuse the same selector on regenerated surfaces: (q,S(j),j)->(S(j),S(j),j)",
+      "reset_action": "target with non-self-reuse rival families and historical language search for repeat/apply-again/self-application cues"
+    },
+    {
+      "id": "G7",
+      "class": "G",
+      "primary_evidentiary_type": "selected_because_it_preserves_the_machine",
+      "secondary_support": [
+        "bounded reversible-route simplicity",
+        "uniquely selects route shell within surviving functional families"
+      ],
+      "circularity_risk": "very_high",
+      "claim": "route layer must admit three mutually distinct ternary permutations, one from each functional family",
+      "reset_action": "do not privilege route semantics absent an independent route/permutation cue; compare route-selected survivors to compact non-route selection criteria"
+    }
+  ],
+  "auxiliary_supplied_premises": [
+    {
+      "id": "G8",
+      "class": "G",
+      "primary_evidentiary_type": "generic_simplicity_prior",
+      "circularity_risk": "medium",
+      "transition_generating": false,
+      "claim": "shared Q4 physical codebook with equal-weight or cyclic-equivariant authoring symmetry",
+      "reset_action": "keep explicitly as an authoring prior; do not promote symmetry-selected unobserved bits to observations"
+    },
+    {
+      "id": "R1",
+      "class": "R",
+      "primary_evidentiary_type": "generic_simplicity_prior",
+      "circularity_risk": "low_if_quarantined",
+      "transition_generating": false,
+      "claim": "preregistered pointer geometry defining the frozen observer bus",
+      "reset_action": "retain only as observer/readout evidence and never feed it back into transition selection without explicit declaration"
+    }
+  ],
+  "summary": {
+    "transition_premise_count": 7,
+    "direct_or_mixed_observation_nodes": [
+      "O1",
+      "O2"
+    ],
+    "historically_motivated_grammar_nodes": [
+      "G3"
+    ],
+    "generic_simplicity_grammar_nodes": [
+      "G1",
+      "G5"
+    ],
+    "machine_preservation_risk_nodes": [
+      "G6",
+      "G7"
+    ],
+    "independently_derived_transition_grammar_nodes": [],
+    "highest_priority_circularity_targets": [
+      "G7",
+      "G6",
+      "G5"
+    ]
+  }
+}

@@ -1,6 +1,8 @@
 # Reset Assumption Audit: Incumbent Mechanical Chain
 
-_Status: first-pass audit under the epistemic reset._
+_Status: first-pass prose audit, now superseded for classification purposes by Experiment 320._
+
+The canonical structured R4 classification is `data/reset-premise-classification.json`, documented in `docs/experiment-320-reset-premise-classification.md`. This file remains useful for the explanatory attack rationale and historical context.
 
 This document does not argue that the incumbent machine is wrong. It identifies exactly where raw evidence ends and model-class choice begins so rival explanations can attack the load-bearing joints rather than downstream consequences.
 

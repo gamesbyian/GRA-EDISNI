@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **319**.
+Latest indexed experiment: **320**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -329,6 +329,7 @@ Latest indexed experiment: **319**.
 | 317 | observation-only tail-metadata audit: grouping each A-I class into 9 body + 3 slash/dot tail cells, an exact-one-slash positional tail code is compatible with all physical observations and leaves exactly 36 completions; the opposite exact-one-dot code has zero completions because H already has two observed dots; B/E/F/H/I force slash positions 2/0/1/2/2 respectively, providing raw support for a one-of-three tail index without POS3, recursion, route criteria, or model-filled cells |
 | 318 | observation-only tail-selector spatial replay: the one-slash tail position is tested as either a consecutive 3-cell row/chunk selector or a physical 3x3 column/rail selector; both survive all 36 observation-compatible tail completions, so current raw evidence does not distinguish them |
 | 319 | background-geometry mask domain audit: the solved IAB/CDE/FGH geometry indexes A-I image classes while each nine-cell body indexes successive H108 occurrences within one fixed class; no raw body-position-to-A-I bijection exists, leaving 1,680 ordered three-mask partitions or 362,880 full mappings, so geometry-derived body masks are not independently identified and are not swept |
+| 320 | reset theorem-premise classification: audits all surviving supplied transition premises O1/O2/G1/G3/G5/G6/G7 by evidentiary type; G3 is historically motivated at the one-of-three tail-index level, G1/G5 are generic simplicity priors, and G6/G7 are the principal machine-preservation circularity risks; no surviving transition grammar is yet genuinely independently derived |
 
 ## Current frontier
 
@@ -338,7 +339,7 @@ Latest indexed experiment: **319**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–319:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–320:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
