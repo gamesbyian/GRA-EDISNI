@@ -1,4 +1,5 @@
 name: Preserve 846shEE evidence masters
+# Deterministic preservation of the historical composite and transparent-mask masters.
 
 on:
   push:
