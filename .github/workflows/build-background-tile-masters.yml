@@ -56,7 +56,7 @@ jobs:
         run: |
           rm -rf artifacts/background-tile-masters
           python scripts/build_background_tile_masters.py \
-            archive/stickers/originals \
+            --manifest archive/stickers/manifest.csv \
             --out artifacts/background-tile-masters
 
       - name: Upload reconstruction bundle
