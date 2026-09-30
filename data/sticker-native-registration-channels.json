@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "generated": "2026-09-30",
+  "scope": "directly observed sticker-native registration/side channels",
+  "channels": [
+    {
+      "id": "serial",
+      "source": "printed physical sticker",
+      "observed": true,
+      "roles": [
+        "absolute order",
+        "mod108 phase",
+        "mod9 A-I phase"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "background_class",
+      "source": "faint printed A-I image",
+      "observed": true,
+      "roles": [
+        "spatial carrier",
+        "orientation",
+        "registration"
+      ],
+      "priority": "high",
+      "layout": [
+        [
+          "I",
+          "A",
+          "B"
+        ],
+        [
+          "C",
+          "D",
+          "E"
+        ],
+        [
+          "F",
+          "G",
+          "H"
+        ]
+      ]
+    },
+    {
+      "id": "alphabet_boundary",
+      "source": "foreground observations",
+      "observed": true,
+      "body": "residues 1-81 slash/dash",
+      "tail": "residues 82-108 slash/dot",
+      "priority": "high"
+    },
+    {
+      "id": "literal_symbol_geometry",
+      "source": "foreground mark shapes",
+      "observed": true,
+      "values": [
+        "slash",
+        "dash",
+        "dot"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "repeat_overlap",
+      "source": "multiple serials at same H108 residue",
+      "observed": true,
+      "roles": [
+        "cycle validation",
+        "error detection"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "background_seams",
+      "source": "historical composite and new masters",
+      "observed": true,
+      "roles": [
+        "canonical-layout validation",
+        "possible edge registration"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "packaging_orientation",
+      "source": "sticker on black wrapper",
+      "observed": "context only",
+      "roles": [
+        "possible physical orientation"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "foreground_to_artwork_registration",
+      "source": "original photographs/masters",
+      "observed": "not yet audited",
+      "roles": [
+        "possible local coordinate cue"
+      ],
+      "priority": "investigate"
+    },
+    {
+      "id": "print_edge_features",
+      "source": "background masters/support masks",
+      "observed": "not yet audited",
+      "roles": [
+        "possible side/check-bit analogue"
+      ],
+      "priority": "investigate"
+    }
+  ],
+  "excluded_model_derived": [
+    "POS3",
+    "Q4 selector depth",
+    "hidden state",
+    "route shell",
+    "terminal 100",
+    "prediction fills",
+    "gauge choices"
+  ]
+}
