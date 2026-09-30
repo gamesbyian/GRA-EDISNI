@@ -208,3 +208,121 @@ Keep four claims separate:
 Tier 1 establishes (2). Experiment 265 supplies a bounded example of (3). Future newly acquired stickers can establish (4).
 
 The current 43-cell guess list is deliberately frozen now so that future evidence cannot silently rewrite what was predicted.
+
+
+## Physical-serial expansion: what this means for the ~600 stickers
+
+The H108 foreground cycle and period-9 A-I background cycle let the residue-level
+predictions expand mechanically to physical serial numbers:
+
+```
+residue = ((serial - 1) mod 108) + 1
+background = ABCDEFGHI[(serial - 1) mod 9]
+```
+
+`scripts/expand_physical_sticker_predictions.py` performs that expansion and
+classifies every serial by evidence tier. The production count is still not
+settled, so the script takes an explicit `--max-serial`; 600 is used here only
+because the current question is about the roughly 600-number physical space.
+
+For serials **1 through 600**, all 82 currently catalogued physical observations
+fall inside the range, leaving **518 physically unobserved serials**.
+
+### Tier A: distinctly confident consensus
+
+**405 / 518 (78.2%)** of those unobserved physical serials have a foreground
+symbol fixed without selecting a hidden state and without selecting among the
+known physical gauge representatives.
+
+They split into:
+
+- **283** serials whose H108 residue has already been physically observed at
+  some other serial number. Their prediction is the directly observed H108
+  symbol repeated by the established 108 cycle.
+- **122** serials landing on the 22 previously unseen H108 residues that remain
+  invariant even across the broader currently viable physical family.
+
+Together these 405 form the project's strongest present answer to "what do the
+unknown stickers look like?" Their A-I background is also fixed exactly by
+serial mod 9.
+
+### Tier B: strong canonical-printing guesses
+
+A further **44 / 518 (8.5%)** are invariant under all 14 hidden states in the
+preferred canonical physical representation, but can change under a known
+printing/representation gauge or broader recursive branch:
+
+- 24 serials on the two primary gauge pairs {6,8} and {41,45};
+- 10 on canonically invariant A/C Q4 polarity-gauge cells;
+- 10 on the broader coupled F+I Q4 branch.
+
+Accepting the existing independent authoring priors for the zero primary gauge
+and homogeneous slash-exception Q4 representation raises the single-symbol
+coverage to:
+
+**449 / 518 = 86.7%.**
+
+These are strong guesses, but they should not be presented with the same status
+as Tier A.
+
+### Tier C: correlated state uncertainty
+
+The remaining **69 / 518 (13.3%)** physical serials occupy only 13 H108
+state-register residue classes:
+
+`22,25,55,58,61,84,88,91,94,100,102,103,106`.
+
+Their symbols are not 69 independent unknown bits. They are repetitions of one
+small four-bit constrained hidden state, with 14 legal canonical states, plus
+the already-described Q4 physical gauges where applicable.
+
+The affected physical serials in 1..600 are:
+
+`22,25,55,58,61,84,88,91,94,100,102,103,106,130,133,163,166,169,192,196,199,202,208,210,211,214,238,241,271,274,277,300,304,307,310,316,318,319,322,346,349,379,382,385,408,412,415,418,424,426,427,430,454,457,487,490,493,516,520,523,526,532,534,535,538,562,565,595,598`.
+
+There is no evidentiary basis yet to rank the 14 legal hidden states. Therefore
+the rigorous complete-output representation is **14 coherent full physical
+completion scenarios**, not one synthetic master built by taking the modal
+symbol independently at every state-dependent cell.
+
+The serial-expansion utility supports both views:
+
+```
+# consensus sheet; Tier-C entries are explicitly modal, not one legal master
+python scripts/expand_physical_sticker_predictions.py --max-serial 600
+
+# one coherent legal completion
+python scripts/expand_physical_sticker_predictions.py --max-serial 600 --state 0000
+```
+
+Run the latter for each of the 14 legal XYZG words to obtain the 14 coherent
+full-sticker lists.
+
+### Sensitivity to the uncertain production ceiling
+
+The conclusion is not sensitive to whether the practical ceiling is taken as
+597, 600, 630, or 648. The same 108-cell confidence structure simply repeats.
+
+| ceiling | physical records in current ledger | unobserved serials | Tier A | Tier A+B |
+|---|---:|---:|---:|---:|
+| 597 | 82 | 515 | 403 | 447 |
+| 600 | 82 | 518 | 405 | 449 |
+| 630 | 82 | 548 | 431 | 476 |
+| 648 | 82 | 566 | 440 | 488 |
+
+The exact counts scale with the ceiling; the evidentiary distinction does not.
+
+## Current answer to the physical-sticker question
+
+Yes: there is now a **distinctly confident large set of guesses**.
+
+For a 1..600 working range, the defensible headline is:
+
+> We can assign both A-I background and foreground symbol to 405 of the 518
+> physically unseen serials without choosing a hidden state or a known physical
+> gauge. Under the preferred canonical printing conventions, that rises to 449.
+> The remaining 69 are not free-form uncertainty; they are repetitions of only
+> 13 latent residue classes governed by one of 14 coherent four-bit states.
+
+Do not collapse Tier A, Tier B and Tier C into one undifferentiated confidence
+number.
