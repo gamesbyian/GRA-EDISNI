@@ -40,7 +40,7 @@ def digest(path: Path) -> str:
 def parse_ledger(text: str) -> dict[int,dict]:
     rows={}
     for line in text.splitlines():
-        m=re.match(r"^- \[(\d{3})\].*?\(symb:\s*([^ ]+)\s+img:\s*(?:\[([A-I])\]\([^)]*\)|([A-I]))", line)
+        m=re.match(r"^- \[(\d{3})\].*?\(symb\s*:?\s*([^ ]+)\s+img\s*:\s*(?:\[([A-I])\]\([^)]*\)|([A-I]))", line)
         if not m:
             continue
         serial=int(m.group(1))
