@@ -120,6 +120,7 @@ def harvest_youtube(
     out_dir.mkdir(parents=True, exist_ok=True)
     cmd = [
         "yt-dlp",
+        "--js-runtimes", "node",
         "--no-overwrites",
         "--write-info-json",
         "--write-description",
