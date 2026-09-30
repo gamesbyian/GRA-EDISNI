@@ -64,7 +64,14 @@
         "h108_residue": 103,
         "current_model_comparison": "Current frozen matrix treats residue 103 as state-dependent, with dot preferred in 10/14 canonical states and slash in 4/14. The unverified dot claim is compatible with the modal prediction but does not validate it without a photo.",
         "acquisition_value": "high hidden-state discriminator; physical photo required",
-        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint.",
+        "followup": [
+          {
+            "comment_id": "Ugx-aLQYmmJA6RKJAtN4AaABAg.AbB_201OScSAbGWgQtcHgc",
+            "author": "@omelettefiend",
+            "note": "Asked claimant to join the Playdead server; no physical-photo reply is present in the captured snapshot."
+          }
+        ]
       },
       "disposition": "Keep quarantined until a provenance-backed physical photo is obtained."
     },
@@ -85,7 +92,14 @@
         "h108_residue": 45,
         "current_model_comparison": "Current frozen matrix predicts residue 45 as invariant dash (14/14 canonical states) in the primary region. The unverified dot claim therefore conflicts sharply with the present model if literally correct.",
         "acquisition_value": "very-high model-discriminator; physical photo required",
-        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint.",
+        "followup": [
+          {
+            "comment_id": "UgyYote2bg23cfKNwpZ4AaABAg.Ab4GZ0uFxbcAbGge2CQqJI",
+            "author": "@Raezores",
+            "note": "Asked claimant to confirm ownership and provide a sticker photo in the server; no claimant response is present in the captured snapshot."
+          }
+        ]
       },
       "disposition": "Prioritize physical-photo verification. Keep quarantined until then; do not use the claim to alter observations or the machine model."
     },
