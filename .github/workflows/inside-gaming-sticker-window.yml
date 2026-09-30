@@ -1,0 +1,65 @@
+name: Inside Gaming sticker-window harvest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  window:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install yt-dlp and ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check "yt-dlp[default]"
+      - name: Materialize YouTube cookie jar
+        shell: bash
+        env:
+          YOUTUBE_COOKIES_B64: ${{ secrets.YOUTUBE_COOKIES_B64 }}
+        run: |
+          set -euo pipefail
+          test -n "$YOUTUBE_COOKIES_B64"
+          cookie_file="${RUNNER_TEMP}/youtube-cookies.txt"
+          printf '%s' "$YOUTUBE_COOKIES_B64" | base64 --decode > "$cookie_file"
+          chmod 600 "$cookie_file"
+          echo "YTDLP_COOKIES_FILE=$cookie_file" >> "$GITHUB_ENV"
+      - name: Download bounded source section
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence-work/inside-gaming-window/source
+          yt-dlp \
+            --js-runtimes node \
+            --cookies "$YTDLP_COOKIES_FILE" \
+            --download-sections "*00:01:10-00:01:25" \
+            --force-keyframes-at-cuts \
+            -f "bv*+ba/b" \
+            --merge-output-format mkv \
+            --paths evidence-work/inside-gaming-window/source \
+            --output "inside-gaming-0110-0125.%(ext)s" \
+            "https://www.youtube.com/watch?v=AO2YQCl5qFM"
+      - name: Extract fine reconnaissance frames
+        shell: bash
+        run: |
+          set -euo pipefail
+          video="$(find evidence-work/inside-gaming-window/source -type f \( -name '*.mkv' -o -name '*.mp4' -o -name '*.webm' \) | head -n 1)"
+          test -n "$video"
+          python scripts/external_evidence/extract_frames.py "$video" \
+            --output evidence-work/inside-gaming-window/frames-10fps \
+            --mode sample \
+            --interval 0.1
+      - name: Upload review bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: inside-gaming-sticker-window-${{ github.run_id }}
+          path: evidence-work/inside-gaming-window/
+          if-no-files-found: error
+          retention-days: 14

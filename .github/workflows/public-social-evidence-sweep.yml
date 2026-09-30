@@ -1,0 +1,67 @@
+name: Public social evidence sweep
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        source_id:
+          - instagram-01-B6EECojHUKZ
+          - instagram-02-B6MBw1Ph6Xy
+          - instagram-03-B6EPt76gdVC
+          - instagram-04-B6L7QtEpsUF
+          - instagram-05-B_-c0SXprLV
+          - instagram-06-CcLKjmguPXt
+          - instagram-07-Cl3oSShIixS
+          - instagram-08-B5_hdYslfQh
+          - instagram-09-DQVUxWqD9M3
+          - x-kaydhendricks
+          - x-theannathered
+          - x-hubalubalu
+          - x-triplizard
+          - x-itsamefernando
+          - x-minnmax
+          - x-kingskylark
+          - x-frmlssndmpty
+          - x-fokfes
+          - x-surginis
+          - x-sassyredgloves
+          - x-nicelyneatly
+          - x-nintendude794-2018
+          - x-nintendude794-2020
+          - vk-bigdafymonster
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install gallery-dl
+        run: python -m pip install --disable-pip-version-check gallery-dl
+      - name: Acquire one public source
+        run: |
+          python scripts/external_evidence/harvest_public.py \
+            --source-id "${{ matrix.source_id }}" \
+            --include-social
+      - name: Discover leads
+        if: always()
+        run: |
+          if [[ -d "evidence-work/${{ matrix.source_id }}" ]]; then
+            python scripts/external_evidence/discover_leads.py "evidence-work/${{ matrix.source_id }}" || true
+          fi
+      - name: Upload source artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-social-${{ matrix.source_id }}-${{ github.run_id }}
+          path: evidence-work/${{ matrix.source_id }}/
+          if-no-files-found: warn
+          retention-days: 14

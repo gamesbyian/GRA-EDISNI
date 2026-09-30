@@ -1,0 +1,1036 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-29",
+  "purpose": "Durable findings from PR #57 acquisition/mining. Claims remain provenance-scoped unless promoted into canonical observations by the normal evidence process.",
+  "findings": [
+    {
+      "id": "inside-gaming-partial-sticker",
+      "source_id": "youtube-inside-gaming-ce-unboxing",
+      "source_url": "https://www.youtube.com/watch?v=AO2YQCl5qFM",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-occluded",
+      "evidence": {
+        "historical_comment_pointer": "Ugx5oH02n8SWb57wKjV4AaABAg",
+        "approximate_timestamp_seconds": 77.1,
+        "source_window": "00:01:10-00:01:25",
+        "visual_result": "White CE sticker is visibly pinched in the presenter's fingers. The exposed printed mark is slash-like; the small serial-number region is occluded by fingers throughout the clearest native-frame sequence.",
+        "ledger_entry": "L14",
+        "ledger_source": "twinysam/INSIDE-ARG stickers.md",
+        "ledger_note": "Canonical community ledger ties L14 to the Inside Gaming video plus Twitter handles Charalanahzard and mc_lotta; it records the visible symbol as slash and the sticker as probably lost, but gives no serial number.",
+        "native_analysis": {
+          "source_resolution": "1920x1080",
+          "source_frame_rate": "30000/1001",
+          "inspected_window": "approximately 74.0-78.5 seconds, including less-clear frames before and after the clearest slash view",
+          "methods": [
+            "native-frame extraction",
+            "nearest-neighbor and Lanczos enlargement",
+            "RGB-channel and grayscale inspection",
+            "contrast normalization and conservative sharpening",
+            "classical Richardson-Lucy deconvolution",
+            "perspective/geometry rectification attempts",
+            "ECC registration of adjacent sticker crops",
+            "temporal mean/median/percentile stacking"
+          ],
+          "result": "Slash is stable across frames. No stable numeral strokes are recovered. Comparison against a clean sticker layout places the expected serial-number zone under the presenter fingers throughout the useful sequence; faint marks elsewhere on the exposed white sticker are not in the expected serial position and are treated as compression/edge artifacts."
+        }
+      },
+      "disposition": "Treat as canonical lost sticker L14 with symbol '/'; do not infer a serial from current YouTube frames. Highest-value next step is locating original/raw Inside Gaming footage or an alternate still/source, not stronger enhancement of geometrically occluded pixels."
+    },
+    {
+      "id": "x-fernando-sticker-324",
+      "source_id": "x-itsamefernando",
+      "source_url": "https://twitter.com/ItsaMeFernando/status/1266191839104692224",
+      "status": "independent-confirmation",
+      "evidence": {
+        "media_filename": "1266191839104692224_1.jpg",
+        "serial": 324,
+        "symbol": "/",
+        "note": "Original-resolution public photo clearly shows CE sticker 324 with slash on the black-wrapped game."
+      },
+      "disposition": "Already present in canonical observations; use as independent provenance/photo confirmation, not a new row."
+    },
+    {
+      "id": "oddheader-claim-427",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "source_url": "https://www.youtube.com/watch?v=ZqYhhptmhmo",
+      "status": "unverified-owner-claim",
+      "evidence": {
+        "comment_id": "Ugx-aLQYmmJA6RKJAtN4AaABAg",
+        "claimed_serial": 427,
+        "claimed_symbol": ".",
+        "photo_present": false,
+        "author_handle": "@Douleur873",
+        "author_channel_id": "UC2RMnOHzSAkeVzTRrmNAiBQ",
+        "cross_reference": "No exact 427 entry or @Douleur873 match found in the current canonical sticker-ledger snapshot or repository-index search; still requires photo provenance before any observation promotion.",
+        "h108_residue": 103,
+        "current_model_comparison": "Current frozen matrix treats residue 103 as state-dependent, with dot preferred in 10/14 canonical states and slash in 4/14. The unverified dot claim is compatible with the modal prediction but does not validate it without a photo.",
+        "acquisition_value": "high hidden-state discriminator; physical photo required",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint.",
+        "followup": [
+          {
+            "comment_id": "Ugx-aLQYmmJA6RKJAtN4AaABAg.AbB_201OScSAbGWgQtcHgc",
+            "author": "@omelettefiend",
+            "note": "Asked claimant to join the Playdead server; no physical-photo reply is present in the captured snapshot."
+          }
+        ]
+      },
+      "disposition": "Keep quarantined until a provenance-backed physical photo is obtained."
+    },
+    {
+      "id": "oddheader-claim-369",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "source_url": "https://www.youtube.com/watch?v=ZqYhhptmhmo",
+      "status": "unverified-owner-claim",
+      "evidence": {
+        "comment_id": "UgyYote2bg23cfKNwpZ4AaABAg",
+        "claimed_serial": 369,
+        "claimed_symbol": ".",
+        "photo_present": false,
+        "followup_comment_id": "UgyYote2bg23cfKNwpZ4AaABAg.Ab4GZ0uFxbcAbGge2CQqJI",
+        "author_handle": "@Byokugen",
+        "author_channel_id": "UCWmWZS4F8b-SNyYhGtaGkuA",
+        "cross_reference": "No exact 369 entry or @Byokugen match found in the current canonical sticker-ledger snapshot or repository-index search; still requires photo provenance before any observation promotion.",
+        "h108_residue": 45,
+        "current_model_comparison": "Current frozen matrix predicts residue 45 as invariant dash (14/14 canonical states) in the primary region. The unverified dot claim therefore conflicts sharply with the present model if literally correct.",
+        "acquisition_value": "very-high model-discriminator; physical photo required",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint.",
+        "followup": [
+          {
+            "comment_id": "UgyYote2bg23cfKNwpZ4AaABAg.Ab4GZ0uFxbcAbGge2CQqJI",
+            "author": "@Raezores",
+            "note": "Asked claimant to confirm ownership and provide a sticker photo in the server; no claimant response is present in the captured snapshot."
+          }
+        ]
+      },
+      "disposition": "Prioritize physical-photo verification. Keep quarantined until then; do not use the claim to alter observations or the machine model."
+    },
+    {
+      "id": "oddheader-owner-lead-unopened-1",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead",
+      "evidence": {
+        "comment_id": "UgzFs6_zSD3eV3V73nt4AaABAg",
+        "note": "Commenter states they own an unopened Collector's Edition; a reply explains the sticker can be photographed after opening only the shipping box.",
+        "author_handle": "@time_travel_01",
+        "author_channel_id": "UCOmPvJtTwjSjUvLpadhTgZg",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
+      },
+      "disposition": "Potential outreach/manual follow-up."
+    },
+    {
+      "id": "oddheader-owner-lead-copy-2",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead",
+      "evidence": {
+        "comment_id": "UgyOwdnmkkeDWUPvrQV4AaABAg",
+        "note": "Commenter states they bought the Collector's Edition; replies request a sticker photo.",
+        "author_handle": "@cultuschoco",
+        "author_channel_id": "UCpeOVxUNHnTIuPDPPuy7lYw",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
+      },
+      "disposition": "Potential outreach/manual follow-up."
+    },
+    {
+      "id": "oddheader-owner-lead-unopened-3",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead",
+      "evidence": {
+        "comment_id": "UgzXd5SXuH-Z1GFWUaV4AaABAg",
+        "note": "Commenter states they have a copy but do not want to open it; reply explains only the outer shipping box needs opening.",
+        "author_handle": "@z304legend",
+        "author_channel_id": "UCKtzDazuuujDRLh_xxrLyLg",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
+      },
+      "disposition": "Potential outreach/manual follow-up."
+    },
+    {
+      "id": "oddheader-owner-lead-already-contributed",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-existing-contribution",
+      "evidence": {
+        "comment_id": "UgySYmPpNBDSzRyeX2d4AaABAg",
+        "note": "Commenter says they already contributed their sticker to the puzzle.",
+        "author_handle": "@billlee1821",
+        "author_channel_id": "UCpe7zl2OD4jBb4OKkxFbd8g",
+        "cross_reference": "Exact handle was not found in repository-index search. The commenter explicitly says the sticker was already contributed, so do not prioritize outreach without a separate identity/ledger match.",
+        "discord_export_cross_reference": "Exact handle/serial search in gamesbyian/playdead-unofficial-exports returned no indexed match as of this checkpoint."
+      },
+      "disposition": "Cross-reference historical ledger/Discord before contacting; likely already represented."
+    },
+    {
+      "id": "youtube-ledger-10-uP5nSeyac_o-reviewed-negative",
+      "source_id": "youtube-ledger-10-uP5nSeyac_o",
+      "source_url": "https://www.youtube.com/watch?v=uP5nSeyac_o",
+      "status": "human-reviewed-negative",
+      "evidence": {
+        "title": "Here’s what’s inside the Inside Collectors Editon",
+        "source_duration_seconds": 6.683,
+        "review_method": "Full source inspected at dense 0.25-second coverage after successful authenticated full-media acquisition.",
+        "visual_result": "The clip shows the Collector's Edition box closed and then opened with the Huddle contents visible. The black-wrapped game/sticker is never shown."
+      },
+      "disposition": "No further frame-mining unless a higher-value alternate/original cut is discovered."
+    },
+    {
+      "id": "youtube-ledger-03-fu7gmuJQKXM-reviewed-negative",
+      "source_id": "youtube-ledger-03-fu7gmuJQKXM",
+      "source_url": "https://www.youtube.com/watch?v=fu7gmuJQKXM",
+      "status": "canonical-physical-observation-existing-video-sampling-negative",
+      "evidence": {
+        "title": "Inside Collector's Edition Unboxing",
+        "uploader": "Blue Rupees",
+        "upload_date": "2019-12-16",
+        "source_duration_seconds": 388,
+        "review_method": "Successful authenticated full-media acquisition; complete source sampled every 2 seconds across 0-386 seconds and visually reviewed.",
+        "visual_result": "The presenter opens the shipping/collector box and spends the remainder of the video handling the Huddle figure. No defensible view of the numbered sticker on the black-wrapped game appears in the sampled full-source review.",
+        "serial": 242,
+        "symbol": "-",
+        "background": "H",
+        "canonical_context": "Canonical community ledger ties this YouTube source to physical sticker 242 = dash, background H. The present 2-second whole-video sampling did not itself yield a defensible serial read, so that sampling result must not be confused with absence of canonical physical evidence."
+      },
+      "disposition": "Treat 242 = dash, H as already canonical. Do not re-download merely to re-prove it; preserve the video as source provenance."
+    },
+    {
+      "id": "public-x-sweep-2026-09-29-mined",
+      "source_id": "public-social-evidence-sweep",
+      "status": "acquired-and-mined",
+      "evidence": {
+        "run_id": 36652089546,
+        "original_media_sources_acquired": [
+          "x-kaydhendricks",
+          "x-theannathered",
+          "x-hubalubalu",
+          "x-triplizard",
+          "x-itsamefernando",
+          "x-minnmax",
+          "x-frmlssndmpty",
+          "x-nicelyneatly"
+        ],
+        "visual_review_result": "Among the successfully acquired public X media inspected in this pass, only ItsaMeFernando contains a readable CE sticker; that image independently confirms already-canonical 324 = slash. The other inspected originals show the Huddle, box, commentary/meme material, or unrelated game footage without a readable CE sticker.",
+        "non_acquisitions_note": "Tiny status-only X artifacts, all Instagram login-gated outputs, and the VK metadata-only output are not counted as media acquisitions."
+      },
+      "disposition": "Keep the original-media provenance; do not promote any new sticker observation from this sweep."
+    },
+    {
+      "id": "youtube-u01-gqlQaHgRaHg-native-forensic",
+      "source_id": "youtube-ledger-11-gqlQaHgRaHg",
+      "source_url": "https://www.youtube.com/watch?v=gqlQaHgRaHg",
+      "status": "canonical-lost-or-unresolved-entry-symbol-confirmed-serial-occluded",
+      "evidence": {
+        "title": "The Inside/Real Doll CE: Our Weirdest Unboxing Ever",
+        "uploader": "IGN",
+        "upload_date": "2019-12-19",
+        "ledger_entry": "U01",
+        "canonical_symbol": "/",
+        "historical_timestamp_seconds": 52,
+        "native_review_window": "approximately 48-58 seconds, with dense 10 fps inspection around the useful exposure",
+        "methods": [
+          "native-frame extraction",
+          "dense multi-frame visual review",
+          "conservative crop/enlargement"
+        ],
+        "result": "The white CE sticker is visibly exposed on the black wrapping and the slash is unambiguous in multiple adjacent native frames around 53.1-53.4 s. The presenter's fingers cover the lower/serial side of the sticker throughout the useful exposure; no defensible serial digits are available from these frames."
+      },
+      "disposition": "Treat U01 as slash-confirmed with serial unresolved/occluded. Do not infer a serial. A different camera angle, still, or original alternate footage would be required."
+    },
+    {
+      "id": "youtube-l12-ahCmqg1hhSA-native-forensic",
+      "source_id": "youtube-ledger-05-ahCmqg1hhSA",
+      "source_url": "https://www.youtube.com/watch?v=ahCmqg1hhSA",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-unresolved",
+      "evidence": {
+        "ledger_entry": "L12",
+        "canonical_symbol": "-",
+        "historical_timestamp_seconds": 124,
+        "native_review_window": "approximately 121-129 seconds at 10 fps",
+        "methods": [
+          "native-frame extraction",
+          "multi-frame visual review",
+          "white-sticker perspective rectification"
+        ],
+        "result": "Dash is clearly visible in multiple native frames. The sticker is exposed, but the small serial-print area never resolves into stable, defensible numeral strokes across the useful frames."
+      },
+      "disposition": "Retain L12 as lost with dash; do not infer a serial from this source. Revisit only if a better/original source appears."
+    },
+    {
+      "id": "youtube-l13-G4z5r4rZH2w-native-forensic",
+      "source_id": "youtube-ledger-06-G4z5r4rZH2w",
+      "source_url": "https://www.youtube.com/watch?v=G4z5r4rZH2w",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-region-exposed-unresolved",
+      "evidence": {
+        "ledger_entry": "L13",
+        "canonical_symbol": "-",
+        "historical_timestamp_seconds": 143,
+        "native_review_window": "approximately 140-148 seconds at 10 fps",
+        "methods": [
+          "native-frame extraction",
+          "multi-frame visual review",
+          "white-sticker perspective rectification",
+          "registered median inspection"
+        ],
+        "result": "Dash is unambiguous. The serial-print zone is physically visible in several relatively frontal frames and produces faint gray marks after rectification, but the marks do not resolve into repeatable numeral strokes at source resolution. No serial is defensible."
+      },
+      "disposition": "Preserve as a stronger negative than simple occlusion: the serial region is exposed but resolution/compression is insufficient. Original/raw footage would be the highest-value follow-up."
+    },
+    {
+      "id": "youtube-l35-Y7OqMKBbM2Y-native-forensic",
+      "source_id": "youtube-ledger-09-Y7OqMKBbM2Y",
+      "source_url": "https://www.youtube.com/watch?v=Y7OqMKBbM2Y",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-unresolved",
+      "evidence": {
+        "ledger_entry": "L35",
+        "canonical_alias": "U02",
+        "canonical_symbol": "-",
+        "historical_timestamp_seconds": 129,
+        "native_review_window": "approximately 126-134 seconds at 10 fps",
+        "methods": [
+          "native-frame extraction",
+          "multi-frame visual review",
+          "white-sticker perspective rectification"
+        ],
+        "result": "Dash is visible as previously reported. The sticker is moving and oblique during the useful interval; rectified frames do not preserve enough serial-region detail for a defensible reading."
+      },
+      "disposition": "Retain L35/U02 as confirmed lost with dash; do not infer a serial from this source."
+    },
+    {
+      "id": "youtube-ledger-02-Mhxynz-LoAI-canonical-existing",
+      "source_id": "youtube-ledger-02-Mhxynz-LoAI",
+      "source_url": "https://www.youtube.com/watch?v=Mhxynz-LoAI",
+      "status": "canonical-physical-observation-already-represented",
+      "evidence": {
+        "serial": 221,
+        "symbol": "/",
+        "background": "E",
+        "ledger_note": "The canonical community ledger already ties this video to physical sticker 221 = slash, background E."
+      },
+      "disposition": "Do not spend acquisition budget re-proving this source unless provenance quality becomes a separate need."
+    },
+    {
+      "id": "oddheader-claim-hal-lost-slash-digit4",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "source_url": "https://www.youtube.com/watch?v=ZqYhhptmhmo",
+      "status": "unverified-owner-recollection-sticker-lost",
+      "evidence": {
+        "comment_id": "UgzXxCS28QQt4hcvWoZ4AaABAg",
+        "author_handle": "@HAL-iv2kd",
+        "author_channel_id": "UCZbi6R8qAoGbjC1Aj9qfzpA",
+        "claim": "Commenter says they had bought the Collector's Edition the previous day, discarded the packaging before learning the sticker mattered, remembers the symbol as slash, and thinks the three-digit serial contained a 4.",
+        "claimed_symbol": "/",
+        "uncertain_serial_constraint": "one of the three digits may have been 4",
+        "photo_present": false,
+        "cross_reference": "Exact handle not found in the current canonical sticker-ledger snapshot."
+      },
+      "disposition": "Quarantine as recollection only. It may become a weak candidate filter if a future independently-supported serial set is being compared, but must not be treated as a physical observation."
+    },
+    {
+      "id": "oddheader-owner-lead-friend-unopened-bobdole480",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-third-party-unopened",
+      "evidence": {
+        "comment_id": "UgwiiwMGiD61Dz5vsdx4AaABAg",
+        "author_handle": "@BOBDOLE480",
+        "author_channel_id": "UC9lO5UDFTY9ZqplWBld6T3g",
+        "note": "Commenter says a friend owns an unopened INSIDE Collector's Edition and does not want to open it. Raezores replied explaining that only the outer shipping box must be opened to photograph the sticker.",
+        "cross_reference": "Exact handle not found in the current canonical sticker-ledger snapshot."
+      },
+      "disposition": "Potentially high-value owner lead if the friend remains reachable; no sticker information yet."
+    },
+    {
+      "id": "oddheader-owner-lead-sealed-blorbious",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-sealed",
+      "evidence": {
+        "comment_id": "UgwnDBA9IGWLPKNX1UV4AaABAg",
+        "author_handle": "@Blorbious",
+        "author_channel_id": "UCLvEYIOZLdxJVtmUdtdUs9Q",
+        "note": "Commenter says they have a sealed box and are debating opening it. Raezores explained that the outer shipping box can be opened without opening the Collector's Edition contents.",
+        "cross_reference": "Exact handle not found in the current canonical sticker-ledger snapshot."
+      },
+      "disposition": "High-value owner lead pending response/photo; no outreach should assume the sticker is new until canonical/Discord history is checked."
+    },
+    {
+      "id": "oddheader-owner-lead-jakeduggins-refused",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-declined",
+      "evidence": {
+        "comment_id": "Ugz_zYCyGQvDJyhHFYt4AaABAg",
+        "author_handle": "@jakeduggins5141",
+        "author_channel_id": "UC-fobxwELbVoAYIUWR05U0g",
+        "note": "Commenter said 'I have a copy with the card contact me' but replied 'nope' to both Raezores and NeoRadiation when asked for the sticker symbol/number/photo.",
+        "cross_reference": "Exact handle not found in the current canonical sticker-ledger snapshot."
+      },
+      "disposition": "Do not prioritize further outreach absent a new invitation from the owner."
+    },
+    {
+      "id": "youtube-l11-jQUf8yhqEc4-partial-forensic",
+      "source_id": "youtube-ledger-04-jQUf8yhqEc4",
+      "source_url": "https://www.youtube.com/watch?v=jQUf8yhqEc4",
+      "status": "canonical-lost-entry-partially-mined-no-readable-sticker",
+      "evidence": {
+        "ledger_entry": "L11",
+        "review_scope": "Authenticated full source is acquired. The unboxing/opening and black-wrapping handling phase has been reviewed from the start through approximately 356 seconds, including dense 5 fps review around 156-228 seconds.",
+        "result": "The black wrapping and package contents are repeatedly visible, but no defensible numbered sticker face or symbol was recovered in the reviewed handling phase."
+      },
+      "disposition": "Do not re-download. Continue only from the existing artifact if later footage or historical context gives a specific reason; the high-probability unboxing window is already negative."
+    },
+    {
+      "id": "youtube-ledger-01-eXxklNxsVWw-owner-discovery-source",
+      "source_id": "youtube-ledger-01-eXxklNxsVWw",
+      "source_url": "https://www.youtube.com/watch?v=eXxklNxsVWw",
+      "status": "acquired-metadata-owner-discovery-source",
+      "evidence": {
+        "title": "The Top 10 Best Video Game Mysteries & Discoveries of 2025",
+        "uploader": "oddheader",
+        "upload_date": "2025-12-22",
+        "duration_seconds": 1163,
+        "canonical_context": "Canonical ledger says renewed attention from this video led owners to contribute physical stickers 072 and 476. It also records unresolved U45 from commenter @hoodratthings4088, who said they bought the CE to contribute but could not be matched to a submitted sticker."
+      },
+      "disposition": "Do not treat as an unboxing/frame-mining target. Its remaining value is comments/owner identity reconciliation, especially U45."
+    },
+    {
+      "id": "youtube-l17-Pbkq8Ey_s0k-targeted-media-candidate",
+      "source_id": "youtube-ledger-07-Pbkq8Ey_s0k",
+      "source_url": "https://www.youtube.com/watch?v=Pbkq8Ey_s0k",
+      "status": "metadata-acquired-targeted-media-justified",
+      "evidence": {
+        "title": "How To Turn A Basement Closet Into A Recording Booth",
+        "uploader": "Kyle Hilliard",
+        "upload_date": "2020-02-20",
+        "duration_seconds": 172,
+        "ledger_entry": "L17",
+        "canonical_context": "Canonical ledger ties Kyle Hilliard to a Collector's Edition later confirmed lost, but records no foreground symbol or serial."
+      },
+      "disposition": "A targeted full-media visual pass is justified because the source is short and L17 has no recorded symbol. Keep this as manual-dispatch acquisition rather than re-enabling broad automatic downloads."
+    },
+    {
+      "id": "youtube-l30-d23bAqGtImo-owner-recollection-only",
+      "source_id": "youtube-ledger-08-d23bAqGtImo",
+      "source_url": "https://www.youtube.com/watch?v=d23bAqGtImo",
+      "status": "metadata-acquired-owner-recollection-no-media-escalation",
+      "evidence": {
+        "title": "The Lost McDonald's Game Iceberg, explained",
+        "uploader": "Nick Robinson (Babylonian)",
+        "upload_date": "2020-12-06",
+        "duration_seconds": 913,
+        "ledger_entry": "L30",
+        "canonical_alias": "U20",
+        "cited_huddle_timestamp_seconds": 442,
+        "canonical_context": "The cited video only exposed ownership through the Huddle. Later owner contact confirmed the sticker was lost and the owner was about 90% sure its symbol was slash; this remains recollection, not physical sticker observation."
+      },
+      "disposition": "Do not download the 15-minute documentary for sticker frame mining absent a new timestamp showing the sticker itself. Preserve the slash statement as owner recollection only."
+    },
+    {
+      "id": "public-search-369-427-photo-check-2026-09-29",
+      "source_id": "web-targeted-owner-verification",
+      "status": "no-independent-physical-photo-found",
+      "evidence": {
+        "searched_serials": [
+          369,
+          427
+        ],
+        "searched_handles": [
+          "@Byokugen",
+          "@Douleur873"
+        ],
+        "search_scope": "Targeted general web and image search for exact serials/handles combined with INSIDE / Playdead / iam8bit / Collector's Edition terms.",
+        "result": "No independent physical sticker photo or older INSIDE CE provenance trail was found for either claim. Search results for the handles/serials were unrelated or generic."
+      },
+      "disposition": "Do not treat search absence as evidence that the claims are false. Physical-photo verification remains required; avoid repeatedly re-running the same broad queries without a new lead."
+    },
+    {
+      "id": "l13-original-source-search-2026-09-29",
+      "source_id": "youtube-ledger-06-G4z5r4rZH2w",
+      "status": "no-better-public-mirror-found-current-handle-discoverable",
+      "evidence": {
+        "ledger_entry": "L13",
+        "uploader_handle": "MyNeighborJess",
+        "search_scope": "Targeted web search for the exact video id/title, mirrors, archives, and current public handle presence.",
+        "result": "No public mirror/archive with better footage than the YouTube source surfaced. The MyNeighborJess handle still has contemporary public web/activity traces, so original/raw footage remains a plausible human-source lead rather than an obviously abandoned identity."
+      },
+      "disposition": "Keep raw/original footage recovery as the highest-value L13 follow-up. No automated public acquisition path was found."
+    },
+    {
+      "id": "oddheader-u45-hoodratthings4088-owner-confirmation",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "source_url": "https://www.youtube.com/watch?v=ZqYhhptmhmo",
+      "status": "owner-claims-already-contributed-unresolved-identity",
+      "evidence": {
+        "canonical_unknown_entry": "U45",
+        "author_handle": "@hoodratthings4088",
+        "author_channel_id": "UCSfDy7vqionpbw5Z8-eHexw",
+        "comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg",
+        "owner_statement": "I have a copy but I contributed my codes years ago.",
+        "followup_comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg.Ab7HRDQrJ4FAbGYH8uwZ4m",
+        "followup_context": "Raezores asks for the sticker number, lost status, or the identity/name used when the sticker was originally submitted.",
+        "photo_present": false,
+        "historical_context": "The canonical ledger already carried U45 from an earlier 2025 comment by the same handle saying they bought the Collector's Edition to contribute to the ARG, but prior searches could not map the person to a submitted sticker.",
+        "current_resolution": "The 2026 statement strengthens ownership/contribution provenance but still does not identify which canonical sticker was theirs."
+      },
+      "disposition": "Resolve historical submission identity before outreach or any observation change. Do not create a new sticker observation from the owner's recollection alone."
+    },
+    {
+      "id": "l12-youtube-native-forensic-review",
+      "source_id": "youtube-ledger-05-ahCmqg1hhSA",
+      "source_url": "https://www.youtube.com/watch?v=ahCmqg1hhSA",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-unreadable",
+      "evidence": {
+        "ledger_entry": "L12",
+        "approximate_timestamp_seconds": 124,
+        "source_resolution": "1920x1080",
+        "source_frame_rate": 60,
+        "review_window": "approximately 120.5-128.5 seconds, including 10 fps and native-frame inspection around the historical 124 s pointer",
+        "visual_result": "The white CE sticker is shown repeatedly on the black wrapping. The foreground mark is consistently dash-like. No stable serial numerals are readable in the available source frames."
+      },
+      "disposition": "Retain L12 as lost with symbol '-' and unknown serial. Do not promote enhancement artifacts into a serial; a better/original source would be required."
+    },
+    {
+      "id": "l13-youtube-native-forensic-review",
+      "source_id": "youtube-ledger-06-G4z5r4rZH2w",
+      "source_url": "https://www.youtube.com/watch?v=G4z5r4rZH2w",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-unreadable",
+      "evidence": {
+        "ledger_entry": "L13",
+        "approximate_timestamp_seconds": 143,
+        "source_resolution": "1920x1080",
+        "source_frame_rate": 60,
+        "review_window": "approximately 139-147 seconds, including native-frame inspection around the historical 143 s pointer",
+        "visual_result": "The sticker face is unusually clear and confirms the dash-like foreground mark. Across the stable front-facing interval, no defensible serial digits appear on the visible sticker face."
+      },
+      "disposition": "Retain L13 as lost with symbol '-' and unknown serial. The source itself corroborates the historical owner's statement that no clear number could be read from the footage."
+    },
+    {
+      "id": "l35-youtube-native-forensic-review",
+      "source_id": "youtube-ledger-09-Y7OqMKBbM2Y",
+      "source_url": "https://www.youtube.com/watch?v=Y7OqMKBbM2Y",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-unreadable",
+      "evidence": {
+        "ledger_entry": "L35",
+        "alternate_entry": "U02",
+        "approximate_timestamp_seconds": 129,
+        "source_resolution": "1920x1080",
+        "source_frame_rate": 60,
+        "review_window": "approximately 125-135 seconds, including dense 10 fps/native-frame inspection around the historical pointer",
+        "visual_result": "The white CE sticker appears while the presenter reaches into the black wrapping. The dash-like foreground mark is visible in several frames, but the small-number region is repeatedly obscured by hand/forearm and motion blur; no stable numeral strokes are recoverable."
+      },
+      "disposition": "Retain L35/U02 as lost with symbol '-' and unknown serial. Further processing of this encode is low value without alternate/raw footage."
+    },
+    {
+      "id": "l11-youtube-source-review",
+      "source_id": "youtube-ledger-04-jQUf8yhqEc4",
+      "source_url": "https://www.youtube.com/watch?v=jQUf8yhqEc4",
+      "status": "canonical-lost-entry-source-reviewed-no-readable-sticker",
+      "evidence": {
+        "ledger_entry": "L11",
+        "alias_entry": "L16 / nintendude794 linkage in current community ledger",
+        "source_duration_seconds": 1140,
+        "source_resolution": "1920x1080",
+        "source_frame_rate": 60,
+        "review_method": "Whole-source reconnaissance using targeted seek sampling, with dense 0.5-second review from 200-240 s while the black wrapping is actively handled, plus broad sampling of the remainder of the 19-minute source.",
+        "visual_result": "The black wrapping is removed and manipulated extensively, but no frame in the high-value handling interval exposes a readable numbered CE sticker. The remainder of the video concentrates on the Huddle, art cards and contents rather than presenting the sticker."
+      },
+      "disposition": "Keep L11/L16 as a lost/unknown sticker entry. Do not infer symbol or serial from this source; pursue alternate social photos/raw footage instead."
+    },
+    {
+      "id": "oddheader-owner-lead-u45-hoodratthings",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-existing-unknown-entry",
+      "evidence": {
+        "comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg",
+        "author_handle": "@hoodratthings4088",
+        "author_channel_id": "UCSfDy7vqionpbw5Z8-eHexw",
+        "comment_text_summary": "Commenter says they still have a copy and contributed their codes years ago.",
+        "reply_comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg.Ab7HRDQrJ4FAbGYH8uwZ4m",
+        "reply_author": "@Raezores",
+        "canonical_cross_reference": "Current twinysam/INSIDE-ARG ledger already tracks this owner as U45, based on an older YouTube comment, with identity/sticker status still unresolved."
+      },
+      "disposition": "Do not treat as a fresh owner or initiate duplicate generic outreach. This is the same U45 lead; only a reply that supplies sticker number/photo or prior submission identity would advance evidence."
+    },
+    {
+      "id": "oddheader-owner-lead-jakeduggins-declined",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-declined",
+      "evidence": {
+        "comment_id": "Ugz_zYCyGQvDJyhHFYt4AaABAg",
+        "author_handle": "@jakeduggins5141",
+        "author_channel_id": "UC-fobxwELbVoAYIUWR05U0g",
+        "note": "Commenter stated 'I have a copy with the card contact me'.",
+        "reply_ids": [
+          "Ugz_zYCyGQvDJyhHFYt4AaABAg.Ab2J0IoYnXUAbGxUCzwxMH",
+          "Ugz_zYCyGQvDJyhHFYt4AaABAg.Ab2J0IoYnXUAbH1PjbkhqF",
+          "Ugz_zYCyGQvDJyhHFYt4AaABAg.Ab2J0IoYnXUAbHBej27Ks9",
+          "Ugz_zYCyGQvDJyhHFYt4AaABAg.Ab2J0IoYnXUAbHs1zJBJI4"
+        ],
+        "followup_result": "After requests for a server join or sticker number/symbol/photo, the commenter replied 'nope' twice.",
+        "cross_reference": "Exact handle search found no match in the current GRA-EDISNI corpus or gamesbyian/playdead-unofficial-exports."
+      },
+      "disposition": "Do not pursue further unless the commenter voluntarily supplies evidence."
+    },
+    {
+      "id": "oddheader-ambiguous-476-slash-comment",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "ambiguous-contradicted-comment",
+      "evidence": {
+        "comment_id": "UgwdOHTJHdTbs0jLSwV4AaABAg.Ab6jmVZExOSAb6lX6N2_Em",
+        "author_handle": "@DwellerFree",
+        "author_channel_id": "UCEvqsBLC0pPQfDoi_i43qbw",
+        "text": "476 /",
+        "context": "The text is a self-reply under an unrelated comment and does not explicitly say the author owns sticker 476.",
+        "canonical_cross_reference": "The current community ledger already has a provenance-backed physical photo for sticker 476 and records symbol '-' (background H), contributed by TheNinjaDefuse on 2025-12-23.",
+        "repository_cross_reference": "Exact handle search found no match in GRA-EDISNI or gamesbyian/playdead-unofficial-exports."
+      },
+      "disposition": "Do not promote or use as a competing observation. Treat the terse comment as ambiguous and contradicted by an existing physical-photo observation unless the commenter supplies a photo showing otherwise."
+    },
+    {
+      "id": "l17-youtube-lightweight-recon-negative",
+      "source_id": "youtube-ledger-07-Pbkq8Ey_s0k",
+      "source_url": "https://www.youtube.com/watch?v=Pbkq8Ey_s0k",
+      "status": "human-reviewed-recon-negative",
+      "evidence": {
+        "ledger_entry": "L17",
+        "owner": "Kyle Hilliard",
+        "source_title": "How To Turn A Basement Closet Into A Recording Booth",
+        "upload_date": "2020-02-20",
+        "source_duration_seconds": 172,
+        "reconnaissance_run_id": 36666370632,
+        "reconnaissance_source_resolution": "256x144",
+        "review_method": "Complete source sampled at 1 fps plus scene-change frames from a <=240p authenticated stream.",
+        "visual_result": "The source shows a basement-closet recording-booth build, with brief podcast/game inserts. Across the complete 172-second source, the Collector's Edition packaging, black-wrapped game and numbered sticker are never presented. No candidate sticker interval exists for full-resolution escalation."
+      },
+      "disposition": "Do not acquire the full-resolution video for sticker mining absent a concrete alternate timestamp/source. L17 remains a lost-owner provenance lead rather than a video-forensic sticker source."
+    },
+    {
+      "id": "l30-youtube-lightweight-recon-negative",
+      "source_id": "youtube-ledger-08-d23bAqGtImo",
+      "source_url": "https://www.youtube.com/watch?v=d23bAqGtImo",
+      "status": "human-reviewed-recon-negative",
+      "evidence": {
+        "ledger_entry": "L30",
+        "alternate_entry": "U20",
+        "owner": "Nick Robinson / Babylonian",
+        "source_title": "The Lost McDonald's Game Iceberg, explained",
+        "upload_date": "2020-12-06",
+        "source_duration_seconds": 913,
+        "reconnaissance_run_id": 36667695004,
+        "review_method": "Complete low-resolution source reconnaissance at 1 fps plus scene changes; focused inspection around the historical Huddle appearance near 7:22; additional whole-source 10-second survey.",
+        "visual_result": "The Huddle is visible on a shelf around 7:12-7:23 beside unrelated objects. No Collector's Edition box, black wrapping, game case or numbered sticker is visible around the Huddle. The remainder of the video is documentary/game material and contains no candidate sticker-bearing interval."
+      },
+      "disposition": "Do not acquire full-resolution media for sticker mining absent an alternate source. L30 remains a lost-owner provenance entry; the owner's historical 90%-confidence slash recollection stays a recollection, not a physical observation."
+    },
+    {
+      "id": "oddheader-2025-owner-lead-psychosmosis",
+      "source_id": "youtube-ledger-01-eXxklNxsVWw",
+      "source_url": "https://www.youtube.com/watch?v=eXxklNxsVWw",
+      "status": "owner-lead-possible-packaging-retained",
+      "evidence": {
+        "comment_snapshot_run_id": 36667932888,
+        "comment_id": "Ugyc5Hs0oKJRXJqQ1r94AaABAg",
+        "author_handle": "@PsychOsmosis",
+        "author_channel_id": "UCb4w58w_rLCmvYQLpGtKXQA",
+        "comment_text": "Shit, I wonder if I threw away the packaging of my Inside Collector's Edition box... I tend to keep shit like this, but I have no idea where it would be.",
+        "reply_present": false,
+        "canonical_cross_reference": "Exact handle search found no match in the current GRA-EDISNI corpus or gamesbyian/playdead-unofficial-exports."
+      },
+      "disposition": "High-value fresh owner lead. They explicitly report owning an INSIDE Collector's Edition and possibly retaining the original packaging. No outreach/reply is present in the captured snapshot; cross-reference remains negative, so this appears not to be an obvious duplicate."
+    },
+    {
+      "id": "discord-stickers-solving-upstream-export",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "source_url": "https://github.com/twinysam/playdead-unofficial-exports/commit/928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+      "status": "acquired-and-mined-upstream",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "commit_date": "2026-09-29T20:24:34Z",
+        "commit_message": "Add #stickers-solving",
+        "transcript_path": "Playdead Unofficial - ARG - stickers-solving [1552077397493424272].txt",
+        "transcript_lines": 2509,
+        "note": "This resolves the previously documented missing-channel corpus gap. The user's fork predates this upstream commit, so mining used the immutable upstream commit directly."
+      },
+      "disposition": "Treat this exact upstream commit as the canonical provenance for the newly available #stickers-solving export until the fork is reconciled safely."
+    },
+    {
+      "id": "discord-stickers-solving-jigsaw-order",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-community-observation",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-28 02:54",
+        "author": "santiface",
+        "claim": "The labeled 3x3 background-image order is I A B / C D E / F G H.",
+        "note": "Preserve as direct community-source provenance for the A-I spatial order; do not confuse it with a newly derived machine result."
+      },
+      "disposition": "Cross-reference against current background-tile-master work; useful provenance, but leave PR #61's live reconstruction untouched."
+    },
+    {
+      "id": "discord-stickers-solving-manufacturing-sheet-hypothesis",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-community-hypothesis",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-28",
+        "claim": "Community discussion explicitly raised that a 9x12 sequential label sheet could generate period 108 and background=column as a manufacturing artifact, and proposed measuring a physical sticker plus documenting the backing sheet as a discriminator.",
+        "methodological_note": "The same thread explicitly rejected reconstructing lost sticker facts from owner memory/purchase dates as too unreliable for physical observations."
+      },
+      "disposition": "Keep manufacturing as a live competing explanation for H108 structure. Prioritize ruler/backing-sheet evidence from any newly responsive owner."
+    },
+    {
+      "id": "discord-stickers-solving-frozen-dot-predictions",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "frozen-historical-prediction",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-28",
+        "predicted_dot_serials": [
+          197,
+          198,
+          200,
+          203,
+          205
+        ],
+        "best_test_serial": 200,
+        "current_ledger_check": "No canonical physical sticker row currently exists for 197, 198, 200, 203, or 205.",
+        "caveat": "These predictions belong to the community model documented in the channel at that time; they are not promoted as current-project predictions or facts."
+      },
+      "disposition": "Preserve prospectively. If any of these physical stickers appears later, score the historical prediction before updating any model."
+    },
+    {
+      "id": "discord-stickers-solving-community-model-audit-retraction",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-negative-result",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-25 21:48",
+        "author": "kappa_neuro",
+        "corrected_script": "assets/sticker_random_gen_New-76238d3b824aa689.py",
+        "corrected_script_blob_sha": "808cbaa525b6bf5b823512ffacb1813eae62b4f1",
+        "leave_one_out_results": {
+          "zone_majority_baseline_percent": 60,
+          "mod54_percent": 56.9,
+          "old_main_model_percent": 52.3
+        },
+        "retraction": "The earlier 84.6% accuracy claim was explicitly declared wrong; the model's confidence was also described as inverted, with higher confidence associated with more errors.",
+        "final_ui_change": "Predictions were demoted to pale experimental guesses; confidence heatmap became a per-known-cell model check; 'hard residues' became an equal-uncertainty wanted-sticker list."
+      },
+      "disposition": "Do not reuse the older prediction/confidence screenshots or 84.6% figure as validated evidence. Treat the final corrected script and leave-one-out audit as the terminal state of this community model lineage."
+    },
+    {
+      "id": "discord-stickers-solving-interval-script-retracted",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-negative-result",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-25 20:03-20:23",
+        "author": "architype_",
+        "attached_source": "assets/inside_sticker_code_interval-7459874c016f4e7c.txt",
+        "source_blob_sha": "bcfad8ce2dff6fead5b0a7b80f736e18d0d93d5a",
+        "failure": "The author discovered the period-checking logic only compared the next loop and effectively skipped validation when the corresponding next cell was unknown, producing false candidate intervals.",
+        "cross_check": "A 125-repeat visualization immediately showed multiple inconsistencies compared with 108, triggering the bug discovery."
+      },
+      "disposition": "Treat candidate repeat lengths produced by this attached C++ source as invalid historical output unless independently recomputed with corrected logic."
+    },
+    {
+      "id": "discord-stickers-solving-3x4-piece-layout-retired",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-negative-result",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-28",
+        "jigsaw_order": "I A B / C D E / F G H",
+        "result": "All six block variants assembled in the documented jigsaw order produced no picture. The discussion explicitly notes there was no evidence that each background piece's 12 stickers should form a 3x4 sub-block, and later says to retire that idea."
+      },
+      "disposition": "Do not revive the 3x4-per-piece image layout as a supported structure absent new physical/layout evidence."
+    },
+    {
+      "id": "discord-stickers-solving-fractionated-morse-status",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-hypothesis-partially-negative",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-28",
+        "result": "Straight-through fractionated-Morse reading was reported ruled out for all three separator choices. A column-wise/dash-separator variant survived a run-rule check at that moment, but later participants argued ordinary ternary/fractionated-Morse families fit poorly because dots are concentrated in the 108-cycle tail rather than spread across all three symbols.",
+        "caveat": "The surviving column-wise variant was not established as a solve and remained speculative."
+      },
+      "disposition": "Record straight-through fractionated Morse as a historical negative; keep any rearranged/column-wise variant merely as an unconfirmed hypothesis."
+    },
+    {
+      "id": "discord-stickers-solving-attachment-audit",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "attachment-corpus-mined-first-pass",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "physical_sticker_attachment": {
+          "path": "assets/003-1129cbfc544dd6c0.png",
+          "blob_sha": "b32ee2556b2f903fdc6bd448c9754db209892777",
+          "observation": "003 = dash",
+          "canonical_status": "already canonical as sticker 003 = dash, background C"
+        },
+        "jigsaw_attachment": {
+          "path": "assets/846shEE-ce4f28eefdc2a6e7.png",
+          "blob_sha": "2adf9cba750fc05efa636899b196314ae9568db1",
+          "observation": "Direct labeled composite visually confirms the I A B / C D E / F G H piece arrangement."
+        },
+        "ce_lifestyle_attachment": {
+          "path": "assets/InsideCE_Lifestyle_00014-ed907b1812ee4025.jpg",
+          "blob_sha": "775761dc1595fa83f80b3ede123cbdc2a965cdfe",
+          "observation": "Shows the PS4 case/disc and a folded INSIDE art insert with a 3-by-3 fold pattern; no numbered CE sticker, backing sheet, or label-sheet geometry is visible.",
+          "caveat": "The fold geometry is a physical packaging observation only; it does not establish a relationship to the sticker cycle."
+        },
+        "derived_assets": "Other inspected image attachments are model grids, cipher/layout visualizations, screenshots or user presentation assets rather than new physical sticker observations."
+      },
+      "disposition": "No new physical sticker observation recovered from the attachment batch. Preserve the labeled jigsaw and physical packaging image as provenance/context only."
+    },
+    {
+      "id": "discord-stickers-solving-ai-word-completion-nonresult",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-negative-low-evidence",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "attachment": "assets/P1P2_Combinations-8a981ed047b0ac58.txt",
+        "blob_sha": "156e1d5eaa9acff88c1f0bd9c333222f9ee773cd",
+        "method": "AI-filtered shortlist from approximately 6.4 billion pairings of hypothetical Morse-completion lines, using word-pair likelihood, grammar/theme filtering and manual review.",
+        "result": "The file explicitly says no convincing SPACE/INSIDE ARG themed sentences were found; listed computer-related phrases are merely sensible completions and not a guaranteed-complete result."
+      },
+      "disposition": "Do not treat phrases such as 'ETHERNET PORT...' or 'TOOLS ...' as decoded text or evidence. Keep as a documented exploratory non-result."
+    },
+    {
+      "id": "discord-stickers-solving-column-shift-tool",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-exploratory-tool",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "attachment": "assets/Puzzle_Column_Shift_Tool-d287960dd2f917fc.html",
+        "blob_sha": "d0ceeb0d35ba1ab4dd0c7f77743f58e7fac03239",
+        "mechanism": "Treats the bottom three slash/dot rows of the 12x9 grid as a 3-bit per-column shift value (0-7), restricting each column to values consistent with currently known bottom cells, then cyclically shifts the nine top cells of that column.",
+        "status_note": "Interactive exploratory transform only; no decoded image/message or independent validation is recorded in the surrounding channel."
+      },
+      "disposition": "Preserve as a historical transform hypothesis, not as an established structural rule."
+    },
+    {
+      "id": "discord-original-background-relief-groups-2020",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-primary-community-provenance",
+      "evidence": {
+        "source_repo": "twinysam/playdead-unofficial-exports",
+        "source_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "source_file": "Playdead Unofficial - ARG - tldr [462637922944811028].txt",
+        "timestamp": "2020-03-20 00:54",
+        "author": "elronodelp",
+        "observation": "High-resolution photos showed sticker relief/background patterns could be categorized into nine groups A-I. A representative from each group was processed and assembled into another perspective of the initial Morse printer.",
+        "attached_images": [
+          "assets/unknown.png-era export attachment",
+          "assets/unknown-2.png-era export attachment"
+        ]
+      },
+      "disposition": "Use as historical provenance for the existence and purpose of the A-I relief classes; modern canonical tile masters should still be built from physical-photo evidence."
+    },
+    {
+      "id": "discord-original-sticker-puzzle-solution-composite-2020",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-solved-structure-provenance",
+      "evidence": {
+        "source_repo": "twinysam/playdead-unofficial-exports",
+        "source_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "source_file": "Playdead Unofficial - ARG - tldr [462637922944811028].txt",
+        "timestamp": "2020-04-28 15:54",
+        "author": "pitch_bright",
+        "attachment": "assets/StickerSolution-dc12d5e516ca4922.png",
+        "attachment_blob_sha": "2d9fd5b60faa3d5fdb25ebc63ab3f77be3138b46",
+        "visual_structure": "I A B / C D E / F G H",
+        "solved_path": "dat/534brn9653f9j8mmd/",
+        "note": "This is stronger historical provenance for the A-I spatial order than the 2026 recollection because it is the contemporaneous posted solution composite."
+      },
+      "disposition": "Treat the composite as authoritative historical layout provenance, not as a substitute for modern per-tile master reconstruction."
+    },
+    {
+      "id": "discord-108-lineage-earliest-surviving-export",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-provenance",
+      "evidence": {
+        "source_repo": "twinysam/playdead-unofficial-exports",
+        "source_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "source_file": "Playdead Unofficial - ARG - solving-breakout [463106924708233216].txt",
+        "earliest_surviving_exchange": [
+          "2022-12-23 18:14 lime8159: posted 'stickers as a 3x36'",
+          "2022-12-23 23:09 lime8159: rendered 216 instead of 108",
+          "2022-12-23 23:28 lime8159: explained that if it repeats every 108 then 216 only adds redundant data",
+          "2022-12-24 23:27 lime8159: said they were 'kinda confident' it repeats at 108 while cautioning that 12x9 dimensions were not established"
+        ],
+        "later_quantification": {
+          "timestamp": "2023-11-03",
+          "author": "lime8159",
+          "attachment": "assets/sequence_prob-bb1047802f422f07.txt",
+          "attachment_blob_sha": "68d1bbf829c1eaf13b8bb965b753e0c411121032",
+          "claimed_108_probability": "about 1e-8 under that historical calculation",
+          "caveat": "aperson1 independently reported a less extreme but still sub-0.1% result; this historical probability is provenance, not the current project's validated null."
+        }
+      },
+      "disposition": "Credit lime8159 as the earliest surviving explicit 108-layout/probability lineage found in this export, without claiming this proves original invention outside the surviving corpus."
+    },
+    {
+      "id": "u32-koreanb-public-sale-provenance",
+      "source_id": "owner-u32-koreanb-sale-2020",
+      "status": "verified-public-owner-provenance-no-sticker-observation",
+      "evidence": {
+        "owner_handle": "KoreanB_B_Q",
+        "canonical_entry": "U32",
+        "public_sale_posts": [
+          "https://www.reddit.com/r/GameSale/comments/i8i1d9",
+          "https://www.reddit.com/r/GameSale/comments/iuutfq",
+          "https://www.reddit.com/r/GameSale/comments/izs23a"
+        ],
+        "dates": [
+          "2020-08-12",
+          "2020-09-17",
+          "2020-09-25"
+        ],
+        "description_summary": "Seller repeatedly offered the iam8bit INSIDE Collector's Edition with the RealDoll Huddle. September listings describe the outer/actual box as unsealed because that was how it was released, while the game and Huddle contents were still sealed/unused.",
+        "evidentiary_limit": "The sale text does not mention or show the numbered white sticker and cannot establish whether it was retained at those dates."
+      },
+      "disposition": "Use as stable public provenance for U32 ownership/history. Do not convert packaging condition into a sticker survival claim."
+    },
+    {
+      "id": "u33-doctornowhere-original-x-media",
+      "source_id": "owner-u33-doctornowhere-x",
+      "status": "verified-public-owner-provenance-no-sticker-observation",
+      "evidence": {
+        "acquisition_run_id": 36670045345,
+        "tweet_id": "1821955671203393814",
+        "date": "2024-08-09 17:04:16",
+        "author_handle": "doctornowhere_",
+        "tweet_text": "finally acquired this. it will compliment my little nightmares memorabilia nicely",
+        "original_media": {
+          "width": 1536,
+          "height": 2048,
+          "sha256": "d04ec5c842ea8f0280235d32e518b46513fb22eff6b76598777c46b8402d89c0"
+        },
+        "visual_result": "Original photo shows the Huddle on its display stand sitting on top of the red INSIDE Collector's Edition box. No black wrapping, white numbered sticker, game case, serial, symbol or sticker-bearing surface is visible."
+      },
+      "disposition": "Confirms U33 ownership/provenance only. Sticker status remains unresolved; do not infer lost or retained from this image."
+    },
+    {
+      "id": "u44-squee-forum-page",
+      "source_id": "owner-u44-squee-forum",
+      "status": "verified-public-owner-provenance-no-sticker-observation",
+      "evidence": {
+        "acquisition_run_id": 36670045345,
+        "archived_url": "https://watmm-archive.com/t/95249/3",
+        "http_status": 200,
+        "page_sha256": "3791fee1a4da3a14fc75351bdd938f901705c77f14068da674719e7fd50ffb2a",
+        "author": "Squee",
+        "post_date": "2018-06-06",
+        "post_anchor": "findComment-2639342",
+        "statement_summary": "Squee says 'I bought this...' and links directly to the iam8bit INSIDE Collector's Edition product page.",
+        "visual_result": "The archived forum page contains no attached CE/sticker photograph associated with the ownership post."
+      },
+      "disposition": "Stable primary public provenance for U44 ownership. No sticker information recovered; existing email outreach remains unanswered and should not be duplicated."
+    },
+    {
+      "id": "u32-direct-page-probe-blocked",
+      "source_id": "owner-u32-skorba71-transfer-2024",
+      "status": "public-page-fetch-blocked-web-index-provenance-available",
+      "evidence": {
+        "acquisition_run_id": 36670045345,
+        "direct_fetch_result": "HTTP 403 Blocked for both KoreanB_B_Q source post and skorba71 transfer post.",
+        "alternate_public_evidence": "Search indexing independently exposes KoreanB_B_Q INSIDE CE sale posts from 2020; these are preserved separately as U32 owner provenance.",
+        "evidentiary_limit": "No original Reddit page media was acquired by the repository probe."
+      },
+      "disposition": "Keep U32 unresolved. Do not call direct Reddit acquisition successful; use stable post URLs/index evidence for provenance and retry original media only if a supported public/API route becomes available."
+    },
+    {
+      "id": "u27-minnmax-winner-mike-m",
+      "source_id": "owner-u27-minnmax-2022-winner",
+      "status": "probable-public-handle-recovered-owner-still-unresolved",
+      "evidence": {
+        "media_probe_run_id": 36670228373,
+        "transcript_probe_run_id": 36670538906,
+        "source_video_id": "RMERjiTz3kg",
+        "auction_window": "approximately 06:59:20-07:02:53",
+        "transcript_result": "English automatic captions repeatedly identify the INSIDE CE bidder/winner as 'Mike M' / 'Mike'. The auction reaches going once/going twice, then the hosts thank Mike and later state the item was sold.",
+        "visual_result": "During the auction the stream displays an official iam8bit INSIDE CE prize card rather than the winner or a physical sticker. No sticker evidence is present.",
+        "probable_public_handle_cross_reference": {
+          "handle": "Divorced Cougar",
+          "basis": "Contemporaneous public MinnMax supporter listings in 2022 explicitly render the supporter as 'Divorced Cougar (Mike M)'.",
+          "confidence_note": "Strong contextual match to the on-air 'Mike M' bidder but not explicitly linked to the auction by the stream itself.",
+          "sources": [
+            "https://www.patreon.com/posts/introducing-four-69552060",
+            "Public 2022 MinnMax show descriptions/supporter lists that render 'Divorced Cougar (Mike M)'"
+          ]
+        }
+      },
+      "disposition": "Use 'Mike M' as the recovered U27 winner token and 'Divorced Cougar' only as a probable MinnMax-community handle. Do not treat this as a verified personal identity or initiate duplicate outreach; Ben Hanson already notified the winner historically."
+    },
+    {
+      "id": "u46-stephen-sinnott-comment-snapshot",
+      "source_id": "owner-u46-outsidexbox-comments",
+      "status": "verified-public-owner-claim-no-sticker-observation",
+      "evidence": {
+        "acquisition_run_id": 36670373497,
+        "source_video_id": "bNx16AWyjD8",
+        "total_comments_snapshot": 615,
+        "comment_id": "UgyWSangVhez3yvLLb94AaABAg",
+        "author_handle": "@stephensinnott2591",
+        "author_channel_id": "UCm2r-OsdlwU_eU8FDOMTs3Q",
+        "comment_text": "I have the Huddle. I'm not allowed to show it to my 6 year old.",
+        "captured_replies": [
+          {
+            "comment_id": "UgyWSangVhez3yvLLb94AaABAg.9tomQy9GmCJ9tqSBuI0Iba",
+            "author_handle": "@umbraestragis",
+            "text": "Understandable, have a great day"
+          }
+        ],
+        "mining_result": "No reply in the captured YouTube thread supplies a sticker number, symbol, photo or packaging detail. Other 'I have' comments concern unrelated Collector's Editions."
+      },
+      "disposition": "Confirms the canonical U46 public owner claim and stable channel ID only. Existing Facebook outreach already occurred; do not duplicate. Sticker status remains unresolved."
+    },
+    {
+      "id": "u41-u43-pricecharting-owner-pages",
+      "source_id": "owner-u41-lvncqw-pricecharting",
+      "status": "verified-public-owner-provenance-no-sticker-observation",
+      "evidence": {
+        "acquisition_run_id": 36670386840,
+        "pages": [
+          {
+            "canonical_entry": "U41",
+            "handle": "lvncqw",
+            "url": "https://www.pricecharting.com/offer/s4hp2rqeszu4sclke5sxb2u7ii",
+            "page_title": "Inside [Collector's Edition] | Item, Box, and Manual | Playstation 4",
+            "includes": "Item, Box, and Manual",
+            "condition": "Normal wear",
+            "displayed_total_value_usd": 592.63,
+            "page_sha256": "1d8ef78ec5807c559e31579c15bb280be005c6f28c2b7c20ad2b827a87556106"
+          },
+          {
+            "canonical_entry": "U42",
+            "handle": "vrxqyq",
+            "url": "https://www.pricecharting.com/offer/gt56nwyslris4hj7jnqdaqua3q",
+            "page_title": "Inside [Collector's Edition] | Item, Box, and Manual | Playstation 4",
+            "includes": "Item, Box, and Manual",
+            "condition": "Normal wear",
+            "displayed_total_value_usd": 592.63,
+            "page_sha256": "86677146ffb05b2fa6bb1e167dc3fb0d6f893e052e2e4c707d38616f8431fe81"
+          },
+          {
+            "canonical_entry": "U43",
+            "handle": "jotonic",
+            "url": "https://www.pricecharting.com/offer/t4qv3uzf6dr25bmlcxiqabvfyy",
+            "page_title": "Inside [Collector's Edition] | New Item, Box, and Manual | Playstation 4",
+            "includes": "New Item, Box, and Manual",
+            "condition": "Normal wear",
+            "displayed_total_value_usd": 1341.06,
+            "page_sha256": "ebf16f710bb5da6be48de2f44b1b51dcc3444b8d9b16f22c542f7c589b596fb6"
+          }
+        ],
+        "image_result": "All three pages reference the same generic PriceCharting INSIDE Collector's Edition cover-art image, not owner-uploaded sticker photographs."
+      },
+      "disposition": "Stable public ownership/collection provenance for U41-U43. U43's 'New Item' classification is marketplace metadata, not proof the numbered sticker survives. No sticker observation recovered."
+    },
+    {
+      "id": "u35-u40-public-probe-blocked",
+      "source_id": "owner-u35-grifteskymfning-psnprofiles",
+      "status": "public-probe-blocked",
+      "evidence": {
+        "acquisition_run_id": 36670386840,
+        "u35_psnprofiles": "Direct HTML fetch returned HTTP 403 Forbidden.",
+        "u40_instagram": "gallery-dl hit repeated HTTP 429 responses and timed out after 180 seconds; no media payload acquired."
+      },
+      "disposition": "Do not count either as acquired. U35 remains public-indexed/forum evidence; U40 remains login/rate-limit blocked archival provenance."
+    }
+  ]
+}

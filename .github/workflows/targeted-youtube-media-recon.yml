@@ -1,0 +1,112 @@
+name: Targeted YouTube media reconnaissance
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_id:
+        description: "Exact YouTube source id from data/external-acquisition-targets.json"
+        required: true
+        type: string
+      sample_interval:
+        description: "Whole-source reconnaissance interval in seconds"
+        required: false
+        default: "2"
+        type: string
+      focus_start:
+        description: "Optional focused-window start accepted by ffmpeg (for example 00:02:20)"
+        required: false
+        default: ""
+        type: string
+      focus_duration:
+        description: "Optional focused-window duration in seconds; requires focus_start"
+        required: false
+        default: "20"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  targeted:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install media tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check "yt-dlp[default]"
+      - name: Materialize YouTube cookie jar
+        shell: bash
+        env:
+          YOUTUBE_COOKIES_B64: ${{ secrets.YOUTUBE_COOKIES_B64 }}
+        run: |
+          set -euo pipefail
+          test -n "$YOUTUBE_COOKIES_B64"
+          cookie_file="${RUNNER_TEMP}/youtube-cookies.txt"
+          printf '%s' "$YOUTUBE_COOKIES_B64" | base64 --decode > "$cookie_file"
+          chmod 600 "$cookie_file"
+          echo "YTDLP_COOKIES_FILE=$cookie_file" >> "$GITHUB_ENV"
+      - name: Validate requested source
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+
+          source_id = "${{ inputs.source_id }}"
+          manifest = json.load(open("data/external-acquisition-targets.json", encoding="utf-8"))
+          source = next((item for item in manifest["sources"] if item["id"] == source_id), None)
+          if source is None:
+              raise SystemExit(f"unknown source_id: {source_id}")
+          if source.get("kind") != "youtube":
+              raise SystemExit(f"source is not YouTube: {source_id}")
+          print(source["url"])
+          PY
+      - name: Acquire one full-quality source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/external_evidence/harvest_public.py             --source-id "${{ inputs.source_id }}"             --include-media
+      - name: Extract whole-source reconnaissance
+        shell: bash
+        run: |
+          set -euo pipefail
+          out="evidence-work/${{ inputs.source_id }}"
+          video="$(find "$out" -type f \( -name '*.mkv' -o -name '*.mp4' -o -name '*.webm' \) | head -n 1)"
+          test -n "$video"
+          python scripts/external_evidence/extract_frames.py "$video"             --output "$out/derived/sample"             --mode sample             --interval "${{ inputs.sample_interval }}"
+          python scripts/external_evidence/extract_frames.py "$video"             --output "$out/derived/scenes"             --mode scene             --scene-threshold 0.35
+      - name: Extract optional focused window
+        if: ${{ inputs.focus_start != '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          out="evidence-work/${{ inputs.source_id }}"
+          video="$(find "$out" -type f \( -name '*.mkv' -o -name '*.mp4' -o -name '*.webm' \) | head -n 1)"
+          test -n "$video"
+          python scripts/external_evidence/extract_frames.py "$video"             --output "$out/derived/focus"             --mode sample             --interval 0.2             --start "${{ inputs.focus_start }}"             --duration "${{ inputs.focus_duration }}"
+      - name: Upload lightweight reconnaissance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: targeted-recon-${{ inputs.source_id }}-${{ github.run_id }}
+          path: |
+            evidence-work/${{ inputs.source_id }}/derived/
+            evidence-work/${{ inputs.source_id }}/**/*.json
+            evidence-work/${{ inputs.source_id }}/**/*.description
+            evidence-work/${{ inputs.source_id }}/**/*.webp
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Upload full source bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: targeted-media-${{ inputs.source_id }}-${{ github.run_id }}
+          path: evidence-work/${{ inputs.source_id }}/
+          if-no-files-found: warn
+          retention-days: 14

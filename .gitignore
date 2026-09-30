@@ -1,0 +1,6 @@
+# Local authenticated evidence acquisition
+.evidence-private/
+playwright/.auth/
+cookies.txt
+cookies-*.txt
+*.cookies.txt

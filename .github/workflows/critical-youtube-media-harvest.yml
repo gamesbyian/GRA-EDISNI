@@ -1,0 +1,88 @@
+name: Critical YouTube media harvest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  harvest:
+    strategy:
+      fail-fast: false
+      matrix:
+        source_id:
+          - youtube-inside-gaming-ce-unboxing
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install extractors and ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check "yt-dlp[default]" gallery-dl
+      - name: Materialize YouTube cookie jar
+        shell: bash
+        env:
+          YOUTUBE_COOKIES_B64: ${{ secrets.YOUTUBE_COOKIES_B64 }}
+        run: |
+          set -euo pipefail
+          test -n "$YOUTUBE_COOKIES_B64"
+          cookie_file="${RUNNER_TEMP}/youtube-cookies.txt"
+          printf '%s' "$YOUTUBE_COOKIES_B64" | base64 --decode > "$cookie_file"
+          chmod 600 "$cookie_file"
+          echo "YTDLP_COOKIES_FILE=$cookie_file" >> "$GITHUB_ENV"
+      - name: Harvest full-quality media
+        run: |
+          python scripts/external_evidence/harvest_public.py \
+            --source-id "${{ matrix.source_id }}" \
+            --include-media
+      - name: Extract reconnaissance frames
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          video="$(find evidence-work/"${{ matrix.source_id }}" -type f \( -name '*.mkv' -o -name '*.mp4' -o -name '*.webm' \) | head -n 1)"
+          test -n "$video"
+          python scripts/external_evidence/extract_frames.py "$video" \
+            --output "evidence-work/${{ matrix.source_id }}/derived/sample-5s" \
+            --mode sample \
+            --interval 5
+          python scripts/external_evidence/extract_frames.py "$video" \
+            --output "evidence-work/${{ matrix.source_id }}/derived/scenes" \
+            --mode scene \
+            --scene-threshold 0.30
+          # Historical YouTube comment points directly to the sticker at ~1:17.
+          # Sample five frames/second across a bounded 20-second window first;
+          # a full native-frame extraction can follow once the best sub-window is confirmed.
+          python scripts/external_evidence/extract_frames.py "$video" \
+            --output "evidence-work/${{ matrix.source_id }}/derived/sticker-window-0110-0130" \
+            --mode sample \
+            --interval 0.2 \
+            --start 00:01:10 \
+            --duration 20
+      - name: Upload reconnaissance artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: critical-recon-${{ matrix.source_id }}-${{ github.run_id }}
+          path: |
+            evidence-work/${{ matrix.source_id }}/derived/
+            evidence-work/${{ matrix.source_id }}/**/*.json
+            evidence-work/${{ matrix.source_id }}/**/*.description
+            evidence-work/${{ matrix.source_id }}/**/*.vtt
+            evidence-work/${{ matrix.source_id }}/**/*.webp
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Upload full harvest artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: critical-media-${{ matrix.source_id }}-${{ github.run_id }}
+          path: evidence-work/
+          if-no-files-found: warn
+          retention-days: 14
