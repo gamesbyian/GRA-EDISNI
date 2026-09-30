@@ -19,6 +19,7 @@ import csv
 import hashlib
 import math
 import re
+import shutil
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -82,7 +83,7 @@ def discover_images(roots: Iterable[Path]) -> list[Sample]:
     return sorted(samples, key=lambda s: (s.tile, s.serial, str(s.path)))
 
 
-def discover_manifest(path: Path) -> list[Sample]:
+def discover_manifest(path: Path, repair_from: Path | None = None) -> list[Sample]:
     samples: list[Sample] = []
     seen_hashes: set[str] = set()
     with path.open(newline="", encoding="utf-8") as f:
@@ -97,6 +98,12 @@ def discover_manifest(path: Path) -> list[Sample]:
             if tile not in TILES or tile != tile_for_serial(serial):
                 raise ValueError(f"manifest tile mismatch for serial {serial:03d}: {tile!r}")
             source = Path(row["path"])
+            if not source.is_file() and repair_from is not None:
+                upstream_rel = row.get("source_path", "").strip()
+                candidate = repair_from / upstream_rel if upstream_rel else None
+                if candidate is not None and candidate.is_file():
+                    source.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(candidate, source)
             if not source.is_file():
                 raise FileNotFoundError(f"manifest source missing: {source}")
             digest = hashlib.sha256(source.read_bytes()).hexdigest()
@@ -339,12 +346,13 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("roots", nargs="*", type=Path, help="directories to scan recursively (legacy fallback)")
     ap.add_argument("--manifest", type=Path, help="canonical sticker manifest; preferred over filename discovery")
+    ap.add_argument("--repair-from", type=Path, help="temporary upstream checkout used only to restore a manifest-listed missing vendored file")
     ap.add_argument("--out", type=Path, default=Path("artifacts/background-tile-masters"))
     ap.add_argument("--min-samples", type=int, default=2)
     args = ap.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
     if args.manifest:
-        samples = discover_manifest(args.manifest)
+        samples = discover_manifest(args.manifest, args.repair_from)
     else:
         if not args.roots:
             ap.error("provide --manifest or at least one root")
