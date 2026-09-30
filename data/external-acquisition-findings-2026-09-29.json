@@ -932,6 +932,98 @@
         "evidentiary_limit": "No original Reddit page media was acquired by the repository probe."
       },
       "disposition": "Keep U32 unresolved. Do not call direct Reddit acquisition successful; use stable post URLs/index evidence for provenance and retry original media only if a supported public/API route becomes available."
+    },
+    {
+      "id": "u27-minnmax-winner-mike-m",
+      "source_id": "owner-u27-minnmax-2022-winner",
+      "status": "probable-public-handle-recovered-owner-still-unresolved",
+      "evidence": {
+        "media_probe_run_id": 36670228373,
+        "transcript_probe_run_id": 36670538906,
+        "source_video_id": "RMERjiTz3kg",
+        "auction_window": "approximately 06:59:20-07:02:53",
+        "transcript_result": "English automatic captions repeatedly identify the INSIDE CE bidder/winner as 'Mike M' / 'Mike'. The auction reaches going once/going twice, then the hosts thank Mike and later state the item was sold.",
+        "visual_result": "During the auction the stream displays an official iam8bit INSIDE CE prize card rather than the winner or a physical sticker. No sticker evidence is present.",
+        "probable_public_handle_cross_reference": {
+          "handle": "Divorced Cougar",
+          "basis": "Contemporaneous public MinnMax supporter listings in 2022 explicitly render the supporter as 'Divorced Cougar (Mike M)'.",
+          "confidence_note": "Strong contextual match to the on-air 'Mike M' bidder but not explicitly linked to the auction by the stream itself."
+        }
+      },
+      "disposition": "Use 'Mike M' as the recovered U27 winner token and 'Divorced Cougar' only as a probable MinnMax-community handle. Do not treat this as a verified personal identity or initiate duplicate outreach; Ben Hanson already notified the winner historically."
+    },
+    {
+      "id": "u46-stephen-sinnott-comment-snapshot",
+      "source_id": "owner-u46-outsidexbox-comments",
+      "status": "verified-public-owner-claim-no-sticker-observation",
+      "evidence": {
+        "acquisition_run_id": 36670373497,
+        "source_video_id": "bNx16AWyjD8",
+        "total_comments_snapshot": 615,
+        "comment_id": "UgyWSangVhez3yvLLb94AaABAg",
+        "author_handle": "@stephensinnott2591",
+        "author_channel_id": "UCm2r-OsdlwU_eU8FDOMTs3Q",
+        "comment_text": "I have the Huddle. I'm not allowed to show it to my 6 year old.",
+        "captured_replies": [
+          {
+            "comment_id": "UgyWSangVhez3yvLLb94AaABAg.9tomQy9GmCJ9tqSBuI0Iba",
+            "author_handle": "@umbraestragis",
+            "text": "Understandable, have a great day"
+          }
+        ],
+        "mining_result": "No reply in the captured YouTube thread supplies a sticker number, symbol, photo or packaging detail. Other 'I have' comments concern unrelated Collector's Editions."
+      },
+      "disposition": "Confirms the canonical U46 public owner claim and stable channel ID only. Existing Facebook outreach already occurred; do not duplicate. Sticker status remains unresolved."
+    },
+    {
+      "id": "u41-u43-pricecharting-owner-pages",
+      "source_id": "owner-u41-lvncqw-pricecharting",
+      "status": "verified-public-owner-provenance-no-sticker-observation",
+      "evidence": {
+        "acquisition_run_id": 36670386840,
+        "pages": [
+          {
+            "canonical_entry": "U41",
+            "handle": "lvncqw",
+            "url": "https://www.pricecharting.com/offer/s4hp2rqeszu4sclke5sxb2u7ii",
+            "page_title": "Inside [Collector's Edition] | Item, Box, and Manual | Playstation 4",
+            "includes": "Item, Box, and Manual",
+            "condition": "Normal wear",
+            "displayed_total_value_usd": 592.63
+          },
+          {
+            "canonical_entry": "U42",
+            "handle": "vrxqyq",
+            "url": "https://www.pricecharting.com/offer/gt56nwyslris4hj7jnqdaqua3q",
+            "page_title": "Inside [Collector's Edition] | Item, Box, and Manual | Playstation 4",
+            "includes": "Item, Box, and Manual",
+            "condition": "Normal wear",
+            "displayed_total_value_usd": 592.63
+          },
+          {
+            "canonical_entry": "U43",
+            "handle": "jotonic",
+            "url": "https://www.pricecharting.com/offer/t4qv3uzf6dr25bmlcxiqabvfyy",
+            "page_title": "Inside [Collector's Edition] | New Item, Box, and Manual | Playstation 4",
+            "includes": "New Item, Box, and Manual",
+            "condition": "Normal wear",
+            "displayed_total_value_usd": 1341.06
+          }
+        ],
+        "image_result": "All three pages reference the same generic PriceCharting INSIDE Collector's Edition cover-art image, not owner-uploaded sticker photographs."
+      },
+      "disposition": "Stable public ownership/collection provenance for U41-U43. U43's 'New Item' classification is marketplace metadata, not proof the numbered sticker survives. No sticker observation recovered."
+    },
+    {
+      "id": "u35-u40-public-probe-blocked",
+      "source_id": "owner-u35-grifteskymfning-psnprofiles",
+      "status": "public-probe-blocked",
+      "evidence": {
+        "acquisition_run_id": 36670386840,
+        "u35_psnprofiles": "Direct HTML fetch returned HTTP 403 Forbidden.",
+        "u40_instagram": "gallery-dl hit repeated HTTP 429 responses and timed out after 180 seconds; no media payload acquired."
+      },
+      "disposition": "Do not count either as acquired. U35 remains public-indexed/forum evidence; U40 remains login/rate-limit blocked archival provenance."
     }
   ]
 }
