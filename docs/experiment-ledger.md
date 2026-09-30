@@ -333,6 +333,7 @@ Latest indexed experiment: **323**.
 | 321 | G7 information-preservation weakening: among all 27 q-choice assignments over the three first-pass functional families, 4 make every selected word preserve all three ternary labels and 6 use q indices 0/1/2 exactly once; the intersection uniquely gives (2,1,0) -> 120/012/102, so mutual route distinctness and route semantics are unnecessary premises |
 | 322 | full one-shot G6 selector-map audit: exhausts all 27 q=f(S) maps after the 20 G5 first-pass candidates; 8 maps give nonempty completion-invariant outputs, but maximum retention 14 is achieved only by 002 and identity 012, both yielding 100 on the exact same 14 machines and differing solely by the known S=1 f1 observational gauge |
 | 323 | first cross-family Q4 holdout comparison: exact-one-slash tail-index-only reconstruction versus incumbent on the same 11 withheld observed Q4 residues; tail-only forces 3/11 and leaves 8 ambiguous, incumbent forces 10/11 and leaves 1 ambiguous, and neither family excludes any true symbol, so incumbent grammar is more constraining while the nonrecursive rival remains compatible |
+| 324 | observation-only 9x12 spatial-field audit: transposed 9+3 / 9x9+9x3 representation is promoted to a first-class hypothesis lane; among 54 known body cells (32 slash, 22 dash), same-symbol orthogonal adjacency is 30/64 edges in A-I order and 29/62 in IAB/CDE/FGH flattening, both mildly below fixed-mask permutation-null means (z about -0.65), so raw known cells do not already form unusually large solid regions; geometric/Pigpen work remains live but must use explicit unknowns, bounded transforms, literal line geometry, and held-out validation |
 
 ## Current frontier
 
@@ -342,7 +343,7 @@ Latest indexed experiment: **323**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–323:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–324:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
