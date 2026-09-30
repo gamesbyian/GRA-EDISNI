@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-29",
+  "source_id": "youtube-oddheader-2026-mystery",
+  "source_video_id": "ZqYhhptmhmo",
+  "source_comment_count": 3180,
+  "purpose": "Operational owner/provenance queue mined from the authenticated Oddheader comment snapshot. Community claims remain quarantined until physical-photo provenance exists.",
+  "priority_semantics": {
+    "1": "highest-value verification target",
+    "2": "credible owner lead with plausible recoverable sticker",
+    "3": "owner/provenance lead but lower expected yield",
+    "4": "do not pursue unless circumstances change"
+  },
+  "leads": [
+    {
+      "id": "byokugen-369",
+      "author_handle": "@Byokugen",
+      "author_channel_id": "UCWmWZS4F8b-SNyYhGtaGkuA",
+      "comment_id": "UgyYote2bg23cfKNwpZ4AaABAg",
+      "kind": "unverified-sticker-claim",
+      "claim": {
+        "serial": 369,
+        "symbol": "."
+      },
+      "photo_present": false,
+      "h108_residue": 45,
+      "matrix_context": "frozen matrix predicts invariant '-' at residue 45 (14/14 canonical states)",
+      "priority": 1,
+      "canonical_handle_match": false,
+      "next_action": "Obtain a physical sticker photo before any model or observation change."
+    },
+    {
+      "id": "douleur873-427",
+      "author_handle": "@Douleur873",
+      "author_channel_id": "UC2RMnOHzSAkeVzTRrmNAiBQ",
+      "comment_id": "Ugx-aLQYmmJA6RKJAtN4AaABAg",
+      "kind": "unverified-sticker-claim",
+      "claim": {
+        "serial": 427,
+        "symbol": "."
+      },
+      "photo_present": false,
+      "h108_residue": 103,
+      "matrix_context": "frozen matrix is state-dependent at residue 103; dot preferred in 10/14 states",
+      "priority": 1,
+      "canonical_handle_match": false,
+      "next_action": "Obtain physical photo; useful hidden-state discriminator."
+    },
+    {
+      "id": "time-travel-01",
+      "author_handle": "@time_travel_01",
+      "author_channel_id": "UCOmPvJtTwjSjUvLpadhTgZg",
+      "comment_id": "UgzFs6_zSD3eV3V73nt4AaABAg",
+      "kind": "owner-unopened",
+      "claim": {
+        "owns_collectors_edition": true,
+        "unopened": true
+      },
+      "photo_present": false,
+      "priority": 2,
+      "canonical_handle_match": false,
+      "next_action": "Confirm whether only the outer shipping box is sealed and, if available, obtain sticker photo before any interpretation."
+    },
+    {
+      "id": "blorbious",
+      "author_handle": "@Blorbious",
+      "author_channel_id": "UCLvEYIOZLdxJVtmUdtdUs9Q",
+      "comment_id": "UgwnDBA9IGWLPKNX1UV4AaABAg",
+      "kind": "owner-sealed",
+      "claim": {
+        "sealed_box": true
+      },
+      "photo_present": false,
+      "priority": 2,
+      "canonical_handle_match": false,
+      "next_action": "If owner is willing, obtain sticker photo while preserving CE contents sealed."
+    },
+    {
+      "id": "bobdole480-friend",
+      "author_handle": "@BOBDOLE480",
+      "author_channel_id": "UC9lO5UDFTY9ZqplWBld6T3g",
+      "comment_id": "UgwiiwMGiD61Dz5vsdx4AaABAg",
+      "kind": "third-party-owner-unopened",
+      "claim": {
+        "friend_owns_unopened_ce": true
+      },
+      "photo_present": false,
+      "priority": 2,
+      "canonical_handle_match": false,
+      "next_action": "If the friend is willing, obtain original sticker photo and owner provenance."
+    },
+    {
+      "id": "cultuschoco",
+      "author_handle": "@cultuschoco",
+      "author_channel_id": "UCpeOVxUNHnTIuPDPPuy7lYw",
+      "comment_id": "UgyOwdnmkkeDWUPvrQV4AaABAg",
+      "kind": "owner-copy",
+      "claim": {
+        "bought_collectors_edition": true
+      },
+      "photo_present": false,
+      "priority": 2,
+      "canonical_handle_match": false,
+      "next_action": "Determine whether sticker still exists and whether it is already represented before any outreach."
+    },
+    {
+      "id": "z304legend",
+      "author_handle": "@z304legend",
+      "author_channel_id": "UCKtzDazuuujDRLh_xxrLyLg",
+      "comment_id": "UgzXd5SXuH-Z1GFWUaV4AaABAg",
+      "kind": "owner-copy-reluctant",
+      "claim": {
+        "owns_copy": true,
+        "does_not_want_to_open": true
+      },
+      "photo_present": false,
+      "priority": 2,
+      "canonical_handle_match": false,
+      "next_action": "Only pursue if owner is comfortable opening the outer shipping box; do not pressure."
+    },
+    {
+      "id": "hal-lost",
+      "author_handle": "@HAL-iv2kd",
+      "author_channel_id": "UCZbi6R8qAoGbjC1Aj9qfzpA",
+      "comment_id": "UgzXxCS28QQt4hcvWoZ4AaABAg",
+      "kind": "lost-sticker-recollection",
+      "claim": {
+        "symbol": "/",
+        "serial_contains_digit_4": "uncertain"
+      },
+      "photo_present": false,
+      "priority": 3,
+      "canonical_handle_match": false,
+      "next_action": "Preserve as weak recollection only; useful later as a candidate filter if independently constrained."
+    },
+    {
+      "id": "billlee1821",
+      "author_handle": "@billlee1821",
+      "author_channel_id": "UCpe7zl2OD4jBb4OKkxFbd8g",
+      "comment_id": "UgySYmPpNBDSzRyeX2d4AaABAg",
+      "kind": "owner-says-already-contributed",
+      "claim": {
+        "already_contributed": true
+      },
+      "photo_present": false,
+      "priority": 3,
+      "canonical_handle_match": false,
+      "next_action": "Resolve historical identity/contribution before any outreach."
+    },
+    {
+      "id": "jakeduggins5141",
+      "author_handle": "@jakeduggins5141",
+      "author_channel_id": "UC-fobxwELbVoAYIUWR05U0g",
+      "comment_id": "Ugz_zYCyGQvDJyhHFYt4AaABAg",
+      "kind": "owner-declined",
+      "claim": {
+        "owns_copy_with_card": true,
+        "declined_followup": true
+      },
+      "photo_present": false,
+      "priority": 4,
+      "canonical_handle_match": false,
+      "next_action": "Do not pursue further unless the owner re-initiates contact."
+    }
+  ]
+}
