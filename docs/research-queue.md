@@ -52,6 +52,18 @@ Experiment 319 closes the preregistered "fixed masks tied to A-I geometry" branc
 
 Next R2 tests: literal-symbol geometry and support-mask-aware master-edge analysis. Reopen background-derived body masks only if independent evidence supplies the missing domain bridge. Do not use recursive-machine survival as the selection criterion.
 
+**Experiment 324 opens the 9x12 / geometric-alphabet lane.** Transposing the conventional 12x9 display is now treated as a first-class representation rather than a mere presentation trick. It exposes nine class traces of 9 body + 3 tail cells, a collective 9x9 body plus 9x3 tail, and the 27-cell tail's natural 3x3x3 cardinality. A first observation-only adjacency null finds no unusual same-symbol clustering in the raw 9x9 body under either A-I serial order or the solved IAB/CDE/FGH flattening. See `docs/experiment-324-9x12-spatial-field-audit.md`.
+
+Next geometric-family work is bounded and preregistered:
+- render 12x9, 9x12, 9x9+9x3, and nine paired 3x3+selector views with unknown cells explicit;
+- test literal slash/dash line geometry before reducing marks to arbitrary digits;
+- allow only D4 rotations/reflections and independently motivated class orders before any semantic readout;
+- treat Pigpen/Rosicrucian as one geometric-alphabet template family, not a decoding target to optimize toward;
+- freeze transforms/codebooks on a discovery subset and score held-out classes/frames;
+- independently inspect the contrast-enhanced assembled background artwork for masks, partitions, edges, or orientation cues using support masks, then apply any image-derived rule to the foreground only after the rule is fixed.
+
+Do not privilege 12x9 simply because columns share background classes; that is a registration convenience, not evidence of intended read direction.
+
 #### R3 — solved-puzzle operation replay
 
 Test only historically demonstrated operation classes whose required parameters can be supplied independently. Preserve negative results. No broad visual-target optimization.
