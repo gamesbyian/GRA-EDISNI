@@ -58,19 +58,27 @@ jobs:
           cp archive/research-files/tiles_with_masks.png l14-tile-pack/tiles_with_masks.png
           cp archive/research-files/h108_symbol_background_cell_stats.csv l14-tile-pack/
           cp archive/project-files/inside_tile_seam_metrics.csv l14-tile-pack/
-          mkdir -p l14-tile-pack/edited
-          base="https://raw.githubusercontent.com/twinysam/INSIDE-ARG/master/images/stickers/edited"
-          for file in \
-            003.jpg 021.jpg 032.jpg 059.jpg 066.jpg 095.jpg 097.png \
-            154.jpg 156.png 171.jpg 182.png 242.jpg 245.png 312.jpg 328.jpg 334.png
-          do
-            curl -L --fail --retry 3 -o "l14-tile-pack/edited/$file" "$base/$file"
-          done
-          printf '%s\n' \
-            'serial,class' \
-            '003,C' '021,C' '032,E' '059,E' '066,C' '095,E' '097,G' \
-            '154,A' '156,C' '171,I' '182,B' '242,H' '245,B' '312,F' '328,D' '334,A' \
-            > l14-tile-pack/classes.csv
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/twinysam/INSIDE-ARG.git /tmp/inside-arg
+          git -C /tmp/inside-arg sparse-checkout set images/stickers stickers.md
+          mkdir -p l14-tile-pack/reference-corpus
+          cp -R /tmp/inside-arg/images/stickers l14-tile-pack/reference-corpus/
+          cp /tmp/inside-arg/stickers.md l14-tile-pack/reference-corpus/
+          python - <<'PY'
+          import csv, re
+          from pathlib import Path
+          text = Path('/tmp/inside-arg/stickers.md').read_text(encoding='utf-8')
+          rows = []
+          rx = re.compile(r'^- \[(\d{3})\]\(([^)]+)\)\s+\(symb:\s*(\S+)\s+img:\s*(?:\[([A-I])\]\([^)]+\)|([A-I]))\)', re.M)
+          for m in rx.finditer(text):
+              serial, rel, symbol, linked, plain = m.groups()
+              rows.append((serial, linked or plain, symbol, rel))
+          out = Path('l14-tile-pack/reference-corpus/classes.csv')
+          with out.open('w', newline='', encoding='utf-8') as fh:
+              w = csv.writer(fh)
+              w.writerow(['serial','class','symbol','ledger_image_path'])
+              w.writerows(rows)
+          assert len(rows) >= 80, len(rows)
+          PY
       - name: Upload tile-recovery pack
         uses: actions/upload-artifact@v4
         with:
