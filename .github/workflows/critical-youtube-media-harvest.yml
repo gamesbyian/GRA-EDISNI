@@ -60,6 +60,15 @@ jobs:
             --output "evidence-work/${{ matrix.source_id }}/derived/scenes" \
             --mode scene \
             --scene-threshold 0.30
+          # Historical YouTube comment points directly to the sticker at ~1:17.
+          # Sample five frames/second across a bounded 20-second window first;
+          # a full native-frame extraction can follow once the best sub-window is confirmed.
+          python scripts/external_evidence/extract_frames.py "$video" \
+            --output "evidence-work/${{ matrix.source_id }}/derived/sticker-window-0110-0130" \
+            --mode sample \
+            --interval 0.2 \
+            --start 00:01:10 \
+            --duration 20
       - name: Upload reconnaissance artifact
         if: always()
         uses: actions/upload-artifact@v4
