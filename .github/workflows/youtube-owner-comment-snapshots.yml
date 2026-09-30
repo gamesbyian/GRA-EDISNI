@@ -1,9 +1,6 @@
 name: YouTube owner comment snapshots
 
 on:
-  pull_request:
-    paths:
-      - ".github/workflows/youtube-owner-comment-snapshots.yml"
   workflow_dispatch:
 
 permissions:
