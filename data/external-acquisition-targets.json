@@ -144,9 +144,9 @@
       "comments": true,
       "captions": true,
       "note": "Ledger lead; known useful interval begins around 00:07:22.",
-      "acquisition_status": "metadata-acquired",
-      "mining_status": "owner-recollection-no-media-escalation",
-      "status_note": "L30/U20: cited video shows Huddle at 7:22, not sticker. Later owner contact says sticker was lost and ~90% sure symbol was slash. Keep as recollection only; no full-media download justified without sticker timestamp."
+      "acquisition_status": "lightweight-recon-acquired",
+      "mining_status": "human-reviewed-negative-no-sticker-interval",
+      "status_note": "Complete 913s source reviewed via <=240p 1-fps/scene reconnaissance (run 36667695004), with focused inspection around the Huddle near 7:22. No sticker-bearing packaging appears; full-resolution escalation is not justified."
     },
     {
       "id": "youtube-ledger-09-Y7OqMKBbM2Y",
