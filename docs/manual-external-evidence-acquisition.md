@@ -4,7 +4,7 @@ Most public acquisition is handled by `scripts/external_evidence/` and GitHub Ac
 
 ## Current division of labour
 
-Use automated PR #57 acquisition now for YouTube and publicly extractable X/Instagram/VK sources. Use this manual guide only for sources that genuinely require a logged-in human browser or for refreshing the dedicated YouTube cookie jar. PR #56 owns archival promotion/vendor decisions and is currently active, so do not manually duplicate binary/archive acquisition already being handled there.
+Use automated PR #57 acquisition for YouTube and publicly extractable X sources. Instagram is currently login-gated in the public lane, and VK has produced no useful media, so treat those as manual/blocked rather than successful public acquisition. Use this manual guide for sources that genuinely require a logged-in human browser or for refreshing the dedicated YouTube cookie jar. PR #56 owns archival promotion/vendor decisions, so do not manually duplicate binary/archive acquisition already being handled there.
 
 
 ## Do not send authentication material to the repository
@@ -79,6 +79,8 @@ For each failed target:
 Authenticated automation now reaches the Oddheader metadata/caption/comment surface. Human review has established that the video itself contains no unknown sticker imagery, so do not spend time frame-mining it. Keep the comment stream as an owner-discovery source and capture reports that mention having a Collector's Edition, sticker, serial/number, photo, packaging, or willingness to inspect a copy.
 
 Do not limit review to those keywords if a comment obviously contains new provenance.
+
+Human-reviewed negative videos should not be re-downloaded or frame-mined again unless a concrete new candidate timestamp, alternate cut, or higher-quality source appears. Current negatives include the official iam8bit CE unboxing (user review), Oddheader (user review), ledger video `uP5nSeyac_o` (complete dense review), and ledger video `fu7gmuJQKXM` (complete 2-second reconnaissance review).
 
 ## What to hand back to an agent
 
