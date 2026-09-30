@@ -1,0 +1,116 @@
+name: Historical CE unboxing media reconnaissance
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/historical-ce-unboxing-media.yml"
+      - "data/external-acquisition-targets.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unboxing:
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        source_id:
+          - youtube-ledger-02-Mhxynz-LoAI
+          - youtube-ledger-03-fu7gmuJQKXM
+          - youtube-ledger-04-jQUf8yhqEc4
+          - youtube-ledger-05-ahCmqg1hhSA
+          - youtube-ledger-06-G4z5r4rZH2w
+          - youtube-ledger-09-Y7OqMKBbM2Y
+          - youtube-ledger-10-uP5nSeyac_o
+          - youtube-ledger-11-gqlQaHgRaHg
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install media tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --disable-pip-version-check "yt-dlp[default]"
+      - name: Materialize YouTube cookie jar
+        shell: bash
+        env:
+          YOUTUBE_COOKIES_B64: ${{ secrets.YOUTUBE_COOKIES_B64 }}
+        run: |
+          set -euo pipefail
+          test -n "$YOUTUBE_COOKIES_B64"
+          cookie_file="${RUNNER_TEMP}/youtube-cookies.txt"
+          printf '%s' "$YOUTUBE_COOKIES_B64" | base64 --decode > "$cookie_file"
+          chmod 600 "$cookie_file"
+          echo "YTDLP_COOKIES_FILE=$cookie_file" >> "$GITHUB_ENV"
+      - name: Resolve source URL
+        id: source
+        shell: bash
+        run: |
+          url="$(python - <<'PY'
+          import json
+          sid = "${{ matrix.source_id }}"
+          data = json.load(open("data/external-acquisition-targets.json", encoding="utf-8"))
+          print(next(s["url"] for s in data["sources"] if s["id"] == sid))
+          PY
+          )"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+      - name: Download best available source
+        shell: bash
+        run: |
+          set -euo pipefail
+          out="evidence-work/${{ matrix.source_id }}"
+          mkdir -p "$out/source"
+          yt-dlp \
+            --js-runtimes node \
+            --cookies "$YTDLP_COOKIES_FILE" \
+            --write-info-json \
+            --write-description \
+            --write-thumbnail \
+            --no-write-subs \
+            --no-write-auto-subs \
+            -f "bv*+ba/b" \
+            --merge-output-format mkv \
+            --paths "$out/source" \
+            --output "%(id)s/%(title).160B [%(id)s].%(ext)s" \
+            "${{ steps.source.outputs.url }}"
+      - name: Extract reconnaissance frames
+        shell: bash
+        run: |
+          set -euo pipefail
+          out="evidence-work/${{ matrix.source_id }}"
+          video="$(find "$out/source" -type f \( -name '*.mkv' -o -name '*.mp4' -o -name '*.webm' \) | head -n 1)"
+          test -n "$video"
+          python scripts/external_evidence/extract_frames.py "$video" \
+            --output "$out/recon/sample-2s" \
+            --mode sample \
+            --interval 2
+          python scripts/external_evidence/extract_frames.py "$video" \
+            --output "$out/recon/scenes" \
+            --mode scene \
+            --scene-threshold 0.35
+      - name: Upload lightweight reconnaissance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ce-recon-${{ matrix.source_id }}-${{ github.run_id }}
+          path: |
+            evidence-work/${{ matrix.source_id }}/recon/
+            evidence-work/${{ matrix.source_id }}/source/**/*.json
+            evidence-work/${{ matrix.source_id }}/source/**/*.description
+            evidence-work/${{ matrix.source_id }}/source/**/*.webp
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Upload full source bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ce-media-${{ matrix.source_id }}-${{ github.run_id }}
+          path: evidence-work/${{ matrix.source_id }}/source/
+          if-no-files-found: warn
+          retention-days: 14
