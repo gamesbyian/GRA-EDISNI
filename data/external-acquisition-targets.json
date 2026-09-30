@@ -459,11 +459,12 @@
       "kind": "vk",
       "url": "https://vk.com/bigdaffymonster",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "note": "Russian-language owner trail; inspect historical photos for accidental packaging/sticker visibility.",
-      "acquisition_status": "no-useful-media",
-      "mining_status": "blocked-no-media"
+      "acquisition_status": "no-useful-media-archival-only",
+      "mining_status": "canonical-lost-owner-provenance",
+      "status_note": "Canonical ledger resolves this owner trail as L40/U34. bigdaffymonster ultimately confirmed via VK on 2026-05-04 that the sticker was lost. Public VK extraction failure is therefore an archival-media gap, not a sticker-information blocker."
     },
     {
       "id": "terminal41-saf-dat-col",
