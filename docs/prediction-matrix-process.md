@@ -16,6 +16,12 @@ Canonical residue-level predictions live in:
 
 `data/unobserved-sticker-predictions.csv`
 
+A separate frozen alternative-family probe lives in:
+
+`data/frozen-row-selector-predictions.json`
+
+Do not merge the two files or silently raise incumbent confidence from agreement between them. The row-selector family is an exploratory-but-frozen cross-family rival whose preregistered discriminators are residues 84 and 102.
+
 Physical serial expansion and research-role classification live in:
 
 `scripts/expand_physical_sticker_predictions.py`
@@ -134,6 +140,8 @@ A Tier-A hard-model contradiction is qualitatively different from a disagreement
 ## Experiment-design use
 
 Before proposing a new sticker-based experiment, use the matrix to state which residue classes can actually discriminate the hypothesis.
+
+For cross-family acquisition, also consult the frozen rival file. In particular, Experiment 336 identifies physical serials 84/102/192/210/300/318/408/426/516/534 as direct tests of the frozen row-selector family. Freeze its expected symbol before looking at any newly recovered foreground.
 
 Good experiments should identify:
 

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "family": "experiment-329-frozen-row-selector",
+  "status": "exploratory-frozen-prospective-rival",
+  "definition": {
+    "tail": "exactly one slash in each three-cell tail",
+    "selection": "slash position selects one consecutive three-cell body row",
+    "selected_row": "exactly one mark differs from the other two"
+  },
+  "provenance_caution": "The one-exception criterion was introduced after row/column outputs had been inspected. It is not pristine preregistered evidence and must not be tuned further.",
+  "prospective_residue_predictions": {
+    "84": ".",
+    "93": ".",
+    "102": "/"
+  },
+  "incumbent_comparison": {
+    "93": "already invariant dot",
+    "84": "variable in incumbent family",
+    "102": "variable in incumbent family"
+  },
+  "primary_discriminators": [84, 102],
+  "physical_serials_1_600": {
+    "84": [84, 192, 300, 408, 516],
+    "102": [102, 210, 318, 426, 534]
+  },
+  "falsification": {
+    "84": "slash falsifies frozen row-selector family",
+    "102": "dot falsifies frozen row-selector family"
+  }
+}
