@@ -4,12 +4,12 @@ Consensus reconstructions from manifest-authorized physical sticker photographs.
 
 | tile | accepted samples | note |
 |---|---:|---|
-| A | 6 | reference=478; candidates=10 |
-| B | 7 | reference=263; candidates=14 |
-| C | 5 | reference=066; candidates=17 |
+| A | 7 | reference=478; candidates=11 |
+| B | 7 | reference=263; candidates=15 |
+| C | 6 | reference=066; candidates=18 |
 | D | 5 | reference=364; candidates=10 |
 | E | 7 | reference=338; candidates=14 |
-| F | 7 | reference=123; candidates=20 |
+| F | 7 | reference=123; candidates=21 |
 | G | 8 | reference=475; candidates=8 |
-| H | 7 | reference=296; candidates=12 |
+| H | 8 | reference=296; candidates=13 |
 | I | 9 | reference=324; candidates=13 |
