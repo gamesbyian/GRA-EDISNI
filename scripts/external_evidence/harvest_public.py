@@ -127,7 +127,7 @@ def harvest_youtube(
         "--write-thumbnail",
         "--write-subs",
         "--write-auto-subs",
-        "--sub-langs", "all,-live_chat",
+        "--sub-langs", "en.*,en,-live_chat",
         "--paths", str(out_dir),
         "--output", "%(id)s/%(title).200B [%(id)s].%(ext)s",
     ]
