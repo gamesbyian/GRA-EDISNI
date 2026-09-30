@@ -613,6 +613,22 @@
         "visual_result": "The Huddle is visible on a shelf around 7:12-7:23 beside unrelated objects. No Collector's Edition box, black wrapping, game case or numbered sticker is visible around the Huddle. The remainder of the video is documentary/game material and contains no candidate sticker-bearing interval."
       },
       "disposition": "Do not acquire full-resolution media for sticker mining absent an alternate source. L30 remains a lost-owner provenance entry; the owner's historical 90%-confidence slash recollection stays a recollection, not a physical observation."
+    },
+    {
+      "id": "oddheader-2025-owner-lead-psychosmosis",
+      "source_id": "youtube-ledger-01-eXxklNxsVWw",
+      "source_url": "https://www.youtube.com/watch?v=eXxklNxsVWw",
+      "status": "owner-lead-possible-packaging-retained",
+      "evidence": {
+        "comment_snapshot_run_id": 36667932888,
+        "comment_id": "Ugyc5Hs0oKJRXJqQ1r94AaABAg",
+        "author_handle": "@PsychOsmosis",
+        "author_channel_id": "UCb4w58w_rLCmvYQLpGtKXQA",
+        "comment_text": "Shit, I wonder if I threw away the packaging of my Inside Collector's Edition box... I tend to keep shit like this, but I have no idea where it would be.",
+        "reply_present": false,
+        "canonical_cross_reference": "Exact handle search found no match in the current GRA-EDISNI corpus or gamesbyian/playdead-unofficial-exports."
+      },
+      "disposition": "High-value fresh owner lead. They explicitly report owning an INSIDE Collector's Edition and possibly retaining the original packaging. No outreach/reply is present in the captured snapshot; cross-reference remains negative, so this appears not to be an obvious duplicate."
     }
   ]
 }
