@@ -884,6 +884,54 @@
         "evidentiary_limit": "The sale text does not mention or show the numbered white sticker and cannot establish whether it was retained at those dates."
       },
       "disposition": "Use as stable public provenance for U32 ownership/history. Do not convert packaging condition into a sticker survival claim."
+    },
+    {
+      "id": "u33-doctornowhere-original-x-media",
+      "source_id": "owner-u33-doctornowhere-x",
+      "status": "verified-public-owner-provenance-no-sticker-observation",
+      "evidence": {
+        "acquisition_run_id": 36670045345,
+        "tweet_id": "1821955671203393814",
+        "date": "2024-08-09 17:04:16",
+        "author_handle": "doctornowhere_",
+        "tweet_text": "finally acquired this. it will compliment my little nightmares memorabilia nicely",
+        "original_media": {
+          "width": 1536,
+          "height": 2048,
+          "sha256": "d04ec5c842ea8f0280235d32e518b46513fb22eff6b76598777c46b8402d89c0"
+        },
+        "visual_result": "Original photo shows the Huddle on its display stand sitting on top of the red INSIDE Collector's Edition box. No black wrapping, white numbered sticker, game case, serial, symbol or sticker-bearing surface is visible."
+      },
+      "disposition": "Confirms U33 ownership/provenance only. Sticker status remains unresolved; do not infer lost or retained from this image."
+    },
+    {
+      "id": "u44-squee-forum-page",
+      "source_id": "owner-u44-squee-forum",
+      "status": "verified-public-owner-provenance-no-sticker-observation",
+      "evidence": {
+        "acquisition_run_id": 36670045345,
+        "archived_url": "https://watmm-archive.com/t/95249/3",
+        "http_status": 200,
+        "page_sha256": "3791fee1a4da3a14fc75351bdd938f901705c77f14068da674719e7fd50ffb2a",
+        "author": "Squee",
+        "post_date": "2018-06-06",
+        "post_anchor": "findComment-2639342",
+        "statement_summary": "Squee says 'I bought this...' and links directly to the iam8bit INSIDE Collector's Edition product page.",
+        "visual_result": "The archived forum page contains no attached CE/sticker photograph associated with the ownership post."
+      },
+      "disposition": "Stable primary public provenance for U44 ownership. No sticker information recovered; existing email outreach remains unanswered and should not be duplicated."
+    },
+    {
+      "id": "u32-direct-page-probe-blocked",
+      "source_id": "owner-u32-skorba71-transfer-2024",
+      "status": "public-page-fetch-blocked-web-index-provenance-available",
+      "evidence": {
+        "acquisition_run_id": 36670045345,
+        "direct_fetch_result": "HTTP 403 Blocked for both KoreanB_B_Q source post and skorba71 transfer post.",
+        "alternate_public_evidence": "Search indexing independently exposes KoreanB_B_Q INSIDE CE sale posts from 2020; these are preserved separately as U32 owner provenance.",
+        "evidentiary_limit": "No original Reddit page media was acquired by the repository probe."
+      },
+      "disposition": "Keep U32 unresolved. Do not call direct Reddit acquisition successful; use stable post URLs/index evidence for provenance and retry original media only if a supported public/API route becomes available."
     }
   ]
 }
