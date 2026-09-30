@@ -239,11 +239,11 @@ Do not require POS3 or recursion.
 
 Test operations using slash orientation, dash orientation, and dot as point/stop without first mapping them to arbitrary digits.
 
-### R2.4 — master-edge audit
+### R2.4 — physical-edge audit
 
-Measure whether the consensus A-I masters contain stable edge features that could act like the PC printer's side marks.
+Experiment 325 shows the consensus masters cannot answer this question: their reconstruction crop intentionally removes the physical sticker perimeter, and the 846shEE evidence-master edges are boundaries of an already assembled artwork composite.
 
-Use support masks to ensure an apparent edge is actually observed.
+The valid test must return to manifest-authorized original photographs, rectify the full sticker quadrilateral, preserve a preregistered perimeter band, and track photographic support directly. Fail closed where crop, perspective, glare, or registration prevents edge recovery. See `docs/experiment-325-edge-channel-observability.md`.
 
 ## R2 conclusion
 
