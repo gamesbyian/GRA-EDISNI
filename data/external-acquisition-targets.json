@@ -645,9 +645,9 @@
       "media": true,
       "comments": true,
       "note": "Canonical U27 unresolved owner trail. Mine the 2022 MinnMax charity-stream winner identity/nickname and public reply context only; Ben Hanson already notified the winner historically, so do not duplicate outreach.",
-      "acquisition_status": "narrow-window-probe-running",
-      "mining_status": "unresolved-owner-public-evidence",
-      "status_note": "Known winner-announcement timestamp ~6:59:05. Actions run 36670228373 is acquiring only 25120-25190s at <=720p plus 2-fps frames; no full seven-hour stream download."
+      "acquisition_status": "narrow-media-and-transcript-acquired",
+      "mining_status": "probable-winner-handle-recovered",
+      "status_note": "Narrow auction media + auto-caption transcript acquired. Winner is repeatedly called 'Mike M'/'Mike'; contemporaneous public MinnMax supporter lists map community handle 'Divorced Cougar' to Mike M, a strong contextual but not explicit auction identity bridge. No sticker imagery in stream."
     },
     {
       "id": "owner-u32-koreanb-sale-2020",
@@ -710,8 +710,9 @@
       "media": false,
       "comments": true,
       "note": "Canonical U35. Mine the historical forum page/profile context for CE ownership or linked media. Owner already contacted on forum/X; do not duplicate outreach.",
-      "acquisition_status": "not-acquired",
-      "mining_status": "unresolved-owner-public-evidence"
+      "acquisition_status": "direct-fetch-blocked-403",
+      "mining_status": "unresolved-owner-public-index-only",
+      "status_note": "Repository public-page probe run 36670386840 returned HTTP 403. Do not count as acquired; owner was already contacted on forum/X."
     },
     {
       "id": "owner-u36-medusamadmann77-reddit",
@@ -758,8 +759,9 @@
       "media": true,
       "comments": true,
       "note": "Canonical U40. Unique PlayStation-account CE/Huddle image proves access to the object but not ownership/sticker survival. Existing DM outreach got no response; preserve original media if accessible.",
-      "acquisition_status": "login-required",
-      "mining_status": "unresolved-provenance-not-confirmed-owner"
+      "acquisition_status": "rate-limited-login-context",
+      "mining_status": "unresolved-provenance-not-confirmed-owner",
+      "status_note": "Public gallery-dl probe run 36670386840 hit repeated Instagram HTTP 429 responses and timed out; no media acquired. Canonical evidence only establishes that PlayStation had access to a CE/Huddle image, not that it owned an ARG sticker."
     },
     {
       "id": "owner-u41-lvncqw-pricecharting",
@@ -770,8 +772,9 @@
       "media": true,
       "comments": false,
       "note": "Canonical U41 confirmed-owner marketplace/history post. Preserve page and any images; forum admin already contacted, so no duplicate outreach.",
-      "acquisition_status": "not-acquired",
-      "mining_status": "unresolved-owner-public-evidence"
+      "acquisition_status": "acquired-page",
+      "mining_status": "verified-owner-provenance-no-sticker",
+      "status_note": "PriceCharting offer page acquired in run 36670386840. Page verifies account-level INSIDE CE collection/listing data; imagery is generic product cover art, not owner sticker media. Sticker remains unresolved."
     },
     {
       "id": "owner-u42-vrxqyq-pricecharting",
@@ -782,8 +785,9 @@
       "media": true,
       "comments": false,
       "note": "Canonical U42 confirmed-owner marketplace/history post. Preserve page and any images; forum admin already contacted, so no duplicate outreach.",
-      "acquisition_status": "not-acquired",
-      "mining_status": "unresolved-owner-public-evidence"
+      "acquisition_status": "acquired-page",
+      "mining_status": "verified-owner-provenance-no-sticker",
+      "status_note": "PriceCharting offer page acquired in run 36670386840. Page verifies account-level INSIDE CE collection/listing data; imagery is generic product cover art, not owner sticker media. Sticker remains unresolved."
     },
     {
       "id": "owner-u43-jotonic-pricecharting",
@@ -794,8 +798,9 @@
       "media": true,
       "comments": false,
       "note": "Canonical U43 confirmed-owner marketplace/history post. Preserve page/images and linked public identity only; admin/Twitter outreach already occurred.",
-      "acquisition_status": "not-acquired",
-      "mining_status": "unresolved-owner-public-evidence"
+      "acquisition_status": "acquired-page",
+      "mining_status": "verified-owner-provenance-no-sticker",
+      "status_note": "PriceCharting offer page acquired in run 36670386840. Page verifies account-level INSIDE CE collection/listing data; imagery is generic product cover art, not owner sticker media. Sticker remains unresolved."
     },
     {
       "id": "owner-u46-outsidexbox-comments",
@@ -806,8 +811,9 @@
       "media": false,
       "comments": true,
       "note": "Canonical U46 owner lead lives in comments, not video imagery: @stephensinnott2591 says they have the Huddle. Owner already contacted on Facebook; snapshot comments/replies only, no duplicate outreach.",
-      "acquisition_status": "metadata-needed",
-      "mining_status": "unresolved-owner-comment-source"
+      "acquisition_status": "comments-acquired",
+      "mining_status": "verified-owner-claim-no-sticker",
+      "status_note": "Run 36670373497 captured 615 comments. @stephensinnott2591 / UCm2r-OsdlwU_eU8FDOMTs3Q says 'I have the Huddle'; only captured reply is unrelated. No sticker number/symbol/photo. Existing Facebook outreach already done."
     },
     {
       "id": "owner-u47-shaxai-reddit",
