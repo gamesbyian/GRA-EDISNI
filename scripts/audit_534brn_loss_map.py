@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 331: exact A/B/P loss-map alignment for 534brn captures.
+"""Experiment 335: exact A/B/P loss-map alignment for 534brn captures.
 
 Fetch three preserved captures from a pinned commit of
 gamesbyian/playdead-unofficial-exports through GitHub's contents API as base64.
@@ -303,7 +303,7 @@ def main() -> None:
 
     result = {
         "schema_version": 1,
-        "experiment": 331,
+        "experiment": 335,
         "upstream_repository": UPSTREAM_REPO,
         "upstream_commit": UPSTREAM_REF,
         "normalization": {
