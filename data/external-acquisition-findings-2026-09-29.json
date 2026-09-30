@@ -396,6 +396,36 @@
         "canonical_context": "The cited video only exposed ownership through the Huddle. Later owner contact confirmed the sticker was lost and the owner was about 90% sure its symbol was slash; this remains recollection, not physical sticker observation."
       },
       "disposition": "Do not download the 15-minute documentary for sticker frame mining absent a new timestamp showing the sticker itself. Preserve the slash statement as owner recollection only."
+    },
+    {
+      "id": "public-search-369-427-photo-check-2026-09-29",
+      "source_id": "web-targeted-owner-verification",
+      "status": "no-independent-physical-photo-found",
+      "evidence": {
+        "searched_serials": [
+          369,
+          427
+        ],
+        "searched_handles": [
+          "@Byokugen",
+          "@Douleur873"
+        ],
+        "search_scope": "Targeted general web and image search for exact serials/handles combined with INSIDE / Playdead / iam8bit / Collector's Edition terms.",
+        "result": "No independent physical sticker photo or older INSIDE CE provenance trail was found for either claim. Search results for the handles/serials were unrelated or generic."
+      },
+      "disposition": "Do not treat search absence as evidence that the claims are false. Physical-photo verification remains required; avoid repeatedly re-running the same broad queries without a new lead."
+    },
+    {
+      "id": "l13-original-source-search-2026-09-29",
+      "source_id": "youtube-ledger-06-G4z5r4rZH2w",
+      "status": "no-better-public-mirror-found-current-handle-discoverable",
+      "evidence": {
+        "ledger_entry": "L13",
+        "uploader_handle": "MyNeighborJess",
+        "search_scope": "Targeted web search for the exact video id/title, mirrors, archives, and current public handle presence.",
+        "result": "No public mirror/archive with better footage than the YouTube source surfaced. The MyNeighborJess handle still has contemporary public web/activity traces, so original/raw footage remains a plausible human-source lead rather than an obviously abandoned identity."
+      },
+      "disposition": "Keep raw/original footage recovery as the highest-value L13 follow-up. No automated public acquisition path was found."
     }
   ]
 }
