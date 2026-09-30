@@ -412,3 +412,6 @@ Oddheader owner discovery now has a finite, provenance-stable shortlist rather t
 Exact-handle checks against the current canonical sticker-ledger snapshot found no match for the newly surfaced owner handles above. That absence is not proof that their stickers are new; Discord identity drift and different usernames remain possible.
 
 Acquisition priority from this point should favor owner/photo provenance and original/raw footage for L13 over additional generic corpus accumulation.
+
+
+The normalized owner/provenance work queue is now `data/oddheader-owner-leads-2026-09-29.json`. It records stable YouTube comment/channel IDs, claim type, photo status, canonical-handle cross-reference result, H108/model relevance where applicable, priority, and the next evidence action. Future agents should update that queue rather than re-mining the entire Oddheader snapshot from scratch.
