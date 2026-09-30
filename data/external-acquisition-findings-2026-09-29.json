@@ -748,6 +748,59 @@
         "caveat": "The surviving column-wise variant was not established as a solve and remained speculative."
       },
       "disposition": "Record straight-through fractionated Morse as a historical negative; keep any rearranged/column-wise variant merely as an unconfirmed hypothesis."
+    },
+    {
+      "id": "discord-stickers-solving-attachment-audit",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "attachment-corpus-mined-first-pass",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "physical_sticker_attachment": {
+          "path": "assets/003-1129cbfc544dd6c0.png",
+          "blob_sha": "b32ee2556b2f903fdc6bd448c9754db209892777",
+          "observation": "003 = dash",
+          "canonical_status": "already canonical as sticker 003 = dash, background C"
+        },
+        "jigsaw_attachment": {
+          "path": "assets/846shEE-ce4f28eefdc2a6e7.png",
+          "blob_sha": "2adf9cba750fc05efa636899b196314ae9568db1",
+          "observation": "Direct labeled composite visually confirms the I A B / C D E / F G H piece arrangement."
+        },
+        "ce_lifestyle_attachment": {
+          "path": "assets/InsideCE_Lifestyle_00014-ed907b1812ee4025.jpg",
+          "blob_sha": "775761dc1595fa83f80b3ede123cbdc2a965cdfe",
+          "observation": "Shows the PS4 case/disc and a folded INSIDE art insert with a 3-by-3 fold pattern; no numbered CE sticker, backing sheet, or label-sheet geometry is visible.",
+          "caveat": "The fold geometry is a physical packaging observation only; it does not establish a relationship to the sticker cycle."
+        },
+        "derived_assets": "Other inspected image attachments are model grids, cipher/layout visualizations, screenshots or user presentation assets rather than new physical sticker observations."
+      },
+      "disposition": "No new physical sticker observation recovered from the attachment batch. Preserve the labeled jigsaw and physical packaging image as provenance/context only."
+    },
+    {
+      "id": "discord-stickers-solving-ai-word-completion-nonresult",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-negative-low-evidence",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "attachment": "assets/P1P2_Combinations-8a981ed047b0ac58.txt",
+        "blob_sha": "156e1d5eaa9acff88c1f0bd9c333222f9ee773cd",
+        "method": "AI-filtered shortlist from approximately 6.4 billion pairings of hypothetical Morse-completion lines, using word-pair likelihood, grammar/theme filtering and manual review.",
+        "result": "The file explicitly says no convincing SPACE/INSIDE ARG themed sentences were found; listed computer-related phrases are merely sensible completions and not a guaranteed-complete result."
+      },
+      "disposition": "Do not treat phrases such as 'ETHERNET PORT...' or 'TOOLS ...' as decoded text or evidence. Keep as a documented exploratory non-result."
+    },
+    {
+      "id": "discord-stickers-solving-column-shift-tool",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-exploratory-tool",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "attachment": "assets/Puzzle_Column_Shift_Tool-d287960dd2f917fc.html",
+        "blob_sha": "d0ceeb0d35ba1ab4dd0c7f77743f58e7fac03239",
+        "mechanism": "Treats the bottom three slash/dot rows of the 12x9 grid as a 3-bit per-column shift value (0-7), restricting each column to values consistent with currently known bottom cells, then cyclically shifts the nine top cells of that column.",
+        "status_note": "Interactive exploratory transform only; no decoded image/message or independent validation is recorded in the surrounding channel."
+      },
+      "disposition": "Preserve as a historical transform hypothesis, not as an established structural rule."
     }
   ]
 }
