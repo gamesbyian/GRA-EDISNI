@@ -72,7 +72,12 @@ def classify_extractor_failure(proc: subprocess.CompletedProcess[str]) -> str:
         return "login-required-or-antibot"
     if "429" in output or "too many requests" in output:
         return "rate-limited"
-    if "private video" in output or "login required" in output:
+    if (
+        "private video" in output
+        or "login required" in output
+        or "redirect to login page" in output
+        or "/accounts/login/" in output
+    ):
         return "login-required"
     if "video unavailable" in output or "has been removed" in output:
         return "removed-or-missing"
