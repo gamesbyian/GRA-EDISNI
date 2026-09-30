@@ -66,25 +66,11 @@ jobs:
           do
             curl -L --fail --retry 3 -o "l14-tile-pack/edited/$file" "$base/$file"
           done
-          cat > l14-tile-pack/classes.csv <<'EOF'
-serial,class
-003,C
-021,C
-032,E
-059,E
-066,C
-095,E
-097,G
-154,A
-156,C
-171,I
-182,B
-242,H
-245,B
-312,F
-328,D
-334,A
-EOF
+          printf '%s\n' \
+            'serial,class' \
+            '003,C' '021,C' '032,E' '059,E' '066,C' '095,E' '097,G' \
+            '154,A' '156,C' '171,I' '182,B' '242,H' '245,B' '312,F' '328,D' '334,A' \
+            > l14-tile-pack/classes.csv
       - name: Upload tile-recovery pack
         uses: actions/upload-artifact@v4
         with:
