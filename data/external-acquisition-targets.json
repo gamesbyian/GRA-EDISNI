@@ -161,7 +161,10 @@
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Historical owner/unboxing video referenced by sticker ledger."
+      "note": "Historical owner/unboxing video referenced by sticker ledger.",
+      "acquisition_status": "acquired",
+      "mining_status": "human-reviewed-negative",
+      "status_note": "Authenticated reconnaissance acquired; complete 374s source reviewed at 2s sampling with no defensible numbered-sticker view."
     },
     {
       "id": "facebook-group-limited-printed-games",
