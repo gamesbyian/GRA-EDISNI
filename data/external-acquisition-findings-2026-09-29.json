@@ -426,6 +426,25 @@
         "result": "No public mirror/archive with better footage than the YouTube source surfaced. The MyNeighborJess handle still has contemporary public web/activity traces, so original/raw footage remains a plausible human-source lead rather than an obviously abandoned identity."
       },
       "disposition": "Keep raw/original footage recovery as the highest-value L13 follow-up. No automated public acquisition path was found."
+    },
+    {
+      "id": "oddheader-u45-hoodratthings4088-owner-confirmation",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "source_url": "https://www.youtube.com/watch?v=ZqYhhptmhmo",
+      "status": "owner-claims-already-contributed-unresolved-identity",
+      "evidence": {
+        "canonical_unknown_entry": "U45",
+        "author_handle": "@hoodratthings4088",
+        "author_channel_id": "UCSfDy7vqionpbw5Z8-eHexw",
+        "comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg",
+        "owner_statement": "I have a copy but I contributed my codes years ago.",
+        "followup_comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg.Ab7HRDQrJ4FAbGYH8uwZ4m",
+        "followup_context": "Raezores asks for the sticker number, lost status, or the identity/name used when the sticker was originally submitted.",
+        "photo_present": false,
+        "historical_context": "The canonical ledger already carried U45 from an earlier 2025 comment by the same handle saying they bought the Collector's Edition to contribute to the ARG, but prior searches could not map the person to a submitted sticker.",
+        "current_resolution": "The 2026 statement strengthens ownership/contribution provenance but still does not identify which canonical sticker was theirs."
+      },
+      "disposition": "Resolve historical submission identity before outreach or any observation change. Do not create a new sticker observation from the owner's recollection alone."
     }
   ]
 }
