@@ -121,6 +121,39 @@ The archived `StickerSolution.png` makes this explicit.
 
 This is the historical technique closest to the present foreground-master work because it uses the **same physical sticker object**, but it is a separate layer. It establishes the carrier/registration prior; it does not decode the `/ - •` H108 foreground.
 
+## Sticker-specific external-consumer candidate: sleeve geometry -> lever commands
+
+A bounded review of the full public `ARG / solving` export recovered a sticker-specific consumer hypothesis that predates the present machine work.
+
+On **21 Mar 2021**, `aperson1` explicitly connected the unresolved Collector's Edition foreground symbols to imagery on the CE reversible sleeve. The discussion describes an otherwise inaccessible sentry-board perspective with the three marks positioned:
+
+```
+dot   = left
+dash  = right
+slash = top
+```
+
+The immediately following message notes that those positions match the three-position lever used for INSIDE's secret ending and proposes that the sticker symbols are therefore a lever-input code.
+
+Source archive:
+
+- `gamesbyian/playdead-unofficial-exports`;
+- `ARG / solving` channel `461275582970462209`;
+- export blob `1889cc948f86f5a4455de0d7310b15cdb1b88b5c`;
+- referenced assets `INSIDE_B-f038cdd5970802f8.JPG` and `unknown-70a6031fe54449cd.png`.
+
+This is not a demonstrated historical solve. It is stronger than generic speculation because it proposes a consumer and symbol semantics from a separate CE/game artifact:
+
+```
+/ -> up
+- -> right
+. -> left
+```
+
+Experiment 342 tests and rejects the cheapest version, direct contiguous replay of the already-known 14-input bunker password, while preserving the broader lever-consumer family for tests where an independent source supplies ordering or selection.
+
+This candidate should therefore be treated differently from unconstrained "try a cipher" proposals: the operation has a historical external cue, but the sequence extraction remains unsolved.
+
 ## Design tendencies supported by solved examples
 
 Across the solved historical cases, a recurring pattern is:
