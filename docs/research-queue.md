@@ -80,7 +80,13 @@ Experiment 336 operationalizes the broader frozen row rival without touching Pig
 
 #### R3 — solved-puzzle operation replay
 
-Test only historically demonstrated operation classes whose required parameters can be supplied independently. Preserve negative results. No broad visual-target optimization.
+**Evidence gating completed in Experiment 338.** See `docs/experiment-338-r3-operation-gate-matrix.md` and `data/reset-r3-operation-gates.json`.
+
+Currently licensed: geometry-first/secondary-read tests and simple tail-as-operation tests whose parameters come directly from the observed one-of-three tail index. Pending specific evidence: physical boundary-constrained ordering, cross-stage selector/key reuse, and external consumers. Closed until an explicit cue appears: exact-value filtering, Game-of-Life/generative transforms, arbitrary text/artwork overlays, and carrier conversion.
+
+Experiment 337 also advances the pending 534brn branch without opening a semantic search: exact cross-capture alignment recovers 238 safe bytes from the lossy A/B/P representations, while preserving 10 contradictory A/P positions as unknown. The damaged artifact remains a possible future source of an explicit selector/key, but its filename/path and partial bytes are not themselves a licensed key.
+
+R3 is therefore no longer an open-ended replay queue. Reopen a dormant operation family only when new evidence supplies its missing parameter or registration rule.
 
 #### R4 — incumbent assumption burn-down
 
