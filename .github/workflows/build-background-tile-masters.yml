@@ -43,7 +43,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install acquisition and image dependencies
-        run: python -m pip install --disable-pip-version-check numpy opencv-python-headless gallery-dl
+        run: python -m pip install --disable-pip-version-check numpy opencv-python-headless pillow gallery-dl
 
       - name: Expand source corpus from the community sticker ledger
         continue-on-error: true
