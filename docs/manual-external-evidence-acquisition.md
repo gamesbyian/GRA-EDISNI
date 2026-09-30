@@ -80,7 +80,7 @@ Authenticated automation now reaches the Oddheader metadata/caption/comment surf
 
 Do not limit review to those keywords if a comment obviously contains new provenance.
 
-Human-reviewed negative videos should not be re-downloaded or frame-mined again unless a concrete new candidate timestamp, alternate cut, or higher-quality source appears. Current negatives include the official iam8bit CE unboxing (user review), Oddheader (user review), ledger video `uP5nSeyac_o` (complete dense review), ledger video `fu7gmuJQKXM` (complete 2-second reconnaissance review), and ledger video `gqlQaHgRaHg` (complete 2-second reconnaissance review).
+Human-reviewed negative videos should not be re-downloaded or frame-mined again unless a concrete new candidate timestamp, alternate cut, or higher-quality source appears. Current negatives include the official iam8bit CE unboxing (user review), Oddheader (user review), ledger video `uP5nSeyac_o` (complete dense review).
 
 ## What to hand back to an agent
 
