@@ -86,13 +86,41 @@ def main() -> None:
     invariant = [r for r in records if r["valid"] and r["distinct_outputs"] == 1]
     selective = [r for r in records if r["valid"] < 20]
     bijective = [r for r in records if r["bijective"]]
+    max_invariant_retention = max(r["valid"] for r in invariant)
+    optimal = [r for r in invariant if r["valid"] == max_invariant_retention]
 
-    print("Experiment 322 exploratory")
+    assert len(records) == 27
+    assert len(invariant) == 8
+    assert max_invariant_retention == 14
+    assert [(r["map"], r["outputs"]) for r in optimal] == [
+        ("002", {"100": 14}),
+        ("012", {"100": 14}),
+    ]
+
+    # The two optimal maps differ only at S=1. Their accepted machine set is
+    # identical; this is the already-known f1 observational gauge.
+    accepted = {}
+    for fmap in ((0, 0, 2), (0, 1, 2)):
+        keys = []
+        for payload, selector, _first in first_survivors:
+            word = decode_dash_pos3(selected_surface(payload, selector, fmap))
+            if word is not None:
+                keys.append((tuple(sorted(payload.items())), tuple(sorted(selector.items()))))
+        accepted[fmap] = set(keys)
+    assert accepted[(0, 0, 2)] == accepted[(0, 1, 2)]
+    assert len(accepted[(0, 0, 2)]) == 14
+
+    print("Experiment 322")
     print("first-pass machines:", len(first_survivors))
     print("selector maps tested:", len(records))
     print("selective maps (<20 survivors):", len(selective))
     print("completion-invariant maps:", len(invariant))
+    print("maximum invariant retention:", max_invariant_retention)
+    print("optimal invariant maps:", [(r["map"], r["outputs"]) for r in optimal])
     print("bijective maps:", len(bijective))
+    print("RESULT: only 002 and 012 retain 14 machines with one invariant output")
+    print("RESULT: both give terminal 100 and accept the identical 14-machine set")
+    print("RESULT: their sole difference is the established S=1 f1 observational gauge")
     print("INVARIANT")
     for r in invariant:
         print(r)
