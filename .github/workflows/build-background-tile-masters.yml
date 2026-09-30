@@ -8,6 +8,11 @@ on:
       - "scripts/build_background_tile_masters.py"
       - ".github/workflows/build-background-tile-masters.yml"
       - "docs/background-tile-master-process.md"
+  pull_request:
+    paths:
+      - "scripts/build_background_tile_masters.py"
+      - ".github/workflows/build-background-tile-masters.yml"
+      - "docs/background-tile-master-process.md"
   workflow_dispatch:
 
 permissions:
@@ -21,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
           fetch-depth: 0
 
       - name: Acquire public sticker corpora
@@ -41,7 +46,11 @@ jobs:
       - name: Build registered consensus masters
         run: |
           rm -rf artifacts/background-tile-masters
-          python scripts/build_background_tile_masters.py             .             .tmp/background-tile-sources/INSIDE-ARG             .tmp/background-tile-sources/playdead-unofficial-exports             --out artifacts/background-tile-masters
+          python scripts/build_background_tile_masters.py \
+            . \
+            .tmp/background-tile-sources/INSIDE-ARG \
+            .tmp/background-tile-sources/playdead-unofficial-exports \
+            --out artifacts/background-tile-masters
 
       - name: Upload reconstruction bundle
         uses: actions/upload-artifact@v4
@@ -51,6 +60,7 @@ jobs:
           if-no-files-found: error
 
       - name: Commit generated masters to this branch
+        if: github.event_name == 'push'
         shell: bash
         run: |
           git add artifacts/background-tile-masters
