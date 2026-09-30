@@ -43,6 +43,23 @@ jobs:
       - name: Install image dependencies
         run: python -m pip install --disable-pip-version-check numpy opencv-python-headless pillow
 
+      - name: Acquire historical printer-reference archives
+        run: |
+          rm -rf .tmp/playdead-unofficial-exports .tmp/printer-reference-archives
+          git clone --depth 1 https://github.com/gamesbyian/playdead-unofficial-exports.git .tmp/playdead-unofficial-exports
+          mkdir -p .tmp/printer-reference-archives
+          cp .tmp/playdead-unofficial-exports/assets/printer-image-5ab3ef46aed858ec.zip .tmp/printer-reference-archives/
+          cp .tmp/playdead-unofficial-exports/assets/printer-c12bb4c38bd3ea2b.zip .tmp/printer-reference-archives/
+          cp .tmp/playdead-unofficial-exports/assets/printerimagethingy-331942486c2ce9ae.jpg .tmp/printer-reference-archives/
+          (cd .tmp/printer-reference-archives && unzip -o printer-image-5ab3ef46aed858ec.zip -d printer-image || true)
+
+      - name: Upload historical printer-reference archives
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-printer-reference
+          path: .tmp/printer-reference-archives/
+          if-no-files-found: error
+
       - name: Synchronize canonical sticker archive
         run: |
           python scripts/sync_canonical_sticker_archive.py \
