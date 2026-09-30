@@ -528,6 +528,26 @@
         "canonical_cross_reference": "Current twinysam/INSIDE-ARG ledger already tracks this owner as U45, based on an older YouTube comment, with identity/sticker status still unresolved."
       },
       "disposition": "Do not treat as a fresh owner or initiate duplicate generic outreach. This is the same U45 lead; only a reply that supplies sticker number/photo or prior submission identity would advance evidence."
+    },
+    {
+      "id": "oddheader-owner-lead-jakeduggins-declined",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-declined",
+      "evidence": {
+        "comment_id": "Ugz_zYCyGQvDJyhHFYt4AaABAg",
+        "author_handle": "@jakeduggins5141",
+        "author_channel_id": "UC-fobxwELbVoAYIUWR05U0g",
+        "note": "Commenter stated 'I have a copy with the card contact me'.",
+        "reply_ids": [
+          "Ugz_zYCyGQvDJyhHFYt4AaABAg.Ab2J0IoYnXUAbGxUCzwxMH",
+          "Ugz_zYCyGQvDJyhHFYt4AaABAg.Ab2J0IoYnXUAbH1PjbkhqF",
+          "Ugz_zYCyGQvDJyhHFYt4AaABAg.Ab2J0IoYnXUAbHBej27Ks9",
+          "Ugz_zYCyGQvDJyhHFYt4AaABAg.Ab2J0IoYnXUAbHs1zJBJI4"
+        ],
+        "followup_result": "After requests for a server join or sticker number/symbol/photo, the commenter replied 'nope' twice.",
+        "cross_reference": "Exact handle search found no match in the current GRA-EDISNI corpus or gamesbyian/playdead-unofficial-exports."
+      },
+      "disposition": "Do not pursue further unless the commenter voluntarily supplies evidence."
     }
   ]
 }
