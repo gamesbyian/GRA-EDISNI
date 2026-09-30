@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **255**.
+Latest indexed experiment: **319**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -327,6 +327,8 @@ Latest indexed experiment: **255**.
 | 315 | historical foreground 3×3 provenance: Dec-2022 message group 1055674055233118248 applies one 3×3 grid to each row of the 12×9 foreground, already yielding the exact twelve-frame decomposition; 1055973624135295086 ties the 12×9 columns to the nine repeating patterns; 1162212809568964608 (Oct 2023) restates the result as twelve 3×3 squares; 1502960920568135761 (May 2026) sharpens this into nine slash/dash blocks plus three slash/dot blocks; upgrades human-discovery provenance only, not POS3/selector/recursion evidence |
 | 316 | exact 534brn capture byte forensics: base64/raw-blob comparison shows experiment HTML is B plus a 95-byte style-wrapper change; hidden HTML is exactly B with one `<!--`/`-->` delimiter pair removed; duplicate filenames collapse by blob SHA; the later partial capture avoids HTML entities/comments but still contains 1,976 U+FFFD unknown-byte replacements, so it is cleaner but not pristine; future work is exact A/B/P loss-map alignment, not guessed JPEG pixels |
 | 317 | observation-only tail-metadata audit: grouping each A-I class into 9 body + 3 slash/dot tail cells, an exact-one-slash positional tail code is compatible with all physical observations and leaves exactly 36 completions; the opposite exact-one-dot code has zero completions because H already has two observed dots; B/E/F/H/I force slash positions 2/0/1/2/2 respectively, providing raw support for a one-of-three tail index without POS3, recursion, route criteria, or model-filled cells |
+| 318 | observation-only tail-selector spatial replay: the one-slash tail position is tested as either a consecutive 3-cell row/chunk selector or a physical 3x3 column/rail selector; both survive all 36 observation-compatible tail completions, so current raw evidence does not distinguish them |
+| 319 | background-geometry mask domain audit: the solved IAB/CDE/FGH geometry indexes A-I image classes while each nine-cell body indexes successive H108 occurrences within one fixed class; no raw body-position-to-A-I bijection exists, leaving 1,680 ordered three-mask partitions or 362,880 full mappings, so geometry-derived body masks are not independently identified and are not swept |
 
 ## Current frontier
 
@@ -336,7 +338,7 @@ Latest indexed experiment: **255**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–317:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–319:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
