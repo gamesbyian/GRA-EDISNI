@@ -76,6 +76,30 @@ The solved cases support a recurring sequence:
 
 This pattern is a design prior, not a decoder.
 
+## Sticker-specific candidate consumer: secret-ending lever
+
+The 21 Mar 2021 public sticker discussion supplies a candidate consumer from outside the foreground corpus itself.
+
+The Collector's Edition sleeve was historically interpreted as displaying the same three marks in the geometry of the secret-ending lever:
+
+```
+dot left
+dash right
+slash top
+```
+
+That yields the concrete command mapping:
+
+```
+. = left
+- = right
+/ = up
+```
+
+This is **not a solved puzzle component** and should not be placed in the table of demonstrated historical techniques. It is, however, exactly the kind of external cue the reset asks for: a separate artifact supplies a semantic type and a three-way operation without consulting the current machine.
+
+Experiment 342 closes only the cheapest direct replay of the known normal bunker password. The broader question, whether a separately cued ordering/subset of sticker marks forms a lever sequence, remains licensed.
+
 ## Implications for the sticker foreground
 
 Highest-priority questions now become:
