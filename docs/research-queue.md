@@ -92,6 +92,10 @@ Currently licensed: geometry-first/secondary-read tests and simple tail-as-opera
 
 Experiment 337 also advances the pending 534brn branch without opening a semantic search: exact cross-capture alignment recovers 238 safe bytes from the lossy A/B/P representations, while preserving 10 contradictory A/P positions as unknown. The damaged artifact remains a possible future source of an explicit selector/key, but its filename/path and partial bytes are not themselves a licensed key.
 
+Experiment 342 recovers exactly such an external-consumer cue from the 21 Mar 2021 sticker discussion. The Collector's Edition sleeve was historically read as placing dot=left, dash=right, slash=top in the same geometry as the secret-ending three-position lever, giving an independently motivated command map `.=L, -=R, /=U`. This licenses a **lever-consumer family** without importing the incumbent machine. The cheapest direct replay is negative: the known normal bunker word `UURLRRRUUURLLL` has zero exact contiguous H108 placements in canonical forward or reverse order, and zero under all six symbol-direction relabel controls. A single weak wildcard-compatible hit appears only after additionally rotating the 14-command word and is constrained by 5/14 observed cells. See `docs/experiment-342-sticker-lever-cue.md` and `data/sticker-lever-cue.json`.
+
+This elevates lever-command interpretation above unconstrained semantic Pigpen decoding, but it does **not** license arbitrary permutation searches for a pleasing lever sequence. The next lever test requires an independent ordering/subset/start cue.
+
 R3 is therefore no longer an open-ended replay queue. Reopen a dormant operation family only when new evidence supplies its missing parameter or registration rule.
 
 #### R4 — incumbent assumption burn-down
