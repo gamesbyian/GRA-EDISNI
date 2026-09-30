@@ -118,3 +118,17 @@ Do not spend time downloading material already preserved in PR #55's Discord-exp
   Expected MIME: `image/png`
   Expected size: 114,418 bytes
   Why: transient image referenced only by BigDusty's `backups/canvas` historical state.
+
+
+## Historical research artifacts newly surfaced
+
+- Game Detectives source snapshot Pastebins (current fetch path blocks Pastebin):
+  - https://pastebin.com/acvaSwq5
+  - https://pastebin.com/cuMRvEAU
+  - https://pastebin.com/Ccxe0WTC
+  Why: these preserve June 2018 Terminal41 page-source states referenced by the Game Detectives chronology.
+
+- Terminal41 audio / emergency data-stream videos referenced by Game Detectives:
+  - https://www.youtube.com/watch?v=5I6pNl1M7RI
+  - https://www.youtube.com/watch?v=dWhmPSjOybI
+  Why: primary historical audio/video artifacts; automated web fetch is throttled, so retain highest-quality originals if recoverable.
