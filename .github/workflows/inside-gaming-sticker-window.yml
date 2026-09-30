@@ -1,10 +1,6 @@
 name: Inside Gaming sticker-window harvest
 
 on:
-  pull_request:
-    paths:
-      - ".github/workflows/inside-gaming-sticker-window.yml"
-      - "docs/external-evidence-acquisition-plan.md"
   workflow_dispatch:
 
 permissions:
