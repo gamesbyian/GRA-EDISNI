@@ -205,7 +205,10 @@
         "Huddle",
         "Collector's Edition"
       ],
-      "note": "Sticker #002 was recovered here."
+      "note": "Sticker #002 was recovered here.",
+      "acquisition_status": "manual-private-group",
+      "mining_status": "owner-discovery-pool",
+      "status_note": "Historically productive private group: yielded canonical stickers 002 and 164 plus lost-owner leads. Retain as a discovery pool for new owners, not as an unresolved known-sticker dependency."
     },
     {
       "id": "facebook-group-ledger-collector",
@@ -221,23 +224,32 @@
         "RealDoll",
         "Huddle",
         "Collector's Edition"
-      ]
+      ],
+      "acquisition_status": "manual-private-group",
+      "mining_status": "owner-discovery-pool",
+      "status_note": "Historically productive private group: yielded lost-owner trails L10 and L28. Retain for new-owner discovery only."
     },
     {
       "id": "facebook-story-ledger-lead",
       "kind": "facebook",
       "url": "https://www.facebook.com/story.php?story_fbid=1422016306591561&id=100063496151489",
       "public": false,
-      "priority": "high",
-      "auth_required": true
+      "priority": "low",
+      "auth_required": true,
+      "acquisition_status": "manual-login-archival-only",
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Specific Facebook story is already cross-referenced to canonical physical sticker 223 = slash, background G; manual access would only improve archival provenance/original-media preservation."
     },
     {
       "id": "facebook-shared-post-ledger-lead",
       "kind": "facebook",
       "url": "https://www.facebook.com/share/p/19GJT1NVQS/",
       "public": false,
-      "priority": "high",
-      "auth_required": true
+      "priority": "low",
+      "auth_required": true,
+      "acquisition_status": "manual-login-archival-only",
+      "mining_status": "canonical-lost-owner-provenance",
+      "status_note": "Specific Facebook post is already cross-referenced to L34/U28; owner DaniaGames confirmed the sticker lost. Manual access is archival-only."
     },
     {
       "id": "instagram-01-B6EECojHUKZ",
