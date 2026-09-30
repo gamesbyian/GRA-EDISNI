@@ -16,7 +16,6 @@ jobs:
       fail-fast: false
       matrix:
         source_id:
-          - youtube-iam8bit-ce-unboxing
           - youtube-inside-gaming-ce-unboxing
     runs-on: ubuntu-latest
     timeout-minutes: 120
