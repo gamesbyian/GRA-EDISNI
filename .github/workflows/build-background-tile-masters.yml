@@ -59,10 +59,7 @@ jobs:
         run: |
           rm -rf artifacts/background-tile-masters
           python scripts/build_background_tile_masters.py \
-            . \
             .tmp/background-tile-corpus \
-            .tmp/background-tile-sources/INSIDE-ARG \
-            .tmp/background-tile-sources/playdead-unofficial-exports \
             --out artifacts/background-tile-masters
 
       - name: Preserve source acquisition manifest
