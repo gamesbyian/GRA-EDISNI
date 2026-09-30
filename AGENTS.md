@@ -2,17 +2,21 @@
 
 ## Mission
 
-Crack the INSIDE Collector's Edition sticker-code mechanism using the current closed corpus. Do not assume future sticker recovery.
+Determine the INSIDE Collector's Edition sticker mechanism from the closed corpus without privileging the current ternary-machine interpretation. Preserve the existing machine as a mature hypothesis family, but make it compete against simpler and historically demonstrated Playdead puzzle grammars. Do not assume future sticker recovery.
+
+The active epistemic-reset protocol is `docs/sticker-epistemic-reset.md`. The cross-puzzle operation prior is `docs/arg-puzzle-mechanics-corpus.md`.
 
 ## Session recovery
 
 Read only these first:
 
-1. `docs/current-state.md`
-2. `docs/research-queue.md`
-3. `data/machine-spec.json`
-4. `docs/community-glossary.md`
-5. `docs/community-conventions.md`
+1. `docs/sticker-epistemic-reset.md`
+2. `docs/current-state.md`
+3. `docs/research-queue.md`
+4. `docs/arg-puzzle-mechanics-corpus.md`
+5. `data/machine-spec.json`
+6. `docs/community-glossary.md`
+7. `docs/community-conventions.md`
 
 Use `docs/experiment-ledger.md` to check whether an idea has already been tested. Query the long-form Google Docs only for details that are not represented here.
 
@@ -79,9 +83,15 @@ Write in a way that is compatible with the community's vocabulary and visual con
 
 This preference applies to presentation. It does not require renaming code identifiers, experiment IDs, machine-state variables, or exact theorem language.
 
+## Incumbent-machine quarantine
+
+`data/machine-spec.json`, the theorem graph, prediction matrix, terminal `100`, hidden-state variables, gauges, POS3, selector and routing language describe the incumbent machine hypothesis. They remain valid when discussing or testing that family, but must not be used as Layer-0 observations or as the default vocabulary for generating new hypotheses during the reset.
+
+Before extending that family, ask whether the proposed operation is independently motivated by raw sticker evidence, historical community work, or a demonstrated ARG mechanism. See `docs/sticker-epistemic-reset.md`.
+
 ## Exact machine language
 
-Use the terms carefully:
+When discussing the incumbent machine, use the terms carefully:
 
 - **registered one-hot primary code**
 - **Q4 one-slash-per-depth-stack selector**
