@@ -191,3 +191,18 @@ The historical CE media workflow now accepts exactly one `source_id` per manual 
 Use `.github/workflows/historical-ce-unboxing-media.yml` and choose the exact ledger target. The current default is `youtube-ledger-07-Pbkq8Ey_s0k` (L17).
 
 Keep the escalation rule strict: metadata/thumbnail first, then lightweight low-resolution reconnaissance when useful, then full-resolution source only when a candidate sticker interval or equivalent evidence justifies the larger download.
+
+## Physical-owner evidence checklist
+
+When an owner is willing to inspect a surviving Collector's Edition, collect the ordinary sticker photo **and** manufacturing evidence in the same pass where practical:
+
+1. one uncropped, well-lit photo showing the sticker in context on the black wrapping;
+2. one close photo with serial, symbol and background texture legible;
+3. one photo with a ruler or other metric scale adjacent to the sticker, without covering it;
+4. any surviving sticker backing, label sheet, release liner, packaging insert, or evidence of how the stickers were supplied/packed;
+5. whether the sticker is still attached, detached but retained, or only visible in historical photos/video;
+6. exact source/provenance and owner permission needed for archival use.
+
+The scale/backing-sheet request is now specifically motivated by the recovered `#stickers-solving` discussion: a 9×12 commercial label-sheet process could generate a 108-period background cycle mechanically. Physical dimensions and backing-sheet geometry are therefore evidence about the manufacturing-artifact hypothesis, not decorative metadata.
+
+Do not ask an owner to guess a lost serial or symbol and then record that guess as a physical observation. Recollections remain recollections unless corroborated by a photo or other contemporaneous evidence.
