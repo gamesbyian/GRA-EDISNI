@@ -72,6 +72,8 @@ Experiment 332 factors the frozen row readout as a native `3×3×2` token: tail-
 
 Experiment 333 tests the simplest possible use of the solved background 3×3 as the missing mapping: direct coordinate copy up to rotation/reflection. It fails strongly. C and I are distinct background coordinates but are already fixed to the same foreground token coordinate (2,1), differing only in binary polarity, so no injective background-coordinate→token-coordinate map exists at all; 0/8 D4 transforms survive. Keep background-art roles limited to independently evidenced masks/order/transform cues rather than coordinate identification.
 
+Experiment 334 enumerates the only bounded conventional Pigpen subalphabet mapping currently licensed by Experiment 332: row-major A-I/J-R grids × 8 D4 orientations × 2 global polarity assignments = 16 codebooks. All 16 remain structurally admissible and give distinct signatures for the four fixed B/C/E/I tokens. No semantic scoring is allowed. A standard 26-letter Pigpen claim remains incomplete without an independently supplied X-grid/S-Z family and an external orientation/polarity cue.
+
 #### R3 — solved-puzzle operation replay
 
 Test only historically demonstrated operation classes whose required parameters can be supplied independently. Preserve negative results. No broad visual-target optimization.
