@@ -346,6 +346,7 @@ Latest indexed experiment: **325**.
 | 334 | bounded conventional Pigpen A-R codebook enumeration: maps the frozen 3×3×2 carrier only onto the two conventional row-major 3×3 Pigpen grids under 8 D4 orientations × 2 global exceptional-symbol polarity assignments; all 16 codebooks remain structurally admissible and yield 16 distinct BCEI signatures, so the sticker corpus supplies no orientation/polarity registration; no plaintext scoring is used and the missing 8-state X-grid/S-Z family remains unsupported |
 | 335 | bounded Pigpen semantic search-space audit: the observation-compatible token sets permit exactly 900 distinct nine-letter A-R strings per global codebook; across 16 D4×polarity registrations all 14,400 codebook/string combinations are unique with zero cross-codebook collisions and only four fixed positions per codebook, quantifying the severe multiple-comparisons trap and freezing semantic Pigpen search until an independent registration/family cue or new physical evidence arrives |
 | 336 | frozen row-selector physical discriminator expansion: the only new prospective invariants versus the incumbent are C-tail residue 84=. and 102=/; through serial 600 these map to ten unseen physical stickers 84/102/192/210/300/318/408/426/516/534; any residue-84 slash or residue-102 dot now falsifies the frozen rival without retuning, and the alternative-family predictions are preserved separately in data/frozen-row-selector-predictions.json |
+| 337 | row-selector null calibration: the post-hoc Experiment-329 `row>0,column=0` asymmetry occurs in 55,905/200,000 (27.95%) global fixed-mask/census permutations and 44,721/200,000 (22.36%) within-class matched permutations; exact 12/0 occurs 4.25% and 3.24% respectively but was not preregistered, so the discovery contrast is weak retrospective evidence while the frozen family's later holdout and prospective tests remain valid |
 
 ## Current frontier
 
@@ -355,7 +356,7 @@ Latest indexed experiment: **325**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–336:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–337:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
