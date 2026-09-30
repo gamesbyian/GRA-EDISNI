@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-29",
+  "sticker": "L14",
+  "source_video": "AO2YQCl5qFM",
+  "foreground_symbol": "/",
+  "status": "provisional_visual_lead",
+  "leading_background": "B",
+  "canonical_background": null,
+  "usable_frames": 26,
+  "winner_counts": {
+    "A": 1,
+    "B": 15,
+    "C": 2,
+    "D": 0,
+    "E": 5,
+    "F": 1,
+    "G": 1,
+    "H": 1,
+    "I": 0
+  },
+  "quality_checks": {
+    "sharpest_5": {
+      "B": 5
+    },
+    "sharpest_8": {
+      "B": 7,
+      "G": 1
+    },
+    "frames_139_148": {
+      "B": 10
+    }
+  },
+  "heldout_validation": {
+    "population": "33 known slash stickers from resized corpus excluding class prototype sources",
+    "top1_correct": 6,
+    "top1_total": 33,
+    "top1_accuracy": 0.18181818181818182,
+    "top3_correct": 10,
+    "top3_total": 33,
+    "top3_accuracy": 0.30303030303030304,
+    "interpretation": "insufficient to promote the B lead to a canonical tile classification"
+  },
+  "preferred_cycle_slash_counts_per_12": {
+    "A": 6,
+    "B": 8,
+    "C": 5,
+    "D": 6,
+    "E": 7,
+    "F": 7,
+    "G": 7,
+    "H": 3,
+    "I": 6
+  },
+  "supersedes": [
+    "early whole-reference C/A shortlist",
+    "unstable whole-template H/F/E/I rankings"
+  ],
+  "disposition": "B is the strongest current image-based candidate; keep provisional pending a substantially better validated normalization/classification method."
+}
