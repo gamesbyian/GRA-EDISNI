@@ -343,6 +343,7 @@ Latest indexed experiment: **325**.
 | 331 | frozen row-selector × incumbent structural intersection: selector domains match exactly for B,D,E,F,G,H,I, with row-family A broader (0/1/2 vs 1/2) and C narrower (2 vs 0/2); six of 14 preferred incumbent states satisfy the complete frozen row rule, and only residues 84=. and 102=/ become newly invariant versus the 14-state incumbent, making the C tail the clean prospective discriminator |
 | 332 | 3×3×2 token factorization: the frozen row family naturally yields (tail-selected row, within-row exceptional position, exceptional symbol), an 18-state carrier; B,C,E,I are observation-fixed tokens, F/H have two possibilities each, and the carrier is structurally isomorphic in cardinality to Pigpen's two 3×3 grid families, but supplies no independent 8-state X-grid/S-Z family, so standard 26-letter Pigpen remains unestablished |
 | 333 | direct background-coordinate registration audit: the solved IAB/CDE/FGH 3×3 cannot be copied into the frozen row-token coordinate under any one-to-one coordinate relabeling because observation-fixed C and I occupy distinct background cells but the same token coordinate (2,1), differing only in polarity; all 8 D4 transforms fail against observation-compatible token sets, closing direct coordinate-copy while leaving independently specified mask/order/transform roles open |
+| 334 | bounded conventional Pigpen A-R codebook enumeration: maps the frozen 3×3×2 carrier only onto the two conventional row-major 3×3 Pigpen grids under 8 D4 orientations × 2 global exceptional-symbol polarity assignments; all 16 codebooks remain structurally admissible and yield 16 distinct BCEI signatures, so the sticker corpus supplies no orientation/polarity registration; no plaintext scoring is used and the missing 8-state X-grid/S-Z family remains unsupported |
 
 ## Current frontier
 
@@ -352,7 +353,7 @@ Latest indexed experiment: **325**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–333:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–334:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
