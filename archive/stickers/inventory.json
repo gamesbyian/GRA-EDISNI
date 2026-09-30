@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "ledger_repo": "gamesbyian/INSIDE-ARG",
+  "ledger_ref": "master",
+  "ledger_serial_count": 82,
+  "community_original_files": 82,
+  "community_edited_files": 16,
+  "community_resized_files": 70,
+  "serials_with_original": 82,
+  "serials_missing_original": [],
+  "rule": "Only manifest rows with canonical_input=yes are physical-photo inputs. Derived edits are reference-only."
+}

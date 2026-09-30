@@ -1,0 +1,128 @@
+name: Build A-I background tile candidates
+
+on:
+  push:
+    branches:
+      - chatgpt/background-tile-masters-2026-09-29
+    paths:
+      - "scripts/build_background_tile_candidates.py"
+      - "scripts/build_846shee_evidence_masters.py"
+      - "scripts/sync_canonical_sticker_archive.py"
+      - ".github/workflows/build-background-tile-masters.yml"
+      - "docs/background-tile-master-process.md"
+  pull_request:
+    paths:
+      - "scripts/build_background_tile_candidates.py"
+      - "scripts/build_846shee_evidence_masters.py"
+      - "scripts/sync_canonical_sticker_archive.py"
+      - ".github/workflows/build-background-tile-masters.yml"
+      - "docs/background-tile-master-process.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Acquire upstream community repository for sync/audit
+        run: |
+          mkdir -p .tmp/background-tile-sources
+          git clone --depth 1 https://github.com/gamesbyian/INSIDE-ARG.git .tmp/background-tile-sources/INSIDE-ARG
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install image dependencies
+        run: python -m pip install --disable-pip-version-check numpy opencv-python-headless pillow
+
+      - name: Acquire historical printer-reference archives
+        run: |
+          rm -rf .tmp/playdead-unofficial-exports .tmp/printer-reference-archives
+          git clone --depth 1 https://github.com/gamesbyian/playdead-unofficial-exports.git .tmp/playdead-unofficial-exports
+          mkdir -p .tmp/printer-reference-archives
+          cp .tmp/playdead-unofficial-exports/assets/printer-image-5ab3ef46aed858ec.zip .tmp/printer-reference-archives/
+          cp .tmp/playdead-unofficial-exports/assets/printer-c12bb4c38bd3ea2b.zip .tmp/printer-reference-archives/
+          cp .tmp/playdead-unofficial-exports/assets/printerimagethingy-331942486c2ce9ae.jpg .tmp/printer-reference-archives/
+          (cd .tmp/printer-reference-archives && unzip -o printer-image-5ab3ef46aed858ec.zip -d printer-image || true)
+
+      - name: Upload historical printer-reference archives
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-printer-reference
+          path: .tmp/printer-reference-archives/
+          if-no-files-found: error
+
+      - name: Synchronize canonical sticker archive
+        run: |
+          python scripts/sync_canonical_sticker_archive.py \
+            --community-repo .tmp/background-tile-sources/INSIDE-ARG \
+            --dest archive/stickers
+
+      - name: Upload canonical sticker corpus
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-sticker-corpus
+          path: archive/stickers/
+          if-no-files-found: error
+
+      - name: Build 846shEE evidence-preserving masters
+        run: |
+          mkdir -p archive/stickers/historical-composites
+          curl --fail --location --retry 3 \
+            https://i.imgur.com/846shEE.jpg \
+            --output archive/stickers/historical-composites/846shEE.jpg
+          rm -rf artifacts/background-tile-evidence-masters
+          python scripts/build_846shee_evidence_masters.py \
+            archive/stickers/historical-composites/846shEE.jpg \
+            --out artifacts/background-tile-evidence-masters
+
+      - name: Commit 846shEE source and evidence masters
+        run: |
+          git add archive/stickers/historical-composites/846shEE.jpg \
+                  artifacts/background-tile-evidence-masters
+          if git diff --cached --quiet; then
+            echo "846shEE evidence masters already current."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Preserve 846shEE evidence masters"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+
+      - name: Build fail-closed review candidates
+        run: |
+          rm -rf artifacts/background-tile-candidates-v2
+          python scripts/build_background_tile_candidates.py \
+            --manifest archive/stickers/manifest.csv \
+            --out artifacts/background-tile-candidates-v2
+
+      - name: Upload review candidate bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: background-tile-candidates-v2
+          path: artifacts/background-tile-candidates-v2/
+          if-no-files-found: error
+
+      - name: Commit canonical archive corrections only
+        if: github.event_name == 'push'
+        run: |
+          git add archive/stickers
+          if git diff --cached --quiet; then
+            echo "No canonical archive changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh canonical sticker archive"
+          git push origin HEAD:${{ github.ref_name }}
