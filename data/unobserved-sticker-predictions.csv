@@ -1,0 +1,44 @@
+residue,background,preferred_guess,support_of_14,alternate_symbol,alternate_support,canonical_class,gauge_note
+1,A,/,14,,0,invariant,
+6,F,/,14,,0,invariant,primary gauge q0d0 F<->H
+8,H,-,14,,0,invariant,primary gauge q0d0 F<->H
+11,B,-,14,,0,invariant,
+16,G,-,14,,0,invariant,
+22,D,-,8,/,6,state-dependent,
+25,G,/,8,-,6,state-dependent,
+27,I,/,14,,0,invariant,
+28,A,/,14,,0,invariant,
+33,F,-,14,,0,invariant,
+34,G,/,14,,0,invariant,
+35,H,-,14,,0,invariant,
+41,E,/,14,,0,invariant,primary gauge q1d1 E<->I
+45,I,-,14,,0,invariant,primary gauge q1d1 E<->I
+49,D,-,14,,0,invariant,
+50,E,-,14,,0,invariant,
+52,G,-,14,,0,invariant,
+54,I,-,14,,0,invariant,
+55,A,/,10,-,4,state-dependent,
+58,D,/,10,-,4,state-dependent,
+61,G,/,8,-,6,state-dependent,
+62,H,-,14,,0,invariant,
+64,A,/,14,,0,invariant,
+67,D,/,14,,0,invariant,
+68,E,/,14,,0,invariant,
+73,A,-,14,,0,invariant,
+77,E,/,14,,0,invariant,
+82,A,.,14,,0,invariant,Q4 A-stack polarity gauge
+83,B,.,14,,0,invariant,
+84,C,/,7,.,7,state-dependent,Q4 C-stack polarity gauge
+87,F,.,14,,0,invariant,
+88,G,/,8,.,6,state-dependent,
+91,A,.,10,/,4,state-dependent,Q4 A-stack polarity gauge
+93,C,.,14,,0,invariant,Q4 C-stack polarity gauge
+94,D,/,10,.,4,state-dependent,
+99,I,.,14,,0,invariant,broader coupled Q4 F+I branch
+100,A,/,10,.,4,state-dependent,Q4 A-stack polarity gauge
+102,C,.,7,/,7,state-dependent,Q4 C-stack polarity gauge
+103,D,.,10,/,4,state-dependent,
+104,E,.,14,,0,invariant,
+105,F,.,14,,0,invariant,broader coupled Q4 F+I branch
+106,G,.,8,/,6,state-dependent,
+107,H,/,14,,0,invariant,
