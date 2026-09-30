@@ -629,6 +629,66 @@
         "canonical_cross_reference": "Exact handle search found no match in the current GRA-EDISNI corpus or gamesbyian/playdead-unofficial-exports."
       },
       "disposition": "High-value fresh owner lead. They explicitly report owning an INSIDE Collector's Edition and possibly retaining the original packaging. No outreach/reply is present in the captured snapshot; cross-reference remains negative, so this appears not to be an obvious duplicate."
+    },
+    {
+      "id": "discord-stickers-solving-upstream-export",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "source_url": "https://github.com/twinysam/playdead-unofficial-exports/commit/928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+      "status": "acquired-and-mined-upstream",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "commit_date": "2026-09-29T20:24:34Z",
+        "commit_message": "Add #stickers-solving",
+        "transcript_path": "Playdead Unofficial - ARG - stickers-solving [1552077397493424272].txt",
+        "transcript_lines": 2509,
+        "note": "This resolves the previously documented missing-channel corpus gap. The user's fork predates this upstream commit, so mining used the immutable upstream commit directly."
+      },
+      "disposition": "Treat this exact upstream commit as the canonical provenance for the newly available #stickers-solving export until the fork is reconciled safely."
+    },
+    {
+      "id": "discord-stickers-solving-jigsaw-order",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-community-observation",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-28 02:54",
+        "author": "santiface",
+        "claim": "The labeled 3x3 background-image order is I A B / C D E / F G H.",
+        "note": "Preserve as direct community-source provenance for the A-I spatial order; do not confuse it with a newly derived machine result."
+      },
+      "disposition": "Cross-reference against current background-tile-master work; useful provenance, but leave PR #61's live reconstruction untouched."
+    },
+    {
+      "id": "discord-stickers-solving-manufacturing-sheet-hypothesis",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "historical-community-hypothesis",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-28",
+        "claim": "Community discussion explicitly raised that a 9x12 sequential label sheet could generate period 108 and background=column as a manufacturing artifact, and proposed measuring a physical sticker plus documenting the backing sheet as a discriminator.",
+        "methodological_note": "The same thread explicitly rejected reconstructing lost sticker facts from owner memory/purchase dates as too unreliable for physical observations."
+      },
+      "disposition": "Keep manufacturing as a live competing explanation for H108 structure. Prioritize ruler/backing-sheet evidence from any newly responsive owner."
+    },
+    {
+      "id": "discord-stickers-solving-frozen-dot-predictions",
+      "source_id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "status": "frozen-historical-prediction",
+      "evidence": {
+        "upstream_commit": "928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+        "timestamp": "2026-09-28",
+        "predicted_dot_serials": [
+          197,
+          198,
+          200,
+          203,
+          205
+        ],
+        "best_test_serial": 200,
+        "current_ledger_check": "No canonical physical sticker row currently exists for 197, 198, 200, 203, or 205.",
+        "caveat": "These predictions belong to the community model documented in the channel at that time; they are not promoted as current-project predictions or facts."
+      },
+      "disposition": "Preserve prospectively. If any of these physical stickers appears later, score the historical prediction before updating any model."
     }
   ]
 }
