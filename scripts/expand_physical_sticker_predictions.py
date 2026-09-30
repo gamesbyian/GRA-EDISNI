@@ -99,6 +99,40 @@ def confidence_tier(category):
     raise AssertionError(category)
 
 
+def research_role(category):
+    """Return an acquisition/experiment role, independent of confidence tier."""
+    if category == "physical_observation":
+        return "already_observed"
+    if category == "observed_residue_repeat":
+        return "repeat_control"
+    if category == "broad_family_invariant":
+        return "hard_model_test"
+    if category == "canonical_invariant_primary_gauge":
+        return "primary_gauge_discriminator"
+    if category == "canonical_invariant_q4_gauge":
+        return "q4_gauge_discriminator"
+    if category == "canonical_invariant_broader_branch":
+        return "broader_branch_discriminator"
+    if category == "state_dependent":
+        return "hidden_state_discriminator"
+    if category == "state_dependent_plus_q4_gauge":
+        return "hidden_state_plus_q4_gauge"
+    raise AssertionError(category)
+
+
+def acquisition_priority(role):
+    return {
+        "hard_model_test": 1,
+        "hidden_state_plus_q4_gauge": 1,
+        "primary_gauge_discriminator": 1,
+        "q4_gauge_discriminator": 1,
+        "broader_branch_discriminator": 2,
+        "hidden_state_discriminator": 2,
+        "repeat_control": 3,
+        "already_observed": 4,
+    }[role]
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-serial", type=int, default=600)
@@ -141,6 +175,8 @@ def main():
             else classify(residue, observed_by_residue, pred)
         )
         tier = "OBSERVED" if physical_observed else confidence_tier(category)
+        role = research_role(category)
+        priority = acquisition_priority(role)
 
         if args.unknown_only and physical_observed:
             continue
@@ -153,6 +189,8 @@ def main():
             "foreground_alternate": alternate,
             "tier": tier,
             "category": category,
+            "research_role": role,
+            "acquisition_priority": priority,
             "support": support,
         })
 
