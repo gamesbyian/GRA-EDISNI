@@ -503,3 +503,14 @@ Targeted follow-up through the older exported `#tldr` and `#solving-breakout` ch
 **Authenticity/provenance caution.** A 2026 discussion asked how fake sticker submissions were excluded. Community responses pointed mainly to distinctive relief/print appearance and source context, not a formal authentication protocol. Therefore current acquisition should continue to privilege original physical photos, owner/source chains, and repeated-structure consistency over isolated text claims.
 
 The recovered upstream `#stickers-solving` attachment audit found no new physical sticker observation: the only direct sticker photo in that newly added batch is 003 = dash, already canonical. Other inspected attachments are layout/model/cipher visualizations, screenshots, packaging context, or user-generated research artifacts.
+
+### Blocker reclassification
+
+A canonical-ledger cross-check substantially reduced the apparent blocked-social backlog.
+
+- All nine specific Instagram post targets are already resolved in the canonical ledger, either to a physical sticker observation (187, 296, 384, 223) or a confirmed-lost provenance trail (L15, L21, L32, L34, L35). Login is now an **archival-original-media** issue only for those URLs, not a sticker-information dependency.
+- Instagram account targets `mattpopcollector182` and `bathroomgamers` are likewise already resolved to canonical physical stickers 125 and 334 respectively.
+- The Facebook story for johnny_iuccy is already canonical 223; the DaniaGames shared post is already L34. Those specific URLs are archival-only. The two private Facebook collector groups remain useful manual **owner-discovery pools**, because they historically produced multiple stickers/owner leads.
+- The VK lead `bigdaffymonster` is already canonical L40/U34; the owner confirmed through VK on 2026-05-04 that the sticker was lost. Failed public VK media extraction is archival-only.
+
+This means the genuinely research-blocking social work is now concentrated in **new-owner discovery** and unresolved current claims (notably the unsupported 369 and 427 claims, U45 identity resolution, PsychOsmosis, and other unopened/current-owner leads), rather than recovery of every historical Instagram/Facebook/VK original.
