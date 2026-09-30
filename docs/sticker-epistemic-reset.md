@@ -177,6 +177,16 @@ Enumerate all sticker-native information adjacent to the foreground sequence tha
 
 Do not derive a boundary channel from predicted foreground cells.
 
+Treat both orientations of the foreground carrier as legitimate views. The usual 12x9 layout is useful because each column shares one A-I background class, but the transpose exposes nine 12-cell class traces with the historically attested 9+3 split. Maintain the derived 9x9 body + 9x3 tail view alongside 12x9; do not infer intended read direction from display convenience.
+
+Add a bounded spatial/geometric subfamily:
+- first nine cells may define spatial structure;
+- final three may select a row, column, rail, mask, orientation, or member of a geometric code family;
+- Pigpen/Rosicrucian is an explicit candidate because it combines 3x3 position, edge/corner geometry, and a secondary discriminator;
+- any such family must fix transforms and template mapping before reading candidate letters.
+
+Also audit the assembled background image itself as a potential independent source of sorting/masking geometry. Contrast/threshold experiments must be support-mask-aware so missing or inpainted pixels cannot manufacture a cue.
+
 ### R3 — solved-puzzle operation replay
 
 Implement only historically demonstrated operation classes against the raw/partial H108 object:
@@ -188,6 +198,8 @@ Implement only historically demonstrated operation classes against the raw/parti
 - generated transform only when an explicit sticker/ARG clue supplies its parameters.
 
 Record negative results. Avoid free parameter sweeps that manufacture visual targets.
+
+For the 9x12 family, the allowed first-pass search space is deliberately small: canonical/transposed layout, the independently solved physical A-I flattening, D4 rotations/reflections, and preregistered geometric templates. If a Pigpen-like mapping appears promising, train/freeze it on a subset and score withheld classes/frames rather than accepting whole-corpus visual resemblance.
 
 ### R4 — incumbent-model assumption burn-down
 
