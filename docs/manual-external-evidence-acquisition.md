@@ -182,3 +182,12 @@ Do not put the account password in:
 - repository files.
 
 Only the temporary cookie jar is needed for automated YouTube acquisition.
+
+
+## Single-target historical CE media
+
+The historical CE media workflow now accepts exactly one `source_id` per manual dispatch. This replaces the old fixed eight-video matrix and prevents a single investigation from re-downloading every previously acquired video.
+
+Use `.github/workflows/historical-ce-unboxing-media.yml` and choose the exact ledger target. The current default is `youtube-ledger-07-Pbkq8Ey_s0k` (L17).
+
+Keep the escalation rule strict: metadata/thumbnail first, then lightweight low-resolution reconnaissance when useful, then full-resolution source only when a candidate sticker interval or equivalent evidence justifies the larger download.
