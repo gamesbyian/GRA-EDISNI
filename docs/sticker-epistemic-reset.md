@@ -177,6 +177,10 @@ Enumerate all sticker-native information adjacent to the foreground sequence tha
 
 Do not derive a boundary channel from predicted foreground cells.
 
+Maintain both 12x9 and 9x12 foreground views. The 12x9 layout is a useful registration convention because columns share A-I classes, but that convenience is not evidence of intended read direction. The transpose exposes nine 9+3 class traces and the native 81/27 split as 9x9 + 9x3.
+
+A bounded geometric candidate family is permitted: first-nine spatial structure plus three-cell selector/index, including Pigpen/Rosicrucian-style alphabets. Before inspecting any letter-like output, fix the allowed transform family (D4 only unless an external cue adds more), the class order, and the template mapping.
+
 ### R3 — solved-puzzle operation replay
 
 Implement only historically demonstrated operation classes against the raw/partial H108 object:
@@ -188,6 +192,8 @@ Implement only historically demonstrated operation classes against the raw/parti
 - generated transform only when an explicit sticker/ARG clue supplies its parameters.
 
 Record negative results. Avoid free parameter sweeps that manufacture visual targets.
+
+For geometric-alphabet tests, distinguish literal-stroke interpretations from categorical occupancy interpretations. A literal-stroke test must respect the actual slash/dash orientations; a categorical test needs an independent rule saying which symbol means filled/empty or which body cells become cipher edges. Freeze any such rule before reading outputs, then use held-out classes/frames where possible.
 
 ### R4 — incumbent-model assumption burn-down
 
