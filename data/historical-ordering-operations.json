@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "generated": "2026-09-30",
+  "purpose": "R1 observation-era operation ledger for ordering/acorn lineage",
+  "entries": [
+    {
+      "period": "2018-07",
+      "object": "PC printer",
+      "operation": "row permutation constrained by side/margin marks",
+      "status": "successful",
+      "parameters_supplied_by_artifact": true,
+      "transfer_to_stickers": "seek independent boundary/registration channel; do not free-permute"
+    },
+    {
+      "period": "2018-07",
+      "object": "PC printer assembled image",
+      "operation": "recognize acorn and 41",
+      "status": "successful",
+      "parameters_supplied_by_artifact": true,
+      "transfer_to_stickers": "a reconstructed object may cue a later transform"
+    },
+    {
+      "period": "post-2018 reconstruction",
+      "object": "acorn 41",
+      "operation": "Conway Game of Life generation 41",
+      "status": "successful reconstruction",
+      "parameters_supplied_by_artifact": true,
+      "transfer_to_stickers": "generative transforms require explicit identity and parameter cues"
+    },
+    {
+      "date": "2022-12-23",
+      "object": "CE sticker foreground",
+      "operation": "108 organization and 3x3 squares",
+      "status": "exploratory",
+      "parameters_supplied_by_artifact": "partial",
+      "transfer_to_stickers": "frame geometry is historically discoverable"
+    },
+    {
+      "date": "2023-10-29",
+      "object": "CE sticker foreground",
+      "operation": "slash/dot tail as visual aid or barrier indicator",
+      "status": "exploratory",
+      "parameters_supplied_by_artifact": "tail asymmetry",
+      "transfer_to_stickers": "tail-as-metadata family has pre-machine provenance"
+    },
+    {
+      "date": "2023-10-30",
+      "object": "CE sticker foreground",
+      "operation": "possible line reordering",
+      "status": "exploratory",
+      "parameters_supplied_by_artifact": false,
+      "transfer_to_stickers": "do not pursue without an independent ordering constraint"
+    },
+    {
+      "date": "2026-05-22",
+      "object": "CE sticker foreground",
+      "operation": "9+3 layered code; last 3 select within domain encoded by first 9",
+      "status": "exploratory",
+      "parameters_supplied_by_artifact": "9x12 and two symbol-pair regions",
+      "transfer_to_stickers": "body+selector/index architecture has independent historical provenance"
+    }
+  ]
+}
