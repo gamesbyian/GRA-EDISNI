@@ -78,6 +78,8 @@ Experiment 335 quantifies the semantic-selection hazard: the current token uncer
 
 Experiment 336 operationalizes the broader frozen row rival without touching Pigpen semantics. Its only new cross-family residue predictions versus the incumbent are 84=. and 102=/, repeating through physical serials 84/192/300/408/516 and 102/210/318/426/534. All ten exact serials are currently unseen. Store and consult `data/frozen-row-selector-predictions.json`; any residue-84 slash or residue-102 dot is a preregistered falsification of this frozen rival.
 
+Experiment 337 hostile-calibrates the original row-vs-column discovery. Under 200,000 fixed-mask/census permutations, a qualitative `row>0, column=0` asymmetry appears 27.95% of the time globally and 22.36% under within-class matched shuffles. Therefore the retrospective 12-vs-0 result is **weak evidence**, despite remaining a coherent hypothesis generator. Keep only the post-freeze holdout/prospective tests as evidentiary updates; do not cite Experiment 329's discovery contrast as strong support.
+
 #### R3 — solved-puzzle operation replay
 
 Test only historically demonstrated operation classes whose required parameters can be supplied independently. Preserve negative results. No broad visual-target optimization.
