@@ -74,6 +74,8 @@ Experiment 333 tests the simplest possible use of the solved background 3×3 as 
 
 Experiment 334 enumerates the only bounded conventional Pigpen subalphabet mapping currently licensed by Experiment 332: row-major A-I/J-R grids × 8 D4 orientations × 2 global polarity assignments = 16 codebooks. All 16 remain structurally admissible and give distinct signatures for the four fixed B/C/E/I tokens. No semantic scoring is allowed. A standard 26-letter Pigpen claim remains incomplete without an independently supplied X-grid/S-Z family and an external orientation/polarity cue.
 
+Experiment 335 quantifies the semantic-selection hazard: the current token uncertainties permit 900 distinct A-R strings under each of the 16 global codebooks, and the sets are disjoint, for **14,400 unique nine-letter candidate strings** before any language criterion. Freeze this branch here. Do not dictionary-search or language-rank these outputs. Reopen conventional Pigpen only if an independent cue fixes registration/family or new physical evidence reduces token uncertainty; otherwise continue the broader non-semantic 9+3 work.
+
 #### R3 — solved-puzzle operation replay
 
 Test only historically demonstrated operation classes whose required parameters can be supplied independently. Preserve negative results. No broad visual-target optimization.
