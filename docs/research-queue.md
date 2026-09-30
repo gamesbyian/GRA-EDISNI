@@ -64,7 +64,9 @@ The current transition-side supplied set is only `O1, O2, G1, G3, G5, G6, G7`. O
 
 Experiment 321 materially weakens G7. The canonical `(2,1,0) -> 120/012/102` shell follows from two generic non-collapse priors: each selected word preserves all three ternary labels, and the three functional families collectively use all three q indices. Mutual route distinctness and route semantics are no longer required as premises. See `docs/experiment-321-g7-information-preservation.md`.
 
-Next R4 attacks, in order: test simple non-self-reuse rivals to G6; then test nonrecursive historically motivated uses of the G3 tail before assuming G5. G7 remains a generic simplicity prior, but is no longer the leading circularity risk.
+Experiment 322 exhausts all 27 one-shot selector maps `q=f(S)` after G5. Among completion-invariant outputs, maximum retention is 14 and exactly two maps achieve it: `002` and identity `012`. They accept the identical 14 machines and both give `100`; their only difference is the already-established S=1 `f1` observational gauge. Exact self-reuse is therefore not uniquely required. See `docs/experiment-322-g6-selector-map-family.md`.
+
+Next R4 attack: test nonrecursive, historically motivated uses of the G3 tail before assuming G5. G6 and G7 now survive as generic information-preservation / selector-conditioned priors rather than leading machine-preservation risks.
 
 #### R5 — cross-family holdout comparison
 

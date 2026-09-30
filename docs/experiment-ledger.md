@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **321**.
+Latest indexed experiment: **322**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -331,6 +331,7 @@ Latest indexed experiment: **321**.
 | 319 | background-geometry mask domain audit: the solved IAB/CDE/FGH geometry indexes A-I image classes while each nine-cell body indexes successive H108 occurrences within one fixed class; no raw body-position-to-A-I bijection exists, leaving 1,680 ordered three-mask partitions or 362,880 full mappings, so geometry-derived body masks are not independently identified and are not swept |
 | 320 | reset theorem-premise classification: audits all surviving supplied transition premises O1/O2/G1/G3/G5/G6/G7 by evidentiary type; G3 is historically motivated at the one-of-three tail-index level, G1/G5 are generic simplicity priors, and G6/G7 are the principal machine-preservation circularity risks; no surviving transition grammar is yet genuinely independently derived |
 | 321 | G7 information-preservation weakening: among all 27 q-choice assignments over the three first-pass functional families, 4 make every selected word preserve all three ternary labels and 6 use q indices 0/1/2 exactly once; the intersection uniquely gives (2,1,0) -> 120/012/102, so mutual route distinctness and route semantics are unnecessary premises |
+| 322 | full one-shot G6 selector-map audit: exhausts all 27 q=f(S) maps after the 20 G5 first-pass candidates; 8 maps give nonempty completion-invariant outputs, but maximum retention 14 is achieved only by 002 and identity 012, both yielding 100 on the exact same 14 machines and differing solely by the known S=1 f1 observational gauge |
 
 ## Current frontier
 
@@ -340,7 +341,7 @@ Latest indexed experiment: **321**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–321:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–322:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
