@@ -130,9 +130,9 @@
       "comments": true,
       "captions": true,
       "note": "Historical owner/unboxing video referenced by sticker ledger.",
-      "acquisition_status": "metadata-acquired",
-      "mining_status": "targeted-media-queued-manual",
-      "status_note": "L17 confirmed lost by owner; no symbol recorded. Source is only 172s, making a one-source visual pass justified. Use targeted manual media workflow rather than broad historical batch."
+      "acquisition_status": "metadata-acquired-lightweight-recon-launched",
+      "mining_status": "pending-lightweight-recon",
+      "status_note": "L17 / Kyle Hilliard. Historical metadata/thumbnail acquired. One-shot 144p whole-source reconnaissance launched as Actions run 36666370632; full-resolution media remains manual-dispatch only and should be acquired only if recon identifies a candidate sticker interval."
     },
     {
       "id": "youtube-ledger-08-d23bAqGtImo",
