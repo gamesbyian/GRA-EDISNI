@@ -406,3 +406,12 @@ Therefore:
 - the same audit confirms canonical **306 = dot** is also a deliberate later correction.
 
 This is a useful example of why frozen historical documents are excellent for chronology but can preserve superseded transcription errors.
+
+
+### Exact ordering anchors recovered from the archive
+
+The public \`#solving\` export contains matching historical discussion from 9 Jul 2018 with exact anchors. Message \`465922647662788609\` describes an "alternating interlaced pattern" that limits arrangements; \`465923442374344707\` calls the "distribution of margin slashes" a key feature; \`466023354214776832\` says the left/right patterns form six boundary patterns; \`466032381518807070\` says "The sides are the only thing that made this possible"; and \`466036574128439301\` explicitly calls the side marks "check-bits" used to line things up. Solvers change line order while trying to recover the image and ultimately recover the acorn/41 image. On 11 Jul the \`#tldr\` channel records the result as a deliberate rearrangement of the PC long strings.
+
+On **27 Jan 2022**, message \`936157143273443359\` explicitly asks whether the first nine rows could be arranged "as same as we did it acorn." A nearby restatement of the boundary-pixel idea is preserved at \`936154496030097418\`. These were exploratory suggestions, not demonstrated sticker solves.
+
+These anchors strengthen the historical claim narrowly: boundary structure and the earlier acorn ordering method were both available to sticker solvers before the present machine reconstruction.
