@@ -6,16 +6,53 @@ _Current queue begins after Experiment 240._
 
 Assume no new sticker will ever surface.
 
-The mechanical transducer is the current baseline. Do not reopen semantic fishing. Work should either:
+**The epistemic reset is now the top-level research program.** Follow `docs/sticker-epistemic-reset.md`. The existing mechanical transducer is a mature incumbent hypothesis family, not the default ontology for new work.
 
-1. reduce the supplied axioms further;
-2. prove uniqueness in a broader nearby family;
-3. expose a new completion-invariant native operation;
-4. improve reproducibility / independent verification;
-5. reconstruct the intended human solve with fewer assumptions;
-6. recover genuinely independent archival/manufacturing evidence;
-7. audit independently motivated external artifacts for an exact structural consumer of the solved machine.
+Before extending POS3, Q4, recursive routing, hidden-state, gauge, or terminal-`100` analysis, first ask whether a simpler operation is motivated by:
 
+1. direct sticker evidence;
+2. historically attested community solving;
+3. a mechanism demonstrably used elsewhere in the INSIDE ARG;
+4. a genuinely independent external artifact.
+
+Current priority order:
+
+1. reconstruct historical sticker-solving operations exactly, especially ordering/registration proposals and the "like the acorn" lineage;
+2. complete the operation-level corpus of solved neighboring ARG puzzles;
+3. inventory sticker-native side channels or registration metadata that could constrain ordering without model-filled cells;
+4. audit incumbent-machine premises as observation, historical motivation, generic prior, machine-selected condition, or independent derivation;
+5. run cheap discriminating tests across genuinely different hypothesis families;
+6. compare families on holdout/prospective evidence;
+7. only then resume deeper uniqueness hardening inside whichever families survive.
+
+Semantic fishing remains prohibited. Cross-puzzle precedents license **operation classes**, not free parameter searches or borrowed answers.
+
+
+### Reset work packages
+
+#### R1 — historical ordering and acorn-lineage reconstruction
+
+Recover every exact sticker-era proposal involving row/block reordering, side pixels, check-bits, alternating margins, "same layout", "same order", or "like the acorn". Reproduce the actual operations on observation-only H108 data and record whether an independently observed ordering cue exists.
+
+#### R2 — sticker-native boundary/registration inventory
+
+Inventory A-I class, serial phase, physical background position, alphabet-zone boundaries, packaging orientation, sticker placement, and any recoverable edge/seam/crop structure from canonical background masters. Do not use predicted foreground cells.
+
+#### R3 — solved-puzzle operation replay
+
+Test only historically demonstrated operation classes whose required parameters can be supplied independently. Preserve negative results. No broad visual-target optimization.
+
+#### R4 — incumbent assumption burn-down
+
+Classify every theorem-graph premise by evidentiary type. Any premise retained chiefly because it preserves the machine becomes a circularity-risk target.
+
+#### R5 — cross-family holdout comparison
+
+Reuse the holdout harness to compare distinct grammar families rather than only variants of the incumbent machine.
+
+#### R6 — expected-player-information audit
+
+Reconstruct what one owner, the pooled community, and later archivists could each have known. Test whether the puzzle may be globally simple but underdetermined in the surviving 82-sticker sample.
 
 ### Prediction-matrix operating rule
 
