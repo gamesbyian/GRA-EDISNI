@@ -1,0 +1,59 @@
+name: Preserve 846shEE evidence masters
+
+on:
+  push:
+    branches:
+      - chatgpt/background-tile-masters-2026-09-29
+    paths:
+      - "scripts/build_846shee_evidence_masters.py"
+      - ".github/workflows/preserve-846shee-evidence-masters.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preserve:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install image dependencies
+        run: python -m pip install --disable-pip-version-check numpy opencv-python-headless pillow
+
+      - name: Recover historical 846shEE source
+        run: |
+          mkdir -p archive/stickers/historical-composites
+          curl --fail --location --retry 3 \
+            https://i.imgur.com/846shEE.jpg \
+            --output archive/stickers/historical-composites/846shEE.jpg
+          test -s archive/stickers/historical-composites/846shEE.jpg
+
+      - name: Build evidence-preserving masters
+        run: |
+          rm -rf artifacts/background-tile-evidence-masters
+          python scripts/build_846shee_evidence_masters.py \
+            archive/stickers/historical-composites/846shEE.jpg \
+            --out artifacts/background-tile-evidence-masters
+
+      - name: Commit source and evidence masters
+        run: |
+          git add archive/stickers/historical-composites/846shEE.jpg \
+                  artifacts/background-tile-evidence-masters
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Preserve 846shEE evidence masters"
+          git push origin HEAD:${{ github.ref_name }}
