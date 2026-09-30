@@ -161,6 +161,24 @@
       "priority": 4,
       "canonical_handle_match": false,
       "next_action": "Do not pursue further unless the owner re-initiates contact."
+    },
+    {
+      "id": "hoodratthings4088-u45",
+      "author_handle": "@hoodratthings4088",
+      "author_channel_id": "UCSfDy7vqionpbw5Z8-eHexw",
+      "comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg",
+      "kind": "owner-claims-already-contributed-unresolved",
+      "claim": {
+        "owns_copy": true,
+        "says_contributed_codes_years_ago": true,
+        "sticker_identity_unknown": true
+      },
+      "photo_present": false,
+      "priority": 2,
+      "canonical_handle_match": false,
+      "canonical_unknown_entry": "U45",
+      "followup_comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg.Ab7HRDQrJ4FAbGYH8uwZ4m",
+      "next_action": "Resolve historical submission identity/name against old Discord and sticker provenance before contacting the owner again. Do not add an observation unless the prior contribution can be identified or a physical photo is obtained."
     }
   ]
 }
