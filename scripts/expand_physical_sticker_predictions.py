@@ -103,7 +103,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-serial", type=int, default=600)
     parser.add_argument("--csv", type=Path)
-    parser.add_argument("--unknown-only", action="store_true")
+    parser.add_argument("--unknown-only", action="store_true")\n    parser.add_argument(\n        "--state",\n        help="optional legal XYZG state; when supplied, emit a coherent complete master rather than modal per-cell consensus",\n    )
     args = parser.parse_args()
 
     observed_by_serial, observed_by_residue = read_observations()
@@ -122,13 +122,18 @@ def main():
             pred = None
         else:
             pred = predictions[residue]
-            preferred = pred["preferred_guess"]
-            alternate = pred["alternate_symbol"]
-            support = (
-                f'{pred["support_of_14"]}/14 canonical states'
-                if pred["canonical_class"] == "state-dependent"
-                else "14/14 canonical states"
-            )
+            if state_symbols is None:
+                preferred = pred["preferred_guess"]
+                alternate = pred["alternate_symbol"]
+                support = (
+                    f'{pred["support_of_14"]}/14 canonical states; modal consensus only'
+                    if pred["canonical_class"] == "state-dependent"
+                    else "14/14 canonical states"
+                )
+            else:
+                preferred = state_symbols[residue - 1]
+                alternate = ""
+                support = f"coherent canonical state {args.state}"
 
         category = (
             "physical_observation"
@@ -162,7 +167,7 @@ def main():
     unknown = [r for r in rows if r["tier"] != "OBSERVED"]
     from collections import Counter
     counts = Counter(r["tier"] for r in unknown)
-    print(f"range=1..{args.max_serial}")
+    print(f"range=1..{args.max_serial}")\n    print("completion=" + (f"coherent-state-{args.state}" if args.state else "modal-consensus"))
     print(f"physical_observations_in_range={sum(1 for s in observed_by_serial if s <= args.max_serial)}")
     print(f"unknown_physical_serials={len(unknown)}")
     for tier in ("A", "B", "C"):
