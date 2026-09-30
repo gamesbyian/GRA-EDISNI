@@ -1,146 +1,83 @@
 tile,serial,path,source_root,sha256,original_w,original_h,rectification,alignment_score,included,note
 A,037,archive/stickers/originals/037/037.jpg,archive/stickers,66b4371b1aa0b72ff4d5b2648b8bd28612f486d1a9af4a111d4377c969477df4,513,513,quad-p75,,0,alignment reject score=nan
-A,037,archive/stickers/originals/037/community-037.jpg,archive/stickers,9482f255d7ed392e08a9b7820760f471f749231e65c844d5033e1ca9b9779070,424,400,quad-p75,,0,alignment reject score=nan
 A,118,archive/stickers/originals/118/118.jpg,archive/stickers,bd206716318d6a7707c5fe39dc8f72b44f087261023120309a1455d743bdd562,1380,1116,quad-p65,0.021673,1,
-A,118,archive/stickers/originals/118/community-118.jpg,archive/stickers,2b76835e3145125e68132682b78aa585aa7a3065c4a5191e53605c3fa4dcf7c3,393,341,quad-p65,,0,alignment reject score=nan
 A,154,archive/stickers/originals/154/154.jpg,archive/stickers,1aa20df7c47986324a716bd704233dd12c44c7d5a3b44e988a3f2b0259c5ac0e,2735,3778,quad-p55,0.412811,1,
-A,154,archive/stickers/originals/154/community-154.jpg,archive/stickers,6987b517d1e9f2e850f9788981f133b580ab96267ba2e400c718bf496eb30305,513,465,quad-p75,0.179537,1,
 A,334,archive/stickers/originals/334/334.jpg,archive/stickers,9f86385f9bea968b82746f6eb415f4481033cc88f5d6691d83d7444fd901e631,513,513,quad-p75,0.039312,1,
 A,343,archive/stickers/originals/343/343.jpg,archive/stickers,838cee8e1569ed25e81eba133f738c99a6abbd5eaecc61a0083a099941654c34,1536,2048,quad-p55,0.304626,1,
-A,343,archive/stickers/originals/343/community-343.jpg,archive/stickers,af93f6bc0c03f6a8590644600162959cb7077eaf6680c7d356f7f4370f586215,405,401,quad-p55,0.049529,1,
 A,469,archive/stickers/originals/469/469.jpg,archive/stickers,9a755d73c0e588cac5d7cef99a5674886eaa5297af459c0cbb8e06179ace6b42,4032,2268,quad-p65,,0,quality reject: foreground symbol mask not confidently recovered
-A,469,archive/stickers/originals/469/community-469.jpg,archive/stickers,95fb222c570e1a7fedf6f5be1ce74513ea8a20c821f55752248ff877a57c52eb,290,233,quad-p65,,0,alignment reject score=nan
 A,478,archive/stickers/originals/478/478.jpg,archive/stickers,537185b1d094bd722fda7f56b8c575bcf8d8d4ab2e7f4e19113431054ed2fb95,1662,1712,quad-p65,1.000000,1,
 B,002,archive/stickers/originals/002/002.jpg,archive/stickers,f0a19fe8c34c947d0a848b7bfbcceeb57255a2634e9681e0170f7092dc8cc560,1276,1427,quad-p75,0.115895,1,
-B,002,archive/stickers/originals/002/community-002.jpg,archive/stickers,dd47bc7e53abfa377e6b3c4521c8ea780731a98e582ff422723f8799c0deb788,479,375,quad-p65,0.097631,1,
 B,020,archive/stickers/originals/020/020.jpg,archive/stickers,5937117d19b7351cd729a614f48a7622f941d5bcf08f11ae5f4575b03f707f7e,3024,4032,min-area-rect,,0,quality reject masked_fraction=0.740 std=41.10
-B,020,archive/stickers/originals/020/community-020.jpg,archive/stickers,f0b517f7f87a1e22073c773b160e15fbc9cf0618794a5746d8169d3d4976a4f1,378,379,min-area-rect,0.031840,1,
 B,038,archive/stickers/originals/038/038.jpg,archive/stickers,d873a59a5abd0f37716d53bccd413ec549fe8230f02f7bbd522d97cd0b287161,364,307,quad-p75,,0,quality reject: foreground symbol mask not confidently recovered
-B,038,archive/stickers/originals/038/community-038.jpg,archive/stickers,cc5d6a5aa07f98b307757d7ec20386e5712a5ffc68867ac378ed0e27657e392c,255,239,quad-p65,,0,quality reject: foreground symbol mask not confidently recovered
 B,047,archive/stickers/originals/047/047.jpg,archive/stickers,ac56c709035a9a7afde6c3354ab5486f3f689571b98fcf8a0c1fb22983138425,1473,1965,quad-p75,0.006338,0,alignment reject score=0.0063383245863480354
-B,047,archive/stickers/originals/047/community-047.jpg,archive/stickers,ce62de79df8978cbc1bc9d2bb798b53b9023c4444814457fa2f5f621db7bbccc,728,851,quad-p75,,0,alignment reject score=nan
 B,065,archive/stickers/originals/065/065.jpg,archive/stickers,7bec73595a716b15f702dcde8063b0027d511d223f12efd8e994380d4b1064d8,138,168,min-area-rect,,0,alignment reject score=nan
 B,092,archive/stickers/originals/092/092.jpg,archive/stickers,8bc510a1443f09558d0899e054eae1fac8751478c7235b9eb06a769a8ec5f476,2051,1740,min-area-rect,,0,quality reject: foreground symbol mask not confidently recovered
-B,092,archive/stickers/originals/092/community-092.jpg,archive/stickers,04f4f93c978944c3ab113558ed4dbf124d8da2bc870a9bb605a32c79c8a5b505,323,326,quad-p65,,0,alignment reject score=nan
 B,164,archive/stickers/originals/164/164.jpg,archive/stickers,426a9547256a629a0b01d527e820d27b69483736cc11e35a079f26b59b2669d1,1600,1330,quad-p75,0.026623,1,
-B,164,archive/stickers/originals/164/community-164.jpg,archive/stickers,ee057333a6867774ec6c9014d050058a27bf22e2c1b9d0cac4ad3e346e42b665,275,260,min-area-rect,0.032728,1,
 B,182,archive/stickers/originals/182/182.jpg,archive/stickers,550f4ec12160cba1578f2e3231bb91c2288ac98750ea503162656e6c41a62649,3840,2160,quad-p55,,0,alignment reject score=nan
-B,182,archive/stickers/originals/182/community-182.jpg,archive/stickers,6f1f08660afcaa9a57491c4c4895666b89ed1355a2f6672dc307776714152319,270,268,quad-p55,,0,alignment reject score=nan
 B,245,archive/stickers/originals/245/245.jpg,archive/stickers,5cc4a64affe59c62dca681ca1d31cd82cd2d1d1d5a60eb6c597af6db042761ee,1080,1920,quad-p65,,0,quality reject masked_fraction=0.551 std=41.68
-B,245,archive/stickers/originals/245/community-245.jpg,archive/stickers,9ff86a7a315ce28fce7fe23039f631cbec0dfcf6d7d49b554530e132d8f893ae,487,484,quad-p55,0.015910,1,
 B,263,archive/stickers/originals/263/263.jpg,archive/stickers,a3508d4e1d14122e4b6061d3784859561ed556d0315a99457b332ab0fe9d54b8,1200,900,quad-p65,1.000000,1,
-B,263,archive/stickers/originals/263/community-263.jpg,archive/stickers,8f7bfa76c05c33a038b4a229b22152ff3a38a828709637bbf5193b239c1abc2e,326,324,quad-p65,,0,alignment reject score=nan
 B,317,archive/stickers/originals/317/317.jpg,archive/stickers,849f2ffc88e67e9f209c757792a5f716555acdc89ca54cdbe758adaa89424d19,1179,1564,min-area-rect,,0,quality reject: foreground symbol mask not confidently recovered
 B,362,archive/stickers/originals/362/362.jpg,archive/stickers,115fedc1c0f898965f549da9358d5e4b1058f85799e8e0d42ac1813de797f87d,4032,1960,min-area-rect,,0,quality reject: foreground symbol mask not confidently recovered
-B,362,archive/stickers/originals/362/community-362.jpg,archive/stickers,e9730d0e72c1a207ac42cc68837fb23a499b5896bcb1cabb494dc2562a4ffb28,152,152,quad-p65,,0,alignment reject score=nan
 B,470,archive/stickers/originals/470/470.jpg,archive/stickers,cbad717bb29dec4a95cbcdd7f6943c4f277fae5cb60a30a687eff55e6e323302,1200,1600,quad-p55,,0,quality reject: foreground symbol mask not confidently recovered
 C,003,archive/stickers/originals/003/003.jpg,archive/stickers,b8b86c69b5d5cda6f586c84fa6f070646b9a208d7d83b2fee9d3dc16fb94022c,380,383,min-area-rect,0.085909,1,
-C,021,archive/stickers/originals/021/021.jpg,archive/stickers,9be44a631d572b6ee46ffa2b0fded611068bfd793e4bd99d94d47601d1626cee,209,265,quad-p55,,0,alignment reject score=nan
 C,021,archive/stickers/originals/021/021.png,archive/stickers,641b257bdb3532735417444815fa49e7aec680186a8840a619f5bf4980e64c26,967,1349,quad-p55,,0,alignment reject score=nan
-C,039,archive/stickers/originals/039/039.jpeg,archive/stickers,679c6cac95fb846c1fffa5b536114d4dae3235a079dc17abc91b4fa7eab0601b,563,470,quad-p75,,0,alignment reject score=nan
 C,039,archive/stickers/originals/039/039.jpg,archive/stickers,d00931f4ae7d349cd063d1a6e9f899494a9738e878498d42bd5c506546417fa6,684,513,min-area-rect,0.145854,1,
 C,066,archive/stickers/originals/066/066.jpg,archive/stickers,224eef030dfe7f2ca3fdcc2e96007c2320740ab89a79829f2371323b681d90ce,4032,3024,min-area-rect,1.000000,1,
-C,066,archive/stickers/originals/066/community-066.jpg,archive/stickers,b97dcd2a12434115b2d74fab65a88b32c0b94ad195ca6f2b393b267056c2bbb9,382,350,quad-p55,,0,alignment reject score=nan
 C,156,archive/stickers/originals/156/156.jpg,archive/stickers,ca388713221fae3dad0340ae9be8f37780a01c78ca07afa7e65ee6648b9565f7,1473,1965,min-area-rect,,0,alignment reject score=nan
-C,156,archive/stickers/originals/156/community-156.jpg,archive/stickers,8bf78569eeb9a9dadd3656ad19d10fa921dfac71301aa7f42063b1a43c7cab93,407,432,quad-p55,,0,alignment reject score=nan
 C,183,archive/stickers/originals/183/183.jpg,archive/stickers,4045e620954058910229d4757d1ecc0aa735e2efc8120496f7db635bfd52d042,423,326,quad-p75,0.013796,1,
-C,183,archive/stickers/originals/183/community-183.jpg,archive/stickers,9b4f6389b85446b44db2b5b666799d23e2a67f1e0622e38062f9ef930d4d7120,238,237,quad-p65,0.017282,1,
 C,282,archive/stickers/originals/282/282.jpg,archive/stickers,fc88fdb0e153995a59a779804bf92d684b5ae666e017830ebe13fdccb58dd8a2,1057,1225,quad-p55,,0,alignment reject score=nan
-C,282,archive/stickers/originals/282/community-282.jpg,archive/stickers,9618eadd3e8c2e7b454044da949aedf49b2ba0ef63fad73424c76a13ee146f80,528,545,quad-p55,,0,alignment reject score=nan
 C,336,archive/stickers/originals/336/336.jpg,archive/stickers,d9fac70caf2becf1beee99404cb17211f6d1bdde57f6b882a3a74e9afd86feac,500,500,quad-p65,,0,quality reject: foreground symbol mask not confidently recovered
 C,354,archive/stickers/originals/354/354.jpg,archive/stickers,df5a248c57781c400041dcf82e831dec6d27ccd7819be552dbff7c378495b359,1080,1920,quad-p65,,0,alignment reject score=nan
-C,354,archive/stickers/originals/354/community-354.jpg,archive/stickers,f3797ee7c804ef95b2681deab81044bbae538fcce14e3c125aabb7cbdcf09bdc,324,304,quad-p55,,0,alignment reject score=nan
 C,444,archive/stickers/originals/444/444.png,archive/stickers,b7eaff7403c88c5962973848c766bd0cfab03c71e8396d491010233ce157c94e,664,567,quad-p65,0.025718,1,
 C,597,archive/stickers/originals/597/597.png,archive/stickers,4d08153c0f9a5e8818ec8bfddb3de9639c65fcb7519d063ae2644b501e10ab41,235,254,min-area-rect,,0,alignment reject score=nan
-C,597,archive/stickers/originals/597/community-597.png,archive/stickers,b7fa05b51d963f711e52b57cdc8020859908bae0bc45a180c66e26fad70f8daf,151,151,quad-p65,,0,alignment reject score=nan
 D,184,archive/stickers/originals/184/184.jpg,archive/stickers,a4d7f783fdbd13cd2c682fb07cfff8773fd6fa21ddeb76ce832c796fcf8f8cd5,3840,2160,quad-p65,0.041631,1,
-D,184,archive/stickers/originals/184/community-184.jpg,archive/stickers,af7abe50826a50be4366d73d3426ea7b155bc1e3a69b6b88d595d87275d1ac9d,260,261,min-area-rect,,0,alignment reject score=nan
 D,193,archive/stickers/originals/193/193.jpg,archive/stickers,7191140401c8853cf7a2a7f19b583a981cf9a803181ba65ba2db1988e5c74e1e,371,343,min-area-rect,,0,alignment reject score=nan
-D,193,archive/stickers/originals/193/community-193.jpg,archive/stickers,1d82ef6de52655806c39593b04c897f166ccdf8453a778f5b2882060ea475100,210,209,quad-p55,,0,quality reject: foreground symbol mask not confidently recovered
 D,247,archive/stickers/originals/247/247.jpg,archive/stickers,f326350ecfbafe29629ba2c0c343372acb15398dfdfaedaa284e88fd1b0c0b06,2923,1659,quad-p55,,0,alignment reject score=nan
-D,247,archive/stickers/originals/247/community-247.jpg,archive/stickers,f5458f0c0a9b04e2a88f781abf67f38e53704d9980505f3c9868abed9a56a027,419,410,min-area-rect,,0,alignment reject score=nan
 D,328,archive/stickers/originals/328/328.jpg,archive/stickers,b94a20ea14e38dec0fe347000564503bd2001d0134e34e2c8b2f0deaef55b81b,1351,1739,quad-p55,0.063242,1,
-D,328,archive/stickers/originals/328/community-328.jpg,archive/stickers,302155f8a3cb88272f86c1dd26bb384064c777b295321790001f86d8f1a24d8e,433,442,quad-p55,0.056143,1,
 D,364,archive/stickers/originals/364/364.jpg,archive/stickers,4ca3156bcefdeb58534c5b29a7d362a2f34c3ec6c7e570cfbae0485b7c8fb40d,2448,3264,quad-p55,1.000000,1,
-D,364,archive/stickers/originals/364/community-364.jpg,archive/stickers,4b59d0c36e94610c016ea986a39dffb3021230459492776553800d7dcd9c6433,261,260,quad-p75,0.037225,1,
 D,436,archive/stickers/originals/436/436.png,archive/stickers,48e57790d3b2d84760f59528669cbf534d1078565db0a46d439ef2ef0a63ae7b,462,451,quad-p65,,0,alignment reject score=nan
 D,445,archive/stickers/originals/445/445.jpg,archive/stickers,03b6c3e1068a3c0ea8e719a96711aa92f6d35469d847dc78ac1479e7975c884d,1600,1200,min-area-rect,,0,quality reject: foreground symbol mask not confidently recovered
 E,032,archive/stickers/originals/032/032.jpg,archive/stickers,5f9b56f403f6c6394fdc83e1f6bb1fac923b8aa4f3f6c77089146a92ef0c21bb,2832,3721,quad-p55,0.113066,1,
-E,032,archive/stickers/originals/032/community-032.jpg,archive/stickers,7e30379bef535bdef33478b6e43c1b88206e22243f17c75b5fc4dcc27a5896c5,353,415,quad-p55,0.055747,1,
 E,059,archive/stickers/originals/059/059.jpg,archive/stickers,854a12d458dd72e73588b4d333deed33d098b3e06e441be5551770be16e23160,4032,3024,quad-p55,,0,alignment reject score=nan
-E,059,archive/stickers/originals/059/community-059.jpg,archive/stickers,92455e4ae6f595c20e5d54cd61604d4cad4937b88410fdef58ec5524aa692887,567,755,min-area-rect,0.100055,1,
 E,095,archive/stickers/originals/095/095.jpg,archive/stickers,aaff085d0b1a89967596fe59477ca141b60941f4cd967aabf0bf8999475cdc07,3264,2448,quad-p55,0.059488,1,
-E,095,archive/stickers/originals/095/community-095.jpg,archive/stickers,34710f93885e189e373d99e39a5453884ce8d95d40514d5a6469e4e806473d7d,536,540,min-area-rect,,0,alignment reject score=nan
 E,194,archive/stickers/originals/194/194.jpg,archive/stickers,69906727dc0211f785ef0f382bb7f8fd8bcecbfff99ac553c79246d3baddfa96,363,418,min-area-rect,,0,quality reject: foreground symbol mask not confidently recovered
-E,194,archive/stickers/originals/194/community-194.jpg,archive/stickers,cc7d6314954e5f6573136526a53b4f8dda25ec863933a222a5ab719674e7921c,192,184,quad-p55,,0,quality reject: foreground symbol mask not confidently recovered
 E,221,archive/stickers/originals/221/221.png,archive/stickers,745b9d0955ad71ed8ea46d74b033bd597bdbb326071ee92386edd00c49866905,262,314,quad-p65,,0,alignment reject score=nan
-E,221,archive/stickers/originals/221/community-221.png,archive/stickers,eab8f058f067698afabd9270721b0c649bd7fc230d81e64ce7d196444b080d3c,199,233,min-area-rect,,0,alignment reject score=nan
 E,248,archive/stickers/originals/248/248.jpg,archive/stickers,470dab118547a71c30c20a2fc94543d51792de19661f503bf1edf0c5fab382c4,2943,1872,quad-p75,,0,alignment reject score=nan
-E,248,archive/stickers/originals/248/community-248.jpg,archive/stickers,f6dd9873337d1c9f0ee17080a61bcf3fdd1386600381eaa2c8d23872fad01e4b,479,451,quad-p55,,0,alignment reject score=nan
 E,338,archive/stickers/originals/338/338.jpg,archive/stickers,a7062a664485b0c4297de072b3c207408e3040933a15e87ab9307a081236cca7,2048,1536,min-area-rect,1.000000,1,
-E,338,archive/stickers/originals/338/community-338.jpg,archive/stickers,617ce6c70247ace1b2ccbdf435e99cd5dcfe9fd855d238472bc0ac53eb9e79c8,460,461,quad-p75,0.014642,1,
 E,347,archive/stickers/originals/347/347.jpg,archive/stickers,867f9641171001b9cb8baefef3e8ced388d8f01fb87b7ee81dda268d353dc405,288,453,quad-p55,0.007444,0,alignment reject score=0.007444286789723565
-E,347,archive/stickers/originals/347/community-347.jpg,archive/stickers,8e0027e66b9dd06d6a7adfe2a3c871bb29d8473c3739b1fa4615a4772bdcb1cd,288,308,quad-p65,0.080466,1,
 F,123,archive/stickers/originals/123/123.jpg,archive/stickers,05a1bad06f23f3f0c887a84b34dd327cf529bb50c5cd81811a1f820d9d1972bf,2048,1536,quad-p55,1.000000,1,
-F,123,archive/stickers/originals/123/community-123.jpg,archive/stickers,99d6301f6b42614d8c782b7939b3dc44ff3e80404a793380bfbc14cbbbc2b97a,477,333,quad-p75,,0,alignment reject score=nan
-F,132,archive/stickers/originals/132/132.jpeg,archive/stickers,ad44c2dc2ddca9093bb33c7ff3c23c582a3db6711baf3f500a6c76faa4ffb58f,564,563,quad-p55,,0,alignment reject score=nan
 F,132,archive/stickers/originals/132/132.jpg,archive/stickers,2afb3d214ef416fb92de005ebab571705cb109f9851781a30a4214085f539bef,2257,2291,min-area-rect,,0,alignment reject score=nan
 F,231,archive/stickers/originals/231/231.jpg,archive/stickers,cfb2d1403445dabab129586fb99d7d402f30b97af4937dfbdb5bc12558def2f4,730,894,min-area-rect,0.238267,1,
-F,231,archive/stickers/originals/231/community-231.jpg,archive/stickers,b1617f155f43cb84b47af5fcc0af9943401ae32a85930abb7076535484676d74,571,547,min-area-rect,0.102698,1,
 F,258,archive/stickers/originals/258/258.jpg,archive/stickers,34529ecd443bac112f73637ddc73d68a03e50679a5af79f8549ab32272a18042,356,474,min-area-rect,0.069408,1,
-F,258,archive/stickers/originals/258/community-258.jpg,archive/stickers,bac127580b7c348ec302a0c64d1c501d75e50b9056c2b1e05c5d84a1d3b5021b,330,342,min-area-rect,,0,alignment reject score=nan
 F,267,archive/stickers/originals/267/267.jpg,archive/stickers,0640c8b37a521763b5fddb1ad2819f0b293c0f3318025a6be9beb86812309b83,385,513,min-area-rect,0.051952,1,
-F,267,archive/stickers/originals/267/community-267.jpg,archive/stickers,051485333a0f5c59b78e1edc5881588d166d65fcebde35b5e351c8d7de91f4e1,340,342,min-area-rect,,0,alignment reject score=nan
 F,312,archive/stickers/originals/312/312.png,archive/stickers,0b1cf2d33417d58fec608185e4bd245827f6cc0be33ec7c51f989b0d1405bf49,395,382,quad-p55,,0,alignment reject score=nan
 F,339,archive/stickers/originals/339/339.jpg,archive/stickers,122d1389536b6a133bc9772ba31426810a15355ec2542baa9b3d6ed40951206b,994,1226,quad-p65,,0,alignment reject score=nan
-F,339,archive/stickers/originals/339/community-339.jpg,archive/stickers,9ab936d81b009fcca6991fea5bde9f56ebcbdf1af139ca133fa7cc304d0a6337,397,398,quad-p65,,0,alignment reject score=nan
 F,366,archive/stickers/originals/366/366.jpg,archive/stickers,efeae2731e30ede9b7c80e857668351727aec4050af01e8d3c3fc72867f07801,1536,2048,quad-p55,,0,alignment reject score=nan
-F,366,archive/stickers/originals/366/community-366.jpg,archive/stickers,86837654a28a4d963e05a8f6bbf5d0d8859a5d53d5b7de57be8b7b9b1fda06f8,420,422,quad-p65,,0,alignment reject score=nan
 F,375,archive/stickers/originals/375/375.jpg,archive/stickers,105399775279d203792acd1c5a5f97fdd27b89e45b3cdd344c4f14e935f93ca6,1759,1433,min-area-rect,,0,alignment reject score=nan
-F,375,archive/stickers/originals/375/community-375.jpg,archive/stickers,438575c2d6cf4be061b95c0b6214321ba8466f07fd8c47eff46509ff886366b4,437,430,min-area-rect,,0,alignment reject score=nan
 F,384,archive/stickers/originals/384/384.png,archive/stickers,d151772491965aae34f24a4083d3a945650c5d2153027b5b4afe03c2393d424c,750,1125,quad-p55,0.075099,1,
-F,384,archive/stickers/originals/384/community-384.png,archive/stickers,d43b6a2d6d2fe0806be0184658d1f8bd373b5c4fbf9ff2eccfe69174bff969b4,300,342,min-area-rect,0.027690,1,
 F,393,archive/stickers/originals/393/393.jpg,archive/stickers,1c6f11b561bada19a2a86dbb48e81180fbeb7d2982e76311cb980f8e2fdfe86b,816,823,quad-p55,,0,alignment reject score=nan
 F,402,archive/stickers/originals/402/402.jpg,archive/stickers,8dde4af980221256e8826a74bd0a11ecc4486d5bf5ba832888a3944566ec3b9c,4000,3000,min-area-rect,,0,quality reject masked_fraction=0.785 std=39.79
-F,402,archive/stickers/originals/402/community-402.jpg,archive/stickers,ed54d9b60d6a4845c6e9696174721a8dd1c1427d0698b7b4e85fbb8114275763,441,376,quad-p55,,0,alignment reject score=nan
 G,097,archive/stickers/originals/097/097.jpg,archive/stickers,0e9b5c97eca68bdcc0cee2ae49fc7aca8fc37fd791dbc955281367fd209b2bf0,2976,3968,quad-p55,0.033027,1,
-G,097,archive/stickers/originals/097/community-097.jpg,archive/stickers,7c7bcf23a66671501bf96ffda1a1ed19984a058a380ae4ba523c9f3f4eade80e,562,603,quad-p55,0.158177,1,
 G,178,archive/stickers/originals/178/178.png,archive/stickers,26cb0bdf924e086b396aceebc9af1d0894feb951484a5d322d344410bf3870b1,625,589,quad-p55,0.093001,1,
-G,178,archive/stickers/originals/178/community-178.png,archive/stickers,5c3fa63c396a7d51abe6490a30fc263042edf0ff0472c5d57809fc90a0b28c9a,368,351,quad-p55,0.093398,1,
 G,187,archive/stickers/originals/187/187.jpg,archive/stickers,b613e8e2e6191f637e6cef1098dcfc1b30155f5116d461d4aca33c408049eb26,385,513,quad-p65,0.025959,1,
-G,187,archive/stickers/originals/187/community-187.jpg,archive/stickers,a1bb945a1c34b08e9c92ddb8c0e203847bb02fe50a5f96573d736ba8eb2e3d4d,300,290,quad-p55,0.018917,1,
 G,223,archive/stickers/originals/223/223.jpg,archive/stickers,817fdfdbec190341cb3832cfa8a404a1eb5855297339bae3b823bfb03d5c82b2,1600,1200,min-area-rect,,0,quality reject: foreground symbol mask not confidently recovered
 G,475,archive/stickers/originals/475/475.jpg,archive/stickers,473f8341c1e8ee376ce782f11a7262f501ca79e510e43ac2387fb98d8edc13df,3024,4032,min-area-rect,1.000000,1,
-G,475,archive/stickers/originals/475/community-475.jpg,archive/stickers,74834cb36dac27801eb81506c3568742345559b266be9414ad79dcc4b76ddc1d,354,354,min-area-rect,0.168311,1,
 H,053,archive/stickers/originals/053/053.jpg,archive/stickers,e9a30e96e5c22e89128c021972ab7e1dae43686757c787e9fdcb0980f2895035,3024,4032,min-area-rect,,0,quality reject: foreground symbol mask not confidently recovered
-H,053,archive/stickers/originals/053/community-053.jpg,archive/stickers,b79b9401305634f9642a4d40f86665daa25cd5447955636c178048d53c511a4e,451,604,min-area-rect,,0,quality reject: foreground symbol mask not confidently recovered
 H,125,archive/stickers/originals/125/125.jpg,archive/stickers,fef0d687f4424dd0e2533de4e8e25452ac2a25249ec7293c2c87da8b5f92ebc6,385,513,quad-p55,,0,alignment reject score=nan
-H,125,archive/stickers/originals/125/community-125.jpg,archive/stickers,8b268f9533dff1d50445a4da2957b40ea5db4a6d4ecb145a573a70fa314f08b8,360,376,quad-p55,,0,alignment reject score=nan
 H,179,archive/stickers/originals/179/179.png,archive/stickers,2afc990c698284959d16ceaf0564a63a45864e5339efda4efda847658f5ab8ce,595,608,quad-p55,0.075437,1,
-H,179,archive/stickers/originals/179/community-179.png,archive/stickers,2c80f133a24f920328c44434ea15382e21e85a7abfb4b2f428becde1cf543571,370,367,quad-p55,0.086538,1,
 H,206,archive/stickers/originals/206/206.jpg,archive/stickers,cb26ee0c214e36ba11efe219899c221be8a44f8186b481a8279e69ffc5a79164,385,514,quad-p75,,0,alignment reject score=nan
-H,206,archive/stickers/originals/206/community-206.jpg,archive/stickers,dffee5ac231cf4b75cd64c7a3dbbe19762de0232874e445c6417124c3138954f,359,357,quad-p65,,0,alignment reject score=nan
 H,242,archive/stickers/originals/242/242.jpg,archive/stickers,0b2df7648e8eb87c0ccf1aefdaa7cc6f22e65e57d64c230886f908cd50241b2c,414,393,min-area-rect,0.101351,1,
 H,296,archive/stickers/originals/296/296.jpg,archive/stickers,9c079f824602ced58a9a60791e6829fbc3c5bd0646c5d2e690919451463e9815,750,1000,min-area-rect,1.000000,1,
-H,296,archive/stickers/originals/296/community-296.jpg,archive/stickers,a501ddc47350d72b2c744fe3cd2ed754c15d2bff9aed7223d3226b2048da4217,300,325,quad-p65,0.067576,1,
 H,413,archive/stickers/originals/413/413.png,archive/stickers,ad4fba92d3acaee244c5330a661a750eb173eea6298d5e54aad9b171b3904f82,535,584,quad-p65,0.031194,1,
-H,413,archive/stickers/originals/413/community-413.png,archive/stickers,ddf1c84d1d412d15c0467c35f835ba89fc80fe861ee55de033374c07d2d2dd55,356,322,quad-p55,0.012916,1,
 H,449,archive/stickers/originals/449/449.jpg,archive/stickers,0d0a92b862bb9ea08985b654983f0c233682465c5374ec50c8c53c415b4a0e4e,1940,1958,min-area-rect,0.209397,1,
 H,476,archive/stickers/originals/476/476.jpg,archive/stickers,5b182f846106d8c4daab665a6f03e8c5629a09c6586807e029abb8a66076a80f,2252,4000,min-area-rect,,0,alignment reject score=nan
 I,063,archive/stickers/originals/063/063.webp,archive/stickers,86442394cbf1b509d364670c4df6f9f794a1d2be937c5aba73ecbfb58bc9bba2,1024,757,quad-p75,0.012825,1,
 I,072,archive/stickers/originals/072/072.jpg,archive/stickers,d10d7c3e5e4332ed37f8b1b44667a80654cbceda15824d373284fa3ee8260bd9,3024,4032,quad-p55,,0,quality reject: foreground symbol mask not confidently recovered
 I,126,archive/stickers/originals/126/126.jpg,archive/stickers,3628bc94ca52c8b50457fb2efc6afc7487820c50f3d0256f5fc35971688a1d4b,2440,1651,quad-p75,0.010132,1,
-I,126,archive/stickers/originals/126/community-126.jpg,archive/stickers,6806d182221f289707c0afc4922dd3fa8e8be955e8c2ce54a3586aa17337333d,392,355,quad-p65,0.002560,0,alignment reject score=0.0025597123558635656
 I,171,archive/stickers/originals/171/171.jpg,archive/stickers,fc1bde45ecc8c7504c81729c3ec4fdebd60af83e3c649630fce63a21eaa068db,3024,4032,min-area-rect,0.119893,1,
-I,171,archive/stickers/originals/171/community-171.jpg,archive/stickers,7d9d00ef7119a914bce117b306eed384cca9f01c84f4d957f6e347cba61e7006,454,492,min-area-rect,,0,alignment reject score=nan
 I,252,archive/stickers/originals/252/252.jpg,archive/stickers,3bef04635c774b552745a27621e2aa609e92b4109daad143dc9b511c9c893d1f,374,269,min-area-rect,,0,quality reject: foreground symbol mask not confidently recovered
-I,252,archive/stickers/originals/252/community-252.jpg,archive/stickers,abac0e3a79826acadec23520302de382b38360c38a715f7c9b282ff1d40c6c6c,203,203,quad-p55,,0,quality reject: foreground symbol mask not confidently recovered
 I,306,archive/stickers/originals/306/306.jpg,archive/stickers,eb8fa37303f44d74fd92a5162320ef252525308ee01c1f5fec9e9952968c7a31,750,843,min-area-rect,0.108412,1,
 I,324,archive/stickers/originals/324/324.jpg,archive/stickers,fecbe1a974191f6327c228921ffffff203dc00df7ed7af1e71b18fdfbcb52408,1536,2048,min-area-rect,1.000000,1,
-I,324,archive/stickers/originals/324/community-324.jpg,archive/stickers,c72dc9de628fb9d08773a87812561e3467ed3300d9a7298b7fe65f90e39f5835,420,560,min-area-rect,0.084223,1,
 I,333,archive/stickers/originals/333/333.jpg,archive/stickers,f445f534efb0e5c83dd68c71c4f0e1a6b8032f30c1fc9f1bf795f95b46909e45,333,274,quad-p75,,0,alignment reject score=nan
-I,333,archive/stickers/originals/333/community-333.jpg,archive/stickers,831aef5efd321564a53a62a53a22c7bf8adf4f5318e45cc35c11fbd236669ad3,248,234,quad-p65,,0,alignment reject score=nan
 I,405,archive/stickers/originals/405/405.jpg,archive/stickers,f46cfa8bab23c83f63bf806741ea7d0a3c97354ec26d031c4c910372637e570b,1758,2345,quad-p75,0.031651,1,
-I,405,archive/stickers/originals/405/community-405.jpg,archive/stickers,05bcd23e12e6ce4dc118570c4affcea8e52e037ae1ff7ad483031e2f4aadbe13,344,344,quad-p65,0.035365,1,
 I,450,archive/stickers/originals/450/450.jpg,archive/stickers,359eea29b6c8be18a7656c20e4130c8bf4fa48d452ae994735cd4892b3fff7e7,3000,4000,quad-p55,,0,quality reject: foreground symbol mask not confidently recovered
-I,450,archive/stickers/originals/450/450.png,archive/stickers,c5c118f0701330820c255f2803e626588ba1fb68dcb39e0079e98be17fbeeac0,655,607,quad-p65,0.083547,1,
