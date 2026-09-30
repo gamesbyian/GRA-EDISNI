@@ -335,6 +335,7 @@ Latest indexed experiment: **325**.
 | 323 | first cross-family Q4 holdout comparison: exact-one-slash tail-index-only reconstruction versus incumbent on the same 11 withheld observed Q4 residues; tail-only forces 3/11 and leaves 8 ambiguous, incumbent forces 10/11 and leaves 1 ambiguous, and neither family excludes any true symbol, so incumbent grammar is more constraining while the nonrecursive rival remains compatible |
 | 324 | expected-player-information audit: separates single-owner, pooled contemporary, retrospective, and present-archive information states; one owner has only one sticker fragment, early pooling solved the A-I background without near-complete collection, and the current 82-record/65-residue corpus still leaves 43 H108 cells physically unseen, arguing against assumptions that all ~600 or all 108 unique cells were required |
 | 325 | physical edge-channel observability audit: consensus background masters deliberately crop to x=10–90%, y=12–76% of the rectified sticker and discard the physical perimeter, while 846shEE masters are crops from an already assembled composite; existing seam continuity validates artwork registration but cannot test a second margin/check-bit channel, which remains unmeasured pending a full-photo perimeter-preserving audit |
+| 326 | observation-only 9x12 spatial-field audit: promotes the transposed 9+3 / collective 9x9+9x3 representation to a bounded hypothesis lane; among 54 known body cells (32 slash, 22 dash), same-symbol orthogonal adjacency is 30/64 edges in A-I order and 29/62 in IAB/CDE/FGH flattening, both mildly below fixed-mask permutation-null means (z about -0.65), so the raw known cells do not already form unusually large solid regions; geometric/Pigpen work remains live under explicit-unknown, bounded-transform and holdout discipline |
 
 ## Current frontier
 
@@ -344,7 +345,7 @@ Latest indexed experiment: **325**.
 - **221–235:** MDL/state burden, serial-address recursion/retractions, carrier symmetry, master generator, four-bit near-cube/Horn clause, primary route/cross normal form, common POS3 code, factorized storage.
 - **236–240:** bounded native-readout audit, single typed transducer, hidden-lookup audit / mechanical-completion checkpoint, live-ledger regression, final established-ARG consumer audit.
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
-- **250–325:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
+- **250–326:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
 ## Status shorthand
 
