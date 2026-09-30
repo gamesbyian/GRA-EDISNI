@@ -25,6 +25,10 @@ from typing import Iterable
 
 import cv2
 import numpy as np
+from PIL import Image, ImageFile, UnidentifiedImageError
+
+# Strict input policy: do not let Pillow silently accept truncated source photos.
+ImageFile.LOAD_TRUNCATED_IMAGES = False
 
 TILES = "ABCDEFGHI"
 SERIAL_RE = re.compile(r"(?<!\d)(\d{3})(?!\d)")
@@ -270,10 +274,21 @@ def main() -> int:
     samples = discover_images(args.roots)
     by_tile: dict[str, list[tuple[Sample, np.ndarray, np.ndarray]]] = {t: [] for t in TILES}
     for s in samples:
-        img = cv2.imread(str(s.path), cv2.IMREAD_COLOR)
-        if img is None:
-            s.note = "unreadable"
+        # Decode through Pillow first. This keeps harmless PNG metadata warnings
+        # away from libpng/OpenCV while rejecting truncated/corrupt image streams
+        # before they can contribute pixels to a consensus master.
+        try:
+            with Image.open(s.path) as probe:
+                probe.verify()
+            with Image.open(s.path) as src:
+                rgb = np.asarray(src.convert("RGB"))
+        except (UnidentifiedImageError, OSError, ValueError) as exc:
+            s.note = f"corrupt-image quarantine: {type(exc).__name__}: {exc}"
             continue
+        if rgb.size == 0:
+            s.note = "corrupt-image quarantine: empty decoded image"
+            continue
+        img = cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
         s.original_h, s.original_w = img.shape[:2]
         quad, method = detect_sticker_quad(img)
         s.rectification = method
