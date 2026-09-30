@@ -59,14 +59,15 @@ jobs:
           cp archive/research-files/h108_symbol_background_cell_stats.csv l14-tile-pack/
           cp archive/project-files/inside_tile_seam_metrics.csv l14-tile-pack/
           git clone --depth 1 --filter=blob:none --sparse https://github.com/twinysam/INSIDE-ARG.git /tmp/inside-arg
-          git -C /tmp/inside-arg sparse-checkout set images/stickers stickers.md
+          git -C /tmp/inside-arg sparse-checkout set images/stickers
+          git -C /tmp/inside-arg show HEAD:stickers.md > /tmp/stickers.md
           mkdir -p l14-tile-pack/reference-corpus
           cp -R /tmp/inside-arg/images/stickers l14-tile-pack/reference-corpus/
-          cp /tmp/inside-arg/stickers.md l14-tile-pack/reference-corpus/
+          cp /tmp/stickers.md l14-tile-pack/reference-corpus/stickers.md
           python - <<'PY'
           import csv, re
           from pathlib import Path
-          text = Path('/tmp/inside-arg/stickers.md').read_text(encoding='utf-8')
+          text = Path('/tmp/stickers.md').read_text(encoding='utf-8')
           rows = []
           rx = re.compile(r'^- \[(\d{3})\]\(([^)]+)\)\s+\(symb:\s*(\S+)\s+img:\s*(?:\[([A-I])\]\([^)]+\)|([A-I]))\)', re.M)
           for m in rx.finditer(text):
