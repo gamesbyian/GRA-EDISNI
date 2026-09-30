@@ -350,6 +350,52 @@
         "result": "The black wrapping and package contents are repeatedly visible, but no defensible numbered sticker face or symbol was recovered in the reviewed handling phase."
       },
       "disposition": "Do not re-download. Continue only from the existing artifact if later footage or historical context gives a specific reason; the high-probability unboxing window is already negative."
+    },
+    {
+      "id": "youtube-ledger-01-eXxklNxsVWw-owner-discovery-source",
+      "source_id": "youtube-ledger-01-eXxklNxsVWw",
+      "source_url": "https://www.youtube.com/watch?v=eXxklNxsVWw",
+      "status": "acquired-metadata-owner-discovery-source",
+      "evidence": {
+        "title": "The Top 10 Best Video Game Mysteries & Discoveries of 2025",
+        "uploader": "oddheader",
+        "upload_date": "2025-12-22",
+        "duration_seconds": 1163,
+        "canonical_context": "Canonical ledger says renewed attention from this video led owners to contribute physical stickers 072 and 476. It also records unresolved U45 from commenter @hoodratthings4088, who said they bought the CE to contribute but could not be matched to a submitted sticker."
+      },
+      "disposition": "Do not treat as an unboxing/frame-mining target. Its remaining value is comments/owner identity reconciliation, especially U45."
+    },
+    {
+      "id": "youtube-l17-Pbkq8Ey_s0k-targeted-media-candidate",
+      "source_id": "youtube-ledger-07-Pbkq8Ey_s0k",
+      "source_url": "https://www.youtube.com/watch?v=Pbkq8Ey_s0k",
+      "status": "metadata-acquired-targeted-media-justified",
+      "evidence": {
+        "title": "How To Turn A Basement Closet Into A Recording Booth",
+        "uploader": "Kyle Hilliard",
+        "upload_date": "2020-02-20",
+        "duration_seconds": 172,
+        "ledger_entry": "L17",
+        "canonical_context": "Canonical ledger ties Kyle Hilliard to a Collector's Edition later confirmed lost, but records no foreground symbol or serial."
+      },
+      "disposition": "A targeted full-media visual pass is justified because the source is short and L17 has no recorded symbol. Keep this as manual-dispatch acquisition rather than re-enabling broad automatic downloads."
+    },
+    {
+      "id": "youtube-l30-d23bAqGtImo-owner-recollection-only",
+      "source_id": "youtube-ledger-08-d23bAqGtImo",
+      "source_url": "https://www.youtube.com/watch?v=d23bAqGtImo",
+      "status": "metadata-acquired-owner-recollection-no-media-escalation",
+      "evidence": {
+        "title": "The Lost McDonald's Game Iceberg, explained",
+        "uploader": "Nick Robinson (Babylonian)",
+        "upload_date": "2020-12-06",
+        "duration_seconds": 913,
+        "ledger_entry": "L30",
+        "canonical_alias": "U20",
+        "cited_huddle_timestamp_seconds": 442,
+        "canonical_context": "The cited video only exposed ownership through the Huddle. Later owner contact confirmed the sticker was lost and the owner was about 90% sure its symbol was slash; this remains recollection, not physical sticker observation."
+      },
+      "disposition": "Do not download the 15-minute documentary for sticker frame mining absent a new timestamp showing the sticker itself. Preserve the slash statement as owner recollection only."
     }
   ]
 }
