@@ -398,8 +398,8 @@ The existing authenticated artifacts now support a targeted lost-entry forensic 
 
 Oddheader owner discovery now has a finite, provenance-stable shortlist rather than a generic comment-mining task:
 
-- 427 = dot, @Douleur873: unverified claim, no photo.
-- 369 = dot, @Byokugen: unverified claim, no photo.
+- 427 = dot, @Douleur873: unverified claim, no photo. Serial 427 maps to residue 103, where the frozen matrix is state-dependent and modally prefers dot (10/14 states), making a physical photo a useful hidden-state discriminator.
+- 369 = dot, @Byokugen: unverified claim, no photo. This is now the highest-value owner verification lead because serial 369 maps to H108 residue 45, while the frozen matrix predicts invariant dash there; a genuine dot photo would directly falsify part of the current reconstruction.
 - @HAL-iv2kd: says a newly bought CE sticker was discarded; remembers slash and thinks one serial digit was 4. Recollection only.
 - @time_travel_01: says they own an unopened CE.
 - @cultuschoco: says they bought a CE for themselves.
