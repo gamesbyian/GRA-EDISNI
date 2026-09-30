@@ -7,14 +7,33 @@
       "id": "inside-gaming-partial-sticker",
       "source_id": "youtube-inside-gaming-ce-unboxing",
       "source_url": "https://www.youtube.com/watch?v=AO2YQCl5qFM",
-      "status": "physical-symbol-visible-serial-occluded",
+      "status": "canonical-lost-entry-symbol-confirmed-serial-occluded",
       "evidence": {
         "historical_comment_pointer": "Ugx5oH02n8SWb57wKjV4AaABAg",
         "approximate_timestamp_seconds": 77.1,
         "source_window": "00:01:10-00:01:25",
-        "visual_result": "White CE sticker is visibly pinched in the presenter's fingers. The exposed printed mark is slash-like; the small serial-number region is occluded by fingers throughout the clearest native-frame sequence."
+        "visual_result": "White CE sticker is visibly pinched in the presenter's fingers. The exposed printed mark is slash-like; the small serial-number region is occluded by fingers throughout the clearest native-frame sequence.",
+        "ledger_entry": "L14",
+        "ledger_source": "twinysam/INSIDE-ARG stickers.md",
+        "ledger_note": "Canonical community ledger ties L14 to the Inside Gaming video plus Twitter handles Charalanahzard and mc_lotta; it records the visible symbol as slash and the sticker as probably lost, but gives no serial number.",
+        "native_analysis": {
+          "source_resolution": "1920x1080",
+          "source_frame_rate": "30000/1001",
+          "inspected_window": "approximately 74.0-78.5 seconds, including less-clear frames before and after the clearest slash view",
+          "methods": [
+            "native-frame extraction",
+            "nearest-neighbor and Lanczos enlargement",
+            "RGB-channel and grayscale inspection",
+            "contrast normalization and conservative sharpening",
+            "classical Richardson-Lucy deconvolution",
+            "perspective/geometry rectification attempts",
+            "ECC registration of adjacent sticker crops",
+            "temporal mean/median/percentile stacking"
+          ],
+          "result": "Slash is stable across frames. No stable numeral strokes are recovered. Comparison against a clean sticker layout places the expected serial-number zone under the presenter fingers throughout the useful sequence; faint marks elsewhere on the exposed white sticker are not in the expected serial position and are treated as compression/edge artifacts."
+        }
       },
-      "disposition": "Do not create a new serial observation. Preserve as lost-sticker symbol/provenance evidence and retain native frames."
+      "disposition": "Treat as canonical lost sticker L14 with symbol '/'; do not infer a serial from current YouTube frames. Highest-value next step is locating original/raw Inside Gaming footage or an alternate still/source, not stronger enhancement of geometrically occluded pixels."
     },
     {
       "id": "x-fernando-sticker-324",
