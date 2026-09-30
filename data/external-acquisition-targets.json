@@ -386,6 +386,107 @@
       "expected_git_blob_sha1": "349b818fce618ef55c404bedfb602b1d03f29a48",
       "suggested_filename": "saf_dat_col.html",
       "note": "Exact raw file; do not open/resave before verification."
+    },
+    {
+      "id": "youtube-iam8bit-making-of-reveal",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=8vG2A0BjMiY",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "captions": true,
+      "note": "Official iam8bit making-of / Collector's Edition contents reveal; preserve metadata and source media for packaging/provenance context."
+    },
+    {
+      "id": "instagram-mattpopcollector182",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/mattpopcollector182/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "CE-owner/account lead from archival queue; inspect relevant INSIDE posts and original media."
+    },
+    {
+      "id": "instagram-bathroomgamers",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/bathroomgamers/",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "CE-owner/account lead from archival queue; inspect relevant INSIDE posts and original media."
+    },
+    {
+      "id": "x-frmlssndmpty",
+      "kind": "twitter",
+      "url": "https://twitter.com/frmlssndmpty/status/1060390704269144064",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Historical owner/provenance lead; preserve original media and thread context."
+    },
+    {
+      "id": "x-fokfes",
+      "kind": "twitter",
+      "url": "https://twitter.com/Fokfes/status/1220198551172440069",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Historical owner/provenance lead; preserve original media and thread context."
+    },
+    {
+      "id": "x-surginis",
+      "kind": "twitter",
+      "url": "https://twitter.com/Surginis/status/1205049792268787712",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Historical owner/provenance lead; preserve original media and thread context."
+    },
+    {
+      "id": "x-sassyredgloves",
+      "kind": "twitter",
+      "url": "https://twitter.com/SassyRedGloves/status/1016890390413180928",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Historical owner/provenance lead; preserve original media and thread context."
+    },
+    {
+      "id": "x-nicelyneatly",
+      "kind": "twitter",
+      "url": "https://twitter.com/NicelyNeatly/status/1220526726863654912",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Historical owner/provenance lead; preserve original media and thread context."
+    },
+    {
+      "id": "x-nintendude794-2018",
+      "kind": "twitter",
+      "url": "https://twitter.com/nintendude794/status/1012886490962067456",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Historical owner/provenance lead; preserve original media and thread context."
+    },
+    {
+      "id": "x-nintendude794-2020",
+      "kind": "twitter",
+      "url": "https://twitter.com/nintendude794/status/1240503113611718656",
+      "public": true,
+      "priority": "high",
+      "media": true,
+      "comments": true,
+      "note": "Historical owner/provenance lead; preserve original media and thread context."
     }
   ]
 }
