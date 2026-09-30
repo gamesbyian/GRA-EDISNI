@@ -367,3 +367,20 @@ This plan is substantially implemented when:
 - new links can be surfaced automatically;
 - no authentication material is required in the repository;
 - high-value evidence can be traced from conclusion back to immutable source bytes.
+
+
+## 2026-09-29 mining checkpoint
+
+The historical acquisition sweeps have moved from “running” to a mined/manual-dispatch posture.
+
+- Historical CE full-media reconnaissance completed successfully for ledger videos 02, 03, 04, 05, 06, 09, 10, and 11. Preserve the existing Actions artifacts; do not repeat those multi-gigabyte downloads without a concrete new reason.
+- Ledger video 10 (`uP5nSeyac_o`) has been reviewed across its complete 6.683-second source at dense 0.25-second coverage and is negative for a visible numbered sticker.
+- Ledger video 03 (`fu7gmuJQKXM`) has been reviewed across the complete 388-second source at 2-second sampling and is negative for a defensible numbered-sticker view. Do not densify it without a candidate timestamp.
+- The lightweight historical metadata/thumbnail sweep successfully covered all eleven ledger videos. The iam8bit making-of/reveal remains age-restricted for the research account and should stay classified as blocked/authenticated rather than silently successful.
+- Public X extraction yielded original media for KaydHendricks, TheAnnaTheRed, hubalubalu, triplizard, ItsaMeFernando, MinnMax, frmlssndmpty, and nicelyneatly. Visual mining found no new sticker observation; the Fernando original independently confirms already-canonical 324 = slash.
+- Tiny status-only X outputs are not acquisitions. Instagram outputs from the public lane are login-required, and the VK lane produced no useful media.
+- Oddheader comment claims 427 = dot and 369 = dot remain quarantined as unverified owner claims pending physical-photo provenance.
+- L14 background-tile classification is intentionally paused. PR #61 owns the canonical A-I tile-master reconstruction; resume L14 classification only after those masters are available.
+- PR #56 remains the archival-intake/vendor owner. This branch should consume or hand off provenance, not duplicate its raw-source promotion decisions.
+
+Near-term mining order: finish reviewing the already-acquired CE recon artifacts before any new dense downloads; cross-reference Oddheader owner leads against canonical/Discord ownership history; then pursue only sources that can plausibly add a new physical sticker or owner provenance.
