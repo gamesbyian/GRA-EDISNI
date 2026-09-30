@@ -6,11 +6,13 @@ on:
       - chatgpt/background-tile-masters-2026-09-29
     paths:
       - "scripts/build_background_tile_masters.py"
+      - "scripts/collect_background_tile_sources.py"
       - ".github/workflows/build-background-tile-masters.yml"
       - "docs/background-tile-master-process.md"
   pull_request:
     paths:
       - "scripts/build_background_tile_masters.py"
+      - "scripts/collect_background_tile_sources.py"
       - ".github/workflows/build-background-tile-masters.yml"
       - "docs/background-tile-master-process.md"
   workflow_dispatch:
@@ -22,14 +24,14 @@ jobs:
   build:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
           fetch-depth: 0
 
-      - name: Acquire public sticker corpora
+      - name: Acquire community repositories
         shell: bash
         run: |
           mkdir -p .tmp/background-tile-sources
@@ -40,17 +42,35 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install image dependencies
-        run: python -m pip install --disable-pip-version-check numpy opencv-python-headless
+      - name: Install acquisition and image dependencies
+        run: python -m pip install --disable-pip-version-check numpy opencv-python-headless gallery-dl
+
+      - name: Expand source corpus from the community sticker ledger
+        continue-on-error: true
+        run: |
+          rm -rf .tmp/background-tile-corpus
+          python scripts/collect_background_tile_sources.py \
+            --community-repo .tmp/background-tile-sources/INSIDE-ARG \
+            --out .tmp/background-tile-corpus \
+            --harvest-web \
+            --timeout 25
 
       - name: Build registered consensus masters
         run: |
           rm -rf artifacts/background-tile-masters
           python scripts/build_background_tile_masters.py \
             . \
+            .tmp/background-tile-corpus \
             .tmp/background-tile-sources/INSIDE-ARG \
             .tmp/background-tile-sources/playdead-unofficial-exports \
             --out artifacts/background-tile-masters
+
+      - name: Preserve source acquisition manifest
+        if: always()
+        run: |
+          if [[ -f .tmp/background-tile-corpus/source-manifest.csv ]]; then
+            cp .tmp/background-tile-corpus/source-manifest.csv artifacts/background-tile-masters/source-manifest.csv
+          fi
 
       - name: Upload reconstruction bundle
         uses: actions/upload-artifact@v4
