@@ -476,3 +476,18 @@ Authenticated run `36667932888` captured **1,166 comments** from `eXxklNxsVWw` a
 The only clearly fresh CE-owner lead is `@PsychOsmosis` (`UCb4w58w_rLCmvYQLpGtKXQA`), who says they own an INSIDE Collector's Edition and may still have the original packaging somewhere. There is no reply/outreach in the captured thread, and exact-handle searches found no match in the current GRA-EDISNI corpus or the `gamesbyian/playdead-unofficial-exports` fork.
 
 The other high-signal ownership comment is `@hoodratthings4088`, already cross-referenced to canonical unresolved U45. No additional defensible serial/symbol claims were found in this snapshot.
+
+### #stickers-solving gap resolved
+
+The previously missing Discord channel is now publicly available upstream. `twinysam/playdead-unofficial-exports` commit `928242dc548e766e50c93f0bdcaa52ddbc7cfc42` (`Add #stickers-solving`, 2026-09-29) adds a 2,509-line transcript plus attached assets/scripts for channel `ARG / stickers-solving` (`1552077397493424272`).
+
+The user's fork predates that upstream commit, so the first mining pass used the immutable upstream commit directly rather than rewriting or disturbing the existing fork mining branches. Reconcile the fork separately when safe.
+
+First-pass durable results:
+
+- direct community provenance for the labeled background-piece order: `I A B / C D E / F G H`;
+- explicit contemporary discussion of the **9×12 manufacturing-sheet explanation** for H108/background-column structure, with a physical sticker measurement and backing-sheet description proposed as discriminating evidence;
+- an explicit methodological rejection of reconstructing lost physical sticker facts from owner memory/purchase geography alone;
+- a frozen historical prediction that stickers **197, 198, 200, 203, 205** should be dots under the then-current community model, with **200** named as the preferred discriminator. None currently has a canonical physical sticker row, so this remains genuinely prospective rather than retrospectively scored.
+
+The transcript also preserves the then-current 82-found / 42-lost / 35-open-owner snapshot and multiple hypothesis/negative-result discussions. Continue targeted mining for provenance, owner leads, manufacturing clues, and historical predictions; do not indiscriminately promote community models into current-project conclusions.
