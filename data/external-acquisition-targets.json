@@ -593,6 +593,16 @@
       "acquisition_status": "no-media-found",
       "mining_status": "canonical-lost-alias",
       "status_note": "Public sweep produced only a status artifact. Canonical ledger uses this later post to confirm L16/L11 owner identity and lost status."
+    },
+    {
+      "id": "twinysam-playdead-unofficial-exports-stickers-solving",
+      "kind": "github",
+      "url": "https://github.com/twinysam/playdead-unofficial-exports/commit/928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
+      "public": true,
+      "priority": "critical",
+      "acquisition_status": "acquired-upstream",
+      "mining_status": "mined-first-pass",
+      "status_note": "Upstream commit 928242dc added the previously missing #stickers-solving export: 2,509-line transcript plus attached assets/scripts. User fork predates the commit; exact upstream commit was mined directly to avoid disturbing active fork branches."
     }
   ]
 }
