@@ -1,10 +1,6 @@
 name: Critical YouTube media harvest
 
 on:
-  pull_request:
-    paths:
-      - "scripts/external_evidence/**"
-      - ".github/workflows/critical-youtube-media-harvest.yml"
   workflow_dispatch:
 
 permissions:
