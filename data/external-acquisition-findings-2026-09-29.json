@@ -562,6 +562,21 @@
         "cross_reference": "Exact handle search found no match in the current GRA-EDISNI corpus or gamesbyian/playdead-unofficial-exports."
       },
       "disposition": "Do not pursue further unless the commenter voluntarily supplies evidence."
+    },
+    {
+      "id": "oddheader-ambiguous-476-slash-comment",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "ambiguous-contradicted-comment",
+      "evidence": {
+        "comment_id": "UgwdOHTJHdTbs0jLSwV4AaABAg.Ab6jmVZExOSAb6lX6N2_Em",
+        "author_handle": "@DwellerFree",
+        "author_channel_id": "UCEvqsBLC0pPQfDoi_i43qbw",
+        "text": "476 /",
+        "context": "The text is a self-reply under an unrelated comment and does not explicitly say the author owns sticker 476.",
+        "canonical_cross_reference": "The current community ledger already has a provenance-backed physical photo for sticker 476 and records symbol '-' (background H), contributed by TheNinjaDefuse on 2025-12-23.",
+        "repository_cross_reference": "Exact handle search found no match in GRA-EDISNI or gamesbyian/playdead-unofficial-exports."
+      },
+      "disposition": "Do not promote or use as a competing observation. Treat the terse comment as ambiguous and contradicted by an existing physical-photo observation unless the commenter supplies a photo showing otherwise."
     }
   ]
 }
