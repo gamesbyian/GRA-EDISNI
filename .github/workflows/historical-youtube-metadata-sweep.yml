@@ -1,10 +1,6 @@
 name: Historical YouTube metadata sweep
 
 on:
-  pull_request:
-    paths:
-      - ".github/workflows/historical-youtube-metadata-sweep.yml"
-      - "data/external-acquisition-targets.json"
   workflow_dispatch:
 
 permissions:
