@@ -74,11 +74,14 @@ def main() -> int:
         raise SystemExit("no numbered sticker rows parsed from community ledger")
 
     originals=args.dest/"originals"
-    derived=args.dest/"derived"/"community-edited"
+    edited=args.dest/"derived"/"community-edited"
+    resized=args.dest/"derived"/"community-resized"
     if originals.exists(): shutil.rmtree(originals)
-    if derived.exists(): shutil.rmtree(derived)
+    if edited.exists(): shutil.rmtree(edited)
+    if resized.exists(): shutil.rmtree(resized)
     originals.mkdir(parents=True,exist_ok=True)
-    derived.mkdir(parents=True,exist_ok=True)
+    edited.mkdir(parents=True,exist_ok=True)
+    resized.mkdir(parents=True,exist_ok=True)
 
     records=[]
     seen_files=set()
@@ -93,8 +96,16 @@ def main() -> int:
             continue
         rel=path.relative_to(source_root)
         is_edited="edited" in rel.parts
-        category="derived-community-edit" if is_edited else "community-original"
-        outbase=derived if is_edited else originals/ f"{serial:03d}"
+        is_resized="resized" in rel.parts
+        if is_edited:
+            category="derived-community-edit"
+            outbase=edited
+        elif is_resized:
+            category="derived-community-resize"
+            outbase=resized
+        else:
+            category="community-original"
+            outbase=originals / f"{serial:03d}"
         outbase.mkdir(parents=True,exist_ok=True)
         # Preserve source filename; add a stable prefix only if a collision occurs.
         dest=outbase/path.name
@@ -140,6 +151,7 @@ def main() -> int:
         "ledger_serial_count":len(ledger),
         "community_original_files":sum(r["category"]=="community-original" for r in records),
         "community_edited_files":sum(r["category"]=="derived-community-edit" for r in records),
+        "community_resized_files":sum(r["category"]=="derived-community-resize" for r in records),
         "serials_with_original":len(represented),
         "serials_missing_original":missing,
         "rule":"Only manifest rows with canonical_input=yes are physical-photo inputs. Derived edits are reference-only.",
@@ -156,12 +168,13 @@ The seed corpus is the community-maintained `gamesbyian/INSIDE-ARG` fork. Its `s
 
 - `originals/<serial>/`: community-accepted source photographs. These are valid independent image-analysis inputs.
 - `derived/community-edited/`: historical community edits/crops/enhancements. These are useful references but are **not** independent observations.
+- `derived/community-resized/`: community-prepared resized/cropped copies of originals. These are registration aids only and are **not** independent observations.
 - `manifest.csv`: canonical machine-readable inventory and provenance.
 - `inventory.json`: coverage summary.
 
 Future independently recovered photographs should be added as new manifest rows only after their physical serial association is verified. Byte-identical mirrors should add provenance, not duplicate observational weight.
 
-Current seed coverage: **{len(represented)} / {len(ledger)} ledger serials** with at least one community original; **{sum(r["category"]=="community-original" for r in records)} original files** and **{sum(r["category"]=="derived-community-edit" for r in records)} community-derived files**.
+Current seed coverage: **{len(represented)} / {len(ledger)} ledger serials** with at least one community original; **{sum(r["category"]=="community-original" for r in records)} original files**, **{sum(r["category"]=="derived-community-edit" for r in records)} edited derivatives**, and **{sum(r["category"]=="derived-community-resize" for r in records)} resized derivatives**.
 
 Future analysis must read `manifest.csv`. Recursive filename guessing is prohibited.
 """
