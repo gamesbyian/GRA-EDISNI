@@ -468,3 +468,11 @@ The same reusable lane is now being applied to L30 / `d23bAqGtImo`, whose Huddle
 The YouTube comment workflow is now single-target rather than a fixed two-video matrix. It supports the 2025 Oddheader roundup (`eXxklNxsVWw`), Inside Gaming, and the 2026 Oddheader mystery video, with manual dispatch for future refreshes.
 
 The 2025 Oddheader roundup is a high-value owner-discovery source because its historical comments already led to physical sticker observations 072 and 476 plus unresolved U45. A fresh authenticated comment snapshot is therefore being mined for additional owner claims, serial/symbol reports, or replies that resolve U45. Current run: `36667932888`.
+
+### 2025 Oddheader comment snapshot result
+
+Authenticated run `36667932888` captured **1,166 comments** from `eXxklNxsVWw` and was mined for ownership, sticker, serial, symbol and packaging language.
+
+The only clearly fresh CE-owner lead is `@PsychOsmosis` (`UCb4w58w_rLCmvYQLpGtKXQA`), who says they own an INSIDE Collector's Edition and may still have the original packaging somewhere. There is no reply/outreach in the captured thread, and exact-handle searches found no match in the current GRA-EDISNI corpus or the `gamesbyian/playdead-unofficial-exports` fork.
+
+The other high-signal ownership comment is `@hoodratthings4088`, already cross-referenced to canonical unresolved U45. No additional defensible serial/symbol claims were found in this snapshot.
