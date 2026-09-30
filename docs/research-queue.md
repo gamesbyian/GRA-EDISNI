@@ -16,6 +16,23 @@ The mechanical transducer is the current baseline. Do not reopen semantic fishin
 6. recover genuinely independent archival/manufacturing evidence;
 7. audit independently motivated external artifacts for an exact structural consumer of the solved machine.
 
+
+### Prediction-matrix operating rule
+
+The frozen H108 prediction matrix is now part of normal research operations. Before assigning value to any newly found sticker lead, video frame, owner report, auction image, archival photograph, or historical claim, consult `docs/prediction-matrix-process.md` and classify the physical serial by H108 residue, confidence tier, and research role.
+
+Prioritize evidence that can discriminate a live question:
+
+- broad-family invariant unseen residues are hard model tests;
+- residues 6/8 and 41/45 discriminate the primary physical gauge;
+- Q4 A/C cells discriminate physical polarity gauges;
+- the coupled F+I support discriminates the broader route-degenerate branch;
+- the 13 latent-register residues discriminate among the 14 coherent hidden states;
+- repeats of already observed residues are controls, not equivalent to new structural cells.
+
+For genuinely new evidence, freeze and record the matrix prediction **before** inspecting or promoting the foreground classification. Preserve contradictions rather than immediately repairing the model. The matrix is both a prospective-validation ledger and an acquisition information-value map.
+
+
 ## Priority 1 — broaden uniqueness audits
 
 The current mechanical model is compact, but some uniqueness statements remain conditional on declared native families.
