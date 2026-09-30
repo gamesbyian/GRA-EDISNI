@@ -132,6 +132,8 @@ Use solved or substantially solved ARG components as a design-vocabulary corpus.
 | macOS poem overlay | registered text overlay | select letters at dots | in-world poem | phrase | precedent for externally supplied text before extraction |
 | CE background layer | collect nine image classes | assemble `IAB/CDE/FGH` | sticker serial/image class | path `dat/534brn9653f9j8mmd` | direct same-object precedent |
 
+A separate **candidate**, not a solved component, now matters for the foreground: the March-2021 sticker discussion maps the CE sleeve's dot-left/dash-right/slash-top geometry onto the secret-ending lever, supplying `.=left, -=right, /=up`. Experiment 342 closes direct replay of the already-known bunker password but licenses the broader lever-consumer family whenever an independent ordering/subset cue is available.
+
 ## Simplicity test for every live hypothesis
 
 A candidate should be documented against these questions before expensive expansion:
