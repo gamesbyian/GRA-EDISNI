@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-29",
+  "purpose": "Durable findings from PR #57 acquisition/mining. Claims remain provenance-scoped unless promoted into canonical observations by the normal evidence process.",
+  "findings": [
+    {
+      "id": "inside-gaming-partial-sticker",
+      "source_id": "youtube-inside-gaming-ce-unboxing",
+      "source_url": "https://www.youtube.com/watch?v=AO2YQCl5qFM",
+      "status": "physical-symbol-visible-serial-occluded",
+      "evidence": {
+        "historical_comment_pointer": "Ugx5oH02n8SWb57wKjV4AaABAg",
+        "approximate_timestamp_seconds": 77.1,
+        "source_window": "00:01:10-00:01:25",
+        "visual_result": "White CE sticker is visibly pinched in the presenter's fingers. The exposed printed mark is slash-like; the small serial-number region is occluded by fingers throughout the clearest native-frame sequence."
+      },
+      "disposition": "Do not create a new serial observation. Preserve as lost-sticker symbol/provenance evidence and retain native frames."
+    },
+    {
+      "id": "x-fernando-sticker-324",
+      "source_id": "x-itsamefernando",
+      "source_url": "https://twitter.com/ItsaMeFernando/status/1266191839104692224",
+      "status": "independent-confirmation",
+      "evidence": {
+        "media_filename": "1266191839104692224_1.jpg",
+        "serial": 324,
+        "symbol": "/",
+        "note": "Original-resolution public photo clearly shows CE sticker 324 with slash on the black-wrapped game."
+      },
+      "disposition": "Already present in canonical observations; use as independent provenance/photo confirmation, not a new row."
+    },
+    {
+      "id": "oddheader-claim-427",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "source_url": "https://www.youtube.com/watch?v=ZqYhhptmhmo",
+      "status": "unverified-owner-claim",
+      "evidence": {
+        "comment_id": "Ugx-aLQYmmJA6RKJAtN4AaABAg",
+        "claimed_serial": 427,
+        "claimed_symbol": ".",
+        "photo_present": false
+      },
+      "disposition": "Keep quarantined until a provenance-backed physical photo is obtained."
+    },
+    {
+      "id": "oddheader-claim-369",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "source_url": "https://www.youtube.com/watch?v=ZqYhhptmhmo",
+      "status": "unverified-owner-claim",
+      "evidence": {
+        "comment_id": "UgyYote2bg23cfKNwpZ4AaABAg",
+        "claimed_serial": 369,
+        "claimed_symbol": ".",
+        "photo_present": false,
+        "followup_comment_id": "UgyYote2bg23cfKNwpZ4AaABAg.Ab4GZ0uFxbcAbGge2CQqJI"
+      },
+      "disposition": "Keep quarantined until a provenance-backed physical photo is obtained."
+    },
+    {
+      "id": "oddheader-owner-lead-unopened-1",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead",
+      "evidence": {
+        "comment_id": "UgzFs6_zSD3eV3V73nt4AaABAg",
+        "note": "Commenter states they own an unopened Collector's Edition; a reply explains the sticker can be photographed after opening only the shipping box."
+      },
+      "disposition": "Potential outreach/manual follow-up."
+    },
+    {
+      "id": "oddheader-owner-lead-copy-2",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead",
+      "evidence": {
+        "comment_id": "UgyOwdnmkkeDWUPvrQV4AaABAg",
+        "note": "Commenter states they bought the Collector's Edition; replies request a sticker photo."
+      },
+      "disposition": "Potential outreach/manual follow-up."
+    },
+    {
+      "id": "oddheader-owner-lead-unopened-3",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead",
+      "evidence": {
+        "comment_id": "UgzXd5SXuH-Z1GFWUaV4AaABAg",
+        "note": "Commenter states they have a copy but do not want to open it; reply explains only the outer shipping box needs opening."
+      },
+      "disposition": "Potential outreach/manual follow-up."
+    },
+    {
+      "id": "oddheader-owner-lead-already-contributed",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-existing-contribution",
+      "evidence": {
+        "comment_id": "UgySYmPpNBDSzRyeX2d4AaABAg",
+        "note": "Commenter says they already contributed their sticker to the puzzle."
+      },
+      "disposition": "Cross-reference historical ledger/Discord before contacting; likely already represented."
+    }
+  ]
+}
