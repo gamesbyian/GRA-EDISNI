@@ -282,10 +282,10 @@ Snapshot: 2026-09-29. This section is the execution-facing status surface for PR
 ### Do now in PR #57
 
 - **Inside Gaming CE unboxing:** full media has been acquired successfully. A preserved historical YouTube comment explicitly points to **1:17** as the sticker moment, so current visual mining is now bounded around that timestamp rather than whole-video scanning. Generate a fine reconnaissance window first, then extract every native frame only across the smallest confirmed sticker-visible interval.
-- **Historical YouTube ledger corpus:** harvest metadata/thumbnails first for all remaining ledger videos plus the official iam8bit making-of/reveal; then acquire media/comments where they can add owner/sticker provenance.
-- **Public social corpus:** run the public extractor across all X/Twitter, Instagram, and VK targets; preserve successful originals and classify blocked/no-media targets for manual follow-up.
+- **Historical YouTube ledger corpus:** metadata/description/thumbnail sweep is complete for the 11 ledger videos. The separate iam8bit making-of/reveal is age-restricted for the current research account and remains unresolved. Next, acquire full media only for the actual CE unboxing videos and generate reconnaissance frames; skip unrelated ledger references unless their metadata gives a concrete reason.
+- **Public social corpus:** first broad sweep is complete. Several X/Twitter targets yielded original media and metadata; all Instagram post attempts resolved to login-required and remain manual/authenticated-browser work; VK produced no useful media in the public lane. Continue mining the successful X originals and do not count tiny classification-only artifacts as acquisitions.
 - **Lead discovery:** run URL/account discovery over every acquired text/JSON/caption/comment artifact and reconcile new leads into the manifest after review.
-- **Oddheader comments:** preserve comment snapshots for owner discovery. The video itself is human-reviewed negative for unknown sticker imagery.
+- **Oddheader comments:** a full authenticated snapshot is now preserved (3,173 comments in the mined run). It surfaced fresh owner leads plus the unverified 427=dot and 369=dot claims; both remain quarantined until physical photos exist. The video itself is human-reviewed negative for unknown sticker imagery.
 
 ### Already acquired / resolved enough to stop reacquiring
 
