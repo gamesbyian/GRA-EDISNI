@@ -265,6 +265,62 @@
         "ledger_note": "The canonical community ledger already ties this video to physical sticker 221 = slash, background E."
       },
       "disposition": "Do not spend acquisition budget re-proving this source unless provenance quality becomes a separate need."
+    },
+    {
+      "id": "oddheader-claim-hal-lost-slash-digit4",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "source_url": "https://www.youtube.com/watch?v=ZqYhhptmhmo",
+      "status": "unverified-owner-recollection-sticker-lost",
+      "evidence": {
+        "comment_id": "UgzXxCS28QQt4hcvWoZ4AaABAg",
+        "author_handle": "@HAL-iv2kd",
+        "author_channel_id": "UCZbi6R8qAoGbjC1Aj9qfzpA",
+        "claim": "Commenter says they had bought the Collector's Edition the previous day, discarded the packaging before learning the sticker mattered, remembers the symbol as slash, and thinks the three-digit serial contained a 4.",
+        "claimed_symbol": "/",
+        "uncertain_serial_constraint": "one of the three digits may have been 4",
+        "photo_present": false,
+        "cross_reference": "Exact handle not found in the current canonical sticker-ledger snapshot."
+      },
+      "disposition": "Quarantine as recollection only. It may become a weak candidate filter if a future independently-supported serial set is being compared, but must not be treated as a physical observation."
+    },
+    {
+      "id": "oddheader-owner-lead-friend-unopened-bobdole480",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-third-party-unopened",
+      "evidence": {
+        "comment_id": "UgwiiwMGiD61Dz5vsdx4AaABAg",
+        "author_handle": "@BOBDOLE480",
+        "author_channel_id": "UC9lO5UDFTY9ZqplWBld6T3g",
+        "note": "Commenter says a friend owns an unopened INSIDE Collector's Edition and does not want to open it. Raezores replied explaining that only the outer shipping box must be opened to photograph the sticker.",
+        "cross_reference": "Exact handle not found in the current canonical sticker-ledger snapshot."
+      },
+      "disposition": "Potentially high-value owner lead if the friend remains reachable; no sticker information yet."
+    },
+    {
+      "id": "oddheader-owner-lead-sealed-blorbious",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-sealed",
+      "evidence": {
+        "comment_id": "UgwnDBA9IGWLPKNX1UV4AaABAg",
+        "author_handle": "@Blorbious",
+        "author_channel_id": "UCLvEYIOZLdxJVtmUdtdUs9Q",
+        "note": "Commenter says they have a sealed box and are debating opening it. Raezores explained that the outer shipping box can be opened without opening the Collector's Edition contents.",
+        "cross_reference": "Exact handle not found in the current canonical sticker-ledger snapshot."
+      },
+      "disposition": "High-value owner lead pending response/photo; no outreach should assume the sticker is new until canonical/Discord history is checked."
+    },
+    {
+      "id": "oddheader-owner-lead-jakeduggins-refused",
+      "source_id": "youtube-oddheader-2026-mystery",
+      "status": "owner-lead-declined",
+      "evidence": {
+        "comment_id": "Ugz_zYCyGQvDJyhHFYt4AaABAg",
+        "author_handle": "@jakeduggins5141",
+        "author_channel_id": "UC-fobxwELbVoAYIUWR05U0g",
+        "note": "Commenter said 'I have a copy with the card contact me' but replied 'nope' to both Raezores and NeoRadiation when asked for the sticker symbol/number/photo.",
+        "cross_reference": "Exact handle not found in the current canonical sticker-ledger snapshot."
+      },
+      "disposition": "Do not prioritize further outreach absent a new invitation from the owner."
     }
   ]
 }
