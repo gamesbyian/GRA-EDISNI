@@ -16,7 +16,7 @@ This plan complements the external-corpus intake work in PR #56 and the Discord 
 2. **Derived artifacts remain reproducible.** Contact sheets, crops, frame ranks, OCR hints, screenshots, and metadata are generated from preserved originals and must identify their source.
 3. **Verification beats file presence.** Known Git objects are verified with Git blob SHA-1, not plain-file SHA-1. Other files should receive SHA-256 and byte-size records.
 4. **Acquisition failure is data.** Login-required, removed, redirected, extractor-broken, geo-blocked, and rate-limited results should be recorded explicitly instead of disappearing from the queue.
-5. **Authentication stays local/self-hosted.** Do not commit cookies, browser profiles, Playwright storage-state files, passwords, or session tokens. Public GitHub-hosted runners are for public acquisition only.
+5. **Authentication is least-privilege and ephemeral.** Personal browser sessions stay local/self-hosted. A dedicated research-only account may supply a narrowly scoped cookie jar to GitHub Actions through an encrypted repository secret when needed; it is materialized only in runner temporary storage, never committed or uploaded as evidence. Passwords, personal browser profiles, Playwright storage-state files, and unrelated session tokens never enter Actions.
 6. **Automation assists interpretation; it does not manufacture evidence.** OCR, image embeddings, sharpening, super-resolution, and ranking may prioritize human review but are never themselves proof of a sticker number or symbol.
 7. **Do not overwrite history.** Each acquisition creates a timestamped record. Subsequent runs may diff against prior snapshots.
 8. **Discovery is recursive.** Newly collected captions, comments, descriptions, HTML, and metadata should be mined for previously untracked URLs, usernames, post IDs, video IDs, and quoted/replied accounts.
@@ -35,7 +35,7 @@ Suitable for:
 - lead discovery from acquired text/JSON;
 - artifact upload for later review.
 
-GitHub-hosted runs must not receive personal Facebook/Instagram/X browser sessions.
+GitHub-hosted runs must not receive personal Facebook/Instagram/X browser sessions. The one current exception is the dedicated research-only YouTube cookie secret used to cross YouTube's anti-bot gate; it is not tied to the user's personal account and is never written into the evidence artifact.
 
 ### Local or self-hosted authenticated lane
 
@@ -274,6 +274,37 @@ Never commit or upload:
 Use ignored local paths such as `.evidence-private/` and `playwright/.auth/`.
 
 If a self-hosted runner is later added, isolate it from unrelated repositories and avoid exposing personal browser state to arbitrary PR code.
+
+## Live acquisition status and ownership
+
+Snapshot: 2026-09-29. This section is the execution-facing status surface for PR #57. PR #56 owns archival intake/vendor decisions and is being actively updated by another agent; do not duplicate that work here.
+
+### Do now in PR #57
+
+- **Inside Gaming CE unboxing:** authenticated full-media harvest is active now. When the artifact lands, locate the partially visible lost sticker, extract a bounded dense native-frame window, preserve all source frames, and generate review aids.
+- **Historical YouTube ledger corpus:** harvest metadata/thumbnails first for all remaining ledger videos plus the official iam8bit making-of/reveal; then acquire media/comments where they can add owner/sticker provenance.
+- **Public social corpus:** run the public extractor across all X/Twitter, Instagram, and VK targets; preserve successful originals and classify blocked/no-media targets for manual follow-up.
+- **Lead discovery:** run URL/account discovery over every acquired text/JSON/caption/comment artifact and reconcile new leads into the manifest after review.
+- **Oddheader comments:** preserve comment snapshots for owner discovery. The video itself is human-reviewed negative for unknown sticker imagery.
+
+### Already acquired / resolved enough to stop reacquiring
+
+- **Terminal 41 saf_dat_col.html:** exact 1,986,163-byte upstream file is acquired and verified against Git blob SHA-1 349b818fce618ef55c404bedfb602b1d03f29a48.
+- **iam8bit CE unboxing (zhCdGdqCIRU):** authenticated metadata/description/thumbnail acquisition works. Human review says the video contains no unknown sticker information, so no further frame archaeology is planned absent a new concrete reason.
+- **Oddheader 2026 video:** authenticated metadata/caption/comment acquisition works. Human review says the video contains no unknown sticker information; retain it for owner/comment provenance only.
+- **YouTube auth/tooling:** dedicated research-account cookies plus Node/EJS challenge solving work on GitHub-hosted Actions.
+- **Public X proof-of-path:** the KaydHendricks status has successfully yielded original media and metadata; expand this to the rest of the X queue.
+
+### Human-only / external dependency
+
+- **Facebook groups/posts:** logged-in group search and original-media preservation remain human-browser work. The Limited Printed Games group is highest priority because sticker #002 came from there.
+- **#stickers-solving Discord export:** absent from the current 1.7 GB public export. Acquire only if moderators/community can provide it; this is the largest remaining Discord corpus gap.
+- **Production-side source material:** outreach to iam8bit/Playdead/packaging vendors for variable-data sticker source files, proof sheets, scripts, or imposition assets remains potentially transformative but is not an automated scraping task.
+- **BigDusty local-only artifacts:** Tier 29 scripts/logs and the claimed 42x42 Sleep BMP remain external recovery targets unless PR #56 acquires them first.
+
+### PR #56 archival lane, do not duplicate while active
+
+PR #56 owns the canonical external archive, canonical binary-asset manifest, Terminal 41 transmission PNG/sticker-binary acquisition, BigDusty archive archaeology, and decisions about which acquired originals belong in Git versus workflow artifacts/external storage. PR #57 should hand it verified acquisition outputs and provenance rather than independently vendoring the same assets.
 
 ## Implementation phases
 
