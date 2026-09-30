@@ -407,6 +407,10 @@ Therefore:
 
 This is a useful example of why frozen historical documents are excellent for chronology but can preserve superseded transcription errors.
 
+A full semantic delta audit sharpens that conclusion. The legacy Google Doc currently contains **73 parseable sticker observations**; all 73 serials are present in canonical \`data/observations.csv\`. Comparing symbol plus A–I image class across the complete overlap finds **exactly one disagreement: 597**. The nine canonical observations absent from the old sheet are later additions: \`63, 72, 223, 317, 393, 444, 445, 470, 476\`.
+
+So the legacy sheet is a strong historical snapshot rather than a generally noisy source. Its only current overlap conflict is the explicitly corrected 597 symbol.
+
 
 ### Exact ordering anchors recovered from the archive
 
