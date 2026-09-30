@@ -32,11 +32,19 @@ Semantic fishing remains prohibited. Cross-puzzle precedents license **operation
 
 #### R1 — historical ordering and acorn-lineage reconstruction
 
-Recover every exact sticker-era proposal involving row/block reordering, side pixels, check-bits, alternating margins, "same layout", "same order", or "like the acorn". Reproduce the actual operations on observation-only H108 data and record whether an independently observed ordering cue exists.
+**Initial reconstruction completed 30 Sep 2026.** See `docs/historical-ordering-acorn-lineage.md` and `data/historical-ordering-operations.json`.
+
+Key result: the PC/acorn lineage is specifically boundary-constrained ordering -> coherent acorn+41 -> externally cued Game-of-Life transform. Sticker-era discussion independently treated the slash/dot tail as a likely visual aid/barrier and, by May 2026, proposed a 9+3 body/index architecture. This raises the prior for tail-as-metadata/selector families without establishing POS3, recursive reuse, or route semantics.
+
+Refinement targets remain exact 2018 side/check-bit message anchors and any pre-machine statement explicitly mapping the tail to physical row/depth selection.
 
 #### R2 — sticker-native boundary/registration inventory
 
-Inventory A-I class, serial phase, physical background position, alphabet-zone boundaries, packaging orientation, sticker placement, and any recoverable edge/seam/crop structure from canonical background masters. Do not use predicted foreground cells.
+**Initial inventory completed 30 Sep 2026.** See `docs/sticker-native-registration-inventory.md` and `data/sticker-native-registration-channels.json`.
+
+Strong independent channels: printed serial/phase, solved A-I 3x3 geometry, the 81/27 alphabet boundary, and the literal slash/dash/dot shapes. Background seam continuity validates the physical A-I assembly but has not yet exposed a separate check-bit layer. Packaging orientation and foreground-to-artwork registration remain unmeasured.
+
+Next R2 tests: observation-only background-position overlays, low-description tail-as-metadata operations, literal-symbol geometry, and support-mask-aware master-edge analysis.
 
 #### R3 — solved-puzzle operation replay
 
