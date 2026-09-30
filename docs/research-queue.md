@@ -50,7 +50,9 @@ Experiment 318 replays the two direct spatial meanings of that selector on the o
 
 Experiment 319 closes the preregistered "fixed masks tied to A-I geometry" branch without sweeping masks. The solved `IAB/CDE/FGH` geometry indexes **between image classes**, while the nine body positions index **successive H108 occurrences within one fixed class**. Raw evidence supplies no body-position -> A-I bijection; projecting background rows onto the body would require choosing among 1,680 ordered 3+3+3 partitions (or 362,880 full bijections). See `docs/experiment-319-background-geometry-mask-domain-audit.md`.
 
-Next R2 tests: literal-symbol geometry and support-mask-aware master-edge analysis. Reopen background-derived body masks only if independent evidence supplies the missing domain bridge. Do not use recursive-machine survival as the selection criterion.
+Experiment 325 closes the proposed master-edge test at the observability level. The consensus masters crop to the inner background field (x 10–90%, y 12–76%) and therefore discard the physical sticker perimeter; the 846shEE evidence masters are tile crops from an already assembled composite. Existing 99.998th-percentile edge seam continuity validates the A-I artwork assembly but cannot test a second PC-style margin/check-bit channel. See `docs/experiment-325-edge-channel-observability.md`.
+
+Next R2 tests: full-photo physical-perimeter audit with support accounting, using manifest-authorized originals and failing closed where the perimeter is not photographically recoverable. Literal-symbol geometry remains deferred until an independently specified operation exists; do not sweep visual transforms. Reopen background-derived body masks only if independent evidence supplies the missing domain bridge.
 
 #### R3 — solved-puzzle operation replay
 
