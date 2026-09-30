@@ -11,6 +11,8 @@ Read only these first:
 1. `docs/current-state.md`
 2. `docs/research-queue.md`
 3. `data/machine-spec.json`
+4. `docs/community-glossary.md`
+5. `docs/community-conventions.md`
 
 Use `docs/experiment-ledger.md` to check whether an idea has already been tested. Query the long-form Google Docs only for details that are not represented here.
 
@@ -66,6 +68,16 @@ Do not reopen without an independently supplied operation or clue:
 - bitmap/pixel-art fitting
 - arbitrary Boolean combinations of pointer bits
 - terminal printer-mask optimization
+
+## Community language and presentation
+
+For human-facing prose, tables, diagrams, historical summaries, acquisition work, and explanations, prefer the established community terminology and conventions documented in `docs/community-glossary.md` and `docs/community-conventions.md` when they are sufficiently precise.
+
+Preserve historical source wording where possible. Use present-project formal terminology when it adds necessary precision, but introduce it after the community term rather than silently replacing the community's language.
+
+Write in a way that is compatible with the community's vocabulary and visual conventions without implying that the agent is a community member or participant. Color conventions are artifact-specific; use the legend belonging to the source artifact.
+
+This preference applies to presentation. It does not require renaming code identifiers, experiment IDs, machine-state variables, or exact theorem language.
 
 ## Exact machine language
 
