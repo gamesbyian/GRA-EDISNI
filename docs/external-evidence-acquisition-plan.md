@@ -443,3 +443,14 @@ Targeted native-frame review has now closed four historical lost-video leads wit
 These are now explicit forensic negatives for serial recovery from the available YouTube encodes. Future work on those serials should prefer alternate/raw footage or independent owner photos, not stronger image processing of the same pixels.
 
 Oddheader owner/serial leads were also exact-searched against both the current repository corpus and the mined `gamesbyian/playdead-unofficial-exports` fork. No indexed match was found for the 427/369 claimants or the other named owner leads. This reduces the chance of obvious duplicate outreach but does not constitute proof that the owners were never represented historically.
+
+### Oddheader comment-mining refinement
+
+The authenticated 3,180-comment snapshot has now been mined beyond the first obvious serial claims.
+
+- `@hoodratthings4088` is not a fresh owner lead: the current community ledger already tracks the same person as **U45**, based on an older YouTube comment. Their new Oddheader comment says they still have a copy and contributed their code years ago; Raezores has already asked them to resolve the missing identity/sticker mapping.
+- `@BOBDOLE480` reports a friend with an unopened Collector's Edition. Raezores has already replied explaining that only the outer shipping carton needs opening. Treat this as an active indirect lead and avoid duplicate outreach while waiting for a response/photo.
+- `@jakeduggins5141` initially said they had a copy and asked to be contacted, but then twice declined requests to provide the sticker details/photo. Treat as declined and do not pursue further unless they re-engage voluntarily.
+- A terse self-reply from `@DwellerFree` says `476 /`, but sticker **476 is already physically documented as dash (background H)**. The comment is context-poor and contradicted by stronger physical evidence, so it is quarantined rather than treated as a competing observation.
+
+This pass found no additional short-form serial/symbol owner claims beyond 369, 427, and the ambiguous 476 comment.
