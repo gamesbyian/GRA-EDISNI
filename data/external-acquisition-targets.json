@@ -658,9 +658,9 @@
       "media": true,
       "comments": true,
       "note": "Canonical U32 provenance. Preserve the original KoreanB_B_Q INSIDE CE sale post and any surviving linked images/comments. Owner was contacted repeatedly already; do not duplicate outreach.",
-      "acquisition_status": "public-indexed",
+      "acquisition_status": "direct-fetch-blocked-403",
       "mining_status": "unresolved-owner-provenance",
-      "status_note": "Historical seller KoreanB_B_Q. Separate 2020 sale posts also publicly show this owner selling the CE; later 2024 post documents transfer to skorba71."
+      "status_note": "Historical seller KoreanB_B_Q. Separate 2020 sale posts also publicly show this owner selling the CE; later 2024 post documents transfer to skorba71. Repository HTML probe run 36670045345 received HTTP 403; do not count as acquired. Stable public/indexed provenance exists separately."
     },
     {
       "id": "owner-u32-skorba71-transfer-2024",
@@ -671,9 +671,9 @@
       "media": true,
       "comments": true,
       "note": "Canonical U32 current-owner transfer trail. Mine public post/images/comments for the INSIDE CE sale from KoreanB_B_Q to skorba71. Both users have already been contacted historically; do not duplicate outreach.",
-      "acquisition_status": "public-indexed",
+      "acquisition_status": "direct-fetch-blocked-403",
       "mining_status": "unresolved-current-owner-provenance",
-      "status_note": "Canonical ledger records skorba71 as purchaser and says a later eBay message was sent on 2026-08-17 without reply. Public evidence mining may still recover packaging/sticker visibility."
+      "status_note": "Canonical ledger records skorba71 as purchaser and says a later eBay message was sent on 2026-08-17 without reply. Public evidence mining may still recover packaging/sticker visibility. Repository HTML probe run 36670045345 received HTTP 403; do not count as acquired. Stable public/indexed provenance exists separately."
     },
     {
       "id": "owner-u33-doctornowhere-x",
@@ -684,9 +684,9 @@
       "media": true,
       "comments": true,
       "note": "Canonical U33 unresolved CE owner trail. Preserve original media/thread and inspect for packaging/sticker visibility; owner has already been contacted on X/Instagram/Discord, so do not duplicate outreach.",
-      "acquisition_status": "not-acquired",
-      "mining_status": "unresolved-owner-public-evidence",
-      "status_note": "Post shows the Huddle/CE ownership, but sticker status remains unknown."
+      "acquisition_status": "acquired-original-media",
+      "mining_status": "verified-owner-provenance-no-sticker",
+      "status_note": "Original 1536x2048 X photo acquired in run 36670045345. Huddle sits on red INSIDE CE box; no black wrapping, numbered sticker, serial/symbol or sticker-bearing surface visible. U33 remains unresolved."
     },
     {
       "id": "owner-u44-squee-forum",
@@ -697,9 +697,9 @@
       "media": true,
       "comments": true,
       "note": "Canonical U44 unresolved owner trail. User Squee explicitly confirmed buying the CE. Mine page/profile-linked public material for CE/sticker/packaging evidence only; email outreach already occurred without response.",
-      "acquisition_status": "not-acquired",
-      "mining_status": "unresolved-owner-public-evidence",
-      "status_note": "Stable forum source for U44; no sticker evidence currently recorded."
+      "acquisition_status": "acquired-page",
+      "mining_status": "verified-owner-provenance-no-sticker",
+      "status_note": "Archived forum page acquired in run 36670045345. Squee's 2018-06-06 post explicitly says 'I bought this...' and links the iam8bit INSIDE CE product page; no sticker/CE photo attached. U44 remains unresolved."
     }
   ]
 }
