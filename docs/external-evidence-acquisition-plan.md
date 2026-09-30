@@ -430,3 +430,16 @@ For lightweight owner discovery, use `.github/workflows/targeted-youtube-comment
 
 
 U45 owner provenance is now stronger: the same YouTube account `@hoodratthings4088` (channel `UCSfDy7vqionpbw5Z8-eHexw`) that produced the unresolved 2025 owner lead states in the 2026 Oddheader snapshot that they still have a copy and “contributed my codes years ago.” Raezores asked for the sticker number or historical submission identity, with no later answer in the current snapshot. Treat U45 as an identity-reconciliation task, not a new observation.
+
+### Lost-sticker video forensic checkpoint
+
+Targeted native-frame review has now closed four historical lost-video leads without inventing serials:
+
+- **L11 / L16 (`jQUf8yhqEc4`)**: full 19-minute source sampled end-to-end, with 0.5-second coverage of the 200–240 s black-wrapper handling interval. No readable sticker face/serial appears. Keep symbol and serial unknown from this source.
+- **L12 (`ahCmqg1hhSA`)**: native 1080p/60 fps review around the historical ~124 s pointer confirms the dash symbol. No stable serial digits are readable.
+- **L13 (`G4z5r4rZH2w`)**: native 1080p/60 fps review around ~143 s gives the clearest sticker face of the set and confirms dash, but still no defensible serial digits.
+- **L35 / U02 (`Y7OqMKBbM2Y`)**: dense/native review around ~129–133 s confirms dash; the number area is compromised by hand/forearm occlusion and motion blur.
+
+These are now explicit forensic negatives for serial recovery from the available YouTube encodes. Future work on those serials should prefer alternate/raw footage or independent owner photos, not stronger image processing of the same pixels.
+
+Oddheader owner/serial leads were also exact-searched against both the current repository corpus and the mined `gamesbyian/playdead-unofficial-exports` fork. No indexed match was found for the 427/369 claimants or the other named owner leads. This reduces the chance of obvious duplicate outreach but does not constitute proof that the owners were never represented historically.
