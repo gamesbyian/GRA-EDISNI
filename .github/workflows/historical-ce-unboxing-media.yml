@@ -1,10 +1,6 @@
 name: Historical CE unboxing media reconnaissance
 
 on:
-  pull_request:
-    paths:
-      - ".github/workflows/historical-ce-unboxing-media.yml"
-      - "data/external-acquisition-targets.json"
   workflow_dispatch:
 
 permissions:
