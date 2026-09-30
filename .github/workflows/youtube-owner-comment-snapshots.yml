@@ -12,11 +12,12 @@ on:
         description: Single YouTube source to snapshot
         required: true
         type: choice
-        default: youtube-ledger-01-eXxklNxsVWw
+        default: owner-u46-outsidexbox-comments
         options:
           - youtube-ledger-01-eXxklNxsVWw
           - youtube-inside-gaming-ce-unboxing
           - youtube-oddheader-2026-mystery
+          - owner-u46-outsidexbox-comments
 
 permissions:
   contents: read
@@ -26,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      SOURCE_ID: ${{ inputs.source_id || 'youtube-ledger-01-eXxklNxsVWw' }}
+      SOURCE_ID: ${{ inputs.source_id || 'owner-u46-outsidexbox-comments' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
