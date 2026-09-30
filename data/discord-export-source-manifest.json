@@ -233,5 +233,30 @@
       "document_id": "1NLwy0T4pvNRrR08oZsBzVNqmQyL4qhSrHvIHhCANwLw",
       "role": "historical picture-code document whose readable export is mostly embedded JPEG bytes/metadata; overlaps recovered AnSet image provenance"
     }
+  ],
+  "live_external_resources": [
+    {
+      "kind": "google_drive_folder",
+      "id": "1-381gKXFGrEi-JdQBSL9MvcxDEbayVAi",
+      "first_discord_date": "2018-06-30",
+      "role": "still-live original MOV/MP4 printer-investigation recordings from active June/July 2018 solving period",
+      "sample": {
+        "file_id": "1_Zbz01f9WuAQxZ-YyfpeDqIsHNBqeKlS",
+        "title": "IMG_2327.TRIM.MOV",
+        "size": 15725021,
+        "sha256": "c3e165617b0a9716e385dde4d2835bfd6963f3fd6c4dba1c6cf3054c4efe0d8a"
+      },
+      "acquisition_owner": "external-evidence lane (#56/#57); do not vendor large video corpus here"
+    },
+    {
+      "kind": "google_drive_asset",
+      "id": "1GlBTcDQoYpEKQdVVjHw4iiBsc8Vk3C7K",
+      "source_folder_id": "1mitP9wjW0HS1vSUWig5vO2fZlMyd1ie9",
+      "logical_path": "andreas/superSecret/image (Game2#6585 (681347534)).wav",
+      "role": "literal superSecret/image audio asset recovered from 2026 named-path dump; trigger/source-code context unresolved",
+      "size": 1376204,
+      "sha256": "2392baa9dd6261e6a9711e42379c0d412f623ee9269cb8b4094045ed2d0ef335",
+      "media": "mono PCM s16le 48000 Hz, 14.335 s"
+    }
   ]
 }
