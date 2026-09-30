@@ -282,8 +282,9 @@ def main() -> int:
                 probe.verify()
             with Image.open(s.path) as src:
                 rgb = np.asarray(src.convert("RGB"))
-        except (UnidentifiedImageError, OSError, ValueError) as exc:
-            s.note = f"corrupt-image quarantine: {type(exc).__name__}: {exc}"
+        except (UnidentifiedImageError, OSError, ValueError, Image.DecompressionBombError) as exc:
+            kind = "oversize-image quarantine" if isinstance(exc, Image.DecompressionBombError) else "corrupt-image quarantine"
+            s.note = f"{kind}: {type(exc).__name__}: {exc}"
             continue
         if rgb.size == 0:
             s.note = "corrupt-image quarantine: empty decoded image"
