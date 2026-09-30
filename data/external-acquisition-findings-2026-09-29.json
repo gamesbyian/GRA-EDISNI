@@ -491,6 +491,22 @@
         "visual_result": "The white CE sticker appears while the presenter reaches into the black wrapping. The dash-like foreground mark is visible in several frames, but the small-number region is repeatedly obscured by hand/forearm and motion blur; no stable numeral strokes are recoverable."
       },
       "disposition": "Retain L35/U02 as lost with symbol '-' and unknown serial. Further processing of this encode is low value without alternate/raw footage."
+    },
+    {
+      "id": "l11-youtube-source-review",
+      "source_id": "youtube-ledger-04-jQUf8yhqEc4",
+      "source_url": "https://www.youtube.com/watch?v=jQUf8yhqEc4",
+      "status": "canonical-lost-entry-source-reviewed-no-readable-sticker",
+      "evidence": {
+        "ledger_entry": "L11",
+        "alias_entry": "L16 / nintendude794 linkage in current community ledger",
+        "source_duration_seconds": 1140,
+        "source_resolution": "1920x1080",
+        "source_frame_rate": 60,
+        "review_method": "Whole-source reconnaissance using targeted seek sampling, with dense 0.5-second review from 200-240 s while the black wrapping is actively handled, plus broad sampling of the remainder of the 19-minute source.",
+        "visual_result": "The black wrapping is removed and manipulated extensively, but no frame in the high-value handling interval exposes a readable numbered CE sticker. The remainder of the video concentrates on the Huddle, art cards and contents rather than presenting the sticker."
+      },
+      "disposition": "Keep L11/L16 as a lost/unknown sticker entry. Do not infer symbol or serial from this source; pursue alternate social photos/raw footage instead."
     }
   ]
 }
