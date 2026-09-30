@@ -67,7 +67,10 @@
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Historical owner/unboxing video referenced by sticker ledger."
+      "note": "Historical owner/unboxing video referenced by sticker ledger.",
+      "acquisition_status": "acquired",
+      "mining_status": "human-reviewed-negative",
+      "status_note": "Authenticated full media acquired; complete 388s source reviewed at 2s sampling with no defensible numbered-sticker view."
     },
     {
       "id": "youtube-ledger-04-jQUf8yhqEc4",
@@ -144,7 +147,10 @@
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Historical owner/unboxing video referenced by sticker ledger."
+      "note": "Historical owner/unboxing video referenced by sticker ledger.",
+      "acquisition_status": "acquired",
+      "mining_status": "human-reviewed-negative",
+      "status_note": "Authenticated full media acquired; complete 6.683s source reviewed densely at 0.25s coverage with no numbered sticker shown."
     },
     {
       "id": "youtube-ledger-11-gqlQaHgRaHg",
@@ -214,7 +220,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "instagram-02-B6MBw1Ph6Xy",
@@ -224,7 +233,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "instagram-03-B6EPt76gdVC",
@@ -234,7 +246,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "instagram-04-B6L7QtEpsUF",
@@ -244,7 +259,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "instagram-05-B_-c0SXprLV",
@@ -254,7 +272,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "instagram-06-CcLKjmguPXt",
@@ -264,7 +285,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "instagram-07-Cl3oSShIixS",
@@ -274,7 +298,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "instagram-08-B5_hdYslfQh",
@@ -284,7 +311,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "instagram-09-DQVUxWqD9M3",
@@ -294,7 +324,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible."
+      "note": "Direct CE/sticker provenance; preserve original carousel/media, caption, and comments when accessible.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "x-kaydhendricks",
@@ -304,7 +337,9 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Save attached media plus thread/reply context."
+      "note": "Save attached media plus thread/reply context.",
+      "acquisition_status": "acquired",
+      "mining_status": "mined-no-readable-sticker"
     },
     {
       "id": "x-theannathered",
@@ -314,7 +349,9 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Save attached media plus thread/reply context."
+      "note": "Save attached media plus thread/reply context.",
+      "acquisition_status": "acquired",
+      "mining_status": "mined-no-readable-sticker"
     },
     {
       "id": "x-hubalubalu",
@@ -324,7 +361,9 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Save attached media plus thread/reply context."
+      "note": "Save attached media plus thread/reply context.",
+      "acquisition_status": "acquired",
+      "mining_status": "mined-no-readable-sticker"
     },
     {
       "id": "x-triplizard",
@@ -334,7 +373,9 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Save attached media plus thread/reply context."
+      "note": "Save attached media plus thread/reply context.",
+      "acquisition_status": "acquired",
+      "mining_status": "mined-no-readable-sticker"
     },
     {
       "id": "x-itsamefernando",
@@ -344,7 +385,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Save attached media plus thread/reply context."
+      "note": "Save attached media plus thread/reply context.",
+      "acquisition_status": "acquired",
+      "mining_status": "verified-physical-observation-existing-canonical",
+      "status_note": "Original media independently confirms canonical 324 = slash."
     },
     {
       "id": "x-minnmax",
@@ -354,7 +398,9 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Save attached media plus thread/reply context."
+      "note": "Save attached media plus thread/reply context.",
+      "acquisition_status": "acquired",
+      "mining_status": "mined-no-readable-sticker"
     },
     {
       "id": "x-kingskylark",
@@ -373,7 +419,9 @@
       "public": true,
       "priority": "high",
       "media": true,
-      "note": "Russian-language owner trail; inspect historical photos for accidental packaging/sticker visibility."
+      "note": "Russian-language owner trail; inspect historical photos for accidental packaging/sticker visibility.",
+      "acquisition_status": "no-useful-media",
+      "mining_status": "blocked-no-media"
     },
     {
       "id": "terminal41-saf-dat-col",
@@ -396,7 +444,10 @@
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Official iam8bit making-of / Collector's Edition contents reveal; preserve metadata and source media for packaging/provenance context."
+      "note": "Official iam8bit making-of / Collector's Edition contents reveal; preserve metadata and source media for packaging/provenance context.",
+      "acquisition_status": "blocked",
+      "mining_status": "blocked",
+      "status_note": "Age-restricted for the dedicated research account; metadata sweep did not acquire usable source evidence."
     },
     {
       "id": "instagram-mattpopcollector182",
@@ -406,7 +457,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "CE-owner/account lead from archival queue; inspect relevant INSIDE posts and original media."
+      "note": "CE-owner/account lead from archival queue; inspect relevant INSIDE posts and original media.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "instagram-bathroomgamers",
@@ -416,7 +470,10 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "CE-owner/account lead from archival queue; inspect relevant INSIDE posts and original media."
+      "note": "CE-owner/account lead from archival queue; inspect relevant INSIDE posts and original media.",
+      "acquisition_status": "login-required",
+      "mining_status": "blocked-manual",
+      "status_note": "Public extraction produced only status/classification artifacts, not original media; requires authenticated manual capture."
     },
     {
       "id": "x-frmlssndmpty",
@@ -426,7 +483,9 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Historical owner/provenance lead; preserve original media and thread context."
+      "note": "Historical owner/provenance lead; preserve original media and thread context.",
+      "acquisition_status": "acquired",
+      "mining_status": "mined-no-readable-sticker"
     },
     {
       "id": "x-fokfes",
@@ -466,7 +525,9 @@
       "priority": "high",
       "media": true,
       "comments": true,
-      "note": "Historical owner/provenance lead; preserve original media and thread context."
+      "note": "Historical owner/provenance lead; preserve original media and thread context.",
+      "acquisition_status": "acquired",
+      "mining_status": "mined-no-readable-sticker"
     },
     {
       "id": "x-nintendude794-2018",
