@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "gamesbyian/playdead-unofficial-exports",
+    "channel": "ARG / solving",
+    "channel_id": "461275582970462209",
+    "export_blob_sha": "1889cc948f86f5a4455de0d7310b15cdb1b88b5c",
+    "historical_date": "2021-03-21",
+    "speaker": "aperson1",
+    "image_assets": [
+      "assets/INSIDE_B-f038cdd5970802f8.JPG",
+      "assets/unknown-70a6031fe54449cd.png"
+    ]
+  },
+  "historical_claim": {
+    "sleeve_clue_geometry": {
+      "dot": "left",
+      "dash": "right",
+      "slash": "top"
+    },
+    "lever_geometry": {
+      "left": "L",
+      "right": "R",
+      "top": "U"
+    },
+    "derived_symbol_command_mapping": {
+      ".": "L",
+      "-": "R",
+      "/": "U"
+    },
+    "community_hypothesis": "The Collector's Edition sticker foreground symbols may encode inputs for the three-position secret-ending lever."
+  },
+  "known_normal_bunker_code": "UURLRRRUUURLLL",
+  "epistemic_status": {
+    "mapping": "historically attested, independently motivated by an in-world/packaging clue; source images should remain separately inspectable",
+    "sticker_as_lever_code": "candidate consumer hypothesis, not established",
+    "normal_code_replay": "tested and closed in Experiment 342 for canonical contiguous forward/reverse readings"
+  }
+}
