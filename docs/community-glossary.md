@@ -79,6 +79,18 @@ The image depicted by the solved nine-piece background puzzle.
 ### seal / wrapping seal
 Occasional descriptive language for the sticker's physical role on the package.
 
+### black wrapper / black paper wrapping / packet / packaging
+Community outreach language for the black wrapping around the PS4 game that the sticker seals. These concrete packaging terms are useful when talking to owners because they locate the sticker without requiring ARG vocabulary.
+
+### code / sticker code / ARG code
+Informal community and outreach language for the clue carried by a sticker, especially its printed number and foreground symbol. In technical work, prefer the more precise **sticker number**, **symbol**, and **A–I image class**.
+
+### Huddle
+Community name for the fleshy creature/object included in the Collector's Edition. It appears often in owner-hunting discussions because photos of the Huddle can establish that somebody had access to a CE even when the sticker is not visible.
+
+### RealDoll
+The company/collaborator associated with production of the unusual Collector's Edition object. **RealDoll** also became a useful search term in historical owner-hunting because collectors and articles often mentioned it even when they did not mention the sticker puzzle.
+
 ---
 
 ## Cataloguing and acquisition vocabulary
@@ -391,6 +403,10 @@ Community research notes describing the long-running effort to locate owners and
 
 ### Discord source
 A direct link to a historical Discord message used as provenance.
+
+### Puzzle SOLVED / solution
+Status language used in public community documentation when a puzzle or sub-puzzle had reached an accepted solution. Keep this separate from proposed interpretations, partial progress, and current-project reconstructions.
+
 
 ### via [username]
 Ledger shorthand indicating who found, relayed, or supplied a sticker or lead.
