@@ -93,14 +93,15 @@
     {
       "id": "G7",
       "class": "G",
-      "primary_evidentiary_type": "selected_because_it_preserves_the_machine",
+      "primary_evidentiary_type": "generic_simplicity_prior",
       "secondary_support": [
-        "bounded reversible-route simplicity",
-        "uniquely selects route shell within surviving functional families"
+        "Experiment 321 ternary-word non-collapse",
+        "Experiment 321 q-coordinate non-collapse",
+        "Experiment 278 bounded route-shell result"
       ],
-      "circularity_risk": "very_high",
-      "claim": "route layer must admit three mutually distinct ternary permutations, one from each functional family",
-      "reset_action": "do not privilege route semantics absent an independent route/permutation cue; compare route-selected survivors to compact non-route selection criteria"
+      "circularity_risk": "medium",
+      "claim": "one q-indexed word is chosen from each functional family; each selected word preserves all three ternary labels and the three families collectively use all three q indices",
+      "reset_action": "retain explicitly as a generic information-preservation prior; route semantics are downstream rather than premise-level"
     }
   ],
   "auxiliary_supplied_premises": [
@@ -134,17 +135,17 @@
     ],
     "generic_simplicity_grammar_nodes": [
       "G1",
-      "G5"
+      "G5",
+      "G7"
     ],
     "machine_preservation_risk_nodes": [
-      "G6",
-      "G7"
+      "G6"
     ],
     "independently_derived_transition_grammar_nodes": [],
     "highest_priority_circularity_targets": [
-      "G7",
       "G6",
       "G5"
     ]
-  }
+  },
+  "last_updated_experiment": 321
 }
