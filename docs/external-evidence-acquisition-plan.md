@@ -301,9 +301,11 @@ If a self-hosted runner is later added, isolate it from unrelated repositories a
 
 ### Phase C: targeted archaeology
 
+Human review on 2026-09-29 established that the iam8bit Collector's Edition unboxing and the Oddheader INSIDE mystery video contain no unknown sticker information. Keep them as provenance/context sources, but do not spend further frame-archaeology budget on them unless new evidence gives a concrete reason to revisit.
+
 - Identify the Inside Gaming sticker interval and extract every native frame around it.
 - Run frame ranking/deduplication and preserve the full dense source set.
-- Snapshot/diff Oddheader comments.
+- Preserve Oddheader metadata/comments for owner-discovery and historical context, not sticker-frame discovery.
 - Review public social acquisitions for CE/sticker visibility.
 - Promote valuable originals and provenance records into the external archive.
 
