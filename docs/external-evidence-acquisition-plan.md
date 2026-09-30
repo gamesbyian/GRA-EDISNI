@@ -427,3 +427,6 @@ Do not escalate `youtube-ledger-01-eXxklNxsVWw` merely for frames: it is the 202
 
 
 For lightweight owner discovery, use `.github/workflows/targeted-youtube-comments.yml` to snapshot one manifest-listed YouTube source without re-running the hard-coded Inside Gaming/Oddheader pair. The first high-value candidate is `youtube-ledger-01-eXxklNxsVWw`: its 2025 Oddheader retrospective demonstrably caused later owner contributions 072 and 476, and the canonical ledger still contains unresolved commenter U45.
+
+
+U45 owner provenance is now stronger: the same YouTube account `@hoodratthings4088` (channel `UCSfDy7vqionpbw5Z8-eHexw`) that produced the unresolved 2025 owner lead states in the 2026 Oddheader snapshot that they still have a copy and “contributed my codes years ago.” Raezores asked for the sticker number or historical submission identity, with no later answer in the current snapshot. Treat U45 as an identity-reconciliation task, not a new observation.
