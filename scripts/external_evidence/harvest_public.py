@@ -158,6 +158,46 @@ def harvest_youtube(
     return {"exit_code": proc.returncode}
 
 
+def harvest_webpage(source: dict, root: Path) -> dict:
+    """Preserve a public HTML page for provenance/mining without browser automation."""
+    out_dir = root / source["id"] / "original"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    dest = out_dir / "page.html"
+    request = urllib.request.Request(
+        source["url"],
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; GRA-EDISNI-evidence-harvester/1.0)",
+            "Accept": "text/html,application/xhtml+xml",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:  # noqa: S310
+            body = response.read()
+            final_url = response.geturl()
+            status = getattr(response, "status", None)
+            content_type = response.headers.get("Content-Type", "")
+    except Exception as exc:  # noqa: BLE001
+        return {
+            "exit_code": 1,
+            "classification_override": "webpage-fetch-failed",
+            "error": repr(exc),
+        }
+
+    dest.write_bytes(body)
+    return {
+        "exit_code": 0,
+        "http_status": status,
+        "final_url": final_url,
+        "content_type": content_type,
+        "files": [{
+            "path": str(dest.relative_to(root)),
+            "size": dest.stat().st_size,
+            "sha256": sha256(dest),
+            "git_blob_sha1": git_blob_sha1(dest),
+        }],
+    }
+
+
 def harvest_gallery(source: dict, root: Path) -> dict:
     if shutil.which("gallery-dl") is None:
         raise RuntimeError("gallery-dl is not installed")
@@ -254,6 +294,9 @@ def main() -> int:
                         cookies_file=args.youtube_cookies,
                     )
                 )
+                record["classification"] = record.pop("classification_override", "ok")
+            elif source["kind"] in {"reddit", "forum", "webpage"}:
+                record.update(harvest_webpage(source, args.output))
                 record["classification"] = record.pop("classification_override", "ok")
             elif source["kind"] in {"instagram", "twitter", "vk", "facebook"}:
                 if not args.include_social:
