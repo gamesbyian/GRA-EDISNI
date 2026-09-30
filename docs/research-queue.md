@@ -54,6 +54,10 @@ Experiment 325 closes the proposed master-edge test at the observability level. 
 
 Next R2 tests: full-photo physical-perimeter audit with support accounting, using manifest-authorized originals and failing closed where the perimeter is not photographically recoverable. Literal-symbol geometry remains deferred until an independently specified operation exists; do not sweep visual transforms. Reopen background-derived body masks only if independent evidence supplies the missing domain bridge.
 
+Experiment 326 opens a bounded 9x12 / geometric-alphabet lane. Transposing the conventional 12x9 display is now treated as a first-class representation because it exposes nine class traces of 9 body + 3 tail cells, plus the collective 9x9 body / 9x3 tail split. A first observation-only fixed-mask null finds no unusual same-symbol clustering in the raw 9x9 body under either A-I serial order or IAB/CDE/FGH physical flattening. See `docs/experiment-326-9x12-spatial-field-audit.md`.
+
+This does **not** authorize visual-template fishing. The next geometric work is constrained to literal mark geometry, D4 symmetries, independently motivated class orderings, and a preregistered Pigpen/Rosicrucian compatibility family. Any background-art mask or orientation cue must be measured independently from photographically supported pixels before it is applied to foreground data.
+
 #### R3 — solved-puzzle operation replay
 
 Test only historically demonstrated operation classes whose required parameters can be supplied independently. Preserve negative results. No broad visual-target optimization.
