@@ -82,6 +82,34 @@ def discover_images(roots: Iterable[Path]) -> list[Sample]:
     return sorted(samples, key=lambda s: (s.tile, s.serial, str(s.path)))
 
 
+def discover_manifest(path: Path) -> list[Sample]:
+    samples: list[Sample] = []
+    seen_hashes: set[str] = set()
+    with path.open(newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            if row.get("canonical_input", "").strip().lower() != "yes":
+                continue
+            try:
+                serial = int(row["serial"])
+            except (KeyError, ValueError):
+                continue
+            tile = row.get("tile", "").strip()
+            if tile not in TILES or tile != tile_for_serial(serial):
+                raise ValueError(f"manifest tile mismatch for serial {serial:03d}: {tile!r}")
+            source = Path(row["path"])
+            if not source.is_file():
+                raise FileNotFoundError(f"manifest source missing: {source}")
+            digest = hashlib.sha256(source.read_bytes()).hexdigest()
+            expected = row.get("sha256", "").strip().lower()
+            if expected and digest != expected:
+                raise ValueError(f"manifest SHA-256 mismatch for {source}")
+            if digest in seen_hashes:
+                continue
+            seen_hashes.add(digest)
+            samples.append(Sample(source, serial, tile, path.parent, digest))
+    return sorted(samples, key=lambda s: (s.tile, s.serial, str(s.path)))
+
+
 def order_quad(pts: np.ndarray) -> np.ndarray:
     pts = np.asarray(pts, dtype=np.float32).reshape(4, 2)
     s = pts.sum(axis=1)
@@ -156,36 +184,71 @@ def normalize_gray(field: np.ndarray) -> np.ndarray:
     return np.clip((flat - lo) * (235.0 / (hi - lo)) + 10.0, 0, 255).astype(np.uint8)
 
 
-def symbol_mask(gray: np.ndarray) -> np.ndarray:
+def symbol_mask(field: np.ndarray) -> np.ndarray:
+    """Conservatively mask the solid black foreground symbol.
+
+    Detection happens on the raw rectified field, before illumination
+    normalization. The background art is a halftone/dot texture; a small
+    morphological opening removes those dots while leaving the much thicker
+    dot/dash/slash foreground intact. The selected component is filled by its
+    convex hull so glare holes in glossy black ink cannot leak into the master.
+    """
+    gray = cv2.cvtColor(field, cv2.COLOR_BGR2GRAY)
     h, w = gray.shape
-    center = np.zeros_like(gray, np.uint8)
-    center[int(.08*h):int(.93*h), int(.12*w):int(.88*w)] = 255
     blur = cv2.GaussianBlur(gray, (5, 5), 0)
-    t = min(85, int(np.percentile(blur[center > 0], 16)))
-    dark = ((blur < t) & (center > 0)).astype(np.uint8) * 255
-    dark = cv2.morphologyEx(dark, cv2.MORPH_CLOSE, np.ones((13, 13), np.uint8), iterations=2)
-    n, labels, stats, _ = cv2.connectedComponentsWithStats(dark, 8)
+    roi = np.zeros_like(gray, np.uint8)
+    roi[int(.06*h):int(.94*h), int(.08*w):int(.92*w)] = 255
+
+    vals = blur[roi > 0]
+    otsu_t, _ = cv2.threshold(vals.reshape(-1, 1), 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    threshold = min(135.0, max(45.0, float(otsu_t)))
+    dark = ((blur < threshold) & (roi > 0)).astype(np.uint8) * 255
+    dark = cv2.morphologyEx(dark, cv2.MORPH_OPEN, np.ones((5, 5), np.uint8), iterations=1)
+    dark = cv2.morphologyEx(dark, cv2.MORPH_CLOSE, np.ones((17, 17), np.uint8), iterations=2)
+
+    contours, _ = cv2.findContours(dark, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    candidates: list[tuple[float, np.ndarray]] = []
+    for contour in contours:
+        area = cv2.contourArea(contour)
+        if area < 0.006 * w * h or area > 0.35 * w * h:
+            continue
+        x, y, ww, hh = cv2.boundingRect(contour)
+        cx, cy = x + ww / 2.0, y + hh / 2.0
+        if not (0.12*w <= cx <= 0.88*w and 0.08*h <= cy <= 0.90*h):
+            continue
+        center_penalty = ((cx - .5*w) / w) ** 2 + ((cy - .48*h) / h) ** 2
+        candidates.append((area / (1.0 + 4.0 * center_penalty), contour))
+
     mask = np.zeros_like(gray, np.uint8)
-    for i in range(1, n):
-        x, y, ww, hh, area = stats[i]
-        cx, cy = x + ww / 2, y + hh / 2
-        if area < 0.004 * w * h:
-            continue
-        if not (0.15*w <= cx <= 0.85*w and 0.10*h <= cy <= 0.90*h):
-            continue
-        if ww > 0.92*w or hh > 0.92*h:
-            continue
-        mask[labels == i] = 255
-    if np.any(mask):
-        mask = cv2.dilate(mask, np.ones((17, 17), np.uint8), iterations=1)
+    if not candidates:
+        return mask
+    contour = max(candidates, key=lambda x: x[0])[1]
+    hull = cv2.convexHull(contour)
+    cv2.fillConvexPoly(mask, hull, 255)
+    mask = cv2.dilate(mask, np.ones((21, 21), np.uint8), iterations=1)
     return mask
 
 
-def align_to_reference(ref: np.ndarray, img: np.ndarray, mask: np.ndarray) -> tuple[np.ndarray, np.ndarray, float]:
-    ref_e = cv2.Canny(ref, 25, 80)
-    img_e = cv2.Canny(img, 25, 80)
+def align_to_reference(
+    ref: np.ndarray,
+    ref_mask: np.ndarray,
+    img: np.ndarray,
+    mask: np.ndarray,
+) -> tuple[np.ndarray, np.ndarray, float]:
+    """Align background texture while explicitly excluding both foreground symbols."""
+    ref_e = cv2.Canny(ref, 20, 70)
+    img_e = cv2.Canny(img, 20, 70)
+    ref_e = ref_e.copy()
     img_e = img_e.copy()
-    img_e[mask > 0] = 0
+    ref_e[cv2.dilate(ref_mask, np.ones((11, 11), np.uint8), iterations=1) > 0] = 0
+    img_e[cv2.dilate(mask, np.ones((11, 11), np.uint8), iterations=1) > 0] = 0
+
+    h, w = ref.shape
+    border = np.zeros_like(ref_e, np.uint8)
+    border[int(.04*h):int(.96*h), int(.04*w):int(.96*w)] = 255
+    ref_e[border == 0] = 0
+    img_e[border == 0] = 0
+
     warp = np.eye(2, 3, dtype=np.float32)
     try:
         score, warp = cv2.findTransformECC(
@@ -193,16 +256,24 @@ def align_to_reference(ref: np.ndarray, img: np.ndarray, mask: np.ndarray) -> tu
             img_e.astype(np.float32) / 255.0,
             warp,
             cv2.MOTION_AFFINE,
-            (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 80, 1e-6),
-            None,
+            (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 120, 1e-6),
+            border,
             3,
         )
     except cv2.error:
-        score = float("nan")
-        warp = np.eye(2, 3, dtype=np.float32)
-    h, w = ref.shape
-    aligned = cv2.warpAffine(img, warp, (w, h), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_REFLECT)
-    aligned_mask = cv2.warpAffine(mask, warp, (w, h), flags=cv2.INTER_NEAREST | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_CONSTANT, borderValue=255)
+        return img, mask, float("nan")
+
+    aligned = cv2.warpAffine(
+        img, warp, (w, h),
+        flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP,
+        borderMode=cv2.BORDER_REFLECT,
+    )
+    aligned_mask = cv2.warpAffine(
+        mask, warp, (w, h),
+        flags=cv2.INTER_NEAREST | cv2.WARP_INVERSE_MAP,
+        borderMode=cv2.BORDER_CONSTANT,
+        borderValue=255,
+    )
     return aligned, aligned_mask, float(score)
 
 
@@ -230,13 +301,13 @@ def enhance(gray: np.ndarray) -> np.ndarray:
     return cv2.addWeighted(e, 1.45, blur, -0.45, 0)
 
 
-def make_contact_sheet(images: dict[str, np.ndarray], out: Path) -> None:
+def make_contact_sheet(images: dict[str, np.ndarray], out: Path, order: str = TILES) -> None:
     if not images:
         return
     cell_h, cell_w = next(iter(images.values())).shape[:2]
     sheet = np.full((cell_h*3 + 120, cell_w*3, 3), 245, np.uint8)
     font = cv2.FONT_HERSHEY_SIMPLEX
-    for idx, tile in enumerate(TILES):
+    for idx, tile in enumerate(order):
         if tile not in images:
             continue
         r, c = divmod(idx, 3)
@@ -266,12 +337,18 @@ def write_provenance(samples: list[Sample], out: Path) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("roots", nargs="+", type=Path, help="directories to scan recursively")
+    ap.add_argument("roots", nargs="*", type=Path, help="directories to scan recursively (legacy fallback)")
+    ap.add_argument("--manifest", type=Path, help="canonical sticker manifest; preferred over filename discovery")
     ap.add_argument("--out", type=Path, default=Path("artifacts/background-tile-masters"))
     ap.add_argument("--min-samples", type=int, default=2)
     args = ap.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
-    samples = discover_images(args.roots)
+    if args.manifest:
+        samples = discover_manifest(args.manifest)
+    else:
+        if not args.roots:
+            ap.error("provide --manifest or at least one root")
+        samples = discover_images(args.roots)
     by_tile: dict[str, list[tuple[Sample, np.ndarray, np.ndarray]]] = {t: [] for t in TILES}
     for s in samples:
         # Decode through Pillow first. This keeps harmless PNG metadata warnings
@@ -297,10 +374,13 @@ def main() -> int:
             s.note = "no sticker quadrilateral"
             continue
         field = crop_background_field(warp_sticker(img, quad))
+        mask = symbol_mask(field)
         gray = normalize_gray(field)
-        mask = symbol_mask(gray)
         masked_fraction = float(np.mean(mask > 0))
-        if masked_fraction > 0.45 or float(np.std(gray)) < 4.0:
+        if masked_fraction < 0.008:
+            s.note = "quality reject: foreground symbol mask not confidently recovered"
+            continue
+        if masked_fraction > 0.35 or float(np.std(gray)) < 4.0:
             s.note = f"quality reject masked_fraction={masked_fraction:.3f} std={np.std(gray):.2f}"
             continue
         by_tile[s.tile].append((s, gray, mask))
@@ -314,16 +394,23 @@ def main() -> int:
         sharpness = [float(cv2.Laplacian(r[1], cv2.CV_64F).var()) for r in rows]
         ref_idx = int(np.argmax(sharpness))
         ref = rows[ref_idx][1]
+        ref_mask = rows[ref_idx][2]
         aligned_images, aligned_masks = [], []
         for i, (s, gray, mask) in enumerate(rows):
             if i == ref_idx:
                 a, m, score = gray, mask, 1.0
             else:
-                a, m, score = align_to_reference(ref, gray, mask)
+                a, m, score = align_to_reference(ref, ref_mask, gray, mask)
             s.alignment_score = score
+            if not np.isfinite(score) or score < 0.01:
+                s.note = f"alignment reject score={score}"
+                continue
             s.included = True
             aligned_images.append(a)
             aligned_masks.append(m)
+        if len(aligned_images) < args.min_samples:
+            summary_rows.append((tile, len(aligned_images), "insufficient aligned samples"))
+            continue
         master, support, missing = masked_median(aligned_images, aligned_masks)
         enhanced = enhance(master)
         enhanced_masters[tile] = enhanced
@@ -332,12 +419,13 @@ def main() -> int:
         support8 = np.clip(support.astype(np.float32) / max(1, len(aligned_images)) * 255.0, 0, 255).astype(np.uint8)
         cv2.imwrite(str(args.out / f"{tile}-support.png"), support8)
         cv2.imwrite(str(args.out / f"{tile}-inpainted-mask.png"), missing)
-        summary_rows.append((tile, len(rows), f"reference={rows[ref_idx][0].serial:03d}"))
+        summary_rows.append((tile, len(aligned_images), f"reference={rows[ref_idx][0].serial:03d}; candidates={len(rows)}"))
     make_contact_sheet(enhanced_masters, args.out / "A-I-contact-sheet.png")
+    make_contact_sheet(enhanced_masters, args.out / "physical-layout-contact-sheet.png", order="IABCDEFGH")
     write_provenance(samples, args.out / "provenance.csv")
     with (args.out / "README.md").open("w", encoding="utf-8") as f:
         f.write("# A-I background tile masters\n\n")
-        f.write("Consensus reconstructions from registered sticker photographs. `A.png`..`I.png` are conservative grayscale masters; `*-enhanced.png` are viewing copies; `*-support.png` records how many samples supplied each pixel; `*-inpainted-mask.png` marks pixels hidden by every available foreground symbol and therefore filled from neighbors.\n\n")
+        f.write("Consensus reconstructions from manifest-authorized physical sticker photographs. `A.png`..`I.png` are conservative grayscale masters; `*-enhanced.png` are viewing copies; `*-support.png` records how many accepted samples supplied each pixel; `*-inpainted-mask.png` marks pixels hidden by every accepted foreground symbol and therefore filled from neighbors. Failed symbol extraction and failed/weak registration are provenance-visible rejects.\n\n")
         f.write("| tile | accepted samples | note |\n|---|---:|---|\n")
         for tile, n, note in summary_rows:
             f.write(f"| {tile} | {n} | {note} |\n")
