@@ -69,7 +69,7 @@ def discover_images(roots: Iterable[Path]) -> list[Sample]:
             if not m:
                 continue
             serial = int(m.group(1))
-            if serial < 1 or serial > 999:
+            if serial < 1 or serial > 600:
                 continue
             try:
                 digest = hashlib.sha256(path.read_bytes()).hexdigest()
