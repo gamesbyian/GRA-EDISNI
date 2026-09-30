@@ -595,6 +595,24 @@
         "visual_result": "The source shows a basement-closet recording-booth build, with brief podcast/game inserts. Across the complete 172-second source, the Collector's Edition packaging, black-wrapped game and numbered sticker are never presented. No candidate sticker interval exists for full-resolution escalation."
       },
       "disposition": "Do not acquire the full-resolution video for sticker mining absent a concrete alternate timestamp/source. L17 remains a lost-owner provenance lead rather than a video-forensic sticker source."
+    },
+    {
+      "id": "l30-youtube-lightweight-recon-negative",
+      "source_id": "youtube-ledger-08-d23bAqGtImo",
+      "source_url": "https://www.youtube.com/watch?v=d23bAqGtImo",
+      "status": "human-reviewed-recon-negative",
+      "evidence": {
+        "ledger_entry": "L30",
+        "alternate_entry": "U20",
+        "owner": "Nick Robinson / Babylonian",
+        "source_title": "The Lost McDonald's Game Iceberg, explained",
+        "upload_date": "2020-12-06",
+        "source_duration_seconds": 913,
+        "reconnaissance_run_id": 36667695004,
+        "review_method": "Complete low-resolution source reconnaissance at 1 fps plus scene changes; focused inspection around the historical Huddle appearance near 7:22; additional whole-source 10-second survey.",
+        "visual_result": "The Huddle is visible on a shelf around 7:12-7:23 beside unrelated objects. No Collector's Edition box, black wrapping, game case or numbered sticker is visible around the Huddle. The remainder of the video is documentary/game material and contains no candidate sticker-bearing interval."
+      },
+      "disposition": "Do not acquire full-resolution media for sticker mining absent an alternate source. L30 remains a lost-owner provenance entry; the owner's historical 90%-confidence slash recollection stays a recollection, not a physical observation."
     }
   ]
 }
