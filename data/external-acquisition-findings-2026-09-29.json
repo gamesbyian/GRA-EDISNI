@@ -862,6 +862,28 @@
         }
       },
       "disposition": "Credit lime8159 as the earliest surviving explicit 108-layout/probability lineage found in this export, without claiming this proves original invention outside the surviving corpus."
+    },
+    {
+      "id": "u32-koreanb-public-sale-provenance",
+      "source_id": "owner-u32-koreanb-sale-2020",
+      "status": "verified-public-owner-provenance-no-sticker-observation",
+      "evidence": {
+        "owner_handle": "KoreanB_B_Q",
+        "canonical_entry": "U32",
+        "public_sale_posts": [
+          "https://www.reddit.com/r/GameSale/comments/i8i1d9",
+          "https://www.reddit.com/r/GameSale/comments/iuutfq",
+          "https://www.reddit.com/r/GameSale/comments/izs23a"
+        ],
+        "dates": [
+          "2020-08-12",
+          "2020-09-17",
+          "2020-09-25"
+        ],
+        "description_summary": "Seller repeatedly offered the iam8bit INSIDE Collector's Edition with the RealDoll Huddle. September listings describe the outer/actual box as unsealed because that was how it was released, while the game and Huddle contents were still sealed/unused.",
+        "evidentiary_limit": "The sale text does not mention or show the numbered white sticker and cannot establish whether it was retained at those dates."
+      },
+      "disposition": "Use as stable public provenance for U32 ownership/history. Do not convert packaging condition into a sticker survival claim."
     }
   ]
 }
