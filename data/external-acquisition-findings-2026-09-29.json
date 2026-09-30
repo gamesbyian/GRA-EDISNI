@@ -577,6 +577,24 @@
         "repository_cross_reference": "Exact handle search found no match in GRA-EDISNI or gamesbyian/playdead-unofficial-exports."
       },
       "disposition": "Do not promote or use as a competing observation. Treat the terse comment as ambiguous and contradicted by an existing physical-photo observation unless the commenter supplies a photo showing otherwise."
+    },
+    {
+      "id": "l17-youtube-lightweight-recon-negative",
+      "source_id": "youtube-ledger-07-Pbkq8Ey_s0k",
+      "source_url": "https://www.youtube.com/watch?v=Pbkq8Ey_s0k",
+      "status": "human-reviewed-recon-negative",
+      "evidence": {
+        "ledger_entry": "L17",
+        "owner": "Kyle Hilliard",
+        "source_title": "How To Turn A Basement Closet Into A Recording Booth",
+        "upload_date": "2020-02-20",
+        "source_duration_seconds": 172,
+        "reconnaissance_run_id": 36666370632,
+        "reconnaissance_source_resolution": "256x144",
+        "review_method": "Complete source sampled at 1 fps plus scene-change frames from a <=240p authenticated stream.",
+        "visual_result": "The source shows a basement-closet recording-booth build, with brief podcast/game inserts. Across the complete 172-second source, the Collector's Edition packaging, black-wrapped game and numbered sticker are never presented. No candidate sticker interval exists for full-resolution escalation."
+      },
+      "disposition": "Do not acquire the full-resolution video for sticker mining absent a concrete alternate timestamp/source. L17 remains a lost-owner provenance lead rather than a video-forensic sticker source."
     }
   ]
 }
