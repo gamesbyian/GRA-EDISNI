@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-29",
+  "purpose": "Public research-lineage index for INSIDE ARG / Collector's Edition sticker work. Summaries are provenance notes, not endorsements.",
+  "sources": [
+    {
+      "id": "game-detectives-inside-arg",
+      "platform": "Game Detectives Wiki",
+      "url": "https://wiki.gamedetectives.net/w/Inside_ARG",
+      "timeframe": "2016-present archive",
+      "status": "public-reference",
+      "evidence_role": "historical synthesis",
+      "notes": [
+        "Documents printer-string families and solved platform-specific transformations.",
+        "Records Terminal41 chronology, page modification dates, breachlog/printreqstatus relationships, shutdown-protocol path, and gate-98 image analysis.",
+        "Records failed theory that 20+ viewers could activate the Anthony T. Setrinamaire YouTube stream."
+      ],
+      "linked_manual_targets": [
+        "https://pastebin.com/acvaSwq5",
+        "https://pastebin.com/cuMRvEAU",
+        "https://pastebin.com/Ccxe0WTC",
+        "https://www.youtube.com/watch?v=5I6pNl1M7RI",
+        "https://www.youtube.com/watch?v=dWhmPSjOybI"
+      ]
+    },
+    {
+      "id": "mistarg-inside-chronology",
+      "platform": "MistARG / 迷雾论坛",
+      "language": "zh-CN",
+      "url": "https://www.mistarg.cn/topic/274/%E5%8F%91%E7%8E%B0-arg%E7%BC%96%E5%B9%B4%E5%8F%B2%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92-inside",
+      "timeframe": "2026",
+      "status": "public-reference",
+      "evidence_role": "multilingual retrospective",
+      "notes": [
+        "Chinese-language reconstruction of the INSIDE ARG chronology and Terminal41 state changes.",
+        "Useful independent terminology/source map for multilingual searches; treat historical claims as secondary unless traced to primary sources."
+      ]
+    },
+    {
+      "id": "steam-secrets-thread",
+      "platform": "Steam Community",
+      "url": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445/",
+      "timeframe": "2016-2020+",
+      "status": "public-reference",
+      "evidence_role": "early community research lineage",
+      "notes": [
+        "Long-running secrets/mysteries discussion predating the Collector's Edition puzzle.",
+        "Later pages record Terminal41 countdown observations and links to printer-secret working docs, Terminal41 audio, and emergency data-stream video.",
+        "Contains many speculative in-game visual interpretations; preserve as hypothesis lineage, not verified ARG evidence."
+      ]
+    },
+    {
+      "id": "reddit-owner-hunt-gamecollecting-2020",
+      "platform": "Reddit",
+      "url": "https://www.reddit.com/r/gamecollecting/comments/g9jr4y",
+      "date": "2020-04-28",
+      "status": "public-reference",
+      "evidence_role": "collector-owner acquisition campaign",
+      "notes": [
+        "Explains contemporary sticker-hunt assumptions and owner-contact strategy.",
+        "Records that the nine faint-image classes had already been assembled while symbol/number pattern work remained open."
+      ]
+    },
+    {
+      "id": "reddit-sticker-oddity-h0t1i6",
+      "platform": "Reddit",
+      "url": "https://www.reddit.com/r/PlaydeadsInside/comments/h0t1i6",
+      "date": "2020-06-11",
+      "status": "public-reference",
+      "evidence_role": "physical-sticker observation",
+      "notes": [
+        "Owner independently noticed apparent digits/forms in the faint sticker background before being directed to the ARG.",
+        "Useful as provenance for how the nine-image layer was perceived by owners."
+      ]
+    },
+    {
+      "id": "reddit-ingame-symbols-g23bku",
+      "platform": "Reddit",
+      "url": "https://www.reddit.com/r/PlaydeadsInside/comments/g23bku",
+      "date": "2020-04-16",
+      "status": "public-reference",
+      "evidence_role": "hypothesis lineage",
+      "notes": [
+        "Records investigation of recurring triangular U signs, possible writing on the shockwave shield, and image-brightening ideas.",
+        "No documented solve; retain as historical in-game-symbol line of inquiry."
+      ]
+    },
+    {
+      "id": "reddit-printer-code-audit-2026",
+      "platform": "Reddit",
+      "url": "https://www.reddit.com/r/PlaydeadsInside/comments/1sqij1h/nearly_10_years_on_a_codelevel_audit_of_insides/",
+      "date": "2026-04-20",
+      "status": "public-reference",
+      "evidence_role": "code-level reproducibility study",
+      "notes": [
+        "Reports a cross-platform binary/decompiler audit of PrintingPaperEasterEgg.",
+        "Challenges the received macOS Cutout decoder story and records concrete offsets/implementation distinctions.",
+        "Already summarized in the BigDusty printer dossier; retain original discussion as primary public provenance for that audit."
+      ]
+    },
+    {
+      "id": "reddit-oddheader-reaction-muted-audio-2026",
+      "platform": "Reddit",
+      "url": "https://www.reddit.com/r/PlaydeadsInside/comments/1wn0yxy/nearly_40minute_video_about_inside_secrets_and/",
+      "date": "2026-09-22",
+      "status": "public-reference",
+      "evidence_role": "recent experiment/hypothesis lineage",
+      "notes": [
+        "Commenter reports completing a muted-in-game-audio test with no apparent change.",
+        "Other commenters propose injected-frequency/audio-trigger tests and cutting open the Huddle figure; these are suggestions, not evidence."
+      ]
+    },
+    {
+      "id": "reddit-single-plug-test-2026",
+      "platform": "Reddit",
+      "url": "https://www.reddit.com/r/PlaydeadsInside/comments/1wqr0oc/has_anyone_tried_pulling_the_plug_only_once_in/",
+      "date": "2026-09-26",
+      "status": "public-reference",
+      "evidence_role": "recent negative experiment",
+      "notes": [
+        "A commenter reports trying the alternate-ending single-plug continuation and noticing no different behavior.",
+        "Discussion also raises the recurring ambiguity between ARG leads and ordinary cut content."
+      ]
+    },
+    {
+      "id": "reddit-alanah-owner-contact-2020",
+      "platform": "Reddit",
+      "url": "https://www.reddit.com/r/AlanahPearce/comments/fr7kvf",
+      "date": "2020-03-29",
+      "status": "public-reference",
+      "evidence_role": "owner-hunt lineage",
+      "notes": [
+        "Documents an early attempt to contact a public figure believed to own the Collector's Edition for sticker recovery."
+      ]
+    }
+  ]
+}
