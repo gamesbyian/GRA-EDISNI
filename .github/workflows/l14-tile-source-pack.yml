@@ -58,7 +58,7 @@ jobs:
           cp archive/research-files/tiles_with_masks.png l14-tile-pack/tiles_with_masks.png
           cp archive/research-files/h108_symbol_background_cell_stats.csv l14-tile-pack/
           cp archive/project-files/inside_tile_seam_metrics.csv l14-tile-pack/
-          git clone --depth 1 --filter=blob:none --sparse https://github.com/twinysam/INSIDE-ARG.git /tmp/inside-arg
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/gamesbyian/INSIDE-ARG.git /tmp/inside-arg
           git -C /tmp/inside-arg sparse-checkout set images/stickers
           git -C /tmp/inside-arg show HEAD:stickers.md > /tmp/stickers.md
           mkdir -p l14-tile-pack/reference-corpus
