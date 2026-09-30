@@ -2,27 +2,34 @@ name: Historical CE unboxing media reconnaissance
 
 on:
   workflow_dispatch:
+    inputs:
+      source_id:
+        description: Single acquisition target from data/external-acquisition-targets.json
+        required: true
+        type: choice
+        default: youtube-ledger-07-Pbkq8Ey_s0k
+        options:
+          - youtube-ledger-01-eXxklNxsVWw
+          - youtube-ledger-02-Mhxynz-LoAI
+          - youtube-ledger-03-fu7gmuJQKXM
+          - youtube-ledger-04-jQUf8yhqEc4
+          - youtube-ledger-05-ahCmqg1hhSA
+          - youtube-ledger-06-G4z5r4rZH2w
+          - youtube-ledger-07-Pbkq8Ey_s0k
+          - youtube-ledger-08-d23bAqGtImo
+          - youtube-ledger-09-Y7OqMKBbM2Y
+          - youtube-ledger-10-uP5nSeyac_o
+          - youtube-ledger-11-gqlQaHgRaHg
 
 permissions:
   contents: read
 
 jobs:
   unboxing:
-    strategy:
-      fail-fast: false
-      max-parallel: 2
-      matrix:
-        source_id:
-          - youtube-ledger-02-Mhxynz-LoAI
-          - youtube-ledger-03-fu7gmuJQKXM
-          - youtube-ledger-04-jQUf8yhqEc4
-          - youtube-ledger-05-ahCmqg1hhSA
-          - youtube-ledger-06-G4z5r4rZH2w
-          - youtube-ledger-09-Y7OqMKBbM2Y
-          - youtube-ledger-10-uP5nSeyac_o
-          - youtube-ledger-11-gqlQaHgRaHg
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    env:
+      SOURCE_ID: ${{ inputs.source_id }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -50,7 +57,8 @@ jobs:
         run: |
           url="$(python - <<'PY'
           import json
-          sid = "${{ matrix.source_id }}"
+          import os
+          sid = os.environ["SOURCE_ID"]
           data = json.load(open("data/external-acquisition-targets.json", encoding="utf-8"))
           print(next(s["url"] for s in data["sources"] if s["id"] == sid))
           PY
@@ -60,7 +68,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          out="evidence-work/${{ matrix.source_id }}"
+          out="evidence-work/$SOURCE_ID"
           mkdir -p "$out/source"
           yt-dlp \
             --js-runtimes node \
@@ -79,7 +87,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          out="evidence-work/${{ matrix.source_id }}"
+          out="evidence-work/$SOURCE_ID"
           video="$(find "$out/source" -type f \( -name '*.mkv' -o -name '*.mp4' -o -name '*.webm' \) | head -n 1)"
           test -n "$video"
           python scripts/external_evidence/extract_frames.py "$video" \
@@ -94,19 +102,19 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ce-recon-${{ matrix.source_id }}-${{ github.run_id }}
+          name: ce-recon-${{ inputs.source_id }}-${{ github.run_id }}
           path: |
-            evidence-work/${{ matrix.source_id }}/recon/
-            evidence-work/${{ matrix.source_id }}/source/**/*.json
-            evidence-work/${{ matrix.source_id }}/source/**/*.description
-            evidence-work/${{ matrix.source_id }}/source/**/*.webp
+            evidence-work/${{ inputs.source_id }}/recon/
+            evidence-work/${{ inputs.source_id }}/source/**/*.json
+            evidence-work/${{ inputs.source_id }}/source/**/*.description
+            evidence-work/${{ inputs.source_id }}/source/**/*.webp
           if-no-files-found: warn
           retention-days: 14
       - name: Upload full source bundle
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ce-media-${{ matrix.source_id }}-${{ github.run_id }}
-          path: evidence-work/${{ matrix.source_id }}/source/
+          name: ce-media-${{ inputs.source_id }}-${{ github.run_id }}
+          path: evidence-work/${{ inputs.source_id }}/source/
           if-no-files-found: warn
           retention-days: 14
