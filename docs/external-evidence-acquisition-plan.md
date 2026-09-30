@@ -454,3 +454,11 @@ The authenticated 3,180-comment snapshot has now been mined beyond the first obv
 - A terse self-reply from `@DwellerFree` says `476 /`, but sticker **476 is already physically documented as dash (background H)**. The comment is context-poor and contradicted by stronger physical evidence, so it is quarantined rather than treated as a competing observation.
 
 This pass found no additional short-form serial/symbol owner claims beyond 369, 427, and the ambiguous 476 comment.
+
+### Lightweight incident-video reconnaissance
+
+For historical videos that are not CE unboxings but merely contain a Huddle or other owner clue, use `.github/workflows/historical-ce-lightweight-recon.yml` before any full-resolution acquisition. It accepts a single source target and acquires only a <=240p video stream, then samples the complete source at 1 fps plus scene changes.
+
+This was validated on L17 / `Pbkq8Ey_s0k`: run `36666370632` reviewed the complete 172-second source and found no CE packaging, black wrapping, or numbered sticker anywhere in the video. Full-resolution escalation is therefore not justified for that source.
+
+The same reusable lane is now being applied to L30 / `d23bAqGtImo`, whose Huddle is historically visible around 7:22. The purpose is narrowly to determine whether sticker-bearing packaging appears anywhere near the Huddle or elsewhere in the source before spending on denser acquisition.
