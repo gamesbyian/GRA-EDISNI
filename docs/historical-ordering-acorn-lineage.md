@@ -29,7 +29,15 @@ The compact historical summary records that the PC long printer strings had to b
 
 That matters because the later Game of Life operation was not an arbitrary transform chosen from a toolbox. The assembled object itself supplied both the named seed and the generation number.
 
-The more detailed historical technique inventory preserves the preceding ordering logic: sparse left/right margin marks were discussed as an alternating/interlaced pattern, margin slashes, six boundary patterns, and explicit "check-bits" used to line rows up. Community comments state that the side structure was what made the arrangement possible.
+The primary archived TLDR now gives three exact chronology anchors for the ordering claim:
+
+- **30 Jun 2018, 20:05:** the community explicitly described rearranging the lines to reveal a hidden message inside the Xbox "bell" shape;
+- **30 Jun 2018, 20:07:** the same solver said the bell shape was believed to be partly responsible for keeping the line order consistent;
+- **11 Jul 2018, 10:07:** the TLDR records that rearranging the PC long strings into a particular order reveals an acorn and the number 41.
+
+All three are in `gamesbyian/playdead-unofficial-exports/Playdead Unofficial - ARG - tldr [462637922944811028].txt`.
+
+The more detailed project technique inventory also preserves discussion of alternating/interlaced side structure, margin slashes, boundary patterns, and "check-bits." However, this pass did **not** recover the original primary message that uses the specific term "check-bits." Until that exact message is anchored, treat "check-bit" as synthesis terminology rather than a directly quoted 2018 label.
 
 ### Reset interpretation
 
@@ -138,8 +146,8 @@ A theory that only becomes obvious after its terminal behavior is known has a la
 
 | Date | Object | Historical operation/proposal | Status then | Reset value |
 |---|---|---|---|---|
-| Jul 2018 | PC printer | reorder rows using side/margin structure | successful | demonstrated boundary-constrained permutation |
-| Jul 2018 | assembled PC printer | read acorn + 41 | successful | artifact itself supplies transform + parameter |
+| 30 Jun 2018 | Xbox printer | rearrange lines; bell shape believed to help keep order consistent | exploratory but explicitly attested | direct primary anchor for visible-structure-constrained ordering |
+| 11 Jul 2018 | PC printer | particular line ordering reveals acorn + 41 | successful reconstruction recorded in TLDR | direct primary anchor for ordering -> recognizable instruction object |
 | later | acorn + 41 | Game of Life generation 41 | successful reconstruction | demonstrated externally cued generative transform |
 | Dec 2022 | sticker foreground | organize as 108 and physical 3x3 squares | exploratory | anti-hindsight support for frame geometry |
 | Oct 2023 | sticker foreground | treat bottom dot/yellow region as likely visual aid/barrier | exploratory | direct historical support for tail-as-metadata family |
@@ -172,7 +180,7 @@ R1 is substantially complete as a first-pass historical reconstruction.
 
 Still worth adding if found:
 
-- exact archived message anchors for the 2018 side/check-bit discussion;
+- the exact original archived message that uses the narrower "check-bit" terminology; the broader visible-structure/order claim is now primary-anchored;
 - any pre-2026 message explicitly saying the sticker tail should select a physical row/depth;
 - any historical diagram that maps the 9+3 proposal onto A-I geometry;
 - any statement tying the faint background image layer to foreground ordering rather than merely to the solved `534brn...` path.
