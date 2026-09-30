@@ -375,7 +375,7 @@ The historical acquisition sweeps have moved from “running” to a mined/manua
 
 - Historical CE full-media reconnaissance completed successfully for ledger videos 02, 03, 04, 05, 06, 09, 10, and 11. Preserve the existing Actions artifacts; do not repeat those multi-gigabyte downloads without a concrete new reason.
 - Ledger video 10 (`uP5nSeyac_o`) has been reviewed across its complete 6.683-second source at dense 0.25-second coverage and is negative for a visible numbered sticker.
-- Ledger video 03 (`fu7gmuJQKXM`) has been reviewed across the complete 388-second source at 2-second sampling and is negative for a defensible numbered-sticker view. Do not densify it without a candidate timestamp.
+- Ledger video 03 (`fu7gmuJQKXM`) has been reviewed across the complete 388-second source at 2-second sampling and is negative for a defensible numbered-sticker view. Ledger video 11 (`gqlQaHgRaHg`, IGN) has likewise been reviewed across its complete 374-second source at 2-second sampling and is negative. Do not densify either without a candidate timestamp.
 - The lightweight historical metadata/thumbnail sweep successfully covered all eleven ledger videos. The iam8bit making-of/reveal remains age-restricted for the research account and should stay classified as blocked/authenticated rather than silently successful.
 - Public X extraction yielded original media for KaydHendricks, TheAnnaTheRed, hubalubalu, triplizard, ItsaMeFernando, MinnMax, frmlssndmpty, and nicelyneatly. Visual mining found no new sticker observation; the Fernando original independently confirms already-canonical 324 = slash.
 - Tiny status-only X outputs are not acquisitions. Instagram outputs from the public lane are login-required, and the VK lane produced no useful media.
