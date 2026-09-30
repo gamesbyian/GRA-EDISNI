@@ -8,22 +8,28 @@
       "kind": "youtube",
       "url": "https://www.youtube.com/watch?v=zhCdGdqCIRU",
       "public": true,
-      "priority": "critical",
+      "priority": "low",
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Official iam8bit INSIDE Collector's Edition unboxing; packaging/sticker handling."
+      "note": "Official iam8bit INSIDE Collector's Edition unboxing; packaging/sticker handling.",
+      "acquisition_status": "human-reviewed",
+      "mining_status": "human-reviewed-negative",
+      "status_note": "User personally reviewed the official iam8bit CE unboxing and reports no unknown sticker information. Preserve for provenance only; do not frame-mine again absent a concrete reason."
     },
     {
       "id": "youtube-inside-gaming-ce-unboxing",
       "kind": "youtube",
       "url": "https://www.youtube.com/watch?v=AO2YQCl5qFM",
       "public": true,
-      "priority": "critical",
+      "priority": "medium",
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Historical ledger says sticker lost but partially visible in footage."
+      "note": "Historical ledger says sticker lost but partially visible in footage.",
+      "acquisition_status": "acquired-forensics-complete",
+      "mining_status": "L14-symbol-verified-serial-unreadable-tile-paused",
+      "status_note": "Canonical lost sticker L14. Visible symbol slash; serial physically occluded in the available source. Exact forensic review preserved. Background A-I classification is intentionally paused pending PR #61 canonical tile masters."
     },
     {
       "id": "youtube-oddheader-2026-mystery",
@@ -34,7 +40,10 @@
       "media": true,
       "comments": true,
       "captions": true,
-      "note": "Current owner-discovery wave; comments are a recurring snapshot target."
+      "note": "Current owner-discovery wave; comments are a recurring snapshot target.",
+      "acquisition_status": "comments-acquired",
+      "mining_status": "owner-discovery-active",
+      "status_note": "Video itself is user-reviewed negative for unknown sticker imagery; authenticated ~3,180-comment snapshot is the active owner-discovery source. Preserve 369/427 claims and owner leads as unverified until physical evidence."
     },
     {
       "id": "youtube-ledger-01-eXxklNxsVWw",
@@ -83,7 +92,7 @@
       "kind": "youtube",
       "url": "https://www.youtube.com/watch?v=jQUf8yhqEc4",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "captions": true,
@@ -97,7 +106,7 @@
       "kind": "youtube",
       "url": "https://www.youtube.com/watch?v=ahCmqg1hhSA",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "captions": true,
@@ -111,7 +120,7 @@
       "kind": "youtube",
       "url": "https://www.youtube.com/watch?v=G4z5r4rZH2w",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "captions": true,
@@ -125,7 +134,7 @@
       "kind": "youtube",
       "url": "https://www.youtube.com/watch?v=Pbkq8Ey_s0k",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "captions": true,
@@ -139,7 +148,7 @@
       "kind": "youtube",
       "url": "https://www.youtube.com/watch?v=d23bAqGtImo",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "captions": true,
@@ -153,7 +162,7 @@
       "kind": "youtube",
       "url": "https://www.youtube.com/watch?v=Y7OqMKBbM2Y",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "captions": true,
@@ -167,7 +176,7 @@
       "kind": "youtube",
       "url": "https://www.youtube.com/watch?v=uP5nSeyac_o",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "captions": true,
@@ -181,7 +190,7 @@
       "kind": "youtube",
       "url": "https://www.youtube.com/watch?v=gqlQaHgRaHg",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "captions": true,
@@ -373,73 +382,78 @@
       "kind": "twitter",
       "url": "https://twitter.com/KaydHendricks/status/1205585260207050753",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "note": "Save attached media plus thread/reply context.",
       "acquisition_status": "acquired",
-      "mining_status": "mined-no-readable-sticker"
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Canonical physical sticker 020 = slash, background B. Original X media has been acquired/mined; no further sticker-information work remains."
     },
     {
       "id": "x-theannathered",
       "kind": "twitter",
       "url": "https://twitter.com/TheAnnaTheRed/status/1205249189577314306",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "note": "Save attached media plus thread/reply context.",
       "acquisition_status": "acquired",
-      "mining_status": "mined-no-readable-sticker"
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Canonical physical sticker 037 = dash, background A. Original X media acquired/mined; source also led historically to lost-owner L24."
     },
     {
       "id": "x-hubalubalu",
       "kind": "twitter",
       "url": "https://twitter.com/hubalubalu/status/1205723032225890304",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "note": "Save attached media plus thread/reply context.",
       "acquisition_status": "acquired",
-      "mining_status": "mined-no-readable-sticker"
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Canonical physical sticker 039 = slash, background C. Original X media acquired/mined."
     },
     {
       "id": "x-triplizard",
       "kind": "twitter",
       "url": "https://twitter.com/triplizard/status/1222277716554043392",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "note": "Save attached media plus thread/reply context.",
       "acquisition_status": "acquired",
-      "mining_status": "mined-no-readable-sticker"
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Canonical physical sticker 206 = dot, background H. Original X media acquired/mined."
     },
     {
       "id": "x-itsamefernando",
       "kind": "twitter",
       "url": "https://twitter.com/ItsaMeFernando/status/1266191839104692224",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "note": "Save attached media plus thread/reply context.",
       "acquisition_status": "acquired",
-      "mining_status": "verified-physical-observation-existing-canonical",
-      "status_note": "Original media independently confirms canonical 324 = slash."
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Canonical physical sticker 324 = slash, background I. Acquired original independently reconfirmed the observation."
     },
     {
       "id": "x-minnmax",
       "kind": "twitter",
       "url": "https://twitter.com/MinnMaxShow/status/1457204412879802378",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "note": "Save attached media plus thread/reply context.",
       "acquisition_status": "acquired",
-      "mining_status": "mined-no-readable-sticker"
+      "mining_status": "canonical-existing-observation",
+      "status_note": "This 2021 auction source led to canonical physical sticker 413 = dot, background H. The separate later MinnMax U27 winner remains a different unresolved owner trail."
     },
     {
       "id": "x-kingskylark",
@@ -471,12 +485,15 @@
       "kind": "direct",
       "url": "https://raw.githubusercontent.com/twinysam/INSIDE-ARG/master/terminal41.link/dat/saf_dat_col.html",
       "public": true,
-      "priority": "critical",
+      "priority": "low",
       "media": true,
       "expected_size": 1986163,
       "expected_git_blob_sha1": "349b818fce618ef55c404bedfb602b1d03f29a48",
       "suggested_filename": "saf_dat_col.html",
-      "note": "Exact raw file; do not open/resave before verification."
+      "note": "Exact raw file; do not open/resave before verification.",
+      "acquisition_status": "acquired-verified-owned-by-pr56",
+      "mining_status": "archival-owner-pr56",
+      "status_note": "Exact saf_dat_col.html already acquired and verified at 1,986,163 bytes / Git blob 349b818fce618ef55c404bedfb602b1d03f29a48. PR #56 owns canonical archival promotion; no duplicate work in PR #57."
     },
     {
       "id": "youtube-iam8bit-making-of-reveal",
@@ -523,12 +540,13 @@
       "kind": "twitter",
       "url": "https://twitter.com/frmlssndmpty/status/1060390704269144064",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "note": "Historical owner/provenance lead; preserve original media and thread context.",
       "acquisition_status": "acquired",
-      "mining_status": "mined-no-readable-sticker"
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Canonical physical sticker 032 = slash, background E. Original X media acquired/mined."
     },
     {
       "id": "x-fokfes",
@@ -574,12 +592,13 @@
       "kind": "twitter",
       "url": "https://twitter.com/NicelyNeatly/status/1220526726863654912",
       "public": true,
-      "priority": "high",
+      "priority": "low",
       "media": true,
       "comments": true,
       "note": "Historical owner/provenance lead; preserve original media and thread context.",
       "acquisition_status": "acquired",
-      "mining_status": "mined-no-readable-sticker"
+      "mining_status": "canonical-existing-observation",
+      "status_note": "Canonical physical sticker 338 = dash, background E. Original X media acquired/mined."
     },
     {
       "id": "x-nintendude794-2018",
@@ -612,10 +631,10 @@
       "kind": "github",
       "url": "https://github.com/twinysam/playdead-unofficial-exports/commit/928242dc548e766e50c93f0bdcaa52ddbc7cfc42",
       "public": true,
-      "priority": "critical",
+      "priority": "medium",
       "acquisition_status": "acquired-upstream",
-      "mining_status": "mined-first-pass",
-      "status_note": "Upstream commit 928242dc added the previously missing #stickers-solving export: 2,509-line transcript plus attached assets/scripts. User fork predates the commit; exact upstream commit was mined directly to avoid disturbing active fork branches."
+      "mining_status": "mined-deep-pass",
+      "status_note": "Previously missing #stickers-solving export recovered at upstream commit 928242dc and deeply mined for provenance, predictions, model corrections, attachments, owner leads and manufacturing clues. Remaining work should be targeted, not another broad sweep; PR #56 owns archival incorporation."
     }
   ]
 }
