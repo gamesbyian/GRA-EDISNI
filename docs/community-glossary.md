@@ -6,6 +6,8 @@ This glossary records vocabulary actually used by the INSIDE ARG community, hist
 
 The purpose is **translation and provenance**, not retrospective standardization. Different eras and subgroups use different words for the same thing. Where a term is newer, local to one project, or potentially misleading, that is called out explicitly.
 
+For recurring notation, color, indexing, layout, and presentation practices, see `docs/community-conventions.md`.
+
 ## Scope and labels
 
 - **Early community** — terminology visible in 2019–2021-era ARG documentation and Discord-derived chronology.
