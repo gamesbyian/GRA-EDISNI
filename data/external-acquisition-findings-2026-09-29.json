@@ -163,6 +163,21 @@
         "non_acquisitions_note": "Tiny status-only X artifacts, all Instagram login-gated outputs, and the VK metadata-only output are not counted as media acquisitions."
       },
       "disposition": "Keep the original-media provenance; do not promote any new sticker observation from this sweep."
+    },
+    {
+      "id": "youtube-ledger-11-gqlQaHgRaHg-reviewed-negative",
+      "source_id": "youtube-ledger-11-gqlQaHgRaHg",
+      "source_url": "https://www.youtube.com/watch?v=gqlQaHgRaHg",
+      "status": "human-reviewed-negative",
+      "evidence": {
+        "title": "The Inside/Real Doll CE: Our Weirdest Unboxing Ever",
+        "uploader": "IGN",
+        "upload_date": "2019-12-19",
+        "source_duration_seconds": 374,
+        "review_method": "Successful authenticated reconnaissance artifact; complete source sampled every 2 seconds across the full run and visually reviewed.",
+        "visual_result": "The video opens the Collector's Edition and handles the game case, box, black wrapping, and Huddle figure, but the reconnaissance review contains no defensible view of the numbered CE sticker."
+      },
+      "disposition": "Treat as reviewed negative for sticker acquisition; do not acquire or re-mine denser media absent a concrete candidate timestamp or better source."
     }
   ]
 }
