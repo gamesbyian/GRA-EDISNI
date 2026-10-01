@@ -186,3 +186,12 @@ Still worth adding if found:
 - any statement tying the faint background image layer to foreground ordering rather than merely to the solved `534brn...` path.
 
 Those are refinements. The broad historical operation lineage is now clear enough to drive R2.
+
+
+## 9. Dec-2022 12-row proposal now tested exactly
+
+The archived 22 Dec 2022 discussion is more specific than the earlier R1 summary captured. In the conventional 12×9 display, solvers explicitly proposed rearranging the **twelve sequence rows** "like acorn 41", including the concrete suggestion that one observed yellow/dot row might become the top boundary and the other the bottom boundary. The same discussion notes that each of the nine columns corresponds to one repeating A-I background pattern.
+
+Experiment 347 reconstructs that proposal on the correct permutation axis. Under the frozen observation-only boundary-continuity score, canonical serial row order is ordinary-to-poor and the historical two-yellow-row opposite-boundary suggestion occurs in **zero** of the 60 exact maximizing directed orders.
+
+This closes unconstrained 12-row permutation as a useful ordering mechanism under the tested criterion. It does not subsume the next-day historical statement about "rearranging the top 9x9 grid to account for the repeating pattern", which may encode a more specific operation and remains to be reconstructed from its source context.
