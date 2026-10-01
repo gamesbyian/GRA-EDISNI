@@ -107,11 +107,13 @@
         "Experiment 290 four literal coordinate-copy consumers: (q,S) uniquely selector-sensitive, q-preserving, and nondegenerate",
         "Experiment 354 all six shared tail-to-depth S3 relabelings: identity uniquely survives first-pass positional closure (20 vs 0)",
         "Experiment 355 / rerun of Experiment 266: all 432 invertible affine (q,S) maps; every maximum-retention map forces d'=S exactly",
-        "Experiment 355 / rerun of Experiment 267: higher retention from singular maps is explained by selector-information erasure"
+        "Experiment 355 / rerun of Experiment 267: higher retention from singular maps is explained by selector-information erasure",
+        "Experiment 266 all 432 invertible affine q/S address maps: maximum-retention maps all force d'=S exactly; only external-q relabeling remains",
+        "Experiment 267 all 729 affine maps: retention beyond 20 comes from singular selector-erasing maps, so information preservation is a substantive family constraint"
       ],
       "circularity_risk": "medium",
       "claim": "first selector-on-body step uses the unique viable representative inside the literal coordinate-copy family: preserve q and substitute the identically registered tail position for body depth, (q,d,j)->(q,S(j),j)",
-      "reset_action": "retain exact depth substitution and relative registration as strongly selected inside literal-copy and invertible-affine information-preserving families; remaining uncertainty is the parent-family principle itself rather than parameter choice"
+      "reset_action": "treat d'=S and shared tail/body registration as strongly observation-constrained across literal and invertible-affine consumer families; remaining model prior is the higher-order choice of an information-preserving selector-on-body/address-transform family"
     },
     {
       "id": "G6",
