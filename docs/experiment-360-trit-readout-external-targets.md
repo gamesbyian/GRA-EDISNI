@@ -1,6 +1,8 @@
 # Experiment 360 — three-position readout vs. lever password and LIFEDETECTED
 
-_Status: completed bounded negative, 1 Oct 2026._
+_Status: completed bounded negative, 1 Oct 2026. **Conditional on the incumbent completion; see the caveat below.**_
+
+> **Caveat (added on audit, 1 Oct 2026):** only 6 of the 36 trits in readout R are fully determined by raw observations (6/27 body columns, 0/9 tail stacks). The other 30 come from the 14 incumbent completions. Both negatives below therefore hold **only if the incumbent completion is correct**. They are machine-conditioned consequences, not Layer-0 exclusions, and must not be cited as independent evidence against the lever or LIFEDETECTED readings. Compare Experiment 362, which is raw-only.
 
 ## Question
 

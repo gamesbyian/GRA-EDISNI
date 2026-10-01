@@ -19,7 +19,9 @@ Bounded parent family, stated before inspecting outputs:
   letters, matching the 12 trigrams.  Any monoalphabetic reading needs one
   trigram value to occur 4 times (the four Es) plus two further pairs.
 
-Both targets are run across all 14 legal completions.  The script fails
+Both targets are run across all 14 legal completions. CAVEAT: only 6 of the 36
+trits are raw-determined, so these negatives are conditional on the incumbent
+completion, not raw-data exclusions.  The script fails
 loudly if the readout premise (exactly one exception per column / stack)
 breaks, and asserts the recorded negative results.
 """
