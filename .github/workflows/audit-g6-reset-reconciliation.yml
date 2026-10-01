@@ -21,6 +21,7 @@ jobs:
       - name: Rerun and verify frozen G6 audits
         run: python scripts/rerun_g6_reconciliation.py
       - name: Upload reconciliation evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: experiment-356-g6-reconciliation
