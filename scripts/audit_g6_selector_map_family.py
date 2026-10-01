@@ -92,10 +92,15 @@ def main() -> None:
     assert len(records) == 27
     assert len(invariant) == 8
     assert max_invariant_retention == 14
-    assert [(r["map"], r["outputs"]) for r in optimal] == [
-        ("002", {"100": 14}),
-        ("012", {"100": 14}),
-    ]
+    # Order is not substantive. records is reverse-sorted, so a list-order
+    # assertion was brittle and could disagree with the expected literal list.
+    assert {
+        (r["map"], tuple(sorted(r["outputs"].items())))
+        for r in optimal
+    } == {
+        ("002", (("100", 14),)),
+        ("012", (("100", 14),)),
+    }
 
     # The two optimal maps differ only at S=1. Their accepted machine set is
     # identical; this is the already-known f1 observational gauge.
