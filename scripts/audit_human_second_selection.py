@@ -112,7 +112,10 @@ def main() -> None:
     assert all(sum(records[q].values()) == 20 for q in (0, 1, 2))
     assert sum(records["S"].values()) == 14
     assert len(records["S"]) == 1
-    assert all(len(records[q]) == 3 for q in (0, 1, 2))
+    # Fixed-q reads are all non-invariant, but q=2 has two distinct outputs
+    # while q=0 and q=1 each have three. The previous blanket "== 3"
+    # assertion contradicted the exact q=2 Counter asserted immediately above.
+    assert {q: len(records[q]) for q in (0, 1, 2)} == {0: 3, 1: 3, 2: 2}
 
     print("Experiment 291")
     print("first-pass machines:", len(first_survivors))
