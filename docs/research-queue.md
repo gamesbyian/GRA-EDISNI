@@ -476,3 +476,16 @@ Combined with Experiment 290, the smallest human-legible coordinate-copy family 
 - its tail/body relative orientation is uniquely identity.
 
 **Remaining G5 burden:** why privilege the literal coordinate-copy family itself? Do not call G5 externally derived. The next useful attack is a modest broader family that is still human-legible and preregistered, such as shared affine depth consumers `d'=a*q+b*S+c mod 3`, before any downstream criterion. First check existing experiments to avoid duplicating an already exhausted family.
+
+
+### Experiment 355 — G5 affine-family reset reconciliation
+
+Experiments 266–267 rerun cleanly on current main.
+
+Across all 432 invertible affine maps on `(q,S)`, maximum first-pass retention is 20 and exactly six maps attain it. Every maximizer has `d'=S` exactly; the only freedom is an affine relabeling of external q. Once physical q labels are fixed, this leaves the canonical G5 representative.
+
+Allowing singular affine maps raises retention only by destroying information. All 24 perfect-retention maps erase selector S from both output coordinates. Experiment 267 therefore validates information preservation as a substantive guardrail rather than a cosmetic preference.
+
+**Priority shift:** G5 is no longer the best place to spend generic-family search effort. Its exact representative is uniquely selected inside literal-copy and invertible-affine parents, and its relative tail/body orientation is fixed by Experiment 354. The remaining G5 uncertainty is the higher-order decision to use an information-preserving affine/address consumer at all.
+
+Move the next R4 attack to **G6's second selector consumption**: why consume the tail again after G5, rather than stop at the three first-pass surfaces or use another equally simple information-preserving reduction? Reuse Experiments 291, 322, and 269 before defining anything new.
