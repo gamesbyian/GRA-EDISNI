@@ -489,3 +489,15 @@ Allowing singular affine maps raises retention only by destroying information. A
 **Priority shift:** G5 is no longer the best place to spend generic-family search effort. Its exact representative is uniquely selected inside literal-copy and invertible-affine parents, and its relative tail/body orientation is fixed by Experiment 354. The remaining G5 uncertainty is the higher-order decision to use an information-preserving affine/address consumer at all.
 
 Move the next R4 attack to **G6's second selector consumption**: why consume the tail again after G5, rather than stop at the three first-pass surfaces or use another equally simple information-preserving reduction? Reuse Experiments 291, 322, and 269 before defining anything new.
+
+
+### Experiment 355 — G5 affine-family reset reconciliation
+
+The pre-reset affine attacks have now been rerun against current main and folded into the reset evidence chain.
+
+- Experiment 266 exhausts all 432 invertible affine maps on `(q,S)`. The maximum first-pass retention is 20; exactly six maps achieve it; every one has `d'=S` exactly. The only remaining freedom is affine relabeling of the untouched external-q coordinate.
+- Experiment 267 exhausts all 729 affine maps, including singular maps. Perfect 216-state retention is possible only by erasing selector `S`, so raw retention by itself is not a valid objective once information destruction is allowed.
+
+**Consequence:** G5's depth substitution is robust well beyond the four literal-copy candidates. Within the natural information-preserving affine parent, maximum first-pass compatibility forces the selector to occupy body depth exactly. Combined with Experiment 354, even the relative tail/body label orientation is fixed.
+
+**Remaining burden:** the parent-family principle itself, namely that the intended operation should be an information-preserving address transform / selector-on-body consumer. Do not keep widening families mechanically unless a new independently motivated operation class appears. At this point the higher-value frontier is downstream G6/G7 provenance or genuinely new external evidence.
