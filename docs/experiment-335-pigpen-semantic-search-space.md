@@ -1,5 +1,7 @@
 # Experiment 335 — bounded Pigpen semantic search-space audit
 
+> **Audit note (Experiment 365):** the token sets and the 900 / 14,400 counts are conditional on the Experiment-329/332 row-selector carrier, not raw-data quantities. The multiple-comparisons warning stands.
+
 _Status: completed anti-fishing audit, 30 Sep 2026._
 
 ## Question

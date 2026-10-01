@@ -2,6 +2,8 @@
 
 _Status: completed first R5 comparison, 30 Sep 2026._
 
+> **Audit note (Experiment 365, 1 Oct 2026):** the incumbent holdout table keeps full-corpus premises fixed, so by Experiment 340's argument its forced predictions cannot be wrong and "0 exclusions" is guaranteed for both families. The 10/11 vs 3/11 difference measures sharpness of a full-corpus-fitted grammar, **not independent predictive superiority**. See `docs/experiment-365-model-dependence-sweep.md`.
+
 ## Question
 
 R5 asks for holdout comparison across genuinely different grammar families, not only variants of the incumbent machine.

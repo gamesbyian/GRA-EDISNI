@@ -1,5 +1,7 @@
 # Experiment 333 — direct background-coordinate registration audit
 
+> **Audit note (Experiment 365):** the "observation-fixed" tokens are fixed within the Experiment-329 row-selector family. "Impossible" applies to that family's token coordinates, not to background registration in general.
+
 _Status: completed negative structural test, 30 Sep 2026._
 
 ## Question

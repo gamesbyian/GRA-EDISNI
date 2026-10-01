@@ -84,6 +84,8 @@ Several rivals remain logically possible, but none currently has an independentl
 
 ### 5. Cross-family independent comparison — adequate but not final
 
+> **Audit note (Experiment 365):** the Q4 holdout comparison listed first below is not independent comparative evidence (full-corpus premises are fixed; see Experiment 365). Criterion 5 now rests on the frozen prediction matrix and untested prospective discriminators. Likewise "direct background-coordinate registration" (Exp 333) is falsified only for the row-selector carrier, and the lever replay (Exp 343) assumes the alphabet split extends to unseen cells.
+
 The project has:
 
 - Q4 holdout comparison between the simple one-slash tail family and the incumbent;

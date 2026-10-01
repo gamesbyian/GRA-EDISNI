@@ -1,5 +1,7 @@
 # Experiment 343 - lever-cue lineage and alphabet-boundary proof
 
+> **Audit note (Experiment 365):** the exclusion below is independent of unobserved cells' identities only *given that the observed 81/27 alphabet split extends to the 43 unseen residues*. That is strongly supported but inferred; on raw observations alone one weak rotated placement survives (Experiment 342).
+
 _Status: completed, 30 Sep 2026._
 
 ## Historical provenance is earlier and stronger than Experiment 342 initially recorded
