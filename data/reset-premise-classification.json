@@ -153,8 +153,7 @@
     "transition_premise_count": 7,
     "direct_or_mixed_observation_nodes": [
       "O1",
-      "O2",
-      "G1"
+      "O2"
     ],
     "historically_motivated_grammar_nodes": [
       "G3"
@@ -168,6 +167,9 @@
     "independently_derived_transition_grammar_nodes": [],
     "highest_priority_circularity_targets": [
       "G5"
+    ],
+    "mixed_grammar_nodes": [
+      "G1"
     ]
   },
   "last_updated_experiment": 350
