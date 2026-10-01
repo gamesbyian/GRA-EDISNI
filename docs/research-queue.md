@@ -456,3 +456,12 @@ Next work should audit the earliest downstream use of these coordinates, separat
 5. recursive substitution.
 
 Prefer ablation/quotient tests that ask which of these are actually necessary for the machine's predictive compression, and historical/ARG evidence that independently licenses the same operation.
+
+
+### Experiment 353 — G5 independent-consumer evidence audit
+
+The canonical reset synthesis contains no independent exact cue for G5's tail-to-body coordinate substitution. Evidence does independently supply the ingredients: a three-coordinate body, one-of-three tail/index, historical body+index semantics, and Playdead precedent for using an earlier output as a selector.
+
+Experiment 290 already supplies a bounded machine-internal discriminator among the four literal coordinate copies: `(q,S)` is the only selector-sensitive, q-preserving, nondegenerate first-pass operation. That result should be retained as a simplicity/model-family argument, not mislabeled as external evidence.
+
+**Immediate next test:** Experiment 354 audits the assumption hidden by Experiment 290 that tail position labels and body-depth labels share the same orientation. Exhaust all six shared S3 relabelings under first-pass positional validity only.
