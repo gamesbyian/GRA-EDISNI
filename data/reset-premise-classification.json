@@ -121,11 +121,13 @@
         "Experiment 322 exhaustive 27-map q=f(S) family",
         "maximum completion-invariant retention leaves 002 and 012",
         "the two optimal maps are identical modulo established f1 observational gauge",
-        "Experiment 291 human-scale constant-versus-identity comparison"
+        "Experiment 291 human-scale constant-versus-identity comparison",
+        "Experiment 356 archival provenance audit: no recovered pre-machine cue explicitly motivates second selector reuse; historical evidence supports one body+index application and generic multilayer decoding",
+        "Experiment 269 idempotent retraction audit: canonical two-pass operation uniquely survives inside the tested selector-fiber-preserving nonlinear family"
       ],
       "circularity_risk": "medium_high",
-      "claim": "after G5, consume the remaining q coordinate with a deterministic selector-conditioned map q=f(S); maximum-retention completion invariance is unique modulo the known f1 gauge",
-      "reset_action": "retain as a generic selector-conditioned information-reduction prior; seek independent motivation for using the tail as a second address selector at all"
+      "claim": "after G5, optionally consume the remaining q coordinate with a deterministic selector-conditioned map q=f(S); if a second selector-conditioned read is admitted, maximum-retention completion invariance is unique modulo the known f1 gauge",
+      "reset_action": "keep the decision to perform a second selector-conditioned read explicitly conditional; the q=f(S) map family itself is exhausted and strongly constrained, so seek independent reuse/recursion motivation or compare equally simple one-shot consumers of the three first-pass surfaces"
     },
     {
       "id": "G7",
@@ -184,5 +186,5 @@
       "G1"
     ]
   },
-  "last_updated_experiment": 355
+  "last_updated_experiment": 356
 }
