@@ -165,3 +165,14 @@ Experiment 267 supplies the necessary negative control. When singular affine map
 The R4 interpretation changes accordingly. G5 remains model-level because no external source says “use an invertible affine/address consumer,” but its internal parameter burden is now very small: literal-copy, relative-label, and full invertible-affine audits all converge on exact depth substitution `d'=S`.
 
 The highest-priority circularity target therefore moves to G6: the decision to consume the selector again after G5.
+
+
+## Reset-era update through Experiment 355
+
+Experiment 355 reruns the pre-reset affine G5 audits unchanged on current main and reconciles them with Experiments 353–354.
+
+Experiment 266 exhausts all 432 invertible affine maps `(q',d')=M(q,S)+t`. Maximum first-pass retention is 20; exactly six maps attain it; and every maximizer has `d'=S` exactly. Their only remaining freedom is an affine relabeling of the external q coordinate. Experiment 267 then supplies the necessary negative control: if singular affine maps are allowed, some retain all 216 raw candidates only because they erase selector S entirely.
+
+Accordingly, G5's selector-to-depth substitution is no longer supported merely by the smallest literal-copy family. It is the unique maximum-retention depth behavior throughout the natural information-preserving affine parent. Experiment 354 separately fixes the relative physical tail/body registration.
+
+G5 remains model-level only at the higher-order family choice: that the author intended an information-preserving selector-on-body/address-transform operation at all. Its circularity risk can therefore be reduced from medium-high to medium.
