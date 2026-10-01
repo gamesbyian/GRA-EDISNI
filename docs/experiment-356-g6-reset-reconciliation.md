@@ -97,3 +97,28 @@ This is genuine historical support for **one body+index consumption**, and there
 No recovered pre-machine message in this targeted pass proposes applying that same three-position index a second time after the first selection. Generic phrases about "several stages or layers" do not identify repeated use of the same selector.
 
 Therefore G6's repeated/second selector consumption should remain epistemically separate from the historically motivated body+index architecture.
+
+
+## Reproducibility repair discovered during rerun
+
+The first hardened rerun exposed two stale assertion bugs in the historical audit scripts. Neither changes the underlying recorded counters or model conclusion.
+
+### Experiment 291 assertion contradiction
+
+The script already asserted the exact fixed-q distributions:
+
+- q=0: three distinct outputs;
+- q=1: three distinct outputs;
+- q=2: two distinct outputs, `100` and `120`.
+
+It then incorrectly asserted that **all three** fixed-q reads had exactly three distinct outputs. That final assertion contradicted the exact q=2 Counter immediately above it.
+
+Repair: assert the already-established distinct-output counts `{0:3, 1:3, 2:2}`.
+
+### Experiment 322 order-sensitive assertion
+
+The script reverse-sorts records and then compared the two optimal maps against a hard-coded list order `002, 012`. The substantive set is correct, but the list-order check is brittle under the reverse sort.
+
+Repair: compare the two optimal map/output pairs as an unordered set.
+
+These are regression-harness repairs, not changes to the candidate family, scoring rule, or expected substantive results.
