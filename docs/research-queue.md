@@ -529,3 +529,21 @@ The six exit criteria in `docs/sticker-epistemic-reset.md` are now satisfied str
 This is not a claim that the foreground is solved or that the incumbent is uniquely intended. POS3 consumption, G5 as the intended first consumer, G6's decision to reuse the selector, G7's non-collapse priors, and downstream route/terminal interpretations remain explicitly conditional.
 
 **Default next move:** do not manufacture Experiment 360 from the existing corpus. Reopen a lane only for a concrete trigger: genuinely new physical evidence at a frozen discriminator, newly recovered historical instructions, an independently measured sticker-native side channel, an external registered key/selector/transform, or an independently motivated consumer that can be preregistered before incumbent outputs are inspected. Otherwise prefer acquisition/mining, prospective validation, provenance repair, reproducibility hardening, or stop. See `docs/experiment-359-reset-stopping-boundary.md`.
+
+
+### Post-359 external reopening — reversible-cover clue triage
+
+A legitimate external cue was recovered and audited without inventing Experiment 360. iam8bit explicitly described the reversible PS4 cover as containing a hidden clue, and the preserved 2019–2020 Discord corpus identifies four cover monitors plus a clock fixed at 12:12.
+
+The strongest historical reconstruction is now:
+- cover monitor: PC/PS4 acorn;
+- cover monitor: Xbox/Terminal41 planet;
+- cover monitor: ascending graph matching the Terminal41 `Diag. ac.time` diagnostic;
+- cover monitor: progress/battery-like display, historically judged similar to ordinary in-game monitor graphics;
+- clock: 12:12.
+
+Same-room gameplay captures show generic monitor graphics, so the ARG references are deliberate cover substitutions. This makes the cover a strong **bridge back to the existing printer/Terminal41 ARG**, but a weak candidate for a new foreground-machine consumer. The physical edition/CE appeared on 12 Dec 2019, giving 12:12 a cheaper release-date interpretation than any sticker-grid import.
+
+**Consequence:** do not use cover geometry, 12:12, or old blend/mirror attempts to reopen terminal `100`, G6 or G7. The only bounded residual cover question is whether the fourth progress/battery display can be independently tied to a specific pre-Dec-2019 ARG artifact. If not, close this branch as a useful negative result and return to acquisition/new physical observations.
+
+See `docs/post-359-external-reopening-scan-2026-10-01.md`.
