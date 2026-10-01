@@ -9,6 +9,10 @@ rerun uses the two printer tables preserved as Discord attachments:
   data/printer-strings/pc-32-long-acorn-order.txt   (32 long PC strings, solved acorn order)
   data/printer-strings/xbox-47-master-morse-36.txt  (all 47 unique Xbox strings, file order)
 
+and, added later the same day, the complete Game Detectives reference tables in
+data/printer-reference/ (all 41 PC strings and the 48-row Xbox listing, in
+publication order), which are run as additional table sets.
+
 Preregistered design (fixed before inspecting outputs):
 
   Data: all 65 observed H108 residues (82 records) from data/observations.csv.
@@ -49,8 +53,8 @@ def load_master():
     return m
 
 
-def load_table(name):
-    lines = [l.strip() for l in open(ROOT / "data" / "printer-strings" / name)]
+def load_table(name, folder="printer-strings"):
+    lines = [l.strip() for l in open(ROOT / "data" / folder / name)]
     lines = [l for l in lines if l and set(l) <= set("/-.")]
     return [np.array([SYM[c] for c in l], dtype=np.int8) for l in lines]
 
@@ -113,7 +117,14 @@ def main():
     rng = np.random.default_rng(368)
     nulls = null_masters(master, rng)
     results = {}
-    for name, table in (("PC", pc), ("Xbox", xb)):
+    pc41 = load_table("pc-ps4-raw.txt", "printer-reference")
+    xb_ref = load_table("xbox-one-raw.txt", "printer-reference")
+    assert len(pc41) == 41 and len(xb_ref) == 48
+    # Reference tables (data/printer-reference, Game Detectives publication order).
+    # Family A is order-free, so the complete 41-string PC table is the decisive
+    # version of that test; Family B on publication order is reported for
+    # completeness only (publication order is not a solved order).
+    for name, table in (("PC", pc), ("Xbox", xb), ("PC41-ref", pc41), ("Xbox-ref", xb_ref)):
         for label, fn in (("A longest perfect window", stat_a), ("B concatenated best/65", stat_b)):
             real = fn(master, table)
             null = np.array([fn(m, table) for m in nulls])
