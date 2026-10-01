@@ -1,6 +1,6 @@
 # Sticker Mystery Epistemic Reset
 
-_Status: active workstream, 30 Sep 2026._
+_Status: closed-corpus stopping boundary reached by Experiment 359, 1 Oct 2026; reopen only on a concrete evidence trigger._
 
 ## Why this reset exists
 
@@ -243,13 +243,15 @@ During the reset:
 
 ## Exit criteria
 
-The reset closes only when:
+Experiment 359 audits these six criteria as sufficiently satisfied for **closed-corpus** work:
 
 1. the historical solving record has been mined into reproducible operations;
 2. solved neighboring ARG mechanics have been catalogued at operation level;
-3. the current machine's premises have been audited against that corpus;
+3. the current machine's supplied premises have been audited against that corpus;
 4. plausible simpler families have received cheap falsification attempts;
-5. surviving families have been compared on independent evidence and prospective prediction;
-6. the research queue states clearly which assumptions remain live.
+5. surviving families have been compared on independent evidence and prospective prediction strongly enough to preserve accountability;
+6. the research queue states clearly which assumptions remain live and what evidence can reopen them.
 
-The likely outcome may still be the current ternary machine. If so, it should return as a survivor of the reset, not as its starting premise.
+The stopping boundary is deliberately narrower than “puzzle solved.” It means further hypothesis widening from the same evidence is no longer the default productive action. Reopen a lane only when a concrete new physical observation, historical instruction, independently measured side channel, externally registered key/selector/transform, or preregistered independent consumer supplies new information.
+
+The current ternary machine therefore survives the reset as a mature conditional model, not as an unquestioned starting premise.

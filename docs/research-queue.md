@@ -516,4 +516,16 @@ Experiment 321 already exhausts the relevant 27 assignments and shows that word 
 
 **Consequence:** G7 remains explicitly conditional as a generic information-preservation prior. Do not broaden route semantics or search arbitrary route families. Reopen only if an external artifact independently supplies reversible ternary mappings, one-of-each coordinate use, or a registered three-route structure.
 
-At this point the reset program's major remaining unsupported choices are operation-family priors, not hidden parameter choices. The safe-stopping rule is close: absent new external evidence, further widening is more likely to manufacture alternatives than to discriminate them.
+At this point the reset program's major remaining unsupported choices are operation-family priors, not hidden parameter choices.
+
+### Experiment 358 — G6 reproducibility reconciliation
+
+Experiments 291, 322 and 269 were rerun on current main after repairing two stale regression assertions. The repairs change no candidate family, scoring rule, expected counter, or substantive G6 conclusion. The hardened workflow completed successfully and preserved evidence for all three audits. See `docs/experiment-358-g6-regression-reconciliation.md`.
+
+### Experiment 359 — reset stopping-boundary audit
+
+The six exit criteria in `docs/sticker-epistemic-reset.md` are now satisfied strongly enough for a **closed-corpus stopping boundary**. Historical operation reconstruction, neighboring-puzzle operation mining, premise burn-down, cheaper-rival falsification, cross-family accountability, and queue clarity are all adequate to stop blind family widening.
+
+This is not a claim that the foreground is solved or that the incumbent is uniquely intended. POS3 consumption, G5 as the intended first consumer, G6's decision to reuse the selector, G7's non-collapse priors, and downstream route/terminal interpretations remain explicitly conditional.
+
+**Default next move:** do not manufacture Experiment 360 from the existing corpus. Reopen a lane only for a concrete trigger: genuinely new physical evidence at a frozen discriminator, newly recovered historical instructions, an independently measured sticker-native side channel, an external registered key/selector/transform, or an independently motivated consumer that can be preregistered before incumbent outputs are inspected. Otherwise prefer acquisition/mining, prospective validation, provenance repair, reproducibility hardening, or stop. See `docs/experiment-359-reset-stopping-boundary.md`.

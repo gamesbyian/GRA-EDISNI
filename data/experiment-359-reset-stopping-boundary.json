@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "experiment": 359,
+  "kind": "epistemic reset stopping-boundary audit",
+  "date": "2026-10-01",
+  "question": "Has the closed-corpus epistemic reset reached a defensible stopping boundary?",
+  "exit_criteria": {
+    "historical_operations": "sufficiently complete for closed-corpus work",
+    "neighboring_arg_operation_corpus": "sufficiently complete for discrimination",
+    "incumbent_premise_audit": "complete at supplied-premise level",
+    "simpler_family_falsification": "sufficiently broad to stop blind widening",
+    "cross_family_independent_comparison": "adequate for accountability, not unique-intent proof",
+    "queue_clarity": "satisfied after Experiment 359"
+  },
+  "conclusion": "closed-corpus stopping boundary reached",
+  "does_not_claim": [
+    "sticker mystery solved",
+    "incumbent uniquely intended",
+    "conditional G5/G6/G7 operations independently derived"
+  ],
+  "conditional_live": [
+    "POS3 intended semantic readout",
+    "G5 intended first selector-on-body consumer",
+    "G6 decision to reuse selector",
+    "G7 non-collapse selection rules",
+    "downstream route/terminal/hidden-state interpretations"
+  ],
+  "reopen_triggers": [
+    "new physical sticker at preregistered discriminator residue",
+    "new historical message or attachment specifying missing operation",
+    "independently measured sticker-native side channel",
+    "external ARG artifact supplying registered selector/key/transform",
+    "independently motivated preregistered consumer of first-pass three-surface object"
+  ]
+}
