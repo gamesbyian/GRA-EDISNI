@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "experiment": 357,
+  "question": "Does preserved pre-machine evidence independently motivate G7 information-preservation selection?",
+  "source_repository": "gamesbyian/playdead-unofficial-exports",
+  "source_commit": "5e5897e2ce70dad5a2bd85e459770637cb36610f",
+  "historical_support": {
+    "choose_one_q_output_per_family": false,
+    "preserve_all_three_ternary_labels": false,
+    "use_all_three_q_indices_once": false,
+    "reversible_ternary_routes": false,
+    "q_equals_2_minus_p": false
+  },
+  "unrelated_historical_permutation_context": [
+    "De Bruijn/superpermutation brute-force lever discussion",
+    "image row/block shuffling",
+    "Sudoku one-of-each speculation"
+  ],
+  "internal_support": {
+    "experiment_321_total_assignments": 27,
+    "word_noncollapse_survivors": 4,
+    "q_noncollapse_survivors": 6,
+    "intersection_survivors": 1,
+    "unique_choice": "210",
+    "unique_words": [
+      "120",
+      "012",
+      "102"
+    ]
+  },
+  "conclusion": "G7 is not historically motivated in the preserved sticker corpus; it remains a generic information-preservation prior with a unique bounded consequence."
+}
