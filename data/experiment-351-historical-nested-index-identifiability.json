@@ -1,0 +1,13 @@
+{
+  "experiment": 351,
+  "historical_model": "first 9 class-trace symbols encode a binary larger-domain value; last 3 encode a smaller index",
+  "body_global_polarities": 2,
+  "body_word_counts_per_class": {"A":32,"B":2,"C":1,"D":16,"E":16,"F":4,"G":32,"H":8,"I":8},
+  "body_joint_assignments_per_global_polarity": 134217728,
+  "tail_index_domains": {"A":[0,1,2],"B":[2],"C":[0,1,2],"D":[1,2],"E":[0],"F":[1],"G":[0,2],"H":[2],"I":[2]},
+  "tail_joint_assignments": 36,
+  "joint_body_tail_assignments_including_two_global_body_polarities": 9663676416,
+  "fixed_body_words_before_polarity": ["C"],
+  "fixed_tail_indexes": ["B","E","F","H","I"],
+  "interpretation": "literal historical binary-body plus three-way-tail nested index is structurally admissible but massively underidentified without an external consumer/codebook"
+}
