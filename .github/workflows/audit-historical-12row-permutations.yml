@@ -1,0 +1,27 @@
+name: Experiment 347 historical 12-row audit
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_historical_12row_permutations.py"
+      - "data/observations.csv"
+      - ".github/workflows/audit-historical-12row-permutations.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run exact 12-row dynamic program
+        run: python scripts/audit_historical_12row_permutations.py
+      - name: Upload exact result
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-347-result
+          path: data/experiment-347-historical-12row-permutation-audit.json
+          if-no-files-found: error
