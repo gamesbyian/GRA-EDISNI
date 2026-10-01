@@ -108,3 +108,19 @@ Experiments 348–349 strengthen the evidence **upstream of G1** without collaps
 The historically attested twelve-square representation independently supplies the nine first-81 3×3 frame domains. Experiment 348 shows that raw observations narrow a common unordered binary census to 3/6 or 4/5. Experiment 349 then replays ledger-received chronology and finds the 3/6 family has 4.7907 bits lower predictive surprise than 4/5, a 27.68:1 likelihood ratio under the frozen uniform-completion model.
 
 Accordingly, exact **3/6 frame census** now has an independent reset-era support line. G1 itself remains a generic simplicity prior because G1 additionally says those three minority cells occupy one per column and encode an exceptional-position ternary value. Experiments 348–349 do not establish that stronger positional grammar.
+
+
+## Reset-era update through Experiment 350
+
+Experiment 350 now justifies splitting G1 itself.
+
+Within the independently supported 3/6 census, a frozen chronological comparison lets unrestricted placement, one-per-row, one-per-column, and permutation-matrix occupancy compete on the historically attested `IAB/CDE/FGH` frame geometry. The row model is physically eliminated by 13 Apr 2020 and the permutation-matrix model by 16 Jan 2020. One-per-column survives and accumulates 5.2450 bits less predictive surprise than unrestricted 3-of-9 placement, a 37.92:1 likelihood ratio under the frozen assignment model.
+
+G1 is therefore now **mixed**:
+
+- 3×3 frame domain: historically motivated;
+- 3/6 frame census: independently supported by Experiments 348–349;
+- one-per-column physical occupancy: independently supported by Experiment 350;
+- interpreting the minority cell's row position as a ternary value: still a generic simplicity/code prior.
+
+The full POS3 transition grammar is not reclassified as independently derived. The reset target has moved inward to the semantic/readout step that turns a supported physical one-per-column pattern into a ternary symbol.
