@@ -1,4 +1,4 @@
-name: Experiment 357 G6 regression reconciliation
+name: Experiment 358 G6 regression reconciliation
 
 on:
   pull_request:
@@ -24,6 +24,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: experiment-357-g6-regression-reconciliation
-          path: artifacts/experiment-357/
+          name: experiment-358-g6-regression-reconciliation
+          path: artifacts/experiment-358/
           if-no-files-found: error
