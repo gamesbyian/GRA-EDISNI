@@ -1,0 +1,20 @@
+{
+  "experiment": 348,
+  "input": "data/observations.csv residues 1-81 only",
+  "historical_representation": "nine first slash/dash rows reshaped by solved IAB/CDE/FGH background geometry",
+  "tested_unordered_minorities": [0,1,2,3,4],
+  "surviving_common_minority_counts": [3,4],
+  "joint_completion_counts": {"3":12960,"4":18000},
+  "squares": [
+    {"square":1,"trace_serial_A_to_I":"?/--/?/?/","observed_slash":4,"observed_dash":2,"unknown":3,"compatible_completions_by_minority_count":{"0":0,"1":0,"2":1,"3":3,"4":4}},
+    {"square":2,"trace_serial_A_to_I":"-?-/-/?/-","observed_slash":3,"observed_dash":4,"unknown":2,"compatible_completions_by_minority_count":{"0":0,"1":0,"2":0,"3":1,"4":3}},
+    {"square":3,"trace_serial_A_to_I":"-/-?--?-?","observed_slash":1,"observed_dash":5,"unknown":3,"compatible_completions_by_minority_count":{"0":0,"1":1,"2":3,"3":3,"4":1}},
+    {"square":4,"trace_serial_A_to_I":"?//-/???/","observed_slash":4,"observed_dash":1,"unknown":4,"compatible_completions_by_minority_count":{"0":0,"1":1,"2":4,"3":6,"4":5}},
+    {"square":5,"trace_serial_A_to_I":"-///?//-?","observed_slash":5,"observed_dash":2,"unknown":2,"compatible_completions_by_minority_count":{"0":0,"1":0,"2":1,"3":2,"4":1}},
+    {"square":6,"trace_serial_A_to_I":"///??-?-?","observed_slash":3,"observed_dash":2,"unknown":4,"compatible_completions_by_minority_count":{"0":0,"1":0,"2":1,"3":5,"4":10}},
+    {"square":7,"trace_serial_A_to_I":"?/-?//??/","observed_slash":4,"observed_dash":1,"unknown":4,"compatible_completions_by_minority_count":{"0":0,"1":1,"2":4,"3":6,"4":5}},
+    {"square":8,"trace_serial_A_to_I":"?//??/---","observed_slash":3,"observed_dash":3,"unknown":3,"compatible_completions_by_minority_count":{"0":0,"1":0,"2":0,"3":2,"4":6}},
+    {"square":9,"trace_serial_A_to_I":"?--/?////","observed_slash":5,"observed_dash":2,"unknown":2,"compatible_completions_by_minority_count":{"0":0,"1":0,"2":1,"3":2,"4":1}}
+  ],
+  "interpretation": "raw observations narrow a common binary 3x3 census to 3/6 or 4/5; they do not uniquely select incumbent 3/6"
+}

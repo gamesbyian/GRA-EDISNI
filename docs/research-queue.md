@@ -408,3 +408,12 @@ Experiment 345's scrambled-row/image hypothesis remains live only if another art
 The exact Dec-2022 row-rearrangement proposal is now tested on its original axis rather than Experiment 345's transposed A-I axis. Across all 12! directed row permutations, the canonical order scores -9 and 84.536% of orders score at least as high. Sixty orders reach the maximum +20, and zero place the two physically observed dot-bearing rows at opposite endpoints as historically suggested.
 
 **Consequence:** close free 12-row permutation and visual optimization. The next ordering-family task is to reconstruct the distinct 23 Dec 2022 operation described as "rearranging the top 9x9 grid to account for the repeating pattern." Determine exactly what "account for the repeating pattern" meant from the surrounding messages/attachment before implementing anything.
+
+
+### Experiment 348 — historical twelve-square census audit
+
+The Oct-2023 community operation of placing each consecutive A-I block into the solved `IAB/CDE/FGH` background geometry is now treated as an independent historical representation rather than machine vocabulary.
+
+Across the complete family of common unordered binary 3×3 censuses, physical observations eliminate 0/9, 1/8 and 2/7 but leave **both 3/6 and 4/5**. The 3/6 family has 12,960 raw joint completions; 4/5 has 18,000.
+
+**Consequence:** promote "common frame census" as independently motivated, but do not promote exact 3/6 to Layer 0. The next high-value structural comparison is a bounded, symmetric 3/6-vs-4/5 test under independently licensed operations. Do not reuse incumbent recursion merely to rediscover its own 3/6 premise; first ask whether historical geometry, tail metadata, or another demonstrated operation discriminates the two families.
