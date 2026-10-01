@@ -2,7 +2,7 @@
 
 _Status: completed first R5 comparison, 30 Sep 2026._
 
-> **Audit note (Experiment 365, 1 Oct 2026):** the incumbent holdout table keeps full-corpus premises fixed, so by Experiment 340's argument its forced predictions cannot be wrong and "0 exclusions" is guaranteed for both families. The 10/11 vs 3/11 difference measures sharpness of a full-corpus-fitted grammar, **not independent predictive superiority**. See `docs/experiment-365-model-dependence-sweep.md`.
+> **Audit note (Experiment 365, 1 Oct 2026):** the incumbent holdout table keeps full-corpus premises fixed, so by Experiment 340's argument its forced predictions cannot be wrong and "0 exclusions" is guaranteed for both families. The 10/11 vs 3/11 difference measures sharpness of a full-corpus-fitted grammar, **not independent predictive superiority**. See `docs/experiment-365-model-dependence-sweep.md`. **Experiment 366** calibrates this exactly: all 7 of the 330 shuffled tail datasets the incumbent can fit give 10/11, so the count is uninformative; the real comparative evidence is that the incumbent fits only 7/330 arrangements (tail-only: 192/330), an upper-bound likelihood ratio of about 27:1 because the grammar was partly fitted to the same cells.
 
 ## Question
 

@@ -61,6 +61,6 @@ Only 6 of 36 readout trits are raw-determined; the doc now carries a conditional
 
 ## Recommended follow-up
 
-1. Build a selection-aware null for the incumbent's Q4 holdout, the analogue of Experiment 340, so the 10/11 figure can be calibrated.
+1. Build a selection-aware null for the incumbent's Q4 holdout, the analogue of Experiment 340, so the 10/11 figure can be calibrated. **Done in Experiment 366:** 10/11 is certain given fit; the incumbent fits 7/330 tail arrangements against 192/330 for the tail-only family.
 2. Add a read-confidence column to `observations.csv` (photo quality / independent confirmation), then rerun the reconstruction with the weakest single-record readings withheld.
 3. If the Google Docs become reachable, extend this sweep to Experiments 1–297, prioritising the closed-branch experiments (13, 87, 94, 112, 211, 240) and any exclusion run on completed masters.
