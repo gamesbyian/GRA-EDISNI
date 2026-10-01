@@ -554,3 +554,17 @@ Search all preserved sticker photos, transcriptions, video frames, archived post
 ### Terminal41 literal-recurrence status — 30 Sep 2026
 
 A targeted public/upstream search finds historical links between Terminal41 and the Collector's Edition background-puzzle solution, including the `terminal41.link/dat/` lineage, but no current evidence that the literal string `terminal41` is printed on another known sticker. Treat the Discord remark about "another terminal41" as an unresolved acquisition lead, not an established corpus fact. Search exact sticker images/captions/transcriptions if a concrete candidate source appears; do not broaden this into generic Terminal41 history collection.
+
+
+### Price-history owner-discovery pass — 1 Oct 2026
+
+Completed-sale history surfaced two recent eBay transactions not registered by item number in either GRA-EDISNI or the upstream sticker ledger:
+
+- **135573805762**, completed 31 Dec 2025, title `INSIDE - iam8bit Collector's Edition - PS4 Game - Statue - Playdead - Brand New`, recorded at $1,600;
+- **136906990973**, completed 3 Jan 2026, same title and price.
+
+The distinct item IDs make them acquisition-worthy, but they are not yet two proven independent physical copies. A relist, same seller, or multi-copy inventory remains possible.
+
+The same PriceCharting pass provides a useful self-check: item **297682348686** on 14 Oct 2025 is already canonical sticker 223, while the 9 Mar 2026 completed sale is contemporaneous with canonical sticker 445 and is probably the same copy. This confirms that sale-history mining can rediscover known corpus entries and therefore must be deduplicated before promotion.
+
+**Priority:** try exact-ID recovery of seller handle, listing images, feedback trail, or cached mirrors for 135573805762 and 136906990973. If an owner is identified, check U-code/outreach history before recommending contact. See `docs/price-history-acquisition-leads-2026-10-01.md`.
