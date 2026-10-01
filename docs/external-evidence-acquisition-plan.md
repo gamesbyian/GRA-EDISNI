@@ -544,3 +544,8 @@ The acquisition branch is checkpointed and should be resumed from the current un
 5. **Avoid rerunning completed broad media sweeps.** Historical YouTube, social, and Discord corpus passes already have durable findings/status entries. Use single-source probes only when a concrete unresolved question justifies them.
 6. **CI interpretation:** the acquisition-specific checks are green at this checkpoint. Repository-wide `Verify machine` fails later in `audit_q4_gauge_physical_simplicity.py` at `assert winners == {0}`; this is outside the acquisition tooling changed here. Do not babysit that run from this branch.
 7. **Branch state:** PR #57 is intentionally not rebased/merged here because it is substantially ahead of and behind current `main`, while PRs #56 and #61 are active adjacent lanes. Reconcile only when those active lanes are quiet enough to avoid losing work.
+
+
+## Terminal41 recurrence check — added 30 Sep 2026
+
+Search all preserved sticker photos, transcriptions, video frames, archived posts, seller images, and imported community notes for exact `terminal41` and close typographic variants. Public ARG histories place Terminal41 earlier in the ARG, before the Collector's Edition sticker foreground work, so a genuine sticker occurrence would be valuable cross-stage evidence. Record provenance and physical location first; do not assume that a hit is part of the 108-cell foreground payload.

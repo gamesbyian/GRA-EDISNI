@@ -1,0 +1,38 @@
+{
+  "experiment": 345,
+  "input": "data/observations.csv",
+  "principle": "physical observations only; no model-filled cells",
+  "score": "sum over adjacent row pairs of (known equal symbols - known unequal symbols) at aligned columns",
+  "spaces": {
+    "body": {
+      "permutation_count": 362880,
+      "net_min": -19,
+      "net_max": 19,
+      "named_orders": {
+        "serial_ABCDEFGHI": {"net": 1, "matches": 16, "mismatches": 15, "known": 31, "fraction_permutations_with_net_at_least_this": 0.502419532627866},
+        "physical_flat_IABCDEFGH": {"net": 1, "matches": 15, "mismatches": 14, "known": 29, "fraction_permutations_with_net_at_least_this": 0.502419532627866}
+      }
+    },
+    "tail": {
+      "permutation_count": 362880,
+      "net_min": -4,
+      "net_max": 5,
+      "named_orders": {
+        "serial_ABCDEFGHI": {"net": -1, "matches": 2, "mismatches": 3, "known": 5, "fraction_permutations_with_net_at_least_this": 0.9291666666666667},
+        "physical_flat_IABCDEFGH": {"net": -2, "matches": 1, "mismatches": 3, "known": 4, "fraction_permutations_with_net_at_least_this": 0.9863095238095239}
+      }
+    },
+    "all": {
+      "permutation_count": 362880,
+      "net_min": -19,
+      "net_max": 20,
+      "best_net": 20,
+      "best_order_count": 2,
+      "best_orders": ["ACBEIGHDF", "FDHGIEBCA"],
+      "named_orders": {
+        "serial_ABCDEFGHI": {"net": 0, "matches": 18, "mismatches": 18, "known": 36, "fraction_permutations_with_net_at_least_this": 0.6237874779541446},
+        "physical_flat_IABCDEFGH": {"net": -1, "matches": 16, "mismatches": 17, "known": 33, "fraction_permutations_with_net_at_least_this": 0.6920138888888889}
+      }
+    }
+  }
+}
