@@ -1,0 +1,31 @@
+{
+  "experiment": 349,
+  "chronology_source": "archive/external/twinysam-inside-arg/stickers.md ledger-received dates",
+  "unique_first81_residues_scored": 54,
+  "date_batches": 43,
+  "candidate_minorities": [0,1,2,3,4],
+  "final_states": {
+    "0": {"alive":false,"eliminated_on":"2020-01-15"},
+    "1": {"alive":false,"eliminated_on":"2020-04-13"},
+    "2": {"alive":false,"eliminated_on":"2025-12-23"},
+    "3": {"alive":true,"cumulative_surprise_bits":52.86907870723686},
+    "4": {"alive":true,"cumulative_surprise_bits":57.659810025394854}
+  },
+  "three_vs_four": {
+    "surprise_3_6_bits": 52.86907870723686,
+    "surprise_4_5_bits": 57.659810025394854,
+    "bits_4_5_minus_3_6": 4.790731318157995,
+    "likelihood_ratio_p3_over_p4": 27.679218750000036
+  },
+  "largest_absolute_batch_shifts": [
+    {"date":"2021-07-23","residues":[78],"log2_p4_over_p3":-1.415037499278844,"p_3_6":0.6666666666666666,"p_4_5":0.25},
+    {"date":"2020-04-06","residues":[21],"log2_p4_over_p3":-1.3219280948873622,"p_3_6":0.5,"p_4_5":0.2},
+    {"date":"2021-01-30","residues":[43],"log2_p4_over_p3":-1.3219280948873622,"p_3_6":0.5,"p_4_5":0.2},
+    {"date":"2025-12-23","residues":[44,72],"log2_p4_over_p3":1.1699250014423124,"p_3_6":0.26666666666666666,"p_4_5":0.6},
+    {"date":"2026-03-09","residues":[13],"log2_p4_over_p3":1.1699250014423124,"p_3_6":0.3333333333333333,"p_4_5":0.75}
+  ],
+  "workflow_run_id": 36810578829,
+  "workflow_artifact_id": 11139278540,
+  "workflow_artifact_digest": "sha256:dc1b0c45cc9dca0a3d2c081d7b39cf5de52a5a3930428d3f050f3c41c2387987",
+  "interpretation_guardrail": "retrospective bounded prequential evidence, not prospective confirmation"
+}
