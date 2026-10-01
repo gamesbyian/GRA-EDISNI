@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "experiment": 356,
+  "question": "Does preserved pre-machine evidence independently motivate reusing the tail/index a second time?",
+  "source_repository": "gamesbyian/playdead-unofficial-exports",
+  "source_commit": "5e5897e2ce70dad5a2bd85e459770637cb36610f",
+  "historical_support": {
+    "three_position_code_family": true,
+    "body_plus_index_architecture": true,
+    "one_selector_application": true,
+    "generic_multistage_decoding": true,
+    "explicit_second_selector_reuse": false,
+    "explicit_recursion": false,
+    "explicit_remaining_q_consumption": false
+  },
+  "structural_support": {
+    "experiment_291": "q=S uniquely selective and completion-invariant among q=0,1,2,S",
+    "experiment_322": "all 27 q=f(S) maps exhausted; 002 and 012 uniquely maximize invariant retention at 14 and are observationally equivalent",
+    "experiment_269": "idempotent retraction grammar uniquely retains canonical two-pass operation among the tested nonlinear family"
+  },
+  "conclusion": "G6 remains historically unsupported at the decision-to-reuse level; once second selector-conditioned consumption is admitted, the functional map is strongly constrained modulo gauge.",
+  "next_discriminator": "seek an independent repeat/recursion cue or preregister equally simple one-shot consumers of the first-pass three-surface object"
+}
