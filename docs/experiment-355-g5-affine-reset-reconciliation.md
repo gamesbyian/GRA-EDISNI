@@ -77,3 +77,14 @@ python scripts/audit_affine_degeneracy.py
 ```
 
 and preserves stdout as workflow artifacts.
+
+
+## Rerun evidence
+
+Current-main rerun succeeded without modification.
+
+- workflow run: `36820146966`
+- artifact: `11142778794`
+- digest: `sha256:8b3a63f56a2fd73c8a065b9d061dfc9358d312867111f91528c3a02c3b8121c7`
+
+The reproduced Experiment-266 distribution is `{0:402, 1:6, 7:6, 10:12, 20:6}`; all six 20-state maxima force `d'=S`. Experiment 267 again finds 24 perfect-retention singular maps, all of which erase selector S.
