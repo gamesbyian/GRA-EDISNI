@@ -19,11 +19,11 @@ def main() -> None:
     assert by_id["O2"]["primary_evidentiary_type"]=="mixed"
     assert by_id["G3"]["primary_evidentiary_type"]=="historically_motivated"
     assert {n["id"] for n in nodes if n["primary_evidentiary_type"]=="selected_because_it_preserves_the_machine"}==set()
-    assert {n["id"] for n in nodes if n["primary_evidentiary_type"]=="generic_simplicity_prior"}=={"G1","G5","G6","G7"}
+    assert by_id["G1"]["primary_evidentiary_type"]=="mixed"\n    assert {n["id"] for n in nodes if n["primary_evidentiary_type"]=="generic_simplicity_prior"}=={"G5","G6","G7"}
     assert data["summary"]["independently_derived_transition_grammar_nodes"]==[]
     assert data["summary"]["machine_preservation_risk_nodes"]==[]
     assert data["summary"]["highest_priority_circularity_targets"]==["G5"]
-    assert data["last_updated_experiment"]==349
+    assert data["last_updated_experiment"]==350
     print(json.dumps(data["summary"], indent=2))
 
 if __name__=="__main__":
