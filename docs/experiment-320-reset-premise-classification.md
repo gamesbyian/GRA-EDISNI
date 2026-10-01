@@ -152,3 +152,16 @@ Experiment 353 found no external or historical source that explicitly supplies G
 Experiment 354 nevertheless removes the relative-label freedom exposed by Experiment 352. Within the literal depth-substitution consumer `(q,S)`, all six shared permutations of tail labels into body-depth labels were exhausted using only first-pass positional validity. Identity `012` leaves 20 raw-compatible machines in six nontrivial output families; all five non-identity relabelings leave zero.
 
 Together with Experiment 290's four literal coordinate-copy comparison, the exact representative `(q,S)` with shared orientation is therefore strongly observation-constrained **inside that small family**. The unresolved G5 burden is no longer axis choice or label registration inside the literal-copy family. It is the higher-order choice of that family itself over other comparably simple selector-on-body consumers.
+
+
+## Reset-era update through Experiment 355
+
+Experiment 355 reruns the pre-reset affine G5 audits and reconciles them with the newer evidence chain.
+
+Experiment 266 exhausts all 432 invertible affine transformations of the two ternary inputs `(q,S)`. First-pass positional validity alone leaves a maximum of 20 raw-compatible machines. Exactly six maps reach that maximum, and every one has `d'=S` exactly; their only freedom is an affine permutation of the external q labels. Fixing the physical q registration leaves the canonical G5 map.
+
+Experiment 267 supplies the necessary negative control. When singular affine maps are admitted, retention can rise to all 216 raw machines, but every perfect-retention map erases selector S from both output coordinates. Higher retention is therefore achieved by throwing information away, not by finding a stronger consumer.
+
+The R4 interpretation changes accordingly. G5 remains model-level because no external source says “use an invertible affine/address consumer,” but its internal parameter burden is now very small: literal-copy, relative-label, and full invertible-affine audits all converge on exact depth substitution `d'=S`.
+
+The highest-priority circularity target therefore moves to G6: the decision to consume the selector again after G5.
