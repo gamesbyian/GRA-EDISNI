@@ -78,6 +78,8 @@ This pattern is a design prior, not a decoder.
 
 ## Sticker-specific candidate consumer: secret-ending lever
 
+> **Update (Experiments 369–370, 1 Oct 2026):** game data show the lever stores only the known code (as a rotation), and its console screen glyphs are Up `=`, Left `/`, Right `}`. The game does **not** confirm the dot-left / dash-right / slash-top mapping, so this lane is closed as a sticker consumer unless another artifact ties the marks to lever input.
+
 The 21 Mar 2021 public sticker discussion supplies a candidate consumer from outside the foreground corpus itself.
 
 The Collector's Edition sleeve was historically interpreted as displaying the same three marks in the geometry of the secret-ending lever:

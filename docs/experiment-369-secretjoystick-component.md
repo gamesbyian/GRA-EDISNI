@@ -29,7 +29,7 @@ Inspector screenshot of the `SecretJoystick` component from INSIDE's level data,
 
 3. **No second code.** The component holds exactly one 14-input password. Together with eropkol's 24 Sep 2026 finding, the hypothesis "the stickers encode a different code for this lever" is closed at the game-data level. Experiment 343 had already excluded the known code (all rotations) as a contiguous sticker window, given the alphabet split.
 
-4. **Open, narrow question: what do the three signs look like?** The console screen swaps to a distinct texture per direction: `Sign1` = Up, `Sign2` = Left, `Sign3` = Right. The CE cover clue maps slash = top/up, dot = left, dash = right. If `FX_ScreenKaypro_Sign1/2/3` depict **/ . -** respectively, the game itself confirms the sticker-symbol ↔ lever-direction mapping, with the stickers' alphabet literally being the lever's screen glyphs. If they depict something else, the cover-to-lever reading loses its strongest support. This is a single texture lookup for anyone with the extracted assets.
+4. **Open, narrow question: what do the three signs look like?** **Answered in Experiment 370: Up = `=`, Left = `/`, Right = `}`, none matching the cover reading.** The console screen swaps to a distinct texture per direction: `Sign1` = Up, `Sign2` = Left, `Sign3` = Right. The CE cover clue maps slash = top/up, dot = left, dash = right. If `FX_ScreenKaypro_Sign1/2/3` depict **/ . -** respectively, the game itself confirms the sticker-symbol ↔ lever-direction mapping, with the stickers' alphabet literally being the lever's screen glyphs. If they depict something else, the cover-to-lever reading loses its strongest support. This is a single texture lookup for anyone with the extracted assets.
 
 ## Consequence
 
