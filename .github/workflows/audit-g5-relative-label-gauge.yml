@@ -1,0 +1,26 @@
+name: Experiment 354 G5 relative label gauge
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_g5_relative_label_gauge.py"
+      - "scripts/enumerate_raw_machine.py"
+      - "data/observations.csv"
+      - ".github/workflows/audit-g5-relative-label-gauge.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Experiment 354
+        run: |
+          python scripts/audit_g5_relative_label_gauge.py
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-354-g5-relative-label-gauge
+          path: data/experiment-354-g5-relative-label-gauge.json
+          if-no-files-found: error

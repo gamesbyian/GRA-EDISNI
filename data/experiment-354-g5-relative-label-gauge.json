@@ -1,0 +1,21 @@
+{
+  "experiment": 354,
+  "family": "shared S3 relabeling pi before literal G5 depth substitution (q,S)->(q,pi(S))",
+  "raw_primary_payloads": 6,
+  "raw_selectors": 36,
+  "raw_candidate_machines": 216,
+  "records": [
+    {"perm":"012","identity":true,"survivors":20,"distinct_output_families":6,"q_varying_output_family_count":6,"selector_completion_count_represented":10},
+    {"perm":"021","identity":false,"survivors":0,"distinct_output_families":0,"q_varying_output_family_count":0,"selector_completion_count_represented":0},
+    {"perm":"102","identity":false,"survivors":0,"distinct_output_families":0,"q_varying_output_family_count":0,"selector_completion_count_represented":0},
+    {"perm":"120","identity":false,"survivors":0,"distinct_output_families":0,"q_varying_output_family_count":0,"selector_completion_count_represented":0},
+    {"perm":"201","identity":false,"survivors":0,"distinct_output_families":0,"q_varying_output_family_count":0,"selector_completion_count_represented":0},
+    {"perm":"210","identity":false,"survivors":0,"distinct_output_families":0,"q_varying_output_family_count":0,"selector_completion_count_represented":0}
+  ],
+  "max_survivors": 20,
+  "max_survivor_permutations": ["012"],
+  "workflow_run_id": 36819851134,
+  "workflow_artifact_id": 11142559363,
+  "workflow_artifact_digest": "sha256:1534a573e98833677cb360b1259028fe625de2be758b2ca28f240c5156ae96b1",
+  "guardrail": "first-pass positional validity only; no terminal, route, final-state-count, or semantic target"
+}
