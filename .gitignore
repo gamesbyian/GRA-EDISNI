@@ -4,3 +4,6 @@ playwright/.auth/
 cookies.txt
 cookies-*.txt
 *.cookies.txt
+
+# Python bytecode
+__pycache__/
