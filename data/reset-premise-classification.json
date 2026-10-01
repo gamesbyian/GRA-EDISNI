@@ -45,7 +45,7 @@
     {
       "id": "G1",
       "class": "G",
-      "primary_evidentiary_type": "generic_simplicity_prior",
+      "primary_evidentiary_type": "mixed",
       "secondary_support": [
         "historically_motivated 12x3x3 organization",
         "raw straight-rail and holdout robustness",
@@ -53,9 +53,29 @@
         "Experiment 348 historically attested twelve-square frame domain; raw common census narrows to 3/6 or 4/5",
         "Experiment 349 chronological prequential replay favors 3/6 over 4/5 by 4.7907 bits (27.68:1) inside the bounded census family"
       ],
-      "circularity_risk": "medium",
+      "circularity_risk": "medium_low",
       "claim": "primary three-cell columns use exceptional-position ternary POS3",
-      "reset_action": "retain exact 3/6 frame census as independently supported but not directly observed; continue treating one-per-column exceptional-position POS3 as a separate generic simplicity prior and compare against non-positional local grammars"
+      "reset_action": "retain 3/6 one-per-column physical occupancy as independently supported; isolate and test the remaining ternary exceptional-position semantics without importing tail/recursion consequences",
+      "components": [
+        {
+          "claim": "historically attested twelve-square 3x3 frame domain",
+          "type": "historically_motivated"
+        },
+        {
+          "claim": "common 3/6 frame census",
+          "type": "genuinely_derived_from_independent_evidence",
+          "basis": "Experiments 348-349; raw family leaves 3/6 and 4/5, then chronological prequential replay favors 3/6 by 4.7907 bits"
+        },
+        {
+          "claim": "one minority cell per physical column",
+          "type": "genuinely_derived_from_independent_evidence",
+          "basis": "Experiment 350; row rival eliminated, column survives and beats unrestricted 3-of-9 by 5.2450 bits / 37.92:1"
+        },
+        {
+          "claim": "minority row position is a ternary value (POS3 semantics)",
+          "type": "generic_simplicity_prior"
+        }
+      ]
     },
     {
       "id": "G3",
@@ -133,13 +153,13 @@
     "transition_premise_count": 7,
     "direct_or_mixed_observation_nodes": [
       "O1",
-      "O2"
+      "O2",
+      "G1"
     ],
     "historically_motivated_grammar_nodes": [
       "G3"
     ],
     "generic_simplicity_grammar_nodes": [
-      "G1",
       "G5",
       "G6",
       "G7"
@@ -150,5 +170,5 @@
       "G5"
     ]
   },
-  "last_updated_experiment": 349
+  "last_updated_experiment": 350
 }
