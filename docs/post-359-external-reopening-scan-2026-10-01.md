@@ -78,3 +78,38 @@ The archive's resource-context index ties the reverse-cover gallery to public di
 The two recovered gallery images do **not** immediately expose an obvious native 3x3 lattice, printed ternary rail, or other direct match to the solved sticker machine. That is useful: it means the cover cannot currently license a free overlay or a `100` interpretation.
 
 The visibly discrete cover elements worth measuring before any model comparison are the illuminated wall panels / monitors and the red-lit posts. Their counts, relative positions, and whether they correspond to in-game geometry should be established from the larger A/B photographs first. Until that inventory produces an independently forced grouping or registration, the machine-comparison gate remains closed.
+
+
+## Historical reconstruction of the cover clue
+
+The old Discord export resolves substantially more of the cover than the upstream summary currently records.
+
+On 15 Dec 2019, an owner explicitly described **four screens** on the reversible cover plus the clock fixed at **12:12**. Subsequent discussion and preserved close-ups identify the screen family as:
+
+1. the PC/PS4 **acorn**;
+2. the Xbox / Terminal41 **planet**;
+3. an ascending **diagnostic graph** matching the old Terminal41 `Diag. ac.time` graph;
+4. a **progress-bar / battery-like** display.
+
+The archive also preserves the actual 2019/2020 comparison images. The graph comparison is especially strong: the cover monitor was placed beside the Terminal41 diagnostic graph at the time and the community immediately recognized the same distinctive rising profile. By March 2020, the working description was already “the nut, the planet and the chart that are similar to the stuff we've already found in the ARG”; the fourth display was still treated as an ordinary progress/battery display.
+
+A same-room in-game screenshot from the Switch port shows generic orange monitor graphics rather than the acorn/planet/diagnostic references. In other words, the cover art was deliberately altered at the monitor-content layer. This fits iam8bit's explicit statement that the reversible cover contains a hidden clue much better than arbitrary overlay or steganography theories.
+
+### Consequence for the sticker mystery
+
+This changes the semantic-consumer assessment.
+
+The strongest reading is now that the cover clue is a **bridge back into the pre-existing printer/Terminal41 ARG**. That is exactly what a physical-release solver needed before the sticker background puzzle later produced the `dat/534brn9653f9j8mmd` path. The cover therefore has a plausible already-served function and should no longer be treated as a high-priority blank consumer for the foreground ternary machine.
+
+It remains useful in two narrower ways:
+
+- the fourth progress/battery screen is the one visibly unresolved member of the four-screen set;
+- the clock at `12:12` is an external, deliberately salient datum. The Collector's Edition began arriving / was revealed on **12 Dec 2019**, so release-date signature is a cheaper explanation than importing `12:12` into the foreground machine. Do not use the clock to privilege 12x9, 9x12, or another sticker geometry unless an additional independent cue links them.
+
+This is a productive negative result: the cover supplied the kind of external evidence needed to reopen a semantic lane, and that evidence currently argues **against** using the cover as a free key for terminal `100`, G6, or G7.
+
+### Residual cover question
+
+The only bounded cover-specific question worth further work is: **does the fourth progress/battery display correspond to a specific pre-December-2019 ARG artifact, just as the other three do?**
+
+That can be researched historically without inspecting foreground-machine outputs. If it resolves to another old ARG artifact, the “cover = ARG recap/bridge” interpretation becomes stronger. If it instead contains a genuinely unused transform, index, or selector, that would be a legitimate new reopening trigger.
