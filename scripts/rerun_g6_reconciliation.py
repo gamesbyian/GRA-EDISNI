@@ -3,9 +3,10 @@
 
 from __future__ import annotations
 
+import contextlib
+import io
 import json
-import subprocess
-import sys
+import runpy
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,18 +22,15 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     summary = {"experiment": 356, "audits": {}}
     for key, script, marker in AUDITS:
-        proc = subprocess.run(
-            [sys.executable, str(script)],
-            cwd=ROOT,
-            text=True,
-            capture_output=True,
-            check=True,
-        )
-        stdout = proc.stdout
-        stderr = proc.stderr
+        stdout_buf = io.StringIO()
+        stderr_buf = io.StringIO()
+        with contextlib.redirect_stdout(stdout_buf), contextlib.redirect_stderr(stderr_buf):
+            runpy.run_path(str(script), run_name="__main__")
+        stdout = stdout_buf.getvalue()
+        stderr = stderr_buf.getvalue()
         if marker not in stdout:
             raise AssertionError(
-                f"{script.name} exited successfully but did not emit expected marker {marker!r}; "
+                f"{script.name} did not emit expected marker {marker!r}; "
                 f"stdout={stdout!r}, stderr={stderr!r}"
             )
         (OUT / f"experiment-{key}.txt").write_text(stdout, encoding="utf-8")
