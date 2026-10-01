@@ -51,11 +51,13 @@
         "raw straight-rail and holdout robustness",
         "multiple weaker-parent reconstructions",
         "Experiment 348 historically attested twelve-square frame domain; raw common census narrows to 3/6 or 4/5",
-        "Experiment 349 chronological prequential replay favors 3/6 over 4/5 by 4.7907 bits (27.68:1) inside the bounded census family"
+        "Experiment 349 chronological prequential replay favors 3/6 over 4/5 by 4.7907 bits (27.68:1) inside the bounded census family",
+        "Experiment 351 recovers pre-machine 3x36/Trifid, groups-of-three, ternary/binary, and 9+3 index proposals as historical three-position readout precedent",
+        "Experiment 352 proves the one-per-column physical state is bijective with a 3^3 minority-row coordinate space; 0/1/2 labels are gauge"
       ],
       "circularity_risk": "medium_low",
-      "claim": "primary three-cell columns use exceptional-position ternary POS3",
-      "reset_action": "retain 3/6 one-per-column physical occupancy as independently supported; isolate and test the remaining ternary exceptional-position semantics without importing tail/recursion consequences",
+      "claim": "primary three-cell columns have one minority cell whose row gives a lossless three-valued coordinate; downstream use of that coordinate remains model-level",
+      "reset_action": "retain 3/6 one-per-column occupancy and minority-row coordinate extraction as independently supported/structurally forced; isolate shared row-label orientation and downstream coordinate consumption from tail/recursion consequences",
       "components": [
         {
           "claim": "historically attested twelve-square 3x3 frame domain",
@@ -72,8 +74,14 @@
           "basis": "Experiment 350; row rival eliminated, column survives and beats unrestricted 3-of-9 by 5.2450 bits / 37.92:1"
         },
         {
-          "claim": "minority row position is a ternary value (POS3 semantics)",
-          "type": "generic_simplicity_prior"
+          "claim": "minority row gives a three-valued coordinate",
+          "type": "genuinely_derived_from_independent_evidence",
+          "basis": "Experiment 352; exact bijection between the 27 one-per-column occupancy states and 3^3 row-position triples"
+        },
+        {
+          "claim": "shared row-label orientation / arithmetic or address semantics for those coordinates",
+          "type": "generic_simplicity_prior",
+          "basis": "Experiment 352 identifies 6 global and 216 per-column row-label gauges absent a consuming operation"
         }
       ]
     },
@@ -172,5 +180,5 @@
       "G1"
     ]
   },
-  "last_updated_experiment": 350
+  "last_updated_experiment": 352
 }

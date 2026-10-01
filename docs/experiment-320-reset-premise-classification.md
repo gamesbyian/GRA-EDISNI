@@ -124,3 +124,22 @@ G1 is therefore now **mixed**:
 - interpreting the minority cell's row position as a ternary value: still a generic simplicity/code prior.
 
 The full POS3 transition grammar is not reclassified as independently derived. The reset target has moved inward to the semantic/readout step that turns a supported physical one-per-column pattern into a ternary symbol.
+
+
+## Reset-era update through Experiment 352
+
+Experiments 351–352 narrow the remaining G1 burden again.
+
+Experiment 351 recovers pre-machine community use of 3×36/Trifid, groups-of-three, explicit ternary/binary language, and 9+3 numeric/index proposals. This establishes historical discoverability of three-position coordinate readout as an operation class, without establishing the incumbent mapping.
+
+Experiment 352 then separates coordinate extraction from semantic use. Conditional on Experiment 350's one-minority-per-column skeleton, the minority row in each physical column is already a lossless three-valued coordinate: the 27 physical occupancy states are in exact bijection with the `3^3` row-position triples. Naming the rows `0/1/2` adds only gauge freedom, not a new structural restriction.
+
+G1 therefore remains **mixed**, but its unresolved component is now downstream:
+
+- frame domain: historically motivated;
+- 3/6 census: independently supported;
+- one-per-column occupancy: independently supported;
+- minority-row coordinate extraction: structurally forced / independently derived from that occupancy;
+- shared row-label orientation, arithmetic/address meaning, and downstream coordinate consumption: still generic/model-level.
+
+The reset target should no longer be phrased as "why ternary?" The sharper question is why the coordinate labels are shared and consumed in the particular address/selector operations used by the incumbent machine.
