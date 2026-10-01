@@ -424,3 +424,10 @@ Across the complete family of common unordered binary 3×3 censuses, physical ob
 Historical ledger chronology provides a non-machine discriminant inside Experiment 348's complete common-census family. Across 54 unique first-81 residues in 43 same-day batches, exact prequential surprise is 52.8691 bits for 3/6 and 57.6598 bits for 4/5, giving 3/6 a 4.7907-bit (27.68:1) likelihood advantage under uniform compatible completions.
 
 **Consequence:** exact 3/6 frame census now has independent reset-era support beyond raw compatibility, but one-per-column POS3 does not inherit that support automatically. Keep the next question sharply separated: among 3/6 frame completions, is there an independently motivated reason for the three minority cells to occupy distinct columns, rather than arbitrary 3-of-9 positions?
+
+
+### Experiment 350 — chronological one-per-column occupancy support
+
+Conditional on Experiment 349's 3/6 frame family, the natural physical-geometry rivals now separate sharply. One-per-row is falsified by the historical corpus, permutation-matrix is falsified even earlier, and one-per-column beats unrestricted 3-of-9 by 5.2450 bits (37.92:1) under the frozen chronological replay.
+
+**Consequence:** G1's remaining reset burden is no longer "why three cells?" or "why one per column?" It is specifically **why should the minority cell's row position within each column be read as a ternary value, and how is that value consumed?** Seek an independently attested three-position readout/operation before extending recursion. Do not count downstream machine success as evidence for that semantic step.
