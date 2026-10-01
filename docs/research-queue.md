@@ -431,3 +431,12 @@ Historical ledger chronology provides a non-machine discriminant inside Experime
 Conditional on Experiment 349's 3/6 frame family, the natural physical-geometry rivals now separate sharply. One-per-row is falsified by the historical corpus, permutation-matrix is falsified even earlier, and one-per-column beats unrestricted 3-of-9 by 5.2450 bits (37.92:1) under the frozen chronological replay.
 
 **Consequence:** G1's remaining reset burden is no longer "why three cells?" or "why one per column?" It is specifically **why should the minority cell's row position within each column be read as a ternary value, and how is that value consumed?** Seek an independently attested three-position readout/operation before extending recursion. Do not count downstream machine success as evidence for that semantic step.
+
+
+### Experiment 351 — historical three-position readout provenance
+
+The historical archive now supplies genuine pre-machine precedent for reading three-position sticker carriers as coordinate/index units: Dec-2022 3×36 Trifid, Oct-2023 groups-of-three and explicit ternary/binary discussion, and May-2026 hierarchical 9+3 numeric/index proposals.
+
+**Consequence:** G1's code-choice burden narrows again. Three-position coordinate reading is historically discoverable, but exact POS3 is not yet independently recovered. The unresolved bridge is specifically why, given the Experiment-350 one-minority-per-column skeleton, the minority mark's **row position** should be the value.
+
+Next high-value work: compare a small preregistered family of observation-native readouts of a one-minority-per-column 3×3 square, without using downstream recursion to select the winner. Candidate rivals must be equally simple and symmetric, e.g. exceptional-row vector versus its complementary/background-row descriptions or other representation-invariant summaries. Prefer chronological/holdout discrimination. Do not semantic-score decoded strings.
