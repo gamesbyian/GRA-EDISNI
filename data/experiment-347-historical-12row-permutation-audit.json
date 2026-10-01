@@ -1,0 +1,29 @@
+{
+  "experiment": 347,
+  "input": "data/observations.csv",
+  "row_definition": "twelve consecutive 9-residue rows of H108",
+  "known_counts_by_row": [6,7,6,5,7,5,5,6,7,4,5,2],
+  "observed_dot_rows_1_based": [10,11],
+  "canonical_order_1_based": [1,2,3,4,5,6,7,8,9,10,11,12],
+  "canonical_score": -9,
+  "score_min": -28,
+  "score_max": 20,
+  "exact_max_order_count_directed": 60,
+  "max_orders_with_dot_rows_as_both_endpoints_directed": 0,
+  "max_dot_endpoint_fraction": 0.0,
+  "fraction_all_orders_scoring_at_least_canonical": 0.8453643161108438,
+  "exact_score_histogram": {
+    "-28":2,"-27":32,"-26":190,"-25":976,"-24":3818,"-23":12694,"-22":36080,"-21":93346,
+    "-20":213618,"-19":446094,"-18":862274,"-17":1553118,"-16":2610316,"-15":4161256,
+    "-14":6269808,"-13":8999986,"-12":12329912,"-11":16155232,"-10":20321988,"-9":24547110,
+    "-8":28515850,"-7":31935396,"-6":34441510,"-5":35868220,"-4":36075730,"-3":35019492,
+    "-2":32906940,"-1":29869152,"0":26210582,"1":22252098,"2":18216142,"3":14394606,
+    "4":10982520,"5":8059630,"6":5696974,"7":3869210,"8":2515830,"9":1565920,"10":931030,
+    "11":526182,"12":279974,"13":140536,"14":65098,"15":28250,"16":11196,"17":4036,"18":1310,
+    "19":276,"20":60
+  },
+  "workflow_run_id": 36809833465,
+  "workflow_artifact_id": 11139451730,
+  "workflow_artifact_digest": "sha256:b748182a6e822f02fd37b7c5b3d4d3da0f075dec9ffd083345fcfceb3f546fd5",
+  "interpretation": "canonical row order is ordinary-to-poor under the exact null; the preregistered historical dot-row opposite-endpoint criterion occurs in zero maximizing orders; free 12-row permutation is not licensed"
+}
