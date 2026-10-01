@@ -440,3 +440,19 @@ The historical archive now supplies genuine pre-machine precedent for reading th
 **Consequence:** G1's code-choice burden narrows again. Three-position coordinate reading is historically discoverable, but exact POS3 is not yet independently recovered. The unresolved bridge is specifically why, given the Experiment-350 one-minority-per-column skeleton, the minority mark's **row position** should be the value.
 
 Next high-value work: compare a small preregistered family of observation-native readouts of a one-minority-per-column 3×3 square, without using downstream recursion to select the winner. Candidate rivals must be equally simple and symmetric, e.g. exceptional-row vector versus its complementary/background-row descriptions or other representation-invariant summaries. Prefer chronological/holdout discrimination. Do not semantic-score decoded strings.
+
+
+### Experiment 352 — POS3 coordinate/gauge audit
+
+Conditional on Experiment 350's independently supported one-minority-per-column skeleton, the three minority-row positions are already a lossless `3^3 = 27` coordinate system. Including the free frame polarity yields the exact 54-state physical family. Labeling rows `0/1/2` is gauge, not a further physical hypothesis: there are 6 shared row-label permutations, or 216 if each column is independently relabeled.
+
+**Consequence:** retire "why ternary?" as the main G1 burden. The physical skeleton itself canonically exposes one three-valued coordinate per column. The substantive open question is now **consumption**: what independently motivates sharing row-label semantics across columns/frames and using those coordinates in the next operation?
+
+Next work should audit the earliest downstream use of these coordinates, separating:
+1. coordinate extraction, now structurally free;
+2. shared orientation/equality of coordinate labels across columns;
+3. any arithmetic or address interpretation;
+4. tail reuse and selector semantics;
+5. recursive substitution.
+
+Prefer ablation/quotient tests that ask which of these are actually necessary for the machine's predictive compression, and historical/ARG evidence that independently licenses the same operation.

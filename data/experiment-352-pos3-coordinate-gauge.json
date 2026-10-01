@@ -1,0 +1,20 @@
+{
+  "experiment": 352,
+  "input_family": "Experiment-350 one-minority-per-physical-column 3x3 skeleton",
+  "occupancy_states_per_polarity": 27,
+  "physical_states_with_free_binary_polarity": 54,
+  "canonical_coordinate_space": "3^3 = 27 row-position triples",
+  "coordinate_bijection": true,
+  "global_shared_row_label_gauges": 6,
+  "independent_per_column_row_label_gauges": 216,
+  "key_result": "exceptional-row triple is a lossless coordinate system for the supported physical occupancy; numeric labels 0/1/2 are gauge until an external or downstream operation gives them semantics",
+  "remaining_empirical_burden": "why/how the three row coordinates are consumed, related across frames, or interpreted by a later operation",
+  "not_established": [
+    "top-to-bottom numeric orientation",
+    "arithmetic meaning of 0/1/2",
+    "cross-column equality of label orientation",
+    "tail reuse",
+    "selector semantics",
+    "recursive address substitution"
+  ]
+}
