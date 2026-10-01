@@ -401,3 +401,10 @@ The preregistered physical-perimeter test is complete and negative. On the froze
 **Consequence:** close the generic grayscale perimeter/check-bit lane. Do not tune bands, side reversals, thresholds, or photo subsets. Reopen physical-edge decoding only if an independent clue specifies a different feature class.
 
 Experiment 345's scrambled-row/image hypothesis remains live only if another artifact or already-attested metadata source supplies the ordering. Next reset work should therefore prioritize independently specified ordering/registration cues in historical/community material and cross-puzzle outputs rather than further foreground or perimeter optimization.
+
+
+### Experiment 347 — historical 12-row permutation audit
+
+The exact Dec-2022 row-rearrangement proposal is now tested on its original axis rather than Experiment 345's transposed A-I axis. Across all 12! directed row permutations, the canonical order scores -9 and 84.536% of orders score at least as high. Sixty orders reach the maximum +20, and zero place the two physically observed dot-bearing rows at opposite endpoints as historically suggested.
+
+**Consequence:** close free 12-row permutation and visual optimization. The next ordering-family task is to reconstruct the distinct 23 Dec 2022 operation described as "rearranging the top 9x9 grid to account for the repeating pattern." Determine exactly what "account for the repeating pattern" meant from the surrounding messages/attachment before implementing anything.
