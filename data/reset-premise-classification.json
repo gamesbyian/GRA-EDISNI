@@ -103,11 +103,13 @@
       "primary_evidentiary_type": "generic_simplicity_prior",
       "secondary_support": [
         "Experiment 290 literal-coordinate-copy family",
-        "broader affine/bijection uniqueness audits"
+        "broader affine/bijection uniqueness audits",
+        "Experiment 290 four literal coordinate-copy consumers: (q,S) uniquely selector-sensitive, q-preserving, and nondegenerate",
+        "Experiment 354 all six shared tail-to-depth S3 relabelings: identity uniquely survives first-pass positional closure (20 vs 0)"
       ],
       "circularity_risk": "medium_high",
-      "claim": "first recursive application copies selector depth into the primary address: (q,d,j)->(q,S(j),j)",
-      "reset_action": "seek a pre-machine or external cue for address/depth substitution; compare against equally simple nonrecursive uses of the tail"
+      "claim": "first selector-on-body step uses the unique viable representative inside the literal coordinate-copy family: preserve q and substitute the identically registered tail position for body depth, (q,d,j)->(q,S(j),j)",
+      "reset_action": "retain exact (q,S) plus shared orientation as strongly observation-constrained inside the literal coordinate-copy family; continue testing whether the literal-copy family itself is independently or comparatively preferred over a modest broader human-legible consumer family"
     },
     {
       "id": "G6",
@@ -180,5 +182,5 @@
       "G1"
     ]
   },
-  "last_updated_experiment": 352
+  "last_updated_experiment": 354
 }
