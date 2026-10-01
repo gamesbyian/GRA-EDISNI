@@ -1,0 +1,29 @@
+name: Experiment 357 G6 regression reconciliation
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_human_second_selection.py"
+      - "scripts/audit_g6_selector_map_family.py"
+      - "scripts/audit_idempotent_recursion.py"
+      - "scripts/rerun_g6_reconciliation.py"
+      - "scripts/enumerate_raw_machine.py"
+      - "data/observations.csv"
+      - ".github/workflows/audit-g6-regression-reconciliation.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rerun and verify frozen G6 audits
+        run: python scripts/rerun_g6_reconciliation.py
+      - name: Upload reconciliation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-357-g6-regression-reconciliation
+          path: artifacts/experiment-357/
+          if-no-files-found: error
