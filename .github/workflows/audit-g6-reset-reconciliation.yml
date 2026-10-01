@@ -6,6 +6,7 @@ on:
       - "scripts/audit_human_second_selection.py"
       - "scripts/audit_g6_selector_map_family.py"
       - "scripts/audit_idempotent_recursion.py"
+      - "scripts/rerun_g6_reconciliation.py"
       - "scripts/enumerate_raw_machine.py"
       - "data/observations.csv"
       - ".github/workflows/audit-g6-reset-reconciliation.yml"
@@ -17,16 +18,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Rerun Experiment 291
-        run: |
-          mkdir -p artifacts/experiment-356
-          python scripts/audit_human_second_selection.py | tee artifacts/experiment-356/experiment-291.txt
-      - name: Rerun Experiment 322
-        run: |
-          python scripts/audit_g6_selector_map_family.py | tee artifacts/experiment-356/experiment-322.txt
-      - name: Rerun Experiment 269
-        run: |
-          python scripts/audit_idempotent_recursion.py | tee artifacts/experiment-356/experiment-269.txt
+      - name: Rerun and verify frozen G6 audits
+        run: python scripts/rerun_g6_reconciliation.py
       - name: Upload reconciliation evidence
         uses: actions/upload-artifact@v4
         with:
