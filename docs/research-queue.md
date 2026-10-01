@@ -489,3 +489,20 @@ Allowing singular affine maps raises retention only by destroying information. A
 **Priority shift:** G5 is no longer the best place to spend generic-family search effort. Its exact representative is uniquely selected inside literal-copy and invertible-affine parents, and its relative tail/body orientation is fixed by Experiment 354. The remaining G5 uncertainty is the higher-order decision to use an information-preserving affine/address consumer at all.
 
 Move the next R4 attack to **G6's second selector consumption**: why consume the tail again after G5, rather than stop at the three first-pass surfaces or use another equally simple information-preserving reduction? Reuse Experiments 291, 322, and 269 before defining anything new.
+
+
+### Experiment 356 — G6 second-selector reuse provenance audit
+
+The preserved historical corpus does **not** independently supply the decision to use the tail/index a second time. Historical discussion supports one body+index selection and generic layered decoding, but no explicit self-reuse, recursive application, remaining-q consumption, or iterate-to-fixed-point instruction was recovered.
+
+The machine-internal family is already well bounded:
+- Experiment 291: among fixed q=0/1/2 and q=S, only q=S is selective and completion-invariant;
+- Experiment 322: all 27 deterministic q=f(S) maps are exhausted; 002 and 012 uniquely maximize invariant retention at 14 and accept the identical machine set modulo the S=1 gauge;
+- Experiment 269: idempotent retraction semantics uniquely select the canonical operation inside the tested nonlinear family.
+
+**Consequence:** do not spend more effort widening q=f(S). G6's actual unresolved premise is the decision to perform a second selector-conditioned read at all.
+
+Next high-value options:
+1. search external/ARG material specifically for a repeated-selection / recursion / retraction cue;
+2. preregister a small family of equally simple **one-shot consumers of the three first-pass q surfaces** and compare them without route/terminal targets;
+3. if neither supplies discrimination, leave G6 explicitly conditional and move to G7/external-consumer evidence.

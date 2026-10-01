@@ -165,3 +165,16 @@ Experiment 267 supplies the necessary negative control. When singular affine map
 The R4 interpretation changes accordingly. G5 remains model-level because no external source says “use an invertible affine/address consumer,” but its internal parameter burden is now very small: literal-copy, relative-label, and full invertible-affine audits all converge on exact depth substitution `d'=S`.
 
 The highest-priority circularity target therefore moves to G6: the decision to consume the selector again after G5.
+
+
+## Reset-era update through Experiment 356
+
+Experiment 356 separates G6 provenance from G6 parameter selection.
+
+The preserved community archive contains historically prior three-position/ternary exploration, body+index architecture, one selector application, and generic multi-stage decoding. It contains no recovered explicit instruction to apply the same tail/index a second time, recursively consume the remaining q coordinate, or iterate the selection.
+
+Accordingly, the decision to reuse remains a generic operation prior.
+
+Once that decision is admitted, the parameter freedom is already tightly bounded. Experiment 291 makes q=S uniquely selective and completion-invariant among the four simplest q reads; Experiment 322 exhausts all 27 deterministic q=f(S) maps and leaves one functional optimum modulo the established S=1 gauge; Experiment 269 shows that idempotent retraction semantics uniquely select the canonical two-pass operation inside the tested nonlinear parent.
+
+G6 should therefore no longer be described as broadly underconstrained. Its unresolved content is specifically whether a second selector-conditioned read is intended at all.
