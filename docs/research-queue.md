@@ -489,3 +489,20 @@ Allowing singular affine maps raises retention only by destroying information. A
 **Priority shift:** G5 is no longer the best place to spend generic-family search effort. Its exact representative is uniquely selected inside literal-copy and invertible-affine parents, and its relative tail/body orientation is fixed by Experiment 354. The remaining G5 uncertainty is the higher-order decision to use an information-preserving affine/address consumer at all.
 
 Move the next R4 attack to **G6's second selector consumption**: why consume the tail again after G5, rather than stop at the three first-pass surfaces or use another equally simple information-preserving reduction? Reuse Experiments 291, 322, and 269 before defining anything new.
+
+
+### Experiment 356 — G6 second-selector reset reconciliation
+
+Experiments 291, 322 and 269 now rerun cleanly after repairing two stale assertion bugs.
+
+The bounded result is strong:
+- fixed q reads never filter the 20 first-pass machines and remain non-invariant;
+- q=S uniquely filters 20→14 and becomes invariant among the four simplest reads;
+- across all 27 deterministic q=f(S) maps, exactly 002 and 012 maximize invariant retention at 14 and accept the same machines, differing only by the established S=1 gauge;
+- idempotence in the broader 1,296-map fiber-preserving family uniquely selects canonical identity.
+
+Historical mining still supplies no cue for **reusing the same selector a second time**. The May-2026 large-domain + small-index proposal supports one body/index consumption only.
+
+**Consequence:** do not expand G6 into arbitrary second-pass functions. Its parameters are already strongly constrained inside the natural small families. The unresolved issue is the authoring prior that there should be a second selector-conditioned collapse at all.
+
+At this point the closed-corpus reset is near its stopping condition. G7 is already weakened to generic non-collapse/information-preservation priors by Experiment 321. Further machine-family expansion should require an independent physical/archive/ARG clue. Default future effort toward external-consumer evidence, prospective sticker validation, and acquisition rather than unconstrained grammar search.
