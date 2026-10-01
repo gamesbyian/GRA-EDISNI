@@ -1,0 +1,31 @@
+name: Experiment 355 G5 affine reconciliation
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_affine_first_pass.py"
+      - "scripts/audit_affine_degeneracy.py"
+      - "scripts/enumerate_raw_machine.py"
+      - "data/observations.csv"
+      - ".github/workflows/audit-g5-affine-reset-reconciliation.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rerun Experiment 266
+        run: |
+          mkdir -p artifacts/experiment-355
+          python scripts/audit_affine_first_pass.py | tee artifacts/experiment-355/experiment-266.txt
+      - name: Rerun Experiment 267
+        run: |
+          python scripts/audit_affine_degeneracy.py | tee artifacts/experiment-355/experiment-267.txt
+      - name: Upload reconciliation evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-355-g5-affine-reconciliation
+          path: artifacts/experiment-355/
+          if-no-files-found: error
