@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "experiment": 353,
+  "question": "Does canonical reset evidence independently specify G5 tail-to-body coordinate substitution?",
+  "evidence_scope": [
+    "docs/historical-ordering-acorn-lineage.md",
+    "docs/arg-puzzle-mechanics-corpus.md",
+    "experiment-317",
+    "experiments-348-352"
+  ],
+  "result": {
+    "exact_operation_support": false,
+    "broad_body_index_consumer_support": true,
+    "generic_cross_puzzle_selector_precedent": true,
+    "independently_specified_body_axis": false,
+    "independently_specified_substitution_rule": false
+  },
+  "conclusion": "G5 remains model-level; independent evidence supplies body coordinates plus a tail/index architecture but not the bridge identifying which coordinate is selected/replaced.",
+  "next_discriminator": "Preregister equally simple selector-on-body consumers from physical geometry or historical wording before inspecting downstream outputs."
+}
