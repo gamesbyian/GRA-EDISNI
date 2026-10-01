@@ -143,3 +143,12 @@ G1 therefore remains **mixed**, but its unresolved component is now downstream:
 - shared row-label orientation, arithmetic/address meaning, and downstream coordinate consumption: still generic/model-level.
 
 The reset target should no longer be phrased as "why ternary?" The sharper question is why the coordinate labels are shared and consumed in the particular address/selector operations used by the incumbent machine.
+
+
+## Reset-era update through Experiment 354
+
+Experiment 353 found no external or historical source that explicitly supplies G5's exact coordinate substitution. That keeps G5 model-level at the operation-family level.
+
+Experiment 354 nevertheless removes the relative-label freedom exposed by Experiment 352. Within the literal depth-substitution consumer `(q,S)`, all six shared permutations of tail labels into body-depth labels were exhausted using only first-pass positional validity. Identity `012` leaves 20 raw-compatible machines in six nontrivial output families; all five non-identity relabelings leave zero.
+
+Together with Experiment 290's four literal coordinate-copy comparison, the exact representative `(q,S)` with shared orientation is therefore strongly observation-constrained **inside that small family**. The unresolved G5 burden is no longer axis choice or label registration inside the literal-copy family. It is the higher-order choice of that family itself over other comparably simple selector-on-body consumers.
