@@ -122,3 +122,62 @@ The script reverse-sorts records and then compared the two optimal maps against 
 Repair: compare the two optimal map/output pairs as an unordered set.
 
 These are regression-harness repairs, not changes to the candidate family, scoring rule, or expected substantive results.
+
+
+## Successful repaired rerun
+
+After repairing the two regression-harness bugs above, the hardened rerun succeeds and preserves nonempty evidence for all three audits.
+
+- workflow run: `36820725086`
+- artifact: `11143231706`
+- digest: `sha256:eb841b3985857b8304e2169f77bb84abd25db220663200f3dd17f89c39b0b24b`
+
+### Experiment 291 reproduced
+
+From the 20 G5 first-pass machines:
+
+- fixed q=0: 20 valid, outputs `122/102/112`;
+- fixed q=1: 20 valid, outputs `022/012/002`;
+- fixed q=2: 20 valid, outputs `100/120`;
+- q=S: 14 valid, all output `100`.
+
+Thus q=S is the only member of the four-choice family that is both selective and completion-invariant.
+
+### Experiment 322 reproduced
+
+All 27 deterministic `q=f(S)` maps were rerun.
+
+- 22 are selective;
+- 8 have nonempty completion-invariant output;
+- maximum invariant retention is 14;
+- exactly `012` and `002` attain 14;
+- both give `100` for all 14 machines;
+- both accept the exact same 14-machine set;
+- their only difference is the known S=1 observational gauge.
+
+### Experiment 269 reproduced
+
+Inside the 1,296-map selector-fiber-preserving family:
+
+- 6 operations satisfy idempotence;
+- exactly 1 has nonempty two-pass positional closure;
+- it is the canonical identity reset;
+- it leaves the same 14 physical masters and terminal `100`.
+
+## Reset interpretation
+
+G6 has the same epistemic shape that G5 acquired after Experiment 355.
+
+Its **parameterization inside natural bounded families is strongly constrained**:
+
+- the four simplest second reads isolate q=S;
+- the full 27-map deterministic family isolates one functional solution modulo a known gauge;
+- the broader idempotent-retraction grammar uniquely selects canonical identity.
+
+But the historical archive check finds no pre-machine instruction to apply the same three-position index a second time. The May-2026 body+index discussion supports one selector use, not recursive reuse.
+
+Therefore the remaining G6 burden is a parent-family/authoring prior:
+
+> after the first selector-conditioned depth reduction, require another selector-conditioned information reduction that is completion-invariant and information-preserving.
+
+Do not broaden to arbitrary second-pass functions merely because they can be enumerated. Existing bounded families already show that parameter freedom is not the main uncertainty.
