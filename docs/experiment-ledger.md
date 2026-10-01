@@ -355,6 +355,7 @@ Latest indexed experiment: **325**.
 | 344 | full-photo physical-perimeter observability audit: among 82 manifest-authorized original sticker photographs, 35 pass preregistered fail-closed quadrilateral/perimeter gates; every A-I class has at least two independently usable full-perimeter photos (A/B/C/D/E/F/G/H/I = 5/4/3/4/3/4/2/5/5), removing Experiment 325's observability block and licensing a replicated support-aware edge-feature test without asserting that any margin/check-bit channel exists |
 
 | 345 | observation-only 9×12 row-permutation boundary audit: exhaustive 9! row orders under a frozen same-symbol continuity score find serial ABCDEFGHI (net 0; 62.379% of permutations score at least as high) and physical IABCDEFGH (net -1; 69.201%) entirely ordinary; body-only is exactly median-like and tail-only is worse. The optimized maximum ACBEIGHDF / reverse is retained only as an overfit negative control. A scrambled-row image hypothesis therefore requires an independent ordering/check-bit channel rather than foreground self-optimization. |
+| 346 | preregistered replicated physical-perimeter feature audit: on the frozen 35-photo Experiment-344 corpus, the grayscale edge-profile channel fails all five gates. Only 2/9 classes have positive perimeter replication; only 3/9 exceed interior controls; pooled within-class perimeter median is -0.0526 versus +0.0197 between-class; all side and photo jackknives remain negative. This closes the frozen grayscale perimeter/check-bit channel without retuning. |
 
 ## Current frontier
 
