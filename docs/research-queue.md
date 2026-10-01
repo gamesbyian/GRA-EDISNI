@@ -506,3 +506,14 @@ Next high-value options:
 1. search external/ARG material specifically for a repeated-selection / recursion / retraction cue;
 2. preregister a small family of equally simple **one-shot consumers of the three first-pass q surfaces** and compare them without route/terminal targets;
 3. if neither supplies discrimination, leave G6 explicitly conditional and move to G7/external-consumer evidence.
+
+
+### Experiment 357 — G7 provenance boundary audit
+
+No preserved pre-machine sticker-solving source independently supplies G7's two non-collapse rules or route selection. Historical permutation discussion is unrelated (lever brute force, image shuffling, Sudoku-style one-of-each speculation).
+
+Experiment 321 already exhausts the relevant 27 assignments and shows that word non-collapse plus q-coordinate non-collapse uniquely select `210 -> 120/012/102`.
+
+**Consequence:** G7 remains explicitly conditional as a generic information-preservation prior. Do not broaden route semantics or search arbitrary route families. Reopen only if an external artifact independently supplies reversible ternary mappings, one-of-each coordinate use, or a registered three-route structure.
+
+At this point the reset program's major remaining unsupported choices are operation-family priors, not hidden parameter choices. The safe-stopping rule is close: absent new external evidence, further widening is more likely to manufacture alternatives than to discriminate them.
