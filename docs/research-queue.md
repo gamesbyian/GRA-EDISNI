@@ -370,7 +370,7 @@ Do not reopen without an independent cue:
 - generic Boolean pointer combinations;
 - T3 ordinary map composition;
 - terminal printer-mask optimization;
-- known INSIDE decoder families already audited in Experiment 240.
+- known INSIDE decoder families already audited in Experiment 240 — **closed only as consumers of the incumbent terminal `100`**; on the raw grid only direct forms were tested (Exp 4, 13, 15, 22), and cued-rearrangement forms remain untested (Experiment 367).
 
 ## Safe stopping condition
 
