@@ -1,0 +1,51 @@
+{
+  "experiment": 351,
+  "status": "completed archival provenance audit",
+  "source_repository": "gamesbyian/playdead-unofficial-exports",
+  "source_commit": "5e5897e2ce70dad5a2bd85e459770637cb36610f",
+  "source_channel": "Playdead Unofficial - ARG - solving-breakout [463106924708233216].txt",
+  "findings": [
+    {
+      "date": "2022-12-23",
+      "author": "lime8159",
+      "operation": "3x36 sticker visualization",
+      "relevance": "three-row carrier considered before present machine"
+    },
+    {
+      "date": "2022-12-30",
+      "author": "lime8159",
+      "operation": "Trifid on 3x36; each column intended to correspond to a letter",
+      "relevance": "pre-machine coordinate-bearing three-row readout"
+    },
+    {
+      "date": "2023-10-28/29",
+      "authors": [
+        "bigdusty.",
+        "lime8159"
+      ],
+      "operation": "36 groups of three / 3x36 local letter assignment",
+      "relevance": "pre-machine three-symbol local code family"
+    },
+    {
+      "date": "2023-10-29",
+      "author": "darkmatter_11",
+      "operation": "explicit ternary/binary consideration",
+      "relevance": "ternary family historically considered but judged underconstrained"
+    },
+    {
+      "date": "2026-05-22",
+      "author": "lime8159",
+      "operation": "9+3 hierarchical numeric/index readout",
+      "relevance": "pre-current-machine hierarchical selector/index vocabulary"
+    }
+  ],
+  "supports": "historical discoverability of three-position coordinate/index readout as an operation class",
+  "does_not_support": [
+    "exact POS3 exceptional-row mapping",
+    "top-to-bottom trit orientation",
+    "0/1/2 labels",
+    "Trifid as intended cipher",
+    "equivalence of raw 3x36 grouping and current 3x3 column grouping"
+  ],
+  "remaining_question": "why minority row position within each one-minority-per-column 3x3 square should be the value"
+}
