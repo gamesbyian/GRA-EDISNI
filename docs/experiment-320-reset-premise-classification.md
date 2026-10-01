@@ -165,3 +165,19 @@ Experiment 267 supplies the necessary negative control. When singular affine map
 The R4 interpretation changes accordingly. G5 remains model-level because no external source says “use an invertible affine/address consumer,” but its internal parameter burden is now very small: literal-copy, relative-label, and full invertible-affine audits all converge on exact depth substitution `d'=S`.
 
 The highest-priority circularity target therefore moves to G6: the decision to consume the selector again after G5.
+
+
+## Reset-era update through Experiment 356
+
+Experiment 356 reconciles G6 and repairs two stale regression assertions in Experiments 291 and 322 without changing their substantive results.
+
+The repaired rerun confirms:
+- q=S is uniquely selective and completion-invariant among q=0,1,2,S;
+- all 27 deterministic q=f(S) maps leave one functional 14-state solution modulo the known S=1 gauge;
+- idempotence inside the broader selector-fiber-preserving family uniquely selects canonical identity.
+
+A targeted historical search still finds support only for one body+index selection, not a second application of the same selector.
+
+G6 therefore remains model-level at the **parent-family decision** but is no longer a high-priority parameter-circularity target. G5 and G6 now share the same status: exact operations are strongly constrained inside natural bounded families, while no external clue independently mandates those operation families.
+
+With G7 already weakened by Experiment 321 to generic non-collapse/information-preservation priors, the R4 closed-corpus assumption burn-down has reached its practical stopping condition. No transition premise remains marked as a highest-priority circularity target. Reopen grammar search only when an independent artifact, historical source, or prospective physical observation supplies a new operation-level cue.
