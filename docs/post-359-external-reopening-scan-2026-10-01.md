@@ -62,3 +62,19 @@ Priority stays:
 The post-359 project is not out of hypotheses. It is out of justification for generating more hypotheses from the same 82-stick-er corpus.
 
 The next crack should come from an **external constraint**, not a cleverer fit.
+
+## Reverse-cover source recovery
+
+The archival fork contains the historically linked Imgur reverse-cover assets, not merely references to them:
+
+- `assets/CxpDcJph-b2dd73639b37721f.jpg` (the 2020 Imgur embed); this is a close crop of the clue-bearing reversible cover artwork showing the control-room scene, including the boy, two orange monitor/panel elements at left, and red-lit posts;
+- `assets/2GHkSP1h-7ff535c704c76102.jpg` (the same Imgur gallery resurfaced in 2025); this shows the wider physical reverse cover and confirms the scene geometry and orientation;
+- larger archived photographs `INSIDE_A-5d197786f158c567.JPG` / `INSIDE_B-80fbff1237c37913.JPG` and smaller duplicate variants also survive in the export.
+
+The archive's resource-context index ties the reverse-cover gallery to public discussion as early as 14 Dec 2019, before the sticker foreground had been developed into the current model. This strengthens its independence as an external clue source.
+
+### First visual inventory result
+
+The two recovered gallery images do **not** immediately expose an obvious native 3x3 lattice, printed ternary rail, or other direct match to the solved sticker machine. That is useful: it means the cover cannot currently license a free overlay or a `100` interpretation.
+
+The visibly discrete cover elements worth measuring before any model comparison are the illuminated wall panels / monitors and the red-lit posts. Their counts, relative positions, and whether they correspond to in-game geometry should be established from the larger A/B photographs first. Until that inventory produces an independently forced grouping or registration, the machine-comparison gate remains closed.
