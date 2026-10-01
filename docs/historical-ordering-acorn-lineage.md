@@ -195,3 +195,12 @@ The archived 22 Dec 2022 discussion is more specific than the earlier R1 summary
 Experiment 347 reconstructs that proposal on the correct permutation axis. Under the frozen observation-only boundary-continuity score, canonical serial row order is ordinary-to-poor and the historical two-yellow-row opposite-boundary suggestion occurs in **zero** of the 60 exact maximizing directed orders.
 
 This closes unconstrained 12-row permutation as a useful ordering mechanism under the tested criterion. It does not subsume the next-day historical statement about "rearranging the top 9x9 grid to account for the repeating pattern", which may encode a more specific operation and remains to be reconstructed from its source context.
+
+
+## 10. Twelve 3×3 squares are independently attested
+
+The archive also preserves a deterministic foreground operation that should be distinguished from free row permutation. By Oct 2023 solvers explicitly described taking each consecutive nine-sticker A-I block and placing its cells into the already-solved nine-piece background geometry, producing twelve 3×3 foreground squares.
+
+This gives the frame domain independent historical provenance. Experiment 348 asks the weakest census question on the first nine slash/dash squares and finds that a common unordered split is constrained to **3/6 or 4/5**, with neither uniquely selected by raw observations.
+
+This matters for the incumbent machine's evidence classification: the 3×3 frame representation and the general idea of common frame-level regularity are historically discoverable without hindsight, but exact three-minority-cell occupancy still needs additional model-level or external evidence to beat the live 4/5 rival.
