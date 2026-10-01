@@ -23,7 +23,7 @@ def main() -> None:
     assert data["summary"]["independently_derived_transition_grammar_nodes"]==[]
     assert data["summary"]["machine_preservation_risk_nodes"]==[]
     assert data["summary"]["highest_priority_circularity_targets"]==["G5"]
-    assert data["last_updated_experiment"]==322
+    assert data["last_updated_experiment"]==349
     print(json.dumps(data["summary"], indent=2))
 
 if __name__=="__main__":
