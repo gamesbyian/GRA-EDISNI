@@ -25,7 +25,10 @@ def main() -> None:
     assert data["summary"]["independently_derived_transition_grammar_nodes"]==[]
     assert data["summary"]["machine_preservation_risk_nodes"]==[]
     assert data["summary"]["highest_priority_circularity_targets"]==["G5"]
-    assert data["last_updated_experiment"]==350
+    g1_components={c["claim"]:c["type"] for c in by_id["G1"]["components"]}
+    assert g1_components["minority row gives a three-valued coordinate"]=="genuinely_derived_from_independent_evidence"
+    assert g1_components["shared row-label orientation / arithmetic or address semantics for those coordinates"]=="generic_simplicity_prior"
+    assert data["last_updated_experiment"]==352
     print(json.dumps(data["summary"], indent=2))
 
 if __name__=="__main__":
