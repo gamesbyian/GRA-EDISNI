@@ -1,6 +1,6 @@
 # Experiment 347 — historical 12-row permutation audit
 
-_Status: preregistered; analysis not yet run._
+_Status: completed; preregistration frozen before analysis, 30 Sep 2026._
 
 ## Historical cue
 
@@ -63,3 +63,37 @@ A high-scoring optimized order is not evidence by itself. The historical family 
 Otherwise the result is another demonstration that free row permutation can manufacture structure from incomplete data.
 
 No visual or semantic inspection of optimized arrangements is permitted until the exact structural result is frozen.
+
+
+## Result
+
+The exact dynamic program enumerates the score distribution of all **479,001,600** directed row permutations.
+
+| measure | result |
+|---|---:|
+| canonical serial order score | -9 |
+| fraction of all orders scoring at least canonical | 84.5364% |
+| exact score range | -28 to +20 |
+| maximizing directed orders | 60 |
+| maximizing orders with observed dot rows 10 and 11 as opposite endpoints | 0 / 60 |
+
+The canonical 1→12 row order is therefore not unusually continuous. It sits in the weak part of the exact null distribution.
+
+The optimized score of +20 is also not a unique reconstruction: 60 directed orders attain it. More importantly, **none** satisfies the independently frozen historical proposal that the two physically observed dot-bearing rows occupy the two opposite ends of the rearranged object.
+
+This rejects the specific Dec-2022 "rearrange the 12 rows like acorn 41, maybe one yellow is at the top and the other at the bottom" formulation under the cheapest observation-only continuity interpretation.
+
+## Interpretation
+
+Do not inspect the 60 maximizing arrangements for a pretty picture or choose among them semantically. Their existence is expected after optimizing 12! candidate paths over incomplete data.
+
+Together with Experiment 345, both obvious permutation axes are now calibrated:
+
+- permuting nine A-I traces in the 9×12 transpose does not select the known serial or physical order;
+- permuting twelve sequence rows in the historical 12×9 view does not make the canonical order special, and its preregistered yellow-row endpoint prediction fails exactly.
+
+Experiment 346 additionally closes the most obvious independent physical-perimeter check-bit channel.
+
+The remaining ordering/image lane therefore needs a **more specific independent operation**, not more permutation search. The Dec-2022 statement about "rearranging the top 9×9 grid to account for the repeating pattern" is a distinct historical lead and should be reconstructed literally before any new geometric search.
+
+Exact score counts are preserved in `data/experiment-347-historical-12row-permutation-audit.json`. Workflow run `36809833465`, artifact `11139451730`, digest `sha256:b748182a6e822f02fd37b7c5b3d4d3da0f075dec9ffd083345fcfceb3f546fd5`.
