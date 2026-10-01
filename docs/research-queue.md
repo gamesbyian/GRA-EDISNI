@@ -417,3 +417,10 @@ The Oct-2023 community operation of placing each consecutive A-I block into the 
 Across the complete family of common unordered binary 3×3 censuses, physical observations eliminate 0/9, 1/8 and 2/7 but leave **both 3/6 and 4/5**. The 3/6 family has 12,960 raw joint completions; 4/5 has 18,000.
 
 **Consequence:** promote "common frame census" as independently motivated, but do not promote exact 3/6 to Layer 0. The next high-value structural comparison is a bounded, symmetric 3/6-vs-4/5 test under independently licensed operations. Do not reuse incumbent recursion merely to rediscover its own 3/6 premise; first ask whether historical geometry, tail metadata, or another demonstrated operation discriminates the two families.
+
+
+### Experiment 349 — chronological census prequential replay
+
+Historical ledger chronology provides a non-machine discriminant inside Experiment 348's complete common-census family. Across 54 unique first-81 residues in 43 same-day batches, exact prequential surprise is 52.8691 bits for 3/6 and 57.6598 bits for 4/5, giving 3/6 a 4.7907-bit (27.68:1) likelihood advantage under uniform compatible completions.
+
+**Consequence:** exact 3/6 frame census now has independent reset-era support beyond raw compatibility, but one-per-column POS3 does not inherit that support automatically. Keep the next question sharply separated: among 3/6 frame completions, is there an independently motivated reason for the three minority cells to occupy distinct columns, rather than arbitrary 3-of-9 positions?
