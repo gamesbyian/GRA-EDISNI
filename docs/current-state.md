@@ -722,3 +722,6 @@ A semantic epilogue remains possible only if independent information both suppor
 
 
 Experiment 356 audits G6 provenance directly. The preserved pre-machine archive supports three-position codes, body+index architecture, one tail/index application, and generic multi-stage decoding, but no recovered message explicitly says to reuse the same selector, recurse, consume the remaining q axis, or iterate to a fixed point. G6 therefore remains conditional at the decision-to-reuse level. Once a second selector-conditioned read is admitted, however, Experiments 291/322/269 already make its functional form strongly constrained modulo the known S=1 gauge.
+
+
+Experiment 357 closes the historical provenance question for G7 at the current archive boundary. No pre-machine sticker discussion independently proposes the two information-preservation rules used in Experiment 321 or anything equivalent to the derived q=210 / route shell 120/012/102. G7 therefore remains a generic non-collapse prior with a unique bounded consequence, not an externally motivated operation.

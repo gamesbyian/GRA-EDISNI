@@ -178,3 +178,12 @@ Accordingly, the decision to reuse remains a generic operation prior.
 Once that decision is admitted, the parameter freedom is already tightly bounded. Experiment 291 makes q=S uniquely selective and completion-invariant among the four simplest q reads; Experiment 322 exhausts all 27 deterministic q=f(S) maps and leaves one functional optimum modulo the established S=1 gauge; Experiment 269 shows that idempotent retraction semantics uniquely select the canonical two-pass operation inside the tested nonlinear parent.
 
 G6 should therefore no longer be described as broadly underconstrained. Its unresolved content is specifically whether a second selector-conditioned read is intended at all.
+
+
+## Reset-era update through Experiment 357
+
+Experiment 357 audits G7 against the preserved pre-machine sticker-solving record. No recovered source independently proposes choosing one q-indexed word from each first-pass family, preserving all three ternary labels in each selected word, using q positions 0/1/2 exactly once, or deriving a reversible three-route shell.
+
+Accordingly, G7 remains a generic information-preservation prior rather than a historically motivated grammar. Its parameter space is nevertheless fully bounded: Experiment 321 exhausts all 27 assignments and uniquely selects `210 -> 120/012/102` from the intersection of word non-collapse and q-coordinate non-collapse.
+
+The remaining uncertainty is therefore not which route shell satisfies G7, but whether G7's two non-collapse principles are authored at all.
