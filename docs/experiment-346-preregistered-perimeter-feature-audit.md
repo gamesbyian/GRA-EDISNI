@@ -51,6 +51,8 @@ A candidate perimeter signal requires all of the following without retuning:
 
 These conditions are deliberately conservative and are evaluated exactly as written.
 
+For numerical edge cases, a constant/near-constant profile has correlation 0 rather than NaN. In a single-photo jackknife, if removing that photograph leaves its A–I class with fewer than two photos, that class is unscored for that jackknife replicate; the experiment statistic is the median of the remaining scorable classes. No replacement photograph is introduced.
+
 ## Nulls
 
 Two nulls are frozen:
