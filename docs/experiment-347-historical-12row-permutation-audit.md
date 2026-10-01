@@ -51,6 +51,8 @@ Use subset dynamic programming over the complete 12-node weighted adjacency grap
 
 Because reversal leaves an undirected adjacency path's score unchanged, reverse pairs are expected and are not counted as independent structural confirmation.
 
+The historical "one yellow at the top, the other at the bottom" suggestion is operationalized before analysis as follows: identify rows containing physically observed dots directly from `data/observations.csv`. If exactly two rows contain dots, test whether those two rows are the two endpoints of each maximizing order. Do not infer or fill missing dots.
+
 ## Interpretation rule
 
 A high-scoring optimized order is not evidence by itself. The historical family becomes interesting only if one of these occurs without retuning:
