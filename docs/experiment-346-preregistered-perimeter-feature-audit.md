@@ -1,6 +1,6 @@
 # Experiment 346 — preregistered replicated perimeter-feature audit
 
-_Status: preregistered; analysis not yet run._
+_Status: completed; preregistration frozen before analysis, 30 Sep 2026._
 
 ## Question
 
@@ -71,3 +71,33 @@ A positive result licenses a separate follow-up to localize and characterize the
 ## Relationship to prior work
 
 Experiment 325 showed that consensus masters cannot test the physical sticker perimeter. Experiment 344 removed that observability block using original photographs. Experiment 345 showed that the foreground rows do not self-select a useful permutation under a simple continuity metric. Experiment 346 therefore tests the historically better-motivated possibility that a separate physical edge channel could supply ordering/check-bit information.
+
+
+## Result
+
+The preregistered candidate channel fails **all five gates**.
+
+| measure | result |
+|---|---:|
+| primary median of nine class perimeter scores | -0.071084 |
+| classes with positive perimeter replication | 2 / 9 |
+| classes with perimeter > interior control | 3 / 9 |
+| pooled within-class perimeter median | -0.052606 |
+| pooled between-class perimeter median | +0.019691 |
+| 32-bin shifted within-class median | +0.008437 |
+
+Only C (+0.1998) and G (+0.1742) have positive class perimeter scores. The other seven are negative.
+
+All four side-deletion jackknives remain negative, from -0.0943 to -0.1227. Every one-photo deletion jackknife also remains negative, with the primary statistic ranging only from -0.0803 to -0.0508. The failure is therefore not carried by one badly registered side or one photograph.
+
+The between-class null is especially informative: unrelated A-I classes correlate slightly **more** strongly than repeated photographs of the same class under this frozen edge-profile representation. The shifted-registration null also exceeds the aligned within-class median. There is no evidence here for a stable registered grayscale edge feature.
+
+## Interpretation
+
+This closes the specific PC-printer-style candidate in which the recoverable physical sticker perimeter itself carries a replicated grayscale profile or check-bit pattern visible under the preregistered bands.
+
+Do **not** retune band widths, reverse individual sides, change normalization, select only C/G, or choose photographs after seeing this result.
+
+Experiment 345's scrambled-row hypothesis therefore still requires an independent ordering cue, but Experiment 346 removes the most direct physical-perimeter implementation currently licensed by the archive. Reopen perimeter decoding only if an independent clue identifies a different measurable feature class, such as a particular printed mark, color channel, packaging feature, or known registration convention.
+
+The exact compact result is preserved in `data/experiment-346-perimeter-feature-audit.json`. Full pairwise output is preserved by workflow run `36809370081`, artifact `11138831699`, digest `sha256:82a621af6881f06b99bad3cdd908264c28f0feeb35fbea94636b03f0e51a92a5`.
