@@ -80,3 +80,20 @@ python scripts/audit_idempotent_recursion.py
 ```
 
 Workflow stdout is preserved as an artifact.
+
+
+## Historical check: one selector use versus repeated reuse
+
+A targeted pass over the pinned `playdead-unofficial-exports` archive searched sticker-relevant discussion for repeated-selector language (`use it again`, `select again`, `second selector`, `recursive`, `twice`, `second stage`, `layers`, and related phrases).
+
+The strongest relevant historical proposal remains 22 May 2026:
+
+- first nine symbols encode a larger domain;
+- final three symbols encode a second number, a smaller subset/index used to pick within the first result;
+- examples included keypad-layer selection and page-number + word-index selection.
+
+This is genuine historical support for **one body+index consumption**, and therefore strengthens the architecture upstream of G5.
+
+No recovered pre-machine message in this targeted pass proposes applying that same three-position index a second time after the first selection. Generic phrases about "several stages or layers" do not identify repeated use of the same selector.
+
+Therefore G6's repeated/second selector consumption should remain epistemically separate from the historically motivated body+index architecture.
