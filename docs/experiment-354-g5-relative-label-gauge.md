@@ -1,6 +1,6 @@
 # Experiment 354 — G5 relative-label gauge audit
 
-_Status: preregistered before result inspection, 1 Oct 2026._
+_Status: completed; preregistration frozen before result inspection, 1 Oct 2026._
 
 ## Question
 
@@ -73,3 +73,42 @@ Run:
 ```bash
 python scripts/audit_g5_relative_label_gauge.py
 ```
+
+
+## Result
+
+The six-way audit is decisive.
+
+| tail→depth labeling `pi(0)pi(1)pi(2)` | first-pass survivors | distinct output families |
+|---|---:|---:|
+| `012` | **20** | **6** |
+| `021` | 0 | 0 |
+| `102` | 0 | 0 |
+| `120` | 0 | 0 |
+| `201` | 0 | 0 |
+| `210` | 0 | 0 |
+
+All six identity-surviving output families vary with external q, so the identity result is not being carried by a constant/trivial surface. Ten of the 36 raw selector completions participate in the 20 surviving raw machines.
+
+Every non-identity shared relabeling is physically incompatible with first-pass positional closure.
+
+## Interpretation
+
+Experiment 352 showed that the primary row labels are gauge **before** a consuming operation identifies them with another three-position carrier.
+
+Experiment 354 now fixes the relative gauge between the tail selector and body depth axis inside the literal G5 family:
+
+> the observed tail position and the body-depth position must share the same orientation.
+
+This is stronger than an aesthetic preference and weaker than an external clue. It is an observation-constrained identification that emerges at the first point where the two independently motivated positional carriers interact.
+
+Combined with Experiment 290:
+
+1. among the four literal coordinate-copy consumers, `(q,S)` is uniquely selector-sensitive, q-preserving and nondegenerate;
+2. among all six shared tail→depth relabelings of that operation, only identity survives at all.
+
+Thus the exact literal G5 representative is unique inside this small human-legible family **before** G6, route selection, terminal `100`, hidden-state count, or semantic interpretation.
+
+What remains model-level is the higher-order choice to search the literal coordinate-copy family in the first place. Experiment 353 found no independent historical source explicitly instructing that substitution.
+
+Workflow evidence: run `36819851134`, artifact `11142559363`, digest `sha256:1534a573e98833677cb360b1259028fe625de2be758b2ca28f240c5156ae96b1`.
