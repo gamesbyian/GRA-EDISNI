@@ -392,3 +392,12 @@ The newly resurfaced community claim that the H108 object may be a scrambled 9×
 **Consequence:** do not optimize row permutations for visual coherence. Reopen row permutation only when an independent cue constrains the order. The immediate R2 priority remains the preregistered replicated perimeter-feature audit enabled by Experiment 344; a stable edge/margin feature is exactly the sort of channel that could make a printer-style permutation legitimate.
 
 **Acquisition/search side task:** search preserved/public sticker material for exact or near-variant `terminal41` occurrences. Treat any hit as potential cross-stage provenance/label evidence because public ARG histories place Terminal41 before the CE sticker phase; do not fold it into H108 unless the artifact itself establishes that relationship.
+
+
+### Experiment 346 — replicated perimeter-feature audit
+
+The preregistered physical-perimeter test is complete and negative. On the frozen 35-photo corpus, only C and G have positive grayscale perimeter replication; only 3/9 classes beat their interior controls; pooled within-class edge correlation (-0.0526) is worse than the between-class null (+0.0197); and every side/photo jackknife remains negative.
+
+**Consequence:** close the generic grayscale perimeter/check-bit lane. Do not tune bands, side reversals, thresholds, or photo subsets. Reopen physical-edge decoding only if an independent clue specifies a different feature class.
+
+Experiment 345's scrambled-row/image hypothesis remains live only if another artifact or already-attested metadata source supplies the ordering. Next reset work should therefore prioritize independently specified ordering/registration cues in historical/community material and cross-puzzle outputs rather than further foreground or perimeter optimization.

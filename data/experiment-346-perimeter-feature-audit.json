@@ -1,0 +1,53 @@
+{
+  "experiment": 346,
+  "corpus_usable_photos": 35,
+  "primary_experiment_statistic": -0.07108391487633006,
+  "positive_class_count": 2,
+  "perimeter_gt_control_class_count": 3,
+  "pooled_medians": {
+    "within_class_perimeter": -0.052605629940433135,
+    "within_class_perimeter_shifted_32": 0.008436754228963367,
+    "between_class_perimeter": 0.019691088948815272
+  },
+  "class_perimeter_scores": {
+    "A": -0.08034360482555866,
+    "B": -0.1493021135956491,
+    "C": 0.19982948401485687,
+    "D": -0.1450985540257503,
+    "E": -0.050797197645770724,
+    "F": -0.13039204661273224,
+    "G": 0.17418563195087938,
+    "H": -0.04740145037360593,
+    "I": -0.07108391487633006
+  },
+  "class_control_scores": {
+    "A": -0.08724932593231244,
+    "B": -0.11233047784798152,
+    "C": 0.1151922900984385,
+    "D": -0.04395070778552027,
+    "E": -0.12700323815490921,
+    "F": 0.15207505796436716,
+    "G": 0.20010500189852518,
+    "H": 0.0030663651247693074,
+    "I": 0.24310405238082228
+  },
+  "side_jackknife_primary": {
+    "top": -0.09431892130130114,
+    "right": -0.09431892130130114,
+    "bottom": -0.12241915518598352,
+    "left": -0.12274200650546191
+  },
+  "photo_jackknife_range": [-0.08034360482555866, -0.050797197645770724],
+  "gates": {
+    "positive_in_at_least_7_classes": false,
+    "perimeter_gt_control_in_at_least_7_classes": false,
+    "within_perimeter_median_gt_between_class_null": false,
+    "positive_after_every_side_jackknife": false,
+    "positive_after_every_photo_jackknife": false
+  },
+  "candidate_perimeter_signal": false,
+  "workflow_run_id": 36809370081,
+  "workflow_artifact_id": 11138831699,
+  "workflow_artifact_digest": "sha256:82a621af6881f06b99bad3cdd908264c28f0feeb35fbea94636b03f0e51a92a5",
+  "interpretation": "negative result closes the preregistered replicated grayscale edge-profile channel"
+}

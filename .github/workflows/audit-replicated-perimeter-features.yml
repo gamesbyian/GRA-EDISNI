@@ -1,0 +1,35 @@
+name: Experiment 346 perimeter feature audit
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_replicated_perimeter_features.py"
+      - "scripts/audit_full_photo_perimeter_support.py"
+      - "scripts/build_background_tile_masters.py"
+      - "data/perimeter-support-exp344-photos.csv"
+      - "archive/stickers/**"
+      - ".github/workflows/audit-replicated-perimeter-features.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install image dependencies
+        run: python -m pip install --disable-pip-version-check numpy opencv-python-headless pillow
+      - name: Run preregistered perimeter feature audit
+        run: |
+          python scripts/audit_replicated_perimeter_features.py \
+            --json artifacts/perimeter-features-exp346/report.json \
+            --pairs-csv artifacts/perimeter-features-exp346/pairs.csv
+      - name: Upload audit result
+        uses: actions/upload-artifact@v4
+        with:
+          name: perimeter-features-exp346
+          path: artifacts/perimeter-features-exp346/
+          if-no-files-found: error

@@ -549,3 +549,8 @@ The acquisition branch is checkpointed and should be resumed from the current un
 ## Terminal41 recurrence check — added 30 Sep 2026
 
 Search all preserved sticker photos, transcriptions, video frames, archived posts, seller images, and imported community notes for exact `terminal41` and close typographic variants. Public ARG histories place Terminal41 earlier in the ARG, before the Collector's Edition sticker foreground work, so a genuine sticker occurrence would be valuable cross-stage evidence. Record provenance and physical location first; do not assume that a hit is part of the 108-cell foreground payload.
+
+
+### Terminal41 literal-recurrence status — 30 Sep 2026
+
+A targeted public/upstream search finds historical links between Terminal41 and the Collector's Edition background-puzzle solution, including the `terminal41.link/dat/` lineage, but no current evidence that the literal string `terminal41` is printed on another known sticker. Treat the Discord remark about "another terminal41" as an unresolved acquisition lead, not an established corpus fact. Search exact sticker images/captions/transcriptions if a concrete candidate source appears; do not broaden this into generic Terminal41 history collection.
