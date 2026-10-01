@@ -1,0 +1,28 @@
+name: Experiment 350 chronological frame occupancy
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_chronological_frame_occupancy.py"
+      - "data/observations.csv"
+      - "archive/external/twinysam-inside-arg/stickers.md"
+      - ".github/workflows/audit-chronological-frame-occupancy.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run chronological frame-occupancy replay
+        run: python scripts/audit_chronological_frame_occupancy.py
+      - name: Upload exact result
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-350-result
+          path: data/experiment-350-chronological-frame-occupancy.json
+          if-no-files-found: error
