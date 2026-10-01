@@ -17,5 +17,12 @@
     "269": "canonical identity uniquely survives among idempotent selector-fiber-preserving operations",
     "291": "q=S uniquely selective and completion-invariant among q=0,1,2,S",
     "322": "002 and 012 uniquely maximize invariant retention at 14 and accept identical machines"
+  },
+  "rerun_evidence": {
+    "workflow_run_id": 36821213870,
+    "artifact_id": 11143871240,
+    "artifact_digest": "sha256:5c903e2e218fd0fdcaaecdca5b0a35350336f8ea085d14da41f269175a69a38f",
+    "all_expected_markers_present": true,
+    "all_audits_error_free": true
   }
 }
