@@ -49,11 +49,13 @@
       "secondary_support": [
         "historically_motivated 12x3x3 organization",
         "raw straight-rail and holdout robustness",
-        "multiple weaker-parent reconstructions"
+        "multiple weaker-parent reconstructions",
+        "Experiment 348 historically attested twelve-square frame domain; raw common census narrows to 3/6 or 4/5",
+        "Experiment 349 chronological prequential replay favors 3/6 over 4/5 by 4.7907 bits (27.68:1) inside the bounded census family"
       ],
       "circularity_risk": "medium",
       "claim": "primary three-cell columns use exceptional-position ternary POS3",
-      "reset_action": "compare against non-positional local grammars and any historically motivated spatial/ordering rival; do not count downstream terminal/route survival as independent support"
+      "reset_action": "retain exact 3/6 frame census as independently supported but not directly observed; continue treating one-per-column exceptional-position POS3 as a separate generic simplicity prior and compare against non-positional local grammars"
     },
     {
       "id": "G3",
@@ -148,5 +150,5 @@
       "G5"
     ]
   },
-  "last_updated_experiment": 322
+  "last_updated_experiment": 349
 }
