@@ -1,0 +1,28 @@
+name: Experiment 349 chronological census replay
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_chronological_census_prequential.py"
+      - "data/observations.csv"
+      - "archive/external/twinysam-inside-arg/stickers.md"
+      - ".github/workflows/audit-chronological-census-prequential.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run chronological prequential replay
+        run: python scripts/audit_chronological_census_prequential.py
+      - name: Upload exact result
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-349-result
+          path: data/experiment-349-chronological-census-prequential.json
+          if-no-files-found: error
