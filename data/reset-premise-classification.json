@@ -136,11 +136,12 @@
       "secondary_support": [
         "Experiment 321 ternary-word non-collapse",
         "Experiment 321 q-coordinate non-collapse",
-        "Experiment 278 bounded route-shell result"
+        "Experiment 278 bounded route-shell result",
+        "Experiment 357 archival provenance audit: no recovered pre-machine sticker clue independently supplies G7's word-noncollapse or q-noncollapse rules"
       ],
       "circularity_risk": "medium",
-      "claim": "one q-indexed word is chosen from each functional family; each selected word preserves all three ternary labels and the three families collectively use all three q indices",
-      "reset_action": "retain explicitly as a generic information-preservation prior; route semantics are downstream rather than premise-level"
+      "claim": "select one q-indexed word from each functional family using two generic non-collapse priors: each selected word preserves all three ternary labels and the three families collectively use all three q indices",
+      "reset_action": "keep explicitly conditional as a generic information-preservation prior; the 27-assignment family is exhausted, so seek only independent external reversible-route/one-of-each evidence rather than broader route fitting"
     }
   ],
   "auxiliary_supplied_premises": [
@@ -180,11 +181,12 @@
     "machine_preservation_risk_nodes": [],
     "independently_derived_transition_grammar_nodes": [],
     "highest_priority_circularity_targets": [
-      "G6"
+      "G6",
+      "G7"
     ],
     "mixed_grammar_nodes": [
       "G1"
     ]
   },
-  "last_updated_experiment": 356
+  "last_updated_experiment": 357
 }
