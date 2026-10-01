@@ -137,3 +137,17 @@ Start from:
 - `archive/discord/2026-09-29/`
 
 For every new mechanics entry, preserve the underlying message, screenshot, file, or upstream document whenever possible.
+
+
+## Machine-readable historical controls
+
+The raw PC/PS4 and Xbox One dot/dash/slash printer corpora are now preserved under `data/printer-reference/` as explicit cross-puzzle controls.
+
+Use them when evaluating sticker hypotheses that claim a historically demonstrated Playdead operation family, especially:
+
+- row-registration cues;
+- meaningful duplicate/multiplicity structure;
+- geometry-first decoding;
+- secondary readout after spatial reconstruction.
+
+Do not use the source publication order as a solved ordering. The cited Game Detectives record exposes the complete raw corpora and documents the solved acorn/planet products, but does not publish a canonical textual solved-row table. See `data/printer-reference/README.md` and `metadata.json`.

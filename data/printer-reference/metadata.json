@@ -1,0 +1,50 @@
+{
+  "schema": "inside-printer-reference-fixtures/v1",
+  "retrieved": "2026-10-01",
+  "primary_reference": {
+    "title": "Inside ARG - Game Detectives Wiki",
+    "url": "https://wiki.gamedetectives.net/w/Inside_ARG"
+  },
+  "pc_ps4": {
+    "raw_fixture": "data/printer-reference/pc-ps4-raw.txt",
+    "published_string_count": 41,
+    "full_length": 32,
+    "full_length_count": 32,
+    "short_count": 9,
+    "alphabet": [".", "-", "/"],
+    "documented_spatial_product": "ASCII acorn with the number 41",
+    "documented_valid_password": "LIFEDETECTED",
+    "derivation_status": "The source states that the acorn can be reconstructed, but the derivation from that object to LIFEDETECTED remains unresolved.",
+    "solved_row_order_status": "Not exposed as a textual row-order table by the cited source; do not treat source listing order as solved order."
+  },
+  "xbox_one": {
+    "raw_fixture": "data/printer-reference/xbox-one-raw.txt",
+    "unique_string_count": 47,
+    "full_length": 36,
+    "unique_full_length_count": 35,
+    "short_count": 12,
+    "listed_row_count_with_documented_duplicate": 48,
+    "full_length_rows_with_duplicate": 36,
+    "alphabet": [".", "-", "/"],
+    "documented_spatial_product": "ASCII circle/planet",
+    "documented_secondary_readout": "Braille after 90-degree clockwise rotation",
+    "documented_braille_transcription": [
+      "9N879763",
+      "087E894W26",
+      "09817986469",
+      "PL663AN79ET",
+      "976828'9126",
+      "7DI89829812",
+      "!CO792412-",
+      "984VE3229",
+      "679RED6"
+    ],
+    "documented_valid_password": "NEWPLANETDISCOVERED",
+    "duplicate_note": "The repeated 36-character row serves as both top and bottom of the solved circle.",
+    "solved_row_order_status": "The cited source documents the spatial solution but does not expose a complete textual row-order table; preserve that distinction."
+  },
+  "research_use": {
+    "role": "cross-puzzle control/reference fixtures",
+    "warning": "Historical Playdead mechanism evidence may license an operation family, but must not supply missing sticker-specific parameters."
+  }
+}
