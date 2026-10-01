@@ -78,3 +78,15 @@ Experiment 356 remains the canonical provenance conclusion:
 > no preserved pre-machine evidence independently instructs a second selector reuse.
 
 Experiment 358 only strengthens the reliability of the structural support Experiment 356 cites. It does not change G6's epistemic classification.
+
+## Successful current-main rerun
+
+Experiment 358's hardened workflow completed successfully after both regression repairs.
+
+- workflow run: `36821213870`
+- artifact: `11143871240`
+- digest: `sha256:5c903e2e218fd0fdcaaecdca5b0a35350336f8ea085d14da41f269175a69a38f`
+
+The artifact contains nonempty stdout for Experiments 291, 322 and 269 plus the structured harness summary. All expected experiment markers were present and no audit reported an error.
+
+This confirms that the structural support cited by canonical Experiment 356 is executable on current main after the two regression-harness repairs.
