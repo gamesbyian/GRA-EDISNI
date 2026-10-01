@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 357: rerun and preserve evidence from the three frozen G6 audits."""
+"""Experiment 358: rerun and preserve evidence from the three frozen G6 audits."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ import traceback
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "artifacts" / "experiment-357"
+OUT = ROOT / "artifacts" / "experiment-358"
 AUDITS = [
     ("291", ROOT / "scripts" / "audit_human_second_selection.py", "Experiment 291"),
     ("322", ROOT / "scripts" / "audit_g6_selector_map_family.py", "Experiment 322"),
@@ -21,7 +21,7 @@ AUDITS = [
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    summary = {"experiment": 357, "audits": {}}
+    summary = {"experiment": 358, "audits": {}}
     failed = False
 
     for key, script, marker in AUDITS:
