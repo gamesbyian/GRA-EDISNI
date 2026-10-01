@@ -99,3 +99,12 @@ The next R4 action is no longer “classify more nodes.” It is to execute targ
 3. test nonrecursive, historically motivated uses of the G3 tail before assuming G5.
 
 That ordering follows circularity risk, not incumbent downstream elegance.
+
+
+## Reset-era update through Experiment 349
+
+Experiments 348–349 strengthen the evidence **upstream of G1** without collapsing the distinction between frame census and positional code.
+
+The historically attested twelve-square representation independently supplies the nine first-81 3×3 frame domains. Experiment 348 shows that raw observations narrow a common unordered binary census to 3/6 or 4/5. Experiment 349 then replays ledger-received chronology and finds the 3/6 family has 4.7907 bits lower predictive surprise than 4/5, a 27.68:1 likelihood ratio under the frozen uniform-completion model.
+
+Accordingly, exact **3/6 frame census** now has an independent reset-era support line. G1 itself remains a generic simplicity prior because G1 additionally says those three minority cells occupy one per column and encode an exceptional-position ternary value. Experiments 348–349 do not establish that stronger positional grammar.
