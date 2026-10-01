@@ -465,3 +465,14 @@ The canonical reset synthesis contains no independent exact cue for G5's tail-to
 Experiment 290 already supplies a bounded machine-internal discriminator among the four literal coordinate copies: `(q,S)` is the only selector-sensitive, q-preserving, nondegenerate first-pass operation. That result should be retained as a simplicity/model-family argument, not mislabeled as external evidence.
 
 **Immediate next test:** Experiment 354 audits the assumption hidden by Experiment 290 that tail position labels and body-depth labels share the same orientation. Exhaust all six shared S3 relabelings under first-pass positional validity only.
+
+
+### Experiment 354 — G5 relative-label gauge audit
+
+The shared-orientation assumption exposed by Experiment 352 is now closed inside the literal G5 family. Across all six shared tail→depth S3 relabelings, identity `012` uniquely leaves any valid first-pass machines: 20 survivors in six q-varying output families. All five non-identity relabelings leave zero.
+
+Combined with Experiment 290, the smallest human-legible coordinate-copy family now has a unique first-pass representative:
+- `(q,S)` is the only selector-sensitive, q-preserving nondegenerate literal copy;
+- its tail/body relative orientation is uniquely identity.
+
+**Remaining G5 burden:** why privilege the literal coordinate-copy family itself? Do not call G5 externally derived. The next useful attack is a modest broader family that is still human-legible and preregistered, such as shared affine depth consumers `d'=a*q+b*S+c mod 3`, before any downstream criterion. First check existing experiments to avoid duplicating an already exhausted family.
