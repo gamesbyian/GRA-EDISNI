@@ -28,7 +28,7 @@ def main() -> None:
     g1_components={c["claim"]:c["type"] for c in by_id["G1"]["components"]}
     assert g1_components["minority row gives a three-valued coordinate"]=="genuinely_derived_from_independent_evidence"
     assert g1_components["shared row-label orientation / arithmetic or address semantics for those coordinates"]=="generic_simplicity_prior"
-    assert data["last_updated_experiment"]==352
+    assert data["last_updated_experiment"]==354
     print(json.dumps(data["summary"], indent=2))
 
 if __name__=="__main__":
