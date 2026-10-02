@@ -374,6 +374,8 @@ Latest indexed experiment: **325**.
 
 | 361 | literal Xbox envelope transfer: archived 2018 solving shows the Xbox row-order channel was a mirrored slash boundary with dash exterior and interior payload, not generic row similarity. Applying that exact mechanism to H108 fails before ordering: 12×9 has only 8/12 compatible rows (body alone 6/9; rows 3,5,8 fail), while 9×12 has 8/9 compatible class traces (C fails). The historical registration principle remains relevant, but the Xbox grammar itself is not the sticker sorter. |
 
+| 362 | PC acorn positive-control calibration: after recovering the primary 32-row solved-order fixture, the same aligned-symbol continuity score used in Experiments 345/347 gives the canonical acorn order 176 versus a 100,000-permutation null mean of -15.18 (SD 32.24); zero shuffled controls reach 176 (maximum 132). The inner 24 columns are even more separated. Thus the continuity family readily detects a genuine Playdead scrambled-row image, strengthening the conclusion that H108 simply lacks this PC-like ordering signal. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
