@@ -221,3 +221,29 @@ That supplies a concrete historical operation:
 5. only then read the interior payload.
 
 Experiment 361 transfers this literal mechanism to the sticker corpus without changing symbol roles. It fails before ordering: four 12×9 rows and one 9×12 class trace cannot satisfy any mirrored slash-boundary/dash-exterior placement consistent with their observed cells. The broader registration/payload separation remains a strong Playdead precedent, but the Xbox boundary grammar itself is not reusable as the CE row sorter.
+
+
+## 12. Canonical PC acorn row order recovered
+
+The prior provenance note said that no textual solved row-order table had been recovered for the PC/PS4 acorn. That gap is now closed.
+
+The primary Discord export contains a 9 Jul 2018 attachment posted at 17:35 as **“acorn order version”**:
+
+`assets/inside-pc-long-ascii-cdac293e0bbbcf9f.txt`
+
+Its 32 rows are an exact one-to-one permutation of the 32 full-length PC/PS4 printer strings in the canonical raw fixture. The order is now preserved as:
+
+`data/printer-reference/pc-ps4-acorn-order.txt`
+
+The surrounding chronology clarifies how the community reached it:
+
+- 8 Jul: solvers classified rows by whether they begin/end in slash and whether they contain dots; exactly half the long rows end in slash;
+- 8 Jul 16:46: sorting by the first appearance of slash, or slash-or-dot, was observed to partially self-organize the corpus;
+- 9 Jul 13:50: the breakthrough is described as an **“alternating interlaced pattern”** that sharply limits the ordering options;
+- 9 Jul 13:53: margin-slash distribution and reported `1:3` / `1:2` structure are singled out as key;
+- 9 Jul 15:04 onward: multiple solvers converge on the acorn/41 image and refine uncertain rows;
+- 9 Jul 17:35: the textual “acorn order version” is posted.
+
+This is stronger evidence than the previous generic “boundary/check-bit” summary: the PC solve was driven by **row-edge/margin classes plus interlacing**, while the Xbox solve used a mirrored slash envelope and smooth boundary staircase.
+
+However, the archive still does not state a single deterministic sorting function that maps the unordered PC rows to the final acorn order. The phrases “alternating interlaced pattern,” margin-slash distributions, and manual row refinement describe a constrained reconstruction process, not a fully specified algorithm. Therefore the project should use the recovered final order as a control fixture, but must not manufacture a sticker sorting rule by fitting a formula to that known answer.
