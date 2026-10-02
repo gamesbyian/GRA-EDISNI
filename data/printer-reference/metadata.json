@@ -11,11 +11,23 @@
     "full_length": 32,
     "full_length_count": 32,
     "short_count": 9,
-    "alphabet": [".", "-", "/"],
+    "alphabet": [
+      ".",
+      "-",
+      "/"
+    ],
     "documented_spatial_product": "ASCII acorn with the number 41",
     "documented_valid_password": "LIFEDETECTED",
     "derivation_status": "The source states that the acorn can be reconstructed, but the derivation from that object to LIFEDETECTED remains unresolved.",
-    "solved_row_order_status": "Not exposed as a textual row-order table by the cited source; do not treat source listing order as solved order."
+    "solved_row_order_status": "Recovered from a primary community text attachment posted 2018-07-09 as 'acorn order version'; all 32 rows exactly match the raw full-length corpus.",
+    "solved_order_fixture": "data/printer-reference/pc-ps4-acorn-order.txt",
+    "solved_order_provenance": {
+      "repository": "gamesbyian/playdead-unofficial-exports",
+      "source_file": "Playdead Unofficial - ARG - solving [461275582970462209].txt",
+      "timestamp": "2018-07-09 17:35",
+      "attachment": "assets/inside-pc-long-ascii-cdac293e0bbbcf9f.txt",
+      "archived_blob_sha": "fe69159b0a31be20230aa66ce16be01deab0c108"
+    }
   },
   "xbox_one": {
     "raw_fixture": "data/printer-reference/xbox-one-raw.txt",
@@ -25,7 +37,11 @@
     "short_count": 12,
     "listed_row_count_with_documented_duplicate": 48,
     "full_length_rows_with_duplicate": 36,
-    "alphabet": [".", "-", "/"],
+    "alphabet": [
+      ".",
+      "-",
+      "/"
+    ],
     "documented_spatial_product": "ASCII circle/planet",
     "documented_secondary_readout": "Braille after 90-degree clockwise rotation",
     "documented_braille_transcription": [
