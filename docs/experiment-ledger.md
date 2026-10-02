@@ -372,6 +372,8 @@ Latest indexed experiment: **325**.
 
 | 360 | cross-format row-order predictivity audit: leave-one-observation-out optimization of the frozen same-symbol boundary score fails to improve blind sticker recovery. In 9×12, continuity-optimized ordering predicts 29/47 held-out cells versus 33/47 for the body/tail majority baseline; in 12×9 it predicts 16/49 versus 29/49. The optimized order families therefore should not be used to fill unknown stickers absent an independent ordering cue or a different pre-specified image statistic. |
 
+| 361 | literal Xbox envelope transfer: archived 2018 solving shows the Xbox row-order channel was a mirrored slash boundary with dash exterior and interior payload, not generic row similarity. Applying that exact mechanism to H108 fails before ordering: 12×9 has only 8/12 compatible rows (body alone 6/9; rows 3,5,8 fail), while 9×12 has 8/9 compatible class traces (C fails). The historical registration principle remains relevant, but the Xbox grammar itself is not the sticker sorter. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.

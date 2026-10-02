@@ -204,3 +204,20 @@ The archive also preserves a deterministic foreground operation that should be d
 This gives the frame domain independent historical provenance. Experiment 348 asks the weakest census question on the first nine slash/dash squares and finds that a common unordered split is constrained to **3/6 or 4/5**, with neither uniquely selected by raw observations.
 
 This matters for the incumbent machine's evidence classification: the 3×3 frame representation and the general idea of common frame-level regularity are historically discoverable without hindsight, but exact three-minority-cell occupancy still needs additional model-level or external evidence to beat the live 4/5 rival.
+
+
+## 11. Xbox ordering mechanism recovered at operation level
+
+A fresh read of the preserved 30 Jun 2018 solving transcript makes the Xbox precedent more specific than the earlier “visible side/check structure” summary.
+
+The community first obtained an approximate dome/circle by lexicographic sorting, then noticed that correctly placed rows had a **first slash from the left mirrored at the same position from the right**. Stray slashes broke that envelope. Solvers explicitly treated the slash layer as the container/order-preserving structure, dashes outside it as background/fill, and the interior dot/dash pattern as payload. They then moved rows to make the boundary gradient/staircase smooth without destroying the dome.
+
+That supplies a concrete historical operation:
+
+1. identify a row-local mirrored boundary marker;
+2. separate exterior filler from interior payload;
+3. infer each row's structural width from the boundary;
+4. order rows so those widths form the intended smooth envelope;
+5. only then read the interior payload.
+
+Experiment 361 transfers this literal mechanism to the sticker corpus without changing symbol roles. It fails before ordering: four 12×9 rows and one 9×12 class trace cannot satisfy any mirrored slash-boundary/dash-exterior placement consistent with their observed cells. The broader registration/payload separation remains a strong Playdead precedent, but the Xbox boundary grammar itself is not reusable as the CE row sorter.
