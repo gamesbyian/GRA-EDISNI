@@ -380,6 +380,8 @@ Latest indexed experiment: **325**.
 
 | 364 | exact Dec-2022 historical mosaic audit: source attachments show that “rearranging the top 9×9 grid to account for the repeating pattern” meant reshaping each consecutive 9-sticker row into the solved `IAB/CDE/FGH` 3×3 background geometry, then tiling twelve such squares 3×4. Leave-one-out local-neighbor prediction on this deterministic mosaic gets 19/46 correct versus 28/46 for the trivial alphabet-majority baseline; within-tile-only gets 21/47 versus 29/47. The operation independently supports the 3×3 frame domain but not smooth-image interpolation or cross-frame continuity. |
 
+| 365 | layered completion-universe formalization: 43 unseen H108 cells define a symbolic 2^43 raw space; common 3/6-or-4/5 primary census × one-slash Q4 yields exactly 1,114,560 factored masters; observation-supported 3/6 one-per-column × one-slash Q4 collapses to 18×36 = 648 complete H108 masters, fully materialized as 43-bit codes. Established polarity/exact POS3 gives 216 raw machines, first closure 20, second closure 14. A separate exact physical-gauge expansion around the 14 states contains 224 masters. Eleven residues (22,49,50,55,58,82,84,88,91,93,94) are necessary and sufficient to distinguish all 648 U2 masters. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
