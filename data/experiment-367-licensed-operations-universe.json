@@ -1,0 +1,124 @@
+{
+  "experiment": 367,
+  "gate_source": "Experiment 338 / data/reset-r3-operation-gates.json",
+  "licensed_operation_summary": {
+    "historical_mosaic": {
+      "U2": {
+        "survivors": 648,
+        "total": 648
+      },
+      "U3": {
+        "survivors": 216,
+        "total": 216
+      },
+      "U4": {
+        "survivors": 20,
+        "total": 20
+      },
+      "U5": {
+        "survivors": 14,
+        "total": 14
+      },
+      "interpretation": "representation only; no independently licensed pass/fail criterion"
+    },
+    "frozen_tail_selected_row_one_exception": {
+      "U2": {
+        "survivors": 144,
+        "total": 648,
+        "newly_fixed": {
+          "84": ".",
+          "93": ".",
+          "102": "/"
+        },
+        "minimum_discriminator": 9
+      },
+      "U3": {
+        "survivors": 48,
+        "total": 216,
+        "newly_fixed": {
+          "84": ".",
+          "93": ".",
+          "102": "/"
+        },
+        "minimum_discriminator": 7
+      },
+      "U4": {
+        "survivors": 7,
+        "total": 20,
+        "newly_fixed": {
+          "84": ".",
+          "102": "/"
+        },
+        "minimum_discriminator": 4
+      },
+      "U5": {
+        "survivors": 6,
+        "total": 14,
+        "newly_fixed": {
+          "84": ".",
+          "102": "/"
+        },
+        "minimum_discriminator": 4
+      },
+      "U5_state_labels": [
+        "0011",
+        "0101",
+        "1001",
+        "1011",
+        "1101",
+        "1111"
+      ]
+    },
+    "tail_selected_column_one_exception": {
+      "U2": {
+        "survivors": 0,
+        "total": 648
+      },
+      "U3": {
+        "survivors": 0,
+        "total": 216
+      },
+      "U4": {
+        "survivors": 0,
+        "total": 20
+      },
+      "U5": {
+        "survivors": 0,
+        "total": 14
+      }
+    },
+    "known_bunker_password_lever_replay": {
+      "U2": {
+        "survivors": 0,
+        "total": 648
+      },
+      "U3": {
+        "survivors": 0,
+        "total": 216
+      },
+      "U4": {
+        "survivors": 0,
+        "total": 20
+      },
+      "U5": {
+        "survivors": 0,
+        "total": 14
+      },
+      "reason": "81/27 alphabet boundary forbids the normal 14-command bunker word under the historical /=U -=R .=L mapping, even with cyclic start, target rotation, and reversal"
+    }
+  },
+  "not_run_by_design": {
+    "pending_specific_evidence": [
+      "boundary_constrained_permutation",
+      "prior_stage_output_as_selector",
+      "cross_artifact_consumer"
+    ],
+    "closed_until_cue": [
+      "exact_value_or_class_filter",
+      "externally_cued_generative_transform",
+      "in_world_reference_overlay",
+      "carrier_conversion"
+    ]
+  },
+  "conclusion": "Among currently licensed bounded operations, only the frozen tail-selected-row rule acts as a nontrivial completion-universe filter. It does not uniquely solve the universe; it reduces U2 648→144 and U5 14→6 and freezes C-tail ../. Other licensed/replayed operations are either representation-only or hard negatives."
+}
