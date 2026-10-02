@@ -768,3 +768,16 @@ The completion-universe layer audit shows that the 30 unseen residues invariant 
 - the remaining 13 variable residues are exactly the canonical hidden-state set.
 
 Minimum complete discriminator sizes are U2=11, U3=9, U4=6, U5=5. Exact identity/complement relationships among variable residues mean some sticker pairs are redundant within a given universe. See `docs/experiment-366-universe-layer-audit.md`.
+
+
+## Experiment 367 — licensed operations across completion universes
+
+The Experiment 338 evidence-gated historical operations have now been replayed against U2→U5 rather than against one preferred master.
+
+- The exact Dec-2022 3×3 mosaic is a **representation only**: it applies to every candidate and supplies no independent selection criterion.
+- The frozen Experiment-329 tail-selected-row / one-exception family is the only current nontrivial filter: U2 648→144, U3 216→48, U4 20→7, U5 14→6. Its prospective C-tail consequence remains 84=., 93=., 102=/.
+- The direct column/rail sibling has 0 survivors at every layer.
+- The historically motivated lever mapping with the known normal bunker password has 0 survivors at every layer, even allowing cyclic start, target rotation, reversal and reverse rotation; completion uncertainty cannot rescue it.
+- Pending/closed historical operation families were deliberately not swept.
+
+See `docs/experiment-367-licensed-operations-universe.md`.
