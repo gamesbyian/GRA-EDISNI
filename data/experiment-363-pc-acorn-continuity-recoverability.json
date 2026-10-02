@@ -1,0 +1,12 @@
+{
+  "experiment": 363,
+  "seed": 363,
+  "restarts": 100,
+  "canonical_score": 176,
+  "local_optimum_score_min": 296,
+  "local_optimum_score_mean": 314.9,
+  "local_optimum_score_max": 328,
+  "canonical_undirected_adjacencies": 31,
+  "best_path_shared_canonical_adjacencies": 9,
+  "interpretation": "Continuity is a positive diagnostic on the known acorn order but not an identifying reconstruction objective; simple blind optimization finds much higher-scoring wrong paths."
+}
