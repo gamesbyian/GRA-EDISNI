@@ -554,3 +554,18 @@ See `docs/post-359-external-reopening-scan-2026-10-01.md`.
 Experiments 360–364 and current community feedback jointly close unconstrained image completion as a productive research lane. Do not use AI image completion, semantic recognizability, or smoother-looking row arrangements to select unknown sticker values or row order. A historically faithful Playdead-style intermediate may remain non-semantic until combined with a separately supplied overlay, seed, rotation, selector, site consumer, or later artifact.
 
 Reopen image reconstruction only when an independent cue fixes the relevant operation. Otherwise prefer two lanes: (1) recover genuinely new physical sticker observations, and (2) audit bounded historical/CE artifacts for independently specified registration or consumer behavior. See `docs/visual-completion-overlay-risk.md`.
+
+
+### Experiment 365 — completion-universe testing
+
+The 43 physically unseen H108 residues now have a reusable layered candidate surface. Do not default every new test to the preferred 14-state completion.
+
+Highest-value next uses of the universe:
+
+1. run independently specified overlay/consumer tests across U2 and report survivor counts rather than selecting visually attractive masters;
+2. compute invariants shared by all 648 U2 masters and compare them to invariants that appear only after U3/U4/U5 assumptions;
+3. use the U2 residue catalog for acquisition information value;
+4. search bounded pairs/triples of residues for efficient discrimination of live cross-family questions;
+5. keep the exact 224 physical-representation gauge expansion separate from structural narrowing.
+
+One exact minimum U2 identifying set is residues 22,49,50,55,58 plus 82,84,88,91,93,94. Eleven observations are necessary and sufficient to distinguish all 648 U2 masters.
