@@ -136,6 +136,18 @@ def build():
         })
     rows.sort(key=lambda x:(-x["entropy_bits"],x["residue"]))
 
+    def distinct_signatures(residues):
+        return len({
+            tuple(master[r-1] for r in residues)
+            for *_prefix, master in masters
+        })
+
+    primary_discriminator=(22,49,50,55,58)
+    tail_discriminator=(82,84,88,91,93,94)
+    assert distinct_signatures(primary_discriminator)==18
+    assert distinct_signatures(tail_discriminator)==36
+    assert distinct_signatures(primary_discriminator+tail_discriminator)==648
+
     c3,n3=census_primary_count(obs,3); c4,n4=census_primary_count(obs,4)
     assert n3==12960 and n4==18000
     result={
@@ -172,6 +184,16 @@ def build():
         },
         "u2_residue_catalog":rows,
         "highest_information_u2_residues":[x["residue"] for x in rows if abs(x["entropy_bits"]-1)<1e-12],
+        "u2_minimum_complete_discriminator":{
+            "lower_bound_bits":11,
+            "proof":"U2 factorizes into 18 primary x 36 tail; binary observations require at least 5+6 bits",
+            "primary_residues":list(primary_discriminator),
+            "tail_residues":list(tail_discriminator),
+            "all_residues":list(primary_discriminator+tail_discriminator),
+            "distinguished_primary_completions":18,
+            "distinguished_tail_completions":36,
+            "distinguished_complete_masters":648,
+        },
         "guardrail":"candidate frequencies are combinatorial multiplicities, not calibrated probabilities",
     }
     return result,masters,unknown
