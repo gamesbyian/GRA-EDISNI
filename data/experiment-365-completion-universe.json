@@ -982,5 +982,40 @@
     103,
     106
   ],
-  "guardrail": "U2 is a broad observation-supported structural universe, not a probability distribution. Candidate frequency is combinatorial multiplicity, not a calibrated probability."
+  "guardrail": "U2 is a broad observation-supported structural universe, not a probability distribution. Candidate frequency is combinatorial multiplicity, not a calibrated probability.",
+  "u2_minimum_complete_discriminator": {
+    "lower_bound_bits": 11,
+    "proof": "U2 factorizes into 18 independent primary completions and 36 independent tail completions; binary observations require at least ceil(log2 18)=5 primary bits and ceil(log2 36)=6 tail bits.",
+    "primary_residues": [
+      22,
+      49,
+      50,
+      55,
+      58
+    ],
+    "tail_residues": [
+      82,
+      84,
+      88,
+      91,
+      93,
+      94
+    ],
+    "all_residues": [
+      22,
+      49,
+      50,
+      55,
+      58,
+      82,
+      84,
+      88,
+      91,
+      93,
+      94
+    ],
+    "distinguished_primary_completions": 18,
+    "distinguished_tail_completions": 36,
+    "distinguished_complete_masters": 648
+  }
 }
