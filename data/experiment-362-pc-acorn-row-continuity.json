@@ -1,0 +1,22 @@
+{
+  "experiment": 362,
+  "raw_fixture": "data/printer-reference/pc-ps4-raw.txt",
+  "solved_fixture": "data/printer-reference/pc-ps4-acorn-order.txt",
+  "score": "sum across adjacent rows and selected aligned columns of +1 equal / -1 unequal",
+  "spaces": {
+    "all32": {
+      "canonical_score": 176,
+      "null_trials": 100000,
+      "null_seed": 362,
+      "null_mean": -15.1339,
+      "null_sd": 32.26242010125713,
+      "null_min": -152,
+      "null_max": 122,
+      "null_count_ge_canonical": 0,
+      "add_one_tail_estimate": 0.00000999990000099999,
+      "z_from_null_mean_sd": 5.923614645734234
+    }
+  },
+  "published_raw_order_score_all32": 124,
+  "interpretation": "The same continuity family used on H108 strongly detects the independently solved PC acorn order, making the negative H108 ordering results materially more informative."
+}
