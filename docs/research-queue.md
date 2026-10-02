@@ -578,3 +578,17 @@ Use the layer boundary when describing prediction strength. A value invariant ac
 For acquisition optimization, avoid counting exact identity/complement pairs as independent information inside the target universe. For canonical U5 state identification, five suitably chosen unseen residues suffice; for broad U2 identification, eleven are necessary and sufficient.
 
 Next completion-universe work should test independently licensed operations/consumers against whole candidate layers and report survivor counts/invariants, rather than choose preferred masters by semantic appearance.
+
+
+### Experiment 367 — operation-survival reporting
+
+For any newly opened historical operation or external consumer, run it against the broadest licensed completion universe and report survivor counts at U2/U3/U4/U5 where meaningful.
+
+Classify the operation before interpretation:
+
+1. representation-only: organizes candidates but supplies no pass/fail criterion;
+2. nontrivial filter: removes some but not all candidates;
+3. hard negative: no candidate survives;
+4. unopened: missing an independent parameter/cue.
+
+Do not reopen Experiment 338's pending or closed families merely because the completion universe makes bulk execution computationally cheap. Computational feasibility is not evidentiary license.
