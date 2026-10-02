@@ -48,7 +48,7 @@ The canonical order itself is not included specially in the null.
 | canonical acorn score | **176** |
 | random-permutation mean | about **−15.1** |
 | random-permutation SD | about **32.3** |
-| highest of 100,000 shuffled controls | **122** |
+| highest of 100,000 shuffled controls | **132** |
 | shuffled controls scoring >= canonical | **0 / 100,000** |
 | add-one Monte Carlo tail estimate | **< 0.00001** |
 
@@ -70,7 +70,7 @@ The canonical order is especially strong in the left and inner regions, consiste
 
 This is an important calibration for the sticker row-order question.
 
-The continuity statistic is **not intrinsically too weak** to recognize a real Playdead scrambled-row image. On the known PC acorn puzzle it produces an enormous positive signal without knowing what an acorn looks like.
+The continuity statistic is **not intrinsically too weak** to register that a real Playdead image order has nonrandom adjacency. On the known PC acorn puzzle the canonical order produces an enormous positive signal without using an acorn template. Experiment 363 adds the crucial limitation: maximizing this score does not recover the canonical image and instead finds higher-scoring wrong arrangements.
 
 That sharpens the negative H108 evidence:
 
@@ -78,7 +78,8 @@ That sharpens the negative H108 evidence:
 - Experiment 347: the historical 12×9 serial order is ordinary-to-poor;
 - Experiment 360: continuity-optimized H108 orders do not improve blind held-out symbol recovery;
 - Experiment 361: the literal Xbox envelope grammar is physically contradicted;
-- Experiment 362: the same generic continuity family easily detects the independently solved PC acorn ordering.
+- Experiment 362: the same generic continuity family gives the independently solved PC acorn ordering a strong positive-control signal;
+- Experiment 363: blind maximization nevertheless overfits the PC corpus and does not reconstruct the acorn.
 
 Therefore the present sticker corpus does **not** behave like the PC acorn under the most transferable image-adjacency statistic.
 
