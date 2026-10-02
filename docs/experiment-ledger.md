@@ -376,6 +376,8 @@ Latest indexed experiment: **325**.
 
 | 362 | PC acorn positive-control calibration: after recovering the primary 32-row solved-order fixture, the same aligned-symbol continuity score used in Experiments 345/347 gives the canonical acorn order 176 versus a 100,000-permutation null mean of -15.18 (SD 32.24); zero shuffled controls reach 176 (maximum 132). The inner 24 columns are even more separated. Thus the continuity family readily detects a genuine Playdead scrambled-row image, strengthening the conclusion that H108 simply lacks this PC-like ordering signal. |
 
+| 363 | PC acorn continuity recoverability audit: although the canonical acorn order has a highly nonrandom continuity score of 176, 100 deterministic greedy/local-search restarts find wrong local optima from 296 to 328 (mean 314.9); the best 328-point path shares only 9/31 canonical undirected adjacencies. Continuity therefore detects nonrandomness in the known solution but is not an identifying reconstruction objective, directly demonstrating the overfitting danger of “choose the smoothest rows.” |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
