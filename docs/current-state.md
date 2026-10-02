@@ -730,3 +730,10 @@ Experiment 356 audits G6 provenance directly. The preserved pre-machine archive 
 
 
 Experiment 357 closes the historical provenance question for G7 at the current archive boundary. No pre-machine sticker discussion independently proposes the two information-preservation rules used in Experiment 321 or anything equivalent to the derived q=210 / route shell 120/012/102. G7 therefore remains a generic non-collapse prior with a unique bounded consequence, not an externally motivated operation.
+
+
+## Visual-completion boundary
+
+The row-order and historical-mosaic work through Experiments 360–364 now has an explicit operating consequence. AI/model completion of unknown sticker cells may generate testable predictions, but image coherence is not evidence: a correct intermediate may contain apparently random payload that only becomes meaningful under an independently supplied overlay, seed, registration rule, transform, or external consumer. Conversely, a visually attractive completion can be an optimization artifact. See `docs/visual-completion-overlay-risk.md`.
+
+External evidence priority therefore shifts toward genuinely new sticker residues and independently cued consumer/overlay artifacts. New physical observations must continue to be frozen against the existing prediction matrix before model updates.
