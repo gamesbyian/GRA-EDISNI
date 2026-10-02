@@ -378,6 +378,8 @@ Latest indexed experiment: **325**.
 
 | 363 | PC acorn continuity recoverability audit: although the canonical acorn order has a highly nonrandom continuity score of 176, 100 deterministic greedy/local-search restarts find wrong local optima from 296 to 328 (mean 314.9); the best 328-point path shares only 9/31 canonical undirected adjacencies. Continuity therefore detects nonrandomness in the known solution but is not an identifying reconstruction objective, directly demonstrating the overfitting danger of “choose the smoothest rows.” |
 
+| 364 | exact Dec-2022 historical mosaic audit: source attachments show that “rearranging the top 9×9 grid to account for the repeating pattern” meant reshaping each consecutive 9-sticker row into the solved `IAB/CDE/FGH` 3×3 background geometry, then tiling twelve such squares 3×4. Leave-one-out local-neighbor prediction on this deterministic mosaic gets 19/46 correct versus 28/46 for the trivial alphabet-majority baseline; within-tile-only gets 21/47 versus 29/47. The operation independently supports the 3×3 frame domain but not smooth-image interpolation or cross-frame continuity. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.

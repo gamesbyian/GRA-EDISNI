@@ -1,0 +1,40 @@
+{
+  "experiment": 364,
+  "input": "data/observations.csv",
+  "historical_transform": {
+    "within_row_background_geometry": ["IAB", "CDE", "FGH"],
+    "tile_layout": "12 consecutive 3x3 tiles arranged 3 across x 4 down",
+    "source_attachment_top9": "image-a6a790f9807f3e47.png",
+    "source_attachment_full": "image-e272a602e0c11f7a.png"
+  },
+  "modes": {
+    "all": {
+      "observations": 65,
+      "predicted": 46,
+      "abstained": 19,
+      "correct": 19,
+      "accuracy": 0.41304347826086957,
+      "baseline_correct_same_coverage": 28,
+      "baseline_accuracy_same_coverage": 0.6086956521739131
+    },
+    "within_tile": {
+      "observations": 65,
+      "predicted": 47,
+      "abstained": 18,
+      "correct": 21,
+      "accuracy": 0.44680851063829785,
+      "baseline_correct_same_coverage": 29,
+      "baseline_accuracy_same_coverage": 0.6170212765957447
+    },
+    "cross_tile": {
+      "observations": 65,
+      "predicted": 26,
+      "abstained": 39,
+      "correct": 11,
+      "accuracy": 0.4230769230769231,
+      "baseline_correct_same_coverage": 14,
+      "baseline_accuracy_same_coverage": 0.5384615384615384
+    }
+  },
+  "interpretation": "The exact historical mosaic does not improve local same-symbol holdout inference; its durable value is frame-internal 3x3 structure rather than cross-frame visual continuity."
+}
