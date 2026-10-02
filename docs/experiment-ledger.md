@@ -384,6 +384,8 @@ Latest indexed experiment: **325**.
 
 | 366 | completion-universe layer audit: U2/U3/U4/U5 contain 648/216/20/14 masters and fix 24/28/29/30 of the 43 unseen residues. U2→U3 newly fixes 49=−, 50=−, 52=−, 54=−; U3→U4 fixes 93=.; U4→U5 fixes 82=.; the remaining 13 are exactly the canonical hidden-state residues. Exhaustive discriminator search gives minimum identifying sets of 11/9/6/5 residues respectively, above the raw binary information lower bounds 10/8/5/4 because of code correlations. |
 
+| 367 | licensed historical-operation replay across completion universes: the exact Dec-2022 mosaic is representation-only (all U2/U3/U4/U5 candidates survive); the frozen tail-selected-row / one-exception family is the only nontrivial current filter, reducing 648→144, 216→48, 20→7, and 14→6 while forcing C-tail 84=., 93=., 102=/ where not already fixed; the direct column sibling and the known bunker-password lever replay have zero survivors at every layer. Pending/closed Experiment-338 operation families remain unopened. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.

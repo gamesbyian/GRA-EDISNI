@@ -222,3 +222,19 @@ When explaining or prioritizing an unseen prediction, distinguish:
 - **U5-variable:** remains one of the 13 hidden-state residues.
 
 This is separate from the physical-gauge classification. A residue can be fixed inside a representation layer while still lying on a broader physical gauge support.
+
+
+## Consumer/operation survivor counts
+
+When an independent operation or consumer is proposed, prefer whole-universe survivor reporting over applying it only to the preferred completion.
+
+Record, where applicable:
+
+- U2 survivor count;
+- U3 survivor count;
+- U4 survivor count;
+- U5 survivor count;
+- newly forced residues induced by the operation;
+- whether the operation is representation-only, a nontrivial filter, or a hard negative.
+
+Experiment 367 is the reference implementation. The frozen row-selector family keeps 144/648 U2 masters and 6/14 U5 masters; the known-password lever replay keeps none.
