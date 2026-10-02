@@ -370,6 +370,8 @@ Latest indexed experiment: **325**.
 | 358 | G6 regression reconciliation: repairs two stale assertions in the Experiment-291/322 regression harness without changing candidate families or substantive expectations, then reruns Experiments 291, 322 and 269 under a marker-checked evidence-preserving workflow; all three complete successfully on current main, preserving Experiment 356's conclusion that second selector reuse is structurally constrained once admitted but lacks an independent historical cue. |
 | 359 | epistemic-reset stopping-boundary audit: all six reset exit criteria are now sufficiently satisfied for closed-corpus work; historical operations, neighboring ARG grammar, supplied-premise burn-down, cheaper-family falsification, cross-family accountability and queue clarity no longer justify blind widening. The foreground is not declared solved: POS3 consumption, G5 intended use, G6 reuse, G7 non-collapse rules and downstream route/terminal semantics remain conditional, with reopening limited to concrete new evidence or preregistered independently motivated consumers. |
 
+| 360 | cross-format row-order predictivity audit: leave-one-observation-out optimization of the frozen same-symbol boundary score fails to improve blind sticker recovery. In 9×12, continuity-optimized ordering predicts 29/47 held-out cells versus 33/47 for the body/tail majority baseline; in 12×9 it predicts 16/49 versus 29/49. The optimized order families therefore should not be used to fill unknown stickers absent an independent ordering cue or a different pre-specified image statistic. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
