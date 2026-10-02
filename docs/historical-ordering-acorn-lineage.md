@@ -247,3 +247,14 @@ The surrounding chronology clarifies how the community reached it:
 This is stronger evidence than the previous generic “boundary/check-bit” summary: the PC solve was driven by **row-edge/margin classes plus interlacing**, while the Xbox solve used a mirrored slash envelope and smooth boundary staircase.
 
 However, the archive still does not state a single deterministic sorting function that maps the unordered PC rows to the final acorn order. The phrases “alternating interlaced pattern,” margin-slash distributions, and manual row refinement describe a constrained reconstruction process, not a fully specified algorithm. Therefore the project should use the recovered final order as a control fixture, but must not manufacture a sticker sorting rule by fitting a formula to that known answer.
+
+
+## 11. Dec-2022 collective 3×3 mosaic reconstructed exactly
+
+The previously vague 23 Dec 2022 note about “rearranging the top 9x9 grid to account for the repeating pattern” is now anchored to its original attachments.
+
+The operation is deterministic, not a free row permutation: each consecutive 9-sticker row is placed into the solved background geometry `IAB/CDE/FGH`, producing one 3×3 tile; twelve such tiles are then laid out three across by four down. The first nine tiles form the 9×9 slash/dash block, and the last three form the 9×3 slash/dot strip.
+
+Experiment 364 tests whether that exact historical mosaic improves leave-one-out symbol interpolation. It does not: all-neighbor local prediction gets 19/46 correct versus 28/46 for the trivial alphabet-majority baseline; within-tile-only gets 21/47 versus 29/47.
+
+The historical value of the operation is therefore the independently attested 3×3 frame domain, not large-scale bitmap continuity. This strengthens the interpretation of Experiments 348–350 while closing naive visual-neighbor filling on the collective mosaic.
