@@ -382,6 +382,8 @@ Latest indexed experiment: **325**.
 
 | 365 | layered completion-universe formalization: 43 unseen H108 cells define a symbolic 2^43 raw space; common 3/6-or-4/5 primary census × one-slash Q4 yields exactly 1,114,560 factored masters; observation-supported 3/6 one-per-column × one-slash Q4 collapses to 18×36 = 648 complete H108 masters, fully materialized as 43-bit codes. Established polarity/exact POS3 gives 216 raw machines, first closure 20, second closure 14. A separate exact physical-gauge expansion around the 14 states contains 224 masters. Eleven residues (22,49,50,55,58,82,84,88,91,93,94) are necessary and sufficient to distinguish all 648 U2 masters. |
 
+| 366 | completion-universe layer audit: U2/U3/U4/U5 contain 648/216/20/14 masters and fix 24/28/29/30 of the 43 unseen residues. U2→U3 newly fixes 49=−, 50=−, 52=−, 54=−; U3→U4 fixes 93=.; U4→U5 fixes 82=.; the remaining 13 are exactly the canonical hidden-state residues. Exhaustive discriminator search gives minimum identifying sets of 11/9/6/5 residues respectively, above the raw binary information lower bounds 10/8/5/4 because of code correlations. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
