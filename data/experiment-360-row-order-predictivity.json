@@ -1,0 +1,36 @@
+{
+  "experiment": 360,
+  "input": "data/observations.csv",
+  "status": "exploratory utility calibration",
+  "formats": {
+    "9x12": {
+      "observations": 65,
+      "predicted": 47,
+      "abstained": 18,
+      "correct": 29,
+      "accuracy": 0.6170212765957447,
+      "domain_majority_baseline_correct_same_coverage": 33,
+      "domain_majority_baseline_accuracy_same_coverage": 0.7021276595744681,
+      "paired_order_only_correct": 5,
+      "paired_baseline_only_correct": 9,
+      "body": {"predicted": 39, "correct": 25, "baseline_correct_same_coverage": 27},
+      "tail": {"predicted": 8, "correct": 4, "baseline_correct_same_coverage": 6},
+      "maximizing_order_count": {"min": 2, "max": 16, "mean": 3.9692307692307693}
+    },
+    "12x9": {
+      "observations": 65,
+      "predicted": 49,
+      "abstained": 16,
+      "correct": 16,
+      "accuracy": 0.32653061224489793,
+      "domain_majority_baseline_correct_same_coverage": 29,
+      "domain_majority_baseline_accuracy_same_coverage": 0.5918367346938775,
+      "paired_order_only_correct": 3,
+      "paired_baseline_only_correct": 16,
+      "body": {"predicted": 39, "correct": 15, "baseline_correct_same_coverage": 22},
+      "tail": {"predicted": 10, "correct": 1, "baseline_correct_same_coverage": 7},
+      "maximizing_order_count": {"min": 4, "max": 246, "mean": 45.87692307692308}
+    }
+  },
+  "interpretation": "Neither continuity-optimized row-order family improves held-out symbol guessing over the body/tail majority baseline. Reopen row sorting only with an independent ordering cue or a different pre-specified image statistic."
+}
