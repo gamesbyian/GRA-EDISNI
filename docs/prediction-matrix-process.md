@@ -207,3 +207,18 @@ Before running a new sticker-code experiment, identify the broadest relevant uni
 Do not report a property found only in U5 as though it were implied by U2. Conversely, a property invariant across all 648 U2 masters is substantially less assumption-dependent than a preferred-master feature.
 
 The residue catalog in `data/completion-universe-residue-catalog.csv` gives U2 partition counts, entropy, background class, and physical serials through 600. Candidate multiplicity is combinatorial, not probabilistic.
+
+
+## Layer-aware prediction status
+
+Experiment 366 partitions preferred fixed predictions by the weakest completion universe that forces them.
+
+When explaining or prioritizing an unseen prediction, distinguish:
+
+- **U2-fixed:** forced across all 648 broad one-per-column/one-slash structural masters;
+- **U3-added:** first becomes fixed under exact POS3 plus established primary polarity (49, 50, 52, 54);
+- **U4-added:** first becomes fixed under first recursive closure (93);
+- **U5-added:** first becomes fixed under second recursive closure (82);
+- **U5-variable:** remains one of the 13 hidden-state residues.
+
+This is separate from the physical-gauge classification. A residue can be fixed inside a representation layer while still lying on a broader physical gauge support.

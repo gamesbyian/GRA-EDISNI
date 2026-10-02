@@ -1,0 +1,134 @@
+{
+  "experiment": 366,
+  "summary": {
+    "candidate_counts": {
+      "U2": 648,
+      "U3": 216,
+      "U4": 20,
+      "U5": 14
+    },
+    "invariant_unobserved_counts": {
+      "U2": 24,
+      "U3": 28,
+      "U4": 29,
+      "U5": 30
+    },
+    "newly_fixed": {
+      "U2_to_U3": {
+        "49": "-",
+        "50": "-",
+        "52": "-",
+        "54": "-"
+      },
+      "U3_to_U4": {
+        "93": "."
+      },
+      "U4_to_U5": {
+        "82": "."
+      }
+    },
+    "U5_variable_residues": [
+      22,
+      25,
+      55,
+      58,
+      61,
+      84,
+      88,
+      91,
+      94,
+      100,
+      102,
+      103,
+      106
+    ],
+    "minimum_discriminator_sizes": {
+      "U2": 11,
+      "U3": 9,
+      "U4": 6,
+      "U5": 5
+    },
+    "information_lower_bounds": {
+      "U2": 10,
+      "U3": 8,
+      "U4": 5,
+      "U5": 4
+    },
+    "minimum_set_counts": {
+      "U2": 1080,
+      "U3": 216,
+      "U4": 180,
+      "U5": 48
+    }
+  },
+  "exact_equivalence_examples": {
+    "U2": [
+      {
+        "residues": [
+          22,
+          25
+        ],
+        "relation": "complements"
+      },
+      {
+        "residues": [
+          50,
+          54
+        ],
+        "relation": "identical"
+      },
+      {
+        "residues": [
+          88,
+          106
+        ],
+        "relation": "complements"
+      },
+      {
+        "residues": [
+          94,
+          103
+        ],
+        "relation": "complements"
+      }
+    ],
+    "U5": [
+      {
+        "residues": [
+          22,
+          25
+        ],
+        "relation": "complements"
+      },
+      {
+        "residues": [
+          84,
+          102
+        ],
+        "relation": "complements"
+      },
+      {
+        "residues": [
+          88,
+          106
+        ],
+        "relation": "complements"
+      },
+      {
+        "residues": [
+          91,
+          100
+        ],
+        "relation": "complements"
+      },
+      {
+        "residues": [
+          94,
+          103
+        ],
+        "relation": "complements"
+      }
+    ]
+  },
+  "interpretation": "24 of the 30 canonical invariant unseen residues are already forced at U2. U3 contributes four more; first closure contributes residue 93; second closure contributes residue 82. The remaining 13 are exactly the canonical hidden-state-variable set."
+}

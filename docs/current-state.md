@@ -755,3 +755,16 @@ The known exact physical-representation gauges form a separate 224-master expans
 One minimum U2 discriminator uses residues 22,49,50,55,58 and 82,84,88,91,93,94. Those eleven binary observations distinguish all 648 U2 masters, meeting the information-theoretic 5+6-bit lower bound implied by the 18×36 factorization.
 
 See `docs/experiment-365-completion-universe.md`, `data/experiment-365-completion-universe.json`, and `data/completion-universe-u2-648.csv`.
+
+
+## Experiment 366 — where completion certainty actually enters
+
+The completion-universe layer audit shows that the 30 unseen residues invariant across the canonical 14-state family are not primarily a consequence of the recursive machine.
+
+- U2 (648 broad structural masters) already fixes **24/43** unseen residues.
+- U3 (216 exact-POS3/polarity masters) fixes four more: **49=−, 50=−, 52=−, 54=−**.
+- U4 (20 first-closure masters) additionally fixes **93=.**.
+- U5 (14 second-closure masters) additionally fixes **82=.**.
+- the remaining 13 variable residues are exactly the canonical hidden-state set.
+
+Minimum complete discriminator sizes are U2=11, U3=9, U4=6, U5=5. Exact identity/complement relationships among variable residues mean some sticker pairs are redundant within a given universe. See `docs/experiment-366-universe-layer-audit.md`.
