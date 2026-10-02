@@ -1,0 +1,23 @@
+{
+  "experiment": 361,
+  "input": "data/observations.csv",
+  "historical_mechanism": "mirrored slash boundary with dash exterior; interior payload unrestricted",
+  "guardrail": "literal Xbox mechanism only; unknown cells remain free; no symbol-role permutations or cyclic offsets",
+  "formats": {
+    "12x9": {
+      "row_count": 12,
+      "compatible_rows": 8,
+      "incompatible_rows": [3, 5, 8, 10]
+    },
+    "9x12": {
+      "row_count": 9,
+      "compatible_rows": 8,
+      "incompatible_rows": [3]
+    }
+  },
+  "body_12x9_first9": {
+    "compatible_rows": 6,
+    "incompatible_rows": [3, 5, 8]
+  },
+  "interpretation": "The literal Xbox slash-envelope ordering channel is contradicted in both candidate sticker layouts before row ordering is attempted."
+}
