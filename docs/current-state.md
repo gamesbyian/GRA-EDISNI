@@ -737,3 +737,21 @@ Experiment 357 closes the historical provenance question for G7 at the current a
 The row-order and historical-mosaic work through Experiments 360–364 now has an explicit operating consequence. AI/model completion of unknown sticker cells may generate testable predictions, but image coherence is not evidence: a correct intermediate may contain apparently random payload that only becomes meaningful under an independently supplied overlay, seed, registration rule, transform, or external consumer. Conversely, a visually attractive completion can be an optimization artifact. See `docs/visual-completion-overlay-risk.md`.
 
 External evidence priority therefore shifts toward genuinely new sticker residues and independently cued consumer/overlay artifacts. New physical observations must continue to be frozen against the existing prediction matrix before model updates.
+
+
+## Completion-universe operating surface
+
+Experiment 365 now separates completion uncertainty into explicit universe layers instead of treating the preferred 14-state master family as the only thing worth testing.
+
+- U0: raw 43-bit binary space, 8,796,093,022,208 completions, represented symbolically;
+- U1: common 3/6-or-4/5 primary census × observation-compatible one-slash Q4, 1,114,560 completions, represented factorially;
+- U2: 3/6 one-per-physical-column primary × one-slash Q4, 648 complete H108 masters, fully materialized in compact 43-bit form;
+- U3: established polarity + exact POS3, 216 raw candidate machines;
+- U4: first recursive closure, 20;
+- U5: second recursive closure, 14 canonical masters.
+
+The known exact physical-representation gauges form a separate 224-master expansion around U5 rather than another nested structural subset.
+
+One minimum U2 discriminator uses residues 22,49,50,55,58 and 82,84,88,91,93,94. Those eleven binary observations distinguish all 648 U2 masters, meeting the information-theoretic 5+6-bit lower bound implied by the 18×36 factorization.
+
+See `docs/experiment-365-completion-universe.md`, `data/experiment-365-completion-universe.json`, and `data/completion-universe-u2-648.csv`.
