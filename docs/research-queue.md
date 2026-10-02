@@ -569,3 +569,12 @@ Highest-value next uses of the universe:
 5. keep the exact 224 physical-representation gauge expansion separate from structural narrowing.
 
 One exact minimum U2 identifying set is residues 22,49,50,55,58 plus 82,84,88,91,93,94. Eleven observations are necessary and sufficient to distinguish all 648 U2 masters.
+
+
+### Experiment 366 — universe-layer consequences
+
+Use the layer boundary when describing prediction strength. A value invariant across U2 should not be presented as though it depends on recursion; conversely, residues 49/50/52/54, 93, and 82 document exactly where later assumptions add new certainty.
+
+For acquisition optimization, avoid counting exact identity/complement pairs as independent information inside the target universe. For canonical U5 state identification, five suitably chosen unseen residues suffice; for broad U2 identification, eleven are necessary and sufficient.
+
+Next completion-universe work should test independently licensed operations/consumers against whole candidate layers and report survivor counts/invariants, rather than choose preferred masters by semantic appearance.
