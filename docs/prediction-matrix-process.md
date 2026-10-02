@@ -191,3 +191,19 @@ python scripts/expand_physical_sticker_predictions.py --max-serial 600 --state X
 for a coherent canonical completion under one legal hidden state.
 
 Do not combine modal state-dependent cells into a synthetic complete master and call it a legal completion.
+
+
+## Completion-universe companion surface
+
+The frozen preferred prediction matrix remains the prospective test surface for the incumbent model. Experiment 365 adds a different tool: explicit **candidate universes** for asking whether a result depends on the incumbent assumptions.
+
+Before running a new sticker-code experiment, identify the broadest relevant universe:
+
+- U2 (648 masters) for observation-supported 3/6 one-per-column + one-slash-tail questions that should not assume recursion;
+- U3 (216) when the established primary polarity staircase and exact POS3 are licensed;
+- U4 (20) when first recursive closure is part of the hypothesis;
+- U5 (14) for canonical full-machine questions.
+
+Do not report a property found only in U5 as though it were implied by U2. Conversely, a property invariant across all 648 U2 masters is substantially less assumption-dependent than a preferred-master feature.
+
+The residue catalog in `data/completion-universe-residue-catalog.csv` gives U2 partition counts, entropy, background class, and physical serials through 600. Candidate multiplicity is combinatorial, not probabilistic.
