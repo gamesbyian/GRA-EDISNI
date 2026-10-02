@@ -547,3 +547,10 @@ Same-room gameplay captures show generic monitor graphics, so the ARG references
 **Consequence:** do not use cover geometry, 12:12, or old blend/mirror attempts to reopen terminal `100`, G6 or G7. The only bounded residual cover question is whether the fourth progress/battery display can be independently tied to a specific pre-Dec-2019 ARG artifact. If not, close this branch as a useful negative result and return to acquisition/new physical observations.
 
 See `docs/post-359-external-reopening-scan-2026-10-01.md`.
+
+
+### Visual-completion / overlay guardrail — 2 Oct 2026
+
+Experiments 360–364 and current community feedback jointly close unconstrained image completion as a productive research lane. Do not use AI image completion, semantic recognizability, or smoother-looking row arrangements to select unknown sticker values or row order. A historically faithful Playdead-style intermediate may remain non-semantic until combined with a separately supplied overlay, seed, rotation, selector, site consumer, or later artifact.
+
+Reopen image reconstruction only when an independent cue fixes the relevant operation. Otherwise prefer two lanes: (1) recover genuinely new physical sticker observations, and (2) audit bounded historical/CE artifacts for independently specified registration or consumer behavior. See `docs/visual-completion-overlay-risk.md`.

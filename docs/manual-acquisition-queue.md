@@ -132,3 +132,10 @@ Do not spend time downloading material already preserved in PR #55's Discord-exp
   - https://www.youtube.com/watch?v=5I6pNl1M7RI
   - https://www.youtube.com/watch?v=dWhmPSjOybI
   Why: primary historical audio/video artifacts; automated web fetch is throttled, so retain highest-quality originals if recoverable.
+
+
+## Priority update — 2 Oct 2026
+
+New physical sticker information is now the highest-value manual acquisition target. The current row-order and historical-mosaic audits do not support using AI completion or visual coherence to replace missing cells, and solved ARG precedents show that an intermediate surface may require a separate overlay/consumer before its payload becomes meaningful.
+
+When choosing between two leads, prefer the one more likely to yield a previously unseen serial/residue or an original clue-bearing artifact that specifies registration/overlay behavior. Existing known-residue repeats remain useful controls, but genuinely new residues have substantially greater research value. See `docs/visual-completion-overlay-risk.md` and `docs/prediction-matrix-process.md`.
