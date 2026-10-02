@@ -5,6 +5,7 @@ This directory preserves the two historical INSIDE printer corpora that are most
 ## Files
 
 - `pc-ps4-raw.txt`: all 41 PC/PS4 strings as published by Game Detectives.
+- `pc-ps4-acorn-order.txt`: the 32 full-length PC/PS4 rows in the archived community acorn order, preserved from the 9 Jul 2018 Discord attachment explicitly labelled `acorn order version`.
 - `xbox-one-raw.txt`: the Xbox One listing, including the intentionally retained duplicate long row. Game Detectives describes 47 unique strings but the repeated row is structurally meaningful, producing 36 long rows for the solved circle.
 - `metadata.json`: counts, documented solution products, known passwords, and provenance/status notes.
 
@@ -19,8 +20,8 @@ That makes these fixtures useful for testing claims such as "does this proposed 
 
 ## Provenance caution
 
-The Game Detectives page publishes the raw corpora in text and describes/displays the solved spatial products, but it does not provide a canonical textual table of the complete solved row order. Accordingly, the raw files here preserve **source publication order**, not a guessed solved order.
+The Game Detectives page publishes the raw corpora in text and describes/displays the solved spatial products, but does not itself provide a canonical textual row-order table. The raw fixture therefore remains in source publication order.
 
-If a primary/community artifact containing an explicit solved ordering is acquired later, add it separately with its own provenance rather than replacing these raw fixtures.
+For PC/PS4, a separate primary community artifact has now been recovered: a 9 Jul 2018 Discord text attachment posted as `acorn order version`. Its 32 rows are an exact permutation of the 32 full-length raw rows and are preserved separately as `pc-ps4-acorn-order.txt`. The Xbox solved-order table remains unrecovered as text.
 
 Source: https://wiki.gamedetectives.net/w/Inside_ARG
