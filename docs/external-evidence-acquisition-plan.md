@@ -568,3 +568,17 @@ The distinct item IDs make them acquisition-worthy, but they are not yet two pro
 The same PriceCharting pass provides a useful self-check: item **297682348686** on 14 Oct 2025 is already canonical sticker 223, while the 9 Mar 2026 completed sale is contemporaneous with canonical sticker 445 and is probably the same copy. This confirms that sale-history mining can rediscover known corpus entries and therefore must be deduplicated before promotion.
 
 **Priority:** try exact-ID recovery of seller handle, listing images, feedback trail, or cached mirrors for 135573805762 and 136906990973. If an owner is identified, check U-code/outreach history before recommending contact. See `docs/price-history-acquisition-leads-2026-10-01.md`.
+
+
+## Priority update — visual completion is not a substitute for physical recovery
+
+As of 2 Oct 2026, row-order/mosaic audits and the solved printer positive controls show that unconstrained visual completion is not a reliable route to the missing foreground. A correct intermediate can require a second independently supplied consumer/overlay, while optimization can manufacture smoother but wrong arrangements.
+
+Acquisition priority should therefore favor:
+
+1. previously unseen sticker serials/H108 residues;
+2. historical images or video that recover lost sticker foregrounds;
+3. clue-bearing CE/ARG artifacts that explicitly supply an overlay, seed, registration, row-order, selector, or consumer rule;
+4. primary historical discussion anchoring such an operation.
+
+Do not spend acquisition capacity producing AI-filled sticker composites as evidence. Model-filled cells remain predictions only and should be tested prospectively against recovered physical observations. See `docs/visual-completion-overlay-risk.md`.
