@@ -198,3 +198,27 @@ Outputs:
 
 - `data/experiment-365-completion-universe.json`
 - `data/completion-universe-u2-648.csv`
+
+
+## Minimum complete U2 discriminator
+
+U2 factorizes exactly into 18 primary completions × 36 Q4 completions. Because each newly observed sticker contributes one binary foreground value, any set that distinguishes all U2 masters needs at least:
+
+```
+ceil(log2 18) + ceil(log2 36)
+= 5 + 6
+= 11 stickers
+```
+
+That lower bound is achievable.
+
+One exact minimum discriminator is:
+
+```
+primary: 22, 49, 50, 55, 58
+Q4:      82, 84, 88, 91, 93, 94
+```
+
+The five primary residues assign a unique signature to all 18 primary completions. The six Q4 residues assign a unique signature to all 36 tail completions. Together the eleven-bit signature is unique across all 648 U2 masters.
+
+This is a combinatorial identification result inside U2, not a claim that Playdead intended solvers to obtain those exact eleven stickers. It is immediately useful for acquisition prioritization, however: this set is sufficient to resolve the entire broad one-per-column/one-slash universe without invoking recursion.
