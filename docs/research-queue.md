@@ -623,3 +623,30 @@ Experiment 371 now supplies the previously missing kind of cross-puzzle evidence
 This does not make Xbox Braille and CE POS3 the same code. Xbox is a binary top-row-active selector over a 2×3 cell; the CE primary skeleton exposes three minority-row positions per column. No CE row labels, orientation, arithmetic semantics, tail mapping, recursion, or terminal consumer transfer from Xbox.
 
 **Priority consequence:** retire generic searches for whether Playdead ever uses local position as code. That operation class is now demonstrated. Keep effort on the actual downstream burden: shared orientation, selector-on-body consumption, second selector reuse, and independently specified consumers.
+
+
+### Experiments 373–375 — typed G5 and the one-shot fork
+
+Native serial coordinates resolve the biggest remaining G5 ambiguity.
+
+For any fixed A-I class, the first nine positions are exactly `(Q,d)=00,01,02,10,11,12,20,21,22`; the final three are `30,31,32`. Experiment 317's one-slash tail index is therefore physically a **d-coordinate**. If that index is applied to the preceding body while preserving coordinate type, the unique direct operation is `d=S(j)`, exactly G5.
+
+This upgrades G5 substantially. The remaining G5 burden is only whether the historically proposed tail/index is intended to index the body at all.
+
+The same typing sharpens the G6 problem: after G5 the remaining surfaces are indexed by Q, so reusing S to consume Q requires an additional d↔Q identification. Experiments 291/322/269 still show that this continuation is highly constrained once admitted, but native geometry does not supply the repeat/coercion step.
+
+Experiment 374 defines the clean one-shot stopping point before that extra assumption. The 20 G5 survivors collapse to six 3×3 objects with shared scaffold:
+
+```
+1 x 2
+0 y 2
+1 z 0
+```
+
+and middle column in `002,010,020,110,112,220`.
+
+**Priority consequence:** carry two external-consumer surfaces in parallel:
+1. the one-shot six-state 3×3 family;
+2. the recursive conditional terminal `100` / route machinery.
+
+Raise G6 only if an external artifact independently cues repeat/recursion, identifies d with Q, or naturally consumes the three Q surfaces. Do not let terminal elegance alone decide the fork.
