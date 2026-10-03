@@ -748,3 +748,16 @@ Historical replay also strengthens the operation class: May-2026 discussion expl
 A final targeted cue search found no independent source fixing the exact modern role assignment or q reversal.
 
 **Stopping rule for this lane:** freeze the candidate at “strong, uniquely bounded, externally anchored; one exact registration cue short.” Do not add transforms. Reopen only for new source evidence fixing handedness/axis roles/Q order, or for a genuinely independent second consumer.
+
+
+### Experiments 390–391 — external consumer becomes a prospective discriminator
+
+The frozen `534brn` external fingerprint now has completion-universe consequences.
+
+Across U2/U3/U4/U5, exact `112/012/120` hits are **2 / 2 / 2 / 0** respectively. The same two complete masters are selected at U2, U3 and U4. Both are removed by the second recursive closure.
+
+This is the first external candidate that conditionally discriminates the main stopping-point fork: if the `534brn` registration is intended, stop after G5; current G6/U5 is incompatible.
+
+The two selected masters differ only at residues **84** and **102**. Residue **82** is slash in both selected masters but dot in U5, making its serial family (82,190,298,406,514,622) the cleanest physical one-shot-vs-G6 discriminator. Both selected masters also predict 103=slash and 45=dash, so verified 427=dot or 369=dot claims would kill the pair.
+
+**Priority:** acquisition/verification now outranks more interpretation. Freeze the transform and seek residue-82/84/102 family stickers plus physical verification of 427 and 369.

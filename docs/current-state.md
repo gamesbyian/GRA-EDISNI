@@ -899,3 +899,12 @@ Even under the deliberately loose 216 independent per-column row-label gauges, d
 Historical discussion independently explored horizontal/vertical coordinate roles, transposed table orientations, layered 2D placement, and DTMF/Polybius structure before the present machine, strengthening the operation class.
 
 No recovered source fixes the exact role assignment or q reversal. The active candidate is therefore frozen as **strong, uniquely bounded and externally anchored, but one exact registration cue short of promotion**.
+
+
+## Experiments 390–391 — prospective external discrimination
+
+The leading external-consumer candidate now selects exactly two complete masters before second recursion.
+
+Exact `112/012/120` hits are 2/648 at U2, the same 2/216 at U3, 2/20 at U4, and **0/14 at U5**. Conditional on the external registration being genuine, this is evidence for the one-shot G5 endpoint and against current G6.
+
+The selected pair differs only at residues 84 and 102. Both predict residue 82=slash, whereas U5 fixes 82=dot. They also predict 103=slash and 45=dash. This creates clean prospective physical tests and makes acquisition evidence more valuable than further transform search.
