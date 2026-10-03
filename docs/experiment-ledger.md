@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **375**.
+Latest indexed experiment: **377**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -398,6 +398,9 @@ Latest indexed experiment: **375**.
 | 373 | native-coordinate typing audit: under the historically attested twelve-square/9+3 representation, each fixed A-I class word is natively ordered as primary `Q0d0..Q2d2` plus tail `Q3d0,Q3d1,Q3d2`. The one-slash tail selector is therefore physically a d-coordinate. Type-preserving application to the primary body uniquely gives `d=S(j)`, exactly G5, without using first-pass outputs. The same typing does not motivate G6 because reusing S to consume Q crosses coordinate axes. |
 | 374 | one-shot G5 endpoint characterization: the 216 raw-compatible machines reduce to 20 after the typed first selection and only six distinct 3×3 ternary objects. All share normal form `1x2 / 0y2 / 1z0`; all variation lies in the middle column, which is one of `002,010,020,110,112,220`. This is a compact evidence-first endpoint before any d→Q coercion. |
 | 375 | G5/G6 burden-shift synthesis: G5 is reclassified from an axis-choice hypothesis to the unique direct type-preserving use of the independently supported tail index, leaving only the intent-to-index premise. G6 is reclassified more sharply as an unsupported cross-axis recursion/coercion that remains mechanically constrained once admitted. The one-shot six-state family and recursive terminal `100` should be carried as parallel external-consumer surfaces. |
+
+| 376 | post-G5 historical repeat/recursion cue hunt: the May-2026 archive independently supports a two-layer 9+3 body/index interpretation, including a larger-domain plus smaller-subset selector analogy, but no preserved message instructs reuse of the same selector, recursion, d→Q identification, or outer-axis selection. This strengthens G5 provenance without upgrading G6. |
+| 377 | bounded Sudoku-house consumer test: the Aug-2026 community independently noticed the exact 81 cells + 27 houses (9 rows/9 columns/9 boxes) = 108 dimensional match. Exhausting all 36 observation-compatible tail selectors across 6 tail-position→house-type maps, both index directions and all 9 cyclic offsets (3,888 combinations) yields zero exact covers of the 81 primary cells; best coverage is 75/81. The cheapest Sudoku bridge to G6 is therefore closed. |
 
 ## Current frontier
 
