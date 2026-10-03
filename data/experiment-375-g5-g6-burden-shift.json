@@ -1,0 +1,26 @@
+{
+  "experiment": 375,
+  "title": "G5/G6 burden shift after native coordinate typing",
+  "status": "completed synthesis audit",
+  "premises": {
+    "historical_twelve_square_representation": "Experiment 348",
+    "one_slash_tail_index": "Experiment 317",
+    "local_positional_selector_precedent": "Experiments 371-372",
+    "native_tail_axis_typing": "Experiment 373",
+    "one_shot_first_pass_object": "Experiment 374"
+  },
+  "reclassification": {
+    "G5": {
+      "old_status": "model-level selector-on-body substitution with independently motivated architecture but unresolved selected axis",
+      "new_status": "type-directed first selector application: tail position is natively d, so d=S(j) is the unique direct type-preserving body selection",
+      "remaining_burden": "authorial intent to apply the tail index to the preceding body at all"
+    },
+    "G6": {
+      "old_status": "historically unsupported decision to reuse selector; map strongly constrained once admitted",
+      "new_status": "historically unsupported cross-axis coercion/reuse from d-selector to Q-selector; mechanically constrained once admitted",
+      "remaining_burden": "independent cue identifying d and Q for a second read or explicit repeat/recursion instruction"
+    }
+  },
+  "preferred_evidence_first_endpoint": "the six-state one-shot 3x3 family from Experiment 374 until an independent d-to-Q/repeat cue appears",
+  "incumbent_machine_status": "retained intact as strongest recursive model; terminal 100 remains conditional on G6"
+}
