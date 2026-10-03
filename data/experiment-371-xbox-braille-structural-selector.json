@@ -1,0 +1,15 @@
+{
+  "experiment": 371,
+  "total_cells": 88,
+  "top_active_cells": 19,
+  "top_empty_cells": 69,
+  "top_active_readout": "NEWPLANETDI!COVERED",
+  "top_active_corrected": "NEWPLANETDISCOVERED",
+  "top_active_unique_chars": "!ACDEILNOPRTVW",
+  "top_empty_unique_chars": "'-012346789",
+  "top_empty_possible_patterns": 16,
+  "top_empty_observed_patterns": 11,
+  "top_empty_absent_masks": ["000000", "000001", "000010", "000011", "010001"],
+  "top_empty_absent_ascii": ["space", ",", "double_quote", ";", "5"],
+  "interpretation": "The message positions are exactly the cells with Braille dot 1 or 4 active. The other 69 cells occupy the top-row-empty four-bit subspace. ASCII 5 is therefore one of five absent states in the natural 16-state filler space, making the nine-digits-to-nine-CE-backgrounds match secondary to the stronger structural selector."
+}

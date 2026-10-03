@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **368**.
+Latest indexed experiment: **371**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -388,6 +388,10 @@ Latest indexed experiment: **368**.
 
 
 | 368 | Xbox residual-digit nine-state audit: the published solved Xbox Braille-ASCII field contains 67 decimal glyphs drawn from exactly `012346789`; digit `5` is absent. The 9-state cardinality matches CE backgrounds A-I, but no independent Xbox-cell↔CE-position alignment exists, so the 9! digit→A-I bijection family is currently unfalsifiable relabeling rather than a licensed decoder. Preserve as a bounded design-echo hypothesis pending historical meaning, registration, or a common consumer. |
+
+| 369 | Xbox Braille orientation audit: among the four geometry-preserving symmetries of the 2x3 Braille cell, only the independently correct message-bearing orientation yields nine distinct ASCII digit glyphs; arbitrary six-dot relabeling confirms that high digit diversity is not generic. This strengthens the structural specificity of Experiment 368 without supplying a CE mapping. |
+| 370 | Xbox residual-history audit: the maintained 2018–2019 community solving document explicitly says the numbers, apostrophe and dash might mean something or might be filler. Thus the residual cells were historically noticed and left unresolved; the no-5 census is a new structural observation, not a rediscovery of an old solution. |
+| 371 | Xbox Braille structural-selector audit: selecting exactly those Braille cells with top-row dot 1 or 4 active yields `NEWPLANETDI!COVERED`, and the documented one-dot correction yields `NEWPLANETDISCOVERED`. All 69 remaining cells have the top row empty and occupy an 11-of-16 four-bit residual subspace. ASCII `5` is only one of five absent natural filler states, substantially weakening the literal nine-digits↔nine-CE-backgrounds hypothesis while establishing a stronger historical precedent for geometric payload/filler separation. |
 
 ## Current frontier
 
