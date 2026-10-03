@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **325**.
+Latest indexed experiment: **368**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -385,6 +385,9 @@ Latest indexed experiment: **325**.
 | 366 | completion-universe layer audit: U2/U3/U4/U5 contain 648/216/20/14 masters and fix 24/28/29/30 of the 43 unseen residues. U2→U3 newly fixes 49=−, 50=−, 52=−, 54=−; U3→U4 fixes 93=.; U4→U5 fixes 82=.; the remaining 13 are exactly the canonical hidden-state residues. Exhaustive discriminator search gives minimum identifying sets of 11/9/6/5 residues respectively, above the raw binary information lower bounds 10/8/5/4 because of code correlations. |
 
 | 367 | licensed historical-operation replay across completion universes: the exact Dec-2022 mosaic is representation-only (all U2/U3/U4/U5 candidates survive); the frozen tail-selected-row / one-exception family is the only nontrivial current filter, reducing 648→144, 216→48, 20→7, and 14→6 while forcing C-tail 84=., 93=., 102=/ where not already fixed; the direct column sibling and the known bunker-password lever replay have zero survivors at every layer. Pending/closed Experiment-338 operation families remain unopened. |
+
+
+| 368 | Xbox residual-digit nine-state audit: the published solved Xbox Braille-ASCII field contains 67 decimal glyphs drawn from exactly `012346789`; digit `5` is absent. The 9-state cardinality matches CE backgrounds A-I, but no independent Xbox-cell↔CE-position alignment exists, so the 9! digit→A-I bijection family is currently unfalsifiable relabeling rather than a licensed decoder. Preserve as a bounded design-echo hypothesis pending historical meaning, registration, or a common consumer. |
 
 ## Current frontier
 
