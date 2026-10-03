@@ -1,0 +1,35 @@
+{
+  "experiment": 380,
+  "historical_cue": {
+    "date": "2026-05-22",
+    "source": "Playdead Unofficial solving-breakout archive",
+    "proposal": "old-phone / DTMF keypad as a sticker-puzzle model; a DTMF keypad image was attached before the current machine work",
+    "layout": ["123", "456", "789"]
+  },
+  "external_artifact": "dat/534brn9653f9j8mmd",
+  "digit_stream": "534965398",
+  "keypad_coordinates": {
+    "row_stream": "101211022",
+    "column_stream": "120221221",
+    "row_grid": ["101", "211", "022"],
+    "column_grid": ["120", "221", "221"]
+  },
+  "one_shot_family": [
+    "102/002/120",
+    "102/012/100",
+    "102/022/100",
+    "112/012/100",
+    "112/012/120",
+    "122/022/100"
+  ],
+  "d4_results": {
+    "row_coordinate_hits": [
+      {
+        "orientation": "rot270_cw",
+        "state": "112/012/120"
+      }
+    ],
+    "column_coordinate_hits": []
+  },
+  "interpretation": "Experiment 378's 1-3/4-6/7-9 ternary map is exactly the row coordinate of the historically proposed DTMF keypad, not merely an arbitrary numeric binning. The alternative coordinate supplied by the same keypad, column, does not hit the preregistered one-shot family under any D4 symmetry. Thus the historical keypad cue selectively supports the successful transform. Sequence-to-3x3 registration and the exact 90-degree direction remain not independently specified."
+}
