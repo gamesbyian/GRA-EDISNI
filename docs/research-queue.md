@@ -761,3 +761,18 @@ This is the first external candidate that conditionally discriminates the main s
 The two selected masters differ only at residues **84** and **102**. Residue **82** is slash in both selected masters but dot in U5, making its serial family (82,190,298,406,514,622) the cleanest physical one-shot-vs-G6 discriminator. Both selected masters also predict 103=slash and 45=dash, so verified 427=dot or 369=dot claims would kill the pair.
 
 **Priority:** acquisition/verification now outranks more interpretation. Freeze the transform and seek residue-82/84/102 family stickers plus physical verification of 427 and 369.
+
+
+### Experiment 392 — acquisition-first follow-through
+
+A fresh public-web sweep found no new defensible exact-serial photo for the residue-82, residue-84 or residue-102 target families. This moves the next step from indexed search to owner/listing/comment acquisition.
+
+Priority order is now concrete:
+
+1. residue 82 serial family `082,190,298,406,514,622` for a direct G5-vs-G6 test;
+2. residue 84 or 102 serial families to resolve the two selected masters;
+3. physical verification of the 427=dot and 369=dot claims, either of which would falsify both selected masters.
+
+The recent Reddit owner PSA is a useful passive funnel and U32/KoreanB_B_Q ownership was independently reconfirmed from old public sale/trade posts, but no new observation was obtained.
+
+**Operating rule:** acquisition and provenance now outrank more model invention. Recompute the target pair immediately when any Tier A/B physical observation arrives.
