@@ -1,0 +1,19 @@
+{
+  "experiment": 384,
+  "title": "historical dependency direction from 534brn into the foreground sticker puzzle",
+  "status": "completed provenance audit",
+  "historical_sequence": [
+    "The nine-piece CE background puzzle was solved first and yielded dat/534brn9653f9j8mmd.",
+    "The three-symbol foreground puzzle remained unsolved after that handoff.",
+    "On 2 Nov 2025, community discussion explicitly argued that Playdead likely expected solvers to obtain the 534 puzzle first because the foreground sticker puzzle required much more effort.",
+    "The same discussion explicitly proposed that the 534 solution could be intended as an aid to the sticker puzzle and noticed its nine decimal digits."
+  ],
+  "operation_class": "prior-stage output reused as parameter/key/registration aid for a later sticker layer",
+  "relation_to_current_candidate": "This independently supports the direction 534brn -> foreground rather than treating the URL digits as a post-hoc external resemblance.",
+  "limits": [
+    "No historical source specifies keypad-row extraction.",
+    "No historical source specifies the final 90-degree CCW axis swap.",
+    "No source proves that the nine digits rather than another part of the 534 artifact are the intended aid."
+  ],
+  "conclusion": "The cross-stage direction required by Experiments 378-383 has independent historical provenance. The exact consumer remains unresolved, but using a 534-derived parameter on the foreground is no longer a purely model-generated dependency."
+}

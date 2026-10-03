@@ -1,0 +1,37 @@
+{
+  "experiment": 382,
+  "source_geometry": {
+    "solved_background_layout": ["IAB", "CDE", "FGH"],
+    "native_serial_mod9_classes": {
+      "0": "I",
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E",
+      "6": "F",
+      "7": "G",
+      "8": "H"
+    },
+    "consequence": "The solved physical layout is exactly native serial residue classes 0..8 in row-major order."
+  },
+  "historical_support": {
+    "date": "2026-08-10",
+    "finding": "community explicitly noted that the first class should be 000/I rather than 001/A because I is the top-left tile in the first sticker puzzle"
+  },
+  "digit_stream": "534965398",
+  "keypad_row_registered_by_native_mod9": {
+    "grid": ["101", "211", "022"],
+    "hits": [
+      {
+        "orientation": "rot270_cw",
+        "state": "112/012/120"
+      }
+    ]
+  },
+  "control_alphabetic_A_to_I_registration": {
+    "grid": ["210", "121", "102"],
+    "hits": []
+  },
+  "interpretation": "Experiment 378's digit-string ordinal -> 3x3 cell registration is not arbitrary once the solved background geometry is expressed in native serial-number modulo-9 classes. The physical layout IAB/CDE/FGH is exactly 0,1,2/3,4,5/6,7,8, so assigning the 1st through 9th URL digits to those positions in sequence is the native serial registration. The competing alphabetic A-I assignment does not hit the one-shot family under D4. This removes the ordinal-to-cell mapping as a major free parameter; the remaining unresolved registration is the quarter-turn direction."
+}

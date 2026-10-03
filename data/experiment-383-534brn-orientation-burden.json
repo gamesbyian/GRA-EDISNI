@@ -1,0 +1,21 @@
+{
+  "experiment": 383,
+  "source_grid": ["101", "211", "022"],
+  "summary": {
+    "axis_preserving_hits": 0,
+    "axis_swapping_hits": 1,
+    "unique_hit": "rot90_ccw -> 112/012/120",
+    "exact_xbox_direction_control": "rot90_cw does not hit"
+  },
+  "coordinate_typing": {
+    "source_axes": "background physical row r x physical column c",
+    "one_shot_axes": "outer layer Q x physical column c; cell value is minority row r",
+    "important_consequence": "The source and one-shot surfaces share a physical-column coordinate. Therefore the successful quarter-turn is not pure gauge: it swaps axes rather than preserving the shared c axis."
+  },
+  "historical_provenance": {
+    "quarter_turn_family": "Playdead-authored Xbox printer solution requires a 90-degree clockwise rotation before Braille readout",
+    "sticker_specific_axis_rearrangement": "Nov 2025 community discussion proposed transposing/reorganizing sticker 3x3 cells in relation to 534brn",
+    "direction_problem": "The exact demonstrated Xbox direction is clockwise, while the 534brn candidate requires counter-clockwise."
+  },
+  "interpretation": "Native cell registration removes the row-major-placement concern, but the final 90-degree CCW operation remains substantive rather than a harmless orientation gauge because it swaps the shared physical-column axis with the other grid axis. The historical corpus licenses quarter-turn/transpose as an operation family, but exact reuse of the documented Xbox clockwise direction fails. The candidate therefore has one clean unresolved bit of directional/axis-registration evidence remaining."
+}

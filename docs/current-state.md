@@ -862,3 +862,16 @@ The 3×3 carrier shape is also independently natural because the URL is generate
 Finally, rigid 90° reorientation is a demonstrated INSIDE ARG operation in the solved Xbox printer path, while Nov-2025 sticker discussion independently raised transposition in connection with the `534brn` solution.
 
 Thus all three Experiment-378 operation classes now have pre-machine provenance. Two exact parameters remain unresolved: the ordinal assignment of the nine digit positions to the nine 3×3 cells, and the specific CCW turn direction. The exact `112/012/120` match remains an active high-priority candidate, not a solved consumer.
+
+
+## Experiments 382–384 — native registration leaves one concentrated burden
+
+The `534brn` one-shot candidate is now considerably more constrained.
+
+The solved CE background layout `IAB/CDE/FGH` equals native serial-number modulo-9 classes `0..8` in row-major physical order (`0=I,1=A,...,8=H`). This gives a native digit-position→cell registration for the nine URL digits. The natural competing alphabetic A-I registration yields no one-shot-family hit.
+
+Historical provenance also independently supports the information-flow direction: in Nov 2025, community solvers explicitly proposed that the earlier `534brn` solution could be intended as an aid to the harder unresolved foreground sticker puzzle.
+
+The remaining problem is narrow but substantive. The registered keypad-row grid `101/211/022` reaches `112/012/120` only after a 90° counter-clockwise axis swap. Because source and one-shot surfaces share a physical-column coordinate, this is not a free orientation gauge. Axis-preserving registrations fail, and the Xbox puzzle's exact documented clockwise quarter-turn also fails.
+
+Current status: strong externally anchored candidate with one concentrated unresolved registration parameter, not a solved decoder.
