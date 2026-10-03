@@ -688,3 +688,20 @@ The historical/source audit confirms that the nine-digit relevance itself is ind
 But no recovered source yet fixes the three Experiment-378 registration choices: row-major 3×3 grouping, equal ordered terciles, or 90° CCW rotation.
 
 **Operating rule:** do not search more digit maps or arbitrary permutations. The candidate is already specific enough. Spend effort only on independent evidence that fixes one of those three choices, or on a different externally specified consumer.
+
+
+### Experiments 380–381 — DTMF cue upgrades the 534brn hit
+
+The successful Experiment-378 decimal→ternary map is no longer merely an equal-tercile convenience.
+
+The May-2026 sticker discussion explicitly proposed a standard DTMF keypad (`123/456/789`) before the current machine work. Under that cue, `1–3→0, 4–6→1, 7–9→2` is exactly the keypad **row coordinate**.
+
+The equally natural keypad **column coordinate** was tested as a control and produces zero one-shot-family hits under D4. Row produces the unique `112/012/120` hit.
+
+The source-side 3×3 shape also has independent provenance: the digits come from the solved nine-piece CE background puzzle itself, and Nov-2025 solvers independently proposed relating the nine digits to the nine sticker sections. A 90° grid reorientation is also a demonstrated INSIDE ARG operation in the Xbox printer solution, and Nov-2025 discussion explicitly suggested transposition in relation to `534brn`.
+
+**Remaining exact parameters:**
+1. digit-string ordinal → 3×3 cell ordinal;
+2. why the successful quarter-turn is specifically CCW.
+
+These are now the highest-value validation targets. Do not widen to arbitrary digit maps or semantic decoding.

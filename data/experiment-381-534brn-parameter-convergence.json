@@ -1,0 +1,34 @@
+{
+  "experiment": 381,
+  "title": "534brn parameter-convergence synthesis",
+  "status": "completed provenance synthesis",
+  "candidate": "Experiment 378 exact hit 112/012/120",
+  "parameters": {
+    "3x3_carrier": {
+      "status": "operation-class supported",
+      "evidence": [
+        "the URL is produced by the solved nine-piece CE background puzzle, whose canonical carrier is a 3x3 arrangement",
+        "Nov 2025 community discussion independently noticed nine digits and proposed relating them to the nine sticker sections"
+      ],
+      "remaining_free_choice": "ordinal registration of digit-string position to 3x3 cell"
+    },
+    "decimal_to_ternary": {
+      "status": "historically licensed and discriminated",
+      "evidence": [
+        "May 2026 sticker discussion explicitly proposed a DTMF keypad and attached the standard 123/456/789 keypad",
+        "Experiment 380 shows the successful 1-3/4-6/7-9 map is exactly keypad row coordinate",
+        "the equally native keypad column coordinate yields zero one-shot-family hits under D4"
+      ],
+      "remaining_free_choice": "authorial intent to use the keypad cue on the 534brn digits"
+    },
+    "rigid_reorientation": {
+      "status": "operation-family supported, exact direction uncued",
+      "evidence": [
+        "the solved Xbox printer puzzle demonstrably requires a 90-degree rotation before Braille readout",
+        "Nov 2025 community discussion explicitly suggested the sticker foreground might need to be transposed similar to the 534brn puzzle"
+      ],
+      "remaining_free_choice": "why specifically the 90-degree counter-clockwise member that hits"
+    }
+  },
+  "conclusion": "All three Experiment-378 steps now have some independent pre-machine operation-class provenance, but two exact registration parameters remain unresolved: digit ordinal to 3x3 cell, and 90-degree direction. The candidate is strengthened materially but is not promoted to solved."
+}
