@@ -1,0 +1,22 @@
+{
+  "experiment": 388,
+  "title": "pre-machine two-coordinate/layered-sheet provenance",
+  "status": "completed historical provenance audit",
+  "source": "Playdead Unofficial solving-breakout archive",
+  "historical_findings": [
+    {
+      "date": "2026-05-19",
+      "finding": "community explicitly generated A-I sticker tables in both left-to-right and top-to-bottom orientations"
+    },
+    {
+      "date": "2026-05-20",
+      "finding": "community proposed that letters could provide one horizontal/vertical position and numbers the other, placing stickers on a two-dimensional sheet, with further layered structure underneath"
+    },
+    {
+      "date": "2026-05-22",
+      "finding": "community proposed DTMF/Polybius-like two-coordinate structure and then a two-layer larger-domain plus smaller-selector architecture"
+    }
+  ],
+  "relation_to_experiment_386": "These pre-machine proposals independently support treating sticker evidence as coordinate roles that may exchange horizontal/vertical placement and layer/index roles. They do not specify the exact c,r,k -> Q,c,r permutation or q reversal.",
+  "epistemic_effect": "upgrade operation-class provenance for coordinate-role reinterpretation and layered 2D placement; no upgrade to exact role assignment"
+}
