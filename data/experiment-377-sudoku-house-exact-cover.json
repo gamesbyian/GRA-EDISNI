@@ -1,0 +1,14 @@
+{
+  "experiment": 377,
+  "historical_cue": "Aug 2026 proposal: 81 Sudoku cells + 27 houses (9 rows, 9 columns, 9 boxes) = 108",
+  "tail_completions_tested": 36,
+  "house_type_permutations": 6,
+  "index_registrations_per_type_map": 18,
+  "total_registration_families": 108,
+  "selector_registration_combinations": 3888,
+  "exact_cover_hits": 0,
+  "best_union_cells": 75,
+  "minimum_overlap_incidences": 6,
+  "result": "No observation-compatible one-slash tail completion selects nine Sudoku houses that partition all 81 primary cells under any tested type mapping, cyclic offset, or reversal.",
+  "interpretation": "The historically independent 81+27 Sudoku analogy has an exact dimensional match to primary+tail, but its cheapest natural selector consequence fails. Do not use Sudoku houses as a G6 bridge absent a new cue."
+}
