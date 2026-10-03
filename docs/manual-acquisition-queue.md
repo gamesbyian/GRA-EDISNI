@@ -139,3 +139,47 @@ Do not spend time downloading material already preserved in PR #55's Discord-exp
 New physical sticker information is now the highest-value manual acquisition target. The current row-order and historical-mosaic audits do not support using AI completion or visual coherence to replace missing cells, and solved ARG precedents show that an intermediate surface may require a separate overlay/consumer before its payload becomes meaningful.
 
 When choosing between two leads, prefer the one more likely to yield a previously unseen serial/residue or an original clue-bearing artifact that specifies registration/overlay behavior. Existing known-residue repeats remain useful controls, but genuinely new residues have substantially greater research value. See `docs/visual-completion-overlay-risk.md` and `docs/prediction-matrix-process.md`.
+
+
+## Prospective 534brn physical discriminators — 2 Oct 2026
+
+Experiments 390–392 now give a model-directed acquisition order.
+
+**Tier A: direct one-shot vs G6 test**
+
+Target any physical sticker with serial:
+
+```
+082, 190, 298, 406, 514, 622
+```
+
+These are H108 residue 82. Both 534brn-selected masters predict slash; recursive U5 predicts dot.
+
+**Tier B: identify the two selected masters**
+
+Residue 84 family:
+
+```
+084, 192, 300, 408, 516, 624
+```
+
+Residue 102 family:
+
+```
+102, 210, 318, 426, 534, 642
+```
+
+Either family resolves the remaining two-master ambiguity.
+
+**Tier A contradiction checks already in the owner queue**
+
+- 427=dot claim → residue 103; both selected masters predict slash.
+- 369=dot claim → residue 45; both selected masters predict dash.
+
+A physical photo confirming either claim would falsify the whole 534brn-selected pair.
+
+A fresh indexed-web sweep on 2 Oct 2026 found no defensible public exact-serial hit in the three target families. Current effort should therefore emphasize owner/comment funnels, marketplace imagery, and newly surfaced CE photographs rather than repeating generic exact-number search.
+
+The 27 Sep 2026 Reddit PSA explaining that owners can expose the sticker without opening the collectible contents is currently the strongest passive owner funnel. Review new submissions from that funnel against the serial families above immediately.
+
+Do not alter the observation table from text-only claims.
