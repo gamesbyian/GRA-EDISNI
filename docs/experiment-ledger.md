@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **381**.
+Latest indexed experiment: **384**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -408,6 +408,10 @@ Latest indexed experiment: **381**.
 
 | 380 | 534brn DTMF-coordinate audit: the May-2026 sticker discussion explicitly proposed a DTMF/old-phone keypad with standard 123/456/789 layout. Experiment 378's 1–3/4–6/7–9 ternary map is exactly the keypad row coordinate. The equally native keypad column coordinate produces zero one-shot-family hits under D4, while row gives the unique `112/012/120` hit. This upgrades the successful decimal→ternary step from arbitrary binning to historically licensed positional readout. |
 | 381 | 534brn parameter-convergence synthesis: all three steps behind the Experiment-378 hit now have independent pre-machine operation-class provenance: a nine-piece 3×3 source plus nine-digit historical observation; DTMF keypad row coordinate for the ternary reduction; and demonstrated/ historically proposed grid reorientation. Exact digit-ordinal→cell registration and CCW direction remain unresolved, so the candidate is materially strengthened but not promoted to solved. |
+
+| 382 | native serial cell-registration audit: the solved background layout `IAB/CDE/FGH` is exactly serial-number modulo-9 classes `0..8` in row-major physical order (`0=I,1=A,...,8=H`). This supplies a native registration for the nine 534brn digits; the alphabetic A-I assignment control yields no one-shot hit under D4. The digit-ordinal→cell mapping is therefore no longer a major free transform. |
+| 383 | orientation-burden audit: after native registration, the unique hit still requires a genuine 90° CCW axis swap. Axis-preserving D4 transforms yield zero hits. Exact reuse of the demonstrated Xbox 90° clockwise direction also fails. Quarter-turn/transposition is historically licensed only as an operation family; the successful direction remains unresolved. |
+| 384 | 534brn→foreground dependency provenance: Nov-2025 community discussion explicitly argued that the 534 puzzle was likely intended to be solved first and that its solution could aid the harder foreground sticker puzzle, while independently noticing the nine digits. This supports the current cross-stage information-flow direction without supplying the remaining CCW axis registration. |
 
 ## Current frontier
 
