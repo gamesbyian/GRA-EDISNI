@@ -72,6 +72,14 @@ Historical ARG work includes image-to-audio/spectrogram style transitions and la
 
 **Sticker relevance:** low until a sticker-native cue asks for a carrier conversion.
 
+### Keypad coordinate as a historically proposed sticker readout
+
+On 22 May 2026, community sticker discussion explicitly proposed a standard DTMF / old-phone keypad and attached the canonical `123/456/789` layout. This is not a solved Playdead mechanism, so it must not be promoted to the demonstrated-operation list as authorial fact. It is, however, independent pre-machine sticker-specific provenance for treating decimal 1–9 as a 3×3 positional coordinate.
+
+**Reusable sticker-specific lesson:** if an independently relevant nine-digit artifact is tested against a ternary surface, keypad row and column are the two cheapest historically licensed coordinates.
+
+**Do not infer:** permission to test telephone texting, DTMF frequencies, arbitrary keypad walks, or other keypad-derived transforms.
+
 ### Native coordinate typing before selector transfer
 
 The CE's historical 12×9 / twelve-square representation gives a useful internal control on selector interpretations. For a fixed A-I class, the nine primary cells are naturally indexed by `(Q,d)=00..22`, while the final three tail cells are `(Q,d)=30,31,32`. A one-of-three tail position is therefore natively a `d` coordinate.
