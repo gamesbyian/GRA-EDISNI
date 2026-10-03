@@ -1,0 +1,33 @@
+{
+  "experiment": 390,
+  "fingerprint": {
+    "source": "Experiments 378-389",
+    "canonical_shared_row_state": "112/012/120",
+    "external_form": "transposed 534brn DTMF-row relation 120/012/112 with q'=2q+2"
+  },
+  "layers": {
+    "U2": {"candidate_count": 648, "g5_valid_count": 20, "distinct_g5_objects": 6, "target_count": 2, "target_fraction_of_layer": 0.0030864197530864196, "target_fraction_of_g5_valid": 0.1},
+    "U3": {"candidate_count": 216, "g5_valid_count": 20, "distinct_g5_objects": 6, "target_count": 2, "target_fraction_of_layer": 0.009259259259259259, "target_fraction_of_g5_valid": 0.1},
+    "U4": {"candidate_count": 20, "g5_valid_count": 20, "distinct_g5_objects": 6, "target_count": 2, "target_fraction_of_layer": 0.1, "target_fraction_of_g5_valid": 0.1},
+    "U5": {"candidate_count": 14, "g5_valid_count": 14, "distinct_g5_objects": 5, "target_count": 0, "target_fraction_of_layer": 0.0, "target_fraction_of_g5_valid": 0.0}
+  },
+  "u5_first_pass_counts": {
+    "102/002/120": 4,
+    "102/012/100": 4,
+    "102/022/100": 4,
+    "112/012/100": 1,
+    "122/022/100": 1,
+    "112/012/120": 0
+  },
+  "cross_layer": {
+    "same_two_target_masters_U2_U3_U4": true,
+    "target_survives_second_recursive_closure": false
+  },
+  "classification": {
+    "U2": "nontrivial filter: 648 -> 2 exact target masters after typed G5",
+    "U3": "nontrivial filter: 216 -> 2",
+    "U4": "nontrivial filter: 20 -> 2",
+    "U5": "hard negative: 0 / 14"
+  },
+  "epistemic_consequence": "If the 534brn coordinate correspondence is genuine, it favors the one-shot G5 stopping point and is incompatible with the current G6/U5 recursive continuation. Treat this as a conditional discriminator until the external registration receives its missing exact cue."
+}
