@@ -57,7 +57,15 @@
     ],
     "documented_valid_password": "NEWPLANETDISCOVERED",
     "duplicate_note": "The repeated 36-character row serves as both top and bottom of the solved circle.",
-    "solved_row_order_status": "The cited source documents the spatial solution but does not expose a complete textual row-order table; preserve that distinction."
+    "solved_row_order_status": "The cited source documents the spatial solution but does not expose a complete textual row-order table; preserve that distinction.",
+    "residual_nonletter_status": {
+      "historical_status": "explicitly unresolved by the community solving document",
+      "source_title": "INSIDE PRINTER SECRET",
+      "source_url": "https://docs.google.com/document/d/1vlpah0LdCRpJe-OfhnkaiBIcmepGXust5BMbaFJGGt8/",
+      "source_last_update": "2019-04-15",
+      "community_interpretation": "Numbers, apostrophe and dash were noted; the document says it was unclear whether they meant anything or were filler/obscuration.",
+      "current_research_note": "Experiments 368-370 newly isolate the no-5 nine-state property but do not establish a CE mapping."
+    }
   },
   "research_use": {
     "role": "cross-puzzle control/reference fixtures",
