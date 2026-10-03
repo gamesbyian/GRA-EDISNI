@@ -194,3 +194,14 @@ One-shot object:
 Exhausting all six role permutations leaves only two total 3×3 functions. Direct `(r,c)->k` has no hit under the six preregistered Experiment-266 q maps. Swapped `(c,r)->k` gives `120/012/112` and uniquely matches canonical one-shot `112/012/120` under `q'=2q+2`.
 
 Treat this as the active registration hypothesis. Validation must target the role assignment or q reversal directly. Do not widen back to arbitrary square transforms.
+
+
+### Gauge stress-test and stopping status
+
+Experiment 387 stress-tests the active `534brn` coordinate match against the POS3 label gauges exposed by Experiment 352.
+
+With one shared physical-row coordinate, the unique hit remains `112/012/120` under `q'=2q+2` and identity row labels. Allowing independent row relabeling in each output column expands that to four middle-column-equivalent one-shot representatives, but the direct role assignment still never hits and every transposed hit still requires the same q reversal.
+
+Experiments 388–389 then separate provenance from parameter fixing. Pre-machine discussion independently supports horizontal/vertical coordinate exchange and layered 2D reading, but no recovered source fixes the exact role mapping or reversed q order.
+
+Status: preserve as the leading external-consumer candidate, but do not promote or widen. Reopen only on genuinely independent axis/handedness/Q-order evidence.
