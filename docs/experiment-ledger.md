@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **379**.
+Latest indexed experiment: **381**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -405,6 +405,9 @@ Latest indexed experiment: **379**.
 | 378 | 534brn nine-digit one-shot consumer: the sticker-background solution URL contains exactly nine digits `534965398`, independently noticed by the community in Nov 2025 as possibly relevant to the nine sticker sections. Place them row-major as 534/965/398 and apply the canonical equal-tercile decimal→ternary map 1–3→0, 4–6→1, 7–9→2, yielding 101/211/022. A 90° CCW rotation gives `112/012/120`, exactly one of the six Experiment-374 one-shot states. Across all 28 monotone three-bin decimal partitions only cutpoints (3,6) and observationally equivalent (3,7) hit the target family. Descriptive D4 null rate is 48/19683 (~1/410), or 8/1260 (~1/157.5) conditional on symbol census. The match is specific and externally sticker-linked, but row-major gridding, tercile reduction, and rotation still require independent cueing. |
 
 | 379 | 534brn registration-parameter provenance: the Nov-2025 archive independently establishes that solvers noticed the nine URL digits and proposed using them for the nine sticker sections, but no recovered source specifies Experiment 378's row-major 3×3 grouping, equal-tercile 1–3/4–6/7–9 reduction, or 90° CCW rotation. Keep the exact one-shot hit active but unpromoted; do not widen digit transforms to improve fit. |
+
+| 380 | 534brn DTMF-coordinate audit: the May-2026 sticker discussion explicitly proposed a DTMF/old-phone keypad with standard 123/456/789 layout. Experiment 378's 1–3/4–6/7–9 ternary map is exactly the keypad row coordinate. The equally native keypad column coordinate produces zero one-shot-family hits under D4, while row gives the unique `112/012/120` hit. This upgrades the successful decimal→ternary step from arbitrary binning to historically licensed positional readout. |
+| 381 | 534brn parameter-convergence synthesis: all three steps behind the Experiment-378 hit now have independent pre-machine operation-class provenance: a nine-piece 3×3 source plus nine-digit historical observation; DTMF keypad row coordinate for the ternary reduction; and demonstrated/ historically proposed grid reorientation. Exact digit-ordinal→cell registration and CCW direction remain unresolved, so the candidate is materially strengthened but not promoted to solved. |
 
 ## Current frontier
 
