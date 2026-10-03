@@ -1,0 +1,60 @@
+{
+  "experiment": 369,
+  "source": "published Xbox Braille-ASCII transcription preserved in data/printer-reference/metadata.json",
+  "question": "Is the nine-of-ten decimal-glyph residual merely invariant under Braille-cell orientation?",
+  "correct_orientation_basis": "The identity orientation is independently fixed by the readable NEWPLANETDISCOVERED message.",
+  "braille_ascii_digit_masks": {
+    "0": "001011",
+    "1": "010000",
+    "2": "011000",
+    "3": "010010",
+    "4": "010011",
+    "5": "010001",
+    "6": "011010",
+    "7": "011011",
+    "8": "011001",
+    "9": "001010"
+  },
+  "missing_5_mask": "010001",
+  "missing_5_dots": [2, 6],
+  "rectangular_cell_symmetries": {
+    "identity": {
+      "digit_cells": 67,
+      "distinct_digits": 9,
+      "observed_digits": "012346789",
+      "missing_digits": "5",
+      "counts": {"0": 2, "1": 4, "2": 9, "3": 3, "4": 4, "5": 0, "6": 10, "7": 9, "8": 11, "9": 15}
+    },
+    "left_right_mirror": {
+      "digit_cells": 54,
+      "distinct_digits": 7,
+      "observed_digits": "0345678",
+      "missing_digits": "129",
+      "counts": {"0": 11, "1": 0, "2": 0, "3": 3, "4": 10, "5": 15, "6": 4, "7": 9, "8": 2, "9": 0}
+    },
+    "top_bottom_mirror": {
+      "digit_cells": 14,
+      "distinct_digits": 5,
+      "observed_digits": "01359",
+      "missing_digits": "24678",
+      "counts": {"0": 2, "1": 4, "2": 0, "3": 3, "4": 0, "5": 1, "6": 0, "7": 0, "8": 0, "9": 4}
+    },
+    "rotate_180": {
+      "digit_cells": 10,
+      "distinct_digits": 4,
+      "observed_digits": "3589",
+      "missing_digits": "012467",
+      "counts": {"0": 0, "1": 0, "2": 0, "3": 3, "4": 0, "5": 4, "6": 0, "7": 0, "8": 2, "9": 1}
+    }
+  },
+  "all_720_dot_permutations_descriptive_null": {
+    "distinct_digit_histogram": {"0": 4, "1": 36, "2": 112, "3": 104, "4": 148, "5": 144, "6": 68, "7": 52, "8": 32, "9": 16, "10": 4},
+    "permutations_with_9_distinct_digits": 16,
+    "permutations_with_10_distinct_digits": 4,
+    "permutations_with_at_least_9_distinct_digits": 20,
+    "fraction_with_at_least_9_distinct_digits": 0.027777777777777776,
+    "missing_digit_among_9_state_permutations": {"2": 2, "3": 2, "5": 4, "9": 8},
+    "warning": "The 720 dot permutations are a descriptive relabeling null, not a historical operation family."
+  },
+  "interpretation": "The nine-state decimal residual is orientation-sensitive rather than a trivial invariant of the same Braille cells. Among the four geometry-preserving symmetries of a 2x3 Braille cell, only the independently established correct orientation yields nine distinct ASCII digit glyphs. Across all 720 arbitrary dot relabelings, only 20 yield at least nine distinct digits. This makes the 9-state observation more structurally specific, but still does not supply a mapping to CE A-I or show authorial intent."
+}
