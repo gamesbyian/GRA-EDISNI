@@ -781,3 +781,14 @@ The Experiment 338 evidence-gated historical operations have now been replayed a
 - Pending/closed historical operation families were deliberately not swept.
 
 See `docs/experiment-367-licensed-operations-universe.md`.
+
+
+## Xbox residual Braille selector
+
+Experiments 368–371 revisit the historically unresolved non-letter cells in the solved Xbox printer planet.
+
+The apparent nine-state digit alphabet is real but secondary. The exact structural partition is simpler: in the correctly oriented Braille field, every message-bearing cell has at least one raised dot in the top Braille row (dots 1 or 4), and every residual cell has that row empty. The structural selector alone reads `NEWPLANETDI!COVERED`; the historically documented one-dot correction yields `NEWPLANETDISCOVERED`.
+
+The 69 residual cells therefore occupy a natural 16-state subspace over dots 2,3,5,6. Eleven states occur. ASCII `5` is one of five absent states, not a uniquely excluded codeword in the natural parent space.
+
+Operating consequence: retire the direct nine-digit↔A-I mapping lane absent new evidence. Retain the stronger cross-puzzle precedent that Playdead can hide payload and filler in distinct geometric subspaces of a registered carrier. Any CE transfer must be motivated by an independently observed sticker-native selector, not by importing the Xbox rule.
