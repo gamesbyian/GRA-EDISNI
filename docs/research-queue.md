@@ -601,3 +601,16 @@ The solved Xbox planet's published Braille-ASCII transcription contains 67 decim
 Do **not** launch the superficially attractive 9! digit→A-I mapping sweep yet. There is no independently defined correspondence between Xbox Braille cells and CE sticker positions, so all 362,880 bijections are currently free relabelings with no falsifiable paired data.
 
 **Reopening trigger:** recover a historical meaning for the residual Xbox digits, a solved-order/registration coordinate that yields a nine-state carrier, an explicit numeric/Braille labeling of CE backgrounds, or a common downstream consumer. Until then retain the missing-5 fact as a bounded Playdead-design echo rather than a decoder or completion constraint. See `docs/experiment-368-xbox-digit-nine-state-audit.md`.
+
+
+### Experiments 369–371 — Xbox Braille residual resolution
+
+The missing-`5` branch is now structurally resolved far enough to change priority.
+
+Experiment 369 shows that the nine-of-ten decimal support is orientation-sensitive and appears only in the independently correct message-bearing orientation among the four physical cell symmetries. Experiment 370 confirms that original solvers explicitly noticed the numbers and left their meaning unresolved. Experiment 371 then finds the simpler exact mechanism: every message cell has Braille dot 1 or 4 active, while every residual cell has both top-row dots empty. That structural selector recovers `NEWPLANETDI!COVERED` exactly before the already documented `!`→`S` correction.
+
+The residual therefore lives in a natural 16-state four-bit subspace. Eleven states occur; `5` is only one of five absent states. This demotes the direct nine-digits↔A-I cardinality match.
+
+**Priority consequence:** do not spend effort on digit→A-I bijections. Preserve the stronger historical lesson instead: Playdead demonstrably used a geometric subspace inside a registered carrier to separate message-bearing cells from plausible-looking residual cells.
+
+**Next useful CE question:** search only for independently visible sticker-native features that could partition units into payload versus carrier/filler without semantic scoring. Do not import the Xbox top-row rule itself.
