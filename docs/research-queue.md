@@ -679,3 +679,12 @@ This is the first specific external match to the one-shot surface. Do not promot
 - why 90° CCW orientation.
 
 **Priority consequence:** search historical/source material for an independent orientation or digit-binning cue around the nine-piece background solution and Terminal41 path. Do not broaden into arbitrary digit transforms or semantic decoding of `112/012/120`.
+
+
+### Experiment 379 — validate, don't widen, the 534brn hit
+
+The historical/source audit confirms that the nine-digit relevance itself is independent: community solvers noticed `534965398` and proposed using those nine numbers against the nine sticker sections before the present machine work.
+
+But no recovered source yet fixes the three Experiment-378 registration choices: row-major 3×3 grouping, equal ordered terciles, or 90° CCW rotation.
+
+**Operating rule:** do not search more digit maps or arbitrary permutations. The candidate is already specific enough. Spend effort only on independent evidence that fixes one of those three choices, or on a different externally specified consumer.
