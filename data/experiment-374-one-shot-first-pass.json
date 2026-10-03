@@ -1,0 +1,36 @@
+{
+  "experiment": 374,
+  "raw_candidate_machines": 216,
+  "typed_g5_first_pass_survivors": 20,
+  "distinct_first_pass_objects": 6,
+  "family_counts": {
+    "102/002/120": 4,
+    "102/012/100": 4,
+    "102/022/100": 6,
+    "112/012/100": 2,
+    "112/012/120": 2,
+    "122/022/100": 2
+  },
+  "cellwise_invariants": {
+    "Q0c0":"1",
+    "Q0c2":"2",
+    "Q1c0":"0",
+    "Q1c2":"2",
+    "Q2c0":"1",
+    "Q2c2":"0"
+  },
+  "one_shot_normal_form": [
+    ["1","x","2"],
+    ["0","y","2"],
+    ["1","z","0"]
+  ],
+  "middle_column_patterns": {
+    "002":4,
+    "010":4,
+    "020":6,
+    "110":2,
+    "112":2,
+    "220":2
+  },
+  "interpretation": "Stopping after the type-preserving G5 selection does not leave unstructured noise. The 20 raw-compatible machines collapse to six 3x3 ternary objects sharing six of nine cells exactly. All remaining variation is confined to the middle column, whose six observed patterns are 002,010,020,110,112,220. This is the complete closed-corpus one-shot output before any cross-axis d-to-Q coercion or second selector use."
+}
