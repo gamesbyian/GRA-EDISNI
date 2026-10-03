@@ -1,0 +1,15 @@
+{
+  "experiment": 391,
+  "target": "112/012/120",
+  "selected_master_count": 2,
+  "pair_discriminators": {
+    "84": {"values": [".", "/"], "physical_serials_le_648": [84,192,300,408,516,624]},
+    "102": {"values": [".", "/"], "physical_serials_le_648": [102,210,318,426,534,642]}
+  },
+  "shared_high_value_predictions": {
+    "82": {"symbol": "/", "physical_serials_le_648": [82,190,298,406,514,622]},
+    "103": {"symbol": "/", "physical_serials_le_648": [103,211,319,427,535,643]},
+    "45": {"symbol": "-", "physical_serials_le_648": [45,153,261,369,477,585]}
+  },
+  "interpretation": "Residues 84 and 102 are the only unseen cells that distinguish the two 534brn-selected masters. Both selected masters predict slash at residue 82, while recursive U5 fixes dot there, making residue 82 a direct one-shot-vs-G6 discriminator. Both predict slash at residue 103 and dash at residue 45, so the current unverified 427=dot and 369=dot claims would each falsify the selected pair if physically verified."
+}
