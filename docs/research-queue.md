@@ -663,3 +663,19 @@ No sticker-specific historical source was found that says to reuse the same inde
 A separate Aug-2026 Sudoku proposal supplied an unusually exact 81+27 dimensional analogy: 81 cells plus 27 houses split into 9 rows, 9 columns and 9 boxes. Experiment 377 tested the cheapest natural consequence. Across all 36 observation-compatible tail assignments and 108 reasonable house-type/index registrations, none selects nine houses forming an exact cover of the 81 primary cells.
 
 **Priority consequence:** do not widen Sudoku or generic recursion. Keep the typed one-shot six-state object as the evidence-first endpoint. Reopen G6 only for a genuinely independent repeat/cross-axis cue or an external consumer that requires the Q axis.
+
+
+### Experiment 378 — 534brn nine-digit hit
+
+A direct CE-background-derived external artifact now hits the one-shot G5 family.
+
+The solved nine-piece background gives `dat/534brn9653f9j8mmd`, containing nine digits `534965398`. Community discussion on 2 Nov 2025 independently noticed the nine-digit count and proposed the digits might help with the nine sticker sections.
+
+Under the canonical ordered tercile map `1–3→0, 4–6→1, 7–9→2`, row-major `534/965/398` becomes `101/211/022`. Rotating the 3×3 square 90° counter-clockwise yields `112/012/120`, exactly one of Experiment 374's six one-shot states.
+
+This is the first specific external match to the one-shot surface. Do not promote it to a decode yet. The remaining free choices are exactly the things to attack next:
+- why row-major grouping of the nine digits;
+- why equal decimal terciles;
+- why 90° CCW orientation.
+
+**Priority consequence:** search historical/source material for an independent orientation or digit-binning cue around the nine-piece background solution and Terminal41 path. Do not broaden into arbitrary digit transforms or semantic decoding of `112/012/120`.
