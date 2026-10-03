@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **384**.
+Latest indexed experiment: **386**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -412,6 +412,9 @@ Latest indexed experiment: **384**.
 | 382 | native serial cell-registration audit: the solved background layout `IAB/CDE/FGH` is exactly serial-number modulo-9 classes `0..8` in row-major physical order (`0=I,1=A,...,8=H`). This supplies a native registration for the nine 534brn digits; the alphabetic A-I assignment control yields no one-shot hit under D4. The digit-ordinal→cell mapping is therefore no longer a major free transform. |
 | 383 | orientation-burden audit: after native registration, the unique hit still requires a genuine 90° CCW axis swap. Axis-preserving D4 transforms yield zero hits. Exact reuse of the demonstrated Xbox 90° clockwise direction also fails. Quarter-turn/transposition is historically licensed only as an operation family; the successful direction remains unresolved. |
 | 384 | 534brn→foreground dependency provenance: Nov-2025 community discussion explicitly argued that the 534 puzzle was likely intended to be solved first and that its solution could aid the harder foreground sticker puzzle, while independently noticing the nine digits. This supports the current cross-stage information-flow direction without supplying the remaining CCW axis registration. |
+
+| 385 | 534brn transpose/q-registration decomposition: the former unique 90° CCW hit can be written as strict matrix transpose `101/211/022 -> 120/012/112` plus the preregistered Experiment-266 external-q relabeling `q'=2q+2`, which maps canonical one-shot `112/012/120` to the transposed grid. The Nov-2025 archive independently proposed sticker/534brn transposition/re-registration, but its description was broader than strict matrix transpose. The match therefore narrows the old D4 burden to a strict-transpose choice plus one already-known q-registration choice; it does not yet fix either authorially. |
+| 386 | ternary coordinate-role audit: model the external 534brn object as nine triples `(physical row r, physical col c, keypad row k)` and the one-shot object as `(Q,c,r)`. Exhaust all 3!=6 role assignments. Four cannot form a total 3×3 function; the direct `(r,c)->k` grid has zero hits under all six preregistered q maps; the swapped-axis `(c,r)->k` grid is strict transpose `120/012/112` and has exactly one hit, canonical `112/012/120` under `q'=2q+2`. This is a unique bounded coordinate-isomorphism candidate, not a solved cue. |
 
 ## Current frontier
 
