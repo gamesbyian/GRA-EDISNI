@@ -16,6 +16,8 @@ An external semantic branch may be opened only when the external artifact suppli
 
 Acceptable entry cues include independently visible or documented:
 
+- a consumer for the one-shot typed 3×3 family `1?2 / 0?2 / 1?0` or its six middle-column states `002,010,020,110,112,220`;
+
 - three-position exceptional-member coding;
 - 3 / 9 / 27 / 108 organization;
 - a native 3×3 or 3×3×3 addressable structure;
@@ -75,6 +77,12 @@ The Discord export now preserves two direct implementation precedents for this c
 The `ARG / tldr` chronology adds that this consumer was stateful: after `MULTIPLEPROBESDISPATCHED` had been accepted, a later incorrect submission in the same browser reportedly still appended the unlocked successful page. Together with the printer JavaScript's persistent client GUID, this suggests progression could be keyed per client/session. Therefore a candidate external consumer should be allowed to behave as a **state transition/unlock interface**, not only as a one-shot decoder.
 
 An official Xbox Wire article from 3 Jan 2019 independently describes the same ARG architecture: printer strings were to be correctly sorted/decoded, the resulting text entered into a seemingly ordinary subscription box on Playdead's site, and the site returned the next corrupted image/PDF artifact. It further states that Playdead had indirect systems for gauging solver progress and that platform-specific code sets accumulated while the secret remained solvable from the beginning. Source: https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/. This raises confidence in the **consumer/unlock** pattern itself, while leaving the CE foreground's actual endpoint unknown.
+
+Search both current endpoint surfaces rather than assuming the recursive one is final.
+
+**One-shot typed surface (Experiments 373–375):** a 3×3 ternary object with invariant scaffold `1?2 / 0?2 / 1?0` and six allowed middle columns `002,010,020,110,112,220`. This surface requires no d→Q recursion.
+
+**Recursive conditional surface:** terminal `100`, route family and associated state collapse, conditional on G6.
 
 Search for exact homologues of the solved machine:
 
@@ -141,6 +149,6 @@ If the bounded targets above contain no independently registered machine homolog
 
 The default conclusion remains:
 
-> `100` may be the intended mechanical endpoint.
+> either the one-shot typed six-state 3×3 family or, conditional on an independently justified G6 continuation, `100` may be the intended mechanical endpoint.
 
 External-consumer work must never be allowed to weaken that conclusion merely because a continuation would be narratively satisfying.
