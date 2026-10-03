@@ -1,0 +1,18 @@
+{
+  "experiment": 373,
+  "native_address": "r-1 = 27*Q + 9*d + j",
+  "primary_domain": {"Q":[0,1,2],"d":[0,1,2],"j":[0,1,2,3,4,5,6,7,8]},
+  "tail_domain": {"Q":[3],"d":[0,1,2],"j":[0,1,2,3,4,5,6,7,8]},
+  "class_word_layout": {
+    "primary_9_positions": ["Q0d0","Q0d1","Q0d2","Q1d0","Q1d1","Q1d2","Q2d0","Q2d1","Q2d2"],
+    "tail_3_positions": ["Q3d0","Q3d1","Q3d2"]
+  },
+  "selector_type": "d",
+  "type_preserving_selector_on_primary": "(Q,d,j) -> (Q,S(j),j)",
+  "experiment_318_relation": {
+    "column_rail": "type-preserving d selection; exactly the G5 physical axis",
+    "row_chunk": "cross-axis reinterpretation of the tail d-position as Q"
+  },
+  "g5_effect": "Given the independently supported one-slash tail/index architecture, the selector's position is natively a d-coordinate. If that selector is applied to the preceding 3x3 (Q,d) body while preserving coordinate type and class registration j, d=S(j) is uniquely identified without consulting first-pass outputs.",
+  "g6_effect": "A second use of S(j) to consume Q crosses coordinate types: S is physically a d-position, whereas Q labels the three primary quarter layers. Native coordinate typing therefore supports the first G5 depth selection but does not support G6 q-consumption."
+}
