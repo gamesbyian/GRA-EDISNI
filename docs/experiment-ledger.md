@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **391**.
+Latest indexed experiment: **392**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -422,6 +422,8 @@ Latest indexed experiment: **391**.
 
 | 390 | 534brn universe-survival audit: frozen external state `112/012/120` selects exactly 2/648 U2 masters, the same 2/216 U3 and 2/20 U4 masters, and 0/14 U5 masters. Thus the active external candidate conditionally favors stopping after G5 and is incompatible with the current G6/U5 continuation. |
 | 391 | prospective physical predictions from the two 534brn-selected masters: only residues 84 and 102 distinguish the pair; residue 82 is slash in both while U5 fixes dot, giving a direct one-shot-vs-G6 test. Both also predict 103=slash and 45=dash, so verified 427=dot or 369=dot claims would falsify the pair. |
+
+| 392 | prospective acquisition sweep: no new defensible indexed-public exact-serial photo surfaced for residue-82/84/102 target families. Acquisition priority is now residue 82 (082/190/298/406/514/622) for direct one-shot-vs-G6 discrimination, then residues 84/102 to choose between the two selected masters, plus physical verification of 427=dot and 369=dot contradiction claims. Recent Reddit owner PSA is the strongest passive funnel; U32/KoreanB_B_Q ownership is reconfirmed but still serial-unknown. |
 
 ## Current frontier
 

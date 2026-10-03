@@ -1,0 +1,39 @@
+{
+  "experiment": 392,
+  "title": "prospective acquisition sweep for 534brn-selected physical discriminators",
+  "snapshot_date": "2026-10-02",
+  "target_families": {
+    "direct_one_shot_vs_G6": {
+      "residue": 82,
+      "serials_le_648": [82,190,298,406,514,622],
+      "selected_pair_prediction": "/",
+      "U5_prediction": "."
+    },
+    "selected_pair_identity_A": {
+      "residue": 84,
+      "serials_le_648": [84,192,300,408,516,624],
+      "selected_pair_values": [".","/"]
+    },
+    "selected_pair_identity_B": {
+      "residue": 102,
+      "serials_le_648": [102,210,318,426,534,642],
+      "selected_pair_values": [".","/"]
+    },
+    "existing_claim_checks": {
+      "427": {"residue": 103, "claim": ".", "selected_pair_prediction": "/"},
+      "369": {"residue": 45, "claim": ".", "selected_pair_prediction": "-"}
+    }
+  },
+  "public_search_result": {
+    "exact_target_serial_hits": [],
+    "note": "Fresh indexed-web searches across the target serial families did not surface a new public sticker photo or exact serial match.",
+    "current_funnel": "A current Reddit PSA dated 2026-09-27 asks CE owners to share full sticker photos without opening the collectible contents.",
+    "historical_owner_lead": "Reddit user KoreanB_B_Q / canonical U32 has multiple 2020 GameSale/GameSwap posts offering an INSIDE CE in new condition; this corroborates ownership but does not reveal a sticker serial."
+  },
+  "operating_priority": [
+    "residue-82 family first because any observation directly separates one-shot selected pair from recursive U5",
+    "residue-84 and residue-102 families next because either identifies which selected master is live",
+    "427 and 369 photo verification remains critical because either claimed dot would falsify both selected masters"
+  ],
+  "guardrail": "Do not treat owner recollection, listing text, or an unnumbered sticker photo as an observation. Require a physical image with defensible serial and symbol provenance."
+}

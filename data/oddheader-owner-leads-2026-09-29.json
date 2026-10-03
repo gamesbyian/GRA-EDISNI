@@ -24,10 +24,10 @@
       },
       "photo_present": false,
       "h108_residue": 45,
-      "matrix_context": "frozen matrix predicts invariant '-' at residue 45 (14/14 canonical states)",
+      "matrix_context": "Experiment 391: both 534brn-selected masters predict invariant '-' at residue 45; a physical 369=dot photo would falsify the selected pair as well as the older canonical invariant.",
       "priority": 1,
       "canonical_handle_match": false,
-      "next_action": "Obtain a physical sticker photo before any model or observation change."
+      "next_action": "Highest-priority contradiction check: obtain a physical sticker photo with readable 369 serial and symbol before any model or observation change."
     },
     {
       "id": "douleur873-427",
@@ -41,10 +41,10 @@
       },
       "photo_present": false,
       "h108_residue": 103,
-      "matrix_context": "frozen matrix is state-dependent at residue 103; dot preferred in 10/14 states",
+      "matrix_context": "Experiment 391: both 534brn-selected masters predict '/' at residue 103; a physical 427=dot photo would falsify the entire selected pair.",
       "priority": 1,
       "canonical_handle_match": false,
-      "next_action": "Obtain physical photo; useful hidden-state discriminator."
+      "next_action": "Highest-priority contradiction check: obtain a physical sticker photo with readable 427 serial and symbol before any model or observation change."
     },
     {
       "id": "time-travel-01",
@@ -180,5 +180,36 @@
       "followup_comment_id": "Ugx94KCGig7-l5WeiCp4AaABAg.Ab7HRDQrJ4FAbGYH8uwZ4m",
       "next_action": "Resolve historical submission identity/name against old Discord and sticker provenance before contacting the owner again. Do not add an observation unless the prior contribution can be identified or a physical photo is obtained."
     }
-  ]
+  ],
+  "priority_update_2026_10_02": {
+    "source": "Experiments 390-392",
+    "direct_one_shot_vs_G6_residue": 82,
+    "direct_serials": [
+      82,
+      190,
+      298,
+      406,
+      514,
+      622
+    ],
+    "pair_discriminator_residues": [
+      84,
+      102
+    ],
+    "pair_discriminator_serials": [
+      84,
+      192,
+      300,
+      408,
+      516,
+      624,
+      102,
+      210,
+      318,
+      426,
+      534,
+      642
+    ],
+    "note": "Any newly surfaced owner/listing matching these serial families should be escalated ahead of generic unseen-residue leads."
+  }
 }
