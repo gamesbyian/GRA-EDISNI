@@ -614,3 +614,12 @@ The residual therefore lives in a natural 16-state four-bit subspace. Eleven sta
 **Priority consequence:** do not spend effort on digit→A-I bijections. Preserve the stronger historical lesson instead: Playdead demonstrably used a geometric subspace inside a registered carrier to separate message-bearing cells from plausible-looking residual cells.
 
 **Next useful CE question:** search only for independently visible sticker-native features that could partition units into payload versus carrier/filler without semantic scoring. Do not import the Xbox top-row rule itself.
+
+
+### Experiment 372 — Xbox local-positional precedent
+
+Experiment 371 now supplies the previously missing kind of cross-puzzle evidence for the **source-side** positional-code question: a Playdead-authored pre-CE puzzle where semantic relevance is determined by occupancy relative to a fixed local geometry, not by glyph identity alone.
+
+This does not make Xbox Braille and CE POS3 the same code. Xbox is a binary top-row-active selector over a 2×3 cell; the CE primary skeleton exposes three minority-row positions per column. No CE row labels, orientation, arithmetic semantics, tail mapping, recursion, or terminal consumer transfer from Xbox.
+
+**Priority consequence:** retire generic searches for whether Playdead ever uses local position as code. That operation class is now demonstrated. Keep effort on the actual downstream burden: shared orientation, selector-on-body consumption, second selector reuse, and independently specified consumers.
