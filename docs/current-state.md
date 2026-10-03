@@ -801,3 +801,25 @@ The Xbox printer result now provides a closer historical analogue for the source
 This is genuine pre-CE Playdead-authored precedent for **position inside a registered local carrier having semantic function**. Combined with Experiments 350–352, it reduces the ad-hoc burden of representing the CE one-minority-per-column skeleton by local positional coordinates.
 
 The transfer stops at that operation class. Xbox does not establish CE row labels, a shared top/middle/bottom orientation, tail selector semantics, recursive substitution, route selection, or terminal meaning. Those remain the active model-level uncertainties.
+
+
+## Experiments 373–375 — typed G5 and revised stopping point
+
+The historical twelve-square representation and native serial arithmetic now resolve the previously model-level G5 axis choice.
+
+For each A-I class, the 12-position word is naturally:
+
+```
+Q0d0 Q0d1 Q0d2
+Q1d0 Q1d1 Q1d2
+Q2d0 Q2d1 Q2d2
+Q3d0 Q3d1 Q3d2
+```
+
+The independently supported one-slash tail index therefore encodes a physical d-position. Applying it type-preservingly to the preceding body uniquely gives `d=S(j)`, which is exactly G5. This does not depend on terminal `100`, route structure, hidden-state count, or recursive closure.
+
+Stopping after that first typed selection leaves 20 raw-compatible machines but only six distinct 3×3 ternary objects, all with form `1x2 / 0y2 / 1z0`. The only variation is the middle column: `002,010,020,110,112,220`.
+
+G6 now has a more precise epistemic status. Reusing S to consume the remaining Q axis is a cross-axis d→Q identification rather than a native continuation. The recursive machine remains the strongest developed conditional continuation and its map is tightly constrained once second use is admitted, but the repeat/coercion decision itself still lacks independent support.
+
+Accordingly, the project now has two legitimate externally testable endpoints: the typed one-shot six-state 3×3 family and the recursive conditional terminal `100`. External evidence, not internal elegance, should decide between them.
