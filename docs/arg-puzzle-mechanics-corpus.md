@@ -30,6 +30,14 @@ The CE's own background puzzle likewise required assembling nine faint image cla
 
 **Reusable lesson:** a mark stream can be secondary to a physical/spatial carrier.
 
+### Local geometric subspace as payload selector
+
+The solved Xbox planet contains a stronger structural fact than the historical “keep the letters” description. In the correctly oriented Braille field, every message-bearing cell has at least one raised dot in the cell's top row, while every residual cell has both top-row dots empty. The local geometry itself therefore partitions payload from carrier/filler.
+
+**Reusable lesson:** after registration, semantic role can be determined by occupancy relative to a fixed local subspace rather than by glyph identity alone.
+
+**Sticker relevance:** this supports local positional readout as a Playdead-authored operation class. It does not transfer the Xbox top-row rule to the CE.
+
 ### Code as operation
 
 The Switch printer produced an instruction that became a sequence of physical controller connection/disconnection actions.
@@ -63,6 +71,14 @@ Historical ARG work includes image-to-audio/spectrogram style transitions and la
 **Reusable lesson:** media type is not sacred.
 
 **Sticker relevance:** low until a sticker-native cue asks for a carrier conversion.
+
+### Native coordinate typing before selector transfer
+
+The CE's historical 12×9 / twelve-square representation gives a useful internal control on selector interpretations. For a fixed A-I class, the nine primary cells are naturally indexed by `(Q,d)=00..22`, while the final three tail cells are `(Q,d)=30,31,32`. A one-of-three tail position is therefore natively a `d` coordinate.
+
+**Reusable lesson:** when a selector is physically positioned along an existing coordinate axis, prefer type-preserving use of that coordinate before cross-axis reinterpretation.
+
+**Do not infer:** that matching cardinality alone licenses reusing the selector on another ternary axis.
 
 ## Recurring design grammar
 

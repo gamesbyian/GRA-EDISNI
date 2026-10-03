@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **372**.
+Latest indexed experiment: **375**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -394,6 +394,10 @@ Latest indexed experiment: **372**.
 | 371 | Xbox Braille structural-selector audit: selecting exactly those Braille cells with top-row dot 1 or 4 active yields `NEWPLANETDI!COVERED`, and the documented one-dot correction yields `NEWPLANETDISCOVERED`. All 69 remaining cells have the top row empty and occupy an 11-of-16 four-bit residual subspace. ASCII `5` is only one of five absent natural filler states, substantially weakening the literal nine-digits↔nine-CE-backgrounds hypothesis while establishing a stronger historical precedent for geometric payload/filler separation. |
 
 | 372 | Xbox local-positional selector precedent: Experiment 371 supplies a pre-CE Playdead-authored operation-class precedent in which semantic relevance is determined by occupancy relative to fixed positions inside a registered local geometry. This strengthens source-side POS3 provenance at the operation-class level, but does not supply CE row labels, orientation, tail consumption, recursion, routes, or terminal semantics. |
+
+| 373 | native-coordinate typing audit: under the historically attested twelve-square/9+3 representation, each fixed A-I class word is natively ordered as primary `Q0d0..Q2d2` plus tail `Q3d0,Q3d1,Q3d2`. The one-slash tail selector is therefore physically a d-coordinate. Type-preserving application to the primary body uniquely gives `d=S(j)`, exactly G5, without using first-pass outputs. The same typing does not motivate G6 because reusing S to consume Q crosses coordinate axes. |
+| 374 | one-shot G5 endpoint characterization: the 216 raw-compatible machines reduce to 20 after the typed first selection and only six distinct 3×3 ternary objects. All share normal form `1x2 / 0y2 / 1z0`; all variation lies in the middle column, which is one of `002,010,020,110,112,220`. This is a compact evidence-first endpoint before any d→Q coercion. |
+| 375 | G5/G6 burden-shift synthesis: G5 is reclassified from an axis-choice hypothesis to the unique direct type-preserving use of the independently supported tail index, leaving only the intent-to-index premise. G6 is reclassified more sharply as an unsupported cross-axis recursion/coercion that remains mechanically constrained once admitted. The one-shot six-state family and recursive terminal `100` should be carried as parallel external-consumer surfaces. |
 
 ## Current frontier
 
