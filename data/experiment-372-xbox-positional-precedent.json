@@ -1,0 +1,30 @@
+{
+  "experiment": 372,
+  "title": "Xbox local-positional selector precedent for CE POS3",
+  "status": "completed bounded cross-puzzle provenance audit",
+  "inputs": [
+    "data/experiment-350-chronological-frame-occupancy-summary.json",
+    "data/experiment-351-historical-three-position-readout.json",
+    "data/experiment-352-pos3-coordinate-gauge.json",
+    "data/experiment-371-xbox-braille-structural-selector.json"
+  ],
+  "shared_operation_class": {
+    "registered_local_geometry": true,
+    "semantic_information_depends_on_position_within_local_geometry": true,
+    "carrier_and_payload_can_coexist_in_same reconstructed object": true,
+    "symbol_identity_alone_is_not_the whole readout": true
+  },
+  "non_equivalences": {
+    "xbox_is_binary_top_row_selector": true,
+    "ce_primary_is_three_position_coordinate_per_column": true,
+    "xbox_does_not_supply_ce_row_labels": true,
+    "xbox_does_not_supply_ce_shared_orientation": true,
+    "xbox_does_not_supply_tail_selector_or_recursion": true
+  },
+  "epistemic_effect": {
+    "g1_source_side": "upgraded at operation-class provenance only",
+    "g5_and_downstream": "unchanged",
+    "literal_rule_transfer": "prohibited absent independent CE evidence"
+  },
+  "interpretation": "Experiment 371 supplies a genuine pre-CE Playdead example in which meaning is extracted from occupancy relative to a fixed local geometric subspace rather than from glyph identity alone. This is a closer precedent for CE positional coding than the previously recovered community ternary proposals, but it is not the same code. It supports the discoverability and authorial plausibility of local positional readout while leaving CE-specific orientation, labels, selector use, recursion, and downstream semantics conditional."
+}
