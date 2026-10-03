@@ -40,11 +40,9 @@ Transpose the external grid first:
 022      112
 ```
 
-That exact **transpose** operation has historical sticker-specific provenance.
+A **transpose/re-registration operation family** has historical sticker-specific provenance.
 
-On 2 Nov 2025, before the current machine work, lime8159 explicitly proposed that the sticker puzzle might need to be **transposed** in relation to the already-solved `534brn` puzzle.
-
-So transpose itself no longer needs to be invented from the fit.
+On 2 Nov 2025, before the current machine work, lime8159 explicitly proposed that the sticker puzzle might need to be **“transposed”** in relation to the already-solved `534brn` puzzle. Their accompanying description was broader than a strict matrix transpose: split the 3×3s into cells and rearrange them. So this source licenses grid re-registration/transposition as an operation family, not the exact matrix-transpose operator by itself.
 
 The remaining difference between:
 
@@ -122,7 +120,9 @@ Results:
 Thus the previously successful CCW turn has the exact decomposition:
 
 ```
-historically proposed transpose
+historically proposed transposition/re-registration family
++
+the strict matrix transpose member of that family
 +
 one member of a preregistered six-way q-relabeling family
 ```
@@ -137,7 +137,7 @@ invent a free D4 orientation and pick the one that works
 
 The candidate's geometry is now much less post-hoc.
 
-The transpose operation was independently proposed in the historical sticker discussion.
+The historical sticker discussion independently proposed transposition/re-registration, but did not uniquely specify strict matrix transpose.
 
 The six q relabelings were independently enumerated as equal first-pass maxima before the `534brn` external hit was discovered.
 
@@ -161,12 +161,11 @@ That is a genuine reduction in arbitrariness, not proof of authorial intent.
 
 ## Revised remaining burden
 
-The old “why CCW?” question is superseded.
+The old “why CCW?” question decomposes into two smaller questions:
 
-The remaining question is now:
+1. why choose strict matrix transpose within the historically licensed re-registration family;
+2. why should the external `534brn` consumer fix the otherwise underdetermined q registration specifically to `q'=2q+2`?
 
-> why should the external `534brn` consumer fix the otherwise underdetermined q registration specifically to `q'=2q+2`?
-
-That is a much smaller and better-typed question.
+That is still a much smaller and better-typed burden than an unconstrained D4 choice.
 
 Do not reopen arbitrary D4 transforms.
