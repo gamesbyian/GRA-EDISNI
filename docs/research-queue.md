@@ -718,3 +718,18 @@ Experiment 383 then isolates the remaining problem cleanly: the successful `90°
 Experiment 384 further strengthens the cross-stage direction: Nov-2025 community discussion independently proposed that the already-obtained 534 solution was likely intended as an aid to the harder unresolved sticker foreground.
 
 **Priority consequence:** stop searching new transforms. The dominant open question is now only the axis swap / CCW orientation. Seek arrows, handedness, reading-direction cues, or an independently labeled downstream coordinate system. If none exists, retain the match as a strong but one-parameter-short candidate.
+
+
+### Experiments 385–386 — replace free rotation with bounded coordinate registration
+
+The remaining 534brn orientation issue has been narrowed again.
+
+The old description, “rotate `101/211/022` 90° CCW,” decomposes into:
+1. strict matrix transpose, giving `120/012/112`;
+2. external-q registration `q'=2q+2`, one of the six affine q relabelings already tied for maximum first-pass retention in Experiment 266.
+
+The Nov-2025 discussion independently proposed sticker/534brn **transposition/re-registration**, but its accompanying description was broader than strict matrix transpose, so do not overclaim an exact historical transpose instruction.
+
+Experiment 386 gives a more principled parent family. Treat the external artifact as ternary triples `(r,c,k)` and the one-shot surface as `(Q,c,r)`; exhaust the six coordinate-role permutations. Four fail before target matching because they do not define a total 3×3 function. The direct role assignment has zero q-family hits. The swapped physical axes produce the strict transpose and exactly one state/gauge hit: `112/012/120` under `q'=2q+2`.
+
+**Priority consequence:** do not search more D4 variants or digit transforms. Seek only evidence fixing the unique remaining role/gauge assignment: background column→Q, background row→output-column, and/or Q reversal.

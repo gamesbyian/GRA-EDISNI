@@ -1,0 +1,40 @@
+{
+  "experiment": 385,
+  "source_keypad_row_grid": [
+    "101",
+    "211",
+    "022"
+  ],
+  "historically_proposed_operation": "community proposed transposition/re-registration of sticker 3x3 cells in relation to 534brn; accompanying description was broader than strict matrix transpose",
+  "transposed_source_grid": [
+    "120",
+    "012",
+    "112"
+  ],
+  "preregistered_q_family": {
+    "source": "Experiment 266, reconciled in Experiment 355",
+    "maps": [
+      "q'=q",
+      "q'=q+1",
+      "q'=q+2",
+      "q'=2q",
+      "q'=2q+1",
+      "q'=2q+2"
+    ],
+    "property": "all six are maximum-retention first-pass affine consumers with d'=S exactly"
+  },
+  "direct_source_hits_under_q_family": [],
+  "transpose_hits_under_q_family": [
+    {
+      "target": "112/012/120",
+      "q_map": "q'=2q+2 mod 3",
+      "rows": "120/012/112"
+    }
+  ],
+  "decomposition": {
+    "previous_description": "90-degree CCW rotation of 101/211/022",
+    "equivalent_description": "transpose 101/211/022 -> 120/012/112, then compare in q'=2q+2 gauge",
+    "identity": "rot90_ccw = q-row reversal after transpose"
+  },
+  "interpretation": "The last apparent geometric free parameter decomposes into a strict matrix transpose, which lies inside a historically proposed sticker/534brn transposition-re-registration operation family, plus one member of the six q relabelings already tied for maximum first-pass retention in Experiment 266 before the external match was known. No direct, untransposed source grid matches any one-shot state under those q relabelings; the strictly transposed grid matches exactly one state/gauge pair, 112/012/120 with q'=2q+2. This materially narrows the former free CCW choice, but neither strict transpose nor the selected q gauge is independently fixed by an authorial cue, so the result remains a strong candidate rather than a solved decoder."
+}

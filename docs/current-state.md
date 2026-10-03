@@ -875,3 +875,14 @@ Historical provenance also independently supports the information-flow direction
 The remaining problem is narrow but substantive. The registered keypad-row grid `101/211/022` reaches `112/012/120` only after a 90° counter-clockwise axis swap. Because source and one-shot surfaces share a physical-column coordinate, this is not a free orientation gauge. Axis-preserving registrations fail, and the Xbox puzzle's exact documented clockwise quarter-turn also fails.
 
 Current status: strong externally anchored candidate with one concentrated unresolved registration parameter, not a solved decoder.
+
+
+## Experiments 385–386 — bounded coordinate isomorphism replaces free CCW
+
+The `534brn` candidate no longer needs to be described as an unconstrained square rotation.
+
+The successful 90° CCW relation decomposes into strict transpose plus `q'=2q+2`, and that q map belongs to the six-way maximum-retention external-q family independently enumerated in Experiment 266 before the `534brn` match.
+
+More strongly, represent the external grid as nine ternary triples `(r,c,k)`, where `k` is the historically licensed DTMF keypad-row coordinate, and the one-shot surface as `(Q,c,r)`. Across all six permutations of coordinate roles, only two even define total 3×3 functions. The direct grid has no one-shot hit under any preregistered q map. The swapped-axis grid, equivalent to strict transpose, has exactly one hit: canonical `112/012/120` in q registration `q'=2q+2`.
+
+This materially reduces post-hoc geometric freedom. Historical discussion does support transposition/re-registration as an operation family, but not strict matrix transpose, and no recovered authorial cue fixes the q reversal. Current status remains a strong, uniquely bounded external-consumer candidate rather than a solved decoder.
