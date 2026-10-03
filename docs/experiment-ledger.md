@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **377**.
+Latest indexed experiment: **378**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -401,6 +401,8 @@ Latest indexed experiment: **377**.
 
 | 376 | post-G5 historical repeat/recursion cue hunt: the May-2026 archive independently supports a two-layer 9+3 body/index interpretation, including a larger-domain plus smaller-subset selector analogy, but no preserved message instructs reuse of the same selector, recursion, d→Q identification, or outer-axis selection. This strengthens G5 provenance without upgrading G6. |
 | 377 | bounded Sudoku-house consumer test: the Aug-2026 community independently noticed the exact 81 cells + 27 houses (9 rows/9 columns/9 boxes) = 108 dimensional match. Exhausting all 36 observation-compatible tail selectors across 6 tail-position→house-type maps, both index directions and all 9 cyclic offsets (3,888 combinations) yields zero exact covers of the 81 primary cells; best coverage is 75/81. The cheapest Sudoku bridge to G6 is therefore closed. |
+
+| 378 | 534brn nine-digit one-shot consumer: the sticker-background solution URL contains exactly nine digits `534965398`, independently noticed by the community in Nov 2025 as possibly relevant to the nine sticker sections. Place them row-major as 534/965/398 and apply the canonical equal-tercile decimal→ternary map 1–3→0, 4–6→1, 7–9→2, yielding 101/211/022. A 90° CCW rotation gives `112/012/120`, exactly one of the six Experiment-374 one-shot states. Across all 28 monotone three-bin decimal partitions only cutpoints (3,6) and observationally equivalent (3,7) hit the target family. Descriptive D4 null rate is 48/19683 (~1/410), or 8/1260 (~1/157.5) conditional on symbol census. The match is specific and externally sticker-linked, but row-major gridding, tercile reduction, and rotation still require independent cueing. |
 
 ## Current frontier
 
