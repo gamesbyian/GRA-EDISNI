@@ -705,3 +705,16 @@ The source-side 3×3 shape also has independent provenance: the digits come from
 2. why the successful quarter-turn is specifically CCW.
 
 These are now the highest-value validation targets. Do not widen to arbitrary digit maps or semantic decoding.
+
+
+### Experiments 382–384 — native registration and the final orientation burden
+
+The 534brn candidate has lost another free parameter.
+
+The solved background layout `IAB/CDE/FGH` is exactly native sticker serial residue classes `0..8` in row-major physical order when `0=I,1=A,...,8=H`. Historical discussion on 10 Aug 2026 explicitly noticed the same `000=I` top-left registration. Therefore associating the nine ordered URL digits with the nine native classes gives the Experiment-378 3×3 without inventing a grid fill convention. The competing alphabetic A-I registration produces no one-shot hit under D4.
+
+Experiment 383 then isolates the remaining problem cleanly: the successful `90° CCW` is not harmless gauge because the source and one-shot surfaces share the physical-column axis. Axis-preserving transforms produce zero hits. Exact reuse of the Xbox puzzle's documented clockwise direction also fails.
+
+Experiment 384 further strengthens the cross-stage direction: Nov-2025 community discussion independently proposed that the already-obtained 534 solution was likely intended as an aid to the harder unresolved sticker foreground.
+
+**Priority consequence:** stop searching new transforms. The dominant open question is now only the axis swap / CCW orientation. Seek arrows, handedness, reading-direction cues, or an independently labeled downstream coordinate system. If none exists, retain the match as a strong but one-parameter-short candidate.
