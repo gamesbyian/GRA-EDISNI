@@ -792,3 +792,12 @@ The apparent nine-state digit alphabet is real but secondary. The exact structur
 The 69 residual cells therefore occupy a natural 16-state subspace over dots 2,3,5,6. Eleven states occur. ASCII `5` is one of five absent states, not a uniquely excluded codeword in the natural parent space.
 
 Operating consequence: retire the direct nine-digit↔A-I mapping lane absent new evidence. Retain the stronger cross-puzzle precedent that Playdead can hide payload and filler in distinct geometric subspaces of a registered carrier. Any CE transfer must be motivated by an independently observed sticker-native selector, not by importing the Xbox rule.
+
+
+## Experiment 372 — positional-code provenance update
+
+The Xbox printer result now provides a closer historical analogue for the source-side CE positional code. In the correctly registered Braille field, message membership is determined by activity in a fixed local geometric subspace, while the complementary subspace produces residual/filler cells.
+
+This is genuine pre-CE Playdead-authored precedent for **position inside a registered local carrier having semantic function**. Combined with Experiments 350–352, it reduces the ad-hoc burden of representing the CE one-minority-per-column skeleton by local positional coordinates.
+
+The transfer stops at that operation class. Xbox does not establish CE row labels, a shared top/middle/bottom orientation, tail selector semantics, recursive substitution, route selection, or terminal meaning. Those remain the active model-level uncertainties.
