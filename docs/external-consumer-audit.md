@@ -152,3 +152,12 @@ The default conclusion remains:
 > either the one-shot typed six-state 3×3 family or, conditional on an independently justified G6 continuation, `100` may be the intended mechanical endpoint.
 
 External-consumer work must never be allowed to weaken that conclusion merely because a continuation would be narratively satisfying.
+
+
+## Closed near-miss: Sudoku-house exact-cover lane
+
+The Aug-2026 community archive independently proposed an 81+27 Sudoku analogy: 81 cells plus 27 houses (9 rows, 9 columns, 9 boxes). This was sufficiently specific to license one bounded consumer test.
+
+Experiment 377 exhausts all observation-compatible one-slash tail assignments, all six tail-position→house-family maps, both index directions, and all cyclic offsets. No combination selects nine houses that exactly cover the 81 primary cells.
+
+Do not broaden this into arbitrary Sudoku digit assignment or puzzle generation without a new external cue. The exact dimensional resemblance is preserved as provenance, but the cheapest structural consumer is closed.
