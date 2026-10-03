@@ -592,3 +592,12 @@ Classify the operation before interpretation:
 4. unopened: missing an independent parameter/cue.
 
 Do not reopen Experiment 338's pending or closed families merely because the completion universe makes bulk execution computationally cheap. Computational feasibility is not evidentiary license.
+
+
+### Experiment 368 — Xbox residual digit nine-state audit
+
+The solved Xbox planet's published Braille-ASCII transcription contains 67 decimal glyphs and uses exactly nine digit identities: `0,1,2,3,4,6,7,8,9`. Digit `5` is absent. This is a real historical structural observation and an exact cardinality match to the CE A-I background alphabet.
+
+Do **not** launch the superficially attractive 9! digit→A-I mapping sweep yet. There is no independently defined correspondence between Xbox Braille cells and CE sticker positions, so all 362,880 bijections are currently free relabelings with no falsifiable paired data.
+
+**Reopening trigger:** recover a historical meaning for the residual Xbox digits, a solved-order/registration coordinate that yields a nine-state carrier, an explicit numeric/Braille labeling of CE backgrounds, or a common downstream consumer. Until then retain the missing-5 fact as a bounded Playdead-design echo rather than a decoder or completion constraint. See `docs/experiment-368-xbox-digit-nine-state-audit.md`.
