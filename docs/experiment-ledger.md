@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **389**.
+Latest indexed experiment: **391**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -419,6 +419,9 @@ Latest indexed experiment: **389**.
 | 387 | 534brn gauge-robustness audit: under all 6 shared global row-label gauges, the direct coordinate-role assignment still has zero hits and the swapped assignment retains exactly one hit, canonical `112/012/120` with `q'=2q+2` and identity row labels. Even under all 216 independent per-column row gauges, direct remains zero and every swapped hit still requires the same q reversal; only four middle-column-equivalent one-shot states survive. Thus role swap + q reversal are robust, while exact canonical-state identity assumes one shared physical-row coordinate. |
 | 388 | historical coordinate/layer provenance: May-2026 community discussion explicitly explored A-I left-to-right versus top-to-bottom tables, orthogonal horizontal/vertical placement, layered 2D sheets, and DTMF/Polybius positional coding before the present machine. This strengthens operation-class provenance for coordinate-role reinterpretation without fixing the exact modern mapping. |
 | 389 | exact role/reversal stopping-boundary audit: targeted replay found no independent source fixing background-column→Q, background-row→output-column, strict matrix transpose, or q order `2,1,0`. The active 534brn candidate remains strong, uniquely bounded and externally anchored but one exact registration cue short of promotion. Further transform invention in this lane is frozen. |
+
+| 390 | 534brn universe-survival audit: frozen external state `112/012/120` selects exactly 2/648 U2 masters, the same 2/216 U3 and 2/20 U4 masters, and 0/14 U5 masters. Thus the active external candidate conditionally favors stopping after G5 and is incompatible with the current G6/U5 continuation. |
+| 391 | prospective physical predictions from the two 534brn-selected masters: only residues 84 and 102 distinguish the pair; residue 82 is slash in both while U5 fixes dot, giving a direct one-shot-vs-G6 test. Both also predict 103=slash and 45=dash, so verified 427=dot or 369=dot claims would falsify the pair. |
 
 ## Current frontier
 
