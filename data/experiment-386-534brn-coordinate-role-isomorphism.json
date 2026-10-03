@@ -1,0 +1,21 @@
+{
+  "experiment": 386,
+  "external_relation": "nine triples (physical row r, physical column c, DTMF keypad row k)",
+  "target_relation": "one-shot surface as nine triples (Q, physical column c, minority-row value r)",
+  "coordinate_role_permutations_tested": 6,
+  "summary": {
+    "role_permutations_forming_total_3x3_functions": 2,
+    "role_gauge_hits": 1,
+    "unique_hit": {
+      "role_assignment": {
+        "target_Q": "physical_col_c",
+        "target_c": "physical_row_r",
+        "target_value_r": "keypad_row_k"
+      },
+      "grid": "120/012/112",
+      "canonical_target": "112/012/120",
+      "q_map": "q'=2q+2 mod 3"
+    }
+  },
+  "interpretation": "Treating both artifacts as ternary coordinate relations gives a bounded six-way role-permutation family rather than an unconstrained image transform family. Four role permutations cannot even form a total 3x3 function because the keypad-row coordinate is not bijective enough to serve as a target input axis. Of the two valid functions, the direct r,c->k surface has no one-shot hit under the six preregistered q maps. The swapped-axis c,r->k surface is the strict transpose 120/012/112 and has exactly one hit: canonical 112/012/120 under q'=2q+2. This makes the candidate a unique isomorphism inside the smallest coordinate-role family, while still not supplying an authorial cue for choosing that role assignment."
+}
