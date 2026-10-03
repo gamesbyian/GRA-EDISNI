@@ -1,0 +1,31 @@
+{
+  "experiment": 387,
+  "question": "Does the 534brn coordinate hit survive the POS3 row-label gauges identified in Experiment 352?",
+  "shared_global_row_label_gauge": {
+    "family_size": 6,
+    "direct_role_hits": [],
+    "transposed_role_hits": [
+      {
+        "state": "112/012/120",
+        "q_map": "q'=2q+2",
+        "global_value_map": [0,1,2]
+      }
+    ],
+    "result": "Exactly one hit survives, and it uses the identity row-value labeling."
+  },
+  "independent_per_column_row_label_gauge": {
+    "family_size": 216,
+    "direct_role_hits": 0,
+    "transposed_role_hits": 4,
+    "hit_states": [
+      "102/002/120",
+      "112/012/100",
+      "112/012/120",
+      "122/022/100"
+    ],
+    "all_hits_require_q_map": "q'=2q+2",
+    "outer_columns_require_identity_value_map": true,
+    "note": "The four hits differ only by relabeling the middle output column, exactly where the Experiment-374 one-shot family carries all six-state variation."
+  },
+  "interpretation": "The source-axis swap and q reversal are robust: the direct role assignment never hits even if every output column receives its own arbitrary ternary row-label permutation, and every transposed hit still requires q'=2q+2. The exact state 112/012/120 is unique when the three physical columns share one global physical-row coordinate, as expected for a literal 3x3 grid. If independent per-column value gauges are admitted, four one-shot states become equivalent because all one-shot uncertainty lives in the middle column. Thus the external artifact strongly fixes the role assignment and q registration; its discrimination among the four middle-column variants depends on treating physical row as one shared coordinate rather than three unrelated column-local labels."
+}
