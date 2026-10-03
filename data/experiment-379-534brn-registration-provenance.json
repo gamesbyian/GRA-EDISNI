@@ -1,0 +1,21 @@
+{
+  "experiment": 379,
+  "title": "534brn registration-parameter provenance audit",
+  "status": "completed bounded provenance audit",
+  "question": "Are Experiment 378's row-major 3x3 grouping, equal-tercile decimal map, or 90-degree CCW orientation independently specified by preserved historical/source material?",
+  "sources_checked": [
+    "archive/external/twinysam-inside-arg/readme.md",
+    "gamesbyian/playdead-unofficial-exports / ARG solving-breakout export",
+    "historical 2 Nov 2025 534brn digit-order discussion",
+    "StickerSolution image provenance"
+  ],
+  "results": {
+    "nine_digit_relevance_independently_noticed": true,
+    "row_major_3x3_grouping_explicitly_specified": false,
+    "equal_tercile_1_3_4_6_7_9_map_explicitly_specified": false,
+    "rotate_90_ccw_explicitly_specified": false,
+    "historical_raw_digit_shuffle_attempted": true,
+    "historical_raw_digit_shuffle_reported_unproductive": true
+  },
+  "conclusion": "Experiment 378 is a specific and promising external match, but all three registration parameters remain uncued in the recovered corpus. Preserve as an active candidate, not a solved consumer."
+}

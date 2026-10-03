@@ -836,3 +836,16 @@ No preserved sticker discussion explicitly instructs reuse of the same selector 
 The strongest independent near-miss is an Aug-2026 Sudoku proposal observing 81 cells + 27 houses = 108, with the 27 houses naturally split into 9 rows, 9 columns and 9 boxes. A bounded exact-cover test exhausts all 36 raw-compatible tail selectors and 108 reasonable registrations and finds zero cases where the nine selected houses partition the 81 primary cells. Best coverage is 75/81.
 
 Thus no recovered external/historical cue currently upgrades G6. The one-shot six-state 3×3 family remains the preferred evidence-first endpoint; recursive terminal `100` remains a conditional continuation.
+
+
+## Experiment 378 — first external hit on the one-shot surface
+
+The sticker-background solution itself now supplies a striking candidate consumer for the typed one-shot endpoint.
+
+Its Terminal41 path `dat/534brn9653f9j8mmd` contains exactly nine digits: `534965398`. Historical community discussion independently noticed this nine-digit count before the present machine work and suggested the digits might aid the nine-section sticker puzzle.
+
+Treat the digits as a row-major 3×3 and map decimal 1–9 into three equal ordered groups. The result is `101/211/022`; a 90° counter-clockwise rotation gives `112/012/120`, exactly one of the six Experiment-374 one-shot states.
+
+This materially raises the one-shot endpoint's external relevance. The result is not yet promoted to intended decode because the row-major grouping, equal-tercile map and rotation are not independently fixed by a recovered source. Those three parameters are now the highest-value validation targets.
+
+The recursive terminal `100` remains a conditional continuation; the external-consumer search should now give priority to validating or falsifying this `534brn` one-shot registration before expanding elsewhere.
