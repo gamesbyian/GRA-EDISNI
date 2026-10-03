@@ -733,3 +733,18 @@ The Nov-2025 discussion independently proposed sticker/534brn **transposition/re
 Experiment 386 gives a more principled parent family. Treat the external artifact as ternary triples `(r,c,k)` and the one-shot surface as `(Q,c,r)`; exhaust the six coordinate-role permutations. Four fail before target matching because they do not define a total 3×3 function. The direct role assignment has zero q-family hits. The swapped physical axes produce the strict transpose and exactly one state/gauge hit: `112/012/120` under `q'=2q+2`.
 
 **Priority consequence:** do not search more D4 variants or digit transforms. Seek only evidence fixing the unique remaining role/gauge assignment: background column→Q, background row→output-column, and/or Q reversal.
+
+
+### Experiments 387–389 — gauge robustness and stopping boundary
+
+The active `534brn` candidate survives the known POS3 labeling gauges in the ways that matter.
+
+With one shared physical-row coordinate, all six global row-label permutations were tested. The direct role assignment has zero hits; the swapped assignment has exactly one: canonical `112/012/120`, `q'=2q+2`, identity row labels.
+
+As an adversarial control, all `(3!)^3=216` independent per-column row-label gauges were also tested. The direct assignment still has zero hits. Four transposed representatives become equivalent through middle-column relabeling, but **every** hit still requires `q'=2q+2`. Thus the axis swap and q reversal are robust; only the exact middle-column representative depends on shared-row gauge.
+
+Historical replay also strengthens the operation class: May-2026 discussion explicitly explored left-to-right versus top-to-bottom A-I tables, horizontal/vertical coordinate placement, layered 2D sheets, and DTMF/Polybius coding.
+
+A final targeted cue search found no independent source fixing the exact modern role assignment or q reversal.
+
+**Stopping rule for this lane:** freeze the candidate at “strong, uniquely bounded, externally anchored; one exact registration cue short.” Do not add transforms. Reopen only for new source evidence fixing handedness/axis roles/Q order, or for a genuinely independent second consumer.

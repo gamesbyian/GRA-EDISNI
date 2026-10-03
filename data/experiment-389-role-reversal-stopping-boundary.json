@@ -1,0 +1,34 @@
+{
+  "experiment": 389,
+  "title": "exact role/reversal cue stopping-boundary audit",
+  "status": "completed negative provenance audit",
+  "sources_checked": [
+    "Playdead Unofficial solving-breakout export",
+    "Playdead Unofficial solving export",
+    "Playdead Unofficial TLDR export",
+    "current ARG mechanics corpus and experiment documentation"
+  ],
+  "queries": [
+    "right-to-left / left-to-right",
+    "reverse / backwards",
+    "column reversal",
+    "bottom-to-top",
+    "mirror / flip",
+    "explicit matrix transpose",
+    "outer-layer reversal",
+    "Q-order reversal"
+  ],
+  "positive_operation_family_evidence": [
+    "horizontal versus vertical class tables",
+    "two-dimensional coordinate placement",
+    "general transposition/re-registration proposal",
+    "Playdead-authored quarter-turn in Xbox printer"
+  ],
+  "negative_exact_result": {
+    "background_column_to_Q": false,
+    "background_row_to_output_column": false,
+    "q_reversal_2_1_0": false,
+    "strict_matrix_transpose": false
+  },
+  "conclusion": "No recovered source currently fixes the exact Experiment-386 role assignment or q'=2q+2 reversal. The candidate should remain strong-but-unproven, and this lane should stop rather than invent additional transforms."
+}

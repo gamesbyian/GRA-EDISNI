@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **386**.
+Latest indexed experiment: **389**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -415,6 +415,10 @@ Latest indexed experiment: **386**.
 
 | 385 | 534brn transpose/q-registration decomposition: the former unique 90° CCW hit can be written as strict matrix transpose `101/211/022 -> 120/012/112` plus the preregistered Experiment-266 external-q relabeling `q'=2q+2`, which maps canonical one-shot `112/012/120` to the transposed grid. The Nov-2025 archive independently proposed sticker/534brn transposition/re-registration, but its description was broader than strict matrix transpose. The match therefore narrows the old D4 burden to a strict-transpose choice plus one already-known q-registration choice; it does not yet fix either authorially. |
 | 386 | ternary coordinate-role audit: model the external 534brn object as nine triples `(physical row r, physical col c, keypad row k)` and the one-shot object as `(Q,c,r)`. Exhaust all 3!=6 role assignments. Four cannot form a total 3×3 function; the direct `(r,c)->k` grid has zero hits under all six preregistered q maps; the swapped-axis `(c,r)->k` grid is strict transpose `120/012/112` and has exactly one hit, canonical `112/012/120` under `q'=2q+2`. This is a unique bounded coordinate-isomorphism candidate, not a solved cue. |
+
+| 387 | 534brn gauge-robustness audit: under all 6 shared global row-label gauges, the direct coordinate-role assignment still has zero hits and the swapped assignment retains exactly one hit, canonical `112/012/120` with `q'=2q+2` and identity row labels. Even under all 216 independent per-column row gauges, direct remains zero and every swapped hit still requires the same q reversal; only four middle-column-equivalent one-shot states survive. Thus role swap + q reversal are robust, while exact canonical-state identity assumes one shared physical-row coordinate. |
+| 388 | historical coordinate/layer provenance: May-2026 community discussion explicitly explored A-I left-to-right versus top-to-bottom tables, orthogonal horizontal/vertical placement, layered 2D sheets, and DTMF/Polybius positional coding before the present machine. This strengthens operation-class provenance for coordinate-role reinterpretation without fixing the exact modern mapping. |
+| 389 | exact role/reversal stopping-boundary audit: targeted replay found no independent source fixing background-column→Q, background-row→output-column, strict matrix transpose, or q order `2,1,0`. The active 534brn candidate remains strong, uniquely bounded and externally anchored but one exact registration cue short of promotion. Further transform invention in this lane is frozen. |
 
 ## Current frontier
 
