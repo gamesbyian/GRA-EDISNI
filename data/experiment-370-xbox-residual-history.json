@@ -1,0 +1,18 @@
+{
+  "experiment": 370,
+  "status": "completed historical-provenance audit",
+  "source": {
+    "title": "INSIDE PRINTER SECRET",
+    "google_doc_id": "1vlpah0LdCRpJe-OfhnkaiBIcmepGXust5BMbaFJGGt8",
+    "last_update_reported_in_document": "2019-04-15",
+    "archived_discord_tldr_source": "gamesbyian/playdead-unofficial-exports / Playdead Unofficial - ARG - tldr [462637922944811028].txt"
+  },
+  "historical_findings": [
+    "The community explicitly noticed that the Xbox Braille readout contained numbers plus an apostrophe and dash outside the password letters.",
+    "The maintained solving document says their meaning was unresolved and presents filler/obscuration as one possibility.",
+    "The July 2018 TLDR describes only the legible Braille characters as spelling NEWPLANETDISCOVERED roughly, consistent with treating non-letter cells as unresolved rather than decoded payload.",
+    "No recovered historical source in this audit identifies a second-channel interpretation for the numeric cells."
+  ],
+  "new_observation_status": "The existence of unexplained numbers is old. The specific no-5 census and exact nine-state match to CE A-I appear to be new observations in the currently recovered corpus.",
+  "operating_consequence": "Treat the residual cells as historically unresolved evidence. Do not label them proven filler, and do not promote them to a CE key without an independently specified correspondence."
+}
