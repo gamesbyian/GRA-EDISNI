@@ -161,3 +161,21 @@ The Aug-2026 community archive independently proposed an 81+27 Sudoku analogy: 8
 Experiment 377 exhausts all observation-compatible one-slash tail assignments, all six tail-position→house-family maps, both index directions, and all cyclic offsets. No combination selects nine houses that exactly cover the 81 primary cells.
 
 Do not broaden this into arbitrary Sudoku digit assignment or puzzle generation without a new external cue. The exact dimensional resemblance is preserved as provenance, but the cheapest structural consumer is closed.
+
+
+## Active candidate: 534brn nine-digit one-shot registration
+
+Experiment 378 opens a bounded candidate that satisfies the external-cue-first rule better than previous terminal-`100` resemblance searches.
+
+External artifact: the already-solved CE background path `dat/534brn9653f9j8mmd`.
+
+Independent historical cue: Nov-2025 community discussion explicitly noted that the path contains nine digits `534965398` and proposed they might help with the nine sticker sections.
+
+Frozen simple comparison:
+- row-major digits: `534 / 965 / 398`;
+- canonical equal-tercile reduction: `1–3→0, 4–6→1, 7–9→2`;
+- mapped grid: `101 / 211 / 022`;
+- D4-only orientation search;
+- unique exact hit: 90° CCW → `112 / 012 / 120`, one of the six preregistered one-shot states.
+
+Do not interpret the matched state semantically yet. Validation priority is to find external support for the three remaining registration choices: row-major 3×3 grouping, equal-tercile digit binning, and 90° CCW orientation. Failure to cue those choices should keep the result at candidate status.
