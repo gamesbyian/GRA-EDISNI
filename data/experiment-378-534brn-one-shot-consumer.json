@@ -1,0 +1,41 @@
+{
+  "experiment": 378,
+  "external_artifact": "sticker-background solution URL dat/534brn9653f9j8mmd",
+  "historical_cue": "2 Nov 2025 community discussion explicitly noticed nine digits 534965398 and proposed they might aid ordering the nine sticker sections",
+  "digit_stream": "534965398",
+  "digit_grid_row_major": ["534", "965", "398"],
+  "declared_digit_to_ternary": "1-3 -> 0; 4-6 -> 1; 7-9 -> 2",
+  "ternary_grid_row_major": ["101", "211", "022"],
+  "exact_one_shot_match": {
+    "orientation": "rot90_ccw",
+    "middle_column": "112",
+    "grid": ["112", "012", "120"]
+  },
+  "one_shot_family": [
+    "102/002/120",
+    "102/012/100",
+    "102/022/100",
+    "112/012/100",
+    "112/012/120",
+    "122/022/100"
+  ],
+  "d4_target_patterns": 48,
+  "descriptive_nulls": {
+    "uniform_ternary": {
+      "space": 19683,
+      "hits": 48,
+      "fraction": 0.0024386526444139613
+    },
+    "fixed_observed_census_0x2_1x4_2x3": {
+      "space": 1260,
+      "hits": 8,
+      "fraction": 0.006349206349206349
+    }
+  },
+  "monotone_decimal_partition_sensitivity": {
+    "partitions_tested": 28,
+    "hit_cutpoints": [[3,6],[3,7]],
+    "note": "(3,6) is the canonical equal-tercile split. (3,7) is observationally identical here because digit 7 does not occur."
+  },
+  "interpretation": "A direct sticker-derived external artifact contains exactly nine decimal digits. Under the canonical ordered tercile map of 1..9 into three equal groups, the row-major 3x3 digit grid becomes 101/211/022; rotating 90 degrees counter-clockwise yields 112/012/120, exactly one of the six independently derived one-shot G5 objects. This is a specific externally registered match and materially stronger than generic pattern resemblance, but the decimal-tercile interpretation and row-major gridding remain hypotheses rather than historically documented authorial instructions."
+}
