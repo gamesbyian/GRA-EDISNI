@@ -1,0 +1,34 @@
+{
+  "experiment": 376,
+  "title": "historical repeat/recursion cue hunt after typed G5",
+  "status": "completed bounded provenance audit",
+  "source_repository": "gamesbyian/playdead-unofficial-exports",
+  "source_commit": "5e5897e2ce70dad5a2bd85e459770637cb36610f",
+  "primary_channel": "Playdead Unofficial - ARG - solving-breakout [463106924708233216].txt",
+  "positive_hits": [
+    {
+      "date": "2026-05-22",
+      "finding": "community explicitly proposed a two-layer 9+3 architecture: first nine symbols encode a larger domain and final three encode a second number selecting a smaller subset"
+    },
+    {
+      "date": "2026-05-22",
+      "finding": "phone-keypad analogy: one layer chooses a keypad number and a second layer chooses a letter within that key"
+    },
+    {
+      "date": "2026-05-20",
+      "finding": "community described the sticker construction as potentially layered/onion-like"
+    },
+    {
+      "date": "2026-08-09",
+      "finding": "community independently proposed a Sudoku analogy based on 81 cells plus 27 row/column/box houses = 108"
+    }
+  ],
+  "negative_result": {
+    "explicit_same_selector_reuse": false,
+    "explicit_recursion": false,
+    "explicit_repeat_until_fixed_point": false,
+    "explicit_d_to_Q_identification": false,
+    "explicit_outer_axis_reuse": false
+  },
+  "interpretation": "The archive independently strengthens one selector application and layered/nested interpretation, but still does not supply the specific G6 instruction to reuse the same d-typed selector on the Q axis."
+}
