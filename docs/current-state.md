@@ -908,3 +908,14 @@ The leading external-consumer candidate now selects exactly two complete masters
 Exact `112/012/120` hits are 2/648 at U2, the same 2/216 at U3, 2/20 at U4, and **0/14 at U5**. Conditional on the external registration being genuine, this is evidence for the one-shot G5 endpoint and against current G6.
 
 The selected pair differs only at residues 84 and 102. Both predict residue 82=slash, whereas U5 fixes 82=dot. They also predict 103=slash and 45=dash. This creates clean prospective physical tests and makes acquisition evidence more valuable than further transform search.
+
+
+## Experiment 392 — physical acquisition is now the active lane
+
+The 534brn-selected pair now has a concrete acquisition program.
+
+Residue 82 is the cleanest one-shot-vs-G6 test: selected pair predicts slash, U5 predicts dot. Target serials are 082,190,298,406,514,622.
+
+Residues 84 and 102 are the only unseen cells distinguishing the two selected masters. Existing unverified 427=dot and 369=dot claims would each falsify the selected pair if physically confirmed.
+
+A fresh indexed-web sweep found no new defensible exact target-serial photo. Current priority therefore shifts to owner/comment funnels and marketplace imagery, with the model frozen pending physical evidence.
