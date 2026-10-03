@@ -886,3 +886,16 @@ The successful 90° CCW relation decomposes into strict transpose plus `q'=2q+2`
 More strongly, represent the external grid as nine ternary triples `(r,c,k)`, where `k` is the historically licensed DTMF keypad-row coordinate, and the one-shot surface as `(Q,c,r)`. Across all six permutations of coordinate roles, only two even define total 3×3 functions. The direct grid has no one-shot hit under any preregistered q map. The swapped-axis grid, equivalent to strict transpose, has exactly one hit: canonical `112/012/120` in q registration `q'=2q+2`.
 
 This materially reduces post-hoc geometric freedom. Historical discussion does support transposition/re-registration as an operation family, but not strict matrix transpose, and no recovered authorial cue fixes the q reversal. Current status remains a strong, uniquely bounded external-consumer candidate rather than a solved decoder.
+
+
+## Experiments 387–389 — robust role swap, unresolved exact registration
+
+The `534brn` one-shot correspondence survives explicit gauge stress-testing.
+
+Under all six shared global POS3 row-label permutations, the direct coordinate assignment has no hit and the swapped-axis assignment retains exactly one: `112/012/120` under `q'=2q+2` with identity row labels.
+
+Even under the deliberately loose 216 independent per-column row-label gauges, direct remains impossible and every transposed hit still requires `q'=2q+2`. The extra ambiguity affects only the middle column, exactly where the one-shot family already carries all variation. So the robust external claim is the swapped coordinate-role registration plus q reversal; the exact canonical middle-column representative assumes a shared physical-row coordinate.
+
+Historical discussion independently explored horizontal/vertical coordinate roles, transposed table orientations, layered 2D placement, and DTMF/Polybius structure before the present machine, strengthening the operation class.
+
+No recovered source fixes the exact role assignment or q reversal. The active candidate is therefore frozen as **strong, uniquely bounded and externally anchored, but one exact registration cue short of promotion**.
