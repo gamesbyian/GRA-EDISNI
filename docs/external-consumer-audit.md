@@ -179,3 +179,18 @@ Frozen simple comparison:
 - unique exact hit: 90° CCW → `112 / 012 / 120`, one of the six preregistered one-shot states.
 
 Do not interpret the matched state semantically yet. Validation priority is to find external support for the three remaining registration choices: row-major 3×3 grouping, equal-tercile digit binning, and 90° CCW orientation. Failure to cue those choices should keep the result at candidate status.
+
+
+### Coordinate-role form of the active 534brn candidate
+
+Experiments 385–386 supersede the loose “90° CCW” phrasing with a bounded coordinate comparison.
+
+External object:
+- nine triples `(background row r, background column c, DTMF row k)`.
+
+One-shot object:
+- nine triples `(Q, physical column c, minority-row value r)`.
+
+Exhausting all six role permutations leaves only two total 3×3 functions. Direct `(r,c)->k` has no hit under the six preregistered Experiment-266 q maps. Swapped `(c,r)->k` gives `120/012/112` and uniquely matches canonical one-shot `112/012/120` under `q'=2q+2`.
+
+Treat this as the active registration hypothesis. Validation must target the role assignment or q reversal directly. Do not widen back to arbitrary square transforms.
