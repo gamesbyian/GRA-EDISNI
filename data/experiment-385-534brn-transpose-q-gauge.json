@@ -1,8 +1,16 @@
 {
   "experiment": 385,
-  "source_keypad_row_grid": ["101", "211", "022"],
-  "historically_proposed_operation": "transpose the sticker/grid structure in relation to 534brn",
-  "transposed_source_grid": ["120", "012", "112"],
+  "source_keypad_row_grid": [
+    "101",
+    "211",
+    "022"
+  ],
+  "historically_proposed_operation": "community proposed transposition/re-registration of sticker 3x3 cells in relation to 534brn; accompanying description was broader than strict matrix transpose",
+  "transposed_source_grid": [
+    "120",
+    "012",
+    "112"
+  ],
   "preregistered_q_family": {
     "source": "Experiment 266, reconciled in Experiment 355",
     "maps": [
@@ -28,5 +36,5 @@
     "equivalent_description": "transpose 101/211/022 -> 120/012/112, then compare in q'=2q+2 gauge",
     "identity": "rot90_ccw = q-row reversal after transpose"
   },
-  "interpretation": "The last apparent geometric free parameter can be decomposed into two independently pre-existing pieces: a transpose operation explicitly proposed in Nov 2025 around the sticker/534brn relation, and one member of the six q relabelings already tied for maximum first-pass retention in Experiment 266 before the external match was known. No direct, untransposed source grid matches any one-shot state under those q relabelings; the transposed grid matches exactly one state/gauge pair, 112/012/120 with q'=2q+2. This removes the need to posit an otherwise free CCW rotation, but the selected q gauge is still fixed by the external match rather than an authorial cue, so the result remains a strong candidate rather than a solved decoder."
+  "interpretation": "The last apparent geometric free parameter decomposes into a strict matrix transpose, which lies inside a historically proposed sticker/534brn transposition-re-registration operation family, plus one member of the six q relabelings already tied for maximum first-pass retention in Experiment 266 before the external match was known. No direct, untransposed source grid matches any one-shot state under those q relabelings; the strictly transposed grid matches exactly one state/gauge pair, 112/012/120 with q'=2q+2. This materially narrows the former free CCW choice, but neither strict transpose nor the selected q gauge is independently fixed by an authorial cue, so the result remains a strong candidate rather than a solved decoder."
 }
