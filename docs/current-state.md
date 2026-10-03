@@ -823,3 +823,16 @@ Stopping after that first typed selection leaves 20 raw-compatible machines but 
 G6 now has a more precise epistemic status. Reusing S to consume the remaining Q axis is a cross-axis d→Q identification rather than a native continuation. The recursive machine remains the strongest developed conditional continuation and its map is tightly constrained once second use is admitted, but the repeat/coercion decision itself still lacks independent support.
 
 Accordingly, the project now has two legitimate externally testable endpoints: the typed one-shot six-state 3×3 family and the recursive conditional terminal `100`. External evidence, not internal elegance, should decide between them.
+
+
+## Experiments 376–377 — G6 historical cue audit
+
+A targeted replay of the preserved community archive strengthens the first selector application but does not rescue G6.
+
+The May-2026 discussion independently proposed the sticker 9+3 split as a larger first-nine domain plus a smaller last-three index used to select within it. That is now a good historical analogue for typed G5.
+
+No preserved sticker discussion explicitly instructs reuse of the same selector on an outer axis, recursive reapplication, d→Q identification, or iteration to a fixed point.
+
+The strongest independent near-miss is an Aug-2026 Sudoku proposal observing 81 cells + 27 houses = 108, with the 27 houses naturally split into 9 rows, 9 columns and 9 boxes. A bounded exact-cover test exhausts all 36 raw-compatible tail selectors and 108 reasonable registrations and finds zero cases where the nine selected houses partition the 81 primary cells. Best coverage is 75/81.
+
+Thus no recovered external/historical cue currently upgrades G6. The one-shot six-state 3×3 family remains the preferred evidence-first endpoint; recursive terminal `100` remains a conditional continuation.
