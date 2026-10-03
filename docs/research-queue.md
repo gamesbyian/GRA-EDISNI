@@ -650,3 +650,16 @@ and middle column in `002,010,020,110,112,220`.
 2. the recursive conditional terminal `100` / route machinery.
 
 Raise G6 only if an external artifact independently cues repeat/recursion, identifies d with Q, or naturally consumes the three Q surfaces. Do not let terminal elegance alone decide the fork.
+
+
+### Experiments 376–377 — G6 cue hunt and Sudoku near-miss
+
+The targeted historical search found stronger support for **one** body+index application but still no preserved instruction to repeat it.
+
+The May-2026 discussion explicitly proposed the first nine symbols as a larger domain and the final three as a smaller index selecting within that domain. This now aligns cleanly with Experiment 373's typed G5 interpretation.
+
+No sticker-specific historical source was found that says to reuse the same index on the remaining outer axis, recurse, identify d with Q, or repeat until stable.
+
+A separate Aug-2026 Sudoku proposal supplied an unusually exact 81+27 dimensional analogy: 81 cells plus 27 houses split into 9 rows, 9 columns and 9 boxes. Experiment 377 tested the cheapest natural consequence. Across all 36 observation-compatible tail assignments and 108 reasonable house-type/index registrations, none selects nine houses forming an exact cover of the 81 primary cells.
+
+**Priority consequence:** do not widen Sudoku or generic recursion. Keep the typed one-shot six-state object as the evidence-first endpoint. Reopen G6 only for a genuinely independent repeat/cross-axis cue or an external consumer that requires the Q axis.
