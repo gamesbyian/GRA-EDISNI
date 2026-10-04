@@ -815,22 +815,21 @@ Two immediate probes are complete:
 **Next move:** remain consumer-first. Pick the next operation only when the historical mechanics corpus or a CE artifact supplies the parameter we would otherwise be tempted to guess. Continue physical acquisition in parallel.
 
 
-### Experiments 398–401 — robust indexed feature, numeric interface, and coupling collapse
+### Experiments 398–407 — weighted historical-hypothesis pruning
 
-The weighted-completion program produced one robust new derived surface and several useful closures.
+The weighted completion program has now replayed several historically proposed sticker decoders without pretending the missing 43 cells are known.
 
-**Experiment 398:** replay the Nov-2025 historical suggestion that the nine `534brn` digits may act as indices into the nine sticker sections. Direct one-based indexing of the native IABCDEFGH class words yields only two outputs across U2 and collapses to a single invariant across U4/U5/E2:
+**Live derived surfaces**
+- Experiment 398: direct one-based use of the nine `534brn` digits as indices into native class words yields a stable U4/U5/E2 signature `--/--/-/-`.
+- Experiment 399: the May-2026 9+3 binary-number representation collapses under E2 to nine fixed 9-bit body values plus one class-C tail ambiguity, exactly residue 84 vs 102.
+- Experiment 407: E2 has only two variable residues at all, 84 and 102, forced complementary. The active external pair is literally one unresolved physical bit.
 
-```
---/--/-/-
-```
+**Closed cheap consumers / ciphers**
+- Experiment 400: the cheapest contiguous Q-chunk interpretation of the 9+3 selector has zero survivors.
+- Experiment 401: `RRURRURUR`, the lever projection of the indexed signature, occurs repeatedly in preserved 2023 De Bruijn command streams actually tested in-game with no new result.
+- Experiment 402: standard unkeyed direct-cube Trifid over the historical 3×36 carrier has zero U2 survivors against the preserved partial.
+- Experiment 403: direct serial Fractionated Morse is structurally impossible because every symbol choice as separator creates an invariant forbidden `xxx`.
+- Experiments 404–405: both flat serial and native class-word slash-separated Morse fail through invariant six-mark tokens.
+- Experiment 406 freezes this historical-cipher pruning boundary.
 
-Under the independent sleeve/lever mapping this is `RRURRURUR`.
-
-**Experiment 400 closes that lever consumer.** The completed Nov-2023 De Bruijn lever sweep covered every ternary word through length 14, so this nine-command word has already been physically tried with no unknown bunker-door result. Preserve the symbol sequence only as a robust derived feature.
-
-**Experiment 399:** the May-2026 “first 9 bits = large number; last 3 = smaller selector” proposal is now frozen numerically. Under E2, all nine 9-bit values are fixed; only class C's tail value remains ambiguous, and that is exactly the residue 84/102 physical fork. Do not invent a book/serial/number consumer.
-
-**Experiment 401:** E2 has only two variable residues, 84 and 102, and they are complementary. This is literally one remaining physical bit. G6's smallest relational fingerprint is the additional 91/100 complement.
-
-**Priority consequence:** acquisition at residue 84 or 102 now resolves every E2 representation at once. Continue consumer-first sandboxing, but do not rescue the indexed feature with another semantic layer after the lever consumer failed.
+**Priority consequence:** do not widen into keyed Trifid, arbitrary Morse rearrangements, arbitrary books, or generic numeric transforms. Computation should now return to externally specified consumers and prospective physical discrimination. Residue 82 remains the cleanest E2-vs-G6 test; residue 84 or 102 resolves E2 completely.
