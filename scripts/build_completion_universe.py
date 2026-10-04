@@ -2,12 +2,12 @@
 """Experiment 365: layered H108 completion-universe generator and query surface.
 
 The broad enumerable layer deliberately stops before the incumbent recursion:
-  U0  raw 43-bit foreground assignments (symbolic: 2^43)
+  U0  raw 42-bit foreground assignments (symbolic: 2^42)
   U1  common 3/6 or 4/5 primary census x one-slash-per-class Q4 (factored)
-  U2  3/6 one-per-physical-column primary x one-slash-per-class Q4 (648 masters)
-  U3  established polarity + exact POS3 (216 raw machines)
-  U4  first recursive closure (20)
-  U5  second recursive closure (14 canonical masters)
+  U2  3/6 one-per-physical-column primary x one-slash-per-class Q4 (324 masters)
+  U3  established polarity + exact POS3 (108 raw machines)
+  U4  first recursive closure (12)
+  U5  second recursive closure (10 canonical masters)
 
 The known physical-representation gauges are reported separately because the
 primary transition-invisible gauges need not remain inside U2's preferred
@@ -21,7 +21,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OBS=ROOT/"data"/"observations.csv"
 OUT=ROOT/"data"/"experiment-365-completion-universe.json"
-U2=ROOT/"data"/"completion-universe-u2-648.csv"
+U2=ROOT/"data"/"completion-universe-u2-324.csv"
 SERIAL="ABCDEFGHI"
 LAYOUT=("IAB","CDE","FGH")
 POS={ch:(r,c) for r,row in enumerate(LAYOUT) for c,ch in enumerate(row)}
@@ -36,7 +36,7 @@ def load_observations():
             r=int(row["residue"]); s=row["symbol"]
             if r in out and out[r]!=s: raise AssertionError(f"conflict at residue {r}")
             out[r]=s
-    assert len(out)==65
+    assert len(out)==66
     return out
 
 def primary_frame_options(obs,frame):
@@ -102,15 +102,15 @@ def census_primary_count(obs,w):
 
 def build():
     obs=load_observations(); unknown=unknown_residues(obs)
-    assert len(unknown)==43
+    assert len(unknown)==42
     frame_opts=tuple(primary_frame_options(obs,f) for f in range(9))
     assert tuple(map(len,frame_opts))==(1,1,2,1,1,3,3,1,1)
     primaries=tuple("".join(parts) for parts in itertools.product(*frame_opts))
     assert len(primaries)==18
     tails=tail_options(obs)
-    assert tuple(map(len,tails))==(3,1,3,2,1,1,2,1,1)
+    assert tuple(map(len,tails))==(3,1,3,1,1,1,2,1,1)
     selectors=tuple(itertools.product(*tails))
-    assert len(selectors)==36
+    assert len(selectors)==18
 
     masters=[]
     for pi,primary in enumerate(primaries):
@@ -120,13 +120,13 @@ def build():
             code=encode_unknown43(master,unknown)
             assert decode_unknown43(code,obs,unknown)==master
             masters.append((pi,si,code,master))
-    assert len(masters)==648
-    assert len({m[2] for m in masters})==648
+    assert len(masters)==324
+    assert len({m[2] for m in masters})==324
 
     rows=[]
     for r in unknown:
         c=Counter(master[r-1] for *_prefix,master in masters)
-        H=-sum((n/648)*math.log2(n/648) for n in c.values())
+        H=-sum((n/324)*math.log2(n/324) for n in c.values())
         rows.append({
             "residue":r,
             "background":SERIAL[(r-1)%9],
@@ -143,56 +143,56 @@ def build():
         })
 
     primary_discriminator=(22,49,50,55,58)
-    tail_discriminator=(82,84,88,91,93,94)
+    tail_discriminator=(82,84,88,91,93)
     assert distinct_signatures(primary_discriminator)==18
-    assert distinct_signatures(tail_discriminator)==36
-    assert distinct_signatures(primary_discriminator+tail_discriminator)==648
+    assert distinct_signatures(tail_discriminator)==18
+    assert distinct_signatures(primary_discriminator+tail_discriminator)==324
 
     c3,n3=census_primary_count(obs,3); c4,n4=census_primary_count(obs,4)
     assert n3==12960 and n4==18000
     result={
         "experiment":365,
-        "unknown_residue_count":43,
+        "unknown_residue_count":42,
         "unknown_residues":list(unknown),
         "universes":{
-            "U0_raw_binary":{"count":2**43,"materialization":"symbolic only"},
+            "U0_raw_binary":{"count":2**42,"materialization":"symbolic only"},
             "U1_common_census_plus_one_slash_tail":{
                 "primary_3_6_completions":n3,
                 "primary_4_5_completions":n4,
-                "tail_one_slash_completions":36,
-                "count":(n3+n4)*36,
+                "tail_one_slash_completions":18,
+                "count":(n3+n4)*18,
                 "materialization":"factored",
             },
             "U2_one_per_column_3_6_plus_one_slash_tail":{
                 "primary_completion_count":18,
                 "primary_frame_option_counts":list(map(len,frame_opts)),
-                "tail_completion_count":36,
+                "tail_completion_count":18,
                 "tail_class_option_counts":list(map(len,tails)),
-                "count":648,
+                "count":324,
                 "materialization":"complete 43-bit enumeration",
             },
-            "U3_established_polarity_exact_pos3":{"count":216},
-            "U4_first_recursive_closure":{"count":20},
-            "U5_second_recursive_closure_canonical":{"count":14},
+            "U3_established_polarity_exact_pos3":{"count":108},
+            "U4_first_recursive_closure":{"count":12},
+            "U5_second_recursive_closure_canonical":{"count":10},
             "P_exact_physical_representation_expansion":{
-                "canonical_states":14,
+                "canonical_states":10,
                 "primary_gauge_combinations":4,
                 "q4_A_C_gauge_combinations":4,
-                "count":224,
+                "count":160,
                 "nesting_note":"representation expansion around U5; not constrained to remain inside U2 geometry",
             },
         },
         "u2_residue_catalog":rows,
         "highest_information_u2_residues":[x["residue"] for x in rows if abs(x["entropy_bits"]-1)<1e-12],
         "u2_minimum_complete_discriminator":{
-            "lower_bound_bits":11,
-            "proof":"U2 factorizes into 18 primary x 36 tail; binary observations require at least 5+6 bits",
+            "lower_bound_bits":10,
+            "proof":"U2 factorizes into 18 primary x 18 tail; binary observations require at least 5+5 bits",
             "primary_residues":list(primary_discriminator),
             "tail_residues":list(tail_discriminator),
             "all_residues":list(primary_discriminator+tail_discriminator),
             "distinguished_primary_completions":18,
-            "distinguished_tail_completions":36,
-            "distinguished_complete_masters":648,
+            "distinguished_tail_completions":18,
+            "distinguished_complete_masters":324,
         },
         "guardrail":"candidate frequencies are combinatorial multiplicities, not calibrated probabilities",
     }
