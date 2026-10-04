@@ -3,7 +3,17 @@
   "historical_operation": "use the nine decimal digits of 534brn9653f9j8mmd as one-based indices into the nine native sticker class words",
   "digits": "534965398",
   "native_class_order": "IABCDEFGH",
-  "selected_residues": [45,19,29,75,49,41,24,79,71],
+  "selected_residues": [
+    45,
+    19,
+    29,
+    75,
+    49,
+    41,
+    24,
+    79,
+    71
+  ],
   "ensemble_summary": {
     "U2": {
       "distinct_outputs": 2,
@@ -23,9 +33,13 @@
     "E2": {
       "distinct_outputs": 1,
       "output": "--/--/-/-"
+    },
+    "U3": {
+      "distinct_outputs": 1,
+      "output": "--/--/-/-"
     }
   },
   "lever_projection": "RRURRURUR",
-  "classification": "robust derived feature, no independently identified downstream consumer",
+  "classification": "robust derived feature fixed from U3 onward; direct in-game lever consumer later closed by Experiment 401",
   "guardrail": "Do not search arbitrary index offsets or remap the nine-command output semantically. The historical operation tested here is one-based direct indexing only."
 }
