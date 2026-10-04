@@ -19,11 +19,12 @@ unpredicted primary cells against the tail-only family.
 from __future__ import annotations
 
 import csv
+import os
 from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OBS = ROOT / "data" / "observations.csv"
+OBS = ROOT / os.environ.get("GRA_EDISNI_OBSERVATIONS_FILE", "data/observations.csv")
 INCUMBENT = ROOT / "data" / "sticker-holdout-residue-results.csv"
 SERIAL_ORDER = "ABCDEFGHI"
 
