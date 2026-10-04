@@ -1004,3 +1004,10 @@ Independently, all three genuine damaged JPEG capture families contain one commo
 This makes 128 a strong source-native image-dimension clue. Exact 128×128 remains unproven pending a second-axis/square constraint.
 
 The footer also proves orientation change is authorially present on the same 534brn page, but literal 180° transfer does not reproduce the sticker one-shot state. The exact q reversal remains unresolved.
+
+
+## Experiment 416 — 64 MCUs would prove 128×128
+
+The SOF sampling descriptors imply 16×16-pixel MCUs. Inside the surviving 128..255 dimension range, an exact 64-MCU entropy stream is possible only for 128×128.
+
+This converts the historical “almost 64 repeated groups” observation into a crisp forensic target. It is not yet proof because group↔MCU identity and the exact count remain to be established.
