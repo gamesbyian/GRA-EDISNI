@@ -885,3 +885,14 @@ So `128` lands exactly on an unresolved JPEG dimension field rather than requiri
 **Priority:** advance the JPEG lane structurally. Test dimension-sensitive entropy/MCU constraints before attempting pixels. Do not simply write 128×128 into the stream until a square/second-axis cue exists.
 
 Experiment 415 also upgrades 534brn orientation provenance: the same page authorially requires a 180° reading. But literal 180° rotation of the DTMF grid has zero one-shot hits, so this still does not fix the successful `q'=2q+2` registration.
+
+
+### Experiment 416 — exact entropy target for 128×128
+
+The recovered SOF sampling scheme makes the next JPEG test precise.
+
+With Y 2×2 and Cb/Cr 1×1 sampling, each MCU covers 16×16 pixels. Given the already-derived width/height range 128..255, an exact total of **64 MCUs** can occur only at **128×128**.
+
+The Dec-2025 report of “almost 64” repeated bit-pattern groups is therefore worth revisiting, but only structurally.
+
+**Next test:** prove whether those repeated groups are MCU-aligned and count complete MCUs. If exactly 64, 128×128 is derived rather than guessed.
