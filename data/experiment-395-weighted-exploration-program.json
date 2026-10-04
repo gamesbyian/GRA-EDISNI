@@ -1,0 +1,27 @@
+{
+  "experiment": 395,
+  "title": "weighted completion exploration program",
+  "status": "active program definition",
+  "ensembles": {
+    "U2": 648,
+    "U3": 216,
+    "U4": 20,
+    "U5": 14,
+    "E2": 2
+  },
+  "principle": "Use missing-sticker predictions as coherent counterfactual ensembles, not as one modal completed master or calibrated probability distribution.",
+  "workstreams": [
+    "external-consumer replay",
+    "registration/check-bit structure",
+    "lever consumer when independently ordered",
+    "coordinate/selector operations",
+    "sensitivity and acquisition maps"
+  ],
+  "graduation": [
+    "broad-ensemble invariant",
+    "independently specified sharp consumer filter",
+    "prospective separation of live model families",
+    "small falsifiable physical-residue prediction set"
+  ],
+  "guardrail": "No arbitrary plaintext/image/cipher fishing and no U5 support weights for testing pre-G6 alternatives."
+}

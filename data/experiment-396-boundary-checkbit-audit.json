@@ -1,0 +1,46 @@
+{
+  "experiment": 396,
+  "operation_family": "fixed-width native edge signatures as possible row registration/check bits",
+  "carrier": "nine 12-cell class words A-I",
+  "summary": {
+    "width_1": {
+      "U2_unique_9_of_9": 0,
+      "U4_unique_9_of_9": 0,
+      "E2_unique_9_of_9": 0
+    },
+    "width_2": {
+      "U2_unique_9_of_9": 0,
+      "U4_unique_9_of_9": 0,
+      "E2_unique_9_of_9": 0
+    },
+    "width_3": {
+      "U2_unique_9_of_9": 0,
+      "U4_unique_9_of_9": 0,
+      "E2_unique_9_of_9": 0
+    },
+    "width_4": {
+      "U2_unique_9_of_9": 243,
+      "U4_unique_9_of_9": 4,
+      "E2_unique_9_of_9": 0
+    },
+    "natural_order_optimality": {
+      "A_to_I_optimal_in_U2_U4_E2_widths_1_to_4": 0,
+      "physical_IAB_CDE_FGH_optimal_in_U2_U4_E2_widths_1_to_4": 0
+    }
+  },
+  "selected_gap_examples": {
+    "width_1": {
+      "U2_A_to_I_mean_excess": 4.5,
+      "U2_physical_mean_excess": 4.166666666666667,
+      "U4_A_to_I_mean_excess": 4.1,
+      "U4_physical_mean_excess": 3.6
+    },
+    "width_4": {
+      "U2_A_to_I_mean_excess": 18.041666666666668,
+      "U2_physical_mean_excess": 17.375,
+      "U4_A_to_I_mean_excess": 18.65,
+      "U4_physical_mean_excess": 17.65
+    }
+  },
+  "conclusion": "Fixed-width edge signatures do not robustly identify or recover the known row registrations. The cheap PC-style boundary-continuity analogue is negative unless an external sticker-native cue specifies a different boundary subset or metric."
+}

@@ -799,3 +799,17 @@ Experiment 394 gives the first example. Standard Braille over the natural 9×12 
 4. coordinate/selector operations grounded in the mechanics corpus.
 
 Do not use weighted guesses for open-ended plaintext/image fishing. A sandbox hit must survive coherent completion replay before it can graduate.
+
+
+### Experiments 395–397 — weighted exploration program underway
+
+The prediction matrix is now an active **ensemble exploration surface**, not just an acquisition forecast.
+
+Experiment 395 formalizes the program: test new operations across coherent U2/U3/U4/U5/E2 panels, report invariance/survivors/sensitivity, and graduate only results with broad robustness, independently specified filtering, prospective family separation, or small falsifiable physical targets.
+
+Two immediate probes are complete:
+
+- **Experiment 396:** the obvious PC-style boundary/check-bit analogue is negative. Fixed symmetric edge signatures of the native 12-cell class words do not robustly identify all nine rows or recover either natural row order.
+- **Experiment 397:** using the independently licensed `534brn` DTMF row/column directly as G5 depth selectors is a hard negative. No U2/U4/U5/E2 completion yields even one valid primary POS3 surface.
+
+**Next move:** remain consumer-first. Pick the next operation only when the historical mechanics corpus or a CE artifact supplies the parameter we would otherwise be tempted to guess. Continue physical acquisition in parallel.

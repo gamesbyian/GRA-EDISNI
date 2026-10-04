@@ -1,0 +1,20 @@
+{
+  "experiment": 397,
+  "operation": "registered 534brn DTMF row/column used directly as d selector for each native class",
+  "results": {
+    "DTMF_row": {
+      "U2_valid_pos3_by_q": [0,0,0],
+      "U4_valid_pos3_by_q": [0,0,0],
+      "U5_valid_pos3_by_q": [0,0,0],
+      "E2_valid_pos3_by_q": [0,0,0]
+    },
+    "DTMF_column": {
+      "U2_valid_pos3_by_q": [0,0,0],
+      "U4_valid_pos3_by_q": [0,0,0],
+      "U5_valid_pos3_by_q": [0,0,0],
+      "E2_valid_pos3_by_q": [0,0,0]
+    }
+  },
+  "classification": "hard negative",
+  "conclusion": "The 534brn DTMF coordinates do not directly replace the sticker tail as G5 depth selectors. Preserve the external coordinate-isomorphism interpretation; do not widen to arbitrary digit-derived selectors."
+}
