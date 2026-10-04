@@ -13,6 +13,9 @@ on:
       - "docs/global-address-bijection-audit.md"
       - ".github/workflows/verify-experiments-303-305.yml"
 
+env:
+  GRA_EDISNI_OBSERVATIONS_FILE: data/observations-experiment-417.csv
+
 jobs:
   verify-global-address-audits:
     runs-on: ubuntu-latest

@@ -4,7 +4,7 @@ _Status: active, 4 Oct 2026._
 
 ## Purpose
 
-The project now has enough structure to use the 43 missing H108 cells as a controlled **model ensemble** rather than as blank space.
+The project now has enough structure to use the 42 missing H108 cells as a controlled **model ensemble** rather than as blank space.
 
 The goal is not to guess one complete sticker sheet and decode it. The goal is to ask:
 
@@ -16,11 +16,11 @@ This program operationalizes Experiments 393–394.
 
 Every exploratory operation should use the broadest relevant panels:
 
-- **U2 / 648** — one-per-column 3/6 primary geometry + one-slash tail;
-- **U3 / 216** — established primary polarity + exact POS3;
-- **U4 / 20** — typed one-shot G5 closure;
-- **U5 / 14** — recursive G6 incumbent family;
-- **E2 / 2** — the externally selected `534brn` pair from Experiment 390;
+- **U2 / 324** — one-per-column 3/6 primary geometry + one-slash tail;
+- **U3 / 108** — established primary polarity + exact POS3;
+- **U4 / 12** — typed one-shot G5 closure;
+- **U5 / 10** — recursive G6 incumbent family;
+- **E2 / 0 (retired)** — the formerly selected `534brn` pair was prospectively falsified by confirmed sticker 427 = dot in Experiment 418;
 - **R / frozen rival** — row-selector family when residues 84/102 or its operation family are relevant.
 
 Do not substitute the per-residue modal prediction sheet for any of these panels.
@@ -34,7 +34,7 @@ A sandbox experiment should report, where meaningful:
 - survivor counts under an independently specified criterion;
 - sensitivity to uncertain residues;
 - whether U4 and U5 differ;
-- whether E2 is unusually constrained;
+- whether a historical E2-derived feature survives after removing the now-falsified pair;
 - whether the result disappears when moving from a single completion to the ensemble;
 - whether any apparent structure depends on a representation gauge.
 
@@ -158,4 +158,5 @@ Otherwise record it as a negative or exploratory curiosity and move on.
 10. Experiment 407 — exact coupling atlas: E2 reduced to the single 84/102 physical bit.
 11. Experiment 408 — exact nine-page Terminal41 shutdown chain audited and closed as a deterministic countdown, not an input consumer.
 12. Next — consumer-first only. A new artifact must supply the key, traversal, corpus, role, or downstream grammar before another decode family opens.
-13. Continue acquisition in parallel; residue 82 is the cleanest G5-vs-G6 test, while residue 84 or 102 resolves E2 completely.
+13. Experiment 418 — confirmed 427 = dot prunes U2/U3/U4/U5 to 324/108/12/10 and prospectively falsifies the frozen E2 pair. Residue 94 is now forced slash under the one-slash-per-depth-stack model.
+14. Continue acquisition in parallel; prioritize residues that discriminate the remaining 12-state U4 and 10-state U5 families rather than the retired E2 fork.

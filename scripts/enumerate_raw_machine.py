@@ -23,12 +23,13 @@ or terminal payload is used as a filter.
 from __future__ import annotations
 
 import csv
+import os
 from collections import Counter, defaultdict
 from itertools import product
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OBSERVATIONS = ROOT / "data" / "observations.csv"
+OBSERVATIONS = ROOT / os.environ.get("GRA_EDISNI_OBSERVATIONS_FILE", "data/observations.csv")
 
 SERIAL_ORDER = "ABCDEFGHI"
 PHYSICAL_LAYOUT = (
@@ -245,14 +246,14 @@ def main():
     selectors = list(enumerate_selectors(selector_candidates))
 
     assert len(primary_payloads) == 6
-    assert len(selectors) == 36
+    assert len(selectors) == 18
 
     raw_pairs = [
         (payload, selector)
         for payload in primary_payloads
         for selector in selectors
     ]
-    assert len(raw_pairs) == 216
+    assert len(raw_pairs) == 108
 
     first_pass_survivors = []
     for payload, selector in raw_pairs:
@@ -263,7 +264,7 @@ def main():
         if None not in decoded:
             first_pass_survivors.append((payload, selector, decoded))
 
-    assert len(first_pass_survivors) == 20
+    assert len(first_pass_survivors) == 12
 
     final_survivors = []
     for payload, selector, first_decoded in first_pass_survivors:
@@ -273,14 +274,14 @@ def main():
                 (payload, selector, first_decoded, terminal)
             )
 
-    assert len(final_survivors) == 14
+    assert len(final_survivors) == 10
     assert {terminal for *_prefix, terminal in final_survivors} == {"100"}
 
     masters = [
         generate_master(payload, selector)
         for payload, selector, _first, _terminal in final_survivors
     ]
-    assert len(set(masters)) == 14
+    assert len(set(masters)) == 10
 
     # The fully reconstructed raw-constraint family independently recovers the
     # familiar invariant/variable split and global symbol census.
@@ -289,7 +290,7 @@ def main():
         for residue in range(1, 109)
         if len({master[residue - 1] for master in masters}) > 1
     ]
-    assert variable == [22, 25, 55, 58, 61, 84, 88, 91, 94, 100, 102, 103, 106]
+    assert variable == [22, 25, 55, 58, 61, 84, 88, 91, 100, 102, 106]
     assert all(
         Counter(master) == Counter({"/": 54, "-": 36, ".": 18})
         for master in masters
@@ -317,9 +318,9 @@ def main():
             f"{'/'.join(first_decoded)} | {terminal}"
         )
 
-    print("OK: raw constraints + recursive POS3 closure recover exactly 14 states")
+    print("OK: raw constraints + recursive POS3 closure recover exactly 10 states")
     print("OK: terminal 100 emerges without being used as a filter")
-    print("OK: reconstructed masters reproduce corpus, 95/13 split, and 54/36/18 census")
+    print("OK: reconstructed masters reproduce corpus, 97/11 split, and 54/36/18 census")
 
 
 if __name__ == "__main__":

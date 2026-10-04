@@ -1,0 +1,40 @@
+{
+  "experiment": 418,
+  "title": "prospective validation of sticker 427 foreground",
+  "date": "2026-10-04",
+  "new_observation": {
+    "serial": 427,
+    "residue": 103,
+    "foreground_symbol": ".",
+    "background_image_class": null,
+    "provenance": "confirmed from a Collector's Edition owner; background tile not yet identified"
+  },
+  "live_universe_prune": {
+    "U2": {"before": 648, "after": 324},
+    "U3": {"before": 216, "after": 108},
+    "U4": {"before": 20, "after": 12},
+    "U5": {"before": 14, "after": 10}
+  },
+  "prospective_534brn_test": {
+    "frozen_target": "112/012/120",
+    "prior_selected_master_count": 2,
+    "prior_prediction_at_residue_103": "/",
+    "observed_at_residue_103": ".",
+    "survivors_after_observation": 0,
+    "result": "falsified under the frozen registration and one-slash-per-depth-stack model"
+  },
+  "structural_consequences": {
+    "tail_stack_D": {
+      "residues": [85, 94, 103],
+      "observed": {"85": ".", "103": "."},
+      "forced_under_one_slash_per_depth_stack": {"94": "/"}
+    },
+    "canonical_recursive_family": {
+      "states_before": 14,
+      "states_after": 10,
+      "terminal_payload": "100",
+      "terminal_payload_survives": true
+    }
+  },
+  "epistemic_note": "This is a prospective physical test of the previously frozen 534brn-selected pair. Historical experiment outputs remain historical snapshots; live ensemble machinery must use the new observation."
+}

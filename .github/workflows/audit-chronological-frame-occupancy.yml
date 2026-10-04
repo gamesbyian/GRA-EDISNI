@@ -9,6 +9,9 @@ on:
       - ".github/workflows/audit-chronological-frame-occupancy.yml"
   workflow_dispatch:
 
+env:
+  GRA_EDISNI_OBSERVATIONS_FILE: data/observations-experiment-417.csv
+
 jobs:
   audit:
     runs-on: ubuntu-latest

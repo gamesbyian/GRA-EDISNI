@@ -181,10 +181,11 @@ def main():
     assert variable == expected_variable
     assert len(invariant) == 95
 
-    # Checked-in physical corpus.
+    # Checked-in physical corpus. The structural model still has 14 legal
+    # states, but prospective physical observations may prune that family.
     observations = load_observations()
-    assert len(observations) == 82
-    assert len({int(row["residue"]) for row in observations}) == 65
+    assert len(observations) == 83
+    assert len({int(row["residue"]) for row in observations}) == 66
 
     for row in observations:
         serial = int(row["serial"])
@@ -192,10 +193,32 @@ def main():
         symbol = row["symbol"]
         image_class = row["image_class"]
 
-        assert image_class == SERIAL_ORDER[(serial - 1) % 9]
+        # Foreground-only confirmations are valid evidence even when the
+        # background tile has not yet been identified.
+        if image_class:
+            assert image_class == SERIAL_ORDER[(serial - 1) % 9]
         assert residue == ((serial - 1) % 108) + 1
-        for master in masters:
-            assert master[residue - 1] == symbol
+
+    live_pairs = [
+        (state, master)
+        for state, master in zip(states, masters)
+        if all(
+            master[int(row["residue"]) - 1] == row["symbol"]
+            for row in observations
+        )
+    ]
+    assert len(live_pairs) == 10
+    live_states = [state for state, _master in live_pairs]
+    live_masters = [master for _state, master in live_pairs]
+    assert all(master[102] == "." for master in live_masters)
+
+    live_variable = [
+        residue
+        for residue in range(1, 109)
+        if len({master[residue - 1] for master in live_masters}) > 1
+    ]
+    assert live_variable == [22, 25, 55, 58, 61, 84, 88, 91, 100, 102, 106]
+    assert all(master[93] == "/" for master in live_masters)
 
     # Latent register.
     codes = [latent_register(state) for state in states]
@@ -283,8 +306,10 @@ def main():
 
     print("OK: 14 legal four-bit physical states")
     print("OK: all 14 complete masters are distinct")
-    print("OK: 82 physical stickers / 65 H108 residues match every legal master")
-    print("OK: exact 95 invariant / 13 variable residue split")
+    print("OK: structural model retains 14 legal states and exact 95/13 split")
+    print("OK: 83 physical stickers / 66 H108 residues prune the live family to 10")
+    print("OK: live family has exact 97 invariant / 11 variable residue split")
+    print("OK: confirmed 427=dot forces residue 94=slash in every live state")
     print("OK: global 54/36/18 symbol census")
     print("OK: latent register weight 6, d_min=2")
     print("OK: frozen observer recovers optimal XYZG state")

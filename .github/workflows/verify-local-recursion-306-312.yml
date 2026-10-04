@@ -17,6 +17,9 @@ on:
       - "docs/alternative-machine-single-cell-defects.md"
       - ".github/workflows/verify-local-recursion-306-312.yml"
 
+env:
+  GRA_EDISNI_OBSERVATIONS_FILE: data/observations-experiment-417.csv
+
 jobs:
   verify-experiment-296:
     runs-on: ubuntu-latest

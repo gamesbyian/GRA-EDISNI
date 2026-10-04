@@ -11,6 +11,9 @@ on:
       - "docs/experiment-314-local-selector-shear.md"
       - ".github/workflows/verify-experiment-314.yml"
 
+env:
+  GRA_EDISNI_OBSERVATIONS_FILE: data/observations-experiment-417.csv
+
 jobs:
   verify-local-selector-shear:
     runs-on: ubuntu-latest

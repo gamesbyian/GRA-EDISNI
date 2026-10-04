@@ -1,134 +1,838 @@
 {
   "experiment": 366,
-  "summary": {
-    "candidate_counts": {
-      "U2": 648,
-      "U3": 216,
-      "U4": 20,
-      "U5": 14
+  "layers": {
+    "U2": {
+      "candidate_count": 324,
+      "invariant_unobserved_count": 25,
+      "variable_unobserved_count": 17,
+      "invariant_unobserved": {
+        "1": "/",
+        "6": "/",
+        "8": "-",
+        "11": "-",
+        "16": "-",
+        "27": "/",
+        "28": "/",
+        "33": "-",
+        "34": "/",
+        "35": "-",
+        "41": "/",
+        "45": "-",
+        "62": "-",
+        "64": "/",
+        "67": "/",
+        "68": "/",
+        "73": "-",
+        "77": "/",
+        "83": ".",
+        "87": ".",
+        "94": "/",
+        "99": ".",
+        "104": ".",
+        "105": ".",
+        "107": "/"
+      },
+      "variable_residues": [
+        22,
+        25,
+        49,
+        50,
+        52,
+        54,
+        55,
+        58,
+        61,
+        82,
+        84,
+        88,
+        91,
+        93,
+        100,
+        102,
+        106
+      ],
+      "minimum_discriminator": {
+        "information_lower_bound": 9,
+        "minimum_size": 10,
+        "number_of_minimum_sets": 540,
+        "examples": [
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            84,
+            88,
+            91,
+            93
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            84,
+            88,
+            91,
+            102
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            84,
+            88,
+            93,
+            100
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            84,
+            88,
+            100,
+            102
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            84,
+            91,
+            93,
+            106
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            84,
+            91,
+            102,
+            106
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            84,
+            93,
+            100,
+            106
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            84,
+            100,
+            102,
+            106
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            88,
+            91,
+            93,
+            102
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            88,
+            93,
+            100,
+            102
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            91,
+            93,
+            102,
+            106
+          ],
+          [
+            22,
+            49,
+            50,
+            55,
+            58,
+            82,
+            93,
+            100,
+            102,
+            106
+          ]
+        ]
+      },
+      "equivalence_groups": [
+        [
+          {
+            "residue": 22,
+            "inverted_from_canonical": false
+          },
+          {
+            "residue": 25,
+            "inverted_from_canonical": true
+          }
+        ],
+        [
+          {
+            "residue": 50,
+            "inverted_from_canonical": false
+          },
+          {
+            "residue": 54,
+            "inverted_from_canonical": false
+          }
+        ],
+        [
+          {
+            "residue": 88,
+            "inverted_from_canonical": true
+          },
+          {
+            "residue": 106,
+            "inverted_from_canonical": false
+          }
+        ]
+      ],
+      "newly_fixed_vs_previous_layer": {
+        "1": "/",
+        "6": "/",
+        "8": "-",
+        "11": "-",
+        "16": "-",
+        "27": "/",
+        "28": "/",
+        "33": "-",
+        "34": "/",
+        "35": "-",
+        "41": "/",
+        "45": "-",
+        "62": "-",
+        "64": "/",
+        "67": "/",
+        "68": "/",
+        "73": "-",
+        "77": "/",
+        "83": ".",
+        "87": ".",
+        "94": "/",
+        "99": ".",
+        "104": ".",
+        "105": ".",
+        "107": "/"
+      }
     },
-    "invariant_unobserved_counts": {
-      "U2": 24,
-      "U3": 28,
-      "U4": 29,
-      "U5": 30
-    },
-    "newly_fixed": {
-      "U2_to_U3": {
+    "U3": {
+      "candidate_count": 108,
+      "invariant_unobserved_count": 29,
+      "variable_unobserved_count": 13,
+      "invariant_unobserved": {
+        "1": "/",
+        "6": "/",
+        "8": "-",
+        "11": "-",
+        "16": "-",
+        "27": "/",
+        "28": "/",
+        "33": "-",
+        "34": "/",
+        "35": "-",
+        "41": "/",
+        "45": "-",
+        "49": "-",
+        "50": "-",
+        "52": "-",
+        "54": "-",
+        "62": "-",
+        "64": "/",
+        "67": "/",
+        "68": "/",
+        "73": "-",
+        "77": "/",
+        "83": ".",
+        "87": ".",
+        "94": "/",
+        "99": ".",
+        "104": ".",
+        "105": ".",
+        "107": "/"
+      },
+      "variable_residues": [
+        22,
+        25,
+        55,
+        58,
+        61,
+        82,
+        84,
+        88,
+        91,
+        93,
+        100,
+        102,
+        106
+      ],
+      "minimum_discriminator": {
+        "information_lower_bound": 7,
+        "minimum_size": 8,
+        "number_of_minimum_sets": 108,
+        "examples": [
+          [
+            22,
+            55,
+            58,
+            82,
+            84,
+            88,
+            91,
+            93
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            84,
+            88,
+            91,
+            102
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            84,
+            88,
+            93,
+            100
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            84,
+            88,
+            100,
+            102
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            84,
+            91,
+            93,
+            106
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            84,
+            91,
+            102,
+            106
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            84,
+            93,
+            100,
+            106
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            84,
+            100,
+            102,
+            106
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            88,
+            91,
+            93,
+            102
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            88,
+            93,
+            100,
+            102
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            91,
+            93,
+            102,
+            106
+          ],
+          [
+            22,
+            55,
+            58,
+            82,
+            93,
+            100,
+            102,
+            106
+          ]
+        ]
+      },
+      "equivalence_groups": [
+        [
+          {
+            "residue": 22,
+            "inverted_from_canonical": true
+          },
+          {
+            "residue": 25,
+            "inverted_from_canonical": false
+          }
+        ],
+        [
+          {
+            "residue": 88,
+            "inverted_from_canonical": true
+          },
+          {
+            "residue": 106,
+            "inverted_from_canonical": false
+          }
+        ]
+      ],
+      "newly_fixed_vs_previous_layer": {
         "49": "-",
         "50": "-",
         "52": "-",
         "54": "-"
+      }
+    },
+    "U4": {
+      "candidate_count": 12,
+      "invariant_unobserved_count": 30,
+      "variable_unobserved_count": 12,
+      "invariant_unobserved": {
+        "1": "/",
+        "6": "/",
+        "8": "-",
+        "11": "-",
+        "16": "-",
+        "27": "/",
+        "28": "/",
+        "33": "-",
+        "34": "/",
+        "35": "-",
+        "41": "/",
+        "45": "-",
+        "49": "-",
+        "50": "-",
+        "52": "-",
+        "54": "-",
+        "62": "-",
+        "64": "/",
+        "67": "/",
+        "68": "/",
+        "73": "-",
+        "77": "/",
+        "83": ".",
+        "87": ".",
+        "93": ".",
+        "94": "/",
+        "99": ".",
+        "104": ".",
+        "105": ".",
+        "107": "/"
       },
-      "U3_to_U4": {
+      "variable_residues": [
+        22,
+        25,
+        55,
+        58,
+        61,
+        82,
+        84,
+        88,
+        91,
+        100,
+        102,
+        106
+      ],
+      "minimum_discriminator": {
+        "information_lower_bound": 4,
+        "minimum_size": 5,
+        "number_of_minimum_sets": 48,
+        "examples": [
+          [
+            22,
+            55,
+            58,
+            84,
+            88
+          ],
+          [
+            22,
+            55,
+            58,
+            84,
+            91
+          ],
+          [
+            22,
+            55,
+            58,
+            84,
+            100
+          ],
+          [
+            22,
+            55,
+            58,
+            84,
+            106
+          ],
+          [
+            22,
+            55,
+            58,
+            88,
+            102
+          ],
+          [
+            22,
+            55,
+            58,
+            91,
+            102
+          ],
+          [
+            22,
+            55,
+            58,
+            100,
+            102
+          ],
+          [
+            22,
+            55,
+            58,
+            102,
+            106
+          ],
+          [
+            22,
+            55,
+            61,
+            84,
+            88
+          ],
+          [
+            22,
+            55,
+            61,
+            84,
+            91
+          ],
+          [
+            22,
+            55,
+            61,
+            84,
+            100
+          ],
+          [
+            22,
+            55,
+            61,
+            84,
+            106
+          ]
+        ]
+      },
+      "equivalence_groups": [
+        [
+          {
+            "residue": 22,
+            "inverted_from_canonical": true
+          },
+          {
+            "residue": 25,
+            "inverted_from_canonical": false
+          }
+        ],
+        [
+          {
+            "residue": 84,
+            "inverted_from_canonical": true
+          },
+          {
+            "residue": 102,
+            "inverted_from_canonical": false
+          }
+        ],
+        [
+          {
+            "residue": 88,
+            "inverted_from_canonical": false
+          },
+          {
+            "residue": 91,
+            "inverted_from_canonical": false
+          },
+          {
+            "residue": 106,
+            "inverted_from_canonical": true
+          }
+        ]
+      ],
+      "newly_fixed_vs_previous_layer": {
         "93": "."
+      }
+    },
+    "U5": {
+      "candidate_count": 10,
+      "invariant_unobserved_count": 31,
+      "variable_unobserved_count": 11,
+      "invariant_unobserved": {
+        "1": "/",
+        "6": "/",
+        "8": "-",
+        "11": "-",
+        "16": "-",
+        "27": "/",
+        "28": "/",
+        "33": "-",
+        "34": "/",
+        "35": "-",
+        "41": "/",
+        "45": "-",
+        "49": "-",
+        "50": "-",
+        "52": "-",
+        "54": "-",
+        "62": "-",
+        "64": "/",
+        "67": "/",
+        "68": "/",
+        "73": "-",
+        "77": "/",
+        "82": ".",
+        "83": ".",
+        "87": ".",
+        "93": ".",
+        "94": "/",
+        "99": ".",
+        "104": ".",
+        "105": ".",
+        "107": "/"
       },
-      "U4_to_U5": {
+      "variable_residues": [
+        22,
+        25,
+        55,
+        58,
+        61,
+        84,
+        88,
+        91,
+        100,
+        102,
+        106
+      ],
+      "minimum_discriminator": {
+        "information_lower_bound": 4,
+        "minimum_size": 5,
+        "number_of_minimum_sets": 48,
+        "examples": [
+          [
+            22,
+            55,
+            58,
+            84,
+            88
+          ],
+          [
+            22,
+            55,
+            58,
+            84,
+            91
+          ],
+          [
+            22,
+            55,
+            58,
+            84,
+            100
+          ],
+          [
+            22,
+            55,
+            58,
+            84,
+            106
+          ],
+          [
+            22,
+            55,
+            58,
+            88,
+            102
+          ],
+          [
+            22,
+            55,
+            58,
+            91,
+            102
+          ],
+          [
+            22,
+            55,
+            58,
+            100,
+            102
+          ],
+          [
+            22,
+            55,
+            58,
+            102,
+            106
+          ],
+          [
+            22,
+            55,
+            61,
+            84,
+            88
+          ],
+          [
+            22,
+            55,
+            61,
+            84,
+            91
+          ],
+          [
+            22,
+            55,
+            61,
+            84,
+            100
+          ],
+          [
+            22,
+            55,
+            61,
+            84,
+            106
+          ]
+        ]
+      },
+      "equivalence_groups": [
+        [
+          {
+            "residue": 22,
+            "inverted_from_canonical": true
+          },
+          {
+            "residue": 25,
+            "inverted_from_canonical": false
+          }
+        ],
+        [
+          {
+            "residue": 84,
+            "inverted_from_canonical": true
+          },
+          {
+            "residue": 102,
+            "inverted_from_canonical": false
+          }
+        ],
+        [
+          {
+            "residue": 88,
+            "inverted_from_canonical": true
+          },
+          {
+            "residue": 91,
+            "inverted_from_canonical": true
+          },
+          {
+            "residue": 100,
+            "inverted_from_canonical": false
+          },
+          {
+            "residue": 106,
+            "inverted_from_canonical": false
+          }
+        ]
+      ],
+      "newly_fixed_vs_previous_layer": {
         "82": "."
       }
-    },
-    "U5_variable_residues": [
-      22,
-      25,
-      55,
-      58,
-      61,
-      84,
-      88,
-      91,
-      94,
-      100,
-      102,
-      103,
-      106
-    ],
-    "minimum_discriminator_sizes": {
-      "U2": 11,
-      "U3": 9,
-      "U4": 6,
-      "U5": 5
-    },
-    "information_lower_bounds": {
-      "U2": 10,
-      "U3": 8,
-      "U4": 5,
-      "U5": 4
-    },
-    "minimum_set_counts": {
-      "U2": 1080,
-      "U3": 216,
-      "U4": 180,
-      "U5": 48
     }
-  },
-  "exact_equivalence_examples": {
-    "U2": [
-      {
-        "residues": [
-          22,
-          25
-        ],
-        "relation": "complements"
-      },
-      {
-        "residues": [
-          50,
-          54
-        ],
-        "relation": "identical"
-      },
-      {
-        "residues": [
-          88,
-          106
-        ],
-        "relation": "complements"
-      },
-      {
-        "residues": [
-          94,
-          103
-        ],
-        "relation": "complements"
-      }
-    ],
-    "U5": [
-      {
-        "residues": [
-          22,
-          25
-        ],
-        "relation": "complements"
-      },
-      {
-        "residues": [
-          84,
-          102
-        ],
-        "relation": "complements"
-      },
-      {
-        "residues": [
-          88,
-          106
-        ],
-        "relation": "complements"
-      },
-      {
-        "residues": [
-          91,
-          100
-        ],
-        "relation": "complements"
-      },
-      {
-        "residues": [
-          94,
-          103
-        ],
-        "relation": "complements"
-      }
-    ]
-  },
-  "interpretation": "24 of the 30 canonical invariant unseen residues are already forced at U2. U3 contributes four more; first closure contributes residue 93; second closure contributes residue 82. The remaining 13 are exactly the canonical hidden-state-variable set."
+  }
 }
