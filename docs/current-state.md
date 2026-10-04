@@ -932,3 +932,17 @@ The approved method is ensemble replay: run an operation across coherent complet
 The first sandbox test applies standard Braille to the natural 9×12 completed sticker carrier. Across U2 and U4, under both natural class orders and both binary polarities, no stable alphabetic run exceeds two cells. This cheap Braille projection is negative and closed absent a new registration cue.
 
 The sandbox is now available for further historically licensed operations and external consumers.
+
+
+## Experiments 395–397 — ensemble exploration is active
+
+The missing-sticker prediction matrix is now being used as a controlled counterfactual laboratory.
+
+Experiment 395 defines the operating program. New approaches are tested across coherent completion ensembles rather than a synthetic modal sheet.
+
+The first two follow-ups are clean negatives:
+
+- Experiment 396 finds no robust PC-style boundary/check-bit row-registration channel at the obvious fixed edge widths of the native 12-cell class words.
+- Experiment 397 finds that the `534brn` DTMF row and column coordinates cannot directly replace the sticker tail as G5 depth selectors; every primary Q surface fails POS3 across U2/U4/U5/E2.
+
+These negatives are useful because they close cheap historically plausible operations without semantic fishing. The sandbox remains active for externally parameterized consumers and coordinate operations.
