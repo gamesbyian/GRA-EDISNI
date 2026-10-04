@@ -866,3 +866,22 @@ The source-matched cover pairs do not yet reveal a common operation.
 Acorn is the one clear partial/top-only reference. Login and graph are source-family correspondences without the same documented omission, while the planet relation is unresolved rather than demonstrably following the acorn rule.
 
 **Consequence:** preserve the cover as a clue/reference board, but do not export “partial image,” mirror, crop or other transform into sticker work until the same source→cover operation is independently demonstrated on at least two pairs.
+
+
+### Experiments 413–415 — `128 UNSOLVED` opens a sharper JPEG lane
+
+The footer immediately after the damaged `534brn` JPEG-like payload is now mechanically readable.
+
+A 180° glyph reading of `pe^!02un` yields `unsolved`; the following dot-run lengths `8 / 2 / 1` reverse to `1 / 2 / 8`. The complete footer therefore reads:
+
+```
+128 UNSOLVED
+```
+
+This has a strong native target. Under the already established capture corruption model, all three genuinely distinct A/B/P captures contain exactly one common SOF0-shaped header whose height and width low bytes are lost. Both dimensions are independently constrained to **128..255**.
+
+So `128` lands exactly on an unresolved JPEG dimension field rather than requiring an arbitrary number consumer.
+
+**Priority:** advance the JPEG lane structurally. Test dimension-sensitive entropy/MCU constraints before attempting pixels. Do not simply write 128×128 into the stream until a square/second-axis cue exists.
+
+Experiment 415 also upgrades 534brn orientation provenance: the same page authorially requires a 180° reading. But literal 180° rotation of the DTMF grid has zero one-shot hits, so this still does not fix the successful `q'=2q+2` registration.
