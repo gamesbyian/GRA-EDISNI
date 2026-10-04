@@ -149,9 +149,12 @@ Otherwise record it as a negative or exploratory curiosity and move on.
 1. Experiment 394 — natural Braille projection: completed negative.
 2. Experiment 396 — native boundary/check-bit registration audit: completed negative.
 3. Experiment 397 — direct `534brn` DTMF selector replay: completed hard negative.
-4. Experiment 398 — historical 534brn direct digit-index replay: robust nine-symbol feature found.
-5. Experiment 400 — lever consumer for that feature: closed by the 2023 exhaustive lever run.
-6. Experiment 399 — literal 9+3 large/small numeric interface: frozen; no consumer yet.
-7. Experiment 401 — exact coupling atlas: E2 reduced to the single 84/102 physical bit.
-8. Next — another consumer-first probe only when an external artifact fixes the consumer or parameter.
-9. Continue acquisition in parallel; residue 82 remains the cleanest G5-vs-G6 test, while 84/102 completely resolves E2.
+4. Experiment 398 — historical `534brn` direct digit-index replay: robust nine-symbol feature found.
+5. Experiment 399 — historical 9+3 numeric surface: frozen; E2 leaves only class-C tail ambiguity.
+6. Experiment 400 — contiguous 9+3 subset selector: completed hard negative.
+7. Experiment 401 — lever replay of indexed feature: historically closed in-game.
+8. Experiments 402–405 — cheap Trifid/Fractionated-Morse/Morse replays: structurally closed.
+9. Experiment 406 — historical-cipher pruning checkpoint: no widening without new external keys.
+10. Experiment 407 — exact coupling atlas: E2 reduced to the single 84/102 physical bit.
+11. Next — consumer-first only. A new artifact must supply the key, traversal, corpus, role, or downstream grammar before another decode family opens.
+12. Continue acquisition in parallel; residue 82 is the cleanest G5-vs-G6 test, while residue 84 or 102 resolves E2 completely.
