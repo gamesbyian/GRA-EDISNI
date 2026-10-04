@@ -409,7 +409,7 @@ def main():
             "min": min(feasible),
             "max": max(feasible),
             "count": len(feasible),
-            "contiguous": feasible == list(range(min(feasible), max(feasible) + 1),
+            "contiguous": feasible == list(range(min(feasible), max(feasible) + 1)),
         },
         "independent_dimension_domain": {
             "pixel_width": [128, 255],
