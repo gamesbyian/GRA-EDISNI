@@ -74,13 +74,13 @@ def master_from(primary,selector):
 def unknown_residues(obs):
     return tuple(r for r in range(1,109) if r not in obs)
 
-def encode_unknown43(master,unknown):
+def encode_unknown42(master,unknown):
     value=0
     for i,r in enumerate(unknown):
         if master[r-1]=="/": value|=1<<i
     return f"{value:011x}"
 
-def decode_unknown43(code,obs,unknown):
+def decode_unknown42(code,obs,unknown):
     value=int(code,16); chars=["?"]*108
     for r,s in obs.items(): chars[r-1]=s
     for i,r in enumerate(unknown):
@@ -117,8 +117,8 @@ def build():
         for si,selector in enumerate(selectors):
             master=master_from(primary,selector)
             assert all(master[r-1]==s for r,s in obs.items())
-            code=encode_unknown43(master,unknown)
-            assert decode_unknown43(code,obs,unknown)==master
+            code=encode_unknown42(master,unknown)
+            assert decode_unknown42(code,obs,unknown)==master
             masters.append((pi,si,code,master))
     assert len(masters)==324
     assert len({m[2] for m in masters})==324
@@ -169,7 +169,7 @@ def build():
                 "tail_completion_count":18,
                 "tail_class_option_counts":list(map(len,tails)),
                 "count":324,
-                "materialization":"complete 43-bit enumeration",
+                "materialization":"complete 42-bit enumeration",
             },
             "U3_established_polarity_exact_pos3":{"count":108},
             "U4_first_recursive_closure":{"count":12},
@@ -202,7 +202,7 @@ def write():
     result,masters,unknown=build()
     OUT.write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
     with U2.open("w",newline="",encoding="utf-8") as fh:
-        w=csv.writer(fh); w.writerow(("id","primary_index","selector_index","unknown43_hex"))
+        w=csv.writer(fh); w.writerow(("id","primary_index","selector_index","unknown42_hex"))
         for i,(pi,si,code,_master) in enumerate(masters): w.writerow((i,pi,si,code))
     print(json.dumps(result,indent=2))
 
