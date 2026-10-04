@@ -948,14 +948,19 @@ The first two follow-ups are clean negatives:
 These negatives are useful because they close cheap historically plausible operations without semantic fishing. The sandbox remains active for externally parameterized consumers and coordinate operations.
 
 
-## Experiments 398–401 — E2 collapses to one physical bit
+## Experiments 398–407 — weighted historical pruning and one-bit E2 endpoint
 
-The weighted-completion sandbox has produced a robust new derived sequence without turning it into an unsupported decode.
+The completion ensembles now support a much broader historical-hypothesis audit without pretending the missing stickers are known.
 
-The historically proposed direct `534brn` digit-index operation yields invariant `--/--/-/-` across all U4/U5/E2 completions. Its obvious lever projection `RRURRURUR` is closed by the community's completed 2023 exhaustive lever sweep through length 14.
+The strongest live derived interfaces are:
+- direct `534brn` digit indexing, which becomes invariant `--/--/-/-` across U4/U5/E2;
+- the historical 9+3 body/tail numeric representation, which is fully fixed under E2 except for class C's tail;
+- the E2 completion itself, which has only two variable residues, 84 and 102, forced complementary.
 
-The historical 9+3 large-number/small-selector representation is also now frozen. Under E2 all nine large 9-bit values are fixed, with only class C's 3-bit tail remaining 1 versus 4.
+The obvious lever interpretation of `--/--/-/-` is closed by preserved 2023 brute-force streams that contain the corresponding `RRURRURUR` word many times with no new in-game result.
 
-A nontrivial coupling audit shows why: E2 has exactly two variable residues, 84 and 102, forced complementary. The active external model is therefore one complete master plus one unresolved binary physical coordinate, not a diffuse two-master uncertainty.
+Cheap historical Trifid, Fractionated Morse, flat Morse, class-word Morse, and contiguous 9+3 chunk selection have all been closed by ensemble-level structural contradictions rather than bad-looking plaintext.
 
-Acquisition of either residue-84 or residue-102 family now resolves the entire E2 completion and every derived interface built from it.
+The current computational boundary is therefore clean: keep the stable 534brn-derived interfaces frozen, stop broad classical-cipher search, and require an independently specified external consumer for the next decode step.
+
+Physically, E2 is now one unresolved bit: slash at residue 84 or slash at residue 102.
