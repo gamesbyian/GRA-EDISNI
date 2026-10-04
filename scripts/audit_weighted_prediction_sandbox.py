@@ -31,7 +31,7 @@ def modal_master(obs,pred):
 def support_map(pred):
     out={}
     for r,row in pred.items():
-        d={row["preferred_guess"]:int(row["support_of_14"])}
+        d={row["preferred_guess"]:int(row["support_of_10"])}
         if row["alternate_symbol"]:
             d[row["alternate_symbol"]]=int(row["alternate_support"])
         out[r]=d
@@ -72,10 +72,10 @@ def main():
     rounded={round(x,12) for x in scores}
     assert len(rounded)==1
 
-    # Canonical 14-state support is downstream of G6. It assigns zero support to
+    # Canonical 10-state support is downstream of G6. It assigns zero support to
     # residue-82 slash, exactly the value selected by the 534brn one-shot pair.
     ps=support_map(pred)
-    assert ps[82]=={".":14}
+    assert ps[82]=={".":10}
     target=[m for m in u4 if m[81]=="/"]
     # This includes the externally selected pair plus other pre-G6 masters;
     # the key point is that every such master receives a hard zero from the
@@ -95,9 +95,9 @@ def main():
             "distinct_scores":len(rounded),
             "conclusion":"Broad U2 candidate multiplicities give the same product score to all 12 U4 survivors; they do not provide a hidden prior ranking."
         },
-        "canonical_14_state_weighting":{
+        "canonical_10_state_weighting":{
             "residue_82_support":ps[82],
-            "conclusion":"The 14-state weights encode downstream G6 assumptions. Naively using them as priors would assign zero support to every pre-G6 master with 82=slash, including the active 534brn-selected pair."
+            "conclusion":"The 10-state weights encode downstream G6 assumptions. Naively using them as priors would assign zero support to every pre-G6 master with 82=slash, including the active 534brn-selected pair."
         },
         "safe_policy":[
             "Use weighted lists as uncertainty masks and scenario generators, not calibrated probabilities.",
