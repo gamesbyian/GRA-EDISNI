@@ -233,3 +233,17 @@ This supports one specific search strategy: identify a **repeated measurable tra
 Do not free-search sticker overlays on the cover.
 
 The cover's reversibility and 12:12 clock support reversal/re-registration only at operation-family level. They do not identify the sticker machine's Q axis or uniquely select `q'=2q+2`, so they do not promote the active 534brn match past Experiment 389's stopping boundary.
+
+
+### 534brn footer: authorial rotation plus a native JPEG target
+
+Experiments 413–415 decode the footer after the damaged 534brn payload as **128 UNSOLVED** under a literal 180° reading.
+
+This supplies two independently useful facts:
+
+1. orientation reversal is authorially embedded in the same 534brn artifact, strengthening orientation/re-registration as an operation family;
+2. 128 has a native unresolved consumer in the damaged JPEG header: both dimensions survive only as values in 128..255.
+
+The literal 180° operation does not map the registered DTMF grid into any frozen one-shot state, even under the six preregistered q gauges. Therefore it does not close the exact sticker registration gap.
+
+The 128 value should be pursued first as a JPEG-structure clue, not sprayed into unrelated sticker/Terminal41 transforms.
