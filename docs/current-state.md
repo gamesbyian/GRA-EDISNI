@@ -972,3 +972,69 @@ Physically, E2 is now one unresolved bit: slash at residue 84 or slash at residu
 The archived Terminal41 shutdown flow contains exactly nine numbered confirmation pages, but they form a deterministic redirect countdown rather than a nine-value interface. No forms, symbol choices, branches, or per-step payload exist.
 
 So this tempting 9↔9 correspondence is closed. The stable Experiment-398 signature still lacks a live downstream consumer.
+
+## Experiments 409–417 — clue-bearing cover and the `128 UNSOLVED` JPEG lane
+
+The PS4 reversible cover is independently clue-bearing. Preserved high-resolution scans and historical comparison material tie its monitor imagery to prior ARG/game visual families, including partial acorn/LifeDetected imagery plus planet-, graph- and login-like displays.
+
+That licenses **source-matched cross-artifact registration/layer tests**, but not arbitrary cover overlays or a free mapping of sticker states onto scene objects. A bounded source-pair audit finds no repeated source→cover transform strong enough to export into the sticker code.
+
+The stronger result comes from the damaged `534brn` artifact itself. A literal 180° reading turns the footer `pe^!02un` plus adjacent dot-run lengths `8/2/1` into:
+
+```
+128 UNSOLVED
+```
+
+The same damaged artifact contains one SOF0-shaped JPEG header in each independent A/B/P capture. Under the established loss transform, both width and height are independently constrained to **128..255**, and the sampling descriptors are Y 2×2 / Cb 1×1 / Cr 1×1, hence 16×16-pixel MCUs.
+
+Experiment 416 proves the useful conditional: an independently established **64-MCU** total would uniquely force 128×128. Experiment 417 then recovers the SOS/EOI-shaped scan corridor and rules out a restart-interval shortcut.
+
+The 180° footer operation also strengthens reversal/orientation as an authorial operation family on the same artifact, but literal transfer of that rotation does not reproduce a sticker one-shot state. It therefore does not rescue or uniquely register the old 534brn sticker-consumer branch.
+
+## Experiment 418 — physical evidence supersedes the old E2 branch
+
+Confirmed sticker **427 = dot** fixes H108 residue 103 to dot.
+
+The live completion families become:
+
+```
+U2 324
+U3 108
+U4 12
+U5 10
+```
+
+and the previously frozen 534brn-selected E2 pair is prospectively falsified because both selected masters predicted residue 103 = slash.
+
+The historical 534brn registration experiments remain evidence about a bounded transform family, but E2 is no longer a live completion ensemble.
+
+Under the one-slash-per-depth-stack tail model, observed 85=dot plus 103=dot now forces residue **94 = slash** prospectively.
+
+## Experiments 419–422 — live representation, replication and acquisition state
+
+Experiment 419 preserves the community-proposed tail XOR as a legitimate deterministic 9×9 derived surface. It does not reduce the candidate space: U2/U3/U4/U5 remain 324/108/12/10. The exact U4/U5 36-one total and 9/12/15 q-block staircase are algebraic consequences of the existing G5-valid structure, so they are a checksum/visualization rather than independent confirmation.
+
+Sticker **043 = slash** adds an independent physical repeat of H108 residue 43, already observed at 475. The two observations are separated by exactly four 108-period cycles. The corpus is now **84 physical stickers / 66 unique H108 residues**.
+
+Experiment 421 finds 16 repeated residues and 20 same-residue physical pair comparisons, all **20/20 foreground-consistent**. In a bounded period scan 2..216, period 108 is the deepest zero-conflict period by a wide margin. Under the exact conditional primary-zone symbol-permutation null, perfect homogeneity of all 16 repeat groups is about 5.82×10^-6, roughly 1 in 172,000; this is a scale estimate, not a blind period-search p-value.
+
+Experiment 422 makes acquisition priority executable. Residue **82** is the decisive current U4-vs-U5 fork; residues **84** and **102** are exactly balanced one-bit resolvers inside U5; residue **94** is the clean prospective tail-stack validation target.
+
+## Experiment 423 — entropy cannot prove 128×128
+
+The missing JPEG-entropy step is now complete.
+
+A structural baseline-Huffman constraint decoder was run over the exact 4,156-token P-capture entropy corridor. It propagates the documented text-loss domains, JPEG byte stuffing, block grammar and six-block MCU structure without assigning pixel values or DCT coefficients.
+
+The surviving loss is too severe to count MCUs:
+
+```
+every complete MCU count 16..300 is feasible
+```
+
+Inside the independently established 128..255 pixel dimension domain, the two MCU axes can each be 8..16. There are 43 distinct total MCU products in that geometry, and **all 43 survive** the entropy constraints.
+
+Therefore 64 MCUs remains possible but is not distinguished at all. The `128 UNSOLVED` footer remains a strong source-native dimension clue, but the surviving captures cannot promote it to a proved 128×128 image.
+
+This closes the current `534brn` JPEG-forensics lane. Reopen only on new byte evidence, an independent square/both-axes cue, or a direct 128×128 source clue. Do not proceed by guessed entropy bytes, guessed coefficients or image-coherence optimization.
+
