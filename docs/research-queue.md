@@ -833,3 +833,12 @@ The weighted completion program has now replayed several historically proposed s
 - Experiment 406 freezes this historical-cipher pruning boundary.
 
 **Priority consequence:** do not widen into keyed Trifid, arbitrary Morse rearrangements, arbitrary books, or generic numeric transforms. Computation should now return to externally specified consumers and prospective physical discrimination. Residue 82 remains the cleanest E2-vs-G6 test; residue 84 or 102 resolves E2 completely.
+
+
+### Experiment 408 — nine-count Terminal41 near-match closed
+
+Terminal41 does contain an exact nine-page shutdown-confirmation chain. Source audit shows it is only a fixed 09→...→01 redirect countdown with no nine-slot input grammar, choices, or branch state.
+
+This is a useful external-consumer negative for the robust Experiment-398 nine-symbol signature: same cardinality is not enough.
+
+**Consequence:** do not map the stable nine-symbol feature onto this chain. Continue searching only for typed consumers that actually expose nine addressable values/choices, or for external consumers of the frozen 9+3 numeric surface.
