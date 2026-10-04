@@ -1,0 +1,18 @@
+{
+  "experiment": 403,
+  "historical_cue": "May-2026 Fractionated Morse proposal",
+  "tested_family": {
+    "registration": "108 serial positions grouped consecutively into 36 triples",
+    "fractionated_morse": "standard unkeyed 26-trigram table excluding xxx",
+    "symbol_bijections_tested": 6,
+    "U2_completions": 648
+  },
+  "valid_completions_under_any_mapping": 0,
+  "invariant_uniform_triple_starts": {
+    "-": [10,70,73],
+    "/": [28,40,46,64,67,76,79],
+    ".": [97]
+  },
+  "classification": "hard negative",
+  "consequence": "Whichever sticker symbol is mapped to Fractionated-Morse separator x, an invariant all-that-symbol triple becomes forbidden xxx. Direct serial-order Fractionated Morse is impossible; only an independently specified rearrangement could reopen it."
+}
