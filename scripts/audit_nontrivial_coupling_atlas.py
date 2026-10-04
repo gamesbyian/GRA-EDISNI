@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 401: nontrivial complement-coupling atlas across U2/U4/U5/E2."""
+"""Experiment 407: nontrivial complement-coupling atlas across U2/U4/U5/E2."""
 
 from pathlib import Path
 import json
@@ -9,7 +9,7 @@ from audit_completion_universe_layers import machine_layers
 from audit_534brn_universe_survival import first_words
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/"data"/"experiment-401-nontrivial-coupling-atlas.json"
+OUT=ROOT/"data"/"experiment-407-nontrivial-coupling-atlas.json"
 
 def bit(master,residue):
     return 1 if master[residue-1]=="/" else 0
@@ -50,7 +50,7 @@ def main():
     assert r4e==[[84,102,"comp"]]
 
     result={
-        "experiment":401,
+        "experiment":407,
         "variable_residue_counts":{"U2":len(v2),"U4":len(v4),"U5":len(v5),"E2":len(ve)},
         "U2_to_U4_nontrivial_relations":r24,
         "U4_to_U5_nontrivial_relations":r45,
