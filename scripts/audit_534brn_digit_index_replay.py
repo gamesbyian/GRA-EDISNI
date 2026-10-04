@@ -55,7 +55,7 @@ def summarize(masters):
 def main():
     _summary,u2_rows,_unknown=build()
     u2=[m for *_prefix,m in u2_rows]
-    _u3,u4,u5=machine_layers()
+    u3,u4,u5=machine_layers()
     e2=[m for m in u4 if first_words(m)==("112","012","120")]
     assert len(e2)==2
 
@@ -77,6 +77,7 @@ def main():
         "selected_positions":selected,
         "ensembles":{
             "U2":summarize(u2),
+            "U3":summarize(u3),
             "U4":summarize(u4),
             "U5":summarize(u5),
             "E2":summarize(e2),
@@ -84,6 +85,7 @@ def main():
     }
 
     assert result["ensembles"]["U2"]["distinct_outputs"]==2
+    assert result["ensembles"]["U3"]["output_counts"]=={"--/--/-/-":216}
     assert result["ensembles"]["U4"]["output_counts"]=={"--/--/-/-":20}
     assert result["ensembles"]["U5"]["output_counts"]=={"--/--/-/-":14}
     assert result["ensembles"]["E2"]["output_counts"]=={"--/--/-/-":2}
@@ -92,7 +94,7 @@ def main():
     result["stable_U4_sequence"]=sequence
     result["lever_projection"]="".join(LEVER[ch] for ch in sequence)
     result["interpretation"]=(
-        "The historically proposed digit-as-index operation is unexpectedly stable after U4: all 20 one-shot masters, "
+        "The historically proposed digit-as-index operation is unexpectedly stable already at U3: all 216 U3 masters,  "all 20 one-shot masters, "
         "all 14 U5 masters, and both external E2 masters produce the same nine-symbol sequence --/--/-/-. U2 has only "
         "two outputs, differing at the fifth selected symbol. However, because digits 1-9 only index the nine-cell primary "
         "body, this operation can never select the dot-bearing tail positions; under the historical lever mapping it is "
