@@ -11,6 +11,9 @@ on:
       - "docs/experiment-313-local-2d-translation-reuse.md"
       - ".github/workflows/verify-experiment-313.yml"
 
+env:
+  GRA_EDISNI_OBSERVATIONS_FILE: data/observations-experiment-417.csv
+
 jobs:
   verify-local-2d-translation:
     runs-on: ubuntu-latest
