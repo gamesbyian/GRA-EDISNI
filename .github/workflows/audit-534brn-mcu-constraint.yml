@@ -18,3 +18,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: python scripts/audit_534brn_mcu_constraint.py
+      - name: Verify generated result is committed
+        run: git diff --exit-code -- data/experiment-423-534brn-mcu-constraint.json
