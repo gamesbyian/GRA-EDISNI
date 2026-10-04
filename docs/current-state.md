@@ -984,3 +984,10 @@ However, the cover still exposes no typed nine-state or 9+3 sticker interface.
 Its reversibility and 12:12 clock also do not independently fix the active `534brn` outer-Q reversal. The exact `q'=2q+2` provenance gap therefore remains open.
 
 Future cover work is constrained to source-matched transforms that repeat across multiple independently identified monitor/source pairs.
+
+
+## Experiment 412 — cover transform remains underidentified
+
+Cross-pair comparison does not recover a repeated source→cover transform. The acorn reference is clearly partial, but graph/login do not independently show the same operation and the planet transform remains unresolved.
+
+The cover therefore strengthens cross-artifact reference/layering as a design grammar but still does not supply a concrete sticker transform.
