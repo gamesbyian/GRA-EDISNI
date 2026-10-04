@@ -58,16 +58,17 @@ Experiment 353 finds no independently supplied exact G5 tail-to-body substitutio
 
 Assume no additional sticker will ever surface.
 
-Under the preferred exact-column-POS3 grammar, the current object is symbolically complete:
+Under the preferred exact-column-POS3 grammar, the **live physical family** is now:
 
-- 65 observed H108 residues;
-- 30 additional residues fixed by the preferred physical completion;
-- 13 variable state-register residues;
-- 14 legal complete H108 masters;
-- 95 invariant H108 residues within that gauge setting.
+- 66 observed H108 residues;
+- 31 additional unobserved residues fixed across the live preferred completion;
+- 11 variable live-state residues;
+- 10 physically surviving complete H108 masters;
+- 97 invariant H108 residues within the live preferred gauge setting.
 
+The older 14-state family remains the structural parent reconstructed before the 427 observation. Confirmed sticker 427 = dot at residue 103 prospectively removes four of those states; it does not erase the historical 14-state reconstruction.
 
-The completion is now operationalized as a frozen prediction matrix rather than treated only as a solved object. `docs/prediction-matrix-process.md` defines acquisition and contradiction handling; `docs/sticker-prediction-validation.md` defines holdout/prospective scoring. For a working physical range 1..600, 405 of 518 unseen physical serials have one foreground symbol without selecting a hidden state or known physical gauge; accepting the preferred canonical printing representative raises single-symbol coverage to 449. The remaining 69 physical serials repeat only 13 correlated latent-register residue classes and therefore reduce to the 14 coherent hidden-state completions rather than 69 independent unknowns.
+The completion is operationalized as a prediction matrix rather than treated only as a solved object. `docs/prediction-matrix-process.md` defines acquisition and contradiction handling; `docs/sticker-prediction-validation.md` defines holdout/prospective scoring. For a working physical range 1..600, 84 serials are now directly observed and 516 remain unseen. In the live preferred 10-state family, **457 of those 516 unseen serials are foreground-invariant**; the remaining 59 serials repeat only 11 correlated variable residue classes rather than representing 59 independent unknowns. Broader transition-invisible physical gauges remain a separate representation question and should not be mixed with this live canonical-state count.
 
 Future physical evidence should be scored against the committed pre-observation matrix before model updates. Broad-family invariant unseen cells are hard tests of the reconstruction; gauge-support cells test physical representation choices; latent-register cells constrain hidden state; already observed H108 repeats are useful controls but do not add a new structural cell.
 
