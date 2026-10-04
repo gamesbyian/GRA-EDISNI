@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **407**.
+Latest indexed experiment: **408**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -442,6 +442,8 @@ Latest indexed experiment: **407**.
 | 405 | native class-word Morse: the independent 9×12 carrier also fails universally; invariant class-H word `-/------/../` contains a six-mark token under either polarity. Natural Morse registrations closed. |
 | 406 | weighted historical-cipher pruning checkpoint: ensemble replay closes the cheap historically attested Trifid/Fractionated-Morse/Morse families while preserving the 534brn indexed signature and 9+3 numeric surface as consumer-less derived interfaces. Next computation should return to external consumers and prospective physical discrimination. |
 | 407 | nontrivial coupling atlas: variable residues collapse U2 19 → U4 14 → U5 13 → E2 2. U4 creates four exact complement couplings (22/25, 84/102, 88/106, 94/103); G6 adds exactly one, 91/100. E2 fixes everything except the existing 84/102 complement, making the external pair literally one unresolved physical bit. |
+
+| 408 | Terminal41 nine-step consumer audit: the archived shutdown-confirmation chain has exactly nine pages, but source inspection shows a deterministic 09→...→01→confirmed redirect countdown with no form, input, branching choice, or per-step payload. Exact nine-count resemblance to the Experiment-398 signature is therefore structurally closed. |
 
 ## Current frontier
 
