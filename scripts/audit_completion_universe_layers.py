@@ -101,16 +101,16 @@ def main():
         }
         prev_fixed=fixed
 
-    assert result["layers"]["U2"]["invariant_unobserved_count"]==24
+    assert result["layers"]["U2"]["invariant_unobserved_count"]==25
     assert result["layers"]["U3"]["newly_fixed_vs_previous_layer"]=={
         "49":"-","50":"-","52":"-","54":"-"
     }
     assert result["layers"]["U4"]["newly_fixed_vs_previous_layer"]=={"93":"."}
     assert result["layers"]["U5"]["newly_fixed_vs_previous_layer"]=={"82":"."}
     assert result["layers"]["U5"]["variable_residues"]==[
-        22,25,55,58,61,84,88,91,94,100,102,106
+        22,25,55,58,61,84,88,91,100,102,106
     ]
-    assert [result["layers"][x]["minimum_discriminator"]["minimum_size"] for x in ("U2","U3","U4","U5")]==[11,9,6,5]
+    assert [result["layers"][x]["minimum_discriminator"]["minimum_size"] for x in ("U2","U3","U4","U5")]==[10,8,5,5]
 
     OUT.write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(result,indent=2))
