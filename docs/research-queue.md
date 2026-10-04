@@ -813,3 +813,24 @@ Two immediate probes are complete:
 - **Experiment 397:** using the independently licensed `534brn` DTMF row/column directly as G5 depth selectors is a hard negative. No U2/U4/U5/E2 completion yields even one valid primary POS3 surface.
 
 **Next move:** remain consumer-first. Pick the next operation only when the historical mechanics corpus or a CE artifact supplies the parameter we would otherwise be tempted to guess. Continue physical acquisition in parallel.
+
+
+### Experiments 398–401 — robust indexed feature, numeric interface, and coupling collapse
+
+The weighted-completion program produced one robust new derived surface and several useful closures.
+
+**Experiment 398:** replay the Nov-2025 historical suggestion that the nine `534brn` digits may act as indices into the nine sticker sections. Direct one-based indexing of the native IABCDEFGH class words yields only two outputs across U2 and collapses to a single invariant across U4/U5/E2:
+
+```
+--/--/-/-
+```
+
+Under the independent sleeve/lever mapping this is `RRURRURUR`.
+
+**Experiment 400 closes that lever consumer.** The completed Nov-2023 De Bruijn lever sweep covered every ternary word through length 14, so this nine-command word has already been physically tried with no unknown bunker-door result. Preserve the symbol sequence only as a robust derived feature.
+
+**Experiment 399:** the May-2026 “first 9 bits = large number; last 3 = smaller selector” proposal is now frozen numerically. Under E2, all nine 9-bit values are fixed; only class C's tail value remains ambiguous, and that is exactly the residue 84/102 physical fork. Do not invent a book/serial/number consumer.
+
+**Experiment 401:** E2 has only two variable residues, 84 and 102, and they are complementary. This is literally one remaining physical bit. G6's smallest relational fingerprint is the additional 91/100 complement.
+
+**Priority consequence:** acquisition at residue 84 or 102 now resolves every E2 representation at once. Continue consumer-first sandboxing, but do not rescue the indexed feature with another semantic layer after the lever consumer failed.
