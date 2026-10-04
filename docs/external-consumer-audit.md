@@ -220,3 +220,31 @@ The independently motivated CE sleeve/lever mapping converts this to `RRURRURUR`
 Experiment 401 closes the ordinary bunker-lever interpretation more strongly than abstract coverage alone. The exact nine-command word occurs **106 times** in the surviving archived 2023 De Bruijn command sections that were physically run in-game, with no unknown result reported.
 
 Preserve the indexed nine-symbol feature as an external derived interface, but do not treat the ordinary bunker lever as its live consumer. A new consumer must be independently supplied.
+
+### Reversible-cover source-matched lane
+
+Experiments 409–412 establish that the PS4 reversible cover is genuinely clue-bearing and references prior ARG/game visual families. The strongest licensed operation family is therefore **source-matched composition / registration**, not generic visual search.
+
+The current archive supports:
+- partial acorn/LifeDetected imagery;
+- planet-family imagery;
+- graph/login-family imagery;
+- a running-man scene element;
+- the cover's reversible physical design and 12:12 clock.
+
+No repeated source→cover transform is demonstrated across multiple independently identified pairs. Consequently no mirror/crop/partial-image rule is exported into sticker decoding.
+
+### 534brn footer and damaged-JPEG lane
+
+Experiments 413–417 recover an authorial 180° footer reading of **128 UNSOLVED**, connect 128 to the unresolved JPEG SOF dimension fields, recover the baseline scan corridor, and prove that exactly 64 MCUs would imply 128×128.
+
+Experiment 423 performs the missing entropy test and closes the current route.
+
+Under the documented loss channel and baseline JPEG grammar, the P capture admits every complete MCU count from 16..300. All 43 MCU-grid products possible inside the independently established 128..255 dimension domain survive.
+
+Therefore the damaged entropy stream cannot select 64 MCUs or 128×128.
+
+This is a useful external-consumer negative: the 128 clue is native and real enough to preserve, but the surviving capture no longer contains enough structural information to resolve it.
+
+Reopen only on new byte evidence or an independently specified dimension/square clue. Do not use visual coherence as a substitute consumer.
+
