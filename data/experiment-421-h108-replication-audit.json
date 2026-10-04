@@ -1,0 +1,572 @@
+{
+  "experiment": 421,
+  "physical_sticker_count": 84,
+  "unique_h108_residue_count": 66,
+  "replicated_residue_count": 16,
+  "same_residue_pair_count": 20,
+  "same_residue_foreground_disagreements": 0,
+  "replicated_residues": [
+    {
+      "residue": 4,
+      "observations": [
+        {
+          "serial": 328,
+          "residue": 4,
+          "symbol": "-",
+          "image_class": "D"
+        },
+        {
+          "serial": 436,
+          "residue": 4,
+          "symbol": "-",
+          "image_class": "D"
+        }
+      ],
+      "symbols": [
+        "-"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 328,
+          "serial_b": 436,
+          "delta": 108,
+          "periods_apart": 1,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 10,
+      "observations": [
+        {
+          "serial": 118,
+          "residue": 10,
+          "symbol": "-",
+          "image_class": "A"
+        },
+        {
+          "serial": 334,
+          "residue": 10,
+          "symbol": "-",
+          "image_class": "A"
+        }
+      ],
+      "symbols": [
+        "-"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 118,
+          "serial_b": 334,
+          "delta": 216,
+          "periods_apart": 2,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 12,
+      "observations": [
+        {
+          "serial": 336,
+          "residue": 12,
+          "symbol": "-",
+          "image_class": "C"
+        },
+        {
+          "serial": 444,
+          "residue": 12,
+          "symbol": "-",
+          "image_class": "C"
+        }
+      ],
+      "symbols": [
+        "-"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 336,
+          "serial_b": 444,
+          "delta": 108,
+          "periods_apart": 1,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 15,
+      "observations": [
+        {
+          "serial": 123,
+          "residue": 15,
+          "symbol": "/",
+          "image_class": "F"
+        },
+        {
+          "serial": 231,
+          "residue": 15,
+          "symbol": "/",
+          "image_class": "F"
+        },
+        {
+          "serial": 339,
+          "residue": 15,
+          "symbol": "/",
+          "image_class": "F"
+        }
+      ],
+      "symbols": [
+        "/"
+      ],
+      "pair_count": 3,
+      "pairs": [
+        {
+          "serial_a": 123,
+          "serial_b": 231,
+          "delta": 108,
+          "periods_apart": 1,
+          "same_symbol": true
+        },
+        {
+          "serial_a": 123,
+          "serial_b": 339,
+          "delta": 216,
+          "periods_apart": 2,
+          "same_symbol": true
+        },
+        {
+          "serial_a": 231,
+          "serial_b": 339,
+          "delta": 108,
+          "periods_apart": 1,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 17,
+      "observations": [
+        {
+          "serial": 125,
+          "residue": 17,
+          "symbol": "/",
+          "image_class": "H"
+        },
+        {
+          "serial": 449,
+          "residue": 17,
+          "symbol": "/",
+          "image_class": "H"
+        }
+      ],
+      "symbols": [
+        "/"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 125,
+          "serial_b": 449,
+          "delta": 324,
+          "periods_apart": 3,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 18,
+      "observations": [
+        {
+          "serial": 126,
+          "residue": 18,
+          "symbol": "-",
+          "image_class": "I"
+        },
+        {
+          "serial": 450,
+          "residue": 18,
+          "symbol": "-",
+          "image_class": "I"
+        }
+      ],
+      "symbols": [
+        "-"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 126,
+          "serial_b": 450,
+          "delta": 324,
+          "periods_apart": 3,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 32,
+      "observations": [
+        {
+          "serial": 32,
+          "residue": 32,
+          "symbol": "/",
+          "image_class": "E"
+        },
+        {
+          "serial": 248,
+          "residue": 32,
+          "symbol": "/",
+          "image_class": "E"
+        }
+      ],
+      "symbols": [
+        "/"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 32,
+          "serial_b": 248,
+          "delta": 216,
+          "periods_apart": 2,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 37,
+      "observations": [
+        {
+          "serial": 37,
+          "residue": 37,
+          "symbol": "-",
+          "image_class": "A"
+        },
+        {
+          "serial": 469,
+          "residue": 37,
+          "symbol": "-",
+          "image_class": "A"
+        }
+      ],
+      "symbols": [
+        "-"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 37,
+          "serial_b": 469,
+          "delta": 432,
+          "periods_apart": 4,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 38,
+      "observations": [
+        {
+          "serial": 38,
+          "residue": 38,
+          "symbol": "/",
+          "image_class": "B"
+        },
+        {
+          "serial": 362,
+          "residue": 38,
+          "symbol": "/",
+          "image_class": "B"
+        },
+        {
+          "serial": 470,
+          "residue": 38,
+          "symbol": "/",
+          "image_class": "B"
+        }
+      ],
+      "symbols": [
+        "/"
+      ],
+      "pair_count": 3,
+      "pairs": [
+        {
+          "serial_a": 38,
+          "serial_b": 362,
+          "delta": 324,
+          "periods_apart": 3,
+          "same_symbol": true
+        },
+        {
+          "serial_a": 38,
+          "serial_b": 470,
+          "delta": 432,
+          "periods_apart": 4,
+          "same_symbol": true
+        },
+        {
+          "serial_a": 362,
+          "serial_b": 470,
+          "delta": 108,
+          "periods_apart": 1,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 42,
+      "observations": [
+        {
+          "serial": 258,
+          "residue": 42,
+          "symbol": "/",
+          "image_class": "F"
+        },
+        {
+          "serial": 366,
+          "residue": 42,
+          "symbol": "/",
+          "image_class": "F"
+        }
+      ],
+      "symbols": [
+        "/"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 258,
+          "serial_b": 366,
+          "delta": 108,
+          "periods_apart": 1,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 43,
+      "observations": [
+        {
+          "serial": 43,
+          "residue": 43,
+          "symbol": "/",
+          "image_class": ""
+        },
+        {
+          "serial": 475,
+          "residue": 43,
+          "symbol": "/",
+          "image_class": "G"
+        }
+      ],
+      "symbols": [
+        "/"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 43,
+          "serial_b": 475,
+          "delta": 432,
+          "periods_apart": 4,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 46,
+      "observations": [
+        {
+          "serial": 154,
+          "residue": 46,
+          "symbol": "/",
+          "image_class": "A"
+        },
+        {
+          "serial": 478,
+          "residue": 46,
+          "symbol": "/",
+          "image_class": "A"
+        }
+      ],
+      "symbols": [
+        "/"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 154,
+          "serial_b": 478,
+          "delta": 324,
+          "periods_apart": 3,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 47,
+      "observations": [
+        {
+          "serial": 47,
+          "residue": 47,
+          "symbol": "/",
+          "image_class": "B"
+        },
+        {
+          "serial": 263,
+          "residue": 47,
+          "symbol": "/",
+          "image_class": "B"
+        }
+      ],
+      "symbols": [
+        "/"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 47,
+          "serial_b": 263,
+          "delta": 216,
+          "periods_apart": 2,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 51,
+      "observations": [
+        {
+          "serial": 267,
+          "residue": 51,
+          "symbol": "-",
+          "image_class": "F"
+        },
+        {
+          "serial": 375,
+          "residue": 51,
+          "symbol": "-",
+          "image_class": "F"
+        }
+      ],
+      "symbols": [
+        "-"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 267,
+          "serial_b": 375,
+          "delta": 108,
+          "periods_apart": 1,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 63,
+      "observations": [
+        {
+          "serial": 63,
+          "residue": 63,
+          "symbol": "/",
+          "image_class": "I"
+        },
+        {
+          "serial": 171,
+          "residue": 63,
+          "symbol": "/",
+          "image_class": "I"
+        }
+      ],
+      "symbols": [
+        "/"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 63,
+          "serial_b": 171,
+          "delta": 108,
+          "periods_apart": 1,
+          "same_symbol": true
+        }
+      ]
+    },
+    {
+      "residue": 66,
+      "observations": [
+        {
+          "serial": 66,
+          "residue": 66,
+          "symbol": "/",
+          "image_class": "C"
+        },
+        {
+          "serial": 282,
+          "residue": 66,
+          "symbol": "/",
+          "image_class": "C"
+        }
+      ],
+      "symbols": [
+        "/"
+      ],
+      "pair_count": 1,
+      "pairs": [
+        {
+          "serial_a": 66,
+          "serial_b": 282,
+          "delta": 216,
+          "periods_apart": 2,
+          "same_symbol": true
+        }
+      ]
+    }
+  ],
+  "bounded_period_scan": {
+    "range": [
+      2,
+      216
+    ],
+    "h108": {
+      "period": 108,
+      "pair_count": 20,
+      "agreeing_pairs": 20,
+      "agreement_rate": 1,
+      "repeated_groups": 16,
+      "conflict_groups": 0
+    },
+    "zero_conflict_periods_ranked_by_pair_support": [
+      {
+        "period": 108,
+        "pair_count": 20,
+        "agreeing_pairs": 20,
+        "agreement_rate": 1,
+        "repeated_groups": 16,
+        "conflict_groups": 0
+      },
+      {
+        "period": 216,
+        "pair_count": 8,
+        "agreeing_pairs": 8,
+        "agreement_rate": 1,
+        "repeated_groups": 8,
+        "conflict_groups": 0
+      },
+      {
+        "period": 197,
+        "pair_count": 6,
+        "agreeing_pairs": 6,
+        "agreement_rate": 1,
+        "repeated_groups": 6,
+        "conflict_groups": 0
+      }
+    ],
+    "conclusion": "Within candidate periods 2..216, period 108 is the unique zero-conflict period with 20 same-class pair comparisons; the next zero-conflict period is 216 with 8 pairs."
+  },
+  "guardrail": "Descriptive replication and bounded-period comparison over the current physical corpus; independent of completion-machine assumptions, but not a universal proof against larger or more complicated periodic models."
+}
