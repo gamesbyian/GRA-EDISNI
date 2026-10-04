@@ -37,7 +37,6 @@ residue,background,preferred_guess,support_of_14,alternate_symbol,alternate_supp
 99,I,.,14,,0,invariant,broader coupled Q4 F+I branch,broader_branch_discriminator,2
 100,A,/,10,.,4,state-dependent,Q4 A-stack polarity gauge,hidden_state_plus_q4_gauge,1
 102,C,.,7,/,7,state-dependent,Q4 C-stack polarity gauge,hidden_state_plus_q4_gauge,1
-103,D,.,10,/,4,state-dependent,,hidden_state_discriminator,2
 104,E,.,14,,0,invariant,,hard_model_test,1
 105,F,.,14,,0,invariant,broader coupled Q4 F+I branch,broader_branch_discriminator,2
 106,G,.,8,/,6,state-dependent,,hidden_state_discriminator,2
