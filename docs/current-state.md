@@ -946,3 +946,28 @@ The first two follow-ups are clean negatives:
 - Experiment 397 finds that the `534brn` DTMF row and column coordinates cannot directly replace the sticker tail as G5 depth selectors; every primary Q surface fails POS3 across U2/U4/U5/E2.
 
 These negatives are useful because they close cheap historically plausible operations without semantic fishing. The sandbox remains active for externally parameterized consumers and coordinate operations.
+
+
+## Experiments 398–407 — weighted historical pruning and one-bit E2 endpoint
+
+The completion ensembles now support a much broader historical-hypothesis audit without pretending the missing stickers are known.
+
+The strongest live derived interfaces are:
+- direct `534brn` digit indexing, which becomes invariant `--/--/-/-` across U4/U5/E2;
+- the historical 9+3 body/tail numeric representation, which is fully fixed under E2 except for class C's tail;
+- the E2 completion itself, which has only two variable residues, 84 and 102, forced complementary.
+
+The obvious lever interpretation of `--/--/-/-` is closed by preserved 2023 brute-force streams that contain the corresponding `RRURRURUR` word many times with no new in-game result.
+
+Cheap historical Trifid, Fractionated Morse, flat Morse, class-word Morse, and contiguous 9+3 chunk selection have all been closed by ensemble-level structural contradictions rather than bad-looking plaintext.
+
+The current computational boundary is therefore clean: keep the stable 534brn-derived interfaces frozen, stop broad classical-cipher search, and require an independently specified external consumer for the next decode step.
+
+Physically, E2 is now one unresolved bit: slash at residue 84 or slash at residue 102.
+
+
+## Experiment 408 — exact nine-count is not enough
+
+The archived Terminal41 shutdown flow contains exactly nine numbered confirmation pages, but they form a deterministic redirect countdown rather than a nine-value interface. No forms, symbol choices, branches, or per-step payload exist.
+
+So this tempting 9↔9 correspondence is closed. The stable Experiment-398 signature still lacks a live downstream consumer.

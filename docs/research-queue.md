@@ -813,3 +813,32 @@ Two immediate probes are complete:
 - **Experiment 397:** using the independently licensed `534brn` DTMF row/column directly as G5 depth selectors is a hard negative. No U2/U4/U5/E2 completion yields even one valid primary POS3 surface.
 
 **Next move:** remain consumer-first. Pick the next operation only when the historical mechanics corpus or a CE artifact supplies the parameter we would otherwise be tempted to guess. Continue physical acquisition in parallel.
+
+
+### Experiments 398–407 — weighted historical-hypothesis pruning
+
+The weighted completion program has now replayed several historically proposed sticker decoders without pretending the missing 43 cells are known.
+
+**Live derived surfaces**
+- Experiment 398: direct one-based use of the nine `534brn` digits as indices into native class words yields a stable U4/U5/E2 signature `--/--/-/-`.
+- Experiment 399: the May-2026 9+3 binary-number representation collapses under E2 to nine fixed 9-bit body values plus one class-C tail ambiguity, exactly residue 84 vs 102.
+- Experiment 407: E2 has only two variable residues at all, 84 and 102, forced complementary. The active external pair is literally one unresolved physical bit.
+
+**Closed cheap consumers / ciphers**
+- Experiment 400: the cheapest contiguous Q-chunk interpretation of the 9+3 selector has zero survivors.
+- Experiment 401: `RRURRURUR`, the lever projection of the indexed signature, occurs repeatedly in preserved 2023 De Bruijn command streams actually tested in-game with no new result.
+- Experiment 402: standard unkeyed direct-cube Trifid over the historical 3×36 carrier has zero U2 survivors against the preserved partial.
+- Experiment 403: direct serial Fractionated Morse is structurally impossible because every symbol choice as separator creates an invariant forbidden `xxx`.
+- Experiments 404–405: both flat serial and native class-word slash-separated Morse fail through invariant six-mark tokens.
+- Experiment 406 freezes this historical-cipher pruning boundary.
+
+**Priority consequence:** do not widen into keyed Trifid, arbitrary Morse rearrangements, arbitrary books, or generic numeric transforms. Computation should now return to externally specified consumers and prospective physical discrimination. Residue 82 remains the cleanest E2-vs-G6 test; residue 84 or 102 resolves E2 completely.
+
+
+### Experiment 408 — nine-count Terminal41 near-match closed
+
+Terminal41 does contain an exact nine-page shutdown-confirmation chain. Source audit shows it is only a fixed 09→...→01 redirect countdown with no nine-slot input grammar, choices, or branch state.
+
+This is a useful external-consumer negative for the robust Experiment-398 nine-symbol signature: same cardinality is not enough.
+
+**Consequence:** do not map the stable nine-symbol feature onto this chain. Continue searching only for typed consumers that actually expose nine addressable values/choices, or for external consumers of the frozen 9+3 numeric surface.

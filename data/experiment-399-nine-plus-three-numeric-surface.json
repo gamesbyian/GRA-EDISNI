@@ -1,0 +1,19 @@
+{
+  "experiment": 399,
+  "historical_operation": "first nine cells encode a large binary number; last three encode a smaller binary selector",
+  "bit_convention": "slash=1; dash/dot=0; leftmost position is most-significant bit",
+  "E2_body_vector_A_to_I": [302,382,58,151,311,407,369,129,357],
+  "E2_tail_support_A_to_I": {
+    "A":[4],
+    "B":[1],
+    "C":[1,4],
+    "D":[1],
+    "E":[4],
+    "F":[2],
+    "G":[4],
+    "H":[1],
+    "I":[1]
+  },
+  "key_result": "The two externally selected masters have identical nine 9-bit body numbers. Their only numeric ambiguity is class C tail = 1 or 4, the same physical residue-84/residue-102 fork.",
+  "guardrail": "No book, page corpus, or larger numeric domain is independently identified. Preserve as a numeric surface, not a semantic decode."
+}

@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **397**.
+Latest indexed experiment: **408**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -431,6 +431,19 @@ Latest indexed experiment: **397**.
 | 395 | weighted completion exploration program: formalizes U2/U3/U4/U5/E2 ensemble replay as the approved way to use missing-sticker guesses for new approaches. Graduation requires broad invariance, an independently specified sharp consumer filter, prospective model separation, or a small falsifiable physical-residue target. |
 | 396 | boundary/check-bit sandbox: fixed symmetric edge widths 1–4 on native 12-cell A-I class words do not robustly recover row registration. Widths 1–3 never uniquely label all nine U2 rows; width 4 does so only 243/648 U2 and 4/20 U4. Neither A-I nor solved physical IABCDEFGH order is ever minimum-Hamming at any tested width in U2/U4/E2. Cheap PC-style boundary continuity closed absent an external boundary cue. |
 | 397 | direct 534brn selector replay: use registered DTMF row or column as external depth d for each native class and test POS3 on each primary Q surface. Across U2/U4/U5/E2, both coordinates produce zero valid POS3 surfaces at Q0, Q1 or Q2. Hard negative: 534brn does not simply replace the sticker tail as G5 selector. |
+
+| 398 | historical 534brn digit-as-index replay: pair native classes IABCDEFGH with digits 534965398 and use each digit one-based as the position inside its 12-cell class word. U2 yields only two nine-symbol outputs; all U4/U5/E2 masters collapse to the same robust sequence `--/--/-/-` (lever projection `RRURRURUR`). Preserve as a derived feature, not a decode. |
+| 399 | historical 9+3 numeric surface: direct binary rendering of each 12-cell class word as a 9-bit body plus 3-bit tail. Under E2 all nine body values are fixed; the tail is one-hot and only class C remains ambiguous, exactly the 84/102 fork. No numeric consumer is independently identified. |
+| 400 | contiguous 9+3 subset selector: treat the tail as selecting one contiguous Q chunk of the first nine body cells, then ask for one-dash/one-slash ternary readout. Zero U2/U4/U5/E2 completions succeed. This closes the cheapest cross-axis subset interpretation and strengthens the typed strided d-selection contrast. |
+| 401 | digit-index lever historical replay: the stable Experiment-398 lever word `RRURRURUR` occurs 106 times in preserved 2023 De Bruijn command streams that were physically tested in-game, with no unknown result. Direct bunker-lever consumption is closed. |
+| 402 | historical 3×36 Trifid replay: exhaust all 36 cheap standard unkeyed symbol/axis configurations across all 648 U2 completions against the preserved 2022 partial plaintext. Zero survivors; the first C/U pair uniquely fixes a decoder that makes the next claimed S impossible. Cheap Trifid lane closed. |
+| 403 | direct Fractionated Morse replay: serial H108 grouping into 36 trigrams, all six symbol mappings, all 648 U2 completions. Zero valid decodes because invariant uniform triples force forbidden `xxx` for every possible separator assignment. |
+| 404 | direct slash-separated Morse: both dash/dot polarities across U2 fail because invariant `/------/` forces an illegal six-mark token. Flat serial Morse closed. |
+| 405 | native class-word Morse: the independent 9×12 carrier also fails universally; invariant class-H word `-/------/../` contains a six-mark token under either polarity. Natural Morse registrations closed. |
+| 406 | weighted historical-cipher pruning checkpoint: ensemble replay closes the cheap historically attested Trifid/Fractionated-Morse/Morse families while preserving the 534brn indexed signature and 9+3 numeric surface as consumer-less derived interfaces. Next computation should return to external consumers and prospective physical discrimination. |
+| 407 | nontrivial coupling atlas: variable residues collapse U2 19 → U4 14 → U5 13 → E2 2. U4 creates four exact complement couplings (22/25, 84/102, 88/106, 94/103); G6 adds exactly one, 91/100. E2 fixes everything except the existing 84/102 complement, making the external pair literally one unresolved physical bit. |
+
+| 408 | Terminal41 nine-step consumer audit: the archived shutdown-confirmation chain has exactly nine pages, but source inspection shows a deterministic 09→...→01→confirmed redirect countdown with no form, input, branching choice, or per-step payload. Exact nine-count resemblance to the Experiment-398 signature is therefore structurally closed. |
 
 ## Current frontier
 

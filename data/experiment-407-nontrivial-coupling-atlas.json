@@ -1,0 +1,8 @@
+{
+  "experiment": 407,
+  "variable_residue_counts": {"U2":19,"U4":14,"U5":13,"E2":2},
+  "U2_to_U4_nontrivial_relations": [[22,25,"comp"],[84,102,"comp"],[88,106,"comp"],[94,103,"comp"]],
+  "U4_to_U5_nontrivial_relations": [[22,25,"comp"],[84,102,"comp"],[88,106,"comp"],[91,100,"comp"],[94,103,"comp"]],
+  "U4_to_E2_nontrivial_relations": [[84,102,"comp"]],
+  "interpretation": "U4 creates four nontrivial complement couplings. G6 adds exactly one more, 91<->100. E2 fixes all U4 variability except the existing 84<->102 complement. The E2 pair is therefore literally one unresolved physical bit, while 91<->100 is a compact G6-specific relational fingerprint."
+}
