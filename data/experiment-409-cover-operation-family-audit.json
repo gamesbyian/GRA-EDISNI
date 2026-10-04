@@ -1,0 +1,42 @@
+{
+  "experiment": 409,
+  "title": "CE reversible-cover operation-family audit",
+  "status": "completed provenance and source-quality audit",
+  "explicit_clue_status": {
+    "iam8bit_tweet": "reversible slip cover explicitly advertised as containing a hidden clue",
+    "community_readme": "PS4 cover hidden mystery remains an unresolved active puzzle"
+  },
+  "source_material": {
+    "high_resolution_scan_A": "INSIDE_A-5d197786f158c567.JPG",
+    "high_resolution_scan_B": "INSIDE_B-80fbff1237c37913.JPG",
+    "dimensions_each": [6552,5040],
+    "historical_note": "community stated in April 2020 that high-quality scans had recently been obtained"
+  },
+  "independently_identified_cover_elements": [
+    "clock at 12:12",
+    "monitor showing acorn imagery from the PC/PS4 printer puzzle, but only a partial/top portion",
+    "monitor showing planet-like imagery associated with the Xbox printer puzzle family",
+    "graph-like monitor imagery",
+    "login-screen-like monitor imagery",
+    "a running-man figure present in the physical scene outside the monitor layer"
+  ],
+  "historical_operation_family": {
+    "community_2020_interpretation": "cover may act as a guide linking puzzle outputs and may use partial/layered imagery rather than a self-contained plaintext",
+    "community_2022_interpretation": "explicit suggestion to reverse the reversible cover digitally because the clock reads 12:12",
+    "community_2025_revisit": "monitor images were compared directly against game/source assets; acorn was again noted as only partial while the scene itself contains a running-man element"
+  },
+  "epistemic_effect": {
+    "licensed": [
+      "cross-artifact reference/consumer search",
+      "partial-image or layer-composition as an operation class",
+      "using exact source-image correspondences as registration anchors"
+    ],
+    "not_licensed": [
+      "arbitrary cover overlays",
+      "free rotations/crops/scales chosen for attractive output",
+      "mapping the nine sticker states onto arbitrary cover objects",
+      "treating 12:12 as a sticker numeric key without another cue"
+    ]
+  },
+  "conclusion": "The cover is independently clue-bearing and demonstrably references prior ARG visual products. It strengthens cross-artifact/layer-composition as an operation family, but supplies no exact nine-state or 9+3 sticker consumer. Preserve it as a high-priority source of registration cues rather than force-fit the current machine onto it."
+}
