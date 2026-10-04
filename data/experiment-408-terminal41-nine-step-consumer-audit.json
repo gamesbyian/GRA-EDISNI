@@ -1,0 +1,9 @@
+{
+  "experiment": 408,
+  "candidate_external_structure": "nine Terminal41 shutdown-confirmation pages",
+  "page_count": 9,
+  "structure": "fixed linear 09->08->...->01->confirmed redirect chain",
+  "input_capacity": "none; the nine pages contain no forms, inputs, per-step symbol choices, or branching consumers",
+  "classification": "exact nine-count near-match, structurally closed as a sticker consumer",
+  "interpretation": "Terminal41 contains an exact nine-step object, but it is a deterministic redirect countdown, not a nine-slot input interface. It cannot independently consume or validate the Experiment-398 nine-symbol signature."
+}
