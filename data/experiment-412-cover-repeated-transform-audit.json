@@ -1,0 +1,26 @@
+{
+  "experiment": 412,
+  "title": "repeated source-to-cover transform audit",
+  "status": "completed bounded cross-pair audit",
+  "pairs": {
+    "login": {
+      "source_family_known": true,
+      "cover_relation": "same display family / no independently documented nontrivial transform"
+    },
+    "graph": {
+      "source_family_known": true,
+      "cover_relation": "same display family / no independently documented nontrivial transform"
+    },
+    "acorn": {
+      "source_family_known": true,
+      "cover_relation": "partial/top-only representation is historically documented"
+    },
+    "planet": {
+      "source_family_known": true,
+      "cover_relation": "related planet family, but historical discussion explicitly says it is not simply the final solved planet image"
+    }
+  },
+  "common_transform_found": false,
+  "reason": "Only the acorn has a clearly documented partial-image operation; login and graph are source-reference correspondences without the same omission, while the planet relation remains unresolved rather than matching the acorn rule.",
+  "conclusion": "The cover supports cross-artifact reference and possibly partial/layer behavior, but no repeated source-to-cover transform currently exists that can be exported as a sticker operation."
+}
