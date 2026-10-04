@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **411**.
+Latest indexed experiment: **412**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -448,6 +448,8 @@ Latest indexed experiment: **411**.
 | 409 | reversible-cover operation-family audit: iam8bit explicitly advertised the PS4 reversible slip cover as containing a hidden clue; preserved 6552×5040 scans and historical discussion identify prior-ARG visual references, including partial acorn imagery, planet-family imagery, graph/login screens and a running-man scene element. This independently licenses cross-artifact/layer-composition as an operation family, but not a nine-state or 9+3 sticker consumer. |
 | 410 | cover monitor source-reference inventory: preserved crop/source pairings show the cover behaves more like a meta-reference board to prior puzzle/game image families than a typed input interface. High-value next cover work is to identify a repeated measurable source→cover transform, not to map sticker states onto arbitrary monitor objects. |
 | 411 | cover q-reversal cue audit: reversible-cover design, 12:12 clock and a 2022 solver proposal to reverse the cover independently support reversal/re-registration as a general operation family, but do not label the machine Q axis or uniquely select `q'=2q+2`. Experiment 389's exact registration gap remains open. |
+
+| 412 | repeated source→cover transform audit: login and graph provide source-family references without a documented nontrivial transform; acorn is clearly partial/top-only; planet is related but not identical to the final solved planet image and its exact transform remains unresolved. No common source→cover operation is independently demonstrated across multiple pairs. Preserve cover as a reference/layer clue source, not yet an exportable sticker transform. |
 
 ## Current frontier
 
