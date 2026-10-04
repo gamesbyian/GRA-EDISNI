@@ -1,0 +1,14 @@
+{
+  "experiment": 405,
+  "tested_family": "native A-I 12-cell class words; slash as separator; both assignments of dot/dash Morse polarity",
+  "U2_completions": 648,
+  "valid_completions": 0,
+  "invariant_witness": {
+    "class": "H",
+    "class_word": "-/------/../",
+    "raw_tokens": ["-","------",".."],
+    "reason": "The six-mark middle token is invalid as any A-Z/0-9 Morse code under either polarity."
+  },
+  "classification": "hard negative",
+  "consequence": "The natural 9x12 class-word rearrangement does not rescue slash-separated Morse."
+}
