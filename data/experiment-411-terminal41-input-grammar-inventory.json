@@ -1,0 +1,14 @@
+{
+  "experiment": 411,
+  "source_tree_files": 74,
+  "text_files_scanned": 73,
+  "html_tag_counts": {
+    "form": 0,
+    "input": 0,
+    "select": 0,
+    "textarea": 0
+  },
+  "classification": "static Terminal41 snapshot contains routes/state transitions but no preserved typed-input consumer grammar",
+  "scope": "Does not apply to historical Playdead main-site JavaScript/subscription-box consumers, which are separately documented.",
+  "consequence": "Do not treat arbitrary Terminal41 paths or static pages as an input surface for E2, the stable nine-symbol signature, or 9+3 numbers absent a separately recovered endpoint grammar."
+}
