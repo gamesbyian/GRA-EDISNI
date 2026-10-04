@@ -971,3 +971,16 @@ Physically, E2 is now one unresolved bit: slash at residue 84 or slash at residu
 The archived Terminal41 shutdown flow contains exactly nine numbered confirmation pages, but they form a deterministic redirect countdown rather than a nine-value interface. No forms, symbol choices, branches, or per-step payload exist.
 
 So this tempting 9↔9 correspondence is closed. The stable Experiment-398 signature still lacks a live downstream consumer.
+
+
+## Experiments 409–411 — clue-bearing cover, no exact sticker consumer yet
+
+The reversible PS4 cover is independently confirmed as clue-bearing rather than merely suspicious artwork.
+
+High-resolution archived scans and historical comparison assets show that its monitor imagery references multiple prior ARG/game visual families, including a partial acorn/LifeDetected image plus planet-, graph- and login-like screens. This strengthens a cross-artifact / layered-composition operation family and makes the cover a legitimate source of externally fixed registration cues.
+
+However, the cover still exposes no typed nine-state or 9+3 sticker interface.
+
+Its reversibility and 12:12 clock also do not independently fix the active `534brn` outer-Q reversal. The exact `q'=2q+2` provenance gap therefore remains open.
+
+Future cover work is constrained to source-matched transforms that repeat across multiple independently identified monitor/source pairs.
