@@ -1,0 +1,38 @@
+{
+  "experiment": 409,
+  "title": "reversible PS4 cover clue provenance audit",
+  "source_images": {
+    "A": {
+      "archive_asset": "gamesbyian/playdead-unofficial-exports/assets/INSIDE_A-5d197786f158c567.JPG",
+      "dimensions": [6552,5040]
+    },
+    "B": {
+      "archive_asset": "gamesbyian/playdead-unofficial-exports/assets/INSIDE_B-80fbff1237c37913.JPG",
+      "dimensions": [6552,5040]
+    }
+  },
+  "marketing_status": "Existing external-consumer audit records an iam8bit post describing the reversible slip cover as containing a hidden clue.",
+  "historical_observations": [
+    {
+      "date": "2020-04-27",
+      "claim": "community explicitly described two cover screens as holding a planet and a nut/acorn and proposed the covers might guide already-active ARG puzzles"
+    },
+    {
+      "date": "2022-08-19",
+      "claim": "community explicitly noted a monitor showing only the top half of the acorn while the boy looks toward an actual running man outside"
+    },
+    {
+      "date": "2022-12-24",
+      "claim": "community returned to the same partial-acorn/running-man relation and argued the cover clue might have been rendered moot once the acorn puzzle was solved"
+    }
+  ],
+  "source_audit": {
+    "same_size_pair": true,
+    "obvious_nine_slot_interface": false,
+    "obvious_3x3_or_3x3x3_input_surface": false,
+    "obvious_numeric_consumer": false,
+    "monitor_scene_cross_puzzle_pointer": true
+  },
+  "classification": "strong historical candidate for a cross-puzzle/metaclue, weak direct CE-foreground consumer",
+  "consequence": "Downgrade the cover as a direct consumer of E2/terminal outputs unless a new cover-native registration is found. Preserve it as evidence that CE packaging can point back to earlier puzzle components and partial/layer-specific reading."
+}
