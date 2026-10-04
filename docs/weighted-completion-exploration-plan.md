@@ -156,5 +156,6 @@ Otherwise record it as a negative or exploratory curiosity and move on.
 8. Experiments 402–405 — cheap Trifid/Fractionated-Morse/Morse replays: structurally closed.
 9. Experiment 406 — historical-cipher pruning checkpoint: no widening without new external keys.
 10. Experiment 407 — exact coupling atlas: E2 reduced to the single 84/102 physical bit.
-11. Next — consumer-first only. A new artifact must supply the key, traversal, corpus, role, or downstream grammar before another decode family opens.
-12. Continue acquisition in parallel; residue 82 is the cleanest G5-vs-G6 test, while residue 84 or 102 resolves E2 completely.
+11. Experiment 408 — exact nine-page Terminal41 shutdown chain audited and closed as a deterministic countdown, not an input consumer.
+12. Next — consumer-first only. A new artifact must supply the key, traversal, corpus, role, or downstream grammar before another decode family opens.
+13. Continue acquisition in parallel; residue 82 is the cleanest G5-vs-G6 test, while residue 84 or 102 resolves E2 completely.
