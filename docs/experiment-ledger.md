@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **397**.
+Latest indexed experiment: **401**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -431,6 +431,11 @@ Latest indexed experiment: **397**.
 | 395 | weighted completion exploration program: formalizes U2/U3/U4/U5/E2 ensemble replay as the approved way to use missing-sticker guesses for new approaches. Graduation requires broad invariance, an independently specified sharp consumer filter, prospective model separation, or a small falsifiable physical-residue target. |
 | 396 | boundary/check-bit sandbox: fixed symmetric edge widths 1–4 on native 12-cell A-I class words do not robustly recover row registration. Widths 1–3 never uniquely label all nine U2 rows; width 4 does so only 243/648 U2 and 4/20 U4. Neither A-I nor solved physical IABCDEFGH order is ever minimum-Hamming at any tested width in U2/U4/E2. Cheap PC-style boundary continuity closed absent an external boundary cue. |
 | 397 | direct 534brn selector replay: use registered DTMF row or column as external depth d for each native class and test POS3 on each primary Q surface. Across U2/U4/U5/E2, both coordinates produce zero valid POS3 surfaces at Q0, Q1 or Q2. Hard negative: 534brn does not simply replace the sticker tail as G5 selector. |
+
+| 398 | historical 534brn digit-as-index replay: pair native classes IABCDEFGH with digits 534965398 and use each digit one-based as the position inside its 12-cell class word. U2 yields only two nine-symbol outputs; all U4/U5/E2 masters collapse to the same robust sequence `--/--/-/-` (lever projection `RRURRURUR`). Preserve as a derived feature, not a decode. |
+| 399 | literal May-2026 9+3 numeric profile: interpret each class word as a 9-bit large value plus 3-bit small value. E2 fixes all nine body integers exactly; only class C's tail remains 1 vs 4, exactly the residue-102 vs residue-84 ambiguity. No downstream numeric consumer is independently identified. |
+| 400 | lever-consumer closure: the 2023 community De Bruijn run exhaustively covered all three-position lever words through length 14 (3^14 = 4,782,969; all 20 segments completed with no unknown result). Therefore the nine-command `RRURRURUR` output from Experiment 398 was already physically exercised and is negative as a new bunker-door code. |
+| 401 | nontrivial coupling atlas: variable residues collapse U2 19 → U4 14 → U5 13 → E2 2. U4 creates only four exact complement couplings (22/25, 84/102, 88/106, 94/103); G6 adds exactly one, 91/100. E2 fixes everything except the existing 84/102 complement, making the external pair literally one unresolved physical bit. |
 
 ## Current frontier
 
