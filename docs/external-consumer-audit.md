@@ -217,6 +217,6 @@ Experiment 398 tests the historically proposed idea that the nine decimal digits
 
 The independently motivated CE sleeve/lever mapping converts this to `RRURRURUR`.
 
-Experiment 400 closes the ordinary lever-door interpretation: the Nov-2023 community completed a De Bruijn-style exhaustive three-symbol lever sweep through length 14, necessarily exercising every nine-command word, with no unknown result. Historical testers also reported the known bunker code continued to work after prolonged failed-input runs.
+Experiment 401 closes the ordinary bunker-lever interpretation more strongly than abstract coverage alone. The exact nine-command word occurs **106 times** in the surviving archived 2023 De Bruijn command sections that were physically run in-game, with no unknown result reported.
 
-Preserve the indexed nine-symbol feature, but do not treat the ordinary bunker lever as its live consumer. A new consumer must be independently supplied.
+Preserve the indexed nine-symbol feature as an external derived interface, but do not treat the ordinary bunker lever as its live consumer. A new consumer must be independently supplied.
