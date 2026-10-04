@@ -1,0 +1,20 @@
+{
+  "experiment": 402,
+  "historical_partial": "--cus------------h--b--ts-----------",
+  "tested_family": {
+    "registration": "historical 3x36; columns are triples (r, r+36, r+72)",
+    "symbol_to_digit_bijections": 6,
+    "coordinate_axis_permutations": 6,
+    "U2_completions": 648,
+    "total_decoder_configs": 36
+  },
+  "full_partial_match_survivors": 0,
+  "first_two_CU_constraint": {
+    "unique_symbol_map": {"-":1,"/":3,".":2},
+    "unique_axis_permutation": [2,0,1],
+    "position_5_across_all_U2": "#",
+    "historical_position_5": "S"
+  },
+  "classification": "hard negative for standard unkeyed direct-cube Trifid",
+  "guardrail": "Do not brute-force keyed Trifid alphabets. Reopen only if the exact historical key/period/fractionation rule is independently recovered."
+}
