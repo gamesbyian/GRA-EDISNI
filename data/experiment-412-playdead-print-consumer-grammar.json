@@ -1,0 +1,25 @@
+{
+  "experiment": 412,
+  "source": "archived historical Playdead print JavaScript",
+  "client_side_format_constraints": {
+    "nonblank_required": true,
+    "length_constraint": null,
+    "character_class_constraint": null,
+    "numeric_constraint": null,
+    "ternary_constraint": null,
+    "nine_value_constraint": null
+  },
+  "protocol": {
+    "validation_request": {
+      "endpoint": "/print/index.php",
+      "fields": ["in","id","check=true"]
+    },
+    "content_request": {
+      "endpoint": "/print/index.php",
+      "fields": ["in","id"]
+    },
+    "state_key": "persistent browser-local GUID"
+  },
+  "classification": "strong precedent for hidden server-side answer consumers; no useful client-side grammar for choosing a sticker output representation",
+  "guardrail": "Do not use the generic historical input box as license to submit arbitrary E2/100/numeric strings to historical endpoints."
+}
