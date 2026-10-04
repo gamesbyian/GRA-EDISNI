@@ -991,3 +991,16 @@ Future cover work is constrained to source-matched transforms that repeat across
 Cross-pair comparison does not recover a repeated source→cover transform. The acorn reference is clearly partial, but graph/login do not independently show the same operation and the planet transform remains unresolved.
 
 The cover therefore strengthens cross-artifact reference/layering as a design grammar but still does not supply a concrete sticker transform.
+
+
+## Experiments 413–415 — footer decodes to `128 UNSOLVED`
+
+The formerly opaque `534brn` footer is now a high-value structural clue.
+
+A deliberate 180° glyph reading turns `pe^!02un` into `unsolved`, while the adjacent dot-run lengths 8/2/1 reverse to 1/2/8. The page therefore says **128 UNSOLVED**.
+
+Independently, all three genuine damaged JPEG capture families contain one common SOF0-shaped header. Under the known text-corruption transform, both height and width are `0x00??` with the low byte destroyed in the 0x80..0xFF range, constraining each dimension to 128..255.
+
+This makes 128 a strong source-native image-dimension clue. Exact 128×128 remains unproven pending a second-axis/square constraint.
+
+The footer also proves orientation change is authorially present on the same 534brn page, but literal 180° transfer does not reproduce the sticker one-shot state. The exact q reversal remains unresolved.
