@@ -552,7 +552,7 @@
     ],
     "singleton_positions": 38,
     "favorable_assignments": 440079448381568,
-    "total_symbol_assignments": 75553695443676820000,
+    "total_symbol_assignments": 75553695443676829680,
     "probability_all_repeat_groups_homogeneous": "5.824724334094749e-06",
     "interpretation": "Exact conditional probability after preserving the observed primary slash/dash totals and randomly permuting symbols among observed primary sticker positions.",
     "multiple_testing_guardrail": "This is not a blind period-scan p-value. H108 was already independently hypothesized; the bounded period scan is reported separately and no correction over candidate periods is applied here."
@@ -566,7 +566,7 @@
       "period": 108,
       "pair_count": 20,
       "agreeing_pairs": 20,
-      "agreement_rate": 1,
+      "agreement_rate": 1.0,
       "repeated_groups": 16,
       "conflict_groups": 0
     },
@@ -575,7 +575,7 @@
         "period": 108,
         "pair_count": 20,
         "agreeing_pairs": 20,
-        "agreement_rate": 1,
+        "agreement_rate": 1.0,
         "repeated_groups": 16,
         "conflict_groups": 0
       },
@@ -583,7 +583,7 @@
         "period": 216,
         "pair_count": 8,
         "agreeing_pairs": 8,
-        "agreement_rate": 1,
+        "agreement_rate": 1.0,
         "repeated_groups": 8,
         "conflict_groups": 0
       },
@@ -591,7 +591,7 @@
         "period": 197,
         "pair_count": 6,
         "agreeing_pairs": 6,
-        "agreement_rate": 1,
+        "agreement_rate": 1.0,
         "repeated_groups": 6,
         "conflict_groups": 0
       }
