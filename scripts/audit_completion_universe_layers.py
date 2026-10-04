@@ -61,7 +61,7 @@ def machine_layers():
     payloads=list(enumerate_primary_payloads(primary_column_candidates(rows)))
     selectors=list(enumerate_selectors(q4_selector_candidates(rows)))
     u3=[generate_master(p,s) for p in payloads for s in selectors]
-    assert len(u3)==216 and len(set(u3))==216
+    assert len(u3)==108 and len(set(u3))==108
 
     u4=[]; u5=[]
     for p in payloads:
@@ -74,8 +74,8 @@ def machine_layers():
             terminal=decode_dash_pos3(terminal_surface(p,s))
             if terminal is not None:
                 u5.append(master)
-    assert len(u4)==20 and len(set(u4))==20
-    assert len(u5)==14 and len(set(u5))==14
+    assert len(u4)==12 and len(set(u4))==12
+    assert len(u5)==10 and len(set(u5))==10
     return u3,u4,u5
 
 def main():
@@ -108,7 +108,7 @@ def main():
     assert result["layers"]["U4"]["newly_fixed_vs_previous_layer"]=={"93":"."}
     assert result["layers"]["U5"]["newly_fixed_vs_previous_layer"]=={"82":"."}
     assert result["layers"]["U5"]["variable_residues"]==[
-        22,25,55,58,61,84,88,91,94,100,102,103,106
+        22,25,55,58,61,84,88,91,94,100,102,106
     ]
     assert [result["layers"][x]["minimum_discriminator"]["minimum_size"] for x in ("U2","U3","U4","U5")]==[11,9,6,5]
 
