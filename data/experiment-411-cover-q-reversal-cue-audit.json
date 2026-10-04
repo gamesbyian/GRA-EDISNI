@@ -1,0 +1,20 @@
+{
+  "experiment": 411,
+  "title": "reversible-cover / 12:12 cue versus the 534brn q-reversal",
+  "status": "completed cue-specificity audit",
+  "candidate_machine_parameter": "q'=2q+2, i.e. outer-layer order 2,1,0",
+  "external_cover_cues": [
+    "the physical cover is reversible",
+    "the clock visibly reads 12:12",
+    "a 2022 community suggestion explicitly proposed digitally reversing the reversible cover"
+  ],
+  "result": {
+    "independent_reversal_operation_family": true,
+    "unique_q_axis_identification": false,
+    "unique_reversal_geometry": false,
+    "authorial_instruction_to_reverse": false,
+    "fixes_q_prime_2q_plus_2": false
+  },
+  "reason": "A reversible cover admits front/back swap, horizontal mirror, vertical mirror, 180-degree rotation, and reading-direction changes. Nothing on the cover labels the machine's Q axis or selects the 2,1,0 ordering.",
+  "epistemic_effect": "The cover modestly strengthens reversal/re-registration as a general Playdead operation family but does not close Experiment 389's exact q-reversal provenance gap."
+}
