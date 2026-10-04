@@ -10,11 +10,12 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OBS = ROOT / "data" / "observations.csv"
+OBS = ROOT / os.environ.get("GRA_EDISNI_OBSERVATIONS_FILE", "data/observations.csv")
 COMMUNITY = ROOT / "data" / "discord-community-master-108.json"
 
 
