@@ -1,0 +1,19 @@
+{
+  "experiment": 404,
+  "historical_cue": "Sep-2026 question: are slashes intended as Morse spaces/separators?",
+  "tested_family": {
+    "order": "serial H108",
+    "separator": "/",
+    "polarity_mappings": 2,
+    "token_alphabet": "International Morse A-Z and 0-9",
+    "U2_completions": 648
+  },
+  "valid_U2_completions": 0,
+  "invariant_witness": {
+    "residues": [69,70,71,72,73,74,75,76],
+    "pattern": "/------/",
+    "reason": "The six-mark token between invariant slash boundaries is invalid as any A-Z or 0-9 Morse token under either dot/dash polarity."
+  },
+  "classification": "hard negative",
+  "guardrail": "Do not try arbitrary starts/reorderings or reinterpret slash runs without an external traversal/grouping cue."
+}
