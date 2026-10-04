@@ -896,3 +896,16 @@ With Y 2×2 and Cb/Cr 1×1 sampling, each MCU covers 16×16 pixels. Given the al
 The Dec-2025 report of “almost 64” repeated bit-pattern groups is therefore worth revisiting, but only structurally.
 
 **Next test:** prove whether those repeated groups are MCU-aligned and count complete MCUs. If exactly 64, 128×128 is derived rather than guessed.
+
+
+### Experiment 417 — entropy corridor recovered, restart shortcut absent
+
+The damaged JPEG now has bounded scan structure.
+
+B and P each expose one exact baseline-SOS-shaped sequence. In every A/B/P capture, the two normalized tokens immediately before `pe^!02un` are unknown/unknown, exactly the expected damaged form of EOI `FF D9`.
+
+This bounds B's normalized entropy corridor to 4295 tokens and P's to 4156.
+
+No DRI-shaped `FF DD 00 04` segment exists before SOS in B/P, so restart-marker counting cannot supply the exact MCU count.
+
+**Next exact task:** build a constraint entropy decoder that tracks standard Huffman block/MCU boundaries through known bytes, high-byte unknowns, NUL/space ambiguity and byte stuffing without optimizing pixels. Use it to test whether 64 complete MCUs is uniquely feasible.
