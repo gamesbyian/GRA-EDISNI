@@ -964,3 +964,10 @@ Cheap historical Trifid, Fractionated Morse, flat Morse, class-word Morse, and c
 The current computational boundary is therefore clean: keep the stable 534brn-derived interfaces frozen, stop broad classical-cipher search, and require an independently specified external consumer for the next decode step.
 
 Physically, E2 is now one unresolved bit: slash at residue 84 or slash at residue 102.
+
+
+## Experiment 408 — exact nine-count is not enough
+
+The archived Terminal41 shutdown flow contains exactly nine numbered confirmation pages, but they form a deterministic redirect countdown rather than a nine-value interface. No forms, symbol choices, branches, or per-step payload exist.
+
+So this tempting 9↔9 correspondence is closed. The stable Experiment-398 signature still lacks a live downstream consumer.
