@@ -386,8 +386,14 @@ def main():
         str(m): dims for m,dims in dimension_counts.items() if len(dims) <= 8
     }
 
+    products = sorted({a * b for a in range(8, 17) for b in range(8, 17)})
+    assert feasible == list(range(16, 301))
+    assert geometric == products
+    assert len(products) == 43
+
     result = {
         "experiment": 423,
+        "status": "completed exact structural constraint audit",
         "capture": "P",
         "entropy_token_span": len(entropy),
         "decoder_model": {
@@ -399,40 +405,34 @@ def main():
             "pixels_reconstructed": False,
             "coefficient_values_reconstructed": False,
         },
-        "feasible_complete_mcu_counts_0_300": feasible,
-        "feasible_mcu_counts_compatible_with_128_255_dimensions": geometric,
-        "feasible_count_total": len(feasible),
-        "feasible_count_min": min(feasible),
-        "feasible_count_max": max(feasible),
-        "feasible_counts_are_contiguous": feasible == list(range(min(feasible), max(feasible) + 1)),
-        "geometric_feasible_count_total": len(geometric),
+        "feasible_complete_mcu_counts": {
+            "min": min(feasible),
+            "max": max(feasible),
+            "count": len(feasible),
+            "contiguous": feasible == list(range(min(feasible), max(feasible) + 1),
+        },
+        "independent_dimension_domain": {
+            "pixel_width": [128, 255],
+            "pixel_height": [128, 255],
+            "mcu_axis_counts": [8, 16],
+            "possible_mcu_products": products,
+            "possible_product_count": len(products),
+            "surviving_mcu_products": geometric,
+            "all_possible_products_survive": geometric == products,
+        },
         "contains_64": 64 in feasible,
         "only_64_in_dimension_domain": geometric == [64],
-        "small_dimension_solution_sets": unique_dimension_counts,
-        "peak_local_decoder_states": peak_states,
-    }
-
-    assert feasible == list(range(16, 301))
-    assert geometric == sorted({a * b for a in range(8, 17) for b in range(8, 17)})
-    assert len(geometric) == 43
-
-    if geometric == [64]:
-        result["conclusion"] = (
-            "Under the declared loss channel and standard baseline Huffman tables, the damaged entropy stream "
-            "permits exactly 64 MCUs within the independently established 128..255 dimension domain. Combined "
-            "with 16x16 MCUs, this uniquely proves 128x128."
-        )
-    elif 64 not in geometric:
-        result["conclusion"] = (
-            "The exact constraint decoder excludes 64 MCUs under the declared model, so the 128x128 hypothesis "
-            "fails this entropy-structure test."
-        )
-    else:
-        result["conclusion"] = (
+        "conclusion": (
             "64 MCUs remains feasible, but every one of the 43 MCU-grid products possible for 128..255 dimensions "
             "also survives. The entropy structure therefore supplies no dimension discrimination within that domain; "
             "the 128 UNSOLVED clue remains suggestive but cannot be promoted to 128x128 from the surviving lossy capture."
-        )
+        ),
+        "stopping_rule": (
+            "Do not widen into guessed pixels or guessed entropy bytes. Reopen the exact-dimension lane only if a new "
+            "capture recovers additional entropy bytes, an independent source fixes square/axis geometry, or another "
+            "artifact directly identifies 128x128."
+        ),
+    }
 
     OUT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, indent=2))
