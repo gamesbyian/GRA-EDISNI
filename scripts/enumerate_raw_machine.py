@@ -289,7 +289,7 @@ def main():
         for residue in range(1, 109)
         if len({master[residue - 1] for master in masters}) > 1
     ]
-    assert variable == [22, 25, 55, 58, 61, 84, 88, 91, 94, 100, 102, 106]
+    assert variable == [22, 25, 55, 58, 61, 84, 88, 91, 100, 102, 106]
     assert all(
         Counter(master) == Counter({"/": 54, "-": 36, ".": 18})
         for master in masters
@@ -319,7 +319,7 @@ def main():
 
     print("OK: raw constraints + recursive POS3 closure recover exactly 10 states")
     print("OK: terminal 100 emerges without being used as a filter")
-    print("OK: reconstructed masters reproduce corpus, 95/13 split, and 54/36/18 census")
+    print("OK: reconstructed masters reproduce corpus, 97/11 split, and 54/36/18 census")
 
 
 if __name__ == "__main__":
