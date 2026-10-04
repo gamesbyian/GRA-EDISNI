@@ -1,0 +1,11 @@
+{
+  "experiment": 400,
+  "historical_cue": "May-2026 first-nine larger-domain plus last-three smaller-subset proposal",
+  "tested_operation": "tail selector chooses one contiguous 3-bit Q chunk from the first-nine body, then decode that chosen chunk by one-dash or one-slash position",
+  "results": {
+    "one_dash": {"U2":0,"U4":0,"U5":0,"E2":0},
+    "one_slash": {"U2":0,"U4":0,"U5":0,"E2":0}
+  },
+  "classification": "hard negative",
+  "consequence": "The contiguous cross-axis subset reading is structurally dead. The historical 9+3 idea aligns better with the type-preserving strided d-selection of G5 than with selecting a Q chunk."
+}
