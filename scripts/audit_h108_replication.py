@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import json
+from math import comb
 from collections import defaultdict
 from pathlib import Path
 
@@ -89,6 +90,37 @@ def main():
             "pairs": pairs,
         })
 
+    primary = [row for row in rows if row["residue"] <= 81]
+    primary_slash = sum(row["symbol"] == "/" for row in primary)
+    primary_dash = sum(row["symbol"] == "-" for row in primary)
+    repeated_primary_sizes = sorted(
+        len(group)
+        for residue, group in by_residue.items()
+        if residue <= 81 and len(group) >= 2
+    )
+    primary_singletons = sum(
+        1 for residue, group in by_residue.items()
+        if residue <= 81 and len(group) == 1
+    )
+
+    # Exact conditional null: preserve the observed primary-zone slash/dash
+    # totals, randomly permute those symbols over the observed primary serial
+    # positions, and ask for every H108 collision group to be homogeneous.
+    dp = {0: 1}
+    for size in repeated_primary_sizes:
+        nxt = defaultdict(int)
+        for used_slash, ways in dp.items():
+            nxt[used_slash] += ways
+            nxt[used_slash + size] += ways
+        dp = dict(nxt)
+    favorable = 0
+    for grouped_slash, ways in dp.items():
+        singleton_slash = primary_slash - grouped_slash
+        if 0 <= singleton_slash <= primary_singletons:
+            favorable += ways * comb(primary_singletons, singleton_slash)
+    total_assignments = comb(len(primary), primary_slash)
+    null_probability = favorable / total_assignments
+
     scan = [score_period(rows, p) for p in range(2, 217)]
     zero_conflict = sorted(
         [s for s in scan if s["pair_count"] and s["conflict_groups"] == 0],
@@ -105,6 +137,25 @@ def main():
             1 for g in replicated for p in g["pairs"] if not p["same_symbol"]
         ),
         "replicated_residues": replicated,
+        "conditional_symbol_permutation_null": {
+            "zone": "primary residues 1..81",
+            "observed_positions": len(primary),
+            "slash_count": primary_slash,
+            "dash_count": primary_dash,
+            "repeated_group_sizes": repeated_primary_sizes,
+            "singleton_positions": primary_singletons,
+            "favorable_assignments": favorable,
+            "total_symbol_assignments": total_assignments,
+            "probability_all_repeat_groups_homogeneous": null_probability,
+            "interpretation": (
+                "Exact conditional probability after preserving the observed primary slash/dash totals "
+                "and randomly permuting symbols among observed primary sticker positions."
+            ),
+            "multiple_testing_guardrail": (
+                "This is not a blind period-scan p-value. H108 was already independently hypothesized; "
+                "the bounded period scan is reported separately and no correction over candidate periods is applied here."
+            ),
+        },
         "bounded_period_scan": {
             "range": [2, 216],
             "h108": next(s for s in scan if s["period"] == 108),
@@ -127,6 +178,12 @@ def main():
     assert len(replicated) == 16
     assert total_pairs == 20
     assert result["same_residue_foreground_disagreements"] == 0
+    assert len(primary) == 72
+    assert primary_slash == 44 and primary_dash == 28
+    assert repeated_primary_sizes == [2] * 14 + [3] * 2
+    assert primary_singletons == 38
+    assert favorable == 440079448381568
+    assert total_assignments == 75553695443676829680
     assert zero_conflict[0]["period"] == 108
     assert zero_conflict[0]["pair_count"] == 20
 
