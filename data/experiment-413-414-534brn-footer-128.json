@@ -1,0 +1,54 @@
+{
+  "experiment_pair": [
+    413,
+    414
+  ],
+  "footer": {
+    "raw_text": "pe^!02un",
+    "raw_dot_run_lengths": [
+      8,
+      2,
+      1
+    ],
+    "rotation": "180-degree / upside-down glyph reading",
+    "decoded_word": "unsolved",
+    "reversed_dot_run_digits": "128",
+    "decoded_message": "128 UNSOLVED"
+  },
+  "jpeg_header": {
+    "sof0_shaped_candidate_count_each": {
+      "A": 1,
+      "B": 1,
+      "P": 1
+    },
+    "candidate_offsets_tokenized": {
+      "A": [
+        7503
+      ],
+      "B": [
+        7520
+      ],
+      "P": [
+        133
+      ]
+    },
+    "normalized_pattern": "?? ?? 20 11 08 20 ?? 20 ?? 03 01 22 20 02 11 01 03 11 01",
+    "interpretation": [
+      "20 11 is consistent with a 0x0011 SOF0 segment length after NUL->space corruption.",
+      "08 is standard 8-bit sample precision.",
+      "height and width each appear as 0x00?? with the low byte lost because it is >=0x80.",
+      "the three captures therefore constrain both dimensions independently to 128..255.",
+      "the component descriptor is consistent with 3 components and 2x2 luma / 1x1 chroma sampling."
+    ],
+    "dimension_range": [
+      128,
+      255
+    ]
+  },
+  "cross_evidence": {
+    "historical_footer_reading_first_noted": "12 Apr 2026 community message proposed reading the footer as '128 unsolved'",
+    "historical_jpeg_forensics": "20 Dec 2025 community analysis independently placed each dimension in 128..255 and noted behavior suggestive of roughly 64 MCU-like groups / near-128 geometry",
+    "new_connection": "The footer's 128 lands exactly on the surviving SOF dimension boundary; this is a source-native numeric clue to test against the damaged JPEG header."
+  },
+  "conclusion": "The footer is not random debris: a 180-degree reading yields '128 UNSOLVED'. Independently, all three damaged JPEG capture families contain one identical SOF0-shaped header whose lost height/width low bytes constrain each dimension to 128..255. This makes 128 a strong candidate image-dimension clue. It does not yet prove both dimensions are 128; axis/square status must be established separately before writing 128x128 into the evidence stream."
+}

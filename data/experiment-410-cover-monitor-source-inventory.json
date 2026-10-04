@@ -1,0 +1,34 @@
+{
+  "experiment": 410,
+  "title": "cover monitor source-reference inventory",
+  "status": "completed historical/source inventory",
+  "monitor_pairs_preserved_in_archive": [
+    {
+      "cover_crop": "image-21b86ef8e34e269b.png",
+      "comparison": "wcil7mDWP1pLwAAAABJRU5ErkJggg-746d5444c3bdfeed.png",
+      "family": "planet",
+      "status": "visual/source-family correspondence; historical discussion says it is not simply the final NEW PLANET DISCOVERED image"
+    },
+    {
+      "cover_crop": "image-d6d0d0f76ab751ca.png",
+      "comparison": "image-f443c3585a376c4f.png",
+      "family": "graph",
+      "status": "monitor compared against graph-like in-game/source asset"
+    },
+    {
+      "cover_crop": "image-4484af09d4a602b3.png",
+      "comparison": "image-37499f52103192b0.png",
+      "family": "login",
+      "canonical_asset": "Sign_Screen_C_LoginWin-9052a6fc962e8024.png"
+    },
+    {
+      "cover_crop": "image-7be117e2c68d1b1e.png",
+      "comparison": "image-46edcfb62af0b550.png",
+      "family": "acorn/LifeDetected",
+      "status": "historical discussion identifies only the top/partial acorn image on the monitor"
+    }
+  ],
+  "related_scene_element": "running-man figure exists outside the monitor layer; community explicitly contrasted it with the incomplete acorn monitor",
+  "classification": "meta-reference board / operation guide is better supported than direct numeric consumer",
+  "epistemic_effect": "The cover independently points across puzzle/image families, but no monitor inventory yields a typed nine-state or 9+3 input surface."
+}

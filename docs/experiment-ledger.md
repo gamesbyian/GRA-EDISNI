@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **408**.
+Latest indexed experiment: **423**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -444,6 +444,23 @@ Latest indexed experiment: **408**.
 | 407 | nontrivial coupling atlas: variable residues collapse U2 19 → U4 14 → U5 13 → E2 2. U4 creates four exact complement couplings (22/25, 84/102, 88/106, 94/103); G6 adds exactly one, 91/100. E2 fixes everything except the existing 84/102 complement, making the external pair literally one unresolved physical bit. |
 
 | 408 | Terminal41 nine-step consumer audit: the archived shutdown-confirmation chain has exactly nine pages, but source inspection shows a deterministic 09→...→01→confirmed redirect countdown with no form, input, branching choice, or per-step payload. Exact nine-count resemblance to the Experiment-398 signature is therefore structurally closed. |
+
+
+| 409 | reversible-cover operation-family audit: iam8bit explicitly advertised the PS4 reversible slip cover as clue-bearing; preserved high-resolution scans and historical discussion license source-matched cross-artifact/layer tests but not arbitrary sticker overlays. |
+| 410 | cover monitor source inventory: acorn/LifeDetected, planet-, graph- and login-family references are preserved; cover behaves more like a prior-puzzle reference board than a typed nine-state input surface. |
+| 411 | cover q-reversal cue audit: reversibility, 12:12 and historical reverse-cover discussion strengthen reversal/re-registration as an operation family but do not label the sticker Q axis or uniquely fix the old q-reversal parameter. |
+| 412 | repeated source→cover transform audit: acorn is clearly partial, while graph/login/planet do not demonstrate the same independently measurable transform; no common cover transform is exported into sticker decoding. |
+| 413 | 534brn footer decode: literal 180° reading of `pe^!02un` plus reversed dot-run lengths `8/2/1` yields **128 UNSOLVED**. |
+| 414 | 128/JPEG-header connection: each independent damaged capture contains the same SOF0-shaped header; under the established text-loss transform both dimensions are independently constrained to 128..255. |
+| 415 | literal 180° transfer audit: the authorial footer rotation does not reproduce any frozen one-shot sticker state under the preregistered q gauges; operation-family provenance improves but exact sticker registration remains unfixed. |
+| 416 | 128×128 MCU criterion: Y 2×2 / Cb 1×1 / Cr 1×1 sampling implies 16×16 MCUs; within 128..255 dimensions, an independently established total of exactly 64 MCUs uniquely forces 128×128. |
+| 417 | damaged-JPEG scan corridor: B/P preserve one baseline-SOS-shaped start and all A/B/P end with an EOI-shaped unknown/unknown pair before the footer; no DRI shortcut exists, requiring structural entropy decoding. |
+| 418 | confirmed sticker 427=dot: H108 residue 103 becomes observed dot; U2/U3/U4/U5 prune to 324/108/12/10; the frozen 534brn-selected E2 pair is prospectively falsified; residue 94 is forced slash under the one-slash-per-depth-stack model. |
+| 419 | tail XOR overlay: repeating the 27-cell tail over the 81-cell body and XORing yields a deterministic 9×9 surface but preserves all 324/108/12/10 candidates. U4/U5 have exact 36-one totals and 9/12/15 q-block weights, algebraically implied by G5 validity. |
+| 420 | sticker 043 replication: newly surfaced physical `/043` repeats residue 43=slash already observed at 475, four H108 periods apart. Corpus becomes 84 physical stickers / 66 unique residues with no completion-space prune. |
+| 421 | H108 physical-replication audit: 16 residues have independent repeats, giving 20 same-residue pair comparisons with 20/20 foreground agreement. Period 108 is the deepest zero-conflict period in the bounded 2..216 scan; conditional primary-zone symbol-permutation null is about 5.82e-6. |
+| 422 | live acquisition ranking: residue 82 is the decisive U4-vs-U5 physical fork; residues 84/102 are exactly balanced one-bit U5 state resolvers; residue 94 is the clean prospective tail-stack validation target. |
+| 423 | JPEG entropy MCU constraint: exact structural baseline-Huffman propagation over the 4,156-token P scan permits every complete MCU count 16..300. All 43 MCU-grid products possible for 128..255 dimensions survive, so the entropy stream cannot establish 64 MCUs or 128×128. |
 
 ## Current frontier
 

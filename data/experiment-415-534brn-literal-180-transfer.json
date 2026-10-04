@@ -1,0 +1,19 @@
+{
+  "experiment": 415,
+  "title": "literal transfer of the 534brn page's 180-degree cue",
+  "status": "completed bounded orientation audit",
+  "authorial_cue": "Experiment 413 shows the page footer itself must be read under a 180-degree rotation to yield '128 UNSOLVED'.",
+  "external_dtmf_grid": "101/211/022",
+  "literal_180_rotation": "220/112/101",
+  "one_shot_family": [
+    "102/002/120",
+    "102/012/100",
+    "102/022/100",
+    "112/012/100",
+    "112/012/120",
+    "122/022/100"
+  ],
+  "q_gauge_family_tested": 6,
+  "hits": 0,
+  "conclusion": "The same 534brn page now independently proves that orientation reversal/rotation is part of its authorial grammar, but literal 180-degree transfer does not reproduce any one-shot state even under the six preregistered q gauges. This strengthens operation-family provenance without fixing the successful transpose + q-reversal parameter."
+}

@@ -1,0 +1,48 @@
+{
+  "experiment": 417,
+  "captures": {
+    "A": {
+      "token_count": 12014,
+      "footer_offset": 11962,
+      "eoi_shaped_candidate": [
+        11960,
+        11961
+      ],
+      "two_unknowns_immediately_before_footer": true,
+      "sos_hits": []
+    },
+    "B": {
+      "token_count": 12486,
+      "footer_offset": 12286,
+      "eoi_shaped_candidate": [
+        12284,
+        12285
+      ],
+      "two_unknowns_immediately_before_footer": true,
+      "sos_hits": [
+        7975
+      ],
+      "entropy_start": 7989,
+      "entropy_end_exclusive": 12284,
+      "normalized_entropy_token_span": 4295,
+      "dri_shaped_hits_before_sos": []
+    },
+    "P": {
+      "token_count": 4760,
+      "footer_offset": 4752,
+      "eoi_shaped_candidate": [
+        4750,
+        4751
+      ],
+      "two_unknowns_immediately_before_footer": true,
+      "sos_hits": [
+        580
+      ],
+      "entropy_start": 594,
+      "entropy_end_exclusive": 4750,
+      "normalized_entropy_token_span": 4156,
+      "dri_shaped_hits_before_sos": []
+    }
+  },
+  "interpretation": "B and P each contain one exact baseline-SOS-shaped sequence. In all A/B/P captures the final two normalized tokens immediately before the footer are unknown/unknown, exactly the corruption shape expected for JPEG EOI FF D9. This bounds the entropy corridor without guessing pixels. No DRI-shaped segment is found before SOS in B or P, so there is no obvious restart-interval shortcut for counting MCUs; the next dimension test requires entropy/Huffman structural decoding rather than restart-marker counting."
+}

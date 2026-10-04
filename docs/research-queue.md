@@ -842,3 +842,40 @@ Terminal41 does contain an exact nine-page shutdown-confirmation chain. Source a
 This is a useful external-consumer negative for the robust Experiment-398 nine-symbol signature: same cardinality is not enough.
 
 **Consequence:** do not map the stable nine-symbol feature onto this chain. Continue searching only for typed consumers that actually expose nine addressable values/choices, or for external consumers of the frozen 9+3 numeric surface.
+
+### Experiments 409–417 — cover/JPEG clue lane completed to the entropy boundary
+
+The reversible PS4 cover is independently clue-bearing and remains a valid source of **externally specified** cross-artifact registration cues. The archived source/monitor audit does not recover a repeated source→cover transform, so arbitrary cover overlays remain closed.
+
+The damaged `534brn` artifact yields a much sharper native clue: the footer reads **128 UNSOLVED** under a literal 180° reading, while the damaged SOF0-shaped header independently constrains both image dimensions to 128..255 with 16×16 MCUs.
+
+Experiment 416 proves that exactly 64 MCUs would force 128×128. Experiment 417 bounds the entropy corridor and rules out restart-interval counting.
+
+The old sticker-consumer E2 branch discussed in Experiments 390–407 is now historical only: confirmed 427=dot in Experiment 418 falsifies both E2 masters.
+
+### Experiment 423 — 64-MCU route closed
+
+The exact structural entropy test is complete.
+
+Using the P capture's 4,156-token scan corridor, standard baseline JPEG Huffman grammar, documented replacement-byte domains and byte stuffing, without reconstructing coefficients or pixels:
+
+- every MCU count from **16 through 300** is feasible;
+- the 128..255 dimension domain admits 43 distinct MCU-grid products;
+- **all 43/43** survive.
+
+So the surviving entropy stream has **zero resolving power** among the independently possible image geometries. 64 MCUs remains feasible but is not privileged.
+
+**JPEG stopping rule:** do not widen into guessed high bytes, guessed DCT coefficients, visual optimization or arbitrary image completion. Reopen only if a less-lossy capture, independent square/both-axis clue, or direct 128×128 source artifact appears.
+
+### Live post-427 research priority
+
+Physical acquisition now outranks further 534brn transform work.
+
+1. **Residue 82 family** `082,190,298,406,514,622` is the decisive U4-vs-U5 test: slash kills U5; dot removes exactly the two G5-only states.
+2. **Residues 84 / 102** are the best one-bit state resolvers inside U5.
+3. **Residue 94 family** `094,202,310,418,526,634` is the clean prospective one-slash-per-depth-stack validation.
+4. Other new residues follow the executable Experiment-422 information ranking.
+5. Existing-residue repeats remain valuable for H108 replication/provenance but do not prune the completion space.
+
+The current cover lane should only resume if another independently identified monitor/source pair supplies a repeated measurable transform. The current JPEG lane should only resume on genuinely new byte or dimension evidence.
+

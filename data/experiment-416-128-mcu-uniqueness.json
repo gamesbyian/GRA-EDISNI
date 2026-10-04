@@ -1,0 +1,24 @@
+{
+  "experiment": 416,
+  "title": "128x128 MCU uniqueness criterion",
+  "status": "completed conditional geometry proof",
+  "sof_sampling": {
+    "Y": "2x2",
+    "Cb": "1x1",
+    "Cr": "1x1",
+    "mcu_pixel_size": [16,16]
+  },
+  "dimension_domain": {
+    "width": [128,255],
+    "height": [128,255]
+  },
+  "mcu_formula": "ceil(width/16) * ceil(height/16)",
+  "minimum_mcu_count": 64,
+  "minimum_case": {
+    "mcu_grid": [8,8],
+    "unique_dimensions_within_domain": [128,128]
+  },
+  "proof": "Within 128..255, ceil(d/16)=8 only for d=128. Therefore a verified total of exactly 64 MCUs uniquely forces width=height=128.",
+  "historical_connection": "December-2025 community forensics reported almost 64 repeated bit-pattern groups and independently speculated near-128x128 geometry.",
+  "conclusion": "The old 'almost 64' observation now has a precise target: if those groups can be shown to be one-per-MCU and the count is exactly 64, 128x128 follows uniquely. 'Almost 64' by itself is not enough."
+}
