@@ -1,0 +1,29 @@
+name: Experiments 413-417 JPEG structural forensics
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_534brn_footer_128.py"
+      - "scripts/audit_534brn_scan_corridor.py"
+      - "data/experiment-413-414-534brn-footer-128.json"
+      - "data/experiment-417-534brn-scan-corridor.json"
+      - ".github/workflows/audit-534brn-structural-forensics.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify 128 UNSOLVED / SOF structure
+        run: python scripts/audit_534brn_footer_128.py
+      - name: Verify scan corridor
+        run: python scripts/audit_534brn_scan_corridor.py
+      - name: Verify committed artifacts
+        run: |
+          git diff --exit-code -- data/experiment-413-414-534brn-footer-128.json
+          git diff --exit-code -- data/experiment-417-534brn-scan-corridor.json
