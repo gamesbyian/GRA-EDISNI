@@ -857,3 +857,12 @@ It does **not** license arbitrary overlays, free D4/crop/scale search, or mappin
 Experiment 411 specifically checks whether the reversible design + 12:12 clock can close the remaining `534brn` q-reversal gap. It cannot: several inequivalent reversal operations are natural and nothing labels Q or uniquely fixes order 2,1,0.
 
 **Next cover target:** compare each independently identified monitor/source pair for a repeated source→cover omission/crop/orientation rule. Promote only a transform that repeats across multiple pairs without tuning.
+
+
+### Experiment 412 — no repeated cover transform yet
+
+The source-matched cover pairs do not yet reveal a common operation.
+
+Acorn is the one clear partial/top-only reference. Login and graph are source-family correspondences without the same documented omission, while the planet relation is unresolved rather than demonstrably following the acorn rule.
+
+**Consequence:** preserve the cover as a clue/reference board, but do not export “partial image,” mirror, crop or other transform into sticker work until the same source→cover operation is independently demonstrated on at least two pairs.
