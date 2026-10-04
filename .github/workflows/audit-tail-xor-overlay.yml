@@ -1,0 +1,32 @@
+name: Experiment 419 tail XOR overlay
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_tail_xor_overlay.py"
+      - "scripts/build_completion_universe.py"
+      - "scripts/audit_completion_universe_layers.py"
+      - "scripts/enumerate_raw_machine.py"
+      - "data/observations.csv"
+      - "docs/experiment-419-tail-xor-overlay.md"
+      - ".github/workflows/audit-tail-xor-overlay.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/audit_tail_xor_overlay.py"
+      - "scripts/build_completion_universe.py"
+      - "scripts/audit_completion_universe_layers.py"
+      - "scripts/enumerate_raw_machine.py"
+      - "data/observations.csv"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/audit_tail_xor_overlay.py
+      - name: Verify generated result is committed
+        run: git diff --exit-code -- data/experiment-419-tail-xor-overlay.json

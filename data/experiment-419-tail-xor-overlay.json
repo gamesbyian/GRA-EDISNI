@@ -1,0 +1,77 @@
+{
+  "experiment": 419,
+  "operation": {
+    "layout": "12x9 serial rows",
+    "body_rows": "1-9",
+    "tail_rows": "10-12 repeated three times over body",
+    "body_encoding": {
+      "/": 0,
+      "-": 1
+    },
+    "tail_encoding": {
+      "/": 0,
+      ".": 1
+    },
+    "combine": "XOR",
+    "output": "9x9 binary surface"
+  },
+  "observed_only_surface": {
+    "known_cells": 24,
+    "unknown_cells": 57,
+    "known_ones": 9,
+    "known_zeros": 15
+  },
+  "ensembles": {
+    "U2": {
+      "candidate_count": 324,
+      "distinct_xor_surfaces": 324,
+      "invariant_cells": 52,
+      "variable_cells": 29,
+      "total_weight_range": [
+        28,
+        39
+      ]
+    },
+    "U3": {
+      "candidate_count": 108,
+      "distinct_xor_surfaces": 108,
+      "invariant_cells": 55,
+      "variable_cells": 26,
+      "total_weight_values": [
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ]
+    },
+    "U4": {
+      "candidate_count": 12,
+      "distinct_xor_surfaces": 12,
+      "invariant_cells": 58,
+      "variable_cells": 23,
+      "total_weight": 36,
+      "q_block_weights": [
+        9,
+        12,
+        15
+      ]
+    },
+    "U5": {
+      "candidate_count": 10,
+      "distinct_xor_surfaces": 10,
+      "invariant_cells": 60,
+      "variable_cells": 21,
+      "total_weight": 36,
+      "q_block_weights": [
+        9,
+        12,
+        15
+      ]
+    }
+  },
+  "candidate_reduction": "none",
+  "interpretation": "The XOR overlay is a deterministic and visually useful tail-on-body representation. It does not collapse the candidate family. The clean U4/U5 9/12/15 block-weight staircase is exact but is algebraically implied by the existing exact-POS3 plus G5-validity assumptions, so it is not independent evidence for them.",
+  "four_by_27_note": "4x27 is a natural direct geometry for the 81+27 split. The fourth row is binary slash/dot only, so literal printed-symbol Morse lacks a third separator/mark type and requires an independently specified binary timing convention before a Morse decode is licensed."
+}
