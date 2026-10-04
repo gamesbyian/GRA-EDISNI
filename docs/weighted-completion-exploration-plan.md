@@ -147,6 +147,7 @@ Otherwise record it as a negative or exploratory curiosity and move on.
 ## Immediate sequence
 
 1. Experiment 394 — natural Braille projection: completed negative.
-2. Experiment 396 — native boundary/check-bit registration audit.
-3. Next — consumer-first probes from the historical mechanics corpus.
-4. Continue acquisition in parallel; physical residue 82 remains the cleanest current G5-vs-G6 test.
+2. Experiment 396 — native boundary/check-bit registration audit: completed negative.
+3. Experiment 397 — direct `534brn` DTMF selector replay: completed hard negative.
+4. Next — another consumer-first probe from the historical mechanics corpus, chosen only where the external artifact fixes the missing parameter.
+5. Continue acquisition in parallel; physical residue 82 remains the cleanest current G5-vs-G6 test.
