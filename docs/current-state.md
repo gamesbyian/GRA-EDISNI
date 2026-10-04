@@ -919,3 +919,16 @@ Residue 82 is the cleanest one-shot-vs-G6 test: selected pair predicts slash, U5
 Residues 84 and 102 are the only unseen cells distinguishing the two selected masters. Existing unverified 427=dot and 369=dot claims would each falsify the selected pair if physically confirmed.
 
 A fresh indexed-web sweep found no new defensible exact target-serial photo. Current priority therefore shifts to owner/comment funnels and marketplace imagery, with the model frozen pending physical evidence.
+
+
+## Experiments 393–394 — weighted guesses become an exploratory ensemble
+
+The project can now use the existing prediction lists to explore otherwise inaccessible complete-code operations without pretending the missing stickers are known.
+
+The preferred per-residue modal sheet is not itself any legal U2/U3/U4/U5 completion, so it must never be treated as a physical master. Candidate frequencies are likewise not calibrated probabilities. U5 support counts are especially unsuitable for testing alternatives to G6 because they already encode the recursive closure.
+
+The approved method is ensemble replay: run an operation across coherent completion universes and ask what remains stable or which candidates survive.
+
+The first sandbox test applies standard Braille to the natural 9×12 completed sticker carrier. Across U2 and U4, under both natural class orders and both binary polarities, no stable alphabetic run exceeds two cells. This cheap Braille projection is negative and closed absent a new registration cue.
+
+The sandbox is now available for further historically licensed operations and external consumers.

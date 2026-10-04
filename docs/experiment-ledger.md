@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **392**.
+Latest indexed experiment: **394**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -424,6 +424,9 @@ Latest indexed experiment: **392**.
 | 391 | prospective physical predictions from the two 534brn-selected masters: only residues 84 and 102 distinguish the pair; residue 82 is slash in both while U5 fixes dot, giving a direct one-shot-vs-G6 test. Both also predict 103=slash and 45=dash, so verified 427=dot or 369=dot claims would falsify the pair. |
 
 | 392 | prospective acquisition sweep: no new defensible indexed-public exact-serial photo surfaced for residue-82/84/102 target families. Acquisition priority is now residue 82 (082/190/298/406/514/622) for direct one-shot-vs-G6 discrimination, then residues 84/102 to choose between the two selected masters, plus physical verification of 427=dot and 369=dot contradiction claims. Recent Reddit owner PSA is the strongest passive funnel; U32/KoreanB_B_Q ownership is reconfirmed but still serial-unknown. |
+
+| 393 | weighted-prediction sandbox audit: the per-residue modal guess sheet is not a coherent master in U2/U3/U4/U5; U2 combinatorial frequencies give identical product scores to all 20 U4 survivors; U5 14-state support is downstream-contaminated for pre-G6 discovery (notably 82=dot 14/14 would zero-weight the active one-shot pair). Weighted guesses are therefore approved as uncertainty masks/scenario generators, not calibrated priors. New exploratory operations must run across coherent ensembles. |
+| 394 | bounded weighted Braille projection: use the native 9×12 class-word carrier, standard 3×2 six-dot cells, only A-I vs solved physical class order and slash polarity/complement, across all U2 and U4 completions. Best stability is 6/18 cells at U2 and 8/18 at U4; no configuration has a stable alphabetic run longer than 2 cells. Cheap Braille lane closed absent an external packing/registration cue. |
 
 ## Current frontier
 

@@ -1,0 +1,52 @@
+{
+  "experiment": 394,
+  "operation_family": "standard six-dot Braille over the natural complete 9x12 class-word carrier",
+  "binary_projection": "slash versus non-slash; complement tested as the only binary polarity control",
+  "ensembles": {
+    "U2": {
+      "serial_A_to_I_slash_raised": {
+        "stable_cells": 6,
+        "stable_alphabetic_cells": [{"cell":0,"letter":"b"},{"cell":1,"letter":"w"},{"cell":10,"letter":"r"},{"cell":12,"letter":"o"}],
+        "longest_consecutive_stable_alphabetic_run": 2
+      },
+      "serial_A_to_I_slash_empty": {
+        "stable_cells": 6,
+        "stable_alphabetic_cells": [{"cell":1,"letter":"k"},{"cell":2,"letter":"a"},{"cell":6,"letter":"e"}],
+        "longest_consecutive_stable_alphabetic_run": 2
+      },
+      "physical_IAB_CDE_FGH_slash_raised": {
+        "stable_cells": 4,
+        "stable_alphabetic_cells": [{"cell":0,"letter":"l"},{"cell":1,"letter":"y"}],
+        "longest_consecutive_stable_alphabetic_run": 2
+      },
+      "physical_IAB_CDE_FGH_slash_empty": {
+        "stable_cells": 4,
+        "stable_alphabetic_cells": [],
+        "longest_consecutive_stable_alphabetic_run": 0
+      }
+    },
+    "U4": {
+      "serial_A_to_I_slash_raised": {
+        "stable_cells": 8,
+        "stable_alphabetic_cells": [{"cell":0,"letter":"b"},{"cell":1,"letter":"w"},{"cell":8,"letter":"l"},{"cell":10,"letter":"r"},{"cell":12,"letter":"o"},{"cell":14,"letter":"a"}],
+        "longest_consecutive_stable_alphabetic_run": 2
+      },
+      "serial_A_to_I_slash_empty": {
+        "stable_cells": 8,
+        "stable_alphabetic_cells": [{"cell":1,"letter":"k"},{"cell":2,"letter":"a"},{"cell":6,"letter":"e"}],
+        "longest_consecutive_stable_alphabetic_run": 2
+      },
+      "physical_IAB_CDE_FGH_slash_raised": {
+        "stable_cells": 7,
+        "stable_alphabetic_cells": [{"cell":0,"letter":"l"},{"cell":1,"letter":"y"},{"cell":8,"letter":"p"},{"cell":14,"letter":"b"}],
+        "longest_consecutive_stable_alphabetic_run": 2
+      },
+      "physical_IAB_CDE_FGH_slash_empty": {
+        "stable_cells": 7,
+        "stable_alphabetic_cells": [{"cell":2,"letter":"f"}],
+        "longest_consecutive_stable_alphabetic_run": 1
+      }
+    }
+  },
+  "conclusion": "No tested natural Braille projection yields an ensemble-stable alphabetic run longer than two cells. The cheap Braille lane is negative unless an external cue specifies a different registration."
+}
