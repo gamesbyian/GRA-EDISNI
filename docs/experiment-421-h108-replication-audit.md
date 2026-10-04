@@ -44,6 +44,36 @@ dash / dash
 
 So the repeat is not supported only by adjacent-cycle pairs.
 
+## Conditional symbol-permutation null
+
+The 16 repeated H108 residues all lie in the slash/dash primary zone. Across the **72 observed primary-zone physical stickers**, the corpus contains:
+
+```
+44 slash
+28 dash
+```
+
+Condition on those totals exactly, randomly permute the 44 slashes and 28 dashes among the 72 observed primary serial positions, and ask for every H108 collision group to be internally homogeneous.
+
+The repeated-group structure is:
+
+```
+14 groups of size 2
+ 2 groups of size 3
+38 singleton positions
+```
+
+The exact combinatorial probability is:
+
+```
+P(all 16 repeat groups homogeneous | 44/28 totals)
+  = 440,079,448,381,568 / 75,553,695,443,676,829,680
+  ≈ 5.8247 × 10^-6
+  ≈ 1 in 171,682
+```
+
+This is deliberately **not** presented as a blind period-search p-value. Period 108 was already independently hypothesized from the corpus structure; the scan below is a separate descriptive comparison. The null is useful as a scale for how unlikely perfect repeat consistency would be if the observed primary symbols were exchangeable across the observed serial positions.
+
 ## Bounded period scan
 
 To test whether 108 is merely a convenient grouping, every integer period from **2 through 216** was scored on the same 84 serial/symbol observations.
