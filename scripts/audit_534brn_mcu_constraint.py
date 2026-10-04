@@ -257,8 +257,35 @@ def byte_transition(state, value):
     return (cur, delta), frozenset(terminal)
 
 @lru_cache(maxsize=None)
-def domain_transition(state, kind):
+def unknown_nonff_transition(state):
+    """Consume 1xxxxxxx but exclude 11111111 (FF, handled via stuffing)."""
+    first = step_bit(state, 1)
+    if first is None:
+        return tuple()
+    st, delta = first
+    frontier = {(st, delta, True)}
+    for _ in range(7):
+        nxt = set()
+        for cur, d, all_ones in frontier:
+            for bit in (0, 1):
+                stepped = step_bit(cur, bit)
+                if stepped is None:
+                    continue
+                ns, inc = stepped
+                nxt.add((ns, d + inc, all_ones and bit == 1))
+        frontier = nxt
+        if not frontier:
+            break
+    return tuple(sorted(
+        {(st, d) for st, d, all_ones in frontier if not all_ones}
+    ))
+
+@lru_cache(maxsize=None)
+def domain_transition(state, kind, need_terminal=False):
     if kind == "unknown_nonff":
+        if not need_terminal:
+            return unknown_nonff_transition(state), tuple()
+        # Only the final emitted byte needs exact padding-boundary tracking.
         values = range(0x80, 0xFF)
     elif kind == "space":
         values = (0x00, 0x20)
@@ -271,7 +298,8 @@ def domain_transition(state, kind):
         out, term = byte_transition(state, value)
         if out is not None:
             outs.add(out)
-        terms.update(term)
+        if need_terminal:
+            terms.update(term)
     return tuple(outs), tuple(sorted(terms))
 
 def add_bits(dst, state, bits):
@@ -314,7 +342,7 @@ def decode_feasible_mcus(entropy):
 
         for state, bits in list(frontier[i].items()):
             for ni, kind in next_maps:
-                outs, terms = domain_transition(state, kind)
+                outs, terms = domain_transition(state, kind, ni == n)
                 if ni == n:
                     accepted |= terminal_counts(bits, terms)
                     for ns, delta in outs:
