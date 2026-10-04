@@ -146,7 +146,7 @@ def main():
             "singleton_positions": primary_singletons,
             "favorable_assignments": favorable,
             "total_symbol_assignments": total_assignments,
-            "probability_all_repeat_groups_homogeneous": null_probability,
+            "probability_all_repeat_groups_homogeneous": repr(null_probability),
             "interpretation": (
                 "Exact conditional probability after preserving the observed primary slash/dash totals "
                 "and randomly permuting symbols among observed primary sticker positions."
