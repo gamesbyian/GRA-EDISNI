@@ -369,16 +369,18 @@ def main():
 
     feasible, peak_states = decode_feasible_mcus(entropy)
 
-    dimension_counts = {
-        m: [
-            [w,h]
-            for w in range(128,256)
-            for h in range(128,256)
-            if ((w+15)//16) * ((h+15)//16) == m
+    dimension_counts = {}
+    for m in feasible:
+        if not 64 <= m <= 256:
+            continue
+        dims = [
+            [w, h]
+            for w in range(128, 256)
+            for h in range(128, 256)
+            if ((w + 15) // 16) * ((h + 15) // 16) == m
         ]
-        for m in feasible
-        if 64 <= m <= 256
-    }
+        if dims:
+            dimension_counts[m] = dims
     geometric = sorted(dimension_counts)
     unique_dimension_counts = {
         str(m): dims for m,dims in dimension_counts.items() if len(dims) <= 8
@@ -400,12 +402,19 @@ def main():
         "feasible_complete_mcu_counts_0_300": feasible,
         "feasible_mcu_counts_compatible_with_128_255_dimensions": geometric,
         "feasible_count_total": len(feasible),
+        "feasible_count_min": min(feasible),
+        "feasible_count_max": max(feasible),
+        "feasible_counts_are_contiguous": feasible == list(range(min(feasible), max(feasible) + 1)),
         "geometric_feasible_count_total": len(geometric),
         "contains_64": 64 in feasible,
         "only_64_in_dimension_domain": geometric == [64],
         "small_dimension_solution_sets": unique_dimension_counts,
         "peak_local_decoder_states": peak_states,
     }
+
+    assert feasible == list(range(16, 301))
+    assert geometric == sorted({a * b for a in range(8, 17) for b in range(8, 17)})
+    assert len(geometric) == 43
 
     if geometric == [64]:
         result["conclusion"] = (
@@ -420,9 +429,9 @@ def main():
         )
     else:
         result["conclusion"] = (
-            "64 MCUs remains feasible, but other MCU counts compatible with the 128..255 dimension domain also "
-            "survive. The entropy structure therefore does not uniquely prove 128x128 from the surviving lossy "
-            "capture; the 64-MCU clue remains suggestive rather than established."
+            "64 MCUs remains feasible, but every one of the 43 MCU-grid products possible for 128..255 dimensions "
+            "also survives. The entropy structure therefore supplies no dimension discrimination within that domain; "
+            "the 128 UNSOLVED clue remains suggestive but cannot be promoted to 128x128 from the surviving lossy capture."
         )
 
     OUT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
