@@ -1011,3 +1011,10 @@ The footer also proves orientation change is authorially present on the same 534
 The SOF sampling descriptors imply 16×16-pixel MCUs. Inside the surviving 128..255 dimension range, an exact 64-MCU entropy stream is possible only for 128×128.
 
 This converts the historical “almost 64 repeated groups” observation into a crisp forensic target. It is not yet proof because group↔MCU identity and the exact count remain to be established.
+
+
+## Experiment 417 — JPEG scan corridor bounded
+
+The `534brn` JPEG forensic lane now has a unique SOS-shaped start in B/P and an EOI-shaped two-unknown boundary immediately before the footer in all three captures.
+
+There is no DRI/restart-interval shortcut. Resolving the 64-MCU / 128×128 hypothesis now requires structural Huffman entropy decoding under the known byte-loss model, not visual reconstruction.
