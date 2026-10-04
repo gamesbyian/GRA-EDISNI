@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **415**.
+Latest indexed experiment: **416**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -454,6 +454,8 @@ Latest indexed experiment: **415**.
 | 413 | 534brn footer decode: rotate `pe^!02un` 180° using its deliberate upside-down glyph forms to obtain `unsolved`; reverse the following dot-run lengths 8/2/1 under the same rotation to obtain `128`. The footer therefore reads **128 UNSOLVED**. |
 | 414 | 128/JPEG-header connection: A/B/P each contain exactly one identical SOF0-shaped normalized sequence. Under the established high-byte-loss and NUL→space corruption model, both JPEG dimensions are independently constrained to 128..255. The footer's 128 lands exactly on that unresolved native field, making 128 a strong dimension clue; exact 128×128 remains conditional on a separate square/axis cue. |
 | 415 | same-page orientation transfer: Experiment 413 proves a nontrivial 180° reading is authorially embedded in the 534brn page itself. Literal 180° rotation of the registered DTMF grid gives `220/112/101` and hits zero frozen one-shot states even under all six preregistered q gauges. Orientation-change provenance is upgraded, but the successful axis-specific registration remains unfixed. |
+
+| 416 | 128×128 MCU uniqueness criterion: the recovered SOF sampling is Y 2×2 / Cb 1×1 / Cr 1×1, so MCUs are 16×16 pixels. Within the surviving 128..255 width/height domain, an exact 64-MCU count uniquely forces an 8×8 MCU lattice and therefore 128×128 dimensions. The Dec-2025 “almost 64” observation is suggestive but not yet formally one-MCU-per-group or exact. |
 
 ## Current frontier
 
