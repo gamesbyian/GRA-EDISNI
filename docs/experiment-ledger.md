@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **412**.
+Latest indexed experiment: **415**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -450,6 +450,10 @@ Latest indexed experiment: **412**.
 | 411 | cover q-reversal cue audit: reversible-cover design, 12:12 clock and a 2022 solver proposal to reverse the cover independently support reversal/re-registration as a general operation family, but do not label the machine Q axis or uniquely select `q'=2q+2`. Experiment 389's exact registration gap remains open. |
 
 | 412 | repeated source→cover transform audit: login and graph provide source-family references without a documented nontrivial transform; acorn is clearly partial/top-only; planet is related but not identical to the final solved planet image and its exact transform remains unresolved. No common source→cover operation is independently demonstrated across multiple pairs. Preserve cover as a reference/layer clue source, not yet an exportable sticker transform. |
+
+| 413 | 534brn footer decode: rotate `pe^!02un` 180° using its deliberate upside-down glyph forms to obtain `unsolved`; reverse the following dot-run lengths 8/2/1 under the same rotation to obtain `128`. The footer therefore reads **128 UNSOLVED**. |
+| 414 | 128/JPEG-header connection: A/B/P each contain exactly one identical SOF0-shaped normalized sequence. Under the established high-byte-loss and NUL→space corruption model, both JPEG dimensions are independently constrained to 128..255. The footer's 128 lands exactly on that unresolved native field, making 128 a strong dimension clue; exact 128×128 remains conditional on a separate square/axis cue. |
+| 415 | same-page orientation transfer: Experiment 413 proves a nontrivial 180° reading is authorially embedded in the 534brn page itself. Literal 180° rotation of the registered DTMF grid gives `220/112/101` and hits zero frozen one-shot states even under all six preregistered q gauges. Orientation-change provenance is upgraded, but the successful axis-specific registration remains unfixed. |
 
 ## Current frontier
 
