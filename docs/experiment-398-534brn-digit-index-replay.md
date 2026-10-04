@@ -39,10 +39,11 @@ Across U2 there are only two possible nine-symbol outputs:
 --/-//-/-   216 / 648
 ```
 
-After the typed one-shot closure, the ambiguity disappears completely.
+The ambiguity disappears already at U3, when the established primary polarity fixes the one unresolved indexed residue.
 
 All:
 
+- 216 U3 masters;
 - 20 U4 masters;
 - 14 U5 masters;
 - 2 externally selected E2 masters;
@@ -84,7 +85,7 @@ right / up
 
 It cannot produce a left command.
 
-No independent nine-command lever consumer is currently known.
+Experiment 401 later tests the obvious in-game lever consumer against the preserved 2023 brute-force streams and closes it.
 
 ## Interpretation
 
