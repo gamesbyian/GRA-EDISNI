@@ -184,7 +184,7 @@ def main():
     # Checked-in physical corpus. The structural model still has 14 legal
     # states, but prospective physical observations may prune that family.
     observations = load_observations()
-    assert len(observations) == 83
+    assert len(observations) == 84
     assert len({int(row["residue"]) for row in observations}) == 66
 
     for row in observations:
@@ -307,7 +307,7 @@ def main():
     print("OK: 14 legal four-bit physical states")
     print("OK: all 14 complete masters are distinct")
     print("OK: structural model retains 14 legal states and exact 95/13 split")
-    print("OK: 83 physical stickers / 66 H108 residues prune the live family to 10")
+    print("OK: 84 physical stickers / 66 H108 residues prune the live family to 10")
     print("OK: live family has exact 97 invariant / 11 variable residue split")
     print("OK: confirmed 427=dot forces residue 94=slash in every live state")
     print("OK: global 54/36/18 symbol census")
