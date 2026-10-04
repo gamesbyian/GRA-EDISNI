@@ -1,0 +1,29 @@
+{
+  "experiment": 417,
+  "captures": {
+    "A": {
+      "footer_offset": 11962,
+      "two_unknowns_immediately_before_footer": true,
+      "sos_hits": []
+    },
+    "B": {
+      "footer_offset": 12286,
+      "eoi_shaped_candidate": [12284,12285],
+      "sos_hits": [7975],
+      "entropy_start": 7989,
+      "entropy_end_exclusive": 12284,
+      "normalized_entropy_token_span": 4295,
+      "dri_shaped_hits_before_sos": []
+    },
+    "P": {
+      "footer_offset": 4752,
+      "eoi_shaped_candidate": [4750,4751],
+      "sos_hits": [580],
+      "entropy_start": 594,
+      "entropy_end_exclusive": 4750,
+      "normalized_entropy_token_span": 4156,
+      "dri_shaped_hits_before_sos": []
+    }
+  },
+  "interpretation": "B and P each contain one exact baseline-SOS-shaped sequence; all three captures end the binary region with unknown/unknown immediately before the ASCII footer, matching the lossy shape of EOI FF D9. No DRI-shaped segment is present before SOS in B/P, so restart-interval counting cannot resolve the MCU count. The next exact 128x128 test requires entropy/Huffman structural decoding."
+}
