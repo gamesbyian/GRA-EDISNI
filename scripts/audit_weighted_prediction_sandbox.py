@@ -93,7 +93,7 @@ def main():
         "u2_combinatorial_weighting":{
             "u4_survivors":len(u4),
             "distinct_scores":len(rounded),
-            "conclusion":"Broad U2 candidate multiplicities give the same product score to all 20 U4 survivors; they do not provide a hidden prior ranking."
+            "conclusion":"Broad U2 candidate multiplicities give the same product score to all 12 U4 survivors; they do not provide a hidden prior ranking."
         },
         "canonical_14_state_weighting":{
             "residue_82_support":ps[82],
@@ -107,9 +107,9 @@ def main():
             "A promising operation must survive replay on the broadest universe whose premises it does not itself assume."
         ],
         "recommended_sandbox_panels":{
-            "broad_physical":"U2 648",
-            "typed_one_shot":"U4 20",
-            "recursive":"U5 14",
+            "broad_physical":"U2 324",
+            "typed_one_shot":"U4 12",
+            "recursive":"U5 10",
             "external_selected":"Experiment 390 pair of 2",
             "rival":"frozen row-selector family at residues 84/102"
         }
