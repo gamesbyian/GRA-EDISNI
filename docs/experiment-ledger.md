@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **408**.
+Latest indexed experiment: **411**.
 
 | Experiment | Title |
 | ---: | --- |
@@ -444,6 +444,10 @@ Latest indexed experiment: **408**.
 | 407 | nontrivial coupling atlas: variable residues collapse U2 19 → U4 14 → U5 13 → E2 2. U4 creates four exact complement couplings (22/25, 84/102, 88/106, 94/103); G6 adds exactly one, 91/100. E2 fixes everything except the existing 84/102 complement, making the external pair literally one unresolved physical bit. |
 
 | 408 | Terminal41 nine-step consumer audit: the archived shutdown-confirmation chain has exactly nine pages, but source inspection shows a deterministic 09→...→01→confirmed redirect countdown with no form, input, branching choice, or per-step payload. Exact nine-count resemblance to the Experiment-398 signature is therefore structurally closed. |
+
+| 409 | reversible-cover operation-family audit: iam8bit explicitly advertised the PS4 reversible slip cover as containing a hidden clue; preserved 6552×5040 scans and historical discussion identify prior-ARG visual references, including partial acorn imagery, planet-family imagery, graph/login screens and a running-man scene element. This independently licenses cross-artifact/layer-composition as an operation family, but not a nine-state or 9+3 sticker consumer. |
+| 410 | cover monitor source-reference inventory: preserved crop/source pairings show the cover behaves more like a meta-reference board to prior puzzle/game image families than a typed input interface. High-value next cover work is to identify a repeated measurable source→cover transform, not to map sticker states onto arbitrary monitor objects. |
+| 411 | cover q-reversal cue audit: reversible-cover design, 12:12 clock and a 2022 solver proposal to reverse the cover independently support reversal/re-registration as a general operation family, but do not label the machine Q axis or uniquely select `q'=2q+2`. Experiment 389's exact registration gap remains open. |
 
 ## Current frontier
 
