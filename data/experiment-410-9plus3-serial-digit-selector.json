@@ -1,0 +1,19 @@
+{
+  "experiment": 410,
+  "operation": {
+    "body": "slash=1, non-slash=0; first nine class-word cells form a 9-bit integer",
+    "format": "zero-pad to three decimal digits to match CE serial presentation",
+    "selector": "one-slash tail depth 0/1/2 selects the corresponding decimal digit"
+  },
+  "ensemble_counts": {
+    "U2_distinct_outputs": 318,
+    "U4_distinct_outputs": 16,
+    "U5_distinct_outputs": 12,
+    "E2_distinct_outputs": 2
+  },
+  "E2_A_to_I": ["320130397","328130397"],
+  "E2_native_IABCDEFGH": ["732013039","732813039"],
+  "difference": "the E2 outputs differ only in class C, the same residue-84/residue-102 physical bit",
+  "classification": "bounded in-domain derived interface with no independently identified downstream consumer",
+  "guardrail": "Do not apply keypad, modulo, cipher, phone-number, coordinate, or plaintext transforms to these outputs without a new external cue."
+}
