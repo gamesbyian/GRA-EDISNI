@@ -220,3 +220,16 @@ The independently motivated CE sleeve/lever mapping converts this to `RRURRURUR`
 Experiment 401 closes the ordinary bunker-lever interpretation more strongly than abstract coverage alone. The exact nine-command word occurs **106 times** in the surviving archived 2023 De Bruijn command sections that were physically run in-game, with no unknown result reported.
 
 Preserve the indexed nine-symbol feature as an external derived interface, but do not treat the ordinary bunker lever as its live consumer. A new consumer must be independently supplied.
+
+
+### Reversible-cover source-matched consumer lane
+
+Experiments 409–411 upgrade the PS4 reversible cover into a bounded external-consumer source.
+
+The cover is explicitly advertised by iam8bit as containing a hidden clue. Preserved high-resolution scans and historical source comparisons show several monitor references to prior ARG/game imagery, including partial acorn/LifeDetected, planet-family, graph and login screens.
+
+This supports one specific search strategy: identify a **repeated measurable transformation** from canonical source image to cover-screen representation and use that transformation, if any, as an externally supplied operation.
+
+Do not free-search sticker overlays on the cover.
+
+The cover's reversibility and 12:12 clock support reversal/re-registration only at operation-family level. They do not identify the sticker machine's Q axis or uniquely select `q'=2q+2`, so they do not promote the active 534brn match past Experiment 389's stopping boundary.
