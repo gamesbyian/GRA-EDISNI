@@ -1,0 +1,19 @@
+{
+  "experiment": 401,
+  "title": "historical in-game lever replay of the stable 534brn digit-index sequence",
+  "stable_sequence": "RRURRURUR",
+  "source_experiment": 398,
+  "archived_test_sections": {
+    "10": 19,
+    "11": 4,
+    "12": 4,
+    "13": 10,
+    "14": 3,
+    "17": 6,
+    "18": 60
+  },
+  "minimum_archived_occurrences": 106,
+  "historical_test_status": "These surviving sections are part of the 2023 De Bruijn lever brute-force campaign explicitly reported as completed with no new result.",
+  "classification": "hard negative for RRURRURUR as a hidden in-game lever code",
+  "scope": "Does not falsify the sticker-to-lever symbol mapping in general; only the specific stable digit-index-derived nine-command sequence as an in-game lever trigger."
+}
