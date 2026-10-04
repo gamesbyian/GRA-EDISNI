@@ -141,11 +141,17 @@ New physical sticker information is now the highest-value manual acquisition tar
 When choosing between two leads, prefer the one more likely to yield a previously unseen serial/residue or an original clue-bearing artifact that specifies registration/overlay behavior. Existing known-residue repeats remain useful controls, but genuinely new residues have substantially greater research value. See `docs/visual-completion-overlay-risk.md` and `docs/prediction-matrix-process.md`.
 
 
-## Prospective 534brn physical discriminators — 2 Oct 2026
+## Active marketplace leads — 4 Oct 2026
 
-Experiments 390–392 now give a model-directed acquisition order.
+- eBay item **257753799919**, seller `uglord64`  
+  https://www.ebay.com/itm/257753799919  
+  Status: newly listed INSIDE Collector's Edition; indexed listing image shows the CE box but no usable sticker serial/symbol. Treat as an active owner/box lead only, not an observation. Recheck listing imagery if it changes or if a community member chooses to contact the seller.
 
-**Tier A: direct one-shot vs G6 test**
+## Live post-427 acquisition priorities — 4 Oct 2026
+
+The 427=dot confirmation prospectively falsified the frozen 534brn-selected E2 pair. Do **not** continue using the old E2 acquisition rationale below; it is superseded by Experiment 418 and the live 12-state U4 / 10-state U5 families.
+
+### Tier A — exact G5-vs-G6 fork: residue 82
 
 Target any physical sticker with serial:
 
@@ -153,33 +159,86 @@ Target any physical sticker with serial:
 082, 190, 298, 406, 514, 622
 ```
 
-These are H108 residue 82. Both 534brn-selected masters predict slash; recursive U5 predicts dot.
-
-**Tier B: identify the two selected masters**
-
-Residue 84 family:
+Current live distributions are:
 
 ```
+U4: 82 = slash in 2 states, dot in 10 states
+U5: 82 = dot in all 10 states
+```
+
+Therefore a single physical observation is decisive:
+
+- **slash** falsifies U5/G6 and leaves exactly the two G5-only states;
+- **dot** removes those two G5-only states and collapses U4 exactly onto the current U5 family.
+
+This is now the strongest single-residue acquisition target in the project.
+
+### Tier B — resolve the surviving U5 family
+
+If the goal is to reduce uncertainty *within* the 10-state U5 family, residues **84** and **102** each have a perfectly balanced 5/5 split:
+
+```
+residue 84:
 084, 192, 300, 408, 516, 624
-```
 
-Residue 102 family:
-
-```
+residue 102:
 102, 210, 318, 426, 534, 642
 ```
 
-Either family resolves the remaining two-master ambiguity.
+They each provide one full bit of state information under U5, but they do **not** distinguish U4 from U5 by themselves.
 
-**Tier A contradiction checks already in the owner queue**
+The next-most-informative U5 residues are:
 
-- 427=dot claim → residue 103; both selected masters predict slash.
-- 369=dot claim → residue 45; both selected masters predict dash.
+```
+61: 061, 169, 277, 385, 493, 601
+88: 088, 196, 304, 412, 520, 628
+91: 091, 199, 307, 415, 523, 631
+100: 100, 208, 316, 424, 532, 640
+106: 106, 214, 322, 430, 538, 646
+```
 
-A physical photo confirming either claim would falsify the whole 534brn-selected pair.
+Each has a 4/6 or 6/4 split across U5.
 
-A fresh indexed-web sweep on 2 Oct 2026 found no defensible public exact-serial hit in the three target families. Current effort should therefore emphasize owner/comment funnels, marketplace imagery, and newly surfaced CE photographs rather than repeating generic exact-number search.
+### Tier C — secondary U4-vs-U5 discrimination
 
-The 27 Sep 2026 Reddit PSA explaining that owners can expose the sticker without opening the collectible contents is currently the strongest passive owner funnel. Review new submissions from that funnel against the serial families above immediately.
+Residues **22, 25, and 55** have the next-largest distribution shift between U4 and U5 after residue 82:
 
-Do not alter the observation table from text-only claims.
+```
+22: 022, 130, 238, 346, 454, 562
+25: 025, 133, 241, 349, 457, 565
+55: 055, 163, 271, 379, 487, 595
+```
+
+They are useful but not individually decisive because both possible symbols remain represented inside U5.
+
+Residues **61** and **100** are the next tier after those; residues **88, 91, 106**, then **58**, have progressively smaller U4-vs-U5 distribution shifts.
+
+### Prospective validation target — residue 94
+
+Confirmed 427=dot fixes residue 103 to dot. Together with already observed residue 85=dot, the one-slash-per-depth-stack model now forces:
+
+```
+94 = slash
+```
+
+Physical family:
+
+```
+094, 202, 310, 418, 526, 634
+```
+
+This does not distinguish the current U5 states, but it is a clean prospective validation of the tail-stack rule and is therefore worth acquiring.
+
+### Evidence accounting
+
+New finds should be classified immediately as one of:
+
+1. **new H108 residue** — can shrink the completion space;
+2. **repeat of a live-variable residue** — prospective model/state validation;
+3. **repeat of an already fixed residue** — recurrence/source-quality replication.
+
+Sticker 043 is category 3: it repeats residue 43=slash already seen at 475, separated by exactly four H108 periods.
+
+The corpus currently contains 84 physical stickers / 66 unique H108 residues. Experiment 421 finds 16 replicated residues and 20 same-residue physical pair comparisons, all 20 foreground-consistent.
+
+Do not alter the observation table from text-only claims. Preserve the original image, exact serial, foreground, source URL/provenance, and background tile when directly classifiable.

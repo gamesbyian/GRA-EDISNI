@@ -1,0 +1,25 @@
+name: Experiment 421 H108 replication audit
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_h108_replication.py"
+      - "data/observations.csv"
+      - "docs/experiment-421-h108-replication-audit.md"
+      - ".github/workflows/audit-h108-replication.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/audit_h108_replication.py"
+      - "data/observations.csv"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/audit_h108_replication.py
+      - run: git diff --exit-code -- data/experiment-421-h108-replication-audit.json
