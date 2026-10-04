@@ -946,3 +946,16 @@ The first two follow-ups are clean negatives:
 - Experiment 397 finds that the `534brn` DTMF row and column coordinates cannot directly replace the sticker tail as G5 depth selectors; every primary Q surface fails POS3 across U2/U4/U5/E2.
 
 These negatives are useful because they close cheap historically plausible operations without semantic fishing. The sandbox remains active for externally parameterized consumers and coordinate operations.
+
+
+## Experiments 398–401 — E2 collapses to one physical bit
+
+The weighted-completion sandbox has produced a robust new derived sequence without turning it into an unsupported decode.
+
+The historically proposed direct `534brn` digit-index operation yields invariant `--/--/-/-` across all U4/U5/E2 completions. Its obvious lever projection `RRURRURUR` is closed by the community's completed 2023 exhaustive lever sweep through length 14.
+
+The historical 9+3 large-number/small-selector representation is also now frozen. Under E2 all nine large 9-bit values are fixed, with only class C's 3-bit tail remaining 1 versus 4.
+
+A nontrivial coupling audit shows why: E2 has exactly two variable residues, 84 and 102, forced complementary. The active external model is therefore one complete master plus one unresolved binary physical coordinate, not a diffuse two-master uncertainty.
+
+Acquisition of either residue-84 or residue-102 family now resolves the entire E2 completion and every derived interface built from it.
