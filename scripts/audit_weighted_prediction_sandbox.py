@@ -97,7 +97,7 @@ def main():
         },
         "canonical_10_state_weighting":{
             "residue_82_support":ps[82],
-            "conclusion":"The 10-state weights encode downstream G6 assumptions. Naively using them as priors would assign zero support to every pre-G6 master with 82=slash, including the active 534brn-selected pair."
+            "conclusion":"The 10-state weights encode downstream G6 assumptions. Naively using them as priors would assign zero support to every pre-G6 master with 82=slash, the now-falsified 534brn-selected pair was one such example before Experiment 418."
         },
         "safe_policy":[
             "Use weighted lists as uncertainty masks and scenario generators, not calibrated probabilities.",
@@ -110,7 +110,7 @@ def main():
             "broad_physical":"U2 324",
             "typed_one_shot":"U4 12",
             "recursive":"U5 10",
-            "external_selected":"Experiment 390 pair of 2",
+            "external_selected":"retired: Experiment 390 pair falsified by Experiment 418",
             "rival":"frozen row-selector family at residues 84/102"
         }
     }
