@@ -159,4 +159,5 @@ Otherwise record it as a negative or exploratory curiosity and move on.
 11. Experiment 408 — exact nine-page Terminal41 shutdown chain audited and closed as a deterministic countdown, not an input consumer.
 12. Next — consumer-first only. A new artifact must supply the key, traversal, corpus, role, or downstream grammar before another decode family opens.
 13. Experiment 418 — confirmed 427 = dot prunes U2/U3/U4/U5 to 324/108/12/10 and prospectively falsifies the frozen E2 pair. Residue 94 is now forced slash under the one-slash-per-depth-stack model.
-14. Continue acquisition in parallel; prioritize residues that discriminate the remaining 12-state U4 and 10-state U5 families rather than the retired E2 fork.
+14. Experiment 419 — community-proposed tail XOR overlay tested exactly. It preserves all 324/108/12/10 candidates but turns U4/U5 into 9×9 binary surfaces with exact 36-bit weight and 9/12/15 q-block weights; those regularities are algebraic consequences of G5 validity, so retain the surface as a visualization/checksum rather than independent evidence.
+15. Continue acquisition in parallel; prioritize residues that discriminate the remaining 12-state U4 and 10-state U5 families rather than the retired E2 fork.
