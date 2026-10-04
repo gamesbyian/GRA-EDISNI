@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import os
 import json
 import math
 import re
@@ -12,7 +13,7 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OBS = ROOT / "data" / "observations.csv"
+OBS = ROOT / os.environ.get("GRA_EDISNI_OBSERVATIONS_FILE", "data/observations.csv")
 LEDGER = ROOT / "archive" / "external" / "twinysam-inside-arg" / "stickers.md"
 OUT = ROOT / "data" / "experiment-349-chronological-census-prequential.json"
 
