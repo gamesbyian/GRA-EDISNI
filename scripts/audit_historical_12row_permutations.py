@@ -4,13 +4,14 @@
 from __future__ import annotations
 
 import csv
+import os
 import json
 from collections import Counter, defaultdict
 from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OBS = ROOT / "data" / "observations.csv"
+OBS = ROOT / os.environ.get("GRA_EDISNI_OBSERVATIONS_FILE", "data/observations.csv")
 OUT = ROOT / "data" / "experiment-347-historical-12row-permutation-audit.json"
 N = 12
 FULL = (1 << N) - 1
