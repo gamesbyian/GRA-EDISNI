@@ -2,17 +2,24 @@
   "experiment": 393,
   "question": "How may the existing weighted missing-sticker guesses be used safely for exploratory decoding?",
   "modal_synthetic_master": {
-    "member_of": {"U2": false, "U3": false, "U4": false, "U5": false},
+    "member_of": {
+      "U2": false,
+      "U3": false,
+      "U4": false,
+      "U5": false
+    },
     "conclusion": "The per-residue modal guess sheet is not a legal completion even in broad U2; never treat it as a physical master."
   },
   "u2_combinatorial_weighting": {
-    "u4_survivors": 20,
+    "u4_survivors": 12,
     "distinct_scores": 1,
-    "conclusion": "Broad U2 candidate multiplicities give the same product score to all 20 U4 survivors; they do not provide a hidden prior ranking."
+    "conclusion": "Broad U2 candidate multiplicities give the same product score to all 12 U4 survivors; they do not provide a hidden prior ranking."
   },
-  "canonical_14_state_weighting": {
-    "residue_82_support": {".": 14},
-    "conclusion": "The 14-state weights encode downstream G6 assumptions. Naively using them as priors would assign zero support to every pre-G6 master with 82=slash, including the active 534brn-selected pair."
+  "canonical_10_state_weighting": {
+    "residue_82_support": {
+      ".": 10
+    },
+    "conclusion": "The 10-state weights encode downstream G6 assumptions. Naively using them as priors would assign zero support to every pre-G6 master with 82=slash. The former 534brn-selected pair was prospectively falsified independently by confirmed residue 103 = dot in Experiment 418."
   },
   "safe_policy": [
     "Use weighted lists as uncertainty masks and scenario generators, not calibrated probabilities.",
@@ -20,5 +27,12 @@
     "Report operation stability and survivor counts separately at each universe layer.",
     "For pre-G6 discovery, do not use U5-derived support counts to rank candidates.",
     "A promising operation must survive replay on the broadest universe whose premises it does not itself assume."
-  ]
+  ],
+  "recommended_sandbox_panels": {
+    "broad_physical": "U2 324",
+    "typed_one_shot": "U4 12",
+    "recursive": "U5 10",
+    "external_selected": "retired: Experiment 390 pair falsified by Experiment 418",
+    "rival": "frozen row-selector family at residues 84/102"
+  }
 }
