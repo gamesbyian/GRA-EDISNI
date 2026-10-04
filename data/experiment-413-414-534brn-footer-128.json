@@ -1,0 +1,25 @@
+{
+  "experiment_pair": [413,414],
+  "footer": {
+    "raw_text": "pe^!02un",
+    "raw_dot_run_lengths": [8,2,1],
+    "rotation": "180-degree / upside-down glyph reading",
+    "decoded_word": "unsolved",
+    "reversed_dot_run_digits": "128",
+    "decoded_message": "128 UNSOLVED"
+  },
+  "jpeg_header": {
+    "sof0_shaped_candidate_count_each": {"A":1,"B":1,"P":1},
+    "candidate_offsets_tokenized": {"A":[7503],"B":[7520],"P":[133]},
+    "normalized_pattern": "?? ?? 20 11 08 20 ?? 20 ?? 03 01 22 20 02 11 01 03 11 01",
+    "dimension_range": [128,255],
+    "components": 3,
+    "sampling": "Y 2x2; Cb 1x1; Cr 1x1"
+  },
+  "cross_evidence": {
+    "historical_footer_reading": "community proposed '128 unsolved' on 12 Apr 2026",
+    "historical_dimension_constraint": "community JPEG analysis on 20 Dec 2025 independently placed both dimensions in 128..255",
+    "new_connection": "128 is exactly the lower boundary of the surviving SOF dimension range"
+  },
+  "conclusion": "The footer is a strong source-native clue toward a 128 image dimension. It does not yet prove both width and height are 128."
+}
