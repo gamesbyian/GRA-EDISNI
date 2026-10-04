@@ -205,3 +205,18 @@ With one shared physical-row coordinate, the unique hit remains `112/012/120` un
 Experiments 388–389 then separate provenance from parameter fixing. Pre-machine discussion independently supports horizontal/vertical coordinate exchange and layered 2D reading, but no recovered source fixes the exact role mapping or reversed q order.
 
 Status: preserve as the leading external-consumer candidate, but do not promote or widen. Reopen only on genuinely independent axis/handedness/Q-order evidence.
+
+
+### Indexed 534brn feature: robust output, lever consumer closed
+
+Experiment 398 tests the historically proposed idea that the nine decimal digits in `534brn9653f9j8mmd` may act as indices into the nine native sticker class words. The direct one-based operation yields a robust U4/U5/E2 sequence:
+
+```
+--/--/-/-
+```
+
+The independently motivated CE sleeve/lever mapping converts this to `RRURRURUR`.
+
+Experiment 400 closes the ordinary lever-door interpretation: the Nov-2023 community completed a De Bruijn-style exhaustive three-symbol lever sweep through length 14, necessarily exercising every nine-command word, with no unknown result. Historical testers also reported the known bunker code continued to work after prolonged failed-input runs.
+
+Preserve the indexed nine-symbol feature, but do not treat the ordinary bunker lever as its live consumer. A new consumer must be independently supplied.
