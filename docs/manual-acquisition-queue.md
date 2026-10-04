@@ -141,6 +141,12 @@ New physical sticker information is now the highest-value manual acquisition tar
 When choosing between two leads, prefer the one more likely to yield a previously unseen serial/residue or an original clue-bearing artifact that specifies registration/overlay behavior. Existing known-residue repeats remain useful controls, but genuinely new residues have substantially greater research value. See `docs/visual-completion-overlay-risk.md` and `docs/prediction-matrix-process.md`.
 
 
+## Active marketplace leads — 4 Oct 2026
+
+- eBay item **257753799919**, seller `uglord64`  
+  https://www.ebay.com/itm/257753799919  
+  Status: newly listed INSIDE Collector's Edition; indexed listing image shows the CE box but no usable sticker serial/symbol. Treat as an active owner/box lead only, not an observation. Recheck listing imagery if it changes or if a community member chooses to contact the seller.
+
 ## Live post-427 acquisition priorities — 4 Oct 2026
 
 The 427=dot confirmation prospectively falsified the frozen 534brn-selected E2 pair. Do **not** continue using the old E2 acquisition rationale below; it is superseded by Experiment 418 and the live 12-state U4 / 10-state U5 families.
