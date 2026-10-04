@@ -1,0 +1,21 @@
+{
+  "experiment": 400,
+  "title": "lever-consumer closure for the stable 534brn digit-index sequence",
+  "historical_sequence": "RRURRURUR",
+  "sequence_length": 9,
+  "consumer": "secret-ending three-position lever / bunker door",
+  "historical_bruteforce": {
+    "date_completed": "2023-11-12",
+    "method": "De Bruijn-style exhaustive coverage of all 3-symbol lever words through length 14",
+    "length_14_space": 4782969,
+    "segments": 20,
+    "community_result": "all segments completed; no unknown code result"
+  },
+  "consequence": "RRURRURUR, as a 9-command lever word, is necessarily included in that completed search and produced no new bunker-door result.",
+  "caveats": [
+    "This closes the ordinary lever-door consumer in the tested game state, not every imaginable stateful or context-dependent lever use.",
+    "Historical testers reported the known bunker code still worked after long runs of failed inputs, arguing against a simple anti-bruteforce lockout."
+  ],
+  "classification": "downstream consumer hard negative",
+  "epistemic_effect": "Experiment 398 remains a robust derived nine-symbol feature, but its obvious lever interpretation is historically falsified as a new bunker-door code."
+}
