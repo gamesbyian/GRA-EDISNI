@@ -536,7 +536,7 @@
       "period": 108,
       "pair_count": 20,
       "agreeing_pairs": 20,
-      "agreement_rate": 1,
+      "agreement_rate": 1.0,
       "repeated_groups": 16,
       "conflict_groups": 0
     },
@@ -545,7 +545,7 @@
         "period": 108,
         "pair_count": 20,
         "agreeing_pairs": 20,
-        "agreement_rate": 1,
+        "agreement_rate": 1.0,
         "repeated_groups": 16,
         "conflict_groups": 0
       },
@@ -553,7 +553,7 @@
         "period": 216,
         "pair_count": 8,
         "agreeing_pairs": 8,
-        "agreement_rate": 1,
+        "agreement_rate": 1.0,
         "repeated_groups": 8,
         "conflict_groups": 0
       },
@@ -561,12 +561,12 @@
         "period": 197,
         "pair_count": 6,
         "agreeing_pairs": 6,
-        "agreement_rate": 1,
+        "agreement_rate": 1.0,
         "repeated_groups": 6,
         "conflict_groups": 0
       }
     ],
     "conclusion": "Within candidate periods 2..216, period 108 is the unique zero-conflict period with 20 same-class pair comparisons; the next zero-conflict period is 216 with 8 pairs."
   },
-  "guardrail": "Descriptive replication and bounded-period comparison over the current physical corpus; independent of completion-machine assumptions, but not a universal proof against larger or more complicated periodic models."
+  "guardrail": "This is a descriptive replication and bounded-period comparison over the current physical corpus. It is independent of the completion-machine assumptions but is not a universal proof that no larger or more complicated periodic model exists."
 }
