@@ -842,3 +842,18 @@ Terminal41 does contain an exact nine-page shutdown-confirmation chain. Source a
 This is a useful external-consumer negative for the robust Experiment-398 nine-symbol signature: same cardinality is not enough.
 
 **Consequence:** do not map the stable nine-symbol feature onto this chain. Continue searching only for typed consumers that actually expose nine addressable values/choices, or for external consumers of the frozen 9+3 numeric surface.
+
+
+### Experiments 409–411 — reversible cover becomes a bounded clue source
+
+The PS4 reversible cover is now promoted from generic artwork to a high-value, independently clue-bearing artifact.
+
+iam8bit explicitly advertised a hidden clue in the reversible slip cover. The archive preserves 6552×5040 source scans, and historical comparison assets tie cover monitors to prior ARG/game visual families: partial acorn/LifeDetected, planet, graph and login imagery. Historical discussion also explicitly considered the cover a guide linking puzzle outputs and suggested layered/partial composition.
+
+This licenses **cross-artifact layer/registration tests** when a source image supplies the anchor first.
+
+It does **not** license arbitrary overlays, free D4/crop/scale search, or mapping the nine sticker states to arbitrary cover objects.
+
+Experiment 411 specifically checks whether the reversible design + 12:12 clock can close the remaining `534brn` q-reversal gap. It cannot: several inequivalent reversal operations are natural and nothing labels Q or uniquely fixes order 2,1,0.
+
+**Next cover target:** compare each independently identified monitor/source pair for a repeated source→cover omission/crop/orientation rule. Promote only a transform that repeats across multiple pairs without tuning.
