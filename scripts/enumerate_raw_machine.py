@@ -23,12 +23,13 @@ or terminal payload is used as a filter.
 from __future__ import annotations
 
 import csv
+import os
 from collections import Counter, defaultdict
 from itertools import product
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OBSERVATIONS = ROOT / "data" / "observations.csv"
+OBSERVATIONS = ROOT / os.environ.get("GRA_EDISNI_OBSERVATIONS_FILE", "data/observations.csv")
 
 SERIAL_ORDER = "ABCDEFGHI"
 PHYSICAL_LAYOUT = (
