@@ -1,0 +1,36 @@
+{
+  "experiment": 420,
+  "title": "sticker 043 physical replication of H108 residue 43",
+  "date": "2026-10-04",
+  "new_observation": {
+    "serial": 43,
+    "residue": 43,
+    "foreground_symbol": "/",
+    "background_image_class": null,
+    "seller": "latcholia",
+    "source": "eBay listing shared 2026-10-04",
+    "source_url": "https://ebay.io/m/aK07BU",
+    "evidence": "full CE-box photograph plus close-up showing slash and printed serial 043"
+  },
+  "existing_same_residue_observation": {
+    "serial": 475,
+    "residue": 43,
+    "foreground_symbol": "/",
+    "image_class": "G"
+  },
+  "period_relation": {
+    "serial_difference": 432,
+    "period": 108,
+    "periods_apart": 4,
+    "same_foreground_symbol": true
+  },
+  "corpus_effect": {
+    "physical_sticker_count_before": 83,
+    "physical_sticker_count_after": 84,
+    "unique_h108_residue_count_before": 66,
+    "unique_h108_residue_count_after": 66,
+    "completion_universe_prune": "none"
+  },
+  "background_note": "Serial position implies the G slot under the established A-I serial cycle, and serial 475 at the same residue is classified G. The new photograph itself is not clean enough to promote the faint background tile to a direct visual classification, so image_class remains blank.",
+  "interpretation": "This is independent physical replication of the H108 foreground recurrence at residue 43 rather than a new missing-residue recovery."
+}
