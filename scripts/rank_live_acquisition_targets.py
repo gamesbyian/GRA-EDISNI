@@ -25,20 +25,30 @@ def distribution(masters, residue):
     return Counter(master[residue - 1] for master in masters)
 
 
+def normalized_number(value):
+    if abs(value) < 1e-15:
+        return 0
+    if abs(value - round(value)) < 1e-15:
+        return int(round(value))
+    return value
+
+
 def entropy(counts, total):
-    return -sum(
+    value = -sum(
         (n / total) * math.log2(n / total)
         for n in counts.values()
         if n
     )
+    return normalized_number(value)
 
 
 def tv_distance(a, na, b, nb):
     symbols = set(a) | set(b)
-    return 0.5 * sum(
+    value = 0.5 * sum(
         abs(a.get(s, 0) / na - b.get(s, 0) / nb)
         for s in symbols
     )
+    return normalized_number(value)
 
 
 def serial_family(residue, ceiling=648):
