@@ -776,3 +776,26 @@ Priority order is now concrete:
 The recent Reddit owner PSA is a useful passive funnel and U32/KoreanB_B_Q ownership was independently reconfirmed from old public sale/trade posts, but no new observation was obtained.
 
 **Operating rule:** acquisition and provenance now outrank more model invention. Recompute the target pair immediately when any Tier A/B physical observation arrives.
+
+
+### Experiments 393–394 — weighted completion sandbox
+
+The existing missing-sticker guess lists are now explicitly available as an exploratory model laboratory, but not as a single guessed truth.
+
+Experiment 393 establishes the crucial distinction:
+
+- the residue-by-residue modal sheet is **not** a legal U2/U3/U4/U5 completion;
+- U2 candidate multiplicities do not rank the 20 U4 survivors at all;
+- U5 support counts already encode G6 and would circularly reject the active residue-82=slash one-shot pair.
+
+**Sandbox policy:** use coherent ensembles, not a synthetic modal master. For every new operation report output/survivor stability separately over U2, U3, U4, U5, the 534brn-selected pair, and any frozen rival family that bears on the question.
+
+Experiment 394 gives the first example. Standard Braille over the natural 9×12 completed sticker carrier produces no ensemble-stable message and is closed at the cheap registration.
+
+**Next exploratory lanes, in order:**
+1. external-consumer operations where the other artifact supplies a subset/order/key;
+2. sticker-native boundary/check-bit or registration channels;
+3. lever semantics only when an independent traversal/subset appears;
+4. coordinate/selector operations grounded in the mechanics corpus.
+
+Do not use weighted guesses for open-ended plaintext/image fishing. A sandbox hit must survive coherent completion replay before it can graduate.
