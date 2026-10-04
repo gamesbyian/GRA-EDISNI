@@ -238,3 +238,28 @@ Record, where applicable:
 - whether the operation is representation-only, a nontrivial filter, or a hard negative.
 
 Experiment 367 is the reference implementation. The frozen row-selector family keeps 144/648 U2 masters and 6/14 U5 masters; the known-password lever replay keeps none.
+
+
+## Exploratory weighted-completion sandbox
+
+Experiments 393–394 add a second legitimate use of the prediction matrix: **counterfactual exploration of complete-code operations**.
+
+Important constraints:
+
+- Do not build a single “best complete sticker master” by taking the preferred symbol independently at each unknown residue. Experiment 393 proves that this modal sheet is not a legal member of U2, U3, U4, or U5.
+- Do not interpret `support_of_14` as a calibrated probability. Those counts are frequencies inside the canonical U5 family and therefore inherit downstream assumptions, including G6.
+- Do not use U5-derived weights to judge a hypothesis whose purpose is to test whether G6 should exist.
+
+Instead, run the proposed operation across coherent ensembles. At minimum report U2/U4/U5 behavior when those layers are relevant. Add the externally selected pair or frozen rivals when the hypothesis bears on them.
+
+Useful exploratory outputs include:
+
+- cells/tokens invariant across an ensemble;
+- number of distinct downstream outputs;
+- survivor counts after an independently specified consumer;
+- sensitivity to each uncertain residue or gauge;
+- whether a promising result vanishes when the modal synthetic completion is replaced by legal completions.
+
+Experiment 394 is the reference negative example: a visually tempting complete-data operation, Braille, is cheap to test but fails ensemble stability.
+
+The sandbox is for **hypothesis generation and robustness testing**, not for laundering guesses into observations.
