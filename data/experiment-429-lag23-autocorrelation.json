@@ -1,0 +1,15 @@
+{
+  "experiment": 429,
+  "completion_family": "10 live canonical masters",
+  "lag": 23,
+  "mean_exact_symbol_agreement": 0.3898148148,
+  "standard_deviation_across_masters": 0.0096669505,
+  "rank_among_lags_1_to_107": 36,
+  "top_lags": [
+    {"lag": 2, "mean_agreement": 0.5962962963},
+    {"lag": 106, "mean_agreement": 0.5962962963},
+    {"lag": 1, "mean_agreement": 0.5685185185},
+    {"lag": 107, "mean_agreement": 0.5685185185}
+  ],
+  "interpretation": "Lag 23 is ordinary. No evidence for a 23-step internal repeat or overlay displacement."
+}
