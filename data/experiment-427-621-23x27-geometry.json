@@ -1,0 +1,34 @@
+{
+  "experiment": 427,
+  "total": 621,
+  "factorizations": ["23x27", "27x23"],
+  "orientation_23_rows_27_columns": {
+    "rows": 23,
+    "cols": 27,
+    "row_width_mod_108": 27,
+    "row_width_mod_27": 0,
+    "row_width_mod_9": 0,
+    "row_start_h108_residues": [1,28,55,82,1,28,55,82,1,28,55,82,1,28,55,82,1,28,55,82,1,28,55],
+    "row_start_background_phases": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    "rows_start_on_27_boundary": 23,
+    "rows_start_on_9_boundary": 23,
+    "rows_start_on_108_boundary": 6
+  },
+  "orientation_27_rows_23_columns": {
+    "rows": 27,
+    "cols": 23,
+    "row_width_mod_108": 23,
+    "row_width_mod_27": 23,
+    "row_width_mod_9": 5,
+    "rows_start_on_27_boundary": 1,
+    "rows_start_on_9_boundary": 3,
+    "rows_start_on_108_boundary": 1
+  },
+  "serial_597_location": {
+    "serial": 597,
+    "row_23x27": 23,
+    "col_23x27": 3,
+    "h108_residue": 57
+  },
+  "interpretation": "The 23x27 orientation is canonically compatible with the pre-existing carrier: every row is one complete 27-cell quarter and three complete period-9 background cycles; row starts cycle through H108 residues 1,28,55,82 and repeat every four rows. Across 23 rows this gives five full H108 cycles followed by the three primary quarters. The transposed 27x23 orientation has no such alignment. This privileges 23 rows of 27 if 621 is independently established, but it does not establish 621 as the production total."
+}
