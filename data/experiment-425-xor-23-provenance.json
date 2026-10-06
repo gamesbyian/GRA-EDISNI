@@ -1,0 +1,50 @@
+{
+  "experiment": 425,
+  "question": "Why does Experiment 419 U4 have exactly 23 variable XOR cells?",
+  "layers": {
+    "U2": {
+      "body_variable_count": 9,
+      "tail_variable_count": 8,
+      "raw_xor_influence_count": 33,
+      "overlap_cell_count": 4,
+      "xor_variable_cell_count": 29,
+      "formula": "9 + 3*8 - 4 = 29"
+    },
+    "U3": {
+      "body_variable_count": 5,
+      "tail_variable_count": 8,
+      "raw_xor_influence_count": 29,
+      "overlap_cell_count": 3,
+      "xor_variable_cell_count": 26,
+      "formula": "5 + 3*8 - 3 = 26"
+    },
+    "U4": {
+      "body_variable_count": 5,
+      "tail_variable_count": 7,
+      "raw_xor_influence_count": 26,
+      "overlap_cell_count": 3,
+      "xor_variable_cell_count": 23,
+      "formula": "5 + 3*7 - 3 = 23",
+      "overlap_cells_1_based": {
+        "3,7": [25, 106],
+        "7,1": [55, 82],
+        "7,7": [61, 88]
+      }
+    },
+    "U5": {
+      "body_variable_count": 5,
+      "tail_variable_count": 6,
+      "raw_xor_influence_count": 23,
+      "overlap_cell_count": 2,
+      "xor_variable_cell_count": 21,
+      "formula": "5 + 3*6 - 2 = 21"
+    }
+  },
+  "u4_decomposition": {
+    "body_variables": [22, 25, 55, 58, 61],
+    "tail_variables": [82, 84, 88, 91, 100, 102, 106],
+    "identity": "5 + (7*3) - 3 = 23"
+  },
+  "interpretation": "The U4 value 23 is exact but not an additional machine invariant. It is the union size of the XOR influence supports of the particular residues still variable at U4. The neighboring layers yield 29, 26, 23, and 21 variable XOR cells, showing that 23 changes as completion constraints fix residues.",
+  "relation_to_hollerith_23": "Experiment 424's 12+8+3=23 and Experiment 419's U4 variable-cell count are mathematically independent constructions. Their numerical equality is therefore a genuine cross-experiment coincidence, but Experiment 425 finds no mechanical bridge between them."
+}
