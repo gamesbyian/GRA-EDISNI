@@ -66,6 +66,16 @@ It does **not** provide:
 
 A 36×36 reshape of the resulting 1296 bits is not part of IBM card geometry and would destroy the only historically licensed 12-row structure, so it is not promoted as an experiment.
 
+## Secondary numerical echo: 12 + 8 + 3 = 23
+
+The IBM 029 period code has an additional arithmetic coincidence: its punch-row labels sum to **23**.
+
+That number already recurs in documented INSIDE/ARG chronology. Community documentation dates the ARG as active since **23 July 2016**; INSIDE's PS4 release was **23 August 2016**; and the preserved community ARG history records the macOS release on **23 June 2020**.
+
+This is worth retaining because the arithmetic is forced once the literal IBM period code is chosen. However, **summing Hollerith row labels is not a standard punch-card decoding operation**. The value 23 therefore remains a secondary numerical echo, not independent evidence for the punch-card hypothesis and not a license to search arbitrary row-label sums.
+
+A future clue explicitly invoking addition, totals, 23, or punch-row arithmetic would change that assessment.
+
 ## Disposition
 
 **Historically grounded representation candidate; structurally non-generative on its own.**
