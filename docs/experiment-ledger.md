@@ -464,6 +464,8 @@ Latest indexed experiment: **423**.
 
 | 424 | literal IBM 029/Hollerith foreground transform: encode `-` as punch row 11, `/` as 0+1, and `.` as 12+8+3. Across every possible H108 completion, rows 2/4/5/6/7/9 are structurally blank, rows 0=1 are duplicates, and rows 12=3=8 are duplicates, leaving only three independent occupancy patterns exactly equivalent to the original three sticker symbols. The mapping is historically grounded and lossless but adds zero information, supplies no 9×12/12×9 discriminator or row order, and cannot by itself produce a rich 12-row bitmap. Secondary note: the period code's labels sum to 23, which recurs in documented ARG chronology, but summing Hollerith row labels is not a standard decoding operation, so this remains a numerical echo rather than evidence. Preserve as a representation candidate; reopen only with an independent punch-card-specific consumer/layout cue. |
 
+| 425 | provenance of Experiment 419's U4 `23` variable XOR cells: U4 retains 5 variable body residues and 7 variable tail residues. Body variables affect one XOR cell each; tail variables repeat into three cells each, giving 26 raw influence locations. Three body/tail supports overlap (25↔106, 55↔82, 61↔88), so the union is `5 + 3×7 - 3 = 23`. Neighboring layers give 29, 26, 23, 21 variable cells for U2..U5, so 23 is an exact but layer-contingent support count, not an independent invariant. Its equality with Experiment 424's Hollerith `12+8+3=23` is currently a numerical coincidence with no mechanical bridge. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
