@@ -1,0 +1,27 @@
+{
+  "experiment": 426,
+  "candidate_totals": [598, 600, 603, 612, 621, 630, 639, 648],
+  "candidate_set_provenance": "frozen from endpoint totals already considered before Experiment 424's Hollerith-23 observation",
+  "features": {
+    "legacy_carrier": [9, 27, 81, 108],
+    "new_number": [23],
+    "guardrail": "No arbitrary sums/products or post-hoc nearby totals are scored."
+  },
+  "rows": [
+    {"total":598,"divisible_by_9":false,"divisible_by_23":true,"divisible_by_27":false,"divisible_by_81":false,"divisible_by_108":false,"h108_remainder":58,"h108_boundary_0_or_81":false,"quotient_23":26,"quotient_27":null,"quotient_108":null},
+    {"total":600,"divisible_by_9":false,"divisible_by_23":false,"divisible_by_27":false,"divisible_by_81":false,"divisible_by_108":false,"h108_remainder":60,"h108_boundary_0_or_81":false,"quotient_23":null,"quotient_27":null,"quotient_108":null},
+    {"total":603,"divisible_by_9":true,"divisible_by_23":false,"divisible_by_27":false,"divisible_by_81":false,"divisible_by_108":false,"h108_remainder":63,"h108_boundary_0_or_81":false,"quotient_23":null,"quotient_27":null,"quotient_108":null},
+    {"total":612,"divisible_by_9":true,"divisible_by_23":false,"divisible_by_27":false,"divisible_by_81":false,"divisible_by_108":false,"h108_remainder":72,"h108_boundary_0_or_81":false,"quotient_23":null,"quotient_27":null,"quotient_108":null},
+    {"total":621,"divisible_by_9":true,"divisible_by_23":true,"divisible_by_27":true,"divisible_by_81":false,"divisible_by_108":false,"h108_remainder":81,"h108_boundary_0_or_81":true,"quotient_23":27,"quotient_27":23,"quotient_108":null},
+    {"total":630,"divisible_by_9":true,"divisible_by_23":false,"divisible_by_27":false,"divisible_by_81":false,"divisible_by_108":false,"h108_remainder":90,"h108_boundary_0_or_81":false,"quotient_23":null,"quotient_27":null,"quotient_108":null},
+    {"total":639,"divisible_by_9":true,"divisible_by_23":false,"divisible_by_27":false,"divisible_by_81":false,"divisible_by_108":false,"h108_remainder":99,"h108_boundary_0_or_81":false,"quotient_23":null,"quotient_27":null,"quotient_108":null},
+    {"total":648,"divisible_by_9":true,"divisible_by_23":false,"divisible_by_27":true,"divisible_by_81":true,"divisible_by_108":true,"h108_remainder":0,"h108_boundary_0_or_81":true,"quotient_23":null,"quotient_27":24,"quotient_108":6}
+  ],
+  "findings": {
+    "598": "23×26. No alignment with 9, 27, 81, or 108 as a total.",
+    "621": "23×27 = 27×23; also 69×9; and 621 mod 108 = 81, so a 1-based run through 621 ends exactly after the 81-cell primary region of cycle 6, before its 27-cell tail.",
+    "648": "6×108 = 24×27 = 8×81 = 72×9; strongest pre-23 carrier-aligned endpoint, but not divisible by 23."
+  },
+  "interpretation": "621 is uniquely enriched for the newly salient 23 while also respecting independently established 27 and 81/108 structure. 648 remains more strongly aligned to the legacy H108 carrier. 598 gains only a 23 factor and otherwise lacks established carrier alignment. None is production evidence.",
+  "numbering_caution": "A total of 598 is not implied by observed serial 597 unless the physical serial run is known to be zero-based and contiguous; current evidence does not establish that. A 001..621 interpretation of total 621 is likewise a hypothesis, not a manufacturing fact."
+}
