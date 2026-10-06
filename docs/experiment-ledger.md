@@ -466,6 +466,8 @@ Latest indexed experiment: **423**.
 
 | 425 | provenance of Experiment 419's U4 `23` variable XOR cells: U4 retains 5 variable body residues and 7 variable tail residues. Body variables affect one XOR cell each; tail variables repeat into three cells each, giving 26 raw influence locations. Three body/tail supports overlap (25↔106, 55↔82, 61↔88), so the union is `5 + 3×7 - 3 = 23`. Neighboring layers give 29, 26, 23, 21 variable cells for U2..U5, so 23 is an exact but layer-contingent support count, not an independent invariant. Its equality with Experiment 424's Hollerith `12+8+3=23` is currently a numerical coincidence with no mechanical bridge. |
 
+| 426 | bounded 23-sensitive endpoint audit over the pre-existing candidate totals 598/600/603/612/621/630/639/648, using only independently established carrier numbers 9/27/81/108 plus newly motivated 23. Only 598 and 621 are divisible by 23; 621 is uniquely divisible by both 23 and 27 and also satisfies `621 mod 108 = 81`, so a hypothetical 001..621 run ends exactly after the 81-cell primary region and before the 27-cell tail of cycle 6. 648 remains the strongest legacy-carrier endpoint as exactly `6×108`. Preserve 621 as leading 23-sensitive endpoint and 648 as leading legacy-carrier endpoint; neither is production evidence. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
