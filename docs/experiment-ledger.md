@@ -462,6 +462,8 @@ Latest indexed experiment: **423**.
 | 422 | live acquisition ranking: residue 82 is the decisive U4-vs-U5 physical fork; residues 84/102 are exactly balanced one-bit U5 state resolvers; residue 94 is the clean prospective tail-stack validation target. |
 | 423 | JPEG entropy MCU constraint: exact structural baseline-Huffman propagation over the 4,156-token P scan permits every complete MCU count 16..300. All 43 MCU-grid products possible for 128..255 dimensions survive, so the entropy stream cannot establish 64 MCUs or 128×128. |
 
+| 426 | bounded 23-aware endpoint audit: compare only previously discussed totals 598/600/603/612/621/630/639/648 against pre-existing carrier scales 9/27/81/108 plus newly salient 23, without weighted scoring. 621 is uniquely `23×27 = 5×108+81`, i.e. both 23 groups of 27 and 27 groups of 23 while ending exactly at the H108 primary/tail boundary. 648 remains the strongest carrier-only endpoint as `6×108 = 8×81 = 24×27`. 598 is only `23×26` and has no further carrier alignment. Serial 597 does not establish a 598 total or serial 000. Result: 621 is the leading 23-aware candidate; 648 remains the leading H108-only candidate pending independent manufacturing or authorial evidence. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
