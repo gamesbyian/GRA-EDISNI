@@ -1,0 +1,16 @@
+{
+  "experiment": 428,
+  "stride_family": "all 36 integers in 1..107 coprime to 108",
+  "start_residue": 1,
+  "layouts": ["12x9", "9x12", "4x27", "27x4"],
+  "completion_family": "10 live canonical masters",
+  "metrics": ["equal-symbol edge fraction", "homogeneous 2x2 blocks"],
+  "stride23": {
+    "12x9": {"equal_edge_fraction": 0.3887179487, "equal_edge_rank": 9, "homogeneous_2x2_mean": 5.2, "homogeneous_2x2_rank": 15},
+    "9x12": {"equal_edge_fraction": 0.3635897436, "equal_edge_rank": 25, "homogeneous_2x2_mean": 5.6, "homogeneous_2x2_rank": 19},
+    "4x27": {"equal_edge_fraction": 0.3713513514, "equal_edge_rank": 23, "homogeneous_2x2_mean": 2.4, "homogeneous_2x2_rank": 36},
+    "27x4": {"equal_edge_fraction": 0.3605405405, "equal_edge_rank": 23, "homogeneous_2x2_mean": 5.4, "homogeneous_2x2_rank": 20}
+  },
+  "reverse_stride85_equal_edge_ranks": {"12x9": 7, "9x12": 20, "4x27": 15, "27x4": 13},
+  "interpretation": "Stride 23 is not exceptional under bounded generic spatial-coherence metrics; preserve 23 as an endpoint/grouping clue rather than a traversal key."
+}
