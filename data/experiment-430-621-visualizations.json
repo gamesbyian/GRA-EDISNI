@@ -1,0 +1,18 @@
+{
+  "experiment": 430,
+  "layout": "23x27 consecutive serials, 001..621",
+  "visuals": [
+    "visuals/experiment-430-observed-23x27.svg",
+    "visuals/experiment-430-consensus-23x27.svg",
+    "visuals/experiment-430-uncertainty-23x27.svg"
+  ],
+  "completion_family": "10 live canonical masters",
+  "forced_visual_period_rows": 4,
+  "reason": "108 = 4x27",
+  "observed_gap": {
+    "empty_rows": [19,20,21,22],
+    "serial_interval": "479..594",
+    "interpretation": "acquisition-history gap, not code structure"
+  },
+  "interpretation": "No independent image emerges. The dominant four-row texture is forced by H108."
+}
