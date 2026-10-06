@@ -1,0 +1,29 @@
+{
+  "experiment": 426,
+  "candidate_totals": [598, 600, 603, 612, 621, 630, 639, 648],
+  "preexisting_structural_quantities": {
+    "9": "background / class period",
+    "23": "newly salient only through the IBM 029 period-code arithmetic echo; not previously established as a sticker-carrier dimension",
+    "27": "native H108 tail / q-block scale",
+    "81": "native primary region",
+    "108": "established foreground period"
+  },
+  "rows": [
+    {"total":598,"distance_above_highest_observed_597":1,"divisible_by":[23],"h108_remainder":58,"ends_on_h108_primary_boundary_81":false,"ends_on_h108_cycle_boundary_0":false,"exact_23_blocks":26,"exact_27_blocks":null,"as_23_times_27":false,"as_6_times_108":false},
+    {"total":600,"distance_above_highest_observed_597":3,"divisible_by":[],"h108_remainder":60,"ends_on_h108_primary_boundary_81":false,"ends_on_h108_cycle_boundary_0":false,"exact_23_blocks":null,"exact_27_blocks":null,"as_23_times_27":false,"as_6_times_108":false},
+    {"total":603,"distance_above_highest_observed_597":6,"divisible_by":[9],"h108_remainder":63,"ends_on_h108_primary_boundary_81":false,"ends_on_h108_cycle_boundary_0":false,"exact_23_blocks":null,"exact_27_blocks":null,"as_23_times_27":false,"as_6_times_108":false},
+    {"total":612,"distance_above_highest_observed_597":15,"divisible_by":[9],"h108_remainder":72,"ends_on_h108_primary_boundary_81":false,"ends_on_h108_cycle_boundary_0":false,"exact_23_blocks":null,"exact_27_blocks":null,"as_23_times_27":false,"as_6_times_108":false},
+    {"total":621,"distance_above_highest_observed_597":24,"divisible_by":[9,23,27],"h108_remainder":81,"ends_on_h108_primary_boundary_81":true,"ends_on_h108_cycle_boundary_0":false,"exact_23_blocks":27,"exact_27_blocks":23,"as_23_times_27":true,"as_6_times_108":false},
+    {"total":630,"distance_above_highest_observed_597":33,"divisible_by":[9],"h108_remainder":90,"ends_on_h108_primary_boundary_81":false,"ends_on_h108_cycle_boundary_0":false,"exact_23_blocks":null,"exact_27_blocks":null,"as_23_times_27":false,"as_6_times_108":false},
+    {"total":639,"distance_above_highest_observed_597":42,"divisible_by":[9],"h108_remainder":99,"ends_on_h108_primary_boundary_81":false,"ends_on_h108_cycle_boundary_0":false,"exact_23_blocks":null,"exact_27_blocks":null,"as_23_times_27":false,"as_6_times_108":false},
+    {"total":648,"distance_above_highest_observed_597":51,"divisible_by":[9,27,81,108],"h108_remainder":0,"ends_on_h108_primary_boundary_81":false,"ends_on_h108_cycle_boundary_0":true,"exact_23_blocks":null,"exact_27_blocks":24,"as_23_times_27":false,"as_6_times_108":true}
+  ],
+  "exact_observations": {
+    "598": "23*26; otherwise no exact alignment to 9/27/81/108",
+    "621": "23*27 = 5*108+81; exactly 23 blocks of 27 and 27 blocks of 23; ends at the 81/27 H108 boundary",
+    "648": "6*108 = 8*81 = 24*27; closes six complete H108 cycles but is not divisible by 23"
+  },
+  "pareto_note": "Within the frozen candidate set, 621 and 648 are the two structurally exceptional totals. 621 uniquely combines the newly salient factor 23 with the pre-existing 27 and H108 residue-81 boundary. 648 uniquely closes the full 108-period carrier and is also divisible by 81 and 27. No weighted score is assigned because the features are nested and not independent.",
+  "manufacturing_guardrail": "Serial 597 proves only that 597 exists. It does not establish a total production count, a zero-based serial 000, or a contiguous run. Historical ~600-copy claims remain speculation.",
+  "interpretation": "If 23 later receives an independent authorial cue, 621 becomes a notably economical endpoint because it simultaneously equals 23*27 and terminates at the established 81/27 boundary of H108. Without such a cue, 648 remains at least as natural from the carrier alone because it closes six complete cycles."
+}
