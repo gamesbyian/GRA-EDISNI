@@ -468,6 +468,8 @@ Latest indexed experiment: **423**.
 
 | 426 | bounded 23-sensitive endpoint audit over the pre-existing candidate totals 598/600/603/612/621/630/639/648, using only independently established carrier numbers 9/27/81/108 plus newly motivated 23. Only 598 and 621 are divisible by 23; 621 is uniquely divisible by both 23 and 27 and also satisfies `621 mod 108 = 81`, so a hypothetical 001..621 run ends exactly after the 81-cell primary region and before the 27-cell tail of cycle 6. 648 remains the strongest legacy-carrier endpoint as exactly `6×108`. Preserve 621 as leading 23-sensitive endpoint and 648 as leading legacy-carrier endpoint; neither is production evidence. |
 
+| 427 | 621 as a 23×27 serial rectangle: among the two natural orientations of `621=23×27`, 23 rows × 27 consecutive serials uniquely preserves the established carrier. Every row is exactly one 27-cell quarter and three complete period-9 background cycles; row starts repeat H108 residues `1,28,55,82`, giving five full H108 cycles plus the three primary quarters of cycle 6. The 27×23 transpose destroys both 27- and 9-cell row alignment. Serial 597 would lie at row 23, column 3, residue 57, but that is not endpoint evidence. Preserve 23×27 as the canonical geometry conditional on independent evidence for 621; do not infer 621 from the geometry itself. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
