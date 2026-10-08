@@ -60,7 +60,7 @@ def run(before: Path | None = None, after: Path | None = None,
 
     direct = e["primary_discord_export"]
     assert direct["blob_sha"] == "1889cc948f86f5a4455de0d7310b15cdb1b88b5c"
-    assert len(direct["directly_recovered_events"]) == 8
+    assert len(direct["directly_recovered_events"]) == 12
     if transcript is not None:
         source = transcript.read_bytes()
         sha = hashlib.sha1(
