@@ -41,6 +41,8 @@ flowchart LR
 
 **Warning about the column “new physical validation”:** R011 shows that sticker 427 supplied genuinely new observation and pruned *conditional* machine completions, but does not establish that recursion was intended. R022 is the more decisive test: a physically new symbol **contradicted a pre-frozen prediction**. Calling every same-corpus forced prediction “validated” would obliterate this distinction.
 
+**Context outside the decoder contest:** [R025](evidence-register-view.md#r025) records an Xbox positional-filter precedent without asserting sticker transfer; [R031](evidence-register-view.md#r031) records provisional 23/endpoint arithmetic without print-run evidence; [R032](evidence-register-view.md#r032) records the pending endgame destination portfolio without validating a consumer. These belong in the background and output facets, not additional decoder rows.
+
 ## Map B: high-value tests that genuinely distinguish alternatives
 
 | Test/comparison | Actual observation | Degree of discrimination | Residual uncertainty |
