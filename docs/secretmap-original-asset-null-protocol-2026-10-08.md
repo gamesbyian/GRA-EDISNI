@@ -50,3 +50,9 @@ A synthetic self-test is included to demonstrate duplicate marks cannot both be 
 The most direct path is lawful extraction from a **version-pinned user-owned PC build** using a Unity asset browser, which would require access to the actual installed build; do not substitute unrelated downloadable Unity game assets. Search the complete original 2016 `postimg` gallery via archive snapshots as an alternative to the degraded 2018 repost. Preserve exact byte provenance and original use in scene when available.
 
 **Current outcome:** new reproducible negative-control protocol and documented blocked acquisition. No native SecretMap recovery, registration result, sticker interpretation or new secret-ending content. Shift to other targets if exact asset evidence cannot be acquired.
+
+## Contemporary July 2016 fourteen-marker explanation (Experiment 478)
+
+The original [July 2016 extracted-texture discussion](https://www.reddit.com/r/PlaydeadsInside/comments/4sav9x/curious_textures_found_in_the_game_files/) does not merely label the asset `SecretMap #44506.dds`. One contemporary commenter already reports seeing a possible **fourteenth marker**, and another proposes the extra dot indicates the existing **large final orb**. This provides a clearly dated, ordinary-original-game interpretation years before Collector's Edition stickers existed.
+
+This source changes the correct **null to test first**, not the results of any native image analysis: original DDS and scene UV bytes remain unrecovered, the posted image is not authoritative geometry, and other 2016 contemporary commentators proposed non-map/3D readings. A future original texture extraction must count marks **before** viewing the CE foreground, then test the thirteen small orb sites plus the large final orb using independently registered scene coordinates. Only unexplained, independently established residual marks justify reopening the CE correspondence lane.
