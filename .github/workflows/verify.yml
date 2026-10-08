@@ -22,6 +22,10 @@ jobs:
         run: python scripts/conjecture_lab_nine_bit_address_probe.py
       - name: Check conjecture lab controlled command backsolve
         run: python scripts/conjecture_lab_nine_action_subsequence.py
+      - name: Check conjecture lab raw addresses and balanced selectors
+        run: python scripts/conjecture_lab_raw_bounds_balanced_tail.py
+      - name: Check conjecture lab historic printer substring control
+        run: python scripts/conjecture_lab_printer_substring_control.py
       - name: Verify canonical closed-corpus machine
         run: python scripts/verify_machine.py
       - name: Verify independent native-state model
