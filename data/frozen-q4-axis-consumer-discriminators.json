@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "experiment": 435,
+  "experiment": 456,
   "observation_snapshot": "84 physical records / 66 unique residues",
   "frozen_at_date": "2026-10-08",
   "description": "Mutually exclusive predictions from Cube 4 native-depth selector and a globally relabelled quarter-selector rival, both using the same selected-output one-dash-per-physical-column condition.",
