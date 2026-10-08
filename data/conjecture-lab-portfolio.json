@@ -148,6 +148,29 @@
         "controls_at_least_as_close": 2705,
         "fraction_at_least_as_close": 0.67625,
         "scope": "27-symbol contiguous windows of published PC 32 and Xbox 36 rows, plus four bit direction/polarity variants, not all possible printer-derived consumers"
+      },
+      "progression_discovery": {
+        "code": "scripts/conjecture_lab_progression_null.py",
+        "report": "docs/conjecture-lab/2026-10-08-progression-analysis.md",
+        "candidate_numbers": [
+          189,
+          252,
+          315
+        ],
+        "step": 63,
+        "all_allowed_selected_surface_values_mod7": 0,
+        "exact_independent_triple_reference": {
+          "denominator": 19683,
+          "AP": 191,
+          "nonzero_AP": 164,
+          "plus63_AP": 8
+        },
+        "grammar_matched_reference": {
+          "A_B_S_masters": 12,
+          "AP_masters": 4,
+          "balanced_AP_masters": 2
+        },
+        "status": "post-selected curiosity, NOT p-value or source-independent clue"
       }
     },
     {
