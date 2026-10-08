@@ -64,15 +64,15 @@ def run(before: Path | None = None, after: Path | None = None,
     if transcript is not None:
         source = transcript.read_bytes()
         sha = hashlib.sha1(
-            f"blob {len(source)}\${x}".encode("ascii") + source
+            f"blob {len(source)}\0".encode("ascii") + source
         ).hexdigest()
         assert sha == direct["blob_sha"], (sha, direct["blob_sha"])
         text = source.decode("utf-8")
         for event in direct["directly_recovered_events"]:
-            marker = f"[{event['export_timestamp']}] {event['author']}\${x}"
+            marker = f"[{event['export_timestamp']}] {event['author']}\n"
             start = text.find(marker)
             assert start >= 0, event
-            stop = text.find("\${x}\${x}\${x}[", start)
+            stop = text.find("\n\n\n[", start)
             block = text[start:stop if stop >= 0 else len(text)]
             assert event["content_contains"] in block, event
 
