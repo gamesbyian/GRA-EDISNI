@@ -26,6 +26,8 @@ jobs:
         run: python scripts/conjecture_lab_raw_bounds_balanced_tail.py
       - name: Check conjecture lab historic printer substring control
         run: python scripts/conjecture_lab_printer_substring_control.py
+      - name: Check conjecture lab progression and matched null
+        run: python scripts/conjecture_lab_progression_null.py
       - name: Verify canonical closed-corpus machine
         run: python scripts/verify_machine.py
       - name: Verify independent native-state model
