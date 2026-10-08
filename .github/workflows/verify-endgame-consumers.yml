@@ -1,0 +1,18 @@
+name: Verify destination-first consumer audits
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check frozen physical carrier bounds
+        run: python scripts/audit_endgame_channel_budget.py --check-2026-10-08 > /dev/null
+      - name: Check SAF data field and bit-capacity rejection
+        run: python scripts/audit_terminal41_saf_ascii_island.py > /dev/null

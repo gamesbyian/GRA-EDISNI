@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "primary_source": "twinysam/INSIDE-ARG",
+  "primary_path": "terminal41.link/dat/saf_dat_col.html",
+  "primary_blob_sha": "349b818fce618ef55c404bedfb602b1d03f29a48",
+  "provenance_note": "Original text recovered via GitHub blob connector; Unicode decode renders corrupted binary areas and does not recover exact original bytes. ASCII island is directly preserved in decoded text.",
+  "source_text_length_utf16_js": 1265970,
+  "source_long_alphanumeric_plus_runs_min_length_35": 1,
+  "source_long_run_start_index_utf16_js": 4736,
+  "source_run": "gvylmveqwr83409q3i3qpwslie+38546uy754j9j6tuk5fi34+2d34243544+56+567+6+41212",
+  "source_run_character_length": 75,
+  "source_run_count": 1,
+  "fields": [
+    {
+      "index": 0,
+      "value": "gvylmveqwr83409q3i3qpwslie",
+      "length": 26
+    },
+    {
+      "index": 1,
+      "value": "38546uy754j9j6tuk5fi34",
+      "length": 22
+    },
+    {
+      "index": 2,
+      "value": "2d34243544",
+      "length": 10
+    },
+    {
+      "index": 3,
+      "value": "56",
+      "length": 2
+    },
+    {
+      "index": 4,
+      "value": "567",
+      "length": 3
+    },
+    {
+      "index": 5,
+      "value": "6",
+      "length": 1
+    },
+    {
+      "index": 6,
+      "value": "41212",
+      "length": 5
+    }
+  ],
+  "plus_separators": 6,
+  "viewgate_placeholder_width_each": 22,
+  "viewgate_pages": [
+    "terminal41.link/comms_main_viewgate.html",
+    "terminal41.link/comms_main_viewgate_002.html"
+  ],
+  "viewgate_html_input_controls": 0,
+  "independent_archive": "gamesbyian/GRA-EDISNI/archive/external/bigdusty/data/block_descriptions_full.json",
+  "archive_block": "block_116",
+  "archive_transcription": "gvylmveqwr83409q3i3qpwsl1e+38546uy754j9j6tuk5fi34+2d34243544+56+567+6+41212",
+  "archive_diff": [
+    {
+      "offset": 24,
+      "original": "i",
+      "archive": "1"
+    }
+  ],
+  "archive_incorrect_summary": "22-char token followed by concatenated gibberish string",
+  "correct_sequence": "26-character field then + delimiter then 22-character field, followed by five other + delimited fields",
+  "last_field": "41212",
+  "cover_clock": "12:12",
+  "clock_connection": "unverified superficial possible link, not independent proof",
+  "upshot": "Explicit field separators and one archival i/1 transcription error are reliable; no meaning/authentication endpoint yet shown.",
+  "direct_unsigned_base36_test": {
+    "candidate_22_character_token": "38546uy754j9j6tuk5fi34",
+    "parsed_base36_integer": "1552529186059802721063562269367888",
+    "base36_integer_bit_length": 111,
+    "uncompressed_h108_foreground_ceiling_bits_given_exact_binary_split": 108,
+    "compatible": false,
+    "scope": "direct unsigned integer base36 conversion with no added bits; not a test of checksums, keyed hashing, encryption, expansion, external side information or unknown foreground alphabet extensions"
+  }
+}

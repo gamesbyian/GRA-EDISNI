@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "origin": "Independent observation-only JS execution over data/observations.csv fetched from latest main; portable Python verifier at scripts/audit_endgame_channel_budget.py",
+  "model_free_or_conditional": {
+    "records": 84,
+    "distinct_residues": 66,
+    "known_primary_1_to_81": 54,
+    "known_tail_82_to_108": 12,
+    "missing_total": 42,
+    "missing_primary": 27,
+    "missing_tail": 15,
+    "same_residue_groups_with_repeats": 16,
+    "agreeing_same_residue_pairs": 20,
+    "disagreeing_pairs": 0,
+    "observed_symbols": {
+      "/": 48,
+      "-": 28,
+      ".": 8
+    }
+  },
+  "sector_alphabet_assumption": "1..81 slash/dash only; 82..108 slash/dot only; inferred from existing observed split, not separately established for every missing position",
+  "foreground_upper_bits_given_sector_alphabets": 108,
+  "remaining_unknown_upper_bits_given_sector_alphabets": 42,
+  "raw_monochrome_128x128_bits": 16384,
+  "raw_image_to_foreground_capacity_ratio": 151.7037037037037,
+  "ce_terminal41_path": "dat/534brn9653f9j8mmd",
+  "nine_decimal_digits": "534965398",
+  "digit_unique_count": 6,
+  "digit_repeats": [
+    "3",
+    "5",
+    "9"
+  ],
+  "digits_absent_from_1_to_9": [
+    "1",
+    "2",
+    "7"
+  ],
+  "lever_symbol_map": {
+    ".": "L",
+    "-": "R",
+    "/": "U"
+  },
+  "known_bunker_password": "UURLRRRUUURLLL",
+  "valid_cyclic_starts_forward": [],
+  "valid_cyclic_starts_reverse": [],
+  "disclosure": "The negative lever test concerns the full known bunker code as contiguous substring under this specific legend. It does not test any independently selected subset, new code, hidden game consumer, additional background data, or orientation cue."
+}

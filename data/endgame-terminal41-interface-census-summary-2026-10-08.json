@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-08",
+  "source": "twinysam/INSIDE-ARG master mirrored in GRA-EDISNI data/terminal41-source-tree.json",
+  "source_snapshot": "2026-09-29",
+  "source_manifest_entries": 74,
+  "examined_small_text_files": 72,
+  "successful_reads": 72,
+  "unread_large_files": [
+    "terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+    "terminal41.link/dat/saf_dat_col.html"
+  ],
+  "counts": {
+    "html_form": 0,
+    "html_input": 0,
+    "html_select": 0,
+    "html_button": 0,
+    "html_script": 1,
+    "post_or_method_post_literals": 0,
+    "meta_refresh": 42,
+    "printed_input_placeholder": 2,
+    "anchor_elements": 1
+  },
+  "pseudo_input_pages": [
+    "terminal41.link/comms_main_viewgate.html",
+    "terminal41.link/comms_main_viewgate_002.html"
+  ],
+  "printed_underscore_count_each": 22,
+  "original_frontend_token_candidates_not_authenticated": true,
+  "sole_script_path": "terminal41.link/sys/terminateall.html",
+  "sole_script_function": "Google Analytics gtag UA-154558593-1; no puzzle input handler",
+  "no_actual_form_in_surviving_static_mirror": true,
+  "interpretation_limits": "A static archival mirror cannot prove absence of server-side interactions or form HTML in other historical revisions. The printed 22-position placeholder is a real observation, but maxlength=22 HTML form is unsupported by these captured files.",
+  "evidence_batches": [
+    "data/endgame-interface-census-batch-00.json",
+    "data/endgame-interface-census-batch-01.json",
+    "data/endgame-interface-census-batch-02.json",
+    "data/endgame-interface-census-batch-03.json"
+  ],
+  "extension_2026_10_08": {
+    "additional_examined_file": "terminal41.link/dat/saf_dat_col.html",
+    "original_blob_sha": "349b818fce618ef55c404bedfb602b1d03f29a48",
+    "source_git_blob_size_bytes": 1986163,
+    "received_text_code_units": 1265970,
+    "inspected_as": "Decoded Git blob via connector; ASCII search and literal HTML control scan. Exact uncorrupted binary bytes not independently recovered.",
+    "additional_controls": {
+      "form": 0,
+      "input": 0,
+      "select": 0,
+      "button": 0,
+      "script": 0,
+      "post": 0
+    },
+    "total_inspected_static_text_files": 73,
+    "remaining_large_binary_asset": "terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+    "total_known_actual_html_forms_in_73": 0,
+    "notes": "This is absence of client-side forms in preserved static captures only; original server backend and older revisions may differ.",
+    "extra_source": "data/endgame-saf-dat-island-2026-10-08.json"
+  }
+}
