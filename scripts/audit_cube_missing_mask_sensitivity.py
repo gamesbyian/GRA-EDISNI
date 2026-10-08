@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 434: conditional missing-mask sensitivity of cross-cube matches.
+"""Experiment 455: conditional missing-mask sensitivity of cross-cube matches.
 
 Enumerates every 3-of-9 primary-body completion, and the subset where
 each 3x3 physical column has one minority mark. The tail (Q4) is not
