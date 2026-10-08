@@ -36,5 +36,25 @@
     "data/endgame-interface-census-batch-01.json",
     "data/endgame-interface-census-batch-02.json",
     "data/endgame-interface-census-batch-03.json"
-  ]
+  ],
+  "extension_2026_10_08": {
+    "additional_examined_file": "terminal41.link/dat/saf_dat_col.html",
+    "original_blob_sha": "349b818fce618ef55c404bedfb602b1d03f29a48",
+    "source_git_blob_size_bytes": 1986163,
+    "received_text_code_units": 1265970,
+    "inspected_as": "Decoded Git blob via connector; ASCII search and literal HTML control scan. Exact uncorrupted binary bytes not independently recovered.",
+    "additional_controls": {
+      "form": 0,
+      "input": 0,
+      "select": 0,
+      "button": 0,
+      "script": 0,
+      "post": 0
+    },
+    "total_inspected_static_text_files": 73,
+    "remaining_large_binary_asset": "terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+    "total_known_actual_html_forms_in_73": 0,
+    "notes": "This is absence of client-side forms in preserved static captures only; original server backend and older revisions may differ.",
+    "extra_source": "data/endgame-saf-dat-island-2026-10-08.json"
+  }
 }
