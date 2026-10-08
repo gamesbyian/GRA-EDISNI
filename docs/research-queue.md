@@ -903,11 +903,11 @@ Frozen as `data/frozen-q4-axis-consumer-discriminators.json`; do not overwrite p
 
 ## Experiment 476 — source-native receiving-artifact evidence gate (8 Oct 2026)
 
-The backward-chain study of **twelve original game / CE / Terminal41
+The backward-chain study of **fifteen original game / CE / Terminal41
 artifact affordances** is in
 `docs/experiment-476-source-native-consumer-affordances.md` and
 `data/experiment-476-source-native-consumer-affordances.json`.
-It distinguishes a real, contemporaneously documented **2019 original
+The official iam8bit listing also independently confirms an art-card set, foldout poster, and spot-varnished box; detailed native print surfaces remain unexamined, with no source-fixed sticker alignment. It distinguishes a real, contemporaneously documented **2019 original
 printer-phrase → developer website subscription field → PDF-image**
 receiver (Xbox Wire, 3 Jan 2019) and a functional original
 three-direction bunker lever from the *unverified* proposition that
