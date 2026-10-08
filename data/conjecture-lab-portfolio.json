@@ -374,6 +374,151 @@
       "next_action": "Recover six historically attested exact RGB colour selectors and reproduce full gate98 shutdown URL without any sticker data; keep physically reached CE 534brn page as primary foreground destination."
     },
     {
+      "id": "CL-06",
+      "version": 1,
+      "title": "Reconstruction of original June 2019 gate-98 multi-offset exact RGB layers",
+      "status": "historical_positive_control_five_exact_layers_of_six_or_more;no_CE_bridge",
+      "research_mode": "DEVELOP retrospective with original 2019 answer-image available; do not score as out-of-sample historical or sticker discovery",
+      "independent_date": "2019-06-03 historic Game Detectives witness before December 2019 CE release",
+      "source_kind": "historical source pixel positive control",
+      "primary_original_png_sha256": "db67f13634004b8f3914aae6e06bd40f01e4f71531d689603d0f1f3be2a99ded",
+      "independent_witness": {
+        "uri": "https://wiki.gamedetectives.net/w/File:Inside_activate_shutdown.png",
+        "sha256": "ae685557122be8562028d8a1c4384c954a760bc4e42e6877c29391d810892d12",
+        "dimensions": [
+          916,
+          913
+        ],
+        "white_pixel_count": 2577
+      },
+      "five_layers": [
+        {
+          "rgb": "030101",
+          "xy": [
+            16,
+            36
+          ],
+          "mask_sites": 309,
+          "new_sites": 309
+        },
+        {
+          "rgb": "010401",
+          "xy": [
+            1045,
+            57
+          ],
+          "mask_sites": 463,
+          "new_sites": 458
+        },
+        {
+          "rgb": "030303",
+          "xy": [
+            14,
+            851
+          ],
+          "mask_sites": 431,
+          "new_sites": 420
+        },
+        {
+          "rgb": "050105",
+          "xy": [
+            18,
+            1638
+          ],
+          "mask_sites": 324,
+          "new_sites": 324
+        },
+        {
+          "rgb": "030300",
+          "xy": [
+            1121,
+            787
+          ],
+          "mask_sites": 590,
+          "new_sites": 559
+        }
+      ],
+      "result": {
+        "historic_white_sites_reconstructed": 2070,
+        "historic_white_sites_total": 2577,
+        "precision": 1,
+        "coverage": 0.8032596041909197,
+        "false_positives": 0,
+        "unexplained": 507,
+        "individually_unique_precise_offsets_in_tested_minimum50_set": true
+      },
+      "failed_sixth": {
+        "rgb": "020206",
+        "tested_offset": [
+          1123,
+          1755
+        ],
+        "hits": 251,
+        "source_marks": 560,
+        "false_positive": 309,
+        "direct_complete_source_crop_rejected": true
+      },
+      "source_phase_only_marker_palette": [
+        [
+          "000000",
+          [
+            4,
+            12
+          ]
+        ],
+        [
+          "030101",
+          [
+            4,
+            12
+          ]
+        ],
+        [
+          "010401",
+          [
+            9,
+            1
+          ]
+        ],
+        [
+          "030300",
+          [
+            5,
+            11
+          ]
+        ],
+        [
+          "030303",
+          [
+            2,
+            11
+          ]
+        ],
+        [
+          "020206",
+          [
+            4,
+            1
+          ]
+        ],
+        [
+          "050105",
+          [
+            3,
+            12
+          ]
+        ]
+      ],
+      "source_registration_status": "Five crop origins specifically selected with target image in view; source color phase signatures independent but lack full native crop coordinate grammar",
+      "ce_sticker_inference": "None. 2019 historical multi-source colour filtering and registration is a confirmed operation analogy; no authored sticker-to-consumer link.",
+      "artifacts": [
+        "docs/conjecture-lab/2026-10-08-gate98-historic-multi-offset-reconstruction.md",
+        "data/conjecture-lab-gate98-historical-layer-control-2026-10-08.json",
+        "scripts/audit_gate98_historical_layer_reconstruction.py"
+      ],
+      "next_source_gate": "Sixth historical 507-site layer or original 2018 hex legend; recover source-native cross-panel crop address rule before porting technique to CE; preserve exact-shape negatives and pre-CE chronology."
+    },
+    {
       "id": "CONTROL-0",
       "version": 1,
       "title": "Foreground has no further endgame",
@@ -392,5 +537,5 @@
     "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
     "A frozen exact failure refutes that implementation only"
   ],
-  "latest_update": "2026-10-08-cl05-recovered-historical-planet-phase"
+  "latest_update": "2026-10-08-cl06-historical-gate98-five-layer-precise-reconstruction"
 }
