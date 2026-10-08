@@ -136,7 +136,7 @@ def balance_probe(observed):
         if state.p == 0 and state.G == 0
     }
     assert len(exact_branch) == 2
-    assert {master for master, _ in selected_balanced} == exact_branch
+    assert {"".join(master) for master, _ in selected_balanced} == exact_branch
     matching_states = [
         "".join(map(str, (state.X, state.Y, state.Z, state.G)))
         for state, master in live_incumbent if master in exact_branch
