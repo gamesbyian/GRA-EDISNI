@@ -90,4 +90,6 @@ Run: `python scripts/audit_cube_missing_mask_sensitivity.py`.
 The script enumerates all primary bodies in each family, rechecks
 observed-only bounds by 27 local triads, and asserts the class-E
 result. Counts were independently enumerated using the current CSV
-before authoring the script; Python checkout execution is pending.
+before authoring the script and reproduced by a separate local Python
+verifier. Direct execution of this committed script in a repository
+checkout remains pending.
