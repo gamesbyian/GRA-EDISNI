@@ -67,7 +67,7 @@ The available republished JPEG has no proven native coordinate axes. Counts of r
 
 ## Binary preservation and limitations
 
-- The original **BoardText DDS already lives in the public community archive**, pinned above by Git blob hash; its bytes are not duplicated here. Its exact decoding instructions and structural constraints **are committed**.
+- The original **BoardText DDS** is now **byte-for-byte preserved in this research repository** at `archive/external/inside-2016-game-assets/BoardText_13309-b0922098d7c08dbe.dds`, retaining the upstream Git blob SHA `d8e19793cb3b09764728fb2fc3cf4aaa4e1d32e8`. The provenance and copyright limitations are in that directory's README; decoding instructions are committed.
 - The original **SecretMap DDS has not been downloaded or recovered as bytes**. The [2018 derivative image](https://image.9game.cn/2018/3/2/19669991.jpg) was opened and visually examined through public web retrieval; a direct binary download to the local container failed. It is therefore source-linked, **not** declared preserved as a Git blob.
 - The earlier cover-analysis ZIP and derived visuals are a separate binary retention matter, transparently documented at `archive/external/cover-source-audit/README.md` with exact integrity checks.
 
