@@ -1,8 +1,8 @@
 # Hypothesis-by-Test Evidence and Gap Map
 
-**Revision 2: 2026-10-08.** Curated **34 claim-level evaluations** (not 34 independent tests), against **10 decoder operation families**, with BASE reserved for shared carrier/background or historical context. Research protocol and appraisal: [evidence-map method](evidence-map-method.md). Inspect each claim's source, corpus, dependence and limitation in the [evidence register](evidence-register-view.md), with [machine-readable CSV](../data/sticker-evidence-register.csv). Full historical IDs remain accessible via the [title index](experiment-title-index.md).
+**Revision 2: 2026-10-08.** Curated **35 claim-level evaluations** (not 35 independent tests), against **10 decoder operation families**, with BASE reserved for shared carrier/background or historical context. Research protocol and appraisal: [evidence-map method](evidence-map-method.md). Inspect each claim's source, corpus, dependence and limitation in the [evidence register](evidence-register-view.md), with [machine-readable CSV](../data/sticker-evidence-register.csv). Full historical IDs remain accessible via the [title index](experiment-title-index.md).
 
-**This is an evidence *availability* map, not a scoreboard.** A cell says which focused evaluation exists; it does not assign a probability that its family is true. An empty cell means no qualifying evaluation **in this curated pilot**, not proof that nobody tested anything in the 443-entry historical ledger. Merged reports are available, but their model assumptions and retrospective selection remain provisional interpretations. The output of a cipher may be a command, image, address, URL, credential or other artifact; no format is presumed.
+**This is an evidence *availability* map, not a scoreboard.** A cell says which focused evaluation exists; it does not assign a probability that its family is true. An empty cell means no qualifying evaluation **in this curated pilot**, not proof that nobody tested anything in the 444-entry historical ledger. Merged reports are available, but their model assumptions and retrospective selection remain provisional interpretations. The output of a cipher may be a command, image, address, URL, credential or other artifact; no format is presumed.
 
 ## Ontology: separate things that should never compete as equivalent hypotheses
 
@@ -45,6 +45,8 @@ flowchart LR
 
 **Context outside the decoder contest:** [R025](evidence-register-view.md#r025) records an Xbox positional-filter precedent without asserting sticker transfer; [R031](evidence-register-view.md#r031) records bounded 23/endpoint arithmetic without print-run evidence; [R032](evidence-register-view.md#r032) records the endgame destination portfolio without validating a consumer. These belong in the background and output facets, not additional decoder rows.
 
+**New source-provenance qualification:** [R035](evidence-register-view.md#r035) / [Experiment 460](experiment-460-background-url-discovery-provenance.md) establishes that the nine-piece *background* URL was **partially read before** the exact `dat/534brn...` path was reportedly found by inspecting a site index on 21 April 2020. The background-to-page relationship is a credible historical match but is **not a documented 21/21 independently blind decode**; its recognition does not fix any foreground-to-page consumer. This illustrates exactly why “external confirmation”, “independent derivation”, and “authorial operation cue” need distinct edges in this matrix.
+
 ## Map B: high-value tests that genuinely distinguish alternatives
 
 | Test/comparison | Actual observation | Degree of discrimination | Residual uncertainty |
@@ -68,7 +70,7 @@ flowchart LR
 | **G3. Test exists but is nondiscriminating** | XOR surface, shape re-encodings, alternate display layouts | Seek a decoder with an externally specified consumption rule, not more pretty intermediate surfaces | Reader must be fixed before inspecting candidate outputs |
 | **G4. Missing registration or physical cue** | 534brn orientation, overlay layer, 3D cube mapping, Pigpen book | Recover contemporaneous source establishing exact parameters | “Playdead did something similar” licenses operation class, not parameters |
 | **G5. Missing endgame validation** | All ten mechanism families | Find an independently checkable next interaction / password / URL / executable operation | Explicit success criterion and reproducible end-to-end chain |
-| **G6. Incomplete evidence appraisal** | Hundreds of older ledger titles not in 34-record curated register | Promote material experiments after reading original report+script, no forced one-to-one title tagging | Report coverage denominator and review status separately |
+| **G6. Incomplete evidence appraisal** | Hundreds of older ledger titles not in 35-record curated register | Promote material experiments after reading original report+script, no forced one-to-one title tagging | Report coverage denominator and review status separately |
 | **G7. Already bounded negatives** | Direct Morse/Trifid, literal Pigpen, generic continuity sorting | Reopen only with a precise independent cue or newly relevant data | Old negative scoped to its fixed parameter family |
 
 ## Decision rules for the next research pass
@@ -79,4 +81,4 @@ flowchart LR
 4. **Maintain one dependency cluster per source selection episode.** Ten experiments on the same residuals are ten analyses, not ten independent physical replications.
 5. **Refuse semantic fishing.** No image similarity, letter resemblance, 23 arithmetic, or terminal-byte analogy becomes a candidate winner without an independently justified reader and a frozen, falsifiable next action.
 
-The comprehensive historical title index is still available, but **the curated register does not assert that all 443 original full reports were audited**. Method and update rules: [`docs/evidence-map-method.md`](evidence-map-method.md).
+The comprehensive historical title index is still available, but **the curated register does not assert that all 444 original full reports were audited**. Method and update rules: [`docs/evidence-map-method.md`](evidence-map-method.md).
