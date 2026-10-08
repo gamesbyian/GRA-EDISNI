@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 433: cube-to-cube symbol transfer under residue/cube holdouts.
+"""Experiment 454: cube-to-cube symbol transfer under residue/cube holdouts.
 
 FROZEN OPERATION MENU: identity; reverse/rotate depth; 180deg XY rotation;
 XY horizontal reflection; XY cyclic-column control. Q4 is excluded from
