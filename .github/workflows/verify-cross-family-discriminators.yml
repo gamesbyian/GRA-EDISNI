@@ -1,0 +1,21 @@
+name: Verify cross-family prospective discriminator atlas
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  frozen-atlas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recompute frozen common-mask model discrimination
+        run: python scripts/audit_cross_family_discriminator_atlas.py --out /tmp/experiment-458-atlas.json --summary
+      - name: Preserve full common-mask analysis as CI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-458-prospective-discriminator-atlas
+          path: /tmp/experiment-458-atlas.json
