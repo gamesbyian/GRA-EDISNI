@@ -2,6 +2,14 @@
 
 _Current queue begins after Experiment 240._
 
+## October 8, 2026 decision frontier after Experiment 458
+
+**Reconciliation completed:** #140 (424–433), #142 (448–449), #143 (450–457), and destination-first #144 have merged; #141 was closed as a duplicate with unique detail retained. Old colliding experiment records are quarantined under `archive/recovered-ccr-2026-10-01/` (PR #149). See `docs/experiment-ledger.md` and `docs/experiment-concept-map.md`.
+
+Experiment 458 freezes identical 84-record/66-residue physical input for seven explicitly dependent model projections on **all 42 unobserved residues**. Structural forced contradictions: depth/recursive vs quarter at **50,54,93**; quarter vs selected row at **93,102**. Another eight conflict sites are driven by weak cross-cube copying, which underperformed trivial majorities in Experiment 454. The atlas is a **pre-observation falsification register**, not evidence that one model is intended or an excuse to claim retrospective test significance. Full report: `docs/experiment-458-common-mask-prospective-discrimination.md`.
+
+**Next substantive research priority:** independently identify an external input surface / consumer and its **exact transform parameters** in surviving original game, cover, Terminal41 or platform-specific evidence. The old `534brn` E2 pair failed the fresh physical 427-dot check; generic text/bitmap searches remain quarantined. A new source-cued operation should be compared on the current fixed mask and against explicit baseline/negative controls, with existing frozen predictions preserved. New physical stickers would be welcome but are not a prerequisite for continued work.
+
 ## Operating directive
 
 Assume no new sticker will ever surface.
