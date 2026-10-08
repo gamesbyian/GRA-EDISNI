@@ -296,6 +296,13 @@ def main():
     one = leave_one_residue_out(obs)
     folds = leave_one_cube_out(obs)
     forecast, conflicts = prospective_disagreements(obs)
+    frozen = json.loads((ROOT / "data" / "frozen-cube-transfer-discriminators.json")
+                        .read_text(encoding="utf8"))
+    frozen_rows = [(r["residue"], r["copy"], r["column"])
+                   for r in frozen["disagreement_predictions"]]
+    computed_rows = [(r["residue"], r["copy_prediction"],
+                      r["column_grammar_symbols"]) for r in conflicts]
+    assert frozen_rows == computed_rows, "Frozen prospective predictions drifted"
     null = exact_cube_letter_copy_null(obs)
     print(json.dumps({
         "source_records": 84,
