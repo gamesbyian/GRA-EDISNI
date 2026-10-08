@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 435: fair depth-axis vs quarter-axis Q4 selector consumers.
+"""Experiment 456: fair depth-axis vs quarter-axis Q4 selector consumers.
 
 The physical sticker data supplies Q=0,1,2 primary quarters, d=0,1,2
 depths and j=A-I foreground positions. Tail slash position S(j) has native
