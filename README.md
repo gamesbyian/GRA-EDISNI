@@ -34,6 +34,7 @@ python scripts/verify_machine.py
 
 For a conceptual view of what has been tried and what would discriminate the rival decoders:
 
+- [Experiment 458 prospective discriminator atlas](docs/experiment-458-common-mask-prospective-discrimination.md): identical evidence mask across seven dependent candidate projections, with exact disagreement residues and frozen predictions.
 - [Experiment concept map](docs/experiment-concept-map.md): carrier → decoding mechanism → downstream consumer, history and critical distinctions.
 - [Hypothesis-by-test coverage matrix](docs/hypothesis-test-coverage-matrix.md): operation families, comparison designs, negative results and specific missing evidence.
 - [Evidence record cards](docs/evidence-register-view.md) and [structured CSV](data/sticker-evidence-register.csv): each curated test's source, dependence, corpus vintage, result and limitation.
@@ -44,11 +45,11 @@ The matrix is a curated decision map, **not** a score of theory truth, a systema
 
 ## Operating posture
 
-Assume no new sticker will ever surface. The current 65 observed H108 residues plus the reconstructed symbolic family are the critical path.
+Assume no new sticker will ever surface. The current 66 observed H108 residues plus the reconstructed symbolic family are the critical path.
 
-Structural prediction comes before semantics. Under the preferred exact-POS3 grammar there are 14 physical state masters; Experiment 280 shows the same transducer has four transition-equivalent primary completion gauges (56 masters total) if that physical grammar is weakened. Do not select a state or gauge because it produces an attractive word, image, or number.
+Structural prediction comes before semantics. The historical preferred grammar had 14 physical state masters before sticker 427 was confirmed; Experiment 418 leaves **10** live U5 masters on the current 84-record/66-residue observation snapshot. Experiment 280 also documents alternative transition-equivalent primary gauges under weakened physical grammar. Do not select a state or gauge because it produces an attractive word, image, or number.
 
-The current mechanism is a typed registered selector/routing/canonicalization machine. The terminal `100` is mechanically established; downstream plaintext is not. Any external-consumer search must follow `docs/external-consumer-audit.md`: the external artifact supplies the cue first, rather than treating `100` or the 14 hidden states as generic keys.
+The current mechanism is a typed registered selector/routing/canonicalization machine. The terminal `100` is mechanically established; downstream plaintext is not. Any external-consumer search must follow `docs/external-consumer-audit.md`: the external artifact supplies the cue first, rather than treating `100` or the surviving conditional hidden states as generic keys.
 
 ## Canonical responsibility split
 
