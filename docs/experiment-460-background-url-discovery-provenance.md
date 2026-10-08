@@ -58,6 +58,8 @@ We can nevertheless distinguish three statements that should **not** collapse in
 
 **Discovery-channel exposure can turn a partially readable code into an apparently complete decode without an independent blind reading of every character.** The original CE background is an historical positive case for *answer-assisted recognition*. Future proposed sticker results should declare whether the output was fixed **before** opening/searching the candidate source. Otherwise a discovered page/code/URL may have guided symbol interpretations, orientation, OCR, or registration.
 
+There is **independent firsthand historical separation of the foreground and background puzzles**: in the same original 29 April 2020 conversation, a solver explicitly distinguishes the now-solved nine-piece artwork from the still-uninterpreted **three foreground symbols** and what they might unlock. This is a contemporary boundary, not a retrospective distinction invented by our current research. It strongly cautions against letting the known background→URL association automatically dictate the foreground's purpose.
+
 This is especially important for the current open bridges:
 
 - **`534brn` as a foreground consumer:** the background identifies that page, but its discovery does **not** license using the nine URL digits, JPEG damage, 128 footer, 22-character SAF field or another observed feature as a sticker key. Those still require an independently provided mapping.
