@@ -52,9 +52,10 @@ conditional null, the observed compatibility is unexceptional.
   compatibility. It is wrong to count eight orientations as independent
   successful tests.
 - The depth stack code remains a legitimate *addressing representation*.
-  Existing reset-era Experiment 317 established a 36-completion
-  one-slash-tail family from observation only, but its compatibility
-  should not be counted twice as fresh evidence for a cube.
+  Existing reset-era Experiment 317 originally established a 36-completion
+  one-slash-tail family from an earlier observation snapshot; the current
+  corpus has only 18 completions (Experiment 425). This compatibility
+  must not be counted twice as fresh evidence for a cube.
 - Compare a *frozen* depth-index prediction family to genuinely withheld
   or future physical observations, and separately challenge depth-index
   consumption against simple row/chunk and column/rail rivals (Experiment
