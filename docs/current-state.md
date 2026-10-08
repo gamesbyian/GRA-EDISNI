@@ -1,5 +1,14 @@
 # Current Research State
 
+## October 8, 2026 source-first receiving-artifact frontier (Experiments 476, 478–481)
+
+The currently merged Experiment 476 and Experiments 478–479 separately distinguish a confirmed original printer website intake from preserved Terminal41 static pages, reject literal Xbox three-row reuse (minimum 12/9/7 physical mismatches even after reversing rows), and reject direct original bunker-password replay under source-native 12×9 class-word ordering. The sticker foreground remains **84 physical records / 66 unique residues / 42 unknown residues**, not a uniquely decoded endgame message.
+
+Experiments 480–481 add two **source distinctions**, not a newly found cipher. Original 2018 printer-button witnesses describe POST `/print/prepare.php` and `/print/index.php`; the original copied successful JavaScript inserts response content into `#print-content` and invokes `window.print()`. This can produce a user-facing PDF without a proven server `application/pdf` body; the original successful HTML/HAR/response bytes and a CE-era accepted state remain missing. Official CE and standalone PS4 galleries show the **same nine-sketch poster promotional scene** under the `InsideCE_Lifestyle_00014` filename stem, weakening the claim of CE-exclusive registration by photograph alone. Identical **shipped physical posters**, reverse-side symbols and sticker A–I alignment are unverified.
+
+Continue first with original dated HTML response/request and full poster front/back print provenance, not by guessing foreground passphrases or visual overlays. Details: `docs/experiment-480-original-print-transport.md`, `docs/experiment-481-poster-cross-edition-gallery.md`.
+
+
 _Historical compact model description through Experiment 314, with a current 2026-10-08 experimental frontier supplement below._
 
 ## October 8, 2026 research frontier (Experiments 424–458)
