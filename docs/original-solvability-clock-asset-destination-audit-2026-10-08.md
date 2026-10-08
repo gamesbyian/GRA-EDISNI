@@ -125,3 +125,15 @@ Later reference / disputed:
 - https://www.reddit.com/r/PlaydeadsInside/comments/1sqij1h/nearly_10_years_on_a_codelevel_audit_of_insides/
 
 **No newly decoded sticker plaintext**, claimed recovered lost image, verified Mac stencil, proven billboard CE input, or verified cover time override. None of the clock, image or nine-count coincidences is elevated to a direct sticker mechanism. The original image files in the current container are derived from archived A/B scans, not the full untouched source bytes; they are sufficient to inspect the clock visually, but not to prove a pixel-level transformation.
+
+## G. Cross-platform clock as an **operation**, not merely a time to read
+
+There is one especially bounded rival to “12:12 was an incidental screenshot clock”: the original iOS printer was **hour-of-day indexed**. The demonstrated 24 output symbols spell `MULTIPLEPROBESDISPATCHED`, one glyph for each local hour (00..23); the independent April 2026 decompilation describes `GetCurrentDateTime().AddSeconds(delay).Hour` selecting the message slot. Therefore a creator showing a specific clock on the 2019 cover could, in principle, tell a solver to access a chosen hourly printer string.
+
+The literal simplest preregistered interpretation is **hour 12 -> iOS index 12**, selecting `E` from the 24-character accepted solution. Hour 12 on the clock yields the same iOS string for every minute 12:00..12:59; `:12` does **not** select an additional known subslot in the published hour-indexed mechanic. Reading 12 as a one-based position instead would choose `B`, but the source mechanic fixes zero-based 12 in this context.
+
+This leads to a **specific negative boundary:** the independently licensed hour-index operation yields one known letter/string but no second-stage key, sticker residue, spatial alignment or demonstrated response for `E`. It cannot establish intentional cover->iOS routing. Reopen only if the cover or printer/source *independently* specifies a second selector or consumer. The dynamic clock alone is insufficient.
+
+Public sources: [Game Detectives iOS solution](https://wiki.gamedetectives.net/w/Inside_ARG), [April 2026 code-level hour indexing](https://www.reddit.com/r/PlaydeadsInside/comments/1sqij1h/nearly_10_years_on_a_codelevel_audit_of_insides/), [2016 independent game-clock observation](https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2).
+
+This is a useful counterexample to both extremes: a normal system clock may be entirely decorative, or it may become an indexing cue when another puzzle proves time is a meaningful address. Only the latter's **independently specified interface** permits promotion.
