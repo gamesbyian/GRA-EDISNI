@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "source": "A/B/P captures as vendored, including explicitly non-bit-identical connector A rendition",
+  "technique": "Experiment 337 normalization, 12-byte known anchors, min edit cost (unknown match zero, known mismatch three, insertion/deletion one); vary equal-score tie priority and/or known-anchor length",
+  "cases": {
+    "baseline": {
+      "fills": 238,
+      "conflicts": 10,
+      "offsetsMappedA": 11634,
+      "offsetsMappedP": 4711
+    },
+    "up_tiebreak": {
+      "fills": 265,
+      "conflicts": 10,
+      "offsetsMappedA": 11634,
+      "offsetsMappedP": 4711
+    },
+    "left_tiebreak": {
+      "fills": 265,
+      "conflicts": 31,
+      "offsetsMappedA": 11634,
+      "offsetsMappedP": 4711
+    },
+    "10wide": {
+      "fills": 238,
+      "conflicts": 10,
+      "offsetsMappedA": 11634,
+      "offsetsMappedP": 4711
+    },
+    "14wide": {
+      "fills": 238,
+      "conflicts": 10,
+      "offsetsMappedA": 11634,
+      "offsetsMappedP": 4711
+    }
+  },
+  "baseline_recovered": 238,
+  "stable_across_five": 18,
+  "variable_baseline": 220,
+  "changed_by_case": {
+    "up_tiebreak": 8,
+    "left_tiebreak": 220,
+    "10wide": 0,
+    "14wide": 0
+  },
+  "sample_change_positions_under_left": [
+    7784,
+    7843,
+    7844,
+    7848,
+    7857,
+    7859,
+    7873,
+    7954,
+    7956,
+    7959,
+    7962,
+    7984,
+    8017,
+    8020,
+    8028,
+    8052,
+    8054,
+    8058,
+    8060,
+    8066
+  ],
+  "interpretation": "238 values are conditional on a particular optimal alignment path, NOT proven uniquely determined. 18 are identical under five listed paths, not guaranteed across all optimal alignments. Further byte-level survivor claims require proving unique alignment or independent source evidence.",
+  "new_research_priority": "Compute possible value sets across ALL equally optimal paths within ambiguous gaps if useful; preserve data loss and conflict masks. Prefer independent source captures over JPEG image-fitting.",
+  "independent_validation": "JavaScript from source bytes via GitHub connector reproduced baseline counts and all listed variant counts. Standalone Python reproduction committed, not yet natively run in a checkout."
+}
