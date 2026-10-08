@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "project": "CL-07 complete six-layer gate98 historical positive control",
+  "date": "2026-10-08",
+  "research_mode": "DEVELOP retrospective exact reconstruction using 3 June 2019 known output; NOT out-of-sample proof",
+  "original_source": "https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+  "source_png_sha256": "db67f13634004b8f3914aae6e06bd40f01e4f71531d689603d0f1f3be2a99ded",
+  "source_png_git_blob_sha1": "127d8772912ffc499e5afaffe321d5bab7e920df",
+  "historical_reference": "https://wiki.gamedetectives.net/w/File:Inside_activate_shutdown.png",
+  "historical_reference_upload_time": "2019-06-03T23:02:00",
+  "witness_png_sha256": "ae685557122be8562028d8a1c4384c954a760bc4e42e6877c29391d810892d12",
+  "witness_binary_mask_shape": [
+    913,
+    916
+  ],
+  "witness_binary_mask_sha256": "e730cd817bfdb952dad01d8a55a9684ca4114746e2398fce5418395527a0f5ff",
+  "witness_threshold": "convert PNG to RGB; foreground if red component > 200; zero-based row-major bit packing, MSB first, pad final byte right with zeros",
+  "source_color_layers_total": 6,
+  "target_assisted_offsets": true,
+  "ce_sticker_data_used": false,
+  "historical_color_legend_independently_recovered": false,
+  "layers": [
+    {
+      "rgb_hex": "030101",
+      "registration_xy": [
+        16,
+        36
+      ],
+      "exact_mark_count": 309,
+      "new_mark_count": 309,
+      "overlap_prior": 0
+    },
+    {
+      "rgb_hex": "010401",
+      "registration_xy": [
+        1045,
+        57
+      ],
+      "exact_mark_count": 463,
+      "new_mark_count": 458,
+      "overlap_prior": 5
+    },
+    {
+      "rgb_hex": "030303",
+      "registration_xy": [
+        14,
+        851
+      ],
+      "exact_mark_count": 431,
+      "new_mark_count": 420,
+      "overlap_prior": 11
+    },
+    {
+      "rgb_hex": "050105",
+      "registration_xy": [
+        18,
+        1638
+      ],
+      "exact_mark_count": 324,
+      "new_mark_count": 324,
+      "overlap_prior": 0
+    },
+    {
+      "rgb_hex": "030300",
+      "registration_xy": [
+        1121,
+        787
+      ],
+      "exact_mark_count": 590,
+      "new_mark_count": 559,
+      "overlap_prior": 31
+    },
+    {
+      "rgb_hex": "020206",
+      "registration_xy": [
+        1155,
+        1755
+      ],
+      "exact_mark_count": 560,
+      "new_mark_count": 507,
+      "overlap_prior": 53
+    }
+  ],
+  "previously_rejected_offset_xy": [
+    1123,
+    1755
+  ],
+  "previously_rejected_offset_false_positives": 309,
+  "previously_rejected_offset_true_positives": 251,
+  "final_offset_xy": [
+    1155,
+    1755
+  ],
+  "final_offset_overhang_right_px": 23,
+  "verified_all_560_source_color_pixels_within_original_right_edge": true,
+  "total_source_layer_pixels_counting_duplicates": 2677,
+  "total_white_count": 2577,
+  "source_overlap_duplicates": 100,
+  "false_white": 0,
+  "missing_white": 0,
+  "exact_binary_foreground_equal_2019_witness": true,
+  "source_layout_description": "Six sparse exact-RGB information panels in approximate 2-column x 3-row layout; each panel translated individually onto 916x913 receiving canvas; source coordinates outside physical image are unmarked (sparse projection).",
+  "interpretation_limits": [
+    "Historical witness is consulted to select RGB and translation parameters, not a blinded algorithm.",
+    "Source metadata does not yet independently select exact six offsets; this is full retrospective reconstruction, not original intended key proven.",
+    "Only binarized bright-white 2577-site foreground matches exactly; 1636 near-black (1,1,1) and other dark pixels in historic PNG were not reconstructed.",
+    "Historical source predates physical CE stickers; no sticker-specific foreground-to-artifact consumer is demonstrated.",
+    "The 23px right-edge overhang invalidated previous exhaustive search that required the full 916px crop rectangle to lie within 2048px source.",
+    "Prior #020206 at (1123,1755) mismatch was a crop placement error, NOT disproof of color."
+  ],
+  "followups": [
+    "Try to derive source-native six-placement registration grammar without consulting 2019 witness.",
+    "Separate historical 2019 PNG dark-gray/near-black layer to test seven-colour historic prose against complete image raster, not just its bright mask.",
+    "Assess whether independently identified CE nine background tiles encode analogous offsets for physically linked 534brn image, without fitting foreground glyphs.",
+    "Freeze any hypothesized CE operation prior to testing held-out sticker observations."
+  ]
+}
