@@ -1,0 +1,22 @@
+name: Verify punch and endpoint experiments
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit 1 audit_hollerith_punch_card.py
+        run: python scripts/audit_hollerith_punch_card.py > /dev/null
+      - name: Audit 2 audit_xor_23_provenance.py
+        run: python scripts/audit_xor_23_provenance.py > /dev/null
+      - name: Audit 3 audit_23_endpoint_totals.py
+        run: python scripts/audit_23_endpoint_totals.py > /dev/null
+      - name: Audit 4 audit_621_23x27_geometry.py
+        run: python scripts/audit_621_23x27_geometry.py > /dev/null
