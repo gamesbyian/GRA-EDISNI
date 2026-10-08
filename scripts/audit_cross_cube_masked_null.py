@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 431: masked cross-cube matches under a grammar-aware randomization.
+"""Experiment 452: masked cross-cube matches under a grammar-aware randomization.
 
 This is a *retrospective diagnostic*, not a confirmatory p-value. It conditions
 on which residue positions are physically observed and on their per-frame
