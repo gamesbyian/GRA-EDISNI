@@ -53,7 +53,13 @@ semantic ranking, or external artifact is used.
 | A∩B∩R∩S | **6** |
 
 These are exact enumerations of full-length candidate symbols, including the
-one-slash Q4 family. No probability weights are implied.
+one-slash Q4 family. No probability weights are implied. **Important prior-art
+reconciliation:** Experiment 418 already reports incumbent-stage counts
+U2=324, U3=108, U4=12, U5=10 after sticker 427. Numerically equal counts
+are not novel discoveries; this audit's contribution is transparent
+operation-by-operation cross-family intersections and a much broader
+233,280-candidate parent. Set identity with U2/U3/U4 must not be assumed
+from count equality alone.
 
 The 233,280 count factors as 12,960 complete primary bodies × 18 admissible
 Q4 depth codes. Physical-column B restricts the first factor to 18, hence
