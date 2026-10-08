@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "name": "CL06 authentic historical RGB layer replay",
+  "research_mode": "DEVELOP target-assisted historical reconstruction, never blind sticker validation",
+  "source": {
+    "repository": "twinysam/INSIDE-ARG",
+    "path": "terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+    "png_git_blob_sha1": "127d8772912ffc499e5afaffe321d5bab7e920df",
+    "png_sha256": "db67f13634004b8f3914aae6e06bd40f01e4f71531d689603d0f1f3be2a99ded",
+    "dimensions": [
+      2048,
+      4096
+    ],
+    "byte_count": 19360240
+  },
+  "historic_witness": {
+    "url": "https://wiki.gamedetectives.net/images/0/07/Inside_activate_shutdown.png",
+    "file_page": "https://wiki.gamedetectives.net/w/File:Inside_activate_shutdown.png",
+    "first_uploaded_date": "2019-06-03",
+    "uploader": "Thingy",
+    "dimensions": [
+      916,
+      913
+    ],
+    "width": 916,
+    "height": 913,
+    "png_byte_count": 25539,
+    "png_sha256": "ae685557122be8562028d8a1c4384c954a760bc4e42e6877c29391d810892d12",
+    "white_pixel_threshold": 200,
+    "white_pixel_count": 2577,
+    "black_or_dark_pixel_count": 833731,
+    "purpose": "Dated external visual ground truth, acquired from original wiki file, NOT a source-authored CE sticker prompt",
+    "github_acquisition_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/37860133993"
+  },
+  "historically_documented_method": "Isolate black plus six other exact RGB values and overlay to show original shutdown-protocol path; the 2019 image itself is the comparison target. Historical page does not publish all exact hex values and crop offsets.",
+  "five_registered_layers": [
+    {
+      "rgb": "030101",
+      "crop_start_xy": [
+        16,
+        36
+      ],
+      "source_color_crop_count": 309,
+      "historic_white_overlap": 309,
+      "new_white_pixel_count": 309
+    },
+    {
+      "rgb": "010401",
+      "crop_start_xy": [
+        1045,
+        57
+      ],
+      "source_color_crop_count": 463,
+      "historic_white_overlap": 463,
+      "new_white_pixel_count": 458
+    },
+    {
+      "rgb": "030303",
+      "crop_start_xy": [
+        14,
+        851
+      ],
+      "source_color_crop_count": 431,
+      "historic_white_overlap": 431,
+      "new_white_pixel_count": 420
+    },
+    {
+      "rgb": "050105",
+      "crop_start_xy": [
+        18,
+        1638
+      ],
+      "source_color_crop_count": 324,
+      "historic_white_overlap": 324,
+      "new_white_pixel_count": 324
+    },
+    {
+      "rgb": "030300",
+      "crop_start_xy": [
+        1121,
+        787
+      ],
+      "source_color_crop_count": 590,
+      "historic_white_overlap": 590,
+      "new_white_pixel_count": 559
+    }
+  ],
+  "stage": {
+    "source_pixels_across_five_masks_with_overlap": 2117,
+    "union_exact_white_count": 2070,
+    "union_false_positives": 0,
+    "unexplained_historic_white_count": 507,
+    "historic_white_coverage_fraction": 0.8032596041909197
+  },
+  "phase_source_only_codebook": [
+    {
+      "rgb": "000000",
+      "region_y": [
+        0,
+        1024
+      ],
+      "best_phase_xy": [
+        4,
+        12
+      ],
+      "dominant_phase_pixels": 1591,
+      "region_total_color_pixels": 13840,
+      "runner_up_pixels": 68
+    },
+    {
+      "rgb": "030101",
+      "region_y": [
+        0,
+        1024
+      ],
+      "best_phase_xy": [
+        4,
+        12
+      ],
+      "dominant_phase_pixels": 121,
+      "region_total_color_pixels": 309,
+      "runner_up_pixels": 4
+    },
+    {
+      "rgb": "010401",
+      "region_y": [
+        0,
+        1024
+      ],
+      "best_phase_xy": [
+        9,
+        1
+      ],
+      "dominant_phase_pixels": 325,
+      "region_total_color_pixels": 465,
+      "runner_up_pixels": 4
+    },
+    {
+      "rgb": "030300",
+      "region_y": [
+        1024,
+        2048
+      ],
+      "best_phase_xy": [
+        5,
+        11
+      ],
+      "dominant_phase_pixels": 402,
+      "region_total_color_pixels": 3723,
+      "runner_up_pixels": 26
+    },
+    {
+      "rgb": "030303",
+      "region_y": [
+        1024,
+        2048
+      ],
+      "best_phase_xy": [
+        2,
+        11
+      ],
+      "dominant_phase_pixels": 128,
+      "region_total_color_pixels": 471,
+      "runner_up_pixels": 5
+    },
+    {
+      "rgb": "020206",
+      "region_y": [
+        1024,
+        2048
+      ],
+      "best_phase_xy": [
+        4,
+        1
+      ],
+      "dominant_phase_pixels": 165,
+      "region_total_color_pixels": 165,
+      "runner_up_pixels": 0
+    },
+    {
+      "rgb": "050105",
+      "region_y": [
+        1024,
+        2048
+      ],
+      "best_phase_xy": [
+        3,
+        12
+      ],
+      "dominant_phase_pixels": 133,
+      "region_total_color_pixels": 6213,
+      "runner_up_pixels": 38
+    }
+  ],
+  "candidate_sixth_color_negative_control": {
+    "rgb": "020206",
+    "tested_offset_xy": [
+      1123,
+      1755
+    ],
+    "source_crop_pixel_count": 560,
+    "historic_white_overlap": 251,
+    "source_pixels_absent_from_witness": 309,
+    "interpretation": "Source phase signature is real but this unfiltered crop does NOT reproduce the 2019 historic image; do not call it confirmed sixth layer."
+  },
+  "limits": {
+    "offsets_selected_using_historic_witness": true,
+    "original_historical_method_not_blindly_reproduced": true,
+    "remaining_sixth_nonblack_source_color_confirmed": false,
+    "full_2019_artifact_reproduced": false,
+    "ce_foreground_receiver_verified": false,
+    "sticker_observations_used": false,
+    "dated_image_exists_before_sticker_release": true
+  },
+  "next_action": "Identify remaining 507 white pixels as a source-fixed sixth nonblack layer; do not count the 020206 source tile without its necessary selection operation. Keep this 2018/2019 historical demonstration separate from the 2019 CE foreground."
+}
