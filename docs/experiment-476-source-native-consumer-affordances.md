@@ -54,10 +54,12 @@ provides direct checks unavailable from generic analogy:
 | --- | --- | --- |
 | `comms_main_viewgate.html` and `_002.html` | Exactly **22 printed underscores** on each. No source `form`, `input`, `select` or `maxlength` element. | **No** in preserved source |
 | `sys/printreqstatus_SD.html` | Explicitly indexed `schem[0]` through `schem[3]`: PLANET, LIFE, PROBE, CONDISCON; shows four requirements. | **No fifth ordinary scheme** in preserved status |
-| `dat/534brn9653f9j8mmd/index.html` | Static damaged JFIF/Exif-like content and footer `pe^!02un`, followed by dot lines of lengths **8, 2, 1**, then termination address text. | **No fixed CE repair/key rule** |
+| `dat/534brn9653f9j8mmd/index.html` | Static damaged JFIF/Exif-like content and footer `pe^!02un`, followed by dot lines of lengths **8, 2, 1**, then termination address text. The footer has already been decoded in Experiment 413 as **128 UNSOLVED**, a potentially meaningful image-size clue. | **No fixed sticker-to-JPEG repair/key operation** |
 | `dat/saf_dat_col.html` preserved ASCII island | Seven plus-delimited fields of lengths **26/22/10/2/3/1/5**, one candidate 22-character value. | **No source-labeled field consumer** |
 | Nine shutdown-confirmation pages | Fixed redirects 09→01, already tested in Experiment 408. | **No choice or per-step payload** |
 | CE background's nine-piece printer image | Path `dat/534brn9653f9j8mmd` was already the *output* of background reconstruction, with historical Wayback-index-assisted recognition (Experiment 465). | **No foreground index rule in surviving page** |
+
+The footer's prior **128 UNSOLVED** reading (Experiment 413) is a source-native numerical cue and should not be discarded. Experiments 414, 417 and 423 already constrain but do not uniquely repair the JPEG. No source ties the foreground slash/dash/dot cells to lost entropy bytes or fixes a 128×128 pixel consumer. Consequently the page remains an actionable *damaged-artifact recovery* target, not a verified CE-foreground input.
 
 The negative gate is specifically **available preserved clients/pages**.
 It does not prove historical server handlers, original POST protocols
@@ -171,7 +173,7 @@ python scripts/audit_source_native_consumer_affordances.py
 ```
 
 This standard-library verifier checks the actual two preserved
-Viewgate pages, original four scheme labels, damaged CE page footer,
+Viewgate pages, original four scheme labels, damaged CE page footer (and its already-established 128 UNSOLVED reading),
 original field fixture, current 84/66 sticker census and
 lever-alphabet impossibility. It also checks all artifact registry
 source paths exist and records the historical 2016 source
