@@ -75,6 +75,18 @@ This does not exclude Base32 with padding, keyed transforms,
 hashing, arbitrary encryption or external information; none
 is source-cued here.
 
+## Official CE physical pack-ins not yet ruled out
+
+The [official iam8bit Collector's Edition listing](https://www.iam8bit.com/products/inside-collector-s-edition) independently confirms **three additional physical source surfaces** which must not be silently omitted from a source-first consumer census:
+
+1. An **art card set**, in addition to the separate foreground sticker/background puzzle;
+2. A **foldout poster**, for which unfolded front/back content, dimensions and any symbol registration have not been established here;
+3. A **premium presentation box** incorporating spot varnish and custom foam inlays, but with no independently documented cipher role.
+
+The [separately sold iam8bit INSIDE PS4 physical edition](https://www.iam8bit.com/products/inside-ps4-physical-game) also advertises a foldout poster. Whether that poster is identical to the CE one is **unknown**, and its mere presence in both sets would not independently license a foreground overlay.
+
+These are **verified included objects**, not verified sticker-code readers. No archival source inspected here specifies that the poster/card/box artwork accepts 9, 27 or 108 slash/dash/dot marks. The concrete source gate is original print-ready art or complete, native-scale front/back photographs, preferably with an independent publisher registration cue. Avoid treating routine glossy finish, folds or collector artwork as a code by default.
+
 ## Native-input type audit
 
 Two elementary consequences require **no guesses** about missing
@@ -140,6 +152,7 @@ image after the native orb interpretation has been proposed.
 | Secret-ending lever | **Functionally documented, original code already used** | A distinct handler or external CE-selected command ordering |
 | CE damaged JPEG + background path | **Real static source, media damaged** | Byte-correct uncensored source and a fixed sticker repair, mask or address instruction |
 | CE reversible cover | **Physically real, clue-advertised** | Original print-ready art plus source-defined sticker-to-panel transform |
+| CE art cards, foldout poster, spot-varnished box | **Officially verified physical pack-ins, currently unregistered** | Unmodified front/back scans or original production art, including explicit marks if present; compare standalone poster separately |
 | `SecretMap` | **2016 extracted graphic reported, native bytes missing** | Native DDS/scene transform, fourteen-orb negative control, and actual extra marks |
 | Terminal41 22-place Viewgate | **Static text, not a verified input control** | Original live handler or request/response accepting the purported 22-character field |
 | Seven-field safety-data island | **Exact text content verified** | Source-defined schema and label for the field to be consumed |
