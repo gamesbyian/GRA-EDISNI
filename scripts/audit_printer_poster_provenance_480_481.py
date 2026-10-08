@@ -79,6 +79,11 @@ def audit_poster():
     assert d["poster_front_as_pictured"]["exact_label_mapping"] is False
     assert "Unknown" not in d["comparison_control"]["unavailable_externals"]
     assert len(d["comparison_control"]["unavailable_externals"]) >= 3
+    prior=d["historical_prior_editions"]
+    assert len(prior)==1
+    assert prior[0]["source_class"].startswith("collector catalog")
+    assert prior[0]["reported_release_date"] < "2019-12-01"
+    assert "same poster design" in prior[0]["scope"]
     return {
         "official_product_pages":2,
         "same_promo_scene_source_stem":reuse["source_filename_stem"],
