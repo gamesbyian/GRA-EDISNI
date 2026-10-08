@@ -34,6 +34,7 @@ python scripts/verify_machine.py
 
 For a conceptual view of what has been tried and what would discriminate the rival decoders:
 
+- [Experiment 476 source-native receiver audit](docs/experiment-476-receiver-native-geometry-audit.md): direct Xbox 36-row reuse falsification, pinned Mac printer source, CE nine-sketch poster and ranked external reader gaps.
 - [Experiment 466 background URL codebook control](docs/experiment-466-background-route-lookup-control.md): fixed 74-route retrospective lookup that clarifies how partial sticker artwork can become a uniquely identified destination without blind complete decoding.
 - [Concept-map cross-link leverage audit](docs/concept-map-crosslink-leverage-2026-10-08.md): focus questions, two missing bridges, backward consumer joins, typed negative evidence, decision priorities.
 - [Experiment 458 prospective discriminator atlas](docs/experiment-458-common-mask-prospective-discrimination.md): identical evidence mask across seven dependent candidate projections, with exact disagreement residues and frozen predictions.

@@ -1,0 +1,23 @@
+name: Verify original printer receiver bridges
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  source-receiver:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check 108-to-Xbox literal print rows and frozen macOS marks
+        run: python scripts/audit_native_printer_receiver_476.py --output /tmp/experiment-476.json --summary
+      - name: Preserve complete receiver comparison
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-476-source-native-receiver-control
+          path: /tmp/experiment-476.json

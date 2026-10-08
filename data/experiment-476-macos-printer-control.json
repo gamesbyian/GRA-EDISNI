@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "source": "twinysam/INSIDE-ARG readme.md",
+  "source_git_blob_sha": "97476d5b0a47a51eee05bb4a6cfee657ad922218",
+  "source_snapshot": "master at 2026-10-08",
+  "excerpt_type": "16 macOS printer glyph transcriptions",
+  "glyph_lines": [
+    "---- -------- -- ------------",
+    "------ --•---- ------- --•------ ---- ----•-",
+    "•---- ---- --- ------- -- --- ----------",
+    "-- --- - ----- -- ••-- --- ---- -•-- -----",
+    "- --•-- -- ---•",
+    "---- - -----------•-- ------ ------",
+    "-- - •--- -------- ---- ----- ----- --",
+    "-•-- ------ ------ -•- -•-- ------ ----•--",
+    "----------------- -- •------ ----",
+    "-- -- --------",
+    "---- -••- •--- -----••- --•-------",
+    "--- •----- •--- ----- --- ----•-- --- •---- ----",
+    "------• -- --- -------",
+    "---- -------- -- • ------•---- -•------",
+    "- -------- ---- •- --- -----•- ------- - ----",
+    "--- -----••-- ----- --- ----------"
+  ],
+  "reported_decoded_phrase": "HIBERNATION IN PROGRESS REBOOT PENDING",
+  "community_reference": "https://github.com/twinysam/INSIDE-ARG",
+  "code_level_reassessment": "https://www.reddit.com/r/PlaydeadsInside/comments/1sqij1h/nearly_10_years_on_a_codelevel_audit_of_insides/",
+  "caution": "Periodicity/count alone doesn't validate poem overlay. Retail binary analysis is independent community claim, not reproduced locally."
+}

@@ -1,3 +1,9 @@
+## 8 October 2026: bounded source-native receiver experiment (476)
+
+Experiment 476 tests whether the sticker cycle is *literally* three of Xbox's 36-wide printer rows. Against all 35 unique original full-width Xbox rows, allowing arbitrary known-vs-unknown matches and either full-row direction, the three physical sections have minimum 12/9/7 **unavoidable observed-symbol conflicts**. This refutes a cheap copy/concatenation explanation but not a source-fixed overlay. Pinning the original community macOS printer report independently confirms 16 lines and 34 dot marks, a letter-count match with its claimed phrase rather than a proven letter-by-letter decoding operation. An official CE product photo visibly shows a nine-sketch grid on the physical foldout poster; standalone PS4 buyers also receive a fold-out poster, and exact poster identity / A-I registration still need original-asset control.
+
+**Priority:** establish a source-fixed foreground interaction with the already reached damaged CE `534brn` page, or obtain native front/back poster artwork to test authored A–I class registration. Do not reopen unconstrained image/message searches; avoid counting the Mac 34 count as evidence of CE output. See `docs/experiment-476-receiver-native-geometry-audit.md`.
+
 # Research Queue
 
 _Current queue begins after Experiment 240._

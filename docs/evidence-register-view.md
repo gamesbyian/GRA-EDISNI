@@ -1,6 +1,6 @@
 # Auditable Evidence Record Cards
 
-**Curated pilot, 8 October 2026:** 36 claim-level records, **not 36 independent studies**. The canonical structured rows live in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are in [the codebook](evidence-map-method.md). Same-source rows R035 and R036 are explicitly dependent; their shared background URL does not give two independent confirmations of the foreground decoder.
+**Curated pilot, 8 October 2026:** 37 claim-level records, **not 37 independent studies**. Canonical structured rows live in [the CSV register](../data/sticker-evidence-register.csv); method and source-quality rules are in [the codebook](evidence-map-method.md). Multiple analyses may share historical/physical sources and must not be counted as independent observations.
 
 ## R001 · BASE: periodicity
 
@@ -433,4 +433,16 @@
 **Limit:** Answer-containing 2026 route corpus selected retrospectively, not the original April-2020 Wayback index; this ranks lookup compatibility, not independent blind decoding or a likelihood of authorship; no foreground mapping.
 
 **Discriminator:** original Wayback April-2020 site-map index bytes and an authorially provided foreground-to-consumer registration
+
+## R037 · CROSS: source-native printer receivers for CE foreground
+
+**Source:** [experiment-476-receiver-native-geometry-audit.md](experiment-476-receiver-native-geometry-audit.md) (main; experiments 476)  
+**Design:** fixed-candidate-literal-format-falsification | **independence:** same-corpus-with-independent-printer-fixture | **assessment:** rejects-verbatim-Xbox-row-reuse  
+**Corpus:** `physical-84-66-plus-PC-Xbox-Mac-reference` | **dependence cluster:** `native-printer-receiver`
+
+**Finding:** CE H108 can form three 36-wide sections, but each conflicts with every published 36-wide Xbox printer row on at least 12, 9 and 7 already observed symbols, including full-row reversal. Mac 16 printer strips have 34 dot marks and claimed community phrase 34 letters; exact external poem extraction remains independently unverified. Official CE poster photograph has an approximate three-by-three arrangement without sticker class registration.
+
+**Limit:** Only literal row reuse in native Xbox width rejected. No claim about overlays, shifted ciphers, source-independent keys or unseen website receivers. Mac retail code assessment is a third-party technical claim; publisher poster photo perspective and CE/standalone artwork identity not resolved.
+
+**Discriminator:** original CE damaged page or poster image with source-labeled A-I address/transform; exact macOS poem decoder; signed future prediction on known physical symbols
 

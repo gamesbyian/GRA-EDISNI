@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **475** (with documented numbering gaps).
+Latest indexed experiment: **476** (with documented numbering gaps).
 
 | Experiment | Title |
 | ---: | --- |
@@ -460,6 +460,7 @@ Latest indexed experiment: **475** (with documented numbering gaps).
 | 473 | cube registration statistical score versus native-depth and relabelled-quarter Q4 readers: weighted completion mass shifts toward the quarter family but most remains outside either; residue 50/54 forecast tendencies challenge previously frozen native-depth predictions and do not license a consumer. See `docs/experiment-473-registration-q4-reader-conflict.md`. |
 | 474 | Q4 erasure-scope control: withholding one A–I depth stack at a time lets selected-column depth model reconstruct 11/12 seen Q4 marks, but withholding all Q4 observations reduces both depth and quarter selectors to 8/12, matching dot-majority. Conditional within-Q4 reconstruction is not primary-to-Q4 instruction recovery. See `docs/experiment-474-q4-erasure-scope.md`. |
 | 475 | primary Q1–Q3 cube registration ablation: exact-coordinate 24/40 and alphabetical-X 16/47 on observed pairs without Q4, with structural-null exploratory tails; geometry signal does not require invoking the unlicensed fourth-cube consumer. See `docs/experiment-475-primary-only-registration.md`. |
+| 476 | source-native receiver census and bounded printer-format falsification: the 108-symbol CE foreground forms three 36-wide sections, matching the native width of Xbox printer full rows (35 unique 36-character rows), but none can equal any existing source row, even with independent row reversal and arbitrary missing-sticker fills (minimum conflicts 12/9/7 across 24/23/19 observed section marks). Source-pinned macOS Cutout has 16 printed strips and 34 dots, numerically matching 34 letters of a community-claimed output but not independently reproducing its poem decoder. Official CE poster photography visibly has nine sketches in an approximate 3×3 grid, also sold in a standalone edition and lacks verified A-I registration. Highest-confidence physical-to-consumer link remains CE background to damaged `534brn` page; no foreground-to-consumer operation verified. See `docs/experiment-476-receiver-native-geometry-audit.md`. |
 
 ## Current frontier
 
