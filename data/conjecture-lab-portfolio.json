@@ -43,7 +43,7 @@
       "id": "CL-02",
       "version": 1,
       "title": "Q4 tail as one-time nine-command instruction",
-      "status": "developed_conditional_unvalidated",
+      "status": "developed_conditional_answer_assisted_negative_control",
       "assumptions": [
         "OBSERVED: 81/27 alphabet split",
         "CONDITIONAL: exactly one Q4 slash per A-I depth stack",
@@ -58,7 +58,31 @@
       "unique_with_reversals": 192,
       "frozen_negative": "Original 14-command bunker password has no direct replay under tested mappings and literal 27-body selected readout carries no dot/Left",
       "next_check": "A genuinely authored nine-position/three-choice interface or clear native depth legend",
-      "evidence_status": "no verified consumer"
+      "evidence_status": "no verified consumer",
+      "exploratory_subsequence": {
+        "source": "data/sticker-lever-cue.json",
+        "script": "scripts/conjecture_lab_nine_action_subsequence.py",
+        "searches": 216,
+        "matched_candidates": 2,
+        "candidates": [
+          {
+            "depth": "021101222",
+            "codebook": "URL",
+            "word": "ULRRURLLL"
+          },
+          {
+            "depth": "121101222",
+            "codebook": "URL",
+            "word": "RLRRURLLL"
+          }
+        ],
+        "null_shuffle_4000": {
+          "mean_matches": 5.60075,
+          "shuffles_with_at_most_two": 1729,
+          "tail_proportion": 0.43225
+        },
+        "warning": "Post-hoc selected subsequence and codebook, not a native nine-input reader or pre-frozen independent forecast"
+      }
     },
     {
       "id": "CL-03",
