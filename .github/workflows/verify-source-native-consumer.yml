@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "scripts/audit_source_native_consumer_affordances.py"
+      - "scripts/audit_classword_lever_consumer.py"
       - "data/experiment-476-source-native-consumer-affordances.json"
       - "data/observations.csv"
       - "data/endgame-saf-dat-island-2026-10-08.json"
@@ -28,6 +29,8 @@ jobs:
           python-version: "3.12"
       - name: Check preserved HTML, corpus and typed lever output
         run: python scripts/audit_source_native_consumer_affordances.py > /tmp/source-consumer-gates.json
+      - name: Verify natural A-I class-word bunker replay
+        run: python scripts/audit_classword_lever_consumer.py > /tmp/classword-lever-477.json
       - name: Show consumer audit summary
         run: |
           python -c 'import json; a=json.load(open("/tmp/source-consumer-gates.json")); print("sources:",a["artifact_total"],"new CE receivers:",a["verified_new_ce_value_receivers"],"type-compatible bunker direct placements:",a["known_lever_direct_replay_type_check"]["type_compatible_14_command_direct_placements"])'
