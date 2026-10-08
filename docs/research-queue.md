@@ -900,3 +900,43 @@ Experiment 456 makes the next independently explicit consumer comparison. The sa
 Frozen as `data/frozen-q4-axis-consumer-discriminators.json`; do not overwrite prior machine prediction files. Full method: `docs/experiment-456-q4-axis-consumer.md`.
 
 **Stopping rule:** Do not widen arbitrary 3D/4D transforms, rotate until a picture appears, or treat a retrospective forced holdout as independent validation. The native-depth operation is simpler, but the quarter-axis family survives with extra arbitrary label choices. Reopen this lane for an independently recovered coordinate/consumer clue or a new physical sticker in residue classes 50/54/93 (or other preexisting frozen discriminators). No owner outreach is required of the project owner.
+
+## Experiment 476 — source-native receiving-artifact evidence gate (8 Oct 2026)
+
+The backward-chain study of **twelve original game / CE / Terminal41
+artifact affordances** is in
+`docs/experiment-476-source-native-consumer-affordances.md` and
+`data/experiment-476-source-native-consumer-affordances.json`.
+It distinguishes a real, contemporaneously documented **2019 original
+printer-phrase → developer website subscription field → PDF-image**
+receiver (Xbox Wire, 3 Jan 2019) and a functional original
+three-direction bunker lever from the *unverified* proposition that
+either accepts the later Collector's Edition sticker foreground.
+
+Preserved Terminal41 HTML gives 22 **printed** Viewgate underscores
+but no native form, only four originally completed authentication
+schemes, fixed shutdown redirect pages, and a damaged CE image with
+no source-supplied foreground repair convention. The SAF seven-field
+record has a literal 22-character value, but direct unsigned base36
+conversion requires 111 bits, more than the conditional 108-bit
+foreground maximum. Under the historical sleeve lever mapping,
+81 primary symbols are U/R-only and 27 tail symbols U/L-only;
+the normal 14-action bunker password has no possible direct
+contiguous, cyclic or orientation-reversed placement.
+
+A **July 2016 original game asset discussion** already suggested
+that `SecretMap`'s possible fourteenth marker was the large
+existing orb. This strengthens the ordinary-game-artifact null
+before treating its unrecovered DDS as a CE receiver. It is
+contemporary interpretation, not verified native mark geometry.
+
+**Closed-corpus next actions:** search exact
+original/archived client-server requests accepting CE-era values;
+source-authored CE package/cover registration instructions; and
+only then unchanged native original `SecretMap` assets with
+fourteen-orb registration. Avoid repeating word/image matching
+or unbounded code-to-consumer sweeps until a native input rule is
+recovered. Fresh physical stickers are optional independent checks,
+not required to continue.
+
+Reproduce: `python scripts/audit_source_native_consumer_affordances.py`.
