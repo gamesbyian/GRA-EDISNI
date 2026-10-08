@@ -34,6 +34,20 @@
       "next_independent_evidence": "A second native lever handler or an artifact-supplied order/subset connecting sticker sectors to the lever."
     },
     {
+      "id": "playdead_printer_website_subscription_box",
+      "source_kind": "historically_functional_web_input",
+      "native_role": "Developer website's seemingly ordinary email subscription input accepted deciphered printer phrases and returned noisy/corrupted PDF-image material",
+      "native_input_type": "short deciphered phrase/text submitted through website subscription box; not known to accept CE foreground or 108 positional marks",
+      "primary_source": "docs/arg-puzzle-mechanics-corpus.md",
+      "contemporary_primary_url": "https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/",
+      "source_date": "2019-01-03",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "historic_confirmed_printer_input_not_ce_input",
+      "ce_bridge_status": "no_documented_post_2019_ce_submission",
+      "strongest_negative": "The Microsoft/Xbox contemporary account establishes a working prior printer-to-site PDF consumer; it does not describe a Collector's Edition instruction, and its posted date predates CE sticker release.",
+      "next_independent_evidence": "Original Playdead web source or a CE-specific response distinguishing sticker-derived input from previously solved printer credentials."
+    },
+    {
       "id": "terminal41_printer_four_schemes",
       "source_kind": "historic_status_protocol",
       "native_role": "Four named breach achievements PLANET/LIFE/PROBE/CONDISCON",
@@ -225,5 +239,5 @@
       "no_transform_excludes": []
     }
   ],
-  "verdict": "One original game functional three-command input is documented but already used for the known fourteen-command solution; no preserved post-CE artifact demonstrates a typed, functioning foreground receiver. Several *static surfaces* are genuine independent artifacts, not verified input interfaces. Exact missing joins are required before a sticker-derived decoded output can be claimed."
+  "verdict": "A January 2019 Xbox Wire firsthand publisher account verifies a real printer phrase -> website subscription input -> corrupted PDF-image pathway, and the original secret-ending lever is functionally demonstrated in-game. Neither is independently shown to accept Collector's Edition foreground. Other Terminal41 and CE surfaces inspected are static, missing original handlers/assets, or already consumed; count matching is not a typed receiver."
 }
