@@ -416,9 +416,9 @@
 **Design:** dated-archive-cross-version-and-fixed-string-comparison | **independence:** archived-source-replay | **assessment:** source-assisted-historical-identification  
 **Corpus:** `historical-2020-April-source` | **dependence cluster:** `background-URL-provenance`
 
-**Finding:** Pre-index nine-tile candidates match 17/21, 18/21 or 19/21 of the later-known address, but the exact path was reportedly found by website index enumeration on 21 April 2020 and recognized; pinned Git sources before and after bracket recognition.
+**Finding:** March 20 original chat yields 17/21, April 28 first-person retrospect confirms 18/21; a later README also lists unverified 19/21. April 21 original chat confirms the exact URL was discovered by browsing website indexes, then immediately recognized. Git April-21/23 versions bracket documentation.
 
-**Limit:** Retrospective community chronology; Discord message content and original site index not independently preserved. Confirms source-assisted recognition, not blind full decode or a foreground decoding rule.
+**Limit:** Pinned public Discord text-export preserves contemporaneous first-person text but is not directly authenticated via Discord API; exported timezone is unknown; actual 2020 site index bytes unavailable. No independent full blind URL readout or foreground decoding cue.
 
 **Discriminator:** original April 2020 index bytes, authenticated source messages and pre-index blind 21-character reading if one exists
 
