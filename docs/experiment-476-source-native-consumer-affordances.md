@@ -83,6 +83,8 @@ The [official iam8bit Collector's Edition listing](https://www.iam8bit.com/produ
 2. A **foldout poster**, for which unfolded front/back content, dimensions and any symbol registration have not been established here;
 3. A **premium presentation box** incorporating spot varnish and custom foam inlays, but with no independently documented cipher role.
 
+A [contemporaneous December 2019 unboxing discussion](https://www.reddit.com/r/PlaydeadsInside/comments/eaol69) describes **dozens of concept-art cards** (one commenter asks whether there are about 40). That is a dated eyewitness discussion, not an independently verified card count, and it warns against assuming the included set must consist of nine A–I keys merely because the stickers use nine background images. The [publisher's original unboxing video](https://www.youtube.com/watch?v=zhCdGdqCIRU) offers a more concrete next source to examine frame by frame if high-resolution stills are available.
+
 The [separately sold iam8bit INSIDE PS4 physical edition](https://www.iam8bit.com/products/inside-ps4-physical-game) also advertises a foldout poster. Whether that poster is identical to the CE one is **unknown**, and its mere presence in both sets would not independently license a foreground overlay.
 
 These are **verified included objects**, not verified sticker-code readers. No archival source inspected here specifies that the poster/card/box artwork accepts 9, 27 or 108 slash/dash/dot marks. The concrete source gate is original print-ready art or complete, native-scale front/back photographs, preferably with an independent publisher registration cue. Avoid treating routine glossy finish, folds or collector artwork as a code by default.
