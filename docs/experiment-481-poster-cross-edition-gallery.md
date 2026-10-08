@@ -53,6 +53,16 @@ The original standalone product listing even hints it was
 “perhaps more than it seems,” but that sentence is **not**
 an instruction identifying the nine sketches as a sticker codebook.
 
+A still earlier physical-edition precedent is independently
+listed by the [VGCollect catalog](https://vgcollect.com/item/132254):
+the **505 Games INSIDE + LIMBO PS4 release of September 2017**
+reportedly included a foldout poster and an original character
+concept-art card. This is **third-party catalog metadata**, not a
+publisher-original scan of its contents, and does *not* establish
+that any 2017 print used the same nine-sketch illustration.
+It does show why a poster/card pack-in is not automatically
+Collector's Edition-sticker-specific.
+
 It therefore remains possible that poster art was a more general
 INSIDE retail clue. It is unsound to promote its visual 3×3 into a
 **CE-exclusive receiver** merely because the sticker backgrounds
@@ -67,6 +77,7 @@ have nine classes.
 | CE gallery shows roughly nine sketches in 3×3 | Visible in official original lifestyle photo |
 | Standalone gallery displays the *same promotional scene* | Visible in both original publisher galleries |
 | Both physically packaged posters are byte-identical artwork | **Unknown** |
+| An earlier 2017 INSIDE + LIMBO edition reportedly included poster/art card | Third-party collector catalog; exact artwork unknown |
 | Reverse sides share the same design | **Unknown** |
 | Nine poster drawings equal sticker A–I background classes | **Not established** |
 | Poster itself supplies a slash/dash/dot readout, direction or selector | **Not established** |
