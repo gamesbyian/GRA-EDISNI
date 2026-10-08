@@ -29,7 +29,7 @@
     "png_sha256": "ae685557122be8562028d8a1c4384c954a760bc4e42e6877c29391d810892d12",
     "white_pixel_threshold": 200,
     "white_pixel_count": 2577,
-    "black_or_dark_pixel_count": 836308,
+    "black_or_dark_pixel_count": 833731,
     "purpose": "Dated external visual ground truth, acquired from original wiki file, NOT a source-authored CE sticker prompt",
     "github_acquisition_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/37860133993"
   },
