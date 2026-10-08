@@ -113,5 +113,88 @@
     "Separate historical 2019 PNG dark-gray/near-black layer to test seven-colour historic prose against complete image raster, not just its bright mask.",
     "Assess whether independently identified CE nine background tiles encode analogous offsets for physically linked 534brn image, without fitting foreground glyphs.",
     "Freeze any hypothesized CE operation prior to testing held-out sticker observations."
+  ],
+  "sixth_offset_nearby_controls": [
+    {
+      "delta_xy": [
+        -32,
+        0
+      ],
+      "source_sites": 560,
+      "witness_hits": 251,
+      "false_white": 309
+    },
+    {
+      "delta_xy": [
+        -16,
+        0
+      ],
+      "source_sites": 560,
+      "witness_hits": 305,
+      "false_white": 255
+    },
+    {
+      "delta_xy": [
+        0,
+        0
+      ],
+      "source_sites": 560,
+      "witness_hits": 560,
+      "false_white": 0
+    },
+    {
+      "delta_xy": [
+        16,
+        0
+      ],
+      "source_sites": 560,
+      "witness_hits": 270,
+      "false_white": 290
+    },
+    {
+      "delta_xy": [
+        32,
+        0
+      ],
+      "source_sites": 560,
+      "witness_hits": 261,
+      "false_white": 299
+    },
+    {
+      "delta_xy": [
+        0,
+        -16
+      ],
+      "source_sites": 560,
+      "witness_hits": 311,
+      "false_white": 249
+    },
+    {
+      "delta_xy": [
+        0,
+        16
+      ],
+      "source_sites": 560,
+      "witness_hits": 306,
+      "false_white": 254
+    },
+    {
+      "delta_xy": [
+        0,
+        -32
+      ],
+      "source_sites": 554,
+      "witness_hits": 266,
+      "false_white": 288
+    },
+    {
+      "delta_xy": [
+        0,
+        32
+      ],
+      "source_sites": 554,
+      "witness_hits": 271,
+      "false_white": 283
+    }
   ]
 }
