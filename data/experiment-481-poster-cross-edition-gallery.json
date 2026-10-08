@@ -68,5 +68,18 @@
     "Determine independently whether both physical editions shipped the same print. Preserve original orientation and fold registration.",
     "Before overlaying sticker predictions, establish author-provided A-I label correspondence, print margin/index, or at least a repeatable operation shared across two independent source art assets.",
     "Use the high-resolution original not an unconstrained perspective warp. If no authored mapping is found, treat the poster as an art display rather than a cipher consumer."
+  ],
+  "historical_prior_editions": [
+    {
+      "source": "https://vgcollect.com/item/132254",
+      "source_class": "collector catalog, not verified publisher-original pack-in proof",
+      "product": "INSIDE + LIMBO (505 Games North American PS4 physical release)",
+      "reported_release_date": "2017-09-12",
+      "reported_pack_ins": [
+        "fold-out poster",
+        "original character concept design art card"
+      ],
+      "scope": "Demonstrates third-party-reported packaging precedent that predates 2019 CE; does not establish same poster design, front/back or symbol registration."
+    }
   ]
 }
