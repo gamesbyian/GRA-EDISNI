@@ -20,6 +20,18 @@ The original [`saf_dat_col` seven-field island](sticker-endgame-saf-dat-seven-fi
 
 **Status:** high-confidence *background-to-page* link; **low-confidence** *foreground-to-page reader*. Strongest local destination candidate, because it is the only named digital artifact physically linked from the **same sticker object**.
 
+## A separate, independently verified receiver: Playdead's actual subscription-box-to-PDF system
+
+Do not conflate the *Terminal41 mirrored status site*, where our surviving 73 static text files contain **no HTML forms**, with the **main Playdead website**. There really was a **functioning interactive submission pipeline** for printer puzzles on the latter. The independently published [Xbox Wire developer-facing account of 3 January 2019](https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/) directly states that printer symbols were deciphered into text, entered into an ordinary email-subscription field on Playdead's website, and elicited a corrupted/noisy image in a **PDF**. The [Game Detectives chronology](https://wiki.gamedetectives.net/w/Inside_ARG) independently reports that the Xbox result `NEWPLANETDISCOVERED` was accepted there, with the iOS and PC/PS4 messages using the same overall mechanism.
+
+This qualifies as a **real, historically demonstrated consumer type**: *arbitrary symbol carrier → short text → actual web intake → independently observable document response*. It solves the *existence* question for an ARG reader much more strongly than a hypothetical nine-input Terminal41 status page or merely printed Viewgate underscores.
+
+But the January 2019 account explicitly concerns the **original game printer system**, before the December 2019 CE existed. It says that system was already solvable from the beginning. The form's current historical backend behavior, accepted phrase vocabulary, 2019–20 availability and any CE-specific extra acceptance state have **not** been recovered. The foreground's 108 binary-sector marks therefore cannot be presented as a validated new password simply because Playdead once accepted one. **A source-licensed plaintext readout and an independent CE-era response remain missing.**
+
+**Most falsifiable receiver-oriented next step:** recover dated archived `playdead.com` **submission form / action endpoint** and the specific resulting PDF responses (including known **negative** submissions), with response metadata and contemporaneous accepted phrase inventory. First establish whether new answer classes or outstanding states existed when CE shipped; *then*, and only with a source-specified sticker readout, test whether the foreground produces a message that the historical receiver would have distinguished.
+
+This route is **separate from the damaged `534brn` page** and its noninteractive preserved HTML. The two may be parts of a shared ARG progression but no source proves a sticker submission to either.
+
 ## Finding 2: the foreground is printer-like, but it is not three literal existing Xbox printer rows
 
 The [source-fixture metadata](../data/printer-reference/metadata.json) establishes that the PC/PS4 printer has **32** separate 32-character full rows, while the Xbox printer has **35 unique 36-character full rows** and one duplicate used as the top/bottom of the original planet.
@@ -65,6 +77,7 @@ The [cross-edition cover audit](cover-cross-edition-dependency-audit-2026-10-08.
 | Authentic source surface | Native structural evidence | Independent foreground connection | Biggest unlicensed leap | Verdict |
 |---|---|---|---|---|
 | **CE nine-background URL → `534brn` damaged page** | Same physical object already routes to exact ARG page, with unfinished image and `128 UNSOLVED` | **Object-level connection strong**, symbol-level unknown | How foreground selects/repairs/reads page | **Top target for source-fixed operation discovery** |
+| **Playdead original website subscription→PDF** | Publisher-confirmed real form accepted earlier three printer passwords and returned corrupted-image PDF | No CE-authored plaintext mapping, CE-era response, or preserved endpoint behavior | Whether the CE was assigned a new accepted reply or already-solved system | **Real receiver type, CE-specific use entirely unproven** |
 | **Xbox original printer/Braille** | Same three glyphs; 36-wide source strips; geometry/secondary layer historically validated | Alphabet + three-line width compatibility only | Original printed rows incompatible at ≥12/9/7 physical marks even after reversal; any overlay has no fixed registration | **Literal-row hypothesis closed; constrained overlay unlicensed** |
 | **macOS `Cutout` printer** | Same message-bearing aesthetic; 16 strips; 34 dot marks with 34-letter claimed answer | No source-fixed foreground map | Time-separated release and disputed exact outside-game poem extraction | **Low, requires exact external reader** |
 | **CE/standalone fold-out poster** | Official physical image visibly lays nine sketches in 3×3 | Same CE product ecosystem; nine-position grid only | No proven A–I coordinates, artwork equivalence, or instruction | **Worth original-print examination** |
@@ -84,7 +97,7 @@ Thus the best live foreground model is not necessarily an English sentence hidde
 2. A **sticker-facing rule**: explicit physical, textual or historical link from CE foreground A–I/108 symbols to that surface.
 3. An **output check**: recognizable, reproducible transformation/result not designed by inspecting the answer in advance.
 
-The first two remain absent for the live candidates; that's the decisive research gap rather than another million model completions.
+The source-address/consumer for the historical Playdead printer form exists, but a CE-specific new accepted state and a foreground readout do not. For the physically co-located damaged page, the first two remain absent; that's the decisive research gap rather than another million model completions.
 
 ## Reproducibility and caveats
 
