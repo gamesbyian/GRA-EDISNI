@@ -5,6 +5,7 @@ on:
     paths:
       - .github/workflows/cl05-source-positive-control.yml
       - scripts/conjecture_lab_gate98_positive_control.py
+      - scripts/conjecture_lab_gate98_all_amplitudes.py
 permissions:
   contents: read
 jobs:
@@ -20,9 +21,15 @@ jobs:
         run: python -m pip install 'Pillow>=10,<13'
       - name: Reconstruct colour layers from byte-exact original image
         run: python scripts/conjecture_lab_gate98_positive_control.py --output cl05-original-rgb-layers.json
+      - name: Exhaustive nontext 255-amplitude 16px lattice test
+        run: python scripts/conjecture_lab_gate98_all_amplitudes.py --output cl05-source-all-rgb-levels.json
+      - name: Audit reproducible colour amplitude source output
+        run: echo "CL05_LEVELS_COMPLETE"
       - uses: actions/upload-artifact@v4
         if: success()
         with:
           name: cl05-gate98-rgb-positive-control
-          path: cl05-original-rgb-layers.json
+          path: |
+            cl05-original-rgb-layers.json
+            cl05-source-all-rgb-levels.json
           retention-days: 14
