@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "experiment": 478,
+  "date": "2026-10-08",
+  "focus_question": "Which independently sourced INSIDE/Collector's Edition artifacts have a demonstrated native means to consume a new foreground-derived value, rather than merely resembling a code or displaying a static token?",
+  "scope": "Closed-corpus source-first typed-affordance audit. Presence of an original historical interface does not imply it accepts CE stickers. Negative gates apply to preserved source versions, not inaccessible old backend revisions. Prior experiment 413 decodes the CE page footer as 128 UNSOLVED, but the decoding is not itself a foreground readout.",
+  "source_bases": {
+    "terminal_mirror": "archive/external/twinysam-inside-arg/terminal41.link/",
+    "game_inventory": "data/original-game-asset-consumer-inventory-2026-10-08.json",
+    "terminal_tree": "data/terminal41-source-tree.json",
+    "saf_island": "data/endgame-saf-dat-island-2026-10-08.json",
+    "historical_arg": "docs/arg-puzzle-mechanics-corpus.md",
+    "asset_audit": "docs/original-game-asset-consumer-audit-2026-10-08.md",
+    "cube_audit": "docs/cube-registration-research-2026-10-08.md"
+  },
+  "native_artifacts": [
+    {
+      "id": "secret_ending_lever",
+      "source_kind": "original_game_action",
+      "native_role": "Functional three-direction sequence consumer at the 2016 bunker",
+      "native_input_type": "ordered U/L/R actions; known existing solution uses fourteen actions",
+      "primary_source": "docs/original-game-asset-consumer-audit-2026-10-08.md",
+      "demonstrated_receives_new_ce_value": false,
+      "earliest_known": "2016",
+      "source_status": "historically_functional",
+      "ce_bridge_status": "candidate_unsupported",
+      "physically_supported_mapping": {
+        "slash": "U",
+        "dash": "R",
+        "dot": "L"
+      },
+      "mapping_provenance": "Archived 2020–2021 sleeve/lever discussion; candidate physical interpretation, not developer confirmation",
+      "strongest_negative": "The known bunker password has left and right commands. Neither a primary-only slash/dash readout nor the tail-only slash/dot readout can reproduce it without mixing sectors or adding a transform; separate direct-replay and 2023 brute-force tests already negative.",
+      "next_independent_evidence": "A second native lever handler or an artifact-supplied order/subset connecting sticker sectors to the lever."
+    },
+    {
+      "id": "playdead_printer_website_subscription_box",
+      "source_kind": "historically_functional_web_input",
+      "native_role": "Original developer website: a phrase typed in the ordinary subscription field was used by the special webpage-printing action to produce conditional PDF/image output",
+      "native_input_type": "Deciphered printer phrase placed in subscription field and consumed when invoking a site printer/print button; not a CE-specific accepting textbox",
+      "primary_source": "docs/arg-puzzle-mechanics-corpus.md",
+      "contemporary_primary_url": "https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/",
+      "source_date": "2019-01-03",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "historic_confirmed_printer_input_not_ce_input",
+      "ce_bridge_status": "no_documented_post_2019_ce_submission",
+      "strongest_negative": "The Microsoft/Xbox contemporary account establishes a working prior printer-to-site PDF consumer; it does not describe a Collector's Edition instruction, and its posted date predates CE sticker release.",
+      "next_independent_evidence": "Original Playdead web source or a CE-specific response distinguishing sticker-derived input from previously solved printer credentials.",
+      "secondary_source": "https://wiki.gamedetectives.net/w/Inside_ARG#Printer_Button",
+      "usage_caveat": "Do not conflate pressing the print button with submitting the newsletter form; contemporary Xbox account summarizes the visible field, later Game Detectives documentation specifies the print action."
+    },
+    {
+      "id": "terminal41_printer_four_schemes",
+      "source_kind": "historic_status_protocol",
+      "native_role": "Four named breach achievements PLANET/LIFE/PROBE/CONDISCON",
+      "native_input_type": "historically named printer credentials, not a CE nine/27/108-slot input",
+      "primary_source": "archive/external/twinysam-inside-arg/terminal41.link/sys/printreqstatus_SD.html",
+      "demonstrated_receives_new_ce_value": false,
+      "earliest_known": "2018",
+      "source_status": "historic_completed",
+      "ce_bridge_status": "no_fifth_slot_in_preserved_scheme",
+      "strongest_negative": "Four of four schemes marked obtained/applied; no observed fifth ordinary scheme in this status source.",
+      "next_independent_evidence": "Server code, original request/response, or a distinct post-shutdown interface."
+    },
+    {
+      "id": "terminal41_viewgate_22_placeholder",
+      "source_kind": "static_rendered_page",
+      "native_role": "22-underscore printed prompt appearing on two pages",
+      "native_input_type": "22 visible placeholder positions, but no verified input control or POST handler in archived HTML",
+      "primary_source": "archive/external/twinysam-inside-arg/terminal41.link/comms_main_viewgate.html",
+      "additional_source": "archive/external/twinysam-inside-arg/terminal41.link/comms_main_viewgate_002.html",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "static_display_only_in_mirror",
+      "ce_bridge_status": "no_executable_receiver",
+      "strongest_negative": "Each source displays 22 underscores but has no HTML form, input, select or maxlength. A displayed interface cannot validate a sticker-derived token.",
+      "next_independent_evidence": "Archived original live form or original server-side request/response."
+    },
+    {
+      "id": "terminal41_saf_seven_fields",
+      "source_kind": "static_text_data",
+      "native_role": "One 75-character plus-delimited ASCII island, with one 22-character field",
+      "native_input_type": "seven source fields of lengths 26/22/10/2/3/1/5; field meanings unlabeled",
+      "primary_source": "data/endgame-saf-dat-island-2026-10-08.json",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "source_field_only",
+      "ce_bridge_status": "no_field_consumer",
+      "strongest_negative": "The 22-character candidate field itself is an existing *value*, not a receiver. Direct unsigned base36 integer is 111 bits, larger than conditional 108-bit foreground ceiling.",
+      "next_independent_evidence": "A source-defined record schema or verified client/server use of a specific field."
+    },
+    {
+      "id": "ce_background_terminal41_path",
+      "source_kind": "solved_sticker_background_output",
+      "native_role": "Nine-piece background artwork recognized as the static URL dat/534brn9653f9j8mmd",
+      "native_input_type": "URL/path, already a solved output, not a new foreground form",
+      "primary_source": "archive/external/twinysam-inside-arg/terminal41.link/dat/534brn9653f9j8mmd/index.html",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "static_path_exists",
+      "ce_bridge_status": "no_native_foreground_key_declared",
+      "strongest_negative": "The exact URL was source-index-assisted historically, not a demonstrated blind 21-character foreground key. No native index mapping from foreground into this path is supplied by the page.",
+      "next_independent_evidence": "Original page saying how CE dash/slash/dot, A–I or 81/27 is used."
+    },
+    {
+      "id": "damaged_ce_jpeg",
+      "source_kind": "damaged_binary_page",
+      "native_role": "Damaged JFIF/Exif-like image and independently decoded footer 128 UNSOLVED (Experiment 413); 128 provides a candidate image-size clue, not a CE-specific recovery key",
+      "native_input_type": "damaged media, no typed sticker key or input operation present in accessible source",
+      "primary_source": "archive/external/twinysam-inside-arg/terminal41.link/dat/534brn9653f9j8mmd/index.html",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "source_byte_recovery_incomplete",
+      "ce_bridge_status": "no_input_semantics",
+      "strongest_negative": "The footer 128 UNSOLVED is a meaningful prior-stage clue, and JPEG dimensions 128..255 remain possible (Experiments 413–414); no source-fixed operation maps slash/dash/dot or A-I positions to damaged entropy bytes, pixel masks or an image consumer.",
+      "next_independent_evidence": "Byte-correct original image or repair parameters explicitly connecting the known 128 clue and CE marks to the JPEG corruption/registration."
+    },
+    {
+      "id": "ce_art_card_set",
+      "source_kind": "verified_physical_pack_in",
+      "native_role": "Official 2019 Collector's Edition elegant art card set, potentially multiple independent printed surfaces",
+      "native_input_type": "static physical print art; no source-fixed sticker indexing, fold/stack/overlay operation or symbol input demonstrated",
+      "primary_source": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "corroborating_source": "https://www.mobygames.com/game/207693/inside-collectors-edition/",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "official_product_inclusion_confirmed_uninspected_details",
+      "ce_bridge_status": "no_native_register_or_reader",
+      "strongest_negative": "Publisher establishes an art-card set but does not claim the images, count, dimensions, reverse sides or printing are a sticker codebook. A multi-card pack-in does not itself require overlay or row sorting. Contemporary unboxing spectators describe dozens of concept cards, not evidence of a nine-card A-I selector.",
+      "next_independent_evidence": "Original unaltered scans of every card, both sides, showing any author-provided indexing marks or repeated slash/dash/dot coordinate template before matching sticker completions.",
+      "contemporary_unboxing_discussion": "https://www.reddit.com/r/PlaydeadsInside/comments/eaol69",
+      "publisher_unboxing_video": "https://www.youtube.com/watch?v=zhCdGdqCIRU",
+      "count_witness_note": "December 14 2019 contemporaneous unboxing commenters describe dozens of concept cards and speculate around 40; neither exact physical count nor 9-card codebook is verified by the text."
+    },
+    {
+      "id": "ce_foldout_poster",
+      "source_kind": "verified_physical_pack_in",
+      "native_role": "Official 2019 Collector's Edition foldout poster, possible large physical graphic carrier",
+      "native_input_type": "static poster, unknown source geometry; no sticker-to-poster coordinate mask or overlay identified",
+      "primary_source": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "comparison_source": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "official_product_inclusion_confirmed_native_print_uninspected",
+      "ce_bridge_status": "no_native_register_or_reader",
+      "strongest_negative": "An INSIDE standalone PS4 edition also advertises a foldout poster; whether its artwork is identical is not established, and a foldout format does not itself supply a readout operation.",
+      "next_independent_evidence": "Source-accurate unobstructed scans of both sides fully unfolded, fold-grid geometry, and comparison against the separate standalone PS4 pack-in before evaluating any sticker coordinate correspondence."
+    },
+    {
+      "id": "ce_premium_spot_varnish_box",
+      "source_kind": "verified_physical_pack_in",
+      "native_role": "Official Collector's Edition premium box with custom foam and spot varnish embellishments",
+      "native_input_type": "three-dimensional packaging/finish not documented as a code receiver; glossy/matte surface layers may require raking-light photography for source cataloguing",
+      "primary_source": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "official_product_inclusion_confirmed_no_registration",
+      "ce_bridge_status": "no_native_register_or_reader",
+      "strongest_negative": "Spot varnish and custom foam are normal production features; no independent source says they encode sticker directions or register 9/27/108 marks.",
+      "next_independent_evidence": "Publisher-original production art or accurate photographs of all box faces under diffuse and grazing illumination that reveal an explicit symbol/index/cue, without treating reflections as a hidden code by default."
+    },
+    {
+      "id": "terminal41_shutdown_nine_redirects",
+      "source_kind": "static_redirect_chain",
+      "native_role": "Fixed 09-to-01 shutdown sequence",
+      "native_input_type": "no choice or per-step input; nine HTTP redirect pages",
+      "primary_source": "docs/experiment-408-terminal41-nine-step-consumer-audit.md",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "fixed_redirects",
+      "ce_bridge_status": "direct_9_symbol_consumer_closed",
+      "strongest_negative": "Nine consecutive pages are fixed links and do not consume a nine-command CE output.",
+      "next_independent_evidence": "Previously uncaptured alternate branching source."
+    },
+    {
+      "id": "ce_reversible_cover",
+      "source_kind": "physical_registered_artwork",
+      "native_role": "Advertised clue-bearing cover with screens of previously seen ARG artifacts",
+      "native_input_type": "image panels with no supplied foreground sampling lattice or overlay alignment",
+      "primary_source": "docs/sticker-endgame-followup-cover-jpeg-terminal41-2026-10-08.md",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "physical_artifact_present",
+      "ce_bridge_status": "no_source_fixed_register_transform",
+      "strongest_negative": "Existing cover and comparison crops are perspective/blurred; no reliably exact pixel coordinate map from H108 to panel image.",
+      "next_independent_evidence": "Original print-ready cover art or explicit transformation cue with fixed coordinate reference."
+    },
+    {
+      "id": "original_2016_secretmap",
+      "source_kind": "original_game_texture_report",
+      "native_role": "Early extracted game map with approximately fourteen marks, potentially existing secret-orb sites",
+      "native_input_type": "static image/scene; no demonstrated CE sticker input, native texture/UV transform not recovered",
+      "primary_source": "docs/original-game-asset-consumer-audit-2026-10-08.md",
+      "contemporary_primary_url": "https://www.reddit.com/r/PlaydeadsInside/comments/4sav9x/curious_textures_found_in_the_game_files/",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "original_dds_unavailable",
+      "ce_bridge_status": "ordinary_14_orb_null_untested_in_native_bytes",
+      "strongest_negative": "Contemporaneous July 2016 discussion already counted a possible 14th marker and proposed the large final orb, years before CE. No unexplained native marks remain independently established.",
+      "next_independent_evidence": "Exact game-build native SecretMap DDS and matching scene UVs; preregister matching to fourteen known orbs first."
+    },
+    {
+      "id": "original_switch_joycon_printer",
+      "source_kind": "historic_functional_operation",
+      "native_role": "Switch printer yielded Joy-Con connection/disconnection actions",
+      "native_input_type": "platform-specific ordered controller actions already consumed during solved printer scheme",
+      "primary_source": "docs/arg-puzzle-mechanics-corpus.md",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "historically_functional_already_solved",
+      "ce_bridge_status": "no_ce_action_order",
+      "strongest_negative": "Proof that some codes are instructions does not specify which stickers to read or any CE-native controller sequence.",
+      "next_independent_evidence": "CE-specific independently printed attach/detach order."
+    },
+    {
+      "id": "original_pc_acorn_life",
+      "source_kind": "historically_cued_transform",
+      "native_role": "Acorn plus generation 41 supplied a Game of Life construction",
+      "native_input_type": "explicit seed + generation parameter, already consumed in original printer branch",
+      "primary_source": "docs/arg-puzzle-mechanics-corpus.md",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "historically_functional_already_solved",
+      "ce_bridge_status": "no_ce_generation_seed_cue",
+      "strongest_negative": "Known Playdead generation mechanism does not license applying arbitrary Life rules to CE slash/dash/dot cells.",
+      "next_independent_evidence": "Sticker-native seed name and generation/transform parameters."
+    }
+  ],
+  "derived_projection_types": [
+    {
+      "id": "known_body_81",
+      "provenance": "physically observed 81/27 sector alphabet boundary",
+      "produced_value_type": "81-symbol slash/dash sector when complete",
+      "lever_commands_possible": [
+        "U",
+        "R"
+      ],
+      "no_transform_excludes": [
+        "L"
+      ]
+    },
+    {
+      "id": "known_tail_27",
+      "provenance": "physically observed 81/27 sector alphabet boundary",
+      "produced_value_type": "27-symbol slash/dot sector when complete",
+      "lever_commands_possible": [
+        "U",
+        "L"
+      ],
+      "no_transform_excludes": [
+        "R"
+      ]
+    },
+    {
+      "id": "native_depth_selected_body_27",
+      "provenance": "hypothesis 456 primary-body selected by Q4 depth",
+      "produced_value_type": "27-symbol slash/dash readout (nonunique)",
+      "lever_commands_possible": [
+        "U",
+        "R"
+      ],
+      "no_transform_excludes": [
+        "L"
+      ]
+    },
+    {
+      "id": "background_digit_index_9",
+      "provenance": "hypothesis 398 534brn digits indexing 9 classes",
+      "produced_value_type": "9 slash/dash commands under restricted U4/U5, stable --/--/-/-",
+      "lever_commands_possible": [
+        "U",
+        "R"
+      ],
+      "no_transform_excludes": [
+        "L"
+      ]
+    },
+    {
+      "id": "q4_depth_address_9",
+      "provenance": "Q4 one-slash-depth-stack grammar hypothesis",
+      "produced_value_type": "9 ternary depth addresses; no source-fixed map to U/L/R",
+      "lever_commands_possible": null,
+      "no_transform_excludes": []
+    },
+    {
+      "id": "full_h108_108",
+      "provenance": "physically observed structure, 42 incomplete residues",
+      "produced_value_type": "108 symbol code over sector-specific alphabets; fully ordered readout not given",
+      "lever_commands_possible": [
+        "U",
+        "R",
+        "L"
+      ],
+      "no_transform_excludes": []
+    }
+  ],
+  "verdict": "A January 2019 Xbox Wire firsthand publisher account verifies a real printer phrase -> website subscription input -> corrupted PDF-image pathway, and the original secret-ending lever is functionally demonstrated in-game. Neither is independently shown to accept Collector's Edition foreground. Other Terminal41 and CE surfaces inspected are static, missing original handlers/assets, or already consumed; count matching is not a typed receiver. Official iam8bit product contents additionally verify a CE art-card set, a foldout poster and a spot-varnished presentation box, none examined at native artwork detail or independently demonstrated as a code receiver. A standalone PS4 issue also included a foldout poster, so artwork identity is an open comparative question."
+}
