@@ -10,6 +10,7 @@ foreground has been decoded.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -37,7 +38,8 @@ def date_of_snowflake(identifier: str) -> datetime:
     return datetime.fromtimestamp(stamp / 1000, tz=timezone.utc)
 
 
-def run(before: Path | None = None, after: Path | None = None) -> dict:
+def run(before: Path | None = None, after: Path | None = None,
+        transcript: Path | None = None) -> dict:
     record = json.loads(FIXTURE.read_text(encoding="utf-8"))
     assert record["schema_version"] == 1
     e = record["evidence"]
@@ -56,11 +58,31 @@ def run(before: Path | None = None, after: Path | None = None) -> dict:
     if after is not None:
         assert correct in after.read_text(encoding="utf-8")
 
+    direct = e["primary_discord_export"]
+    assert direct["blob_sha"] == "1889cc948f86f5a4455de0d7310b15cdb1b88b5c"
+    assert len(direct["directly_recovered_events"]) == 8
+    if transcript is not None:
+        source = transcript.read_bytes()
+        sha = hashlib.sha1(
+            f"blob {len(source)}\\0".encode("ascii") + source
+        ).hexdigest()
+        assert sha == direct["blob_sha"], (sha, direct["blob_sha"])
+        text = source.decode("utf-8")
+        for event in direct["directly_recovered_events"]:
+            marker = f"[{event['export_timestamp']}] {event['author']}\\n"
+            start = text.find(marker)
+            assert start >= 0, event
+            stop = text.find("\\n\\n\\n[", start)
+            block = text[start:stop if stop >= 0 else len(text)]
+            assert event["content_contains"] in block, event
+
     output = []
     for candidate in e["recorded_preindex_candidates"]:
         guess = candidate["text"]
-        timestamp = date_of_snowflake(candidate["discord_snowflake"])
-        assert timestamp < date_of_snowflake(e["external_discovery"]["discord_snowflake"])
+        timestamp = (date_of_snowflake(candidate["discord_snowflake"])
+                     if candidate.get("discord_snowflake") else None)
+        if timestamp is not None:
+            assert timestamp < date_of_snowflake(e["external_discovery"]["discord_snowflake"])
         mismatches = [
             {"position_1_based": i + 1, "suggested": x, "later_exact": y}
             for i, (x, y) in enumerate(zip(guess, correct))
@@ -76,7 +98,7 @@ def run(before: Path | None = None, after: Path | None = None) -> dict:
             "mismatch_count": len(mismatches),
             "matches": len(correct) - len(mismatches),
             "mismatches": mismatches,
-            "referenced_discord_message_utc": timestamp.isoformat(),
+            "referenced_discord_message_utc": timestamp.isoformat() if timestamp else None,
             "provenance_warning": candidate["source_tier"],
         })
     assert [p["mismatch_count"] for p in output] == [4, 3, 2]
@@ -103,6 +125,9 @@ def run(before: Path | None = None, after: Path | None = None) -> dict:
         "reported_index_paths": external["paths_reported"],
         "pre_index_full_blind_decode_documented": False,
         "ce_background_association_documented": True,
+        "original_channel_export_sha": direct["blob_sha"],
+        "original_channel_events_corroborated": len(direct["directly_recovered_events"]),
+        "original_export_directly_verified_this_run": transcript is not None,
         "sticker_foreground_decoder_evidence": False,
         "limits": record["interpretive_boundaries"],
     }
@@ -112,9 +137,11 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--before", type=Path, help="optional pinned April 21 README")
     p.add_argument("--after", type=Path, help="optional pinned April 23 README")
+    p.add_argument("--export", type=Path,
+                   help="optional exact original exported Discord .txt, with Git blob verification")
     p.add_argument("--output", type=Path)
     args = p.parse_args()
-    result = run(args.before, args.after)
+    result = run(args.before, args.after, args.export)
     content = json.dumps(result, indent=2, sort_keys=True) + "\n"
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
