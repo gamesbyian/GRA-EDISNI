@@ -1,0 +1,2403 @@
+{
+  "status": "after-inspection palette guess, conditional source-content test NOT native decoder",
+  "source_git_sha1": "127d8772912ffc499e5afaffe321d5bab7e920df",
+  "palette_level": 207,
+  "palette_selection": "Observed some repeated 0xCF pixel colors before hypothesizing full 2^3 palette",
+  "candidate_3bit_colors": [
+    {
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "hex": "#000000",
+      "triple_bits": "000",
+      "sampled_marks": 1829,
+      "top_64_sampled_rows": 62,
+      "bottom_192_sampled_rows": 1767,
+      "sampled_bbox": [
+        0,
+        0,
+        127,
+        255
+      ]
+    },
+    {
+      "rgb": [
+        0,
+        0,
+        207
+      ],
+      "hex": "#0000CF",
+      "triple_bits": "001",
+      "sampled_marks": 85,
+      "top_64_sampled_rows": 83,
+      "bottom_192_sampled_rows": 2,
+      "sampled_bbox": [
+        1,
+        3,
+        127,
+        64
+      ]
+    },
+    {
+      "rgb": [
+        0,
+        207,
+        0
+      ],
+      "hex": "#00CF00",
+      "triple_bits": "010",
+      "sampled_marks": 81,
+      "top_64_sampled_rows": 80,
+      "bottom_192_sampled_rows": 1,
+      "sampled_bbox": [
+        3,
+        0,
+        127,
+        190
+      ]
+    },
+    {
+      "rgb": [
+        0,
+        207,
+        207
+      ],
+      "hex": "#00CFCF",
+      "triple_bits": "011",
+      "sampled_marks": 92,
+      "top_64_sampled_rows": 92,
+      "bottom_192_sampled_rows": 0,
+      "sampled_bbox": [
+        0,
+        0,
+        126,
+        63
+      ]
+    },
+    {
+      "rgb": [
+        207,
+        0,
+        0
+      ],
+      "hex": "#CF0000",
+      "triple_bits": "100",
+      "sampled_marks": 77,
+      "top_64_sampled_rows": 77,
+      "bottom_192_sampled_rows": 0,
+      "sampled_bbox": [
+        0,
+        4,
+        127,
+        63
+      ]
+    },
+    {
+      "rgb": [
+        207,
+        0,
+        207
+      ],
+      "hex": "#CF00CF",
+      "triple_bits": "101",
+      "sampled_marks": 85,
+      "top_64_sampled_rows": 85,
+      "bottom_192_sampled_rows": 0,
+      "sampled_bbox": [
+        0,
+        1,
+        127,
+        61
+      ]
+    },
+    {
+      "rgb": [
+        207,
+        207,
+        0
+      ],
+      "hex": "#CFCF00",
+      "triple_bits": "110",
+      "sampled_marks": 103,
+      "top_64_sampled_rows": 103,
+      "bottom_192_sampled_rows": 0,
+      "sampled_bbox": [
+        5,
+        3,
+        127,
+        63
+      ]
+    },
+    {
+      "rgb": [
+        207,
+        207,
+        207
+      ],
+      "hex": "#CFCFCF",
+      "triple_bits": "111",
+      "sampled_marks": 93,
+      "top_64_sampled_rows": 92,
+      "bottom_192_sampled_rows": 1,
+      "sampled_bbox": [
+        1,
+        3,
+        126,
+        64
+      ]
+    }
+  ],
+  "total_palette_hits_on_fixed_16px_grid": 2445,
+  "total_palette_hits_top_64_rows": 674,
+  "total_palette_hits_bottom_192_rows": 1771,
+  "source_lattice_dimensions": [
+    128,
+    256
+  ],
+  "candidate_512_site_banks": 64,
+  "selected_complete_master_branches": [
+    {
+      "state": "0100",
+      "addresses": [
+        302,
+        382,
+        58,
+        215,
+        311,
+        407,
+        305,
+        129,
+        357
+      ],
+      "q4_depths": [
+        1,
+        2,
+        0,
+        1,
+        0,
+        1,
+        0,
+        2,
+        2
+      ],
+      "max_palette_hits": 7,
+      "all_nine_hits_banks": [],
+      "all_64_banks": [
+        {
+          "bank": 0,
+          "source_rgb_hex": [
+            "#E20DE0",
+            "#000000",
+            "#3EF5F1",
+            "#0DFACF",
+            "#4B1E4C",
+            "#000D40",
+            "#C1019F",
+            "#0DCFCF",
+            "#CF00CF"
+          ],
+          "palette_hits": 2,
+          "paletted_mask": "010000001",
+          "selector_plane_bits": "?0??????1"
+        },
+        {
+          "bank": 1,
+          "source_rgb_hex": [
+            "#00010D",
+            "#B9EECF",
+            "#2700F9",
+            "#004BFB",
+            "#1340EE",
+            "#025E5F",
+            "#CF1500",
+            "#A90000",
+            "#320001"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 2,
+          "source_rgb_hex": [
+            "#FB3EFA",
+            "#CF0FEF",
+            "#00E8F9",
+            "#FBCF00",
+            "#EE680D",
+            "#6D008F",
+            "#22FBCF",
+            "#FBF400",
+            "#0E0109"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 3,
+          "source_rgb_hex": [
+            "#A90D00",
+            "#4039CC",
+            "#FBFB03",
+            "#FA0A8F",
+            "#80886C",
+            "#FBFB9C",
+            "#00120A",
+            "#CF40CF",
+            "#FBF506"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 4,
+          "source_rgb_hex": [
+            "#00CFFB",
+            "#64FBFB",
+            "#CF0013",
+            "#FBCFFB",
+            "#14F900",
+            "#CFFBCF",
+            "#FBCFCF",
+            "#00CF77",
+            "#CFFB18"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 5,
+          "source_rgb_hex": [
+            "#CFFB12",
+            "#000EFB",
+            "#00F36C",
+            "#ED00F4",
+            "#E50093",
+            "#CFCFCF",
+            "#0000CF",
+            "#FB80CF",
+            "#790084"
+          ],
+          "palette_hits": 2,
+          "paletted_mask": "000001100",
+          "selector_plane_bits": "?????10??"
+        },
+        {
+          "bank": 6,
+          "source_rgb_hex": [
+            "#00DC8B",
+            "#00EFFB",
+            "#E12A00",
+            "#FBCFCF",
+            "#58B3A8",
+            "#0793CD",
+            "#2700FB",
+            "#000600",
+            "#BACF00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 7,
+          "source_rgb_hex": [
+            "#CFFB00",
+            "#CCCCCC",
+            "#CF00CF",
+            "#B50DB4",
+            "#AA0000",
+            "#0000FB",
+            "#CFFBFB",
+            "#000513",
+            "#0300CF"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "001000000",
+          "selector_plane_bits": "??1??????"
+        },
+        {
+          "bank": 8,
+          "source_rgb_hex": [
+            "#CF00CF",
+            "#07CBE4",
+            "#CFFBCF",
+            "#00FB47",
+            "#0000DF",
+            "#621E62",
+            "#CFE489",
+            "#937B92",
+            "#001100"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "100000000",
+          "selector_plane_bits": "0????????"
+        },
+        {
+          "bank": 9,
+          "source_rgb_hex": [
+            "#CF00CF",
+            "#CF0000",
+            "#015F01",
+            "#01000D",
+            "#F20EEB",
+            "#025702",
+            "#F0CF00",
+            "#CFCFCF",
+            "#FB0000"
+          ],
+          "palette_hits": 3,
+          "paletted_mask": "110000010",
+          "selector_plane_bits": "00?????1?"
+        },
+        {
+          "bank": 10,
+          "source_rgb_hex": [
+            "#7426CF",
+            "#26CFFB",
+            "#FBF232",
+            "#CFCF00",
+            "#CF13CF",
+            "#0000DD",
+            "#F6FA38",
+            "#CF00CF",
+            "#8D96AB"
+          ],
+          "palette_hits": 2,
+          "paletted_mask": "000100010",
+          "selector_plane_bits": "???1???1?"
+        },
+        {
+          "bank": 11,
+          "source_rgb_hex": [
+            "#CFCF12",
+            "#008DFB",
+            "#00CF15",
+            "#CFCFE5",
+            "#00FB0D",
+            "#A1FBCF",
+            "#6E205B",
+            "#FB00FB",
+            "#198F4F"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 12,
+          "source_rgb_hex": [
+            "#06FBF6",
+            "#483943",
+            "#061605",
+            "#FB00FB",
+            "#D500A5",
+            "#555554",
+            "#B7E3E4",
+            "#00E700",
+            "#FBFB00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 13,
+          "source_rgb_hex": [
+            "#00FBCF",
+            "#CFCFFB",
+            "#4514F0",
+            "#CFF200",
+            "#FB00F8",
+            "#7C7A03",
+            "#AA010C",
+            "#CFE400",
+            "#0BF7CF"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 14,
+          "source_rgb_hex": [
+            "#0000FB",
+            "#00F4A9",
+            "#FB4DD2",
+            "#00CFCF",
+            "#D600B0",
+            "#CFCFFB",
+            "#CF3E0B",
+            "#09F200",
+            "#FBF6CF"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000100000",
+          "selector_plane_bits": "???1?????"
+        },
+        {
+          "bank": 15,
+          "source_rgb_hex": [
+            "#4AD8CF",
+            "#ECCF63",
+            "#00F700",
+            "#3C391E",
+            "#272B19",
+            "#030300",
+            "#49EE9F",
+            "#00009A",
+            "#010304"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 16,
+          "source_rgb_hex": [
+            "#023428",
+            "#CCEEFA",
+            "#05ECED",
+            "#0006FA",
+            "#069904",
+            "#FA78CC",
+            "#000028",
+            "#042A25",
+            "#020901"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 17,
+          "source_rgb_hex": [
+            "#FAE7FA",
+            "#727261",
+            "#AA00D5",
+            "#CC0614",
+            "#380344",
+            "#351214",
+            "#FAF1E2",
+            "#CDF3CC",
+            "#FA05B9"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 18,
+          "source_rgb_hex": [
+            "#7D548F",
+            "#FBCCFA",
+            "#6A6C6E",
+            "#4E147A",
+            "#8E00F7",
+            "#EECDDB",
+            "#7F6C4C",
+            "#0BF300",
+            "#007B06"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 19,
+          "source_rgb_hex": [
+            "#FBFDF8",
+            "#0781FB",
+            "#CA0DCC",
+            "#000706",
+            "#F8F9FF",
+            "#FF09A1",
+            "#A25F68",
+            "#010706",
+            "#4F034F"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 20,
+          "source_rgb_hex": [
+            "#936E67",
+            "#36072C",
+            "#7B860E",
+            "#5F002A",
+            "#1B5828",
+            "#0DBA40",
+            "#CE7D35",
+            "#FDFDEB",
+            "#00CD00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 21,
+          "source_rgb_hex": [
+            "#E6FBFA",
+            "#CDFAF0",
+            "#20862B",
+            "#CC07CC",
+            "#02FAFA",
+            "#FF10FB",
+            "#CCCDCC",
+            "#FBFBFA",
+            "#FAF300"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 22,
+          "source_rgb_hex": [
+            "#48CCFA",
+            "#EEBCCC",
+            "#FEF300",
+            "#CCCDCC",
+            "#022F01",
+            "#FB07CC",
+            "#02CCCC",
+            "#0B01A7",
+            "#CCCC0D"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 23,
+          "source_rgb_hex": [
+            "#2B0D01",
+            "#09890A",
+            "#063C3D",
+            "#FB02FB",
+            "#08CC83",
+            "#EE0592",
+            "#090602",
+            "#FDBFE0",
+            "#F67ED9"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 24,
+          "source_rgb_hex": [
+            "#CC0F0F",
+            "#B5B5D8",
+            "#0D13FA",
+            "#6A0657",
+            "#FADA00",
+            "#FBAAFA",
+            "#04CADF",
+            "#CD3706",
+            "#CCF0FA"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 25,
+          "source_rgb_hex": [
+            "#130CEE",
+            "#E9000B",
+            "#055E75",
+            "#ED4006",
+            "#0E4C5A",
+            "#CD07FA",
+            "#12C8C7",
+            "#B60A93",
+            "#CCCC06"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 26,
+          "source_rgb_hex": [
+            "#EBC802",
+            "#00FAFA",
+            "#7BFAF7",
+            "#435350",
+            "#CD0103",
+            "#CD0105",
+            "#024C00",
+            "#AAD005",
+            "#FA19CC"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 27,
+          "source_rgb_hex": [
+            "#8E8C07",
+            "#40EECC",
+            "#CACC68",
+            "#3E0D5E",
+            "#02038D",
+            "#A344B6",
+            "#709F6A",
+            "#FB5806",
+            "#00CC0D"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 28,
+          "source_rgb_hex": [
+            "#0F9E7E",
+            "#FA060D",
+            "#316B8B",
+            "#28F472",
+            "#086463",
+            "#70F50F",
+            "#86108B",
+            "#1A0E59",
+            "#346267"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 29,
+          "source_rgb_hex": [
+            "#1FEDEE",
+            "#CCFA67",
+            "#548BEE",
+            "#797B0B",
+            "#F6A6F4",
+            "#91EEF5",
+            "#853121",
+            "#F3F066",
+            "#CC8068"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 30,
+          "source_rgb_hex": [
+            "#5E0108",
+            "#000000",
+            "#000202",
+            "#15F061",
+            "#2DA68E",
+            "#A7CC40",
+            "#600002",
+            "#010700",
+            "#020102"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "010000000",
+          "selector_plane_bits": "?0???????"
+        },
+        {
+          "bank": 31,
+          "source_rgb_hex": [
+            "#010301",
+            "#000000",
+            "#FA0404",
+            "#C8EED5",
+            "#000002",
+            "#0BCCFA",
+            "#000002",
+            "#F75831",
+            "#020000"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "010000000",
+          "selector_plane_bits": "?0???????"
+        },
+        {
+          "bank": 32,
+          "source_rgb_hex": [
+            "#000000",
+            "#0E0000",
+            "#000302",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#010511"
+          ],
+          "palette_hits": 6,
+          "paletted_mask": "100111110",
+          "selector_plane_bits": "0??00000?"
+        },
+        {
+          "bank": 33,
+          "source_rgb_hex": [
+            "#370000",
+            "#083224",
+            "#000000",
+            "#000200",
+            "#030000",
+            "#010502",
+            "#000704",
+            "#000000",
+            "#006000"
+          ],
+          "palette_hits": 2,
+          "paletted_mask": "001000010",
+          "selector_plane_bits": "??0????0?"
+        },
+        {
+          "bank": 34,
+          "source_rgb_hex": [
+            "#070000",
+            "#010008",
+            "#810000",
+            "#330503",
+            "#00373D",
+            "#000831",
+            "#10000C",
+            "#160C00",
+            "#CC5E00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 35,
+          "source_rgb_hex": [
+            "#05000E",
+            "#010500",
+            "#020400",
+            "#001200",
+            "#050000",
+            "#000900",
+            "#124B07",
+            "#002A00",
+            "#00A01D"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 36,
+          "source_rgb_hex": [
+            "#470134",
+            "#1D1600",
+            "#120000",
+            "#000047",
+            "#005604",
+            "#2E3700",
+            "#000300",
+            "#000081",
+            "#CB0A07"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 37,
+          "source_rgb_hex": [
+            "#4E0000",
+            "#0B0204",
+            "#190106",
+            "#0B0000",
+            "#000072",
+            "#00BA00",
+            "#2C0029",
+            "#653000",
+            "#070000"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 38,
+          "source_rgb_hex": [
+            "#00011E",
+            "#000004",
+            "#620102",
+            "#510406",
+            "#000005",
+            "#0B0001",
+            "#001400",
+            "#040D0C",
+            "#0A7B00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 39,
+          "source_rgb_hex": [
+            "#290200",
+            "#03124A",
+            "#009EED",
+            "#01032B",
+            "#000C84",
+            "#008E00",
+            "#00093D",
+            "#480000",
+            "#151269"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 40,
+          "source_rgb_hex": [
+            "#020006",
+            "#1A0007",
+            "#000215",
+            "#310000",
+            "#033302",
+            "#00E27A",
+            "#470000",
+            "#000102",
+            "#370101"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 41,
+          "source_rgb_hex": [
+            "#4D0983",
+            "#000A11",
+            "#020002",
+            "#00BC00",
+            "#020412",
+            "#930100",
+            "#116800",
+            "#BC0000",
+            "#AF0500"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 42,
+          "source_rgb_hex": [
+            "#030300",
+            "#006D5C",
+            "#3E1A00",
+            "#007900",
+            "#0000A7",
+            "#EC0706",
+            "#790005",
+            "#080000",
+            "#080001"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 43,
+          "source_rgb_hex": [
+            "#06020F",
+            "#051300",
+            "#004600",
+            "#00071A",
+            "#020248",
+            "#160010",
+            "#050000",
+            "#0B00A6",
+            "#006F00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 44,
+          "source_rgb_hex": [
+            "#000006",
+            "#174F33",
+            "#000D00",
+            "#003200",
+            "#023E3B",
+            "#000000",
+            "#04000C",
+            "#040102",
+            "#000A35"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000001000",
+          "selector_plane_bits": "?????0???"
+        },
+        {
+          "bank": 45,
+          "source_rgb_hex": [
+            "#090500",
+            "#1C0002",
+            "#00010A",
+            "#030700",
+            "#000010",
+            "#000006",
+            "#000014",
+            "#00000F",
+            "#0F0001"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 46,
+          "source_rgb_hex": [
+            "#006000",
+            "#B46B11",
+            "#0C0000",
+            "#000067",
+            "#0B0000",
+            "#050000",
+            "#00005C",
+            "#000700",
+            "#130000"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 47,
+          "source_rgb_hex": [
+            "#070000",
+            "#0019BA",
+            "#00064F",
+            "#022A04",
+            "#390A00",
+            "#000000",
+            "#000067",
+            "#0B000E",
+            "#000006"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000001000",
+          "selector_plane_bits": "?????0???"
+        },
+        {
+          "bank": 48,
+          "source_rgb_hex": [
+            "#000004",
+            "#523302",
+            "#1B0000",
+            "#050000",
+            "#422200",
+            "#001008",
+            "#050000",
+            "#030001",
+            "#000902"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 49,
+          "source_rgb_hex": [
+            "#000A00",
+            "#0F0001",
+            "#331800",
+            "#000001",
+            "#053206",
+            "#006901",
+            "#008E00",
+            "#020315",
+            "#00075E"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 50,
+          "source_rgb_hex": [
+            "#001200",
+            "#00000F",
+            "#978100",
+            "#ED0551",
+            "#01001A",
+            "#000000",
+            "#006530",
+            "#005C10",
+            "#00000B"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000001000",
+          "selector_plane_bits": "?????0???"
+        },
+        {
+          "bank": 51,
+          "source_rgb_hex": [
+            "#001000",
+            "#00930A",
+            "#000D12",
+            "#080000",
+            "#48003A",
+            "#050000",
+            "#000040",
+            "#00001C",
+            "#000105"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 52,
+          "source_rgb_hex": [
+            "#DB0200",
+            "#000100",
+            "#006500",
+            "#002200",
+            "#020004",
+            "#001C07",
+            "#100056",
+            "#000000",
+            "#32003B"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000000010",
+          "selector_plane_bits": "???????0?"
+        },
+        {
+          "bank": 53,
+          "source_rgb_hex": [
+            "#44E408",
+            "#310007",
+            "#0AAD5A",
+            "#C50000",
+            "#AB0000",
+            "#000000",
+            "#090000",
+            "#00004D",
+            "#020000"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000001000",
+          "selector_plane_bits": "?????0???"
+        },
+        {
+          "bank": 54,
+          "source_rgb_hex": [
+            "#020804",
+            "#000037",
+            "#11001A",
+            "#040B02",
+            "#00081F",
+            "#0C0400",
+            "#00000B",
+            "#070104",
+            "#070C00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 55,
+          "source_rgb_hex": [
+            "#000003",
+            "#02024B",
+            "#02005E",
+            "#EC0000",
+            "#610001",
+            "#00000E",
+            "#16C409",
+            "#0E0003",
+            "#C33F00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 56,
+          "source_rgb_hex": [
+            "#000F00",
+            "#AA3308",
+            "#2C1609",
+            "#001F00",
+            "#BDC73D",
+            "#6A0031",
+            "#18600C",
+            "#08001F",
+            "#4B0000"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 57,
+          "source_rgb_hex": [
+            "#BA000E",
+            "#000200",
+            "#000000",
+            "#000200",
+            "#070000",
+            "#8A0000",
+            "#000053",
+            "#610C00",
+            "#189903"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "001000000",
+          "selector_plane_bits": "??0??????"
+        },
+        {
+          "bank": 58,
+          "source_rgb_hex": [
+            "#231000",
+            "#022800",
+            "#6B0008",
+            "#020B00",
+            "#101800",
+            "#0A0304",
+            "#000076",
+            "#390100",
+            "#002A03"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 59,
+          "source_rgb_hex": [
+            "#074000",
+            "#160000",
+            "#110500",
+            "#3BB206",
+            "#060000",
+            "#00009B",
+            "#000900",
+            "#030000",
+            "#00A612"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 60,
+          "source_rgb_hex": [
+            "#001203",
+            "#4D0B01",
+            "#00000B",
+            "#534400",
+            "#000E07",
+            "#010500",
+            "#040000",
+            "#1A030A",
+            "#0B1116"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 61,
+          "source_rgb_hex": [
+            "#050105",
+            "#9C0000",
+            "#01005C",
+            "#080000",
+            "#03400A",
+            "#050105",
+            "#050105",
+            "#000000",
+            "#000A00"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000000010",
+          "selector_plane_bits": "???????0?"
+        },
+        {
+          "bank": 62,
+          "source_rgb_hex": [
+            "#B20000",
+            "#000000",
+            "#030300",
+            "#000000",
+            "#000000",
+            "#00C50A",
+            "#0C1C42",
+            "#000000",
+            "#050105"
+          ],
+          "palette_hits": 4,
+          "paletted_mask": "010110010",
+          "selector_plane_bits": "?0?00??0?"
+        },
+        {
+          "bank": 63,
+          "source_rgb_hex": [
+            "#000000",
+            "#000000",
+            "#0D0705",
+            "#005830",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+          ],
+          "palette_hits": 7,
+          "paletted_mask": "110011111",
+          "selector_plane_bits": "00??00000"
+        }
+      ]
+    },
+    {
+      "state": "1100",
+      "addresses": [
+        302,
+        382,
+        58,
+        151,
+        311,
+        407,
+        369,
+        129,
+        357
+      ],
+      "q4_depths": [
+        1,
+        2,
+        0,
+        1,
+        0,
+        1,
+        0,
+        2,
+        2
+      ],
+      "max_palette_hits": 7,
+      "all_nine_hits_banks": [],
+      "all_64_banks": [
+        {
+          "bank": 0,
+          "source_rgb_hex": [
+            "#E20DE0",
+            "#000000",
+            "#3EF5F1",
+            "#213339",
+            "#4B1E4C",
+            "#000D40",
+            "#003802",
+            "#0DCFCF",
+            "#CF00CF"
+          ],
+          "palette_hits": 2,
+          "paletted_mask": "010000001",
+          "selector_plane_bits": "?0??????1"
+        },
+        {
+          "bank": 1,
+          "source_rgb_hex": [
+            "#00010D",
+            "#B9EECF",
+            "#2700F9",
+            "#004DCF",
+            "#1340EE",
+            "#025E5F",
+            "#5FCFF6",
+            "#A90000",
+            "#320001"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 2,
+          "source_rgb_hex": [
+            "#FB3EFA",
+            "#CF0FEF",
+            "#00E8F9",
+            "#FBCF81",
+            "#EE680D",
+            "#6D008F",
+            "#0035B0",
+            "#FBF400",
+            "#0E0109"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 3,
+          "source_rgb_hex": [
+            "#A90D00",
+            "#4039CC",
+            "#FBFB03",
+            "#40F0FB",
+            "#80886C",
+            "#FBFB9C",
+            "#706523",
+            "#CF40CF",
+            "#FBF506"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 4,
+          "source_rgb_hex": [
+            "#00CFFB",
+            "#64FBFB",
+            "#CF0013",
+            "#018B97",
+            "#14F900",
+            "#CFFBCF",
+            "#00FBCF",
+            "#00CF77",
+            "#CFFB18"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 5,
+          "source_rgb_hex": [
+            "#CFFB12",
+            "#000EFB",
+            "#00F36C",
+            "#CF00CF",
+            "#E50093",
+            "#CFCFCF",
+            "#FB0063",
+            "#FB80CF",
+            "#790084"
+          ],
+          "palette_hits": 2,
+          "paletted_mask": "000101000",
+          "selector_plane_bits": "???0?1???"
+        },
+        {
+          "bank": 6,
+          "source_rgb_hex": [
+            "#00DC8B",
+            "#00EFFB",
+            "#E12A00",
+            "#0CC9F4",
+            "#58B3A8",
+            "#0793CD",
+            "#00C200",
+            "#000600",
+            "#BACF00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 7,
+          "source_rgb_hex": [
+            "#CFFB00",
+            "#CCCCCC",
+            "#CF00CF",
+            "#CFCFCF",
+            "#AA0000",
+            "#0000FB",
+            "#BC00CF",
+            "#000513",
+            "#0300CF"
+          ],
+          "palette_hits": 2,
+          "paletted_mask": "001100000",
+          "selector_plane_bits": "??11?????"
+        },
+        {
+          "bank": 8,
+          "source_rgb_hex": [
+            "#CF00CF",
+            "#07CBE4",
+            "#CFFBCF",
+            "#4DCFCF",
+            "#0000DF",
+            "#621E62",
+            "#00CFFB",
+            "#937B92",
+            "#001100"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "100000000",
+          "selector_plane_bits": "0????????"
+        },
+        {
+          "bank": 9,
+          "source_rgb_hex": [
+            "#CF00CF",
+            "#CF0000",
+            "#015F01",
+            "#73F0FB",
+            "#F20EEB",
+            "#025702",
+            "#010125",
+            "#CFCFCF",
+            "#FB0000"
+          ],
+          "palette_hits": 3,
+          "paletted_mask": "110000010",
+          "selector_plane_bits": "00?????1?"
+        },
+        {
+          "bank": 10,
+          "source_rgb_hex": [
+            "#7426CF",
+            "#26CFFB",
+            "#FBF232",
+            "#E90AE9",
+            "#CF13CF",
+            "#0000DD",
+            "#12000E",
+            "#CF00CF",
+            "#8D96AB"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000000010",
+          "selector_plane_bits": "???????1?"
+        },
+        {
+          "bank": 11,
+          "source_rgb_hex": [
+            "#CFCF12",
+            "#008DFB",
+            "#00CF15",
+            "#302B23",
+            "#00FB0D",
+            "#A1FBCF",
+            "#CF47F1",
+            "#FB00FB",
+            "#198F4F"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 12,
+          "source_rgb_hex": [
+            "#06FBF6",
+            "#483943",
+            "#061605",
+            "#CF00CF",
+            "#D500A5",
+            "#555554",
+            "#00F100",
+            "#00E700",
+            "#FBFB00"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000100000",
+          "selector_plane_bits": "???0?????"
+        },
+        {
+          "bank": 13,
+          "source_rgb_hex": [
+            "#00FBCF",
+            "#CFCFFB",
+            "#4514F0",
+            "#9DBF18",
+            "#FB00F8",
+            "#7C7A03",
+            "#BD00BD",
+            "#CFE400",
+            "#0BF7CF"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 14,
+          "source_rgb_hex": [
+            "#0000FB",
+            "#00F4A9",
+            "#FB4DD2",
+            "#001CCF",
+            "#D600B0",
+            "#CFCFFB",
+            "#05CFA1",
+            "#09F200",
+            "#FBF6CF"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 15,
+          "source_rgb_hex": [
+            "#4AD8CF",
+            "#ECCF63",
+            "#00F700",
+            "#CF0000",
+            "#272B19",
+            "#030300",
+            "#887E88",
+            "#00009A",
+            "#010304"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000100000",
+          "selector_plane_bits": "???0?????"
+        },
+        {
+          "bank": 16,
+          "source_rgb_hex": [
+            "#023428",
+            "#CCEEFA",
+            "#05ECED",
+            "#35CCCA",
+            "#069904",
+            "#FA78CC",
+            "#03F0F9",
+            "#042A25",
+            "#020901"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 17,
+          "source_rgb_hex": [
+            "#FAE7FA",
+            "#727261",
+            "#AA00D5",
+            "#030300",
+            "#380344",
+            "#351214",
+            "#ED19B9",
+            "#CDF3CC",
+            "#FA05B9"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 18,
+          "source_rgb_hex": [
+            "#7D548F",
+            "#FBCCFA",
+            "#6A6C6E",
+            "#DD0C11",
+            "#8E00F7",
+            "#EECDDB",
+            "#CA0ECC",
+            "#0BF300",
+            "#007B06"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 19,
+          "source_rgb_hex": [
+            "#FBFDF8",
+            "#0781FB",
+            "#CA0DCC",
+            "#010706",
+            "#F8F9FF",
+            "#FF09A1",
+            "#0706C1",
+            "#010706",
+            "#4F034F"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 20,
+          "source_rgb_hex": [
+            "#936E67",
+            "#36072C",
+            "#7B860E",
+            "#93F1F6",
+            "#1B5828",
+            "#0DBA40",
+            "#FA42F9",
+            "#FDFDEB",
+            "#00CD00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 21,
+          "source_rgb_hex": [
+            "#E6FBFA",
+            "#CDFAF0",
+            "#20862B",
+            "#FBD2BB",
+            "#02FAFA",
+            "#FF10FB",
+            "#CD0D00",
+            "#FBFBFA",
+            "#FAF300"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 22,
+          "source_rgb_hex": [
+            "#48CCFA",
+            "#EEBCCC",
+            "#FEF300",
+            "#BFFBCC",
+            "#022F01",
+            "#FB07CC",
+            "#CD9EED",
+            "#0B01A7",
+            "#CCCC0D"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 23,
+          "source_rgb_hex": [
+            "#2B0D01",
+            "#09890A",
+            "#063C3D",
+            "#FF165F",
+            "#08CC83",
+            "#EE0592",
+            "#05C8ED",
+            "#FDBFE0",
+            "#F67ED9"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 24,
+          "source_rgb_hex": [
+            "#CC0F0F",
+            "#B5B5D8",
+            "#0D13FA",
+            "#2C0FCC",
+            "#FADA00",
+            "#FBAAFA",
+            "#EE93FA",
+            "#CD3706",
+            "#CCF0FA"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 25,
+          "source_rgb_hex": [
+            "#130CEE",
+            "#E9000B",
+            "#055E75",
+            "#CDA379",
+            "#0E4C5A",
+            "#CD07FA",
+            "#05B116",
+            "#B60A93",
+            "#CCCC06"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 26,
+          "source_rgb_hex": [
+            "#EBC802",
+            "#00FAFA",
+            "#7BFAF7",
+            "#FBCDE8",
+            "#CD0103",
+            "#CD0105",
+            "#01CDFA",
+            "#AAD005",
+            "#FA19CC"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 27,
+          "source_rgb_hex": [
+            "#8E8C07",
+            "#40EECC",
+            "#CACC68",
+            "#0B93CC",
+            "#02038D",
+            "#A344B6",
+            "#CCF15C",
+            "#FB5806",
+            "#00CC0D"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 28,
+          "source_rgb_hex": [
+            "#0F9E7E",
+            "#FA060D",
+            "#316B8B",
+            "#DA0C10",
+            "#086463",
+            "#70F50F",
+            "#0D00EE",
+            "#1A0E59",
+            "#346267"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 29,
+          "source_rgb_hex": [
+            "#1FEDEE",
+            "#CCFA67",
+            "#548BEE",
+            "#BF5B8F",
+            "#F6A6F4",
+            "#91EEF5",
+            "#064040",
+            "#F3F066",
+            "#CC8068"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 30,
+          "source_rgb_hex": [
+            "#5E0108",
+            "#000000",
+            "#000202",
+            "#000000",
+            "#2DA68E",
+            "#A7CC40",
+            "#000000",
+            "#010700",
+            "#020102"
+          ],
+          "palette_hits": 3,
+          "paletted_mask": "010100100",
+          "selector_plane_bits": "?0?0??0??"
+        },
+        {
+          "bank": 31,
+          "source_rgb_hex": [
+            "#010301",
+            "#000000",
+            "#FA0404",
+            "#C3C95B",
+            "#000002",
+            "#0BCCFA",
+            "#000000",
+            "#F75831",
+            "#020000"
+          ],
+          "palette_hits": 2,
+          "paletted_mask": "010000100",
+          "selector_plane_bits": "?0????0??"
+        },
+        {
+          "bank": 32,
+          "source_rgb_hex": [
+            "#000000",
+            "#0E0000",
+            "#000302",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#0E0E0B",
+            "#000000",
+            "#010511"
+          ],
+          "palette_hits": 5,
+          "paletted_mask": "100111010",
+          "selector_plane_bits": "0??000?0?"
+        },
+        {
+          "bank": 33,
+          "source_rgb_hex": [
+            "#370000",
+            "#083224",
+            "#000000",
+            "#000000",
+            "#030000",
+            "#010502",
+            "#000006",
+            "#000000",
+            "#006000"
+          ],
+          "palette_hits": 3,
+          "paletted_mask": "001100010",
+          "selector_plane_bits": "??00???0?"
+        },
+        {
+          "bank": 34,
+          "source_rgb_hex": [
+            "#070000",
+            "#010008",
+            "#810000",
+            "#003300",
+            "#00373D",
+            "#000831",
+            "#030009",
+            "#160C00",
+            "#CC5E00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 35,
+          "source_rgb_hex": [
+            "#05000E",
+            "#010500",
+            "#020400",
+            "#040300",
+            "#050000",
+            "#000900",
+            "#780100",
+            "#002A00",
+            "#00A01D"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 36,
+          "source_rgb_hex": [
+            "#470134",
+            "#1D1600",
+            "#120000",
+            "#0D0706",
+            "#005604",
+            "#2E3700",
+            "#030003",
+            "#000081",
+            "#CB0A07"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 37,
+          "source_rgb_hex": [
+            "#4E0000",
+            "#0B0204",
+            "#190106",
+            "#00230A",
+            "#000072",
+            "#00BA00",
+            "#A01100",
+            "#653000",
+            "#070000"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 38,
+          "source_rgb_hex": [
+            "#00011E",
+            "#000004",
+            "#620102",
+            "#A00011",
+            "#000005",
+            "#0B0001",
+            "#033309",
+            "#040D0C",
+            "#0A7B00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 39,
+          "source_rgb_hex": [
+            "#290200",
+            "#03124A",
+            "#009EED",
+            "#4C2900",
+            "#000C84",
+            "#008E00",
+            "#23010A",
+            "#480000",
+            "#151269"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 40,
+          "source_rgb_hex": [
+            "#020006",
+            "#1A0007",
+            "#000215",
+            "#0079D2",
+            "#033302",
+            "#00E27A",
+            "#020700",
+            "#000102",
+            "#370101"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 41,
+          "source_rgb_hex": [
+            "#4D0983",
+            "#000A11",
+            "#020002",
+            "#140000",
+            "#020412",
+            "#930100",
+            "#000906",
+            "#BC0000",
+            "#AF0500"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 42,
+          "source_rgb_hex": [
+            "#030300",
+            "#006D5C",
+            "#3E1A00",
+            "#080800",
+            "#0000A7",
+            "#EC0706",
+            "#000A00",
+            "#080000",
+            "#080001"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 43,
+          "source_rgb_hex": [
+            "#06020F",
+            "#051300",
+            "#004600",
+            "#00000A",
+            "#020248",
+            "#160010",
+            "#000706",
+            "#0B00A6",
+            "#006F00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 44,
+          "source_rgb_hex": [
+            "#000006",
+            "#174F33",
+            "#000D00",
+            "#00005E",
+            "#023E3B",
+            "#000000",
+            "#035300",
+            "#040102",
+            "#000A35"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000001000",
+          "selector_plane_bits": "?????0???"
+        },
+        {
+          "bank": 45,
+          "source_rgb_hex": [
+            "#090500",
+            "#1C0002",
+            "#00010A",
+            "#190501",
+            "#000010",
+            "#000006",
+            "#290000",
+            "#00000F",
+            "#0F0001"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 46,
+          "source_rgb_hex": [
+            "#006000",
+            "#B46B11",
+            "#0C0000",
+            "#000000",
+            "#0B0000",
+            "#050000",
+            "#000000",
+            "#000700",
+            "#130000"
+          ],
+          "palette_hits": 2,
+          "paletted_mask": "000100100",
+          "selector_plane_bits": "???0??0??"
+        },
+        {
+          "bank": 47,
+          "source_rgb_hex": [
+            "#070000",
+            "#0019BA",
+            "#00064F",
+            "#00004B",
+            "#390A00",
+            "#000000",
+            "#001A00",
+            "#0B000E",
+            "#000006"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000001000",
+          "selector_plane_bits": "?????0???"
+        },
+        {
+          "bank": 48,
+          "source_rgb_hex": [
+            "#000004",
+            "#523302",
+            "#1B0000",
+            "#000700",
+            "#422200",
+            "#001008",
+            "#000805",
+            "#030001",
+            "#000902"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 49,
+          "source_rgb_hex": [
+            "#000A00",
+            "#0F0001",
+            "#331800",
+            "#060300",
+            "#053206",
+            "#006901",
+            "#1A4B00",
+            "#020315",
+            "#00075E"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 50,
+          "source_rgb_hex": [
+            "#001200",
+            "#00000F",
+            "#978100",
+            "#001C4A",
+            "#01001A",
+            "#000000",
+            "#650040",
+            "#005C10",
+            "#00000B"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000001000",
+          "selector_plane_bits": "?????0???"
+        },
+        {
+          "bank": 51,
+          "source_rgb_hex": [
+            "#001000",
+            "#00930A",
+            "#000D12",
+            "#010071",
+            "#48003A",
+            "#050000",
+            "#180044",
+            "#00001C",
+            "#000105"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 52,
+          "source_rgb_hex": [
+            "#DB0200",
+            "#000100",
+            "#006500",
+            "#060C00",
+            "#020004",
+            "#001C07",
+            "#010000",
+            "#000000",
+            "#32003B"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000000010",
+          "selector_plane_bits": "???????0?"
+        },
+        {
+          "bank": 53,
+          "source_rgb_hex": [
+            "#44E408",
+            "#310007",
+            "#0AAD5A",
+            "#00002A",
+            "#AB0000",
+            "#000000",
+            "#0C2300",
+            "#00004D",
+            "#020000"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000001000",
+          "selector_plane_bits": "?????0???"
+        },
+        {
+          "bank": 54,
+          "source_rgb_hex": [
+            "#020804",
+            "#000037",
+            "#11001A",
+            "#0448B4",
+            "#00081F",
+            "#0C0400",
+            "#00000C",
+            "#070104",
+            "#070C00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 55,
+          "source_rgb_hex": [
+            "#000003",
+            "#02024B",
+            "#02005E",
+            "#020000",
+            "#610001",
+            "#00000E",
+            "#070000",
+            "#0E0003",
+            "#C33F00"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 56,
+          "source_rgb_hex": [
+            "#000F00",
+            "#AA3308",
+            "#2C1609",
+            "#440000",
+            "#BDC73D",
+            "#6A0031",
+            "#4A000A",
+            "#08001F",
+            "#4B0000"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 57,
+          "source_rgb_hex": [
+            "#BA000E",
+            "#000200",
+            "#000000",
+            "#006300",
+            "#070000",
+            "#8A0000",
+            "#060A00",
+            "#610C00",
+            "#189903"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "001000000",
+          "selector_plane_bits": "??0??????"
+        },
+        {
+          "bank": 58,
+          "source_rgb_hex": [
+            "#231000",
+            "#022800",
+            "#6B0008",
+            "#030102",
+            "#101800",
+            "#0A0304",
+            "#3B0009",
+            "#390100",
+            "#002A03"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 59,
+          "source_rgb_hex": [
+            "#074000",
+            "#160000",
+            "#110500",
+            "#000065",
+            "#060000",
+            "#00009B",
+            "#000863",
+            "#030000",
+            "#00A612"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 60,
+          "source_rgb_hex": [
+            "#001203",
+            "#4D0B01",
+            "#00000B",
+            "#4F9A0B",
+            "#000E07",
+            "#010500",
+            "#00000B",
+            "#1A030A",
+            "#0B1116"
+          ],
+          "palette_hits": 0,
+          "paletted_mask": "000000000",
+          "selector_plane_bits": "?????????"
+        },
+        {
+          "bank": 61,
+          "source_rgb_hex": [
+            "#050105",
+            "#9C0000",
+            "#01005C",
+            "#050105",
+            "#03400A",
+            "#050105",
+            "#6D6E00",
+            "#000000",
+            "#000A00"
+          ],
+          "palette_hits": 1,
+          "paletted_mask": "000000010",
+          "selector_plane_bits": "???????0?"
+        },
+        {
+          "bank": 62,
+          "source_rgb_hex": [
+            "#B20000",
+            "#000000",
+            "#030300",
+            "#000000",
+            "#000000",
+            "#00C50A",
+            "#000000",
+            "#000000",
+            "#050105"
+          ],
+          "palette_hits": 5,
+          "paletted_mask": "010110110",
+          "selector_plane_bits": "?0?00?00?"
+        },
+        {
+          "bank": 63,
+          "source_rgb_hex": [
+            "#000000",
+            "#000000",
+            "#0D0705",
+            "#050105",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+          ],
+          "palette_hits": 7,
+          "paletted_mask": "110011111",
+          "selector_plane_bits": "00??00000"
+        }
+      ]
+    }
+  ],
+  "scope": "Only fixed top-left 16px sample, row-major 512 banks, 0/207 exactly, native Q4->RGB bit labels; other source colors/regions/transformations remain open",
+  "warning": "The 0xCF level was recognized after source image inspection; it is a discovery device. Seven historical marked colors have not been independently authenticated as exactly this palette.",
+  "replay_provenance": {
+    "github_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/37857882404",
+    "github_job_id": 113586365121,
+    "raw_png_sha1_confirmed": true
+  }
+}
