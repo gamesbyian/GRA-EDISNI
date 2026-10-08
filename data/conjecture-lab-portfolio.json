@@ -239,6 +239,65 @@
       }
     },
     {
+      "id": "CL-04",
+      "version": 1,
+      "title": "Original Terminal41 gate-98 PNG as conditional 512-address and RGB-palette receiving artifact",
+      "status": "byte_authenticated_source_tested_conditional_reader_negative",
+      "research_mode": "DISCOVER/DEVELOP; source authentication valid, sticker linkage conjectural",
+      "source": {
+        "repository": "twinysam/INSIDE-ARG",
+        "blob_path": "terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+        "size_bytes": 19360240,
+        "git_blob_sha1": "127d8772912ffc499e5afaffe321d5bab7e920df",
+        "sha256": "db67f13634004b8f3914aae6e06bd40f01e4f71531d689603d0f1f3be2a99ded",
+        "dimensions": [
+          2048,
+          4096
+        ],
+        "original_mode": "RGBA"
+      },
+      "attested_historical_operation": "Select exact RGB colours at stride-16 grid on gate-98 image, recombine prior ARG image (historically seven selected colours including black; exact hex legend not yet independently recovered)",
+      "sampled_lattice": {
+        "width": 128,
+        "height": 256,
+        "positions": 32768,
+        "distinct_rgb_colors": 19742,
+        "nonblack_0xcf_palette_hits": 616,
+        "nonblack_0xcf_palette_in_first_64_rows": 612,
+        "nonblack_0xcf_palette_in_last_192_rows": 4,
+        "regional_enrichment_ratio": 459,
+        "zero_or_207_rgb_palette_selected_posthoc": true
+      },
+      "invented_bridges": [
+        "Use nine class 9-bit values as 0..511 row-major positions in a single bank",
+        "Group 128×256 lattice into 64 512-site banks without native bank selector",
+        "Map one-hot Q4 depth 0/1/2 to source pixel R/G/B component",
+        "Treat nonzero 0xCF colours as 3-bit source words"
+      ],
+      "tested_sticker_states": [
+        "0100",
+        "1100"
+      ],
+      "source_replay": "docs/conjecture-lab/2026-10-08-gate98-original-pixel-results.md",
+      "readout_result": {
+        "banks_each": 64,
+        "full_nine_printable_ASCII_banks": 0,
+        "max_printable_ascii_bytes": 5,
+        "full_nine_site_eight_palette_banks": 0,
+        "max_nonblack_0xcf_palette_matches": 3,
+        "black_background_false_hit_caution": "Counting #000000 as a palette symbol gives 7/9 at bank63, which is mostly ordinary background"
+      },
+      "files": [
+        "scripts/conjecture_lab_gate98_real_pixels.py",
+        "scripts/conjecture_lab_gate98_palette_enrichment.py",
+        "scripts/conjecture_lab_gate98_cf_palette.py",
+        "data/conjecture-lab-gate98-exact-pixels-2026-10-08.json",
+        "data/conjecture-lab-gate98-cf-palette-2026-10-08.json"
+      ],
+      "next_source_only_test": "Recover authentic 2018 historical hex RGB legend and region, replay original solved gate-98 output as positive control without referencing sticker values, then attempt a frozen second-stage CE readout",
+      "evidence_status": "Authentic native RGB/pixel extraction established for historical ARG; NO CE foreground-to-gate98 receiver established"
+    },
+    {
       "id": "CONTROL-0",
       "version": 1,
       "title": "Foreground has no further endgame",
@@ -257,5 +316,5 @@
     "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
     "A frozen exact failure refutes that implementation only"
   ],
-  "latest_update": "2026-10-08-second-pass"
+  "latest_update": "2026-10-08-cl04-native-pixel-source"
 }
