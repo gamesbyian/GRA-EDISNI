@@ -64,6 +64,30 @@ and per-letter shuffle result reported by the community (p~0.06) is
 an important counterweight: no one null should be privileged after
 seeing the match rate.
 
+## Experiment 432: exact strict cube × letter null
+
+A stronger and more directly comparable null preserves the **multiset of
+observed symbols within each (cube, A–I class) group**, while keeping each
+unknown site unknown. There are 16 nontrivial groups, each offering two
+or three unique rearrangements. The product is exactly **331,776**,
+small enough for complete enumeration, not an estimated p-value.
+
+The exact result on 66 residues is:
+
+| Cross-cube statistic | Actual | Exact null mean | Assignments >= actual | Fraction |
+| --- | ---: | ---: | ---: | ---: |
+| All cubes | 33/64 | 27.583/64 | 20,112/331,776 | **0.060619** |
+| Primary cubes only | 24/40 | 20.667/40 | 38,784/331,776 | **0.116898** |
+
+This reproduces the stricter Discord p≈0.06 finding with the updated
+corpus and replaces sampling error with exact enumeration. Relative to
+the frame-constrained null above, the more conservative cube×letter null
+weakens the apparent evidence. Because the null and test statistic
+were chosen retrospectively, even these exact tail fractions are
+**diagnostic comparisons rather than confirmatory significance**.
+
+Reproduction: `python scripts/audit_cross_cube_exact_strict.py`.
+
 ## Same-mask geometric transform controls
 
 A second comparison uses only actual Q1–Q3 observations. For every
