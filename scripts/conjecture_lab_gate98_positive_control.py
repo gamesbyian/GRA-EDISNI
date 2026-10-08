@@ -97,8 +97,11 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--source")
     ap.add_argument("--output")
+    ap.add_argument("--preserve-source", help="Local original-byte output for one-off forensic use")
     args=ap.parse_args()
     raw,h=load_bytes(args.source)
+    if args.preserve_source:
+        Path(args.preserve_source).write_bytes(raw)
     with Image.open(BytesIO(raw)) as im:
         assert im.size==EXPECTED_DIMENSIONS
         result=make_result(im)
