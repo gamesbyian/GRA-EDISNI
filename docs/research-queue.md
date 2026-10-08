@@ -892,3 +892,55 @@ Experiment 456 makes the next independently explicit consumer comparison. The sa
 Frozen as `data/frozen-q4-axis-consumer-discriminators.json`; do not overwrite prior machine prediction files. Full method: `docs/experiment-456-q4-axis-consumer.md`.
 
 **Stopping rule:** Do not widen arbitrary 3D/4D transforms, rotate until a picture appears, or treat a retrospective forced holdout as independent validation. The native-depth operation is simpler, but the quarter-axis family survives with extra arbitrary label choices. Reopen this lane for an independently recovered coordinate/consumer clue or a new physical sticker in residue classes 50/54/93 (or other preexisting frozen discriminators). No owner outreach is required of the project owner.
+
+## Experiments 459–464 — exact cube-lab replication, structural nulls and prediction erasures (8 Oct 2026)
+
+The Discord researcher's provided offline HTML gives the authoritative
+unordered ±1 X/Y/Z pair rules, 65-position original map and exact 331,776
+cube×letter-preserving shuffle. Experiment 459 reproduces its screenshots
+precisely and updates them against the 66-residue canonical corpus without
+redistributing the researcher's embedded fonts.
+
+**Evidence summary, not a solved decoder:**
+
+- Experiment 460: Positive full-grid same-spot-over-shift agreement arises
+  in 98–100% of broad observation-compatible 3-of-9 completions for the
+  X comparison, even without the native physical-column constraint.
+- Experiment 461: The observed **magnitude** of the alphabetical-X
+  difference is unusual under two *separately declared* structural nulls
+  preserving per-frame observed symbol counts and the missing-data mask.
+  Tail estimates near 0.0027 uncorrected or 0.009–0.010 for the six
+  declared direction/layout comparisons remain retrospectively selected.
+- Experiment 462: Alphabetical-X registration weighting predicts
+  40/54 symbols in full-frame erasures, and 40–41/54 in sampled
+  *entire-primary-cube* erasures, versus 32/54 majority baseline.
+  These are exploratory operations/strengths picked after full-corpus
+  examination; Cube 1 is responsible for most of the gain, and
+  excluding Q4 from the score still yields 37–38/54.
+- Experiment 463: Registration alone does not resolve which physical
+  Q4 instruction is intended. Its weighted candidates lean slash
+  at residues 50/54 while the *previously frozen* native depth family
+  requires dash at both; residue 93 leans dot, making support
+  inconsistent across the rival codebook predictions.
+- Experiment 464: A native-depth Q4 reader reconstructs **11/12**
+  known Q4 symbols when withholding one letter's stack, but only
+  **8/12** (dot-majority) when all twelve known Q4 marks are erased.
+  This is internal conditional reconstruction, not derivation of Q4
+  commands from primary cubes.
+
+**Next closed-corpus decision:**
+Do not tune additional arbitrary axes or softmax strengths to win an
+already explored holdout. Preserve the current physical observations
+and previously frozen discriminators; move to independently supported
+*consumer operations* recovered from historical ARG artifacts, CE
+physical materials, or game-source mechanisms. Any proposed operation
+must specify its source, coordinate frame, input alphabet, expected
+output type, and falsifiable consequence **before** examining aesthetic
+readouts. Continued work does not require new owner outreach or
+future sticker discoveries.
+
+Reproduce: `scripts/audit_cube_registration_extended.js`,
+`scripts/audit_cube_registration_predictive_holdout.js`,
+`scripts/audit_registration_q4_reader_conflict.py`,
+`scripts/audit_q4_erasure_scope.py`; new path-scoped GHA smoke
+workflow `.github/workflows/cube-registration-research.yml`.
