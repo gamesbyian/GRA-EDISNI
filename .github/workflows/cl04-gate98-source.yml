@@ -1,0 +1,29 @@
+# Temporary scoped source-acquisition experiment. Remove after archived result is
+# retrieved, rather than adding recurring network dependence to normal CI.
+name: CL-04 Gate98 byte-exact source
+on:
+  pull_request:
+    paths:
+      - .github/workflows/cl04-gate98-source.yml
+      - scripts/conjecture_lab_gate98_real_pixels.py
+permissions:
+  contents: read
+jobs:
+  source-image:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install image reader
+        run: python -m pip install 'Pillow>=10,<13'
+      - name: Scan original pinned 19.36 MB gate-98 source
+        run: python scripts/conjecture_lab_gate98_real_pixels.py --output gate98-cl04-results.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: gate98-cl04-exact-replay
+          path: gate98-cl04-results.json
+          retention-days: 14
