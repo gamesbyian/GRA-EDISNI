@@ -81,6 +81,23 @@ No unusual *additional* cube-local visual clustering emerges under
 this elementary score. These are conditional ranges, not randomization
 p-values.
 
+## Frozen discrimination within the six-way overlap
+
+Among the six A∩B∩R∩S masters, exactly ten still-unobserved
+residues vary: **22, 25, 55, 58, 61, 82, 88, 91, 100, 106**.
+
+Two positions make an exactly balanced **3/3** split:
+
+| H108 residue | six-master foreground division | physical serials ≤600 |
+|---|---|---|
+| **61** | `/` ×3, `-` ×3 | 61, 169, 277, 385, 493 |
+| **100** | `/` ×3, `.` ×3 | 100, 208, 316, 424, 532 |
+
+Residues 22/25/55/88/91/106 split 2/4; residues 58/82 split 1/5.
+These counts apply *only* to the six-way overlap. They are not general
+forecasts or probabilities and should not overwrite the independently
+frozen incumbent prediction matrix.
+
 ## Interpretation
 
 1. The complaint that there are too many missing stickers to test ideas
