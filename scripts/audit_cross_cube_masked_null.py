@@ -19,7 +19,6 @@ import random
 
 ROOT = Path(__file__).resolve().parents[1]
 LETTERS = "ABCDEFGHI"
-PHYSICAL = "IABCDE FGH".replace(" ", "")  # IAB CDE FGH
 PHYSICAL = "IAB" + "CDE" + "FGH"
 COLS = tuple(tuple(LETTERS.index(PHYSICAL[3*row+col]) for row in range(3))
              for col in range(3))
