@@ -6,6 +6,7 @@ on:
     paths:
       - .github/workflows/cl04-gate98-source.yml
       - scripts/conjecture_lab_gate98_real_pixels.py
+      - scripts/conjecture_lab_gate98_palette_enrichment.py
 permissions:
   contents: read
 jobs:
@@ -21,11 +22,15 @@ jobs:
         run: python -m pip install 'Pillow>=10,<13'
       - name: Scan original pinned 19.36 MB gate-98 source
         run: python scripts/conjecture_lab_gate98_real_pixels.py --output gate98-cl04-results.json
+      - name: Audit exact RGB marker spatial enrichment
+        run: python scripts/conjecture_lab_gate98_palette_enrichment.py --output gate98-cl04b-palette.json
       - name: Preserve small exact result for repository research record
         run: echo "CL04_RESULT_JSON_B64=$(base64 -w0 gate98-cl04-results.json)"
       - uses: actions/upload-artifact@v4
         if: success()
         with:
           name: gate98-cl04-exact-replay
-          path: gate98-cl04-results.json
+          path: |
+            gate98-cl04-results.json
+            gate98-cl04b-palette.json
           retention-days: 14
