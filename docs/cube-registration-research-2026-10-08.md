@@ -16,6 +16,7 @@ and source belong to its original author, is **not** redistributed.
 | [472](experiment-472-registered-holdout-prediction.md) | Use alphabetical-X registration as a score over complete candidate codes, not literal symbol copying. Nine whole-frame erasures recover 40–41/54 vs 32/54 majority; three full-primary-cube erasures recover about 40–41/54, driven heavily by Q1. Much of the gain remains with Q4 omitted from the score. |
 | [473](experiment-473-registration-q4-reader-conflict.md) | Weighting by alphabetical-X coherence favours the relabelled-quarter axis family more than the native-depth axis family, but it doesn't establish either instruction operation and gives conflicting expectations at 50/54/93. |
 | [474](experiment-474-q4-erasure-scope.md) | Native-depth Q4 reader recovers 11/12 observed symbols under one-depth-stack-at-a-time erasure but only 8/12 after erasing all known Q4 symbols simultaneously. Internal coupling is not primary-to-Q4 reconstruction. |
+| [475](experiment-475-primary-only-registration.md) | Remove Q4 from pair statistics and nulls entirely. Q1–Q3 alone have 24/40 exact matches vs 16/47 alphabetical-X, and census-constrained structural-null tail ~0.014, six-comparison max ~0.043. Q4 is not necessary for the observed X contrast. |
 
 ## Reproduce
 
@@ -26,6 +27,7 @@ node scripts/audit_cube_registration_extended.js
 node scripts/audit_cube_registration_predictive_holdout.js
 python scripts/audit_registration_q4_reader_conflict.py
 python scripts/audit_q4_erasure_scope.py
+python scripts/audit_cube_primary_registration_null.py --samples 250000
 ```
 
 All scripts read the canonical `data/observations.csv` and contain
