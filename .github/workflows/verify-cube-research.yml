@@ -1,0 +1,28 @@
+name: Verify conditional cube experiments
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit 1 enumerate_sticker_completion_ensembles.py
+        run: python scripts/enumerate_sticker_completion_ensembles.py > /dev/null
+      - name: Audit 2 audit_sticker_readout_consumers.py
+        run: python scripts/audit_sticker_readout_consumers.py > /dev/null
+      - name: Audit 3 audit_cross_cube_masked_null.py
+        run: python scripts/audit_cross_cube_masked_null.py > /dev/null
+      - name: Audit 4 audit_cross_cube_exact_strict.py
+        run: python scripts/audit_cross_cube_exact_strict.py > /dev/null
+      - name: Audit 5 audit_cube_transfer_holdouts.py
+        run: python scripts/audit_cube_transfer_holdouts.py > /dev/null
+      - name: Audit 6 audit_cube_missing_mask_sensitivity.py
+        run: python scripts/audit_cube_missing_mask_sensitivity.py > /dev/null
+      - name: Audit 7 audit_q4_axis_consumer_comparison.py
+        run: python scripts/audit_q4_axis_consumer_comparison.py > /dev/null
