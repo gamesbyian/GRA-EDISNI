@@ -36,8 +36,8 @@
     {
       "id": "playdead_printer_website_subscription_box",
       "source_kind": "historically_functional_web_input",
-      "native_role": "Developer website's seemingly ordinary email subscription input accepted deciphered printer phrases and returned noisy/corrupted PDF-image material",
-      "native_input_type": "short deciphered phrase/text submitted through website subscription box; not known to accept CE foreground or 108 positional marks",
+      "native_role": "Original developer website: a phrase typed in the ordinary subscription field was used by the special webpage-printing action to produce conditional PDF/image output",
+      "native_input_type": "Deciphered printer phrase placed in subscription field and consumed when invoking a site printer/print button; not a CE-specific accepting textbox",
       "primary_source": "docs/arg-puzzle-mechanics-corpus.md",
       "contemporary_primary_url": "https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/",
       "source_date": "2019-01-03",
@@ -45,7 +45,9 @@
       "source_status": "historic_confirmed_printer_input_not_ce_input",
       "ce_bridge_status": "no_documented_post_2019_ce_submission",
       "strongest_negative": "The Microsoft/Xbox contemporary account establishes a working prior printer-to-site PDF consumer; it does not describe a Collector's Edition instruction, and its posted date predates CE sticker release.",
-      "next_independent_evidence": "Original Playdead web source or a CE-specific response distinguishing sticker-derived input from previously solved printer credentials."
+      "next_independent_evidence": "Original Playdead web source or a CE-specific response distinguishing sticker-derived input from previously solved printer credentials.",
+      "secondary_source": "https://wiki.gamedetectives.net/w/Inside_ARG#Printer_Button",
+      "usage_caveat": "Do not conflate pressing the print button with submitting the newsletter form; contemporary Xbox account summarizes the visible field, later Game Detectives documentation specifies the print action."
     },
     {
       "id": "terminal41_printer_four_schemes",
