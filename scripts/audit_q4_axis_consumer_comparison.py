@@ -81,6 +81,43 @@ def symbol_sets(masters):
     }
 
 
+def output_readout(master, selector, axis, pi):
+    word = []
+    for fixed in range(3):
+        for j in range(9):
+            address = pi[selector[j]]
+            quarter,depth = ((fixed,address) if axis=="depth"
+                              else (address,fixed))
+            word.append(master[27*quarter+9*depth+j])
+    return "".join(word)
+
+
+def output_stability(masters, axis):
+    words = Counter()
+    for master in masters:
+        selector = tuple(
+            next(d for d in range(3)
+                 if master[81+9*d+j] == "/")
+            for j in range(9)
+        )
+        perms = [IDENTITY] if axis == "depth" else [
+            pi for pi in PERMS if valid_axis(master,selector,axis,pi)
+        ]
+        for pi in perms:
+            words[output_readout(master,selector,axis,pi)] += 1
+    fixed = "".join(
+        next(iter(signs)) if len(signs := {word[i] for word in words}) == 1
+        else "?"
+        for i in range(27)
+    )
+    return {
+        "distinct_readouts":len(words),
+        "invariant_positions":27-fixed.count("?"),
+        "fixed_symbol_mask":fixed,
+        "all_readouts_and_operation_counts":dict(sorted(words.items())),
+    }
+
+
 def holdout_frame_summary(observed):
     totals = {
         "depth_identity": Counter(),
@@ -203,6 +240,15 @@ def main():
               for x in differences if x["disjoint"]]
     assert actual == expected, "Frozen physical prediction drift"
 
+    outputs = {
+        "depth":output_stability(depth, "depth"),
+        "quarter":output_stability(quarter, "quarter"),
+    }
+    assert outputs["depth"]["distinct_readouts"] == 3
+    assert outputs["depth"]["invariant_positions"] == 21
+    assert outputs["quarter"]["distinct_readouts"] == 5
+    assert outputs["quarter"]["invariant_positions"] == 17
+
     holdout = holdout_frame_summary(observed)
     print(json.dumps({
         "physical_records":physical_count,
@@ -212,6 +258,7 @@ def main():
         "depth_identity_masters":len(depth),
         "quarter_any_label_masters":len(quarter),
         "shared_complete_masters":len(depth & quarter),
+        "conditional_selected_output_stability":outputs,
         "distinct_foreground_prediction_sets":differences,
         "three_opposite_forced_missing_residues":[50,54,93],
         "single_frame_leave_out":holdout,
