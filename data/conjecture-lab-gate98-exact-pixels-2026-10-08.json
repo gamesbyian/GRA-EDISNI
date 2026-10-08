@@ -1,0 +1,2450 @@
+{
+  "status": "CL-04 conditional real-source replay, not solution evidence",
+  "source": {
+    "upstream_blob_repo": "twinysam/INSIDE-ARG",
+    "upstream_path": "terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+    "source_git_sha1": "127d8772912ffc499e5afaffe321d5bab7e920df",
+    "source_sha256": "db67f13634004b8f3914aae6e06bd40f01e4f71531d689603d0f1f3be2a99ded",
+    "source_bytes": 19360240,
+    "dimensions": [
+      2048,
+      4096
+    ],
+    "png_mode": "RGBA"
+  },
+  "historically_reported_operation": {
+    "step": 16,
+    "origin": [
+      0,
+      0
+    ],
+    "origin_assumption": "Top-left grid origin; not a recovered user key",
+    "grid_dimensions": [
+      128,
+      256
+    ],
+    "grid_sites": 32768,
+    "distinct_exact_sampled_rgb_colors": 19742,
+    "top_20_exact_sampled_rgb_colors": [
+      {
+        "rgb": [
+          0,
+          0,
+          0
+        ],
+        "count": 1829
+      },
+      {
+        "rgb": [
+          5,
+          1,
+          5
+        ],
+        "count": 236
+      },
+      {
+        "rgb": [
+          3,
+          3,
+          0
+        ],
+        "count": 210
+      },
+      {
+        "rgb": [
+          0,
+          2,
+          0
+        ],
+        "count": 137
+      },
+      {
+        "rgb": [
+          0,
+          0,
+          2
+        ],
+        "count": 125
+      },
+      {
+        "rgb": [
+          3,
+          0,
+          0
+        ],
+        "count": 110
+      },
+      {
+        "rgb": [
+          0,
+          1,
+          0
+        ],
+        "count": 107
+      },
+      {
+        "rgb": [
+          2,
+          0,
+          0
+        ],
+        "count": 106
+      },
+      {
+        "rgb": [
+          207,
+          207,
+          0
+        ],
+        "count": 103
+      },
+      {
+        "rgb": [
+          0,
+          0,
+          3
+        ],
+        "count": 103
+      },
+      {
+        "rgb": [
+          0,
+          6,
+          0
+        ],
+        "count": 100
+      },
+      {
+        "rgb": [
+          0,
+          4,
+          0
+        ],
+        "count": 97
+      },
+      {
+        "rgb": [
+          207,
+          207,
+          207
+        ],
+        "count": 93
+      },
+      {
+        "rgb": [
+          0,
+          207,
+          207
+        ],
+        "count": 92
+      },
+      {
+        "rgb": [
+          0,
+          0,
+          4
+        ],
+        "count": 89
+      },
+      {
+        "rgb": [
+          0,
+          0,
+          5
+        ],
+        "count": 87
+      },
+      {
+        "rgb": [
+          207,
+          0,
+          207
+        ],
+        "count": 85
+      },
+      {
+        "rgb": [
+          0,
+          0,
+          207
+        ],
+        "count": 85
+      },
+      {
+        "rgb": [
+          0,
+          3,
+          0
+        ],
+        "count": 85
+      },
+      {
+        "rgb": [
+          4,
+          0,
+          0
+        ],
+        "count": 83
+      }
+    ],
+    "black_sample_count": 1829,
+    "white_sample_count": 2
+  },
+  "candidate_reader": {
+    "schema": "9 addresses in 0..511, one RGB channel per class from Q4",
+    "record_order": "128 sampled pixels per row, consecutive rows",
+    "bank_grid": "64 consecutive 128x4 sampled-pixel bands",
+    "unfixed_bank_count": 64,
+    "unfixed_channel_label_maps": 6,
+    "unfixed_other_registrations": "at least alternative origins and traversals; not searched",
+    "native_source_supports_this_reader": false,
+    "blind_candidate_selection": false
+  },
+  "actual_observed_h108_live_states": 10,
+  "conditionally_selected_states": [
+    {
+      "state": "0100",
+      "class_addresses": [
+        302,
+        382,
+        58,
+        215,
+        311,
+        407,
+        305,
+        129,
+        357
+      ],
+      "q4_channel_depths": [
+        1,
+        2,
+        0,
+        1,
+        0,
+        1,
+        0,
+        2,
+        2
+      ],
+      "bank_readouts": [
+        {
+          "bank": 0,
+          "byte_hex": "0d003efa4b0dc1cfcf",
+          "rgb_hex": [
+            "e20de0",
+            "000000",
+            "3ef5f1",
+            "0dfacf",
+            "4b1e4c",
+            "000d40",
+            "c1019f",
+            "0dcfcf",
+            "cf00cf"
+          ],
+          "ascii_escaped": "..>.K....",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 1,
+          "byte_hex": "01cf274b135ecf0001",
+          "rgb_hex": [
+            "00010d",
+            "b9eecf",
+            "2700f9",
+            "004bfb",
+            "1340ee",
+            "025e5f",
+            "cf1500",
+            "a90000",
+            "320001"
+          ],
+          "ascii_escaped": "..'K.^...",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 2,
+          "byte_hex": "3eef00cfee00220009",
+          "rgb_hex": [
+            "fb3efa",
+            "cf0fef",
+            "00e8f9",
+            "fbcf00",
+            "ee680d",
+            "6d008f",
+            "22fbcf",
+            "fbf400",
+            "0e0109"
+          ],
+          "ascii_escaped": ">.....\"..",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 3,
+          "byte_hex": "0dccfb0a80fb00cf06",
+          "rgb_hex": [
+            "a90d00",
+            "4039cc",
+            "fbfb03",
+            "fa0a8f",
+            "80886c",
+            "fbfb9c",
+            "00120a",
+            "cf40cf",
+            "fbf506"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 4,
+          "byte_hex": "cffbcfcf14fbfb7718",
+          "rgb_hex": [
+            "00cffb",
+            "64fbfb",
+            "cf0013",
+            "fbcffb",
+            "14f900",
+            "cffbcf",
+            "fbcfcf",
+            "00cf77",
+            "cffb18"
+          ],
+          "ascii_escaped": ".......w.",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 5,
+          "byte_hex": "fbfb0000e5cf00cf84",
+          "rgb_hex": [
+            "cffb12",
+            "000efb",
+            "00f36c",
+            "ed00f4",
+            "e50093",
+            "cfcfcf",
+            "0000cf",
+            "fb80cf",
+            "790084"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 6,
+          "byte_hex": "dcfbe1cf5893270000",
+          "rgb_hex": [
+            "00dc8b",
+            "00effb",
+            "e12a00",
+            "fbcfcf",
+            "58b3a8",
+            "0793cd",
+            "2700fb",
+            "000600",
+            "bacf00"
+          ],
+          "ascii_escaped": "....X.'..",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 7,
+          "byte_hex": "fbcccf0daa00cf13cf",
+          "rgb_hex": [
+            "cffb00",
+            "cccccc",
+            "cf00cf",
+            "b50db4",
+            "aa0000",
+            "0000fb",
+            "cffbfb",
+            "000513",
+            "0300cf"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 8,
+          "byte_hex": "00e4cffb001ecf9200",
+          "rgb_hex": [
+            "cf00cf",
+            "07cbe4",
+            "cffbcf",
+            "00fb47",
+            "0000df",
+            "621e62",
+            "cfe489",
+            "937b92",
+            "001100"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 9,
+          "byte_hex": "00000100f257f0cf00",
+          "rgb_hex": [
+            "cf00cf",
+            "cf0000",
+            "015f01",
+            "01000d",
+            "f20eeb",
+            "025702",
+            "f0cf00",
+            "cfcfcf",
+            "fb0000"
+          ],
+          "ascii_escaped": ".....W...",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 10,
+          "byte_hex": "26fbfbcfcf00f6cfab",
+          "rgb_hex": [
+            "7426cf",
+            "26cffb",
+            "fbf232",
+            "cfcf00",
+            "cf13cf",
+            "0000dd",
+            "f6fa38",
+            "cf00cf",
+            "8d96ab"
+          ],
+          "ascii_escaped": "&........",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 11,
+          "byte_hex": "cffb00cf00fb6efb4f",
+          "rgb_hex": [
+            "cfcf12",
+            "008dfb",
+            "00cf15",
+            "cfcfe5",
+            "00fb0d",
+            "a1fbcf",
+            "6e205b",
+            "fb00fb",
+            "198f4f"
+          ],
+          "ascii_escaped": "......n.O",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 12,
+          "byte_hex": "fb430600d555b70000",
+          "rgb_hex": [
+            "06fbf6",
+            "483943",
+            "061605",
+            "fb00fb",
+            "d500a5",
+            "555554",
+            "b7e3e4",
+            "00e700",
+            "fbfb00"
+          ],
+          "ascii_escaped": ".C...U...",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 13,
+          "byte_hex": "fbfb45f2fb7aaa00cf",
+          "rgb_hex": [
+            "00fbcf",
+            "cfcffb",
+            "4514f0",
+            "cff200",
+            "fb00f8",
+            "7c7a03",
+            "aa010c",
+            "cfe400",
+            "0bf7cf"
+          ],
+          "ascii_escaped": "..E..z...",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 14,
+          "byte_hex": "00a9fbcfd6cfcf00cf",
+          "rgb_hex": [
+            "0000fb",
+            "00f4a9",
+            "fb4dd2",
+            "00cfcf",
+            "d600b0",
+            "cfcffb",
+            "cf3e0b",
+            "09f200",
+            "fbf6cf"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 15,
+          "byte_hex": "d86300392703499a04",
+          "rgb_hex": [
+            "4ad8cf",
+            "eccf63",
+            "00f700",
+            "3c391e",
+            "272b19",
+            "030300",
+            "49ee9f",
+            "00009a",
+            "010304"
+          ],
+          "ascii_escaped": ".c.9'.I..",
+          "printable_byte_count": 4
+        },
+        {
+          "bank": 16,
+          "byte_hex": "34fa05060678002501",
+          "rgb_hex": [
+            "023428",
+            "cceefa",
+            "05eced",
+            "0006fa",
+            "069904",
+            "fa78cc",
+            "000028",
+            "042a25",
+            "020901"
+          ],
+          "ascii_escaped": "4....x.%.",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 17,
+          "byte_hex": "e761aa063812faccb9",
+          "rgb_hex": [
+            "fae7fa",
+            "727261",
+            "aa00d5",
+            "cc0614",
+            "380344",
+            "351214",
+            "faf1e2",
+            "cdf3cc",
+            "fa05b9"
+          ],
+          "ascii_escaped": ".a..8....",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 18,
+          "byte_hex": "54fa6a148ecd7f0006",
+          "rgb_hex": [
+            "7d548f",
+            "fbccfa",
+            "6a6c6e",
+            "4e147a",
+            "8e00f7",
+            "eecddb",
+            "7f6c4c",
+            "0bf300",
+            "007b06"
+          ],
+          "ascii_escaped": "T.j......",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 19,
+          "byte_hex": "fdfbca07f809a2064f",
+          "rgb_hex": [
+            "fbfdf8",
+            "0781fb",
+            "ca0dcc",
+            "000706",
+            "f8f9ff",
+            "ff09a1",
+            "a25f68",
+            "010706",
+            "4f034f"
+          ],
+          "ascii_escaped": "........O",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 20,
+          "byte_hex": "6e2c7b001bbaceeb00",
+          "rgb_hex": [
+            "936e67",
+            "36072c",
+            "7b860e",
+            "5f002a",
+            "1b5828",
+            "0dba40",
+            "ce7d35",
+            "fdfdeb",
+            "00cd00"
+          ],
+          "ascii_escaped": "n,{......",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 21,
+          "byte_hex": "fbf020070210ccfa00",
+          "rgb_hex": [
+            "e6fbfa",
+            "cdfaf0",
+            "20862b",
+            "cc07cc",
+            "02fafa",
+            "ff10fb",
+            "cccdcc",
+            "fbfbfa",
+            "faf300"
+          ],
+          "ascii_escaped": ".. ......",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 22,
+          "byte_hex": "ccccfecd020702a70d",
+          "rgb_hex": [
+            "48ccfa",
+            "eebccc",
+            "fef300",
+            "cccdcc",
+            "022f01",
+            "fb07cc",
+            "02cccc",
+            "0b01a7",
+            "cccc0d"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 23,
+          "byte_hex": "0d0a0602080509e0d9",
+          "rgb_hex": [
+            "2b0d01",
+            "09890a",
+            "063c3d",
+            "fb02fb",
+            "08cc83",
+            "ee0592",
+            "090602",
+            "fdbfe0",
+            "f67ed9"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 24,
+          "byte_hex": "0fd80d06faaa0406fa",
+          "rgb_hex": [
+            "cc0f0f",
+            "b5b5d8",
+            "0d13fa",
+            "6a0657",
+            "fada00",
+            "fbaafa",
+            "04cadf",
+            "cd3706",
+            "ccf0fa"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 25,
+          "byte_hex": "0c0b05400e07129306",
+          "rgb_hex": [
+            "130cee",
+            "e9000b",
+            "055e75",
+            "ed4006",
+            "0e4c5a",
+            "cd07fa",
+            "12c8c7",
+            "b60a93",
+            "cccc06"
+          ],
+          "ascii_escaped": "...@.....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 26,
+          "byte_hex": "c8fa7b53cd010205cc",
+          "rgb_hex": [
+            "ebc802",
+            "00fafa",
+            "7bfaf7",
+            "435350",
+            "cd0103",
+            "cd0105",
+            "024c00",
+            "aad005",
+            "fa19cc"
+          ],
+          "ascii_escaped": "..{S.....",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 27,
+          "byte_hex": "8cccca0d024470060d",
+          "rgb_hex": [
+            "8e8c07",
+            "40eecc",
+            "cacc68",
+            "3e0d5e",
+            "02038d",
+            "a344b6",
+            "709f6a",
+            "fb5806",
+            "00cc0d"
+          ],
+          "ascii_escaped": ".....Dp..",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 28,
+          "byte_hex": "9e0d31f408f5865967",
+          "rgb_hex": [
+            "0f9e7e",
+            "fa060d",
+            "316b8b",
+            "28f472",
+            "086463",
+            "70f50f",
+            "86108b",
+            "1a0e59",
+            "346267"
+          ],
+          "ascii_escaped": "..1....Yg",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 29,
+          "byte_hex": "ed67547bf6ee856668",
+          "rgb_hex": [
+            "1fedee",
+            "ccfa67",
+            "548bee",
+            "797b0b",
+            "f6a6f4",
+            "91eef5",
+            "853121",
+            "f3f066",
+            "cc8068"
+          ],
+          "ascii_escaped": ".gT{...fh",
+          "printable_byte_count": 5
+        },
+        {
+          "bank": 30,
+          "byte_hex": "010000f02dcc600002",
+          "rgb_hex": [
+            "5e0108",
+            "000000",
+            "000202",
+            "15f061",
+            "2da68e",
+            "a7cc40",
+            "600002",
+            "010700",
+            "020102"
+          ],
+          "ascii_escaped": "....-.`..",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 31,
+          "byte_hex": "0300faee00cc003100",
+          "rgb_hex": [
+            "010301",
+            "000000",
+            "fa0404",
+            "c8eed5",
+            "000002",
+            "0bccfa",
+            "000002",
+            "f75831",
+            "020000"
+          ],
+          "ascii_escaped": ".......1.",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 32,
+          "byte_hex": "000000000000000011",
+          "rgb_hex": [
+            "000000",
+            "0e0000",
+            "000302",
+            "000000",
+            "000000",
+            "000000",
+            "000000",
+            "000000",
+            "010511"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 33,
+          "byte_hex": "002400020305000000",
+          "rgb_hex": [
+            "370000",
+            "083224",
+            "000000",
+            "000200",
+            "030000",
+            "010502",
+            "000704",
+            "000000",
+            "006000"
+          ],
+          "ascii_escaped": ".$.......",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 34,
+          "byte_hex": "000881050008100000",
+          "rgb_hex": [
+            "070000",
+            "010008",
+            "810000",
+            "330503",
+            "00373d",
+            "000831",
+            "10000c",
+            "160c00",
+            "cc5e00"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 35,
+          "byte_hex": "00000212050912001d",
+          "rgb_hex": [
+            "05000e",
+            "010500",
+            "020400",
+            "001200",
+            "050000",
+            "000900",
+            "124b07",
+            "002a00",
+            "00a01d"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 36,
+          "byte_hex": "010012000037008107",
+          "rgb_hex": [
+            "470134",
+            "1d1600",
+            "120000",
+            "000047",
+            "005604",
+            "2e3700",
+            "000300",
+            "000081",
+            "cb0a07"
+          ],
+          "ascii_escaped": ".....7...",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 37,
+          "byte_hex": "0004190000ba2c0000",
+          "rgb_hex": [
+            "4e0000",
+            "0b0204",
+            "190106",
+            "0b0000",
+            "000072",
+            "00ba00",
+            "2c0029",
+            "653000",
+            "070000"
+          ],
+          "ascii_escaped": "......,..",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 38,
+          "byte_hex": "010462040000000c00",
+          "rgb_hex": [
+            "00011e",
+            "000004",
+            "620102",
+            "510406",
+            "000005",
+            "0b0001",
+            "001400",
+            "040d0c",
+            "0a7b00"
+          ],
+          "ascii_escaped": "..b......",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 39,
+          "byte_hex": "024a0003008e000069",
+          "rgb_hex": [
+            "290200",
+            "03124a",
+            "009eed",
+            "01032b",
+            "000c84",
+            "008e00",
+            "00093d",
+            "480000",
+            "151269"
+          ],
+          "ascii_escaped": ".J......i",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 40,
+          "byte_hex": "0007000003e2470201",
+          "rgb_hex": [
+            "020006",
+            "1a0007",
+            "000215",
+            "310000",
+            "033302",
+            "00e27a",
+            "470000",
+            "000102",
+            "370101"
+          ],
+          "ascii_escaped": "......G..",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 41,
+          "byte_hex": "091102bc0201110000",
+          "rgb_hex": [
+            "4d0983",
+            "000a11",
+            "020002",
+            "00bc00",
+            "020412",
+            "930100",
+            "116800",
+            "bc0000",
+            "af0500"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 42,
+          "byte_hex": "035c3e790007790001",
+          "rgb_hex": [
+            "030300",
+            "006d5c",
+            "3e1a00",
+            "007900",
+            "0000a7",
+            "ec0706",
+            "790005",
+            "080000",
+            "080001"
+          ],
+          "ascii_escaped": ".\\>y..y..",
+          "printable_byte_count": 4
+        },
+        {
+          "bank": 43,
+          "byte_hex": "02000007020005a600",
+          "rgb_hex": [
+            "06020f",
+            "051300",
+            "004600",
+            "00071a",
+            "020248",
+            "160010",
+            "050000",
+            "0b00a6",
+            "006f00"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 44,
+          "byte_hex": "003300320200040235",
+          "rgb_hex": [
+            "000006",
+            "174f33",
+            "000d00",
+            "003200",
+            "023e3b",
+            "000000",
+            "04000c",
+            "040102",
+            "000a35"
+          ],
+          "ascii_escaped": ".3.2....5",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 45,
+          "byte_hex": "050200070000000f01",
+          "rgb_hex": [
+            "090500",
+            "1c0002",
+            "00010a",
+            "030700",
+            "000010",
+            "000006",
+            "000014",
+            "00000f",
+            "0f0001"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 46,
+          "byte_hex": "60110c000b00000000",
+          "rgb_hex": [
+            "006000",
+            "b46b11",
+            "0c0000",
+            "000067",
+            "0b0000",
+            "050000",
+            "00005c",
+            "000700",
+            "130000"
+          ],
+          "ascii_escaped": "`........",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 47,
+          "byte_hex": "00ba002a3900000e06",
+          "rgb_hex": [
+            "070000",
+            "0019ba",
+            "00064f",
+            "022a04",
+            "390a00",
+            "000000",
+            "000067",
+            "0b000e",
+            "000006"
+          ],
+          "ascii_escaped": "...*9....",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 48,
+          "byte_hex": "00021b004210050102",
+          "rgb_hex": [
+            "000004",
+            "523302",
+            "1b0000",
+            "050000",
+            "422200",
+            "001008",
+            "050000",
+            "030001",
+            "000902"
+          ],
+          "ascii_escaped": "....B....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 49,
+          "byte_hex": "0a013300056900155e",
+          "rgb_hex": [
+            "000a00",
+            "0f0001",
+            "331800",
+            "000001",
+            "053206",
+            "006901",
+            "008e00",
+            "020315",
+            "00075e"
+          ],
+          "ascii_escaped": "..3..i..^",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 50,
+          "byte_hex": "120f9705010000100b",
+          "rgb_hex": [
+            "001200",
+            "00000f",
+            "978100",
+            "ed0551",
+            "01001a",
+            "000000",
+            "006530",
+            "005c10",
+            "00000b"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 51,
+          "byte_hex": "100a00004800001c05",
+          "rgb_hex": [
+            "001000",
+            "00930a",
+            "000d12",
+            "080000",
+            "48003a",
+            "050000",
+            "000040",
+            "00001c",
+            "000105"
+          ],
+          "ascii_escaped": "....H....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 52,
+          "byte_hex": "02000022021c10003b",
+          "rgb_hex": [
+            "db0200",
+            "000100",
+            "006500",
+            "002200",
+            "020004",
+            "001c07",
+            "100056",
+            "000000",
+            "32003b"
+          ],
+          "ascii_escaped": "...\"....;",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 53,
+          "byte_hex": "e4070a00ab00094d00",
+          "rgb_hex": [
+            "44e408",
+            "310007",
+            "0aad5a",
+            "c50000",
+            "ab0000",
+            "000000",
+            "090000",
+            "00004d",
+            "020000"
+          ],
+          "ascii_escaped": ".......M.",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 54,
+          "byte_hex": "0837110b0004000400",
+          "rgb_hex": [
+            "020804",
+            "000037",
+            "11001a",
+            "040b02",
+            "00081f",
+            "0c0400",
+            "00000b",
+            "070104",
+            "070c00"
+          ],
+          "ascii_escaped": ".7.......",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 55,
+          "byte_hex": "004b02006100160300",
+          "rgb_hex": [
+            "000003",
+            "02024b",
+            "02005e",
+            "ec0000",
+            "610001",
+            "00000e",
+            "16c409",
+            "0e0003",
+            "c33f00"
+          ],
+          "ascii_escaped": ".K..a....",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 56,
+          "byte_hex": "0f082c1fbd00181f00",
+          "rgb_hex": [
+            "000f00",
+            "aa3308",
+            "2c1609",
+            "001f00",
+            "bdc73d",
+            "6a0031",
+            "18600c",
+            "08001f",
+            "4b0000"
+          ],
+          "ascii_escaped": "..,......",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 57,
+          "byte_hex": "000000020700000003",
+          "rgb_hex": [
+            "ba000e",
+            "000200",
+            "000000",
+            "000200",
+            "070000",
+            "8a0000",
+            "000053",
+            "610c00",
+            "189903"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 58,
+          "byte_hex": "10006b0b1003000003",
+          "rgb_hex": [
+            "231000",
+            "022800",
+            "6b0008",
+            "020b00",
+            "101800",
+            "0a0304",
+            "000076",
+            "390100",
+            "002a03"
+          ],
+          "ascii_escaped": "..k......",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 59,
+          "byte_hex": "400011b20600000012",
+          "rgb_hex": [
+            "074000",
+            "160000",
+            "110500",
+            "3bb206",
+            "060000",
+            "00009b",
+            "000900",
+            "030000",
+            "00a612"
+          ],
+          "ascii_escaped": "@........",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 60,
+          "byte_hex": "120100440005040a16",
+          "rgb_hex": [
+            "001203",
+            "4d0b01",
+            "00000b",
+            "534400",
+            "000e07",
+            "010500",
+            "040000",
+            "1a030a",
+            "0b1116"
+          ],
+          "ascii_escaped": "...D.....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 61,
+          "byte_hex": "010001000301050000",
+          "rgb_hex": [
+            "050105",
+            "9c0000",
+            "01005c",
+            "080000",
+            "03400a",
+            "050105",
+            "050105",
+            "000000",
+            "000a00"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 62,
+          "byte_hex": "0000030000c50c0005",
+          "rgb_hex": [
+            "b20000",
+            "000000",
+            "030300",
+            "000000",
+            "000000",
+            "00c50a",
+            "0c1c42",
+            "000000",
+            "050105"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 63,
+          "byte_hex": "00000d580000000000",
+          "rgb_hex": [
+            "000000",
+            "000000",
+            "0d0705",
+            "005830",
+            "000000",
+            "000000",
+            "000000",
+            "000000",
+            "000000"
+          ],
+          "ascii_escaped": "...X.....",
+          "printable_byte_count": 1
+        }
+      ]
+    },
+    {
+      "state": "1100",
+      "class_addresses": [
+        302,
+        382,
+        58,
+        151,
+        311,
+        407,
+        369,
+        129,
+        357
+      ],
+      "q4_channel_depths": [
+        1,
+        2,
+        0,
+        1,
+        0,
+        1,
+        0,
+        2,
+        2
+      ],
+      "bank_readouts": [
+        {
+          "bank": 0,
+          "byte_hex": "0d003e334b0d00cfcf",
+          "rgb_hex": [
+            "e20de0",
+            "000000",
+            "3ef5f1",
+            "213339",
+            "4b1e4c",
+            "000d40",
+            "003802",
+            "0dcfcf",
+            "cf00cf"
+          ],
+          "ascii_escaped": "..>3K....",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 1,
+          "byte_hex": "01cf274d135e5f0001",
+          "rgb_hex": [
+            "00010d",
+            "b9eecf",
+            "2700f9",
+            "004dcf",
+            "1340ee",
+            "025e5f",
+            "5fcff6",
+            "a90000",
+            "320001"
+          ],
+          "ascii_escaped": "..'M.^_..",
+          "printable_byte_count": 4
+        },
+        {
+          "bank": 2,
+          "byte_hex": "3eef00cfee00000009",
+          "rgb_hex": [
+            "fb3efa",
+            "cf0fef",
+            "00e8f9",
+            "fbcf81",
+            "ee680d",
+            "6d008f",
+            "0035b0",
+            "fbf400",
+            "0e0109"
+          ],
+          "ascii_escaped": ">........",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 3,
+          "byte_hex": "0dccfbf080fb70cf06",
+          "rgb_hex": [
+            "a90d00",
+            "4039cc",
+            "fbfb03",
+            "40f0fb",
+            "80886c",
+            "fbfb9c",
+            "706523",
+            "cf40cf",
+            "fbf506"
+          ],
+          "ascii_escaped": "......p..",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 4,
+          "byte_hex": "cffbcf8b14fb007718",
+          "rgb_hex": [
+            "00cffb",
+            "64fbfb",
+            "cf0013",
+            "018b97",
+            "14f900",
+            "cffbcf",
+            "00fbcf",
+            "00cf77",
+            "cffb18"
+          ],
+          "ascii_escaped": ".......w.",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 5,
+          "byte_hex": "fbfb0000e5cffbcf84",
+          "rgb_hex": [
+            "cffb12",
+            "000efb",
+            "00f36c",
+            "cf00cf",
+            "e50093",
+            "cfcfcf",
+            "fb0063",
+            "fb80cf",
+            "790084"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 6,
+          "byte_hex": "dcfbe1c95893000000",
+          "rgb_hex": [
+            "00dc8b",
+            "00effb",
+            "e12a00",
+            "0cc9f4",
+            "58b3a8",
+            "0793cd",
+            "00c200",
+            "000600",
+            "bacf00"
+          ],
+          "ascii_escaped": "....X....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 7,
+          "byte_hex": "fbcccfcfaa00bc13cf",
+          "rgb_hex": [
+            "cffb00",
+            "cccccc",
+            "cf00cf",
+            "cfcfcf",
+            "aa0000",
+            "0000fb",
+            "bc00cf",
+            "000513",
+            "0300cf"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 8,
+          "byte_hex": "00e4cfcf001e009200",
+          "rgb_hex": [
+            "cf00cf",
+            "07cbe4",
+            "cffbcf",
+            "4dcfcf",
+            "0000df",
+            "621e62",
+            "00cffb",
+            "937b92",
+            "001100"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 9,
+          "byte_hex": "000001f0f25701cf00",
+          "rgb_hex": [
+            "cf00cf",
+            "cf0000",
+            "015f01",
+            "73f0fb",
+            "f20eeb",
+            "025702",
+            "010125",
+            "cfcfcf",
+            "fb0000"
+          ],
+          "ascii_escaped": ".....W...",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 10,
+          "byte_hex": "26fbfb0acf0012cfab",
+          "rgb_hex": [
+            "7426cf",
+            "26cffb",
+            "fbf232",
+            "e90ae9",
+            "cf13cf",
+            "0000dd",
+            "12000e",
+            "cf00cf",
+            "8d96ab"
+          ],
+          "ascii_escaped": "&........",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 11,
+          "byte_hex": "cffb002b00fbcffb4f",
+          "rgb_hex": [
+            "cfcf12",
+            "008dfb",
+            "00cf15",
+            "302b23",
+            "00fb0d",
+            "a1fbcf",
+            "cf47f1",
+            "fb00fb",
+            "198f4f"
+          ],
+          "ascii_escaped": "...+....O",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 12,
+          "byte_hex": "fb430600d555000000",
+          "rgb_hex": [
+            "06fbf6",
+            "483943",
+            "061605",
+            "cf00cf",
+            "d500a5",
+            "555554",
+            "00f100",
+            "00e700",
+            "fbfb00"
+          ],
+          "ascii_escaped": ".C...U...",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 13,
+          "byte_hex": "fbfb45bffb7abd00cf",
+          "rgb_hex": [
+            "00fbcf",
+            "cfcffb",
+            "4514f0",
+            "9dbf18",
+            "fb00f8",
+            "7c7a03",
+            "bd00bd",
+            "cfe400",
+            "0bf7cf"
+          ],
+          "ascii_escaped": "..E..z...",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 14,
+          "byte_hex": "00a9fb1cd6cf0500cf",
+          "rgb_hex": [
+            "0000fb",
+            "00f4a9",
+            "fb4dd2",
+            "001ccf",
+            "d600b0",
+            "cfcffb",
+            "05cfa1",
+            "09f200",
+            "fbf6cf"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 15,
+          "byte_hex": "d86300002703889a04",
+          "rgb_hex": [
+            "4ad8cf",
+            "eccf63",
+            "00f700",
+            "cf0000",
+            "272b19",
+            "030300",
+            "887e88",
+            "00009a",
+            "010304"
+          ],
+          "ascii_escaped": ".c..'....",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 16,
+          "byte_hex": "34fa05cc0678032501",
+          "rgb_hex": [
+            "023428",
+            "cceefa",
+            "05eced",
+            "35ccca",
+            "069904",
+            "fa78cc",
+            "03f0f9",
+            "042a25",
+            "020901"
+          ],
+          "ascii_escaped": "4....x.%.",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 17,
+          "byte_hex": "e761aa033812edccb9",
+          "rgb_hex": [
+            "fae7fa",
+            "727261",
+            "aa00d5",
+            "030300",
+            "380344",
+            "351214",
+            "ed19b9",
+            "cdf3cc",
+            "fa05b9"
+          ],
+          "ascii_escaped": ".a..8....",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 18,
+          "byte_hex": "54fa6a0c8ecdca0006",
+          "rgb_hex": [
+            "7d548f",
+            "fbccfa",
+            "6a6c6e",
+            "dd0c11",
+            "8e00f7",
+            "eecddb",
+            "ca0ecc",
+            "0bf300",
+            "007b06"
+          ],
+          "ascii_escaped": "T.j......",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 19,
+          "byte_hex": "fdfbca07f80907064f",
+          "rgb_hex": [
+            "fbfdf8",
+            "0781fb",
+            "ca0dcc",
+            "010706",
+            "f8f9ff",
+            "ff09a1",
+            "0706c1",
+            "010706",
+            "4f034f"
+          ],
+          "ascii_escaped": "........O",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 20,
+          "byte_hex": "6e2c7bf11bbafaeb00",
+          "rgb_hex": [
+            "936e67",
+            "36072c",
+            "7b860e",
+            "93f1f6",
+            "1b5828",
+            "0dba40",
+            "fa42f9",
+            "fdfdeb",
+            "00cd00"
+          ],
+          "ascii_escaped": "n,{......",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 21,
+          "byte_hex": "fbf020d20210cdfa00",
+          "rgb_hex": [
+            "e6fbfa",
+            "cdfaf0",
+            "20862b",
+            "fbd2bb",
+            "02fafa",
+            "ff10fb",
+            "cd0d00",
+            "fbfbfa",
+            "faf300"
+          ],
+          "ascii_escaped": ".. ......",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 22,
+          "byte_hex": "ccccfefb0207cda70d",
+          "rgb_hex": [
+            "48ccfa",
+            "eebccc",
+            "fef300",
+            "bffbcc",
+            "022f01",
+            "fb07cc",
+            "cd9eed",
+            "0b01a7",
+            "cccc0d"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 23,
+          "byte_hex": "0d0a0616080505e0d9",
+          "rgb_hex": [
+            "2b0d01",
+            "09890a",
+            "063c3d",
+            "ff165f",
+            "08cc83",
+            "ee0592",
+            "05c8ed",
+            "fdbfe0",
+            "f67ed9"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 24,
+          "byte_hex": "0fd80d0ffaaaee06fa",
+          "rgb_hex": [
+            "cc0f0f",
+            "b5b5d8",
+            "0d13fa",
+            "2c0fcc",
+            "fada00",
+            "fbaafa",
+            "ee93fa",
+            "cd3706",
+            "ccf0fa"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 25,
+          "byte_hex": "0c0b05a30e07059306",
+          "rgb_hex": [
+            "130cee",
+            "e9000b",
+            "055e75",
+            "cda379",
+            "0e4c5a",
+            "cd07fa",
+            "05b116",
+            "b60a93",
+            "cccc06"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 26,
+          "byte_hex": "c8fa7bcdcd010105cc",
+          "rgb_hex": [
+            "ebc802",
+            "00fafa",
+            "7bfaf7",
+            "fbcde8",
+            "cd0103",
+            "cd0105",
+            "01cdfa",
+            "aad005",
+            "fa19cc"
+          ],
+          "ascii_escaped": "..{......",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 27,
+          "byte_hex": "8cccca930244cc060d",
+          "rgb_hex": [
+            "8e8c07",
+            "40eecc",
+            "cacc68",
+            "0b93cc",
+            "02038d",
+            "a344b6",
+            "ccf15c",
+            "fb5806",
+            "00cc0d"
+          ],
+          "ascii_escaped": ".....D...",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 28,
+          "byte_hex": "9e0d310c08f50d5967",
+          "rgb_hex": [
+            "0f9e7e",
+            "fa060d",
+            "316b8b",
+            "da0c10",
+            "086463",
+            "70f50f",
+            "0d00ee",
+            "1a0e59",
+            "346267"
+          ],
+          "ascii_escaped": "..1....Yg",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 29,
+          "byte_hex": "ed67545bf6ee066668",
+          "rgb_hex": [
+            "1fedee",
+            "ccfa67",
+            "548bee",
+            "bf5b8f",
+            "f6a6f4",
+            "91eef5",
+            "064040",
+            "f3f066",
+            "cc8068"
+          ],
+          "ascii_escaped": ".gT[...fh",
+          "printable_byte_count": 5
+        },
+        {
+          "bank": 30,
+          "byte_hex": "010000002dcc000002",
+          "rgb_hex": [
+            "5e0108",
+            "000000",
+            "000202",
+            "000000",
+            "2da68e",
+            "a7cc40",
+            "000000",
+            "010700",
+            "020102"
+          ],
+          "ascii_escaped": "....-....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 31,
+          "byte_hex": "0300fac900cc003100",
+          "rgb_hex": [
+            "010301",
+            "000000",
+            "fa0404",
+            "c3c95b",
+            "000002",
+            "0bccfa",
+            "000000",
+            "f75831",
+            "020000"
+          ],
+          "ascii_escaped": ".......1.",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 32,
+          "byte_hex": "0000000000000e0011",
+          "rgb_hex": [
+            "000000",
+            "0e0000",
+            "000302",
+            "000000",
+            "000000",
+            "000000",
+            "0e0e0b",
+            "000000",
+            "010511"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 33,
+          "byte_hex": "002400000305000000",
+          "rgb_hex": [
+            "370000",
+            "083224",
+            "000000",
+            "000000",
+            "030000",
+            "010502",
+            "000006",
+            "000000",
+            "006000"
+          ],
+          "ascii_escaped": ".$.......",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 34,
+          "byte_hex": "000881330008030000",
+          "rgb_hex": [
+            "070000",
+            "010008",
+            "810000",
+            "003300",
+            "00373d",
+            "000831",
+            "030009",
+            "160c00",
+            "cc5e00"
+          ],
+          "ascii_escaped": "...3.....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 35,
+          "byte_hex": "00000203050978001d",
+          "rgb_hex": [
+            "05000e",
+            "010500",
+            "020400",
+            "040300",
+            "050000",
+            "000900",
+            "780100",
+            "002a00",
+            "00a01d"
+          ],
+          "ascii_escaped": "......x..",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 36,
+          "byte_hex": "010012070037038107",
+          "rgb_hex": [
+            "470134",
+            "1d1600",
+            "120000",
+            "0d0706",
+            "005604",
+            "2e3700",
+            "030003",
+            "000081",
+            "cb0a07"
+          ],
+          "ascii_escaped": ".....7...",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 37,
+          "byte_hex": "0004192300baa00000",
+          "rgb_hex": [
+            "4e0000",
+            "0b0204",
+            "190106",
+            "00230a",
+            "000072",
+            "00ba00",
+            "a01100",
+            "653000",
+            "070000"
+          ],
+          "ascii_escaped": "...#.....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 38,
+          "byte_hex": "010462000000030c00",
+          "rgb_hex": [
+            "00011e",
+            "000004",
+            "620102",
+            "a00011",
+            "000005",
+            "0b0001",
+            "033309",
+            "040d0c",
+            "0a7b00"
+          ],
+          "ascii_escaped": "..b......",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 39,
+          "byte_hex": "024a0029008e230069",
+          "rgb_hex": [
+            "290200",
+            "03124a",
+            "009eed",
+            "4c2900",
+            "000c84",
+            "008e00",
+            "23010a",
+            "480000",
+            "151269"
+          ],
+          "ascii_escaped": ".J.)..#.i",
+          "printable_byte_count": 4
+        },
+        {
+          "bank": 40,
+          "byte_hex": "0007007903e2020201",
+          "rgb_hex": [
+            "020006",
+            "1a0007",
+            "000215",
+            "0079d2",
+            "033302",
+            "00e27a",
+            "020700",
+            "000102",
+            "370101"
+          ],
+          "ascii_escaped": "...y.....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 41,
+          "byte_hex": "091102000201000000",
+          "rgb_hex": [
+            "4d0983",
+            "000a11",
+            "020002",
+            "140000",
+            "020412",
+            "930100",
+            "000906",
+            "bc0000",
+            "af0500"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 42,
+          "byte_hex": "035c3e080007000001",
+          "rgb_hex": [
+            "030300",
+            "006d5c",
+            "3e1a00",
+            "080800",
+            "0000a7",
+            "ec0706",
+            "000a00",
+            "080000",
+            "080001"
+          ],
+          "ascii_escaped": ".\\>......",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 43,
+          "byte_hex": "02000000020000a600",
+          "rgb_hex": [
+            "06020f",
+            "051300",
+            "004600",
+            "00000a",
+            "020248",
+            "160010",
+            "000706",
+            "0b00a6",
+            "006f00"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 44,
+          "byte_hex": "003300000200030235",
+          "rgb_hex": [
+            "000006",
+            "174f33",
+            "000d00",
+            "00005e",
+            "023e3b",
+            "000000",
+            "035300",
+            "040102",
+            "000a35"
+          ],
+          "ascii_escaped": ".3......5",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 45,
+          "byte_hex": "050200050000290f01",
+          "rgb_hex": [
+            "090500",
+            "1c0002",
+            "00010a",
+            "190501",
+            "000010",
+            "000006",
+            "290000",
+            "00000f",
+            "0f0001"
+          ],
+          "ascii_escaped": "......)..",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 46,
+          "byte_hex": "60110c000b00000000",
+          "rgb_hex": [
+            "006000",
+            "b46b11",
+            "0c0000",
+            "000000",
+            "0b0000",
+            "050000",
+            "000000",
+            "000700",
+            "130000"
+          ],
+          "ascii_escaped": "`........",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 47,
+          "byte_hex": "00ba00003900000e06",
+          "rgb_hex": [
+            "070000",
+            "0019ba",
+            "00064f",
+            "00004b",
+            "390a00",
+            "000000",
+            "001a00",
+            "0b000e",
+            "000006"
+          ],
+          "ascii_escaped": "....9....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 48,
+          "byte_hex": "00021b074210000102",
+          "rgb_hex": [
+            "000004",
+            "523302",
+            "1b0000",
+            "000700",
+            "422200",
+            "001008",
+            "000805",
+            "030001",
+            "000902"
+          ],
+          "ascii_escaped": "....B....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 49,
+          "byte_hex": "0a01330305691a155e",
+          "rgb_hex": [
+            "000a00",
+            "0f0001",
+            "331800",
+            "060300",
+            "053206",
+            "006901",
+            "1a4b00",
+            "020315",
+            "00075e"
+          ],
+          "ascii_escaped": "..3..i..^",
+          "printable_byte_count": 3
+        },
+        {
+          "bank": 50,
+          "byte_hex": "120f971c010065100b",
+          "rgb_hex": [
+            "001200",
+            "00000f",
+            "978100",
+            "001c4a",
+            "01001a",
+            "000000",
+            "650040",
+            "005c10",
+            "00000b"
+          ],
+          "ascii_escaped": "......e..",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 51,
+          "byte_hex": "100a00004800181c05",
+          "rgb_hex": [
+            "001000",
+            "00930a",
+            "000d12",
+            "010071",
+            "48003a",
+            "050000",
+            "180044",
+            "00001c",
+            "000105"
+          ],
+          "ascii_escaped": "....H....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 52,
+          "byte_hex": "0200000c021c01003b",
+          "rgb_hex": [
+            "db0200",
+            "000100",
+            "006500",
+            "060c00",
+            "020004",
+            "001c07",
+            "010000",
+            "000000",
+            "32003b"
+          ],
+          "ascii_escaped": "........;",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 53,
+          "byte_hex": "e4070a00ab000c4d00",
+          "rgb_hex": [
+            "44e408",
+            "310007",
+            "0aad5a",
+            "00002a",
+            "ab0000",
+            "000000",
+            "0c2300",
+            "00004d",
+            "020000"
+          ],
+          "ascii_escaped": ".......M.",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 54,
+          "byte_hex": "083711480004000400",
+          "rgb_hex": [
+            "020804",
+            "000037",
+            "11001a",
+            "0448b4",
+            "00081f",
+            "0c0400",
+            "00000c",
+            "070104",
+            "070c00"
+          ],
+          "ascii_escaped": ".7.H.....",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 55,
+          "byte_hex": "004b02006100070300",
+          "rgb_hex": [
+            "000003",
+            "02024b",
+            "02005e",
+            "020000",
+            "610001",
+            "00000e",
+            "070000",
+            "0e0003",
+            "c33f00"
+          ],
+          "ascii_escaped": ".K..a....",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 56,
+          "byte_hex": "0f082c00bd004a1f00",
+          "rgb_hex": [
+            "000f00",
+            "aa3308",
+            "2c1609",
+            "440000",
+            "bdc73d",
+            "6a0031",
+            "4a000a",
+            "08001f",
+            "4b0000"
+          ],
+          "ascii_escaped": "..,...J..",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 57,
+          "byte_hex": "000000630700060003",
+          "rgb_hex": [
+            "ba000e",
+            "000200",
+            "000000",
+            "006300",
+            "070000",
+            "8a0000",
+            "060a00",
+            "610c00",
+            "189903"
+          ],
+          "ascii_escaped": "...c.....",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 58,
+          "byte_hex": "10006b0110033b0003",
+          "rgb_hex": [
+            "231000",
+            "022800",
+            "6b0008",
+            "030102",
+            "101800",
+            "0a0304",
+            "3b0009",
+            "390100",
+            "002a03"
+          ],
+          "ascii_escaped": "..k...;..",
+          "printable_byte_count": 2
+        },
+        {
+          "bank": 59,
+          "byte_hex": "400011000600000012",
+          "rgb_hex": [
+            "074000",
+            "160000",
+            "110500",
+            "000065",
+            "060000",
+            "00009b",
+            "000863",
+            "030000",
+            "00a612"
+          ],
+          "ascii_escaped": "@........",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 60,
+          "byte_hex": "1201009a0005000a16",
+          "rgb_hex": [
+            "001203",
+            "4d0b01",
+            "00000b",
+            "4f9a0b",
+            "000e07",
+            "010500",
+            "00000b",
+            "1a030a",
+            "0b1116"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 61,
+          "byte_hex": "0100010103016d0000",
+          "rgb_hex": [
+            "050105",
+            "9c0000",
+            "01005c",
+            "050105",
+            "03400a",
+            "050105",
+            "6d6e00",
+            "000000",
+            "000a00"
+          ],
+          "ascii_escaped": "......m..",
+          "printable_byte_count": 1
+        },
+        {
+          "bank": 62,
+          "byte_hex": "0000030000c5000005",
+          "rgb_hex": [
+            "b20000",
+            "000000",
+            "030300",
+            "000000",
+            "000000",
+            "00c50a",
+            "000000",
+            "000000",
+            "050105"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        },
+        {
+          "bank": 63,
+          "byte_hex": "00000d010000000000",
+          "rgb_hex": [
+            "000000",
+            "000000",
+            "0d0705",
+            "050105",
+            "000000",
+            "000000",
+            "000000",
+            "000000",
+            "000000"
+          ],
+          "ascii_escaped": ".........",
+          "printable_byte_count": 0
+        }
+      ]
+    }
+  ],
+  "CL02_three_row_numbers": [
+    189,
+    252,
+    315
+  ],
+  "CL02_direct_sampled_x_in_range": false,
+  "CL02_direct_sampled_y_in_range": false,
+  "interpretation": "Acquiring exact original source bytes and replaying the historical 16-pixel grid yields a real pixel corpus. The 512-bin addressing, 64-bank grouping and 0/1/2-to-R/G/B mapping are invented. No single bank or plaintext may be declared a solution without an independent source-selected bank and a withheld verification.",
+  "replay_provenance": {
+    "workflow_run_url": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/37857514343",
+    "workflow_job_id": 113585146811,
+    "original_artifact_id": 11584572349,
+    "original_png_preserved_upstream_only": true
+  }
+}
