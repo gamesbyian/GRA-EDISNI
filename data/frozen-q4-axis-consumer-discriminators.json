@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "experiment": 435,
+  "observation_snapshot": "84 physical records / 66 unique residues",
+  "frozen_at_date": "2026-10-08",
+  "description": "Mutually exclusive predictions from Cube 4 native-depth selector and a globally relabelled quarter-selector rival, both using the same selected-output one-dash-per-physical-column condition.",
+  "construction": {
+    "parent_family": "324 completions: raw primary one-minority-per-physical-column and Q4 one slash per A-I depth stack",
+    "depth_rule": "(Q,d,j) -> (Q,S(j),j), native labels (0,1,2)",
+    "quarter_rule": "(Q,d,j) -> (pi(S(j)),d,j), with a single globally shared pi chosen among 3! relabelings",
+    "output_test": "For each of three fixed planes, exactly one dash in each physical 3x3 column",
+    "after_filter_counts": {
+      "depth_identity": 12,
+      "quarter_relabel120": 8,
+      "quarter_relabel210": 4,
+      "quarter_relabel_union": 10,
+      "depth_quarter_union_intersection": 0
+    },
+    "selection_caveat": "Coordinate relabelings and the output-one-dash rule were tested retrospectively and depend on shared primary column assumptions. Do not interpret candidate multiplicities as posterior probabilities."
+  },
+  "mutually_exclusive_forecasts": [
+    {
+      "residue": 50,
+      "letter": "E",
+      "depth": "-",
+      "quarter": "/",
+      "serials_up_to_600": [
+        50,
+        158,
+        266,
+        374,
+        482,
+        590
+      ]
+    },
+    {
+      "residue": 54,
+      "letter": "I",
+      "depth": "-",
+      "quarter": "/",
+      "serials_up_to_600": [
+        54,
+        162,
+        270,
+        378,
+        486,
+        594
+      ]
+    },
+    {
+      "residue": 93,
+      "letter": "C",
+      "depth": ".",
+      "quarter": "/",
+      "serials_up_to_600": [
+        93,
+        201,
+        309,
+        417,
+        525
+      ]
+    }
+  ],
+  "partially_discriminating_residues": [
+    {
+      "residue": 49,
+      "depth": [
+        "-"
+      ],
+      "quarter": [
+        "-",
+        "/"
+      ]
+    },
+    {
+      "residue": 52,
+      "depth": [
+        "-"
+      ],
+      "quarter": [
+        "-",
+        "/"
+      ]
+    },
+    {
+      "residue": 84,
+      "depth": [
+        ".",
+        "/"
+      ],
+      "quarter": [
+        "."
+      ]
+    },
+    {
+      "residue": 102,
+      "depth": [
+        ".",
+        "/"
+      ],
+      "quarter": [
+        "."
+      ]
+    }
+  ],
+  "nine_frame_erasure_caveat": {
+    "native_depth_forced_correct": "4/54",
+    "quarter_any_global_permutation_forced": "0/54",
+    "meaning": "Retrospective conditional recovery, not independently calibrated holdout accuracy."
+  },
+  "protocol": "Inspect physical symbol only after committing both frozen competing forecasts. New evidence can falsify one of these tightly specified conditional families without endorsing the other or proving three-dimensional intended design."
+}
