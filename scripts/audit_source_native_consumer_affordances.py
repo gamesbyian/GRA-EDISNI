@@ -24,7 +24,8 @@ VALID_IDS = {
     "terminal41_saf_seven_fields", "ce_background_terminal41_path",
     "damaged_ce_jpeg", "terminal41_shutdown_nine_redirects",
     "ce_reversible_cover", "original_2016_secretmap",
-    "original_switch_joycon_printer", "original_pc_acorn_life"
+    "original_switch_joycon_printer", "original_pc_acorn_life",
+    "ce_art_card_set", "ce_foldout_poster", "ce_premium_spot_varnish_box"
 }
 
 
@@ -175,6 +176,15 @@ def main():
             assert (ROOT/src).exists(),(a["id"],src)
         assert not a["demonstrated_receives_new_ce_value"],a["id"]
         assert a["next_independent_evidence"]
+
+    for item_id in ("ce_art_card_set", "ce_foldout_poster",
+                    "ce_premium_spot_varnish_box"):
+        item = next(a for a in artifacts if a["id"] == item_id)
+        assert item["primary_source"] == (
+            "https://www.iam8bit.com/products/inside-collector-s-edition"
+        )
+        assert not item["demonstrated_receives_new_ce_value"]
+        assert item["ce_bridge_status"] == "no_native_register_or_reader"
 
     asset=json.loads(source(ROOT/"data/original-game-asset-consumer-inventory-2026-10-08.json"))
     assert any(a["id"]=="SecretMap" for a in asset["entries"])
