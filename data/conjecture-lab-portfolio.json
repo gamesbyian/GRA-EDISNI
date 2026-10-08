@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "research_mode": "DISCOVER/DEVELOP",
+  "intent": "Working assumptions, not validation or probability rankings",
+  "physical_corpus": {
+    "records": 84,
+    "distinct_residues": 66,
+    "unknown_residues": 42
+  },
+  "entries": [
+    {
+      "id": "CL-01",
+      "version": 1,
+      "title": "Nine-bit class addresses with tail channel selector",
+      "status": "developed_conditional_partial_negative",
+      "assumptions": [
+        "OBSERVED: H108 A-I body/tail carrier",
+        "HISTORICALLY_ATTESTED: 9+3 numeric scheme",
+        "INVENTED_BRIDGE: indexed source with three channels",
+        "INVENTED_BRIDGE: nine-record concatenation"
+      ],
+      "output_type": "Nine addressed external records, ordered to a downstream instruction",
+      "source_targets": [
+        "data/terminal41-source-tree.json",
+        "archive/external/twinysam-inside-arg/terminal41.link/"
+      ],
+      "selection_disclosure": "Terminal41 and background route already known before choosing the numeric book hypothesis",
+      "code": "scripts/conjecture_lab_nine_bit_address_probe.py",
+      "conditional_ensemble": "A∩B 324 = 18 primary x 18 Q4",
+      "tested_result": "0/18 primary vectors address only 74 archived routes under each of forward/reverse x slash bit 0/1",
+      "minimum_zero_based_entries": {
+        "forward_slash1": 408,
+        "forward_slash0": 454,
+        "reverse_slash1": 474,
+        "reverse_slash0": 328
+      },
+      "exact_negative_scope": "Unmodified zero-based direct indexing into the 74 preserved URL paths; NOT arbitrary archives, modulus, or codebook encodings",
+      "new_requirement": "Find an actual indexable ≥408-entry table (native forward slash=1) with three channels, then derive an unfitted external consequence",
+      "evidence_status": "no verified consumer"
+    },
+    {
+      "id": "CL-02",
+      "version": 1,
+      "title": "Q4 tail as one-time nine-command instruction",
+      "status": "developed_conditional_unvalidated",
+      "assumptions": [
+        "OBSERVED: 81/27 alphabet split",
+        "CONDITIONAL: exactly one Q4 slash per A-I depth stack",
+        "INVENTED_BRIDGE: depth maps to one of three physical commands",
+        "INVENTED_BRIDGE: original nine-command input surface"
+      ],
+      "output_type": "Nine 3-way physical commands",
+      "selection_disclosure": "Lever and nine-sketch poster known before selecting a command interpretation",
+      "conditional_depth_strings": 18,
+      "three_symbol_codebooks": 6,
+      "unique_forward_commands": 108,
+      "unique_with_reversals": 192,
+      "frozen_negative": "Original 14-command bunker password has no direct replay under tested mappings and literal 27-body selected readout carries no dot/Left",
+      "next_check": "A genuinely authored nine-position/three-choice interface or clear native depth legend",
+      "evidence_status": "no verified consumer"
+    },
+    {
+      "id": "CL-03",
+      "version": 1,
+      "title": "Cover monitor references as instructions/keybook",
+      "status": "developed_conditional_unvalidated",
+      "assumptions": [
+        "OBSERVED: cover contains ARG references and is clue-bearing",
+        "BORROWED_ANALOGY: acorn row sorting/planet/local filter",
+        "INVENTED_BRIDGE: ordered multistep operations",
+        "INVENTED_BRIDGE: foreground registration and downstream consumer"
+      ],
+      "output_type": "Operational sequence, cross-puzzle extraction and possibly a terminal instruction",
+      "selection_disclosure": "Cover references and 534brn target chosen before constructing walkthrough",
+      "existing_negatives": [
+        "Experiments 409–412 do not fix same transform across multiple panels",
+        "Cover included in standalone edition",
+        "No source-fixed CE sticker-to-cover registration"
+      ],
+      "next_check": "Repeatable identical source-to-cover transform measured across two distinct panels, independent of sticker completions",
+      "evidence_status": "no verified consumer"
+    },
+    {
+      "id": "CONTROL-0",
+      "version": 1,
+      "title": "Foreground has no further endgame",
+      "status": "live_adversarial_control",
+      "assumptions": [
+        "Possible historical decommissioning/standalone manufacturing purpose"
+      ],
+      "output_type": "None",
+      "next_check": "Contemporaneous production or authored puzzle information about intended foreground role",
+      "evidence_status": "not established"
+    }
+  ],
+  "integrity_notes": [
+    "No additions to data/observations.csv",
+    "No change to machine-spec or frozen predictions",
+    "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
+    "A frozen exact failure refutes that implementation only"
+  ]
+}
