@@ -42,6 +42,9 @@ def audit(source: Path | None = None) -> dict:
     assert source_run.count("+") == 6
     assert fields[1] == "38546uy754j9j6tuk5fi34"
     assert fields[-1] == "41212"
+    base36_token_bits = int(fields[1], 36).bit_length()
+    assert base36_token_bits == 111
+    assert int(fields[1], 36) >= (1 << 108)
     assert derived == record["archive_transcription"]
     assert len(derived) == len(source_run)
     substitutions = [
@@ -56,6 +59,8 @@ def audit(source: Path | None = None) -> dict:
         "field_lengths": [len(value) for value in fields],
         "plus_delimiters": source_run.count("+"),
         "archive_differences": substitutions,
+        "candidate_as_unsigned_base36_bits": base36_token_bits,
+        "raw_108bit_unsigned_base36_compatible": False,
         "checks": "passed",
     }
     if source is not None:
