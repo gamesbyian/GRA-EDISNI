@@ -1,6 +1,6 @@
 # Auditable Evidence Record Cards
 
-**Curated pilot, 2026-10-08:** 32 claim-level records, **not 32 independent studies**. Canonical structured rows are in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are [here](evidence-map-method.md). Main-branch records and open-PR claims remain separate. No independent script rerun is represented by these cards.
+**Curated pilot, 2026-10-08 (reconciled through Experiment 458):** 34 claim-level records, **not 34 independent studies**. Canonical structured rows are in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are [here](evidence-map-method.md). All linked study results in this snapshot have now merged to main; they remain conditional on their original evidence designs. No independent re-execution of every historical source is implied by these cards.
 
 ## R001 · BASE: periodicity
 
@@ -304,8 +304,8 @@
 
 ## R026 · CUBE: one-slash Q4 cube depth
 
-**Source:** [PR 142](https://github.com/gamesbyian/GRA-EDISNI/pull/142) (open-pr; experiments 448)  
-**Design:** exact-null | **independence:** pending | **assessment:** pending  
+**Source:** [experiment-448-cube-observation-null.md](experiment-448-cube-observation-null.md) (main; experiments 448)  
+**Design:** exact-null | **independence:** same-corpus | **assessment:** compatible-under-null  
 **Corpus:** `physical-84-66` | **dependence cluster:** `cube-same-masked`
 
 **Finding:** 280/495 Q4 labelings compatible with depth condition under fixed census.
@@ -316,8 +316,8 @@
 
 ## R027 · CUBE: selected-depth 27-cell output
 
-**Source:** [PR 143](https://github.com/gamesbyian/GRA-EDISNI/pull/143) (open-pr; experiments 450;451)  
-**Design:** exact-completion-enumeration | **independence:** pending | **assessment:** pending  
+**Source:** [experiment-450-completion-ensemble-comparison.md](experiment-450-completion-ensemble-comparison.md) (main; experiments 450;451)  
+**Design:** exact-completion-enumeration | **independence:** same-corpus | **assessment:** conditional-nonunique-output  
 **Corpus:** `physical-84-66` | **dependence cluster:** `cube-depth`
 
 **Finding:** Reported candidate masters produce several possible output words and no uniquely decoded output.
@@ -328,8 +328,8 @@
 
 ## R028 · CUBE: cross-cube copy holdouts
 
-**Source:** [PR 143](https://github.com/gamesbyian/GRA-EDISNI/pull/143) (open-pr; experiments 452;453;454;455)  
-**Design:** masked-permutation-and-holdout | **independence:** pending | **assessment:** pending  
+**Source:** [experiment-454-cube-transfer-holdouts.md](experiment-454-cube-transfer-holdouts.md) (main; experiments 452;453;454;455)  
+**Design:** masked-permutation-and-holdout | **independence:** same-corpus | **assessment:** fails-majority-predictive-baseline  
 **Corpus:** `physical-84-66` | **dependence cluster:** `cube-transfer`
 
 **Finding:** Reported correlation partly replicates; simple transfer not better than majority baseline on held stickers.
@@ -340,8 +340,8 @@
 
 ## R029 · CUBE: depth vs quarter interpretation
 
-**Source:** [PR 143](https://github.com/gamesbyian/GRA-EDISNI/pull/143) (open-pr; experiments 456)  
-**Design:** exact-rival-comparison | **independence:** pending | **assessment:** pending  
+**Source:** [experiment-456-q4-axis-consumer.md](experiment-456-q4-axis-consumer.md) (main; experiments 456)  
+**Design:** exact-rival-comparison | **independence:** same-corpus | **assessment:** conditional-opposing-predictions  
 **Corpus:** `physical-84-66` | **dependence cluster:** `cube-axis`
 
 **Finding:** Reported disjoint depth/quarter completion sets; predictions differ at 50/54/93.
@@ -352,8 +352,8 @@
 
 ## R030 · PUNCH: IBM 029 conversion
 
-**Source:** [PR 140](https://github.com/gamesbyian/GRA-EDISNI/pull/140) (open-pr; experiments 424)  
-**Design:** fixed-encoding-audit | **independence:** pending | **assessment:** pending  
+**Source:** [experiment-424-hollerith-punch-card.md](experiment-424-hollerith-punch-card.md) (main; experiments 424)  
+**Design:** fixed-encoding-audit | **independence:** historical-plus-same-corpus | **assessment:** information-neutral-encoding  
 **Corpus:** `physical-84-66` | **dependence cluster:** `punch-card`
 
 **Finding:** Reported three ternary symbol indicators exactly recoded into punch rows with no additional information.
@@ -364,8 +364,8 @@
 
 ## R031 · BASE: 23 and print-endpoint arithmetic
 
-**Source:** [PR 141](https://github.com/gamesbyian/GRA-EDISNI/pull/141) (open-pr; experiments 426)  
-**Design:** bounded-arithmetic | **independence:** pending | **assessment:** pending  
+**Source:** [experiment-426-23-endpoint-audit.md](experiment-426-23-endpoint-audit.md) (main; experiments 426)  
+**Design:** bounded-arithmetic | **independence:** bounded-arithmetic | **assessment:** no-physical-endpoint-evidence  
 **Corpus:** `physical-84-66` | **dependence cluster:** `endpoints`
 
 **Finding:** 621=23*27 and 648=6*108 noted among frozen candidate totals.
@@ -376,8 +376,8 @@
 
 ## R032 · BASE: destination hypothesis portfolio
 
-**Source:** [PR 144](https://github.com/gamesbyian/GRA-EDISNI/pull/144) (open-pr; experiments none)  
-**Design:** hypothesis-inventory | **independence:** pending | **assessment:** pending  
+**Source:** [sticker-endgame-destination-investigation-2026-10-08.md](sticker-endgame-destination-investigation-2026-10-08.md) (main; experiments none)  
+**Design:** hypothesis-inventory | **independence:** source-synthesis | **assessment:** unvalidated-consumer-portfolio  
 **Corpus:** `physical-84-66` | **dependence cluster:** `destination`
 
 **Finding:** Proposes multiple possible output consumers and an observation-only carrier/channel control.
@@ -385,4 +385,28 @@
 **Limit:** Narrative candidate inventory, not a validated endpoint.
 
 **Discriminator:** externally cued executable consumer
+
+## R033 · CUBE: physical cube shift versus exact coordinate
+
+**Source:** [experiment-457-cube-shift-matched-support.md](experiment-457-cube-shift-matched-support.md) (main; experiments 457)  
+**Design:** matched-observation-permutation-null | **independence:** same-corpus-selected | **assessment:** retrospectively-sensitive  
+**Corpus:** `physical-84-66` | **dependence cluster:** `cube-same-masked`
+
+**Finding:** Some row+1 and nonwrapped-column shifts yield low uncorrected within-class exact-shuffle tails but other wraps and axes do not. The Discord +X formula remains unreproduced.
+
+**Limit:** Multiple shift tests and source operation ambiguities prevent confirmatory registration claims.
+
+**Discriminator:** recover exact Discord index-mapping convention and fixed family-wise correction
+
+## R034 · CROSS: shared-mask frozen physical discriminator atlas
+
+**Source:** [experiment-458-common-mask-prospective-discrimination.md](experiment-458-common-mask-prospective-discrimination.md) (main; experiments 458)  
+**Design:** prospective-discrimination-surface | **independence:** same-corpus-selected | **assessment:** conditional-opposing-predictions  
+**Corpus:** `physical-84-66` | **dependence cluster:** `cross-family-458-freeze`
+
+**Finding:** All 42 unseen residues compared under seven model projections; 12 have hard model disagreement; structural depth/quarter 50/54/93 and quarter/row 93/102; eight others depend solely on weak identity copy.
+
+**Limit:** Descendant families share U2 assumptions; source corpus selected model grammars retrospectively; no physical post-freeze validation yet.
+
+**Discriminator:** new owner-confirmed r50 r54 r93 r102 and source-fixed external consumer
 
