@@ -939,4 +939,6 @@ or unbounded code-to-consumer sweeps until a native input rule is
 recovered. Fresh physical stickers are optional independent checks,
 not required to continue.
 
-Reproduce: `python scripts/audit_source_native_consumer_affordances.py`.
+**Experiment 477 class-word consumer:** the historically natural 12×9 arrangement permits nine 12-command lever class words mixing all three sleeve-mark directions. But the actual fourteen-command bunker password has no physical-compatible direct placement in either natural column order; permitting 28 target rotations/reversals yields only three 5–6-observation partial coincidences per order and **zero matches among all 324 fully completed column/Q4 masters**. Do not search arbitrary column permutations or invent a second lever password without evidence of another original-game input handler. See `docs/experiment-477-classword-lever-consumer.md`.
+
+Reproduce: `python scripts/audit_source_native_consumer_affordances.py` and `python scripts/audit_classword_lever_consumer.py`.
