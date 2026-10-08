@@ -18,7 +18,8 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "data/experiment-476-source-native-consumer-affordances.json"
 MIRROR = ROOT / "archive/external/twinysam-inside-arg/terminal41.link"
 VALID_IDS = {
-    "secret_ending_lever", "terminal41_printer_four_schemes",
+    "secret_ending_lever", "playdead_printer_website_subscription_box",
+    "terminal41_printer_four_schemes",
     "terminal41_viewgate_22_placeholder",
     "terminal41_saf_seven_fields", "ce_background_terminal41_path",
     "damaged_ce_jpeg", "terminal41_shutdown_nine_redirects",
