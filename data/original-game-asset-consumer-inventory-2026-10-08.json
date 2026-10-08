@@ -11,7 +11,9 @@
     "bunker_2016": "https://www.trueachievements.com/forum/viewthread.aspx?tid=814124",
     "secrets_guide": "https://www.shacknews.com/article/95640/inside-how-to-get-the-secret-ending",
     "ford_repeated": "https://inside.fandom.com/wiki/CEO",
-    "ford_pulse": "https://inside.fandom.com/wiki/The_Pulse"
+    "ford_pulse": "https://inside.fandom.com/wiki/The_Pulse",
+    "morse_2016": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445/?ctp=2",
+    "morse_space_2016": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445?ctp=6"
   },
   "entries": [
     {
@@ -146,9 +148,31 @@
       "consumer_role": "already consumed audio instruction",
       "next_test": "check whether any distinct other cue exists; repeated playback alone not another cipher",
       "status": "decoded and consumed"
+    },
+    {
+      "id": "MORSE_text",
+      "extract_label": "MORSE_text (2016 textual name; stable file path not recovered)",
+      "known_output": null,
+      "type": "printer-related glyph texture, role not fully established",
+      "known_use": "2016 gameplay/trailer page symbols, contemporaneous solvers asked whether it was related to known printer Morse; separate from Sign_SecretMorse",
+      "original_2016": true,
+      "consumer_role": "likely earlier printer input representation; not automatically an independent secret",
+      "next_test": "recover raw texture and source scene usage; resolve whether this is PC printer glyph asset",
+      "status": "relation to original printer not independently resolved"
+    },
+    {
+      "id": "MORSE_space",
+      "extract_label": "MORSE_space (2016 textual name)",
+      "known_output": "blank white page per observer",
+      "type": "spacing/blank-paper texture",
+      "known_use": "paired with MORSE_text reports; printer utility likely",
+      "original_2016": true,
+      "consumer_role": "no independent encoded content shown",
+      "next_test": "trace scene references and confirm its blank-page role",
+      "status": "unverified technical wrapper"
     }
   ],
-  "observation": "At least 12 named classes (some duplicates and known-solved) in the available historical inventory. No located original-game asset has an independently documented CE-sticker keyed-input consumer.",
+  "observation": "14 named entries, some duplicates and known-solves; sources do not permit any unconsumed sticker-addressable asset to be confirmed.",
   "constraints": [
     "Extracted texture-index numbers (#292/#835/#3372 etc.) are not canonical spatial coordinates.",
     "A repeated texture reused on different props supplies one unique textual payload.",
