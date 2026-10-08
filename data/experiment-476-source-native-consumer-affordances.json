@@ -121,8 +121,11 @@
       "demonstrated_receives_new_ce_value": false,
       "source_status": "official_product_inclusion_confirmed_uninspected_details",
       "ce_bridge_status": "no_native_register_or_reader",
-      "strongest_negative": "Publisher establishes an art-card set but does not claim the images, count, dimensions, reverse sides or printing are a sticker codebook. A multi-card pack-in does not itself require overlay or row sorting.",
-      "next_independent_evidence": "Original unaltered scans of every card, both sides, showing any author-provided indexing marks or repeated slash/dash/dot coordinate template before matching sticker completions."
+      "strongest_negative": "Publisher establishes an art-card set but does not claim the images, count, dimensions, reverse sides or printing are a sticker codebook. A multi-card pack-in does not itself require overlay or row sorting. Contemporary unboxing spectators describe dozens of concept cards, not evidence of a nine-card A-I selector.",
+      "next_independent_evidence": "Original unaltered scans of every card, both sides, showing any author-provided indexing marks or repeated slash/dash/dot coordinate template before matching sticker completions.",
+      "contemporary_unboxing_discussion": "https://www.reddit.com/r/PlaydeadsInside/comments/eaol69",
+      "publisher_unboxing_video": "https://www.youtube.com/watch?v=zhCdGdqCIRU",
+      "count_witness_note": "December 14 2019 contemporaneous unboxing commenters describe dozens of concept cards and speculate around 40; neither exact physical count nor 9-card codebook is verified by the text."
     },
     {
       "id": "ce_foldout_poster",
