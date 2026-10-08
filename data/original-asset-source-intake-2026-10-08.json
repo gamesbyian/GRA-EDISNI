@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "purpose": "Exact original-source acquisition outcomes and falsification boundaries for initial native INSIDE asset consumers",
+  "assets": [
+    {
+      "id": "SecretMap",
+      "earliest_primary_report": "https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2",
+      "original_extracted_names": [
+        "SecretMap_#916",
+        "SecretMap #44506.dds"
+      ],
+      "witness": "https://image.9game.cn/2018/3/2/19669991.jpg",
+      "witness_page": "https://www.9game.cn/news/2199070.html",
+      "witness_publication": "2018-03-02",
+      "witness_type": "480x240 republished JPEG screenshot, watermarked; visualized but exact bytes not materialized",
+      "source_DDS_recovered": false,
+      "observed": "gray/dark scene with thin sloping lines and disconnected red marks; perspective-like representation",
+      "unverified": "specific number of orb markers, actual native projection/UVs, input grid/legend, full original pixels",
+      "null": "all marked sites correspond to known 14 orb positions; then no unexplained sticker-addressable layer"
+    },
+    {
+      "id": "Sign_SecretMorse",
+      "original_extracted_names": [
+        "Sign_SecretMorse_#944",
+        "Sign_SecretMorse #3372.dds"
+      ],
+      "witness": "https://image.9game.cn/2018/3/2/19669987.jpg",
+      "derived_reading": "GLADBLAD",
+      "source_DDS_recovered": false,
+      "role": "historical source reported creator-domain possibility, not a verified CE endpoint"
+    },
+    {
+      "id": "BoardText",
+      "source_repo": "gamesbyian/playdead-unofficial-exports",
+      "source_path": "assets/BoardText_13309-b0922098d7c08dbe.dds",
+      "source_blob_sha": "d8e19793cb3b09764728fb2fc3cf4aaa4e1d32e8",
+      "bytes": 11152,
+      "dds_header_size": 128,
+      "format": "DXT5/BC3",
+      "dimensions": [
+        256,
+        32
+      ],
+      "declared_mip_count": 8,
+      "complete_mip_levels": [
+        [
+          256,
+          32,
+          8192
+        ],
+        [
+          128,
+          16,
+          2048
+        ],
+        [
+          64,
+          8,
+          512
+        ],
+        [
+          32,
+          4,
+          128
+        ],
+        [
+          16,
+          2,
+          64
+        ],
+        [
+          8,
+          1,
+          32
+        ],
+        [
+          4,
+          1,
+          16
+        ],
+        [
+          2,
+          1,
+          16
+        ],
+        [
+          1,
+          1,
+          16
+        ]
+      ],
+      "mip_bytes_plus_header_exactly_equal_source": true,
+      "additional_trailing_payload_bytes": 0,
+      "base_alpha_nonzero_pixels": 2061,
+      "data_source": "GitHub byte-preserving base64 fetch analyzed in JS; no guessed restoration",
+      "renderer_role": "text board; already related to original secret-ending orb/bunker UI",
+      "ce_sticker_input_evidence": false
+    }
+  ],
+  "experiments": {
+    "secretmap_raw_recovery": "incomplete, external witness only",
+    "boardtext_mip_footprint": "complete, no trailer beyond nine-level footprint",
+    "boardtext_alpha": "decoded source channel",
+    "CE_interface": "none established"
+  },
+  "source_boundary": "Republished image is not identical to shipped asset bytes; exporter IDs are not authorial numbering; manual semantic comparison remains limited by missing game bundles."
+}
