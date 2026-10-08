@@ -2,6 +2,8 @@
 
 _8 October 2026. EXPLORATORY / POST-SELECTION. Companion to [second sprint](2026-10-08-second-sprint.md). Reproducible [exact null calculation](../../scripts/conjecture_lab_progression_null.py)._
 
+**Important incumbent reconciliation (performed after the exploratory find):** both complete masters are exactly existing live `generate_master.py` states `0100` and `1100`, with `p=0, G=0`. Their selected column-one-dash readouts are the already-known `p=0` first-pass ternary words `102 / 002 / 120`. Consequently the numerical progression is a recoding of a known conditional branch, **not an independently recovered second mechanism or a new evidence vote**. This exact-set comparison is asserted in `conjecture_lab_raw_bounds_balanced_tail.py`.
+
 The two balance-plus-selected-surface full masters have a **single invariant three-row readout**, as previously documented:
 
 ```
