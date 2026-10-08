@@ -25,13 +25,17 @@ The verifier is `scripts/audit_source_native_consumer_affordances.py`.
    in the community from 2020 onward. It is an independently
    plausible sticker-consumer **type**, not a documented second
    handler or CE-specific instruction.
-2. **Original printer-to-website submission:** a **3 January 2019
+2. **Original printer-to-website printing:** a **3 January 2019
    first-party Xbox Wire article by Microsoft's Glenn Gregory**
-   says the solved game-printer text was submitted through a
+   says the decoded game-printer text was entered into the
    developer-website email-subscription field, leading to
-   corrupted imagery inside a PDF.
+   corrupted imagery inside a PDF. The [historical Game Detectives
+   account](https://wiki.gamedetectives.net/w/Inside_ARG#Printer_Button)
+   specifies that the page's **printer button**, not an ordinary
+   newsletter signup submission, consumed the entered field text
+   and produced the conditional printout.
    [Contemporary source](https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/).
-   This verifies a genuine historical *text-to-network-to-asset*
+   This verifies a genuine historical *text-field-to-print-to-asset*
    consumer, stronger evidence than mere resemblance to a terminal
    display. It **predates** the CE foreground and does not
    document an extra 2019–2020 sticker credential.
