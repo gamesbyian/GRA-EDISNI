@@ -1,0 +1,20 @@
+{
+  "experiment": 432,
+  "hollerith_row_label_weights": {"/":1,"-":11,".":23},
+  "canonical_h108_census": {"/":54,"-":36,".":18},
+  "full_h108_weighted_sum": 864,
+  "full_h108_mean_weight": 8,
+  "endpoint_results": {
+    "598":{"totals":[4658,4668],"invariant":false},
+    "600":{"totals":[4660,4670],"invariant":false},
+    "603":{"totals":[4683],"invariant":true},
+    "612":{"totals":[4722],"invariant":true},
+    "621":{"totals":[4761],"invariant":true,"square_root":69,"divisible_by_23":true},
+    "630":{"totals":[4902,4924,4946],"invariant":false},
+    "639":{"totals":[5043,5065,5087,5109],"invariant":false},
+    "648":{"totals":[5184],"invariant":true,"square_root":72,"divisible_by_23":false}
+  },
+  "621_identities":["4761=69^2","69=3*23","4761=9*23^2","4761/621=23/3"],
+  "guardrail":"Summing Hollerith row labels is not a standard punch-card decoding operation. No arbitrary weights or endpoint search were used.",
+  "interpretation":"Exact numerical convergence, not independent evidence."
+}

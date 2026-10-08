@@ -1,0 +1,15 @@
+{
+  "experiment": 431,
+  "hypothetical_total": 621,
+  "partition": "27 consecutive blocks of 23",
+  "completion_family": "10 live canonical masters",
+  "invariant_block_count": 13,
+  "variable_block_count": 14,
+  "invariant_blocks": {
+    "3":[14,9,0],"6":[10,13,0],"7":[12,11,0],"8":[13,10,0],
+    "11":[11,12,0],"14":[7,0,16],"15":[12,11,0],"16":[14,9,0],
+    "17":[13,10,0],"20":[10,13,0],"21":[14,9,0],"22":[12,11,0],
+    "25":[11,12,0]
+  },
+  "interpretation": "Literal 23-sticker chunks do not expose a stable common grammar. The factorization is structurally cleaner as 23 groups of the independently established 27-cell unit."
+}
