@@ -54,6 +54,12 @@ The original positive-control script tested the *same seven-colour 0xCF family* 
 
 [Source-only all-amplitude forensic script](../../scripts/conjecture_lab_gate98_all_amplitudes.py), [archival positive-control candidate overlay script](../../scripts/conjecture_lab_gate98_positive_control.py). Neither refers to CE completions.
 
+## A second colour outlier is an edge trace, not a new independent key
+
+A source-only all-RGB census of the corrected phase found a second highly overrepresented exact colour: **`#030101`**. It occurs **121 times** at the recovered sampling phase but only **309 times** across all 2048×1024 upper-source pixels (approximately **100×** the rate for a randomly sampled grid phase). Its isolated 128×64 mask visibly traces the **same planet rim and a dotted interior feature** as the exact-black bitmap. This is a valuable positive cross-check on the phase and a warning about correlated evidence: black and dark-near-black are **not two independently decoded messages**. A 26-panel comparison of the `0/207/251` colour-cube individual masks at the authentic phase found predominantly scattered singletons (at most three orthogonal same-colour neighbours per nonblack class). Therefore the high-frequency colour cubes do not independently yield the missing historical text.
+
+This image evidence was inspected **after** the black phase was chosen and should not be counted as an extra prospective significance test. We have not source-validated a historical `#030101` authorial channel; it could simply be source rendering/compression near the black edge.
+
 ## Re-evaluate the CE address hypothesis at the actual phase
 
 After recovering phase (4,12), and **without choosing a bank**, we can reuse the previously defined *invented* CL-04 reader: partition all 128×256 sampled points into 64 consecutive row-major 512-site banks, index nine class columns with 9-bit slash=1 addresses, and pick one R/G/B component with each Q4 slash-depth.
