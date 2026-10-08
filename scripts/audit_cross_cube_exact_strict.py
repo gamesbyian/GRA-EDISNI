@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 432: exact cube × A-I-class label-shuffle null.
+"""Experiment 453: exact cube × A-I-class label-shuffle null.
 
 Unknown cells remain unknown. Within every cube and A-I class, shuffle
 only the observed foreground symbols, retaining their symbol counts.
