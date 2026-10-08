@@ -1,0 +1,42 @@
+name: Verify cube registration research
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_cube_lab_*.js"
+      - "scripts/audit_cube_registration_*.js"
+      - "scripts/audit_q4_erasure_scope.py"
+      - "scripts/audit_cube_primary_registration_null.py"
+      - "scripts/audit_registration_q4_reader_conflict.py"
+      - "data/observations.csv"
+      - ".github/workflows/cube-registration-research.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: cube-registration-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Exact original Cube Registration Lab counts
+        run: node scripts/audit_cube_lab_replication.js > /tmp/cube-lab-original.json
+      - name: Broad completion and structural null smoke
+        run: node scripts/audit_cube_registration_extended.js --fast > /tmp/cube-registration-extended.json
+      - name: Whole-frame and whole-cube prediction smoke
+        run: node scripts/audit_cube_registration_predictive_holdout.js --fast > /tmp/cube-registration-predictive.json
+      - name: Primary-only registration null smoke
+        run: python scripts/audit_cube_primary_registration_null.py --samples 5000 > /tmp/cube-primary-only.json
+      - name: Compare registration score with Q4 axis consumers
+        run: python scripts/audit_registration_q4_reader_conflict.py > /tmp/cube-q4-readers.json
+      - name: Exact Q4 partial-stack vs full-cube erasures
+        run: python scripts/audit_q4_erasure_scope.py > /tmp/cube-q4-erasure.json
