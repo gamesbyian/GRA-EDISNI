@@ -1,0 +1,31 @@
+name: Verify printer transport and poster provenance
+
+on:
+  pull_request:
+    paths:
+      - "data/experiment-480-original-printer-transport.json"
+      - "data/experiment-481-poster-cross-edition-gallery.json"
+      - "docs/experiment-480-original-print-transport.md"
+      - "docs/experiment-481-poster-cross-edition-gallery.md"
+      - "scripts/audit_printer_poster_provenance_480_481.py"
+      - ".github/workflows/verify-printer-poster-480-481.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: printer-poster-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check frozen source-claim and chronology contracts
+        run: python scripts/audit_printer_poster_provenance_480_481.py > /tmp/printer-poster-provenance.json
+      - name: Show bounded evidence conclusions
+        run: |
+          python -c 'import json; d=json.load(open("/tmp/printer-poster-provenance.json")); print("Original receiver CE-specific:", d["printer"]["CE_specific_receiver_confirmed"]); print("Poster physical sheet identical:", d["poster"]["identical_physical_sheet_confirmed"]); print("Foreground reader established:", d["poster"]["A_I_foreground_receiver_confirmed"])'

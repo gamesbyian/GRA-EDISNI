@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "experiment": 480,
+  "freeze_date": "2026-10-08",
+  "question": "What original source-defined request and response mechanism did the Playdead printer button use?",
+  "sources": [
+    {
+      "id": "steam-2018",
+      "kind": "contemporary observer and copied JavaScript excerpt",
+      "url": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445/?ctp=53",
+      "date": "2018-06-04"
+    },
+    {
+      "id": "game-detectives",
+      "kind": "community historical synthesis",
+      "url": "https://wiki.gamedetectives.net/w/Inside_ARG#Printer_Button"
+    },
+    {
+      "id": "xbox-wire",
+      "kind": "publisher-side contemporary overview",
+      "url": "https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/",
+      "date": "2019-01-03"
+    },
+    {
+      "id": "CE-chronology",
+      "kind": "community chronology",
+      "url": "https://github.com/twinysam/INSIDE-ARG",
+      "date": "2019-12-12"
+    }
+  ],
+  "historically_reported_receiver": {
+    "website": "Original playdead.com (not static terminal41.link mirror)",
+    "user_trigger": "Special print button while a decoded phrase is typed into the page's subscription field; not an ordinary newsletter submit.",
+    "observed_requests": [
+      {
+        "method": "POST",
+        "path": "/print/prepare.php",
+        "fields_reported": [
+          "email",
+          "id",
+          "check",
+          "url"
+        ],
+        "status": "2018 observer identified network request; raw 2018 request bytes not recovered"
+      },
+      {
+        "method": "POST",
+        "path": "/print/index.php",
+        "fields_reported": [
+          "email",
+          "id",
+          "check",
+          "url"
+        ],
+        "status": "2018 observer saw false for a negative test; copied JS success callback receives data and inserts it into #print-content"
+      }
+    ],
+    "browser_print": "Contemporaneous copied JS success callback invokes window.print() after inserting response into #print-content.",
+    "response_classes": [
+      {
+        "case": "empty",
+        "observed_text": "no message received"
+      },
+      {
+        "case": "nonempty_bad",
+        "observed_text": "incorrect message received"
+      },
+      {
+        "case": "first_accepted",
+        "observed_text": "factor 1 security passed (printout image)"
+      },
+      {
+        "case": "second_accepted",
+        "observed_text": "factor 2 security passed (printout image)"
+      },
+      {
+        "case": "third_accepted",
+        "observed_text": "different artwork/spectrogram and Terminal41 link"
+      }
+    ],
+    "accepted_original_puzzle_phrases": [
+      "NEWPLANETDISCOVERED",
+      "MULTIPLEPROBESDISPATCHED",
+      "LIFEDETECTED"
+    ],
+    "email_side_channel": "Intermittent separate emails with printer.jpg reported in June 2018; not interchangeable with browser print response.",
+    "cautions": [
+      "Xbox Wire describes a PDF as the user-visible format; client window.print() means no source proof of server-generated PDF payload bytes.",
+      "The three accepted printouts may reflect shared or session state. Exact state algorithm is not recovered.",
+      "Reported field names and POSTs are an eyewitness network summary, not saved original HAR.",
+      "Publisher and all server reports precede December 2019 CE shipment; no CE-specific input value or accepted response identified.",
+      "Do not send guesses to current live server."
+    ]
+  },
+  "source_bytes_recovered": {
+    "javascript_bundle": false,
+    "prepare_php_server": false,
+    "index_php_server": false,
+    "successful_response_html": false,
+    "original_printout_pdf": false
+  },
+  "recovery_priority": [
+    "Retrieve dated archived Playdead js/dist.js and original request HAR before inventing PHP protocol.",
+    "Retrieve original successful index.php response fragment including response headers, date, and payload.",
+    "Retrieve originals of historical printed PDFs and separately emailed printer.jpg assets, with checksums.",
+    "Compare dated pre- and post-CE captures for new accepted response classes, not visual resemblance to chosen plaintext."
+  ]
+}

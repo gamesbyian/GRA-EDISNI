@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "experiment": 481,
+  "freeze_date": "2026-10-08",
+  "question": "Does the official approximately nine-sketch poster layout uniquely belong to the sticker-bearing CE, and is there any authored A-I foreground reading rule?",
+  "publisher": "iam8bit",
+  "product_pages": {
+    "CE": {
+      "url": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "claims": [
+        "Includes foldout poster",
+        "Includes art card set",
+        "Limited collaboration with Playdead"
+      ],
+      "shown_gallery_asset": "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00014_cf6a9295-f926-4f34-880f-2ddd6d75ce3d.jpg?v=1588895007&width=3648"
+    },
+    "standalone": {
+      "url": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "claims": [
+        "Includes fold-out poster with exclusive original art",
+        "Limited PS4 physical edition distinct from statue CE"
+      ],
+      "shown_gallery_asset": "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00014.jpg?v=1588895388&width=5472"
+    }
+  },
+  "same_scene_evidence": {
+    "confidence": "strong promotional source-image reuse",
+    "observation": "Both official galleries display the same distinctive oblique photo scene: unfolded white INSIDE poster on industrial metal grid beside blue PlayStation case/disc; identical nine roughly 3x3 concept sketches and relative placement.",
+    "source_filename_stem": "InsideCE_Lifestyle_00014",
+    "image_variant_difference": "CE gallery uses _cf6a9295-f926-4f34-880f-2ddd6d75ce3d suffix; standalone uses unsuffixed filename. Files not byte-hash compared.",
+    "what_it_establishes": "Publisher reused the poster photograph to promote both distinct products, so this image by itself cannot establish CE exclusivity of the visible 3x3 sketch grid.",
+    "what_it_does_not_establish": "The exact physical sheet inserted in standalone vs CE copies, the reverse-side artwork, or any source-defined A-I glyph alignment."
+  },
+  "poster_front_as_pictured": {
+    "medium": "Single oblique lifestyle image, not an orthographic or print-ready scan.",
+    "rough_sketch_count": 9,
+    "rough_layout": "3 rows x 3 images",
+    "folds_visible": true,
+    "title_visible": "INSIDE in red near top",
+    "explicit_background_A_I_letters_visible": false,
+    "explicit_slash_dash_dot_legend_visible": false,
+    "sticker_number_positions_visible": false,
+    "complete_reverse_side_inspected": false,
+    "exact_label_mapping": false,
+    "surface_status": "Authentic source image; a registered foreground receiving surface has not been shown."
+  },
+  "comparison_control": {
+    "single_product_prior": "A nine-sketch visual arrangement on publisher material is an economical visual analogy but not independently CE-only.",
+    "cross_product_marketing_prior": "The identical promotional scene is used on standalone listing, weakening any assertion that the photograph itself proves a CE-specific sticker guide.",
+    "design_caveat": "Even if the standalone physical poster is identical, Playdead could have intended a metapuzzle that standalone purchasers solve with other media; artwork sharing is not logically disproof of sticker use.",
+    "unavailable_externals": [
+      "Native pixel/print-ready double-sided poster master",
+      "Verified standalone unboxing with unfolded sheet in both orientations",
+      "Verified CE unboxing with front/back scans at matched geometry",
+      "Publisher-authored statement identifying poster grid as a code matrix"
+    ]
+  },
+  "other_pack_ins": {
+    "CE_art_card_photos": [
+      "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00018.jpg?v=1588895007&width=3648",
+      "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00024.jpg?v=1588895007&width=3648"
+    ],
+    "source_observation": "Official photos show numerous assorted image cards, not an obvious nine-card A-I sequence. Exact quantity and any reverse-side numbering not confirmed.",
+    "do_not_infer": "Nine sticker backgrounds do not require nine physical art cards."
+  },
+  "proposed_source_fixed_next_test": [
+    "Acquire native unfolded poster front and back, plus source evidence of which edition each scan belongs to.",
+    "Determine independently whether both physical editions shipped the same print. Preserve original orientation and fold registration.",
+    "Before overlaying sticker predictions, establish author-provided A-I label correspondence, print margin/index, or at least a repeatable operation shared across two independent source art assets.",
+    "Use the high-resolution original not an unconstrained perspective warp. If no authored mapping is found, treat the poster as an art display rather than a cipher consumer."
+  ],
+  "historical_prior_editions": [
+    {
+      "source": "https://vgcollect.com/item/132254",
+      "source_class": "collector catalog, not verified publisher-original pack-in proof",
+      "product": "INSIDE + LIMBO (505 Games North American PS4 physical release)",
+      "reported_release_date": "2017-09-12",
+      "reported_pack_ins": [
+        "fold-out poster",
+        "original character concept design art card"
+      ],
+      "scope": "Demonstrates third-party-reported packaging precedent that predates 2019 CE; does not establish same poster design, front/back or symbol registration."
+    }
+  ]
+}
