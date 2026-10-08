@@ -75,6 +75,15 @@ def primary_columns(frame):
     return True
 
 
+def simple_row_exception(master, depths):
+    # The selected quarter contains exactly one minority symbol across depths.
+    for j, selected_q in enumerate(depths):
+        slash = sum(master[27*selected_q + 9*d + j] == "/" for d in range(3))
+        if slash not in (1, 2):
+            return False
+    return True
+
+
 def make_master(frames, depths):
     symbols = tuple(itertools.chain.from_iterable(frames))
     tail = tuple("/" if d == depths[j] else "."
@@ -147,19 +156,30 @@ def main():
             if valid_columns:
                 counts["column"] += 1
                 column_masters.append(master)
+            row_ok = simple_row_exception(master, depths)
+            if row_ok:
+                counts["row_exception"] += 1
+                if valid_columns:
+                    counts["column_row_exception"] += 1
             if selected_columns(master, depths):
                 counts["selected"] += 1
                 selected_masters.append(master)
                 selected_depth_patterns["".join(map(str, depths))] += 1
+                if row_ok:
+                    counts["row_and_selected"] += 1
                 if valid_columns:
                     counts["column_selected"] += 1
+                    if row_ok:
+                        counts["column_row_and_selected"] += 1
                     column_selected_masters.append(master)
             if Counter(master) == Counter({"/": 54, "-": 36, ".": 18}):
                 counts["census_54_36_18"] += 1
 
     assert counts == {
         "all": 233280, "column": 324, "selected": 4528,
-        "column_selected": 12, "census_54_36_18": 116640
+        "column_selected": 12, "census_54_36_18": 116640,
+        "row_exception": 62640, "column_row_exception": 108,
+        "row_and_selected": 1656, "column_row_and_selected": 6
     }, counts
 
     def neighbour_summary(masters):
