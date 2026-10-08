@@ -47,6 +47,13 @@ def fixture():
     assert d["final_offset_overhang_right_px"] == 23
     assert d["total_white_count"] == 2577
     assert d["false_white"] == 0 and d["missing_white"] == 0
+    controls = d["sixth_offset_nearby_controls"]
+    assert len(controls) == 9
+    assert [(c["delta_xy"], c["false_white"]) for c in controls] == [
+        ([-32,0],309), ([-16,0],255), ([0,0],0), ([16,0],290),
+        ([32,0],299), ([0,-16],249), ([0,16],254),
+        ([0,-32],288), ([0,32],283)
+    ]
     return d
 
 def full_replay(d, source_path, witness_path, png_output=None):
@@ -100,6 +107,18 @@ def full_replay(d, source_path, witness_path, png_output=None):
     old = np.all(original[1755:1755+913,1123:1123+916,:] == (2,2,6),axis=2)
     assert int(old.sum()) == 560
     assert int((old & ~historic_bright).sum()) == 309
+    sy, sx = np.where(np.all(original == (2,2,6), axis=2))
+    for case in d["sixth_offset_nearby_controls"]:
+        dx,dy = case["delta_xy"]
+        tx=sx-(1155+dx)
+        ty=sy-(1755+dy)
+        selected=(tx>=0)&(tx<916)&(ty>=0)&(ty<913)
+        candidate=np.zeros_like(historic_bright)
+        candidate[ty[selected],tx[selected]]=True
+        observed=(int(candidate.sum()),int((candidate & historic_bright).sum()),
+                  int((candidate & ~historic_bright).sum()))
+        expected=(case["source_sites"],case["witness_hits"],case["false_white"])
+        assert observed == expected, (case, observed)
     if png_output:
         Image.fromarray((result*255).astype(np.uint8),mode="L").save(png_output)
     return {
