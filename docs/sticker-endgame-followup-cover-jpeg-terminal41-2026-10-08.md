@@ -126,3 +126,17 @@ This audit finds no new interface accepting the sticker foreground. Therefore H1
 - June 2018 printer form/POST contemporary account: https://steamcommunity.com/app/304430/discussions/0/359543951720753445/?ctp=53
 
 _No contact with owners or investigators was initiated. These are research findings; no claim of solved CE foreground or recovered missing JPEG image._
+
+
+## 4. Chronology control: printer count versus website schema count
+
+An important cross-check emerged from the [Game Detectives original 2018–2020 chronology](https://wiki.gamedetectives.net/w/Inside_ARG) and the archival status files.
+
+- The four status labels `PLANET`, `LIFE`, `PROBE`, and `CONDISCON` correspond in subject to the original Xbox, PC/PS4, iOS and Switch printer branches. This is a compelling *architectural association*; precise per-submission site causation remains historically uncertain.
+- The site reached the four-scheme shutdown state before the later CE URL recognition on 21 April 2020. The community chronology places the CE's physical arrival in December 2019, creating an overlap in which the stickers could have been designed to work with an already largely completed ARG website.
+- The fifth platform's macOS printer messages emerged in June 2020, **after** the terminal shutdown. The [April 2026 code-level retail-binary audit](https://www.reddit.com/r/PlaydeadsInside/comments/1sqij1h/nearly_10_years_on_a_codelevel_audit_of_insides/) reports a fifth `SecretType.Cutout` enum value on macOS, but the developer code assertion has not been independently reproduced here.
+- The community phrase `HIBERNATION IN PROGRESS REBOOT PENDING` therefore occupies a different historical *phase* than the four breached printer identities. Its exact decoding remains disputed, but the temporal ordering alone makes it unsafe to assume the stickers only encode another first-phase password.
+
+**New endgame discriminator:** seek original post-shutdown links, physical-release follow-up media and macOS-era artifacts that define *continuation* grammar. An actual external consumer designed after the first four schemes would strengthen the mission-reboot hypothesis. No such consumer has yet been verified.
+
+The published 2026 Chinese-language [MistARG chronology](https://www.mistarg.cn/topic/274/%E5%8F%91%E7%8E%B0-arg%E7%BC%96%E5%B9%B4%E5%8F%B2%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92-inside) independently assembles the same historical stage sequence, but explicitly cites Game Detectives and is a **derivative synthesis**, not an independent proof of Playdead's unpublished intentions.
