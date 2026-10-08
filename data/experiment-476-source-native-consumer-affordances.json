@@ -112,6 +112,44 @@
       "next_independent_evidence": "Byte-correct original image or repair parameters explicitly connecting the known 128 clue and CE marks to the JPEG corruption/registration."
     },
     {
+      "id": "ce_art_card_set",
+      "source_kind": "verified_physical_pack_in",
+      "native_role": "Official 2019 Collector's Edition elegant art card set, potentially multiple independent printed surfaces",
+      "native_input_type": "static physical print art; no source-fixed sticker indexing, fold/stack/overlay operation or symbol input demonstrated",
+      "primary_source": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "corroborating_source": "https://www.mobygames.com/game/207693/inside-collectors-edition/",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "official_product_inclusion_confirmed_uninspected_details",
+      "ce_bridge_status": "no_native_register_or_reader",
+      "strongest_negative": "Publisher establishes an art-card set but does not claim the images, count, dimensions, reverse sides or printing are a sticker codebook. A multi-card pack-in does not itself require overlay or row sorting.",
+      "next_independent_evidence": "Original unaltered scans of every card, both sides, showing any author-provided indexing marks or repeated slash/dash/dot coordinate template before matching sticker completions."
+    },
+    {
+      "id": "ce_foldout_poster",
+      "source_kind": "verified_physical_pack_in",
+      "native_role": "Official 2019 Collector's Edition foldout poster, possible large physical graphic carrier",
+      "native_input_type": "static poster, unknown source geometry; no sticker-to-poster coordinate mask or overlay identified",
+      "primary_source": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "comparison_source": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "official_product_inclusion_confirmed_native_print_uninspected",
+      "ce_bridge_status": "no_native_register_or_reader",
+      "strongest_negative": "An INSIDE standalone PS4 edition also advertises a foldout poster; whether its artwork is identical is not established, and a foldout format does not itself supply a readout operation.",
+      "next_independent_evidence": "Source-accurate unobstructed scans of both sides fully unfolded, fold-grid geometry, and comparison against the separate standalone PS4 pack-in before evaluating any sticker coordinate correspondence."
+    },
+    {
+      "id": "ce_premium_spot_varnish_box",
+      "source_kind": "verified_physical_pack_in",
+      "native_role": "Official Collector's Edition premium box with custom foam and spot varnish embellishments",
+      "native_input_type": "three-dimensional packaging/finish not documented as a code receiver; glossy/matte surface layers may require raking-light photography for source cataloguing",
+      "primary_source": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "official_product_inclusion_confirmed_no_registration",
+      "ce_bridge_status": "no_native_register_or_reader",
+      "strongest_negative": "Spot varnish and custom foam are normal production features; no independent source says they encode sticker directions or register 9/27/108 marks.",
+      "next_independent_evidence": "Publisher-original production art or accurate photographs of all box faces under diffuse and grazing illumination that reveal an explicit symbol/index/cue, without treating reflections as a hidden code by default."
+    },
+    {
       "id": "terminal41_shutdown_nine_redirects",
       "source_kind": "static_redirect_chain",
       "native_role": "Fixed 09-to-01 shutdown sequence",
@@ -241,5 +279,5 @@
       "no_transform_excludes": []
     }
   ],
-  "verdict": "A January 2019 Xbox Wire firsthand publisher account verifies a real printer phrase -> website subscription input -> corrupted PDF-image pathway, and the original secret-ending lever is functionally demonstrated in-game. Neither is independently shown to accept Collector's Edition foreground. Other Terminal41 and CE surfaces inspected are static, missing original handlers/assets, or already consumed; count matching is not a typed receiver."
+  "verdict": "A January 2019 Xbox Wire firsthand publisher account verifies a real printer phrase -> website subscription input -> corrupted PDF-image pathway, and the original secret-ending lever is functionally demonstrated in-game. Neither is independently shown to accept Collector's Edition foreground. Other Terminal41 and CE surfaces inspected are static, missing original handlers/assets, or already consumed; count matching is not a typed receiver. Official iam8bit product contents additionally verify a CE art-card set, a foldout poster and a spot-varnished presentation box, none examined at native artwork detail or independently demonstrated as a code receiver. A standalone PS4 issue also included a foldout poster, so artwork identity is an open comparative question."
 }
