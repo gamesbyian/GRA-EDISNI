@@ -80,6 +80,23 @@ Under all six arbitrary bijections of depths to `L,R,U`, these give **108 distin
 
 The already tested **different** Q4 selected-depth readout (Experiment 451) produces **68** possible 27-bit binary outputs across A∩B, or three across the narrower selected-column family. Those outputs contain no dot/Left action. This is not evidence for CL-02; it makes clear why converting *selected body bits* into the three-direction lever is not enough. The present conjecture consumes the **tail depths as commands** rather than the body selections as commands.
 
+### Deliberately answer-assisted backsolve, followed by an adversarial control
+
+A useful new exercise is to **allow an unsupported jump**: suppose the nine tail-derived commands are an *order-preserving subsequence* of the known original fourteen-action bunker password. A player would somehow need an independent rule selecting which five of fourteen actions to omit; none has been identified. This is a brand-new conditional variant, **not** a replay of the direct mapping falsified in Experiments 343/479.
+
+The [executable CL-02 probe](../../scripts/conjecture_lab_nine_action_subsequence.py) tests all 18 physical-compatible depth strings × six bijective depth-to-`U/R/L` mappings × forward/reverse = **216 attempted versions**. Exactly **two** match as subsequences of the previously known `UURLRRRUUURLLL`:
+
+| Depth string | Fitted depth 0/1/2 codebook | Nine actions | Positions inside original fourteen |
+|---|---|---|---|
+| `021101222` | `U/R/L` | `ULRRURLLL` | 1, 4, 5, 6, 8, 11, 12, 13, 14 |
+| `121101222` | `U/R/L` | `RLRRURLLL` | 3, 4, 5, 6, 8, 11, 12, 13, 14 |
+
+Both use forward order and the same fitted codebook. That appears tantalizing if one looks only at those two matches. It is **not persuasive evidence**: the password was the known target before the subsequence rule and mapping were chosen.
+
+To make the selection freedom visible, the probe also evaluates 4,000 deterministically shuffled fourteen-action passwords preserving exactly the original five `U`, five `R`, four `L` census. The current password gets **2/216** candidate hits. The shuffled controls average **5.60075** hits; **1,729/4,000 (43.225%)** obtain *two or fewer*. Thus two matches are ordinary by this coarse exploration control. This is not a formal familywise statistical claim, and many other plausible subset definitions were not counted. It shows precisely why an interesting candidate should be developed **and then challenged**, rather than either prohibited upfront or announced as a solved cipher.
+
+**Disposition:** preserve the two backsolved strings as artifacts of exploration only. The missing five-action deletion rule and missing nine-command source-native consumer remain fatal to *validation*, not logical refutations of every nine-command concept.
+
 ### Risky next test
 
 Look for an original CE/game or archived ARG artifact with **nine independently selectable three-state positions** that existed around the CE release. A nine-sketch poster is only nine pictures and has no demonstrated three-way choice per sketch. A legitimate 3×3×3 receiver would make CL-02 unusually concrete. A complete native consumer inventory proving no such action surface exists in the relevant materials would weaken it sharply, though missing server history limits such proof.
