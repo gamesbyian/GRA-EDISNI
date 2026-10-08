@@ -6,6 +6,7 @@ on:
       - .github/workflows/cl05-source-positive-control.yml
       - scripts/conjecture_lab_gate98_positive_control.py
       - scripts/conjecture_lab_gate98_all_amplitudes.py
+      - scripts/conjecture_lab_gate98_phase_replay.py
 permissions:
   contents: read
 jobs:
@@ -25,6 +26,8 @@ jobs:
         run: python scripts/conjecture_lab_gate98_all_amplitudes.py --output cl05-source-all-rgb-levels.json
       - name: Audit reproducible colour amplitude source output
         run: echo "CL05_LEVELS_COMPLETE"
+      - name: Independently infer exact-black source phase and replay CE banks
+        run: python scripts/conjecture_lab_gate98_phase_replay.py --source gate98-original.png --output cl05-phase-replay.json
       - uses: actions/upload-artifact@v4
         if: success()
         with:
@@ -33,4 +36,5 @@ jobs:
             cl05-original-rgb-layers.json
             cl05-source-all-rgb-levels.json
             gate98-original.png
+            cl05-phase-replay.json
           retention-days: 14
