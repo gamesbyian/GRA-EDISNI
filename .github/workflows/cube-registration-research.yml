@@ -6,6 +6,7 @@ on:
       - "scripts/audit_cube_lab_*.js"
       - "scripts/audit_cube_registration_*.js"
       - "scripts/audit_q4_erasure_scope.py"
+      - "scripts/audit_cube_primary_registration_null.py"
       - "scripts/audit_registration_q4_reader_conflict.py"
       - "data/observations.csv"
       - ".github/workflows/cube-registration-research.yml"
@@ -33,6 +34,8 @@ jobs:
         run: node scripts/audit_cube_registration_extended.js --fast > /tmp/cube-registration-extended.json
       - name: Whole-frame and whole-cube prediction smoke
         run: node scripts/audit_cube_registration_predictive_holdout.js --fast > /tmp/cube-registration-predictive.json
+      - name: Primary-only registration null smoke
+        run: python scripts/audit_cube_primary_registration_null.py --samples 5000 > /tmp/cube-primary-only.json
       - name: Compare registration score with Q4 axis consumers
         run: python scripts/audit_registration_q4_reader_conflict.py > /tmp/cube-q4-readers.json
       - name: Exact Q4 partial-stack vs full-cube erasures
