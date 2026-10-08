@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **463** (repo-local experiment reports; Google Results archive coverage may lag).
+Latest indexed experiment: **464** (repo-local experiment reports; Google Results archive coverage may lag).
 
 | Experiment | Title |
 | ---: | --- |
@@ -476,6 +476,7 @@ Latest indexed experiment: **463** (repo-local experiment reports; Google Result
 | 461 | Fixed-mask, per-frame observed slash-census structural null (250k samples each): observed alphabetical X exact-minus-shift contrast 27.75 points vs constrained means ~3.1–3.5; structural-null one-sided tails ~0.0027 and six-comparison max-Z tail ~0.0085–0.010, retrospective and prior-dependent. |
 | 462 | Registration-weighted primary-column completions in nine whole-frame erasures: alphabetical-X beta25 40/54 correct (beta50 41/54) vs majority 32/54; two sampled entire-cube erasures 40–41/54 vs 32/54. Q4-ablated primary-only score retains 38/54 whole-frame and ~37/54 whole-cube. Strongly exploratory, Cube1 drives gain. |
 | 463 | Alphabetical-X weighting differentiates frozen Q4-axis readouts but endorses neither: depth family 12 masters with mean 8.05-point contrast, relabelled quarter family 10 with mean 13.44; beta25 weights slash at residues 50/54 ~0.745, slash at 93 ~0.382; the expected symbols conflict across rival axis models. |
+| 464 | Q4 scope-controlled erasure: native-depth selected-column family correctly reconstructs 11/12 known Q4 marks when hiding one A–I stack at a time, but only 8/12 (dot-majority baseline) when all Q4 physical marks are erased together. Full-Q4-hidden structural code-space counts uniform 354,294, depth 948, relabelled-quarter 7,824; quarter also 8/12. Internal conditional coupling is not independent primary-to-Q4 evidence. |
 
 | 424 | literal IBM 029/Hollerith foreground transform: encode `-` as punch row 11, `/` as 0+1, and `.` as 12+8+3. Across every possible H108 completion, rows 2/4/5/6/7/9 are structurally blank, rows 0=1 are duplicates, and rows 12=3=8 are duplicates, leaving only three independent occupancy patterns exactly equivalent to the original three sticker symbols. The mapping is historically grounded and lossless but adds zero information, supplies no 9×12/12×9 discriminator or row order, and cannot by itself produce a rich 12-row bitmap. Secondary note: the period code's labels sum to 23, which recurs in documented ARG chronology, but summing Hollerith row labels is not a standard decoding operation, so this remains a numerical echo rather than evidence. Preserve as a representation candidate; reopen only with an independent punch-card-specific consumer/layout cue. |
 
