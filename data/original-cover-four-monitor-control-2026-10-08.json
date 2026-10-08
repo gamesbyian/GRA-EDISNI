@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "source_zip": "inside-cover-source-audit.zip (archived scan-analysis ZIP supplied within conversation; do not infer original uncompressed scan identity)",
+  "image_A": "A-overview.jpg",
+  "image_B": "B-overview.jpg",
+  "image_size": [
+    2200,
+    1692
+  ],
+  "manually_selected_roi_xyxy": [
+    300,
+    900,
+    1550,
+    1250
+  ],
+  "method": "threshold pixels (R>level) && (R>G*ratio) && (R>B*1.12), 5x5 morphological closing, connected-component foreground area>50; B image acts as opposite-cover negative control",
+  "threshold_controls": [
+    {
+      "threshold": 75,
+      "red_to_green_ratio": 1.3,
+      "A_orange_displays": 4,
+      "B_orange_displays": 0
+    },
+    {
+      "threshold": 75,
+      "red_to_green_ratio": 1.4,
+      "A_orange_displays": 4,
+      "B_orange_displays": 0
+    },
+    {
+      "threshold": 75,
+      "red_to_green_ratio": 1.5,
+      "A_orange_displays": 4,
+      "B_orange_displays": 0
+    },
+    {
+      "threshold": 90,
+      "red_to_green_ratio": 1.3,
+      "A_orange_displays": 4,
+      "B_orange_displays": 0
+    },
+    {
+      "threshold": 90,
+      "red_to_green_ratio": 1.4,
+      "A_orange_displays": 4,
+      "B_orange_displays": 0
+    },
+    {
+      "threshold": 90,
+      "red_to_green_ratio": 1.5,
+      "A_orange_displays": 4,
+      "B_orange_displays": 0
+    },
+    {
+      "threshold": 110,
+      "red_to_green_ratio": 1.3,
+      "A_orange_displays": 4,
+      "B_orange_displays": 0
+    },
+    {
+      "threshold": 110,
+      "red_to_green_ratio": 1.4,
+      "A_orange_displays": 4,
+      "B_orange_displays": 0
+    }
+  ],
+  "anchors_at_threshold_110_ratio_1_3": [
+    {
+      "x": 379,
+      "y": 988,
+      "width": 32,
+      "height": 28,
+      "orange_area_pixels": 787
+    },
+    {
+      "x": 753,
+      "y": 972,
+      "width": 35,
+      "height": 26,
+      "orange_area_pixels": 694
+    },
+    {
+      "x": 1166,
+      "y": 1021,
+      "width": 40,
+      "height": 27,
+      "orange_area_pixels": 703
+    },
+    {
+      "x": 1276,
+      "y": 1106,
+      "width": 49,
+      "height": 40,
+      "orange_area_pixels": 1732
+    }
+  ],
+  "outcome": "Eight out of eight tested threshold combinations detect four independent displays on A and zero within the same coordinates on B. This operationalizes four-screen observation but does not demonstrate producer intent, four authentication scheme meaning, or sticker consumer.",
+  "epistemic_scope": "Region manually fixed after first seeing monitor distribution. Threshold grid controls measurement stability only, not surprise under random-image null. Input files are reduced-size derived previews not untouched source scans."
+}

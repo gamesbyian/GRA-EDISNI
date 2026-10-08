@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "scope": "Published July 2016 INSIDE original Unity texture names and gameplay audio, audited as potential sticker consumers, not direct asset byte census",
+  "methodology": "No full game Unity data or decompiled gameplay assembly obtained. Distinguish extracted-asset testimony from independent byte verification. Later wikis are derivative; names' numeric suffixes are exporter labels, not game coordinates.",
+  "sources": {
+    "steam_2016": "https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2",
+    "steam_compilation": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445",
+    "lab3": "https://steamcommunity.com/app/304430/discussions/0/359543951708963220/",
+    "chinese_2016": "https://www.3dmgame.com/gl/3577786.html",
+    "bunker_2016": "https://www.trueachievements.com/forum/viewthread.aspx?tid=814124",
+    "secrets_guide": "https://www.shacknews.com/article/95640/inside-how-to-get-the-secret-ending",
+    "ford_repeated": "https://inside.fandom.com/wiki/CEO",
+    "ford_pulse": "https://inside.fandom.com/wiki/The_Pulse",
+    "morse_2016": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445/?ctp=2",
+    "morse_space_2016": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445?ctp=6"
+  },
+  "entries": [
+    {
+      "id": "LetterCode_001",
+      "extract_label": "LetterCode_001_#835",
+      "display": "14 42 54 55 / 54 32 42 44",
+      "known_output": "PITY THIS",
+      "type": "encoded text texture",
+      "known_use": "original poem reference; first part reportedly hidden/misplaced",
+      "original_2016": true,
+      "consumer_role": "source-text/key reference",
+      "next_test": "extract shipped Unity texture and locate actual scene consumers and duplicate texture instances",
+      "status": "decoded"
+    },
+    {
+      "id": "LetterCode_002",
+      "extract_label": "LetterCode_002_#836",
+      "known_output": "BUSY MONSTER",
+      "type": "encoded glass-number texture",
+      "known_use": "part of known poem",
+      "original_2016": true,
+      "consumer_role": "already decoded original text",
+      "next_test": "inventory direct references to texture in build",
+      "status": "decoded"
+    },
+    {
+      "id": "LetterCode_003",
+      "extract_label": "LetterCode_003_#837",
+      "known_output": "MANUNKIND",
+      "type": "encoded glass-number texture",
+      "known_use": "part of known poem",
+      "original_2016": true,
+      "consumer_role": "already decoded original text",
+      "next_test": "confirm source reference",
+      "status": "decoded"
+    },
+    {
+      "id": "BoardText",
+      "extract_label": "BoardText_#292",
+      "known_output": "ENTER CODE SEQUENCE (other smaller text uncertain)",
+      "type": "in-game billboard",
+      "known_use": "secret-orb status board and bunker-sequence instruction",
+      "original_2016": true,
+      "consumer_role": "already functional progression prompt",
+      "next_test": "game input handler census beyond already-solved orb/bunker flow",
+      "status": "functionally explained"
+    },
+    {
+      "id": "SecretMap",
+      "extract_label": "SecretMap_#916 (alternate Chinese extraction SecretMap #44506.dds)",
+      "known_output": null,
+      "type": "orb/secret map texture",
+      "known_use": "apparently maps in-game orb positions",
+      "original_2016": true,
+      "consumer_role": "index/map candidate with native scene geometry",
+      "next_test": "recover actual pixels and compare with known 14 orb/board positions, seek unexplained sites AFTER explaining 14 known orbs",
+      "status": "plausibly consumed but needs pixel audit"
+    },
+    {
+      "id": "Sign_SecretMorse",
+      "extract_label": "Sign_SecretMorse_#944 (alternate Chinese extraction Sign_SecretMorse #3372.dds)",
+      "known_output": "GLADBLAD",
+      "type": "Morse-like text texture",
+      "known_use": "could be maker/developer easter egg, July 2016 solver notes a Playdead artist website under gladblad.dk",
+      "original_2016": true,
+      "consumer_role": "meta-level signature possible; not proven CE destination",
+      "next_test": "source-native Morse validation and independent attribution of author/domain",
+      "status": "text decoded, purpose not established"
+    },
+    {
+      "id": "letters",
+      "extract_label": "letters_#838",
+      "known_output": "Fordsjh Gjfhdfdjfhd Ujhdfr B02",
+      "type": "nonsense/encoded decorative text texture",
+      "known_use": "repeated on lab window, sonic shield and CEO nameplate (one reused phrase, not three independent codes)",
+      "original_2016": true,
+      "consumer_role": "weak unconsumed key candidate; stronger reusable-prop/fictional label alternative",
+      "next_test": "identify precise original asset pixels and whether all occurrences use same source texture/material; transposition on plaque may be normal orientation",
+      "status": "unresolved semantic content"
+    },
+    {
+      "id": "SIGN_GirlLab_A",
+      "extract_label": "SIGN_GirlLab_A_#935",
+      "known_output": "Rorschach Desgn Noah x200564",
+      "type": "lab glass text",
+      "known_use": "Rorschach/lab scene marking",
+      "original_2016": true,
+      "consumer_role": "weak unconsumed text candidate",
+      "next_test": "recover exact typography (Rorschach vs Porsche), compare other lab codes and scene naming",
+      "status": "unresolved semantic content"
+    },
+    {
+      "id": "COOKIE_Custom_forGirlInWindow_01",
+      "extract_label": "COOKIE_Custom_forGirlInWindow_01_#368",
+      "known_output": "Rorschach Desgn Noah x200564",
+      "type": "projected-shadow texture",
+      "known_use": "duplicate lab message from different rendering surface",
+      "original_2016": true,
+      "consumer_role": "same content as SIGN_GirlLab_A, not second independent message",
+      "next_test": "check whether mirror/vertical inversion is normal cookie/shadow projection",
+      "status": "duplicate rendering of lab label"
+    },
+    {
+      "id": "OTHER_TrainLetters",
+      "extract_label": "OTHER_TrainLetters_#888",
+      "known_output": "A10N7 (other wrecked train marking L08)",
+      "type": "transport/sector label texture",
+      "known_use": "train/station signage",
+      "original_2016": true,
+      "consumer_role": "possible spatial index only with independent key",
+      "next_test": "map all signs and conventional label counts before any speculative address matching",
+      "status": "scene label"
+    },
+    {
+      "id": "FX_ScreenKaypro",
+      "extract_label": "FX_ScreenKaypro_#742",
+      "known_output": null,
+      "type": "old-computer display texture",
+      "known_use": "possibly on in-game computer monitor",
+      "original_2016": true,
+      "consumer_role": "possible original image target",
+      "next_test": "identify exact game scene and underlying screen image; seek native operation prior to sticker overlay",
+      "status": "unresolved graphical classification"
+    },
+    {
+      "id": "SecretOrbTune",
+      "extract_label": "gameplay tape-recorder/radio/antenna melody",
+      "known_output": "UURLRRRUUURLLL (known bunker lever)",
+      "type": "audio repeated in-game",
+      "known_use": "already solved bunker password by June 2016",
+      "original_2016": true,
+      "consumer_role": "already consumed audio instruction",
+      "next_test": "check whether any distinct other cue exists; repeated playback alone not another cipher",
+      "status": "decoded and consumed"
+    },
+    {
+      "id": "MORSE_text",
+      "extract_label": "MORSE_text (2016 textual name; stable file path not recovered)",
+      "known_output": null,
+      "type": "printer-related glyph texture, role not fully established",
+      "known_use": "2016 gameplay/trailer page symbols, contemporaneous solvers asked whether it was related to known printer Morse; separate from Sign_SecretMorse",
+      "original_2016": true,
+      "consumer_role": "likely earlier printer input representation; not automatically an independent secret",
+      "next_test": "recover raw texture and source scene usage; resolve whether this is PC printer glyph asset",
+      "status": "relation to original printer not independently resolved"
+    },
+    {
+      "id": "MORSE_space",
+      "extract_label": "MORSE_space (2016 textual name)",
+      "known_output": "blank white page per observer",
+      "type": "spacing/blank-paper texture",
+      "known_use": "paired with MORSE_text reports; printer utility likely",
+      "original_2016": true,
+      "consumer_role": "no independent encoded content shown",
+      "next_test": "trace scene references and confirm its blank-page role",
+      "status": "unverified technical wrapper"
+    }
+  ],
+  "observation": "14 named entries, some duplicates and known-solves; sources do not permit any unconsumed sticker-addressable asset to be confirmed.",
+  "constraints": [
+    "Extracted texture-index numbers (#292/#835/#3372 etc.) are not canonical spatial coordinates.",
+    "A repeated texture reused on different props supplies one unique textual payload.",
+    "Decoded ASCII/Morse output does not itself prove a further ARG endpoint.",
+    "Existing puzzle utility (orb board, orb melody) is a strong alternate explanation to a CE cipher.",
+    "No candidate supplies a native H108/A-I/81+27 address mapping."
+  ]
+}
