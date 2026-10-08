@@ -70,5 +70,13 @@
   "last_field": "41212",
   "cover_clock": "12:12",
   "clock_connection": "unverified superficial possible link, not independent proof",
-  "upshot": "Explicit field separators and one archival i/1 transcription error are reliable; no meaning/authentication endpoint yet shown."
+  "upshot": "Explicit field separators and one archival i/1 transcription error are reliable; no meaning/authentication endpoint yet shown.",
+  "direct_unsigned_base36_test": {
+    "candidate_22_character_token": "38546uy754j9j6tuk5fi34",
+    "parsed_base36_integer": "1552529186059802721063562269367888",
+    "base36_integer_bit_length": 111,
+    "uncompressed_h108_foreground_ceiling_bits_given_exact_binary_split": 108,
+    "compatible": false,
+    "scope": "direct unsigned integer base36 conversion with no added bits; not a test of checksums, keyed hashing, encryption, expansion, external side information or unknown foreground alphabet extensions"
+  }
 }
