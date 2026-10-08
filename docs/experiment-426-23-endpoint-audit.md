@@ -78,6 +78,10 @@ So if 23 later receives independent confirmation as an authorial quantity, **621
 
 At present this is still structural compatibility, not production evidence. The archival/manufacturing lane remains explicit that serial 597 proves only that a high serial existed, not how many labels or Collector's Editions were produced.
 
+## Prior-count negative control (reconciled from superseding PR #141)
+
+The independent 23-aware endpoint audit in PR #141 also noted that generic pairwise addition can generate 23 from many earlier research numbers (for example 20+3, 9+14, 5+18, 19+4 and 13+10). These are **post-hoc coincidences**, not independent confirmation of a 23-valued sticker operator. The bounded endpoint-factor result above already contains the genuinely distinct observation from that PR. Likewise, since 23 is prime, a nontrivial positive-integer *factorization of 23 itself* is impossible. Preserve this negative control rather than reusing a duplicate Experiment 426 number.
+
 ## Disposition
 
 Preserve 621 as the leading **23-sensitive** endpoint hypothesis and 648 as the leading **legacy-carrier** endpoint hypothesis.
