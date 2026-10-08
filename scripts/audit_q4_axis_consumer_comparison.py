@@ -193,6 +193,14 @@ def main():
         (x["residue"],x["depth_symbols"],x["quarter_symbols"])
         for x in differences if x["disjoint"]
     ] == [(50,"-","/"),(54,"-","/"),(93,".","/")]
+    frozen = json.loads((__import__("pathlib").Path(__file__).resolve().parents[1] /
+                         "data/frozen-q4-axis-consumer-discriminators.json")
+                        .read_text(encoding="utf8"))
+    expected = [(x["residue"],x["depth"],x["quarter"])
+                for x in frozen["mutually_exclusive_forecasts"]]
+    actual = [(x["residue"],x["depth_symbols"],x["quarter_symbols"])
+              for x in differences if x["disjoint"]]
+    assert actual == expected, "Frozen physical prediction drift"
 
     holdout = holdout_frame_summary(observed)
     print(json.dumps({
