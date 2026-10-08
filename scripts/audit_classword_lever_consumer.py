@@ -87,6 +87,21 @@ def visible_placements(observed, positions, variants):
     return possibilities,canonical
 
 
+def type_compatible_placements(positions, variants):
+    """Direct H108 native order only: 1..81 never L, 82..108 never R."""
+    cases = []
+    for variant_index, word in enumerate(variants):
+        for start in range(108):
+            typed = all(
+                (cmd != "L" if positions[(start+i)%108] <= 81
+                 else cmd != "R")
+                for i, cmd in enumerate(word)
+            )
+            if typed:
+                cases.append((variant_index,start))
+    return cases
+
+
 def full_placements(masters, positions, variants):
     found=0
     members=0
@@ -115,11 +130,14 @@ def main():
         for direction in DIRECTIONS:
             positions=class_index_stream(order,direction)
             possibles,canonical=visible_placements(obs,positions,variants)
+            type_cases=type_compatible_placements(positions,variants)
             full=full_placements(masters,positions,variants)
             report={
                 "class_order":order,
                 "reading_direction":direction,
                 "canonical_password_physical_compatible_starts":canonical,
+                "alphabet_only_compatible_starts_all_28_variants":
+                    len(type_cases),
                 "compatible_rotated_or_reversed_partial_starts":
                     len(possibles),
                 "raw_compatible_placements":possibles,
@@ -132,6 +150,8 @@ def main():
                for r in reports)
     assert all(sorted(p["known_symbol_support"] for p in
                       r["raw_compatible_placements"])==[5,5,6]
+               for r in reports)
+    assert all(r["alphabet_only_compatible_starts_all_28_variants"]==0
                for r in reports)
     assert all(r["full_matching_placements"]==0 for r in reports)
     print(json.dumps({
@@ -146,11 +166,13 @@ def main():
         "cyclic_H108_starts_per_variant":108,
         "results":reports,
         "interpretation":(
-            "The natural 12-by-9 A-I class-word reading can express "
-            "all three lever directions and removes the alphabet "
-            "obstruction of direct H108 serial order, but it still "
-            "cannot reproduce the already-known bunker password "
-            "under the 324 observation-compatible grammar completions."
+            "A whole A-I twelve-cell class word can contain U/R/L, but "
+            "the original specific fourteen-command bunker password has "
+            "zero placements across both native class orders even when "
+            "all 42 unknown sticker labels are freely completed within "
+            "their original sector alphabets. Therefore the 3 weak "
+            "physical-only placements already violate the sector grammar; "
+            "no full 324-master check is needed for this negative."
         ),
         "scope_limits":[
             "The four tests are not independent because reversing both the word and stream is symmetrical.",
