@@ -106,3 +106,21 @@ The critical potential missing edge is **cover → 108 foreground interpretation
 Do not promote a cover→stickers decoding hypothesis merely because the CE includes the same PS4 case or because the cover has four monitors and the site has four breach schemes. Find a **typed input, explicit operation, or independently registered transformation**. A strong independent cover explanation may be *good news* for the research: it removes a confounding supposed consumer and makes a smaller set of actual CE-specific endpoints worth testing.
 
 This is a **new destination-level constraint**, not an attempt to decode the 108 foreground, and requires no guessed stickers, outreach, or edits to the canonical corpus.
+
+
+## Additional under-audited same-release artifact: the fold-out poster
+
+A second physical source now merits controlled inspection: **both the standalone product page and the CE product page explicitly list a fold-out poster**. This is a direct publisher fact, independent of the CE sticker model. The CE's official promotional photograph titled `InsideCE_Lifestyle_00014_cf6a9295-f926-4f34-880f-2ddd6d75ce3d.jpg` shows a white sketch poster alongside the game. The visible design appears to arrange several Huddle/creature concept studies in a regular multi-row grid, with roughly nine legible individual drawings in a three-column arrangement at the available preview scale.
+
+Source: [official CE product](https://www.iam8bit.com/products/inside-collector-s-edition), [official standalone product](https://www.iam8bit.com/products/inside-ps4-physical-game), [promotional poster photograph](https://cdn.shopify.com/s/files/1/0580/0965/products/InsideCE_Lifestyle_00014_cf6a9295-f926-4f34-880f-2ddd6d75ce3d.jpg).
+
+**Important:** the current preview is skewed and does not independently prove there are exactly nine illustrations, or that the two editions use the same printed poster artwork. A neat three-column design is a routine presentation choice, so even an exact 3x3 count would be **cardinality only**, not a sticker registration.
+
+This becomes a better-targeted **A-I class carrier audit** than arbitrary cover-monitor overlays only if the original full poster provides native labels, a fixed 3x3 mapping, repeatable side/edge marks, or a visually explicit operation. Exact A-I-to-poster correspondence must be observed, not generated from similarities among human shapes or the number nine.
+
+Two tests first:
+
+1. Recover unfolded front/back photographs **from already published sources only**, classify whether the CE and standalone posters are physically identical, and inventory count/grid/printed labels without reference to foreground sticker predictions.
+2. Compare to the already-solved **A-I background assembly** only when specific registered landmarks or visual features are independently identified; direct symbolic overlay across unrelated artwork is otherwise unlicensed.
+
+This preserves a plausible alternative physical input surface while respecting the more important distribution constraint: common-access content may have its own intended solve independent of the CE wrapper.
