@@ -4,7 +4,7 @@
 
 Determine the INSIDE Collector's Edition sticker mechanism from the closed corpus without privileging the current ternary-machine interpretation. Preserve the existing machine as a mature hypothesis family, but make it compete against simpler and historically demonstrated Playdead puzzle grammars. Do not assume future sticker recovery.
 
-The active epistemic-reset protocol is `docs/sticker-epistemic-reset.md`. The cross-puzzle operation prior is `docs/arg-puzzle-mechanics-corpus.md`.
+The active epistemic-reset protocol is `docs/sticker-epistemic-reset.md`. The cross-puzzle operation prior is `docs/arg-puzzle-mechanics-corpus.md`. The complementary conjecture protocol is `docs/conjecture-lab-protocol.md`; these serve different research purposes.
 
 ## Session recovery
 
@@ -52,6 +52,20 @@ The preserved Discord 108-cell master is an exact same-corpus rendering of `data
 
 Do not multiply matched-null frequencies or code-space densities as if independent.
 
+## Explicit conjecture research mode
+
+The project authorizes three distinct modes. Declare which one is being used in a report, script or agent handoff:
+
+1. **DISCOVER (exploratory):** propose a hunch even if no prior ARG source licenses it; backsolve from a known answer, inspect visually pleasing outputs, explore dictionaries, invent provisional mappings and follow several unsupported but visible assumptions. Call every chosen-after-inspection parameter *fitted* and every observed match *exploratory*, never a blind prediction.
+2. **DEVELOP (conditional):** temporarily adopt a versioned hypothesis as true long enough to deduce its full consequences, candidate receiving artifact, human solution path, costs and a risky independent prediction. Keep contradictory variants separate. Source absence alone is not a logical falsification.
+3. **VALIDATE (confirmatory):** require the source-native operation, frozen parameters, controls, accurate dependence labels, physical confirmation or independent downstream response before elevating a candidate to a finding. All existing strict evidence rules apply fully.
+
+These modes can run concurrently. They are **not evidence grades**. A successful exploration can end in a demonstrably wrong model and still be useful. Record an assumption stack and exact candidate selection history; exploratory data reuse never creates independent confirmation.
+
+The quarantine below prohibits evidence-free **claims and repeated confirmatory tests**. It does not prohibit a labeled, budgeted DISCOVER/DEVELOP attempt. Previously falsified *fixed* implementations remain falsified; don't silently revive them by changing their parameters.
+
+Keep conjecture work in `docs/conjecture-lab/` or separately named exploratory scripts, away from `data/observations.csv`, the physical ledger, source provenance, frozen predictions and the canonical machine spec. See `docs/conjecture-lab-protocol.md` and the [methodology audit](docs/conjecture-led-research-audit-2026-10-08.md).
+
 ## Closed-corpus rules
 
 - Treat all 14 physical completions as live unless a machine-native operation eliminates them.
@@ -59,9 +73,9 @@ Do not multiply matched-null frequencies or code-space densities as if independe
 - Operate on the whole symbolic family whenever possible.
 - New stickers are bonus validation only, never the next required step.
 
-## Current semantic quarantine
+## Current semantic quarantine (for validated claims)
 
-Do not reopen without an independently supplied operation or clue:
+Do not reopen as **confirmatory findings** without an independently supplied operation or clue. Named alternatives may be explored with explicit hypothesis selection and a limited budget in the conjecture lane:
 
 - XML
 - MIX
@@ -87,7 +101,7 @@ This preference applies to presentation. It does not require renaming code ident
 
 `data/machine-spec.json`, the theorem graph, prediction matrix, terminal `100`, hidden-state variables, gauges, POS3, selector and routing language describe the incumbent machine hypothesis. They remain valid when discussing or testing that family, but must not be used as Layer-0 observations or as the default vocabulary for generating new hypotheses during the reset.
 
-Before extending that family, ask whether the proposed operation is independently motivated by raw sticker evidence, historical community work, or a demonstrated ARG mechanism. See `docs/sticker-epistemic-reset.md`.
+Before extending that family **in VALIDATE mode**, ask whether the operation is independently motivated by raw sticker evidence, historical community work, or a demonstrated ARG mechanism. In DISCOVER/DEVELOP it may be extended provisionally, but must not inherit an evidential advantage from the work already invested in the incumbent. See `docs/sticker-epistemic-reset.md`.
 
 ## Exact machine language
 
@@ -109,7 +123,7 @@ Do not call the whole object a synchronizing automaton, universal computer, ECC,
 
 For each new experiment:
 
-1. State the bounded parent family or operation before inspecting attractive outputs.
+1. In VALIDATE, state the bounded parent family or operation before inspecting attractive outputs; in DISCOVER/DEVELOP, state your assumption stack and disclose which parameters or outputs were chosen after inspection.
 2. Prefer exact enumeration over sampling when the space is small.
 3. Record negative results.
 4. Add a compact ledger entry.
