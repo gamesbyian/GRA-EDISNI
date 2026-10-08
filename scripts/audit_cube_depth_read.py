@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 425: independent Q4 depth-selector / Q1-Q3 cube agreement audit.
+"""Experiment 449: independent Q4 depth-selector / Q1-Q3 cube agreement audit.
 
 Only physical observations. Compare the Q4 slash-selected primary-depth cells
 against an exact 3^9 independent uniform-depth baseline. No machine completion.
