@@ -109,6 +109,30 @@ The two masters differ only at residues **22 and 25**, which provide a direct tw
 
 It also creates a real conflict with the simple R criterion. That is useful because it forces a substantive *choice of theories* rather than endless algebraic strengthening of one incumbent architecture.
 
+## CL-02 v3: can the invariant 27-symbol readout be recognized in historical printers?
+
+The answer-assisted balanced-selector theory produces this single three-row word across both surviving full masters:
+
+```
+-/-////-/
+-//////--
+/--///-//
+```
+
+It has **nine dashes** among 27 positions, partly because the *selected-depth rule itself demands three dashes per quarter*. Reading each class vertically across Q1/Q2/Q3 produces these triples:
+
+| Class | A | B | C | D | E | F | G | H | I |
+|---|---|---|---|---|---|---|---|---|---|
+| Q1/Q2/Q3 | `--/` | `//-` | `-/-` | `///` | `///` | `///` | `//-` | `--/` | `/-/` |
+
+The equal classes (A/H, B/G, D/E/F) look intriguing as geometry; they are still outputs of two rules chosen from the same corpus. In a physical 3×3 grid the classes that *never* carry a selected dash are D/E/F; the classes selected twice are A/C/H, and those selected once are B/G/I. These three groups are merely a consequence to investigate, not a newly discovered independent glyph alphabet.
+
+**Provisional consumer guess:** perhaps the 27 symbols are a contiguous fragment of an already-known PC/PS4 or Xbox printer line, instead of a completely new plaintext. This is a human-scale target-assisted suggestion; the original printer strings are known beforehand, and there is no authorial alignment cue.
+
+The [matched-null printer comparison](../../scripts/conjecture_lab_printer_substring_control.py) checks all 27-character contiguous windows in the **32 published 32-character PC/PS4 printer rows** and **36 listed 36-character Xbox rows** (552 windows total), accepting forward, reversed, symbol-inverted, and inverted-reversed views. The closest match differs at **six of 27 marks**, and **there are zero exact matches**. In a seeded control of 4,000 uniformly reordered nine-dash candidate strings with the *same four allowed variants* and same 552 target windows, **2,705/4,000 (67.625%)** match at least as closely. Hence the six-mismatch nearest match is mundane under this permissive exploratory search.
+
+**Disposition:** the fixed 27-symbol readout cannot be an unchanged 27-symbol segment of those archived full printer lines under these four conventions. Reordering several rows, combining image layers, adding a source-specific transform, or using other original printer material remains untested. The source-controlled near-match does not confer any evidence for the balanced-tail conjecture.
+
 ## Next speculative directions now enabled
 
 1. **CL-02 v3, output-as-seed:** provisionally treat the *fixed* 27-mark readout as three nine-cell data layers, not as a text or lever password. Try exactly a few human-plausible three-stage image/readout rules (native A–I 3×3 arrangement; three 3×3 bitmap panels; positions of the nine dashes). Label operations invented and test whether their output predicts a previously unseen feature of the 534brn page or cover. Never optimize alignments to familiar source art and then claim independent confirmation.
