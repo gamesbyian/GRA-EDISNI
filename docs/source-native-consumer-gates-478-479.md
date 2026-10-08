@@ -45,8 +45,10 @@ alphabets, so in principle each class word could contain Up, Right
 and Left under the independently historic sleeve mapping.
 They nevertheless cannot reproduce the **already solved**
 14-move bunker password in either natural order or reading
-direction when checked against all 324 directly compatible
-column-grammar/Q4 complete strings.
+direction, **even under the weak 81 U/R + 27 U/L sector-alphabet
+restriction alone**. All 28 password rotations/reversals and 108
+cyclic starts fail. The 324 column-grammar/Q4 full-master
+check independently agrees but adds no new premise to this negative.
 
 This rules out one economical **existing-password replay**,
 not a novel externally clued game input.
