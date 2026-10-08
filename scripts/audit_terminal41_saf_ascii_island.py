@@ -25,7 +25,7 @@ PATTERN = re.compile(r"[A-Za-z0-9+]{35,}")
 
 def archive_block(path: Path) -> str:
     data = json.loads(path.read_text(encoding="utf-8"))
-    blocks = data["blocks"] if isinstance(data, dict) else data
+    blocks = data["entries"] if isinstance(data, dict) else data
     matches = [entry for entry in blocks if entry.get("id") == "block_116"]
     if len(matches) != 1:
         raise AssertionError("Expected one archived block_116")
