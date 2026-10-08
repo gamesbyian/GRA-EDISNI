@@ -76,6 +76,10 @@ flowchart LR
 | **Completion and prediction** | U2/U3/U4/U5, erasure, 14-state incumbent, later 10-state surviving U5, frozen physical residues | Exp 72, 170, 365–367, 407, 418, 422; PR #143. Completion counts are grammar-relative |
 | **Possible final payload** | Word, phrase, image, coordinates, password, path, in-game input, physical interaction | Exp 3, 57–68, 113–122, 240; PR #144. No validated downstream reader |
 
+## Using the map to make research decisions
+
+The [October 8 cross-link leverage audit](concept-map-crosslink-leverage-2026-10-08.md) turns the current overview into three question-specific views: observation/claim provenance; decoder-premise dependence and falsifiability; and **backward chaining from source-native consumers**. It distinguishes the missing *repeat-selector authorial cue* inside the recursive theory from the missing *external outcome/recognition rule* shared by all endgame candidates. It further separates **r93/50/54/102 rival discrimination** from **r94 shared tail-grammar validation**, and identifies a second artifact × native-input-affordance matrix needed to avoid source-free cipher searches.
+
 ## Experiment 458: one frozen observation mask, genuinely opposing forecasts
 
 [Experiment 458](experiment-458-common-mask-prospective-discrimination.md) tests **seven explicitly dependent decoder projections** on the identical 84-sticker/66-residue physical snapshot and **42 unknown** residues. It finds twelve sites with at least one pair of opposite forced predictions, but eight owe their contrast exclusively to weak cross-cube direct copying. The stronger **depth versus quarter** contrasts occur at **50, 54, 93**; **quarter versus selected-row** contrasts occur at **93, 102**. U2/depth/recursive are nested, not three independent votes. The full allowed-symbol atlas is CI-generated and frozen with source hashes and original predictions. This is *prediction readiness*, not validation on a new observation.
