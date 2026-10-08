@@ -1,0 +1,23 @@
+name: Verify historical URL discovery provenance
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate 2020 CE candidate readings and Discord timestamps
+        run: python scripts/audit_2020_background_url_discovery.py > /tmp/experiment-465.json
+      - name: Upload validated discovery channel
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-465-background-url-provenance
+          path: /tmp/experiment-465.json

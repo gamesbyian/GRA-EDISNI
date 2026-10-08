@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "scope": "April 2020 CE background URL discovery channel; no foreground decoding",
+  "upstream_repo": "twinysam/INSIDE-ARG",
+  "upstream_readme": "readme.md",
+  "evidence": {
+    "before_april21": {
+      "commit": "386d4f82c89829e8af82dfd5b9fd90c5f0e36ac9",
+      "commit_date_utc": "2020-04-21T00:54:02Z",
+      "contains_exact_address": false,
+      "url": "https://github.com/twinysam/INSIDE-ARG/blob/386d4f82c89829e8af82dfd5b9fd90c5f0e36ac9/readme.md",
+      "caution": "Absence from this README is not proof no one had encountered the exact URL elsewhere."
+    },
+    "after_april21": {
+      "commit": "aefbe285c4df7324dad6e6998ab0a24ea24da49c",
+      "commit_date_utc": "2020-04-23T05:44:57Z",
+      "contains_exact_address": true,
+      "url": "https://github.com/twinysam/INSIDE-ARG/blob/aefbe285c4df7324dad6e6998ab0a24ea24da49c/readme.md",
+      "caution": "Git postdating supports documented outcome but does not independently verify raw March and April Discord wording."
+    },
+    "recorded_preindex_candidates": [
+      {
+        "label": "2020-03-20 first reported interpretation",
+        "text": "uat/5345rn9653f9i8nmd",
+        "discord_snowflake": "690408214470328390",
+        "source_tier": "May 2020 retrospective community timeline linking dated Discord discussion"
+      },
+      {
+        "label": "pre-index variant A, retrospectively reported; independently reiterated by solver April 28/29",
+        "text": "dat/534brn9653f9i8rnd",
+        "source_tier": "First-person 28–29 April 2020 original Discord export directly confirms this was the closest remembered pre-discovery reading (18/21)."
+      },
+      {
+        "label": "pre-index variant B, retrospectively listed in later README only",
+        "text": "dat/534brn9653f9i8nmd",
+        "source_tier": "Later community README lists a 19/21 candidate before index discovery, but exact string was not independently located as a pre-discovery message in the pinned 5 MB Discord text export."
+      }
+    ],
+    "external_discovery": {
+      "discord_snowflake": "702030280751317072",
+      "url": "https://discord.com/channels/460626942190813184/461275582970462209/702030280751317072",
+      "documentation": "https://github.com/twinysam/INSIDE-ARG/blob/master/readme.md",
+      "channel": "Internet Archive/Wayback Machine site-map/index browsing inferred from same discoverer's contemporaneous 01:54–01:56 statements and 03:52 exact-URL post; original Wayback index capture bytes not independently recovered",
+      "exact_target": "dat/534brn9653f9j8mmd",
+      "paths_reported": [
+        "sys/terminate_terminal/41/terminate.html",
+        "dat/534brn9653f9j8mmd/",
+        "sys/terminate_terminal/41/y/",
+        "sys/terminateall.html"
+      ],
+      "caution": "This discovery route establishes historic recognition of the URL; it is not a verified blind independent reading of all 21 characters of the background artwork."
+    },
+    "primary_discord_export": {
+      "repo": "gamesbyian/playdead-unofficial-exports",
+      "path": "Playdead Unofficial - ARG - solving [461275582970462209].txt",
+      "blob_sha": "1889cc948f86f5a4455de0d7310b15cdb1b88b5c",
+      "permalink": "https://github.com/gamesbyian/playdead-unofficial-exports/blob/1889cc948f86f5a4455de0d7310b15cdb1b88b5c/Playdead%20Unofficial%20-%20ARG%20-%20solving%20%5B461275582970462209%5D.txt",
+      "format": "DiscordChatExporter-style text, dates/times in export's unspecified local timezone, not necessarily UTC",
+      "directly_recovered_events": [
+        {
+          "export_timestamp": "4/21/2020 1:54 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "so im looking on the internet archive database",
+          "role": "explicit initial source is third-party Internet Archive database"
+        },
+        {
+          "export_timestamp": "4/21/2020 1:55 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "its showing the site map",
+          "role": "external Wayback site-map navigation"
+        },
+        {
+          "export_timestamp": "4/21/2020 1:56 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "im just going and using the site map",
+          "role": "reiterates site-map provenance, with Wayback_Machine screenshot"
+        },
+        {
+          "export_timestamp": "4/21/2020 2:02 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "http://www.terminal41.link/comms/gate/98/connect.html",
+          "role": "first explicit archived path before CE exact path appears"
+        },
+        {
+          "export_timestamp": "3/20/2020 12:35 AM",
+          "author": "aperson1",
+          "content_contains": "uat/5345rn9653f9i8nmd",
+          "role": "documented pre-index partial artwork interpretation"
+        },
+        {
+          "export_timestamp": "4/21/2020 3:51 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "http://terminal41.link/dat/534brn9653f9j8mmd/",
+          "role": "first archived posting of exact path by external index searcher"
+        },
+        {
+          "export_timestamp": "4/21/2020 3:52 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "i found them while looking through the indexes",
+          "role": "first-hand discovery source"
+        },
+        {
+          "export_timestamp": "4/21/2020 3:52 AM",
+          "author": "santiface",
+          "content_contains": "that's the code",
+          "role": "immediate recognition by CE sticker solver"
+        },
+        {
+          "export_timestamp": "4/21/2020 3:55 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "one of the most recent added",
+          "role": "searcher says path appeared recently in inspected indices"
+        },
+        {
+          "export_timestamp": "4/28/2020 7:57 PM",
+          "author": "santiface",
+          "content_contains": "we didn't fully solve it through observation",
+          "role": "explicit retrospective first-hand nonblind-readout admission"
+        },
+        {
+          "export_timestamp": "4/28/2020 7:57 PM",
+          "author": "santiface",
+          "content_contains": "dat/534brn9653f9i8rnd",
+          "role": "firsthand closest readout, 18/21; user and time carried by same message"
+        },
+        {
+          "export_timestamp": "4/29/2020 6:41 PM",
+          "author": "santiface",
+          "content_contains": "3 characters wrong",
+          "role": "explicit numeric corroboration of three-mismatch version"
+        }
+      ],
+      "caveat": "Export is a separate public archived rendering of original Discord messages, not an authenticated live Discord API result. Exact exporter timezone offset is unspecified."
+    }
+  },
+  "interpretive_boundaries": [
+    "Pre-index candidate strings are documented retrospectively and may reflect transcription/alternative-image uncertainty.",
+    "Git README update dates bound documentation time, not source-artifact creation time.",
+    "Discord snowflake encodes message creation time but not text authenticity; original messages are corroborated by the pinned community channel export, whose displayed wall-clock timezone is unknown.",
+    "Website-index recognition validates a strong relation to the CE background, not a foreground-symbol decoding grammar.",
+    "This event is distinct from the foreground code's 108-period model and does not falsify that puzzle.",
+    "The 19/21 version appears in the later retrospective community README but was not found as an exact original pre-index message in the 5MB available export; the best independently preserved first-person pre-index reading is 18/21 (3 incorrect).",
+    "Archived first-hand source explicitly identifies Internet Archive's site map as the discoverer's browsing method; the later exact URL is attributed by the same participant to indexes. The exact page listing that contained that URL is not independently preserved."
+  ]
+}

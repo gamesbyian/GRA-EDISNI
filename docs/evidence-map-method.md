@@ -1,12 +1,12 @@
 # Evidence Map Method, Coding Manual, and Update Policy
 
-**Version:** 2026-10-08 (pilot reconciled through Experiment 458). **Type:** internal research-evidence *inventory and decision map*, adapting principles from systematic evidence and gap maps. This is **not a formally conducted systematic/scoping review**, a GRADE certainty assessment, or a meta-analysis.
+**Version:** 2026-10-08 (pilot reconciled through Experiment 465; Experiment 459 remains separate active work). **Type:** internal research-evidence *inventory and decision map*, adapting principles from systematic evidence and gap maps. This is **not a formally conducted systematic/scoping review**, a GRADE certainty assessment, or a meta-analysis.
 
 ## Objective and boundary
 
 Question: *Which distinct, source-motivated decoding mechanisms for the INSIDE Collector's Edition sticker foreground have been examined, with what type of test, and which missing evidence would distinguish surviving mechanisms or validate an endgame consumer?*
 
-**Scope screened for this revision:** all 443 canonical numbered experiment titles currently in `docs/experiment-ledger.md` (1–458, gaps 341 and 434–447); detailed reports selectively read and cited in the evidence register; current research state, original experiment code, physical source data and merged PRs #140, #142–144 and #149. PR #141 was closed as a duplicate with its unique methodological caution reconciled. The full title index is generated in `docs/experiment-title-index.md`. **This is not an exhaustive line-by-line original source or script audit of 443 experiments.** The claim register remains a curated 34-evaluation pilot.
+**Scope screened for this revision:** all 444 canonical numbered experiment titles currently in `docs/experiment-ledger.md` (1–465, gaps 341, 434–447 and pending cube experiments 459–464); detailed reports selectively read and cited in the evidence register; current research state, original experiment code, physical source data and merged PRs #140, #142–144 and #149. PR #141 was closed as a duplicate with its unique methodological caution reconciled. The full title index is generated in `docs/experiment-title-index.md`. **This is not an exhaustive line-by-line original source or script audit of 443 experiments.** The claim register remains a curated 35-evaluation pilot.
 
 **Inclusion:** a fixed observation or historical provenance relevant to a decoder; a bounded falsifiable test or negative result; a model-family comparison; a prospective prediction; a source-constrained external consumer; an open PR with testable claimed results clearly marked pending. **Exclusion:** undocumented intuition as a verified result, repeated narrative restatements of the same experiment, code not tied to a finding, unconstrained visual or semantic guesses, and downstream consequences presented as independent support for their own premises. Retain excluded hypothesis narratives in other docs; do not label them falsified merely because they lack a register row.
 
@@ -48,6 +48,8 @@ The authoritative curated rows are in [`data/sticker-evidence-register.csv`](../
 ### Critical-appraisal flags
 
 For each row inspect (a) provenance and physical independence, (b) parameter and hypothesis-selection timing, (c) shared observation mask and duplicate-residue leakage, (d) appropriate null or trivial prediction baseline, (e) decoder complexity/flexible orientations, (f) directness of the measured outcome to the puzzle endgame, and (g) reproducibility. The register carries the critical limitations as specific fields, rather than forcing a misleading numerical evidence grade. No independent second coder or reliability statistic is claimed for this pilot.
+
+**Historic discovery-channel rule:** Record whether a supposed external endgame was (a) *blindly read from the clue* before source search, (b) *recognized among source-enumerated alternatives* after seeing candidate answers, or (c) *verified by an independent operating consumer*. Experiment 465 provides a real documented example of type (b) for the Collector's Edition background: the exact URL was reportedly surfaced through a website index after earlier partial sticker readings. Strongly associated physical evidence need not be a full blind decode.
 
 **Causal/evidence dependency rule:** If R001 proves repeat compatibility and R010 fits a conditional machine to those repeated stickers, R010 does not add a second independent empirical confirmation of the repeat. Likewise 329, 330, 339 and 340 share a selection episode; 378–391 and 418 follow one frozen external candidate, not multiple confirmations.
 

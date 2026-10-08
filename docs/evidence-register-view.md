@@ -1,6 +1,6 @@
 # Auditable Evidence Record Cards
 
-**Curated pilot, 2026-10-08 (reconciled through Experiment 458):** 34 claim-level records, **not 34 independent studies**. Canonical structured rows are in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are [here](evidence-map-method.md). All linked study results in this snapshot have now merged to main; they remain conditional on their original evidence designs. No independent re-execution of every historical source is implied by these cards.
+**Curated pilot, 2026-10-08 (including Experiment 465):** 35 claim-level records, **not 35 independent studies**. Canonical structured rows are in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are [here](evidence-map-method.md). All study documents are staged together for main-branch merge. Original historical inputs are cited; independent reexecution of every original source is not claimed.
 
 ## R001 · BASE: periodicity
 
@@ -409,4 +409,16 @@
 **Limit:** Descendant families share U2 assumptions; source corpus selected model grammars retrospectively; no physical post-freeze validation yet.
 
 **Discriminator:** new owner-confirmed r50 r54 r93 r102 and source-fixed external consumer
+
+## R035 · BASE: CE background URL discovery channel
+
+**Source:** [experiment-465-background-url-discovery-provenance.md](experiment-465-background-url-discovery-provenance.md) (main; experiments 465)  
+**Design:** dated-archive-cross-version-and-fixed-string-comparison | **independence:** archived-source-replay | **assessment:** source-assisted-historical-identification  
+**Corpus:** `historical-2020-April-source` | **dependence cluster:** `background-URL-provenance`
+
+**Finding:** March 20 original chat yields 17/21, April 28 first-person retrospect confirms 18/21; a later README also lists unverified 19/21. April 21 original chat documents a continuous Internet Archive/Wayback site-map search followed by disclosure of the exact path and immediate recognition by the puzzle solvers. Git April-21/23 versions bracket documentation.
+
+**Limit:** Pinned public Discord text-export preserves contemporaneous first-person text but is not directly authenticated via Discord API; exported timezone is unknown; actual 2020 Wayback index/capture result bytes unavailable, so the exact query path is inferred rather than independently replayed. No independent full blind URL readout or foreground decoding cue.
+
+**Discriminator:** original April 2020 index bytes, authenticated source messages and pre-index blind 21-character reading if one exists
 
