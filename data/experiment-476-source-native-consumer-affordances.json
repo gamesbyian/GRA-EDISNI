@@ -3,7 +3,7 @@
   "experiment": 476,
   "date": "2026-10-08",
   "focus_question": "Which independently sourced INSIDE/Collector's Edition artifacts have a demonstrated native means to consume a new foreground-derived value, rather than merely resembling a code or displaying a static token?",
-  "scope": "Closed-corpus source-first typed-affordance audit. Presence of an original historical interface does not imply it accepts CE stickers. Negative gates apply to preserved source versions, not inaccessible old backend revisions.",
+  "scope": "Closed-corpus source-first typed-affordance audit. Presence of an original historical interface does not imply it accepts CE stickers. Negative gates apply to preserved source versions, not inaccessible old backend revisions. Prior experiment 413 decodes the CE page footer as 128 UNSOLVED, but the decoding is not itself a foreground readout.",
   "source_bases": {
     "terminal_mirror": "archive/external/twinysam-inside-arg/terminal41.link/",
     "game_inventory": "data/original-game-asset-consumer-inventory-2026-10-08.json",
@@ -102,14 +102,14 @@
     {
       "id": "damaged_ce_jpeg",
       "source_kind": "damaged_binary_page",
-      "native_role": "Preserved corrupted JFIF/Exif-like image content at CE background URL with footer",
+      "native_role": "Damaged JFIF/Exif-like image and independently decoded footer 128 UNSOLVED (Experiment 413); 128 provides a candidate image-size clue, not a CE-specific recovery key",
       "native_input_type": "damaged media, no typed sticker key or input operation present in accessible source",
       "primary_source": "archive/external/twinysam-inside-arg/terminal41.link/dat/534brn9653f9j8mmd/index.html",
       "demonstrated_receives_new_ce_value": false,
       "source_status": "source_byte_recovery_incomplete",
       "ce_bridge_status": "no_input_semantics",
-      "strongest_negative": "Visible footer pe^!02un and 8/2/1 dots supplies no externally identified indexing/repair operation. Compromised HTML/media byte stream cannot be freely optimized to sticker plaintext.",
-      "next_independent_evidence": "Uncorrupted pre-damage media, original repair instructions or a source-fixed key/overlay coordinate."
+      "strongest_negative": "The footer 128 UNSOLVED is a meaningful prior-stage clue, and JPEG dimensions 128..255 remain possible (Experiments 413–414); no source-fixed operation maps slash/dash/dot or A-I positions to damaged entropy bytes, pixel masks or an image consumer.",
+      "next_independent_evidence": "Byte-correct original image or repair parameters explicitly connecting the known 128 clue and CE marks to the JPEG corruption/registration."
     },
     {
       "id": "terminal41_shutdown_nine_redirects",
