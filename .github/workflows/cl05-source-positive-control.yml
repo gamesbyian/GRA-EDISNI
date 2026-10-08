@@ -1,0 +1,28 @@
+# Temporary one-off acquisition and source-registered overlay control.
+name: CL05 Gate98 historical RGB reconstruction
+on:
+  pull_request:
+    paths:
+      - .github/workflows/cl05-source-positive-control.yml
+      - scripts/conjecture_lab_gate98_positive_control.py
+permissions:
+  contents: read
+jobs:
+  source-overlay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install source image decoder
+        run: python -m pip install 'Pillow>=10,<13'
+      - name: Reconstruct colour layers from byte-exact original image
+        run: python scripts/conjecture_lab_gate98_positive_control.py --output cl05-original-rgb-layers.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: cl05-gate98-rgb-positive-control
+          path: cl05-original-rgb-layers.json
+          retention-days: 14
