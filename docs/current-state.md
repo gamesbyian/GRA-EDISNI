@@ -1,6 +1,16 @@
 # Current Research State
 
-_Compacted repository state reconciled through Experiment 314._
+_Historical compact model description through Experiment 314, with a current 2026-10-08 experimental frontier supplement below._
+
+## October 8, 2026 research frontier (Experiments 424–458)
+
+The physical corpus remains **84 stickers / 66 unique H108 residues / 42 unobserved residues**. Under conditional layered grammars the current coherent completion universes have U2=324 and U5=10 masters. These counts are not probabilistic validation and do not replace the observation-only carrier facts.
+
+Reconciled research PRs #140, #142, #143, and #144, with dedicated research-script verification for punch/23, cube, and destination/Terminal41 consumers. PR #141 was closed as redundant Experiment 426; its distinct prior-count caveat was preserved. 23 unique files of older, **conflicting-number** orphan experiments were preserved in a separately labeled noncanonical archive by #149. The main ledger has been numerically ordered and now includes Experiment 457.
+
+**Experiment 458** applies seven frozen candidate model projections to exactly the same 42 missing residues and asserts the original source blob and prospective predictions. There are twelve missing residues with a pair of hard contradictory forecasts. Eight derive their hard contrast solely from the weaker direct cross-cube copying heuristic. The better grounded *conditional* competitions are depth vs globally relabelled quarter at **50/54/93** and quarter vs selected-row at **93/102**. The third comparison does not turn depth, U2 and recursive into independent evidence votes. See `docs/experiment-458-common-mask-prospective-discrimination.md` and the CI artifact.
+
+**Current highest-leverage action:** find an **independently fixed external consumer or exact registration cue**, not another unbounded operation search. No decoded plaintext, image, next input or physical endpoint has been demonstrated; fresh physical stickers are optional prospective falsification opportunities, never the only critical path.
 
 ## Epistemic-reset status
 
