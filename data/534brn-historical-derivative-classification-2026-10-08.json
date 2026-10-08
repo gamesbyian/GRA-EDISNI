@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "purpose": "Classify historically named 534brn JPEG/CE sticker/BMP reconstruction media without conflating them as independent captures",
+  "source_repo": "gamesbyian/playdead-unofficial-exports",
+  "source_ref": "master",
+  "artifacts": [
+    {
+      "id": "CE-background-solved-image",
+      "paths": [
+        "assets/534brn9653f9j8mmd-985ba09db545de5d.png",
+        "assets/StickerSolution-dc12d5e516ca4922.png",
+        "assets/StickerSolution-f19fd331a635aebf.png"
+      ],
+      "sha": "2d9fd5b60faa3d5fdb25ebc63ab3f77be3138b46",
+      "bytes": 767381,
+      "signature": "PNG",
+      "dimensions": [
+        1032,
+        1250
+      ],
+      "visual_observation": "Nine CE background tile family assembly (I/A/B, C/D/E, F/G/H) with dat/534brn9653f9j8mmd below; has NOT reconstructed damaged Terminal41 JPEG",
+      "classification": "solved physical sticker BACKGROUND illustration, output of an earlier puzzle",
+      "independent_JPEG_evidence": false
+    },
+    {
+      "id": "ambiguous-multi-extension-3_96MB",
+      "paths": [
+        "assets/534brn9653f9j8mmd-1d6905b88dafcb0e.bmp",
+        "assets/534brn9653f9j8mmd-ec9713cd42aff3d5.jpg",
+        "assets/534brn9653f9j8mmd_1-aca19785b4c4e832.jpg"
+      ],
+      "sha": "21649d1be4d63bb541a1de506098a1f3e0d99943",
+      "bytes": 3963914,
+      "signature": null,
+      "dimensions": null,
+      "classification": "same blob used under incompatible extension labels; true media format unknown because byte fetch returned empty",
+      "independent_JPEG_evidence": "not established; no extra source channel inferred"
+    },
+    {
+      "id": "raw-42-PNG",
+      "paths": [
+        "assets/bmp_raw-9319ae5383d5f216.png"
+      ],
+      "sha": "9315424bdec5d1883f2db3b14e2e3fffdce774da",
+      "signature": "PNG",
+      "dimensions": [
+        42,
+        42
+      ],
+      "classification": "derived 42x42 puzzle reconstruction, original JPEG relationship unproven",
+      "independent_JPEG_evidence": false
+    },
+    {
+      "id": "raw-423-PNG",
+      "paths": [
+        "assets/bmp_raw.v3-9332c9797250a2ab.png"
+      ],
+      "sha": "296c6fe6d0b8cc12babf90f48cf7cca31c2c242b",
+      "signature": "PNG",
+      "dimensions": [
+        423,
+        423
+      ],
+      "classification": "composited/enlarged visualization with overlaid green/black motifs; derivative dimensions not original JPEG size",
+      "independent_JPEG_evidence": false
+    },
+    {
+      "id": "data-orig-42-BMP",
+      "paths": [
+        "assets/image_data_orig-c7c6d38639f4c541.bmp",
+        "assets/image-6cc0ebb4635ff8d8.bmp",
+        "assets/test1-ea7965343613dc67.bmp"
+      ],
+      "sha": "48a83e17623705ca1232ee5434929ce616a0e814",
+      "signature": "BMP",
+      "dimensions": [
+        42,
+        42
+      ],
+      "classification": "derived BMP representation; provenance to source unknown",
+      "independent_JPEG_evidence": false
+    },
+    {
+      "id": "data-fixed-42-BMP",
+      "paths": [
+        "assets/image_data_fixed-839bf39f5488e91f.bmp"
+      ],
+      "sha": "bbce611098079ba5bfde9b726caa45bd8435caa1",
+      "signature": "BMP",
+      "dimensions": [
+        42,
+        42
+      ],
+      "classification": "derived BMP variant",
+      "independent_JPEG_evidence": false
+    },
+    {
+      "id": "blue-diff-42-PNG",
+      "paths": [
+        "assets/blue_difference-f51ef2a3e8c25c2f.bmp"
+      ],
+      "sha": "45cd34e6fe4dfc2e340aa7c0bc38e8f560df3d94",
+      "signature": "PNG",
+      "dimensions": [
+        42,
+        42
+      ],
+      "classification": "derived difference mask; .bmp suffix incorrect",
+      "independent_JPEG_evidence": false
+    },
+    {
+      "id": "4bmp-mangled",
+      "paths": [
+        "assets/4_bmp-fc9ec34700f13a85.txt"
+      ],
+      "sha": "1c33fa9d225fbfd28ae73c2419b2ae8ab9ac0526",
+      "signature": "BM followed by ASCII-space-mangled numeric bytes",
+      "dimensions": null,
+      "classification": "not clean binary BMP without explicit reversal",
+      "independent_JPEG_evidence": false
+    },
+    {
+      "id": "4bmp-fixed",
+      "paths": [
+        "assets/4_bmp_fixed-13d4968f30bf9a6a.txt"
+      ],
+      "sha": "f071742dce986905ff9fd17cb788849ef6885b30",
+      "signature": "BMP",
+      "dimensions": [
+        42,
+        42
+      ],
+      "classification": "fixed BMP derivative despite .txt suffix",
+      "independent_JPEG_evidence": false
+    }
+  ],
+  "limitations": [
+    "Signatures/dimensions verified for files whose exact base64 content could be fetched; 3.96MB alias family could not be fetched byte-for-byte and must not be inferred from suffix",
+    "Visual classification of 767,381-byte PNG made by opening returned image. Its depicted CE background is not the damaged Terminal41 page.",
+    "No evidence any of these derivative rasters contributes recovered, independent entropy bytes to original damaged JPEG. Relation among 42x42 experiments and saf_dat_col remains to be established from provenance."
+  ]
+}
