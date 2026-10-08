@@ -24,6 +24,12 @@ Experiment 458 freezes identical 84-record/66-residue physical input for seven e
 
 **Next substantive research priority:** independently identify an external input surface / consumer and its **exact transform parameters** in surviving original game, cover, Terminal41 or platform-specific evidence. The old `534brn` E2 pair failed the fresh physical 427-dot check; generic text/bitmap searches remain quarantined. A new source-cued operation should be compared on the current fixed mask and against explicit baseline/negative controls, with existing frozen predictions preserved. New physical stickers would be welcome but are not a prerequisite for continued work.
 
+## Conjecture Lab second pass, 8 October 2026
+
+[CL01/02 second pass](conjecture-lab/2026-10-08-second-sprint.md), [progression control](conjecture-lab/2026-10-08-progression-analysis.md): the direct 74-path nine-bit reader fails on observed physical bits alone (minimum zero-based table lengths 383/454/467/328 across four binary conventions). A deliberately guessed balanced 3/3/3 Q4 selector yields two compatible tail codes; when combined with the preexisting selected-depth S rule, two physical masters remain, with an identical 27-symbol output. The competing simple row-exception R rule from Experiment 450 has **zero** intersection with balance. Its output reads as 189/252/315 in native forward slash=1 binary, but the modulo-seven factor is algebraically inevitable under S, and 4/12 S-family masters already yield the arithmetic progression. Printer substring search yields no exact match and no unusual approximate fit.
+
+Next source-cued search: a *real* reader offering direct hundreds-of-record indexing or an independently specified three-record arithmetic-offset consumer, and a CE-era nine-triple-input action if one exists. Preserve conditional Q4 forecasts (82,84,88,91,93,100,102,106) as candidate-specific, separate from the previously frozen Experiment-458 atlas. Do not infer a source from a coincidental 7, 63, or 252.
+
 ## Parallel conjecture-led workstream (introduced 8 October 2026)
 
 Keep the existing evidence-first priorities below as the **VALIDATE** track. In parallel, run a deliberately speculative **DISCOVER/DEVELOP** track using [the conjecture-lab protocol](conjecture-lab-protocol.md) and [first trial](conjecture-lab/2026-10-08-first-sprint.md). Source-fixed parameters are mandatory before *confirming* an answer, not before thinking through an unproved assumption.

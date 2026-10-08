@@ -37,13 +37,31 @@
       },
       "exact_negative_scope": "Unmodified zero-based direct indexing into the 74 preserved URL paths; NOT arbitrary archives, modulus, or codebook encodings",
       "new_requirement": "Find an actual indexable ≥408-entry table (native forward slash=1) with three channels, then derive an unfitted external consequence",
-      "evidence_status": "no verified consumer"
+      "evidence_status": "no verified consumer",
+      "raw_only_control": {
+        "script": "scripts/conjecture_lab_raw_bounds_balanced_tail.py",
+        "reading_schemes": [
+          "forward slash1",
+          "forward slash0",
+          "reverse slash1",
+          "reverse slash0"
+        ],
+        "minimum_zero_based_entries": [
+          383,
+          454,
+          467,
+          328
+        ],
+        "data_basis": "observed primary class bits only; no full-master grammar",
+        "outcome": "unmodified direct nine-address lookup into current 74 archived routes impossible in all four conventions",
+        "scope": "does not falsify larger/historical source, offset/modular/keyed transform, or different class grouping"
+      }
     },
     {
       "id": "CL-02",
       "version": 1,
       "title": "Q4 tail as one-time nine-command instruction",
-      "status": "developed_conditional_answer_assisted_negative_control",
+      "status": "developed_conditional_with_source_negative_and_prospective_split",
       "assumptions": [
         "OBSERVED: 81/27 alphabet split",
         "CONDITIONAL: exactly one Q4 slash per A-I depth stack",
@@ -82,13 +100,98 @@
           "tail_proportion": 0.43225
         },
         "warning": "Post-hoc selected subsequence and codebook, not a native nine-input reader or pre-frozen independent forecast"
+      },
+      "balance_counterfactual": {
+        "script": "scripts/conjecture_lab_raw_bounds_balanced_tail.py",
+        "assumption": "3/3/3 global Q4 depth occupancy, retrospectively invented",
+        "possible_Q4_codes_under_one_slash": 18,
+        "balanced_codes": [
+          "021101022",
+          "120101022"
+        ],
+        "A_B_masters": 324,
+        "A_B_balanced_masters": 36,
+        "A_B_selected_masters": 12,
+        "A_B_selected_balanced_masters": 2,
+        "A_B_simple_row_masters": 108,
+        "A_B_simple_row_balanced_masters": 0,
+        "selected_balanced_tail": "120101022",
+        "selected_balanced_primary_differences": [
+          22,
+          25
+        ],
+        "selected_balanced_invariant_readout": [
+          "-/-////-/",
+          "-//////--",
+          "/--///-//"
+        ],
+        "conditional_Q4_forecasts": {
+          "82": ".",
+          "84": "/",
+          "88": "/",
+          "91": "/",
+          "93": ".",
+          "100": ".",
+          "102": ".",
+          "106": "."
+        },
+        "scope": "Experiment 450's simple R criterion differs from Experiment 329's separately frozen row-selector",
+        "status": "candidate-specific forecasts, not physical observations",
+        "exact_incumbent_overlap": {
+          "states": [
+            "0100",
+            "1100"
+          ],
+          "branch": "p=0,G=0",
+          "already_documented_first_pass": [
+            "102",
+            "002",
+            "120"
+          ],
+          "no_independent_machine_confirmation": true
+        }
+      },
+      "printer_substring_control": {
+        "script": "scripts/conjecture_lab_printer_substring_control.py",
+        "target": "-/-////-/-//////--/--///-//",
+        "original_printer_windows": 552,
+        "best_hamming": 6,
+        "exact_hits": 0,
+        "seeded_9_dash_controls": 4000,
+        "controls_at_least_as_close": 2705,
+        "fraction_at_least_as_close": 0.67625,
+        "scope": "27-symbol contiguous windows of published PC 32 and Xbox 36 rows, plus four bit direction/polarity variants, not all possible printer-derived consumers"
+      },
+      "progression_discovery": {
+        "code": "scripts/conjecture_lab_progression_null.py",
+        "report": "docs/conjecture-lab/2026-10-08-progression-analysis.md",
+        "candidate_numbers": [
+          189,
+          252,
+          315
+        ],
+        "step": 63,
+        "all_allowed_selected_surface_values_mod7": 0,
+        "exact_independent_triple_reference": {
+          "denominator": 19683,
+          "AP": 191,
+          "nonzero_AP": 164,
+          "plus63_AP": 8
+        },
+        "grammar_matched_reference": {
+          "A_B_S_masters": 12,
+          "AP_masters": 4,
+          "balanced_AP_masters": 2
+        },
+        "status": "post-selected curiosity, NOT p-value or source-independent clue",
+        "source_dependency": "The 189/252/315 values recode selected surfaces already produced by canonical p=0 first-pass family, not a novel independent decoder"
       }
     },
     {
       "id": "CL-03",
       "version": 1,
       "title": "Cover monitor references as instructions/keybook",
-      "status": "developed_conditional_unvalidated",
+      "status": "developed_speculative_four_schemes_recap",
       "assumptions": [
         "OBSERVED: cover contains ARG references and is clue-bearing",
         "BORROWED_ANALOGY: acorn row sorting/planet/local filter",
@@ -103,7 +206,37 @@
         "No source-fixed CE sticker-to-cover registration"
       ],
       "next_check": "Repeatable identical source-to-cover transform measured across two distinct panels, independent of sticker completions",
-      "evidence_status": "no verified consumer"
+      "evidence_status": "no verified consumer",
+      "four_schemes_hunch": {
+        "report": "docs/conjecture-lab/2026-10-08-cover-four-schemes.md",
+        "source": "archive/external/twinysam-inside-arg/terminal41.link/sys/printreqstatus_SD.html",
+        "scheme_labels": [
+          "PLANET",
+          "LIFE",
+          "PROBE",
+          "CONDISCON"
+        ],
+        "cover_families": [
+          "planet",
+          "acorn/LifeDetected",
+          "graph",
+          "login"
+        ],
+        "source_anchored_pairs": [
+          "PLANET=planet monitor at family level",
+          "LIFE=acorn monitor at family level"
+        ],
+        "invented_pairs": [
+          "PROBE=graph",
+          "CONDISCON=login"
+        ],
+        "missingBridges": [
+          "exact native graph/probe relation",
+          "exact native login/connect-disconnect relation",
+          "authored sequence/foreground connection"
+        ],
+        "caveat": "four monitor visuals may summarize earlier solved ARG stages independently of CE foreground"
+      }
     },
     {
       "id": "CONTROL-0",
@@ -123,5 +256,6 @@
     "No change to machine-spec or frozen predictions",
     "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
     "A frozen exact failure refutes that implementation only"
-  ]
+  ],
+  "latest_update": "2026-10-08-second-pass"
 }
