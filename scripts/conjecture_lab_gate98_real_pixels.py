@@ -110,12 +110,11 @@ def main():
     mode, lattice = sample_image(payload)
     assert len(lattice) == BANKS*BANK_SIZE == 32768
     colours = Counter(lattice)
-    state_pairs = [
-        (state, master)
-        for state in legal_states()
-        if all((master := generate_master(state))[k-1] == v
-               for k, v in obs.items())
-    ]
+    state_pairs = []
+    for state in legal_states():
+        master = generate_master(state)
+        if all(master[k-1] == v for k, v in obs.items()):
+            state_pairs.append((state, master))
     assert len(state_pairs) == 10
     balanced = [
         (state, master) for state, master in state_pairs
