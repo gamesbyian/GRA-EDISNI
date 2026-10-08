@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 430: bounded external-consumer readout of exact sticker ensembles.
+"""Experiment 451: bounded external-consumer readout of exact sticker ensembles.
 
 Compare the typed tail-depth selection against three fixed-layer controls.
 The historically suggested lever mapping /->U, -->R is only a relabeling;
