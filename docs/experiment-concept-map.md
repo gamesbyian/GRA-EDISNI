@@ -1,6 +1,6 @@
 # INSIDE Sticker Experiments: Conceptual Map
 
-**Research map v2 · 8 October 2026.** This page explains the *architecture of the evidence*, not just which experiments share keywords. Its companion [hypothesis-by-test matrix](hypothesis-test-coverage-matrix.md) and [34 curated evidence cards](evidence-register-view.md) link evaluations to source reports and their limits. The [complete 443-title index](experiment-title-index.md) (through Experiment 458; gaps 341 and 434–447) is preserved *without* speculative auto-assigned topic tags.
+**Research map v2 · 8 October 2026.** This page explains the *architecture of the evidence*, not just which experiments share keywords. Its companion [hypothesis-by-test matrix](hypothesis-test-coverage-matrix.md) and [34 curated evidence cards](evidence-register-view.md) link evaluations to source reports and their limits. The [complete 452-title index](experiment-title-index.md) (through Experiment 475; gaps 341, 434–447, 460–464 and 467–469) is preserved *without* speculative auto-assigned topic tags.
 
 ## What needed fixing in v1
 
@@ -59,7 +59,7 @@ flowchart LR
 | **407–423** | Cover/XOR/JPEG, physical 427 and 043, exact repeat audit | New actual observations prune old model universes and falsify a frozen E2 pair | Continued symbolic uncertainty |
 | **424–433; 448–458** | IBM 029, 23 endpoints, cube correlation and competing selector axes, common-mask Experiment 458 | Fixed transformations and model comparisons; hypotheses remain conditional after merge | Four stronger prospective contradictions at 50/54/93/102 |
 
-**Current canonical ledger:** 443 indexed experiment titles through 458. Gaps 341 and 434–447 remain unassigned in the current canonical ledger; the conflicting older orphan-numbered studies were archived under `archive/recovered-ccr-2026-10-01/`. Experiments 424–433 and 448–457 have been merged with their dedicated CI checks. See the [reconciliation below](#reconciled-research-prs).
+**Current canonical ledger:** 452 indexed experiment titles through 475. Gaps 341, 434–447, 460–464 and 467–469 remain unassigned in the current canonical ledger; the conflicting older orphan-numbered studies were archived under `archive/recovered-ccr-2026-10-01/`. Experiments 424–433 and 448–457 have been merged with their dedicated CI checks. See the [reconciliation below](#reconciled-research-prs).
 
 ## Branches, grouped by causal role
 
@@ -84,6 +84,10 @@ The [October 8 cross-link leverage audit](concept-map-crosslink-leverage-2026-10
 
 [Experiment 458](experiment-458-common-mask-prospective-discrimination.md) tests **seven explicitly dependent decoder projections** on the identical 84-sticker/66-residue physical snapshot and **42 unknown** residues. It finds twelve sites with at least one pair of opposite forced predictions, but eight owe their contrast exclusively to weak cross-cube direct copying. The stronger **depth versus quarter** contrasts occur at **50, 54, 93**; **quarter versus selected-row** contrasts occur at **93, 102**. U2/depth/recursive are nested, not three independent votes. The full allowed-symbol atlas is CI-generated and frozen with source hashes and original predictions. This is *prediction readiness*, not validation on a new observation.
 
+## Experiments 465–466: a real answer-assisted recognition control
+
+[Experiment 465](experiment-465-background-url-discovery-provenance.md) recovered the April 2020 original Discord first-person account of partial CE background-URL decoding followed by **Wayback site-map discovery of the exact address**. [Experiment 466](experiment-466-background-route-lookup-control.md) holds the three historically recorded partial readings fixed and shows that among 74 later-archived Terminal41 route strings, the correct destination is uniquely nearest (edit distances **4/3/2**, versus next-best **17/15/15**). This is **retrospective dictionary separation**, not a recreation of that April 2020 site index. The physical background→URL association remains real; **neither study licenses a foreground mark-to-URL decoder**. Both share the `background-URL-provenance` dependency cluster and are not independent replications.
+
 ## Priority questions inferred from the map
 
 **The next valuable advance is a new *discriminator*, not another internal model proof.**
@@ -92,7 +96,7 @@ The [October 8 cross-link leverage audit](concept-map-crosslink-leverage-2026-10
 - **Cross-family matched study:** Match the same test residues, scoring and null across tail-only, recursive, geometric, cube and simple majority baselines. Document model-selection chronology and abstentions explicitly. Check every family's prediction domain before comparing.
 - **External-reader recovery:** An archival source that fixes *both* operation and its parameters could resolve more uncertainty than another million candidate completions. Separate operations used elsewhere from what is licensed *on the sticker object*.
 - **Explicit stopping boundary:** Reproducible terminal 100, a pictorial surface or a punched-card pattern is an intermediate until someone can prove what it directs them to do. Do not optimize for English text or attractive imagery.
-- **Source audit expansion:** 443 title entries are indexed; **34 decision-relevant claim records** are currently curated, not an exhaustive per-report content review. Gradually deepen the register by source audit instead of expanding keyword labels.
+- **Source audit expansion:** 452 title entries are indexed; **36 decision-relevant claim records** are currently curated, not an exhaustive per-report content review. Gradually deepen the register by source audit instead of expanding keyword labels.
 
 ## Dependency and correction landmarks
 
