@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-// Experiments 470–461: exact full-completion registration controls and
+// Experiments 470–471: exact full-completion registration controls and
 // mask/census-preserving structural null. No third-party HTML/fonts copied.
 const fs=require('node:fs'),path=require('node:path');
 const csv=fs.readFileSync(path.resolve(__dirname,'../data/observations.csv'),'utf8').trim().split(/\r?\n/);
