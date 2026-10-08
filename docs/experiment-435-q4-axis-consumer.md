@@ -82,6 +82,21 @@ preferred-machine predictions, but they are *conditional on the
 shared structural grammar*. Repeated agreement between related
 models must not be counted as independent evidence.
 
+## Output stability, not a solved message
+
+Read the three resulting 3×3 surfaces in A–I serial order, giving
+27-symbol words. Over all 12 native-depth survivors there are **three
+distinct outputs** with **21/27 positions invariant**. Over all ten
+relabelled quarter survivors, accounting for masters compatible with
+both surviving permutations, there are **five distinct outputs**
+with **17/27 positions invariant**.
+
+All outputs trivially have nine dashes (three per surface), because
+that was the structural rule used to choose them. Neither family
+produces one uniquely identified message or an independently cued
+lever sequence. Do not credit that imposed nine-dash census as
+additional evidence.
+
 ## Whole-nine-sticker-frame holdout
 
 Remove all observed body symbols from one of the nine physical
