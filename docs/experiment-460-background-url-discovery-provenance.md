@@ -10,17 +10,18 @@ That distinction matters for the [evidence graph](concept-map-crosslink-leverage
 
 ## Original-source witness and times
 
-The [canonical community README](https://github.com/twinysam/INSIDE-ARG/blob/master/readme.md) describes the following chronology (reported contemporaneously in 2020 but its expanded narrative is retrospective).
+The strongest witness is now **the original channel's public [Discord text export](https://github.com/gamesbyian/playdead-unofficial-exports/blob/master/Playdead%20Unofficial%20-%20ARG%20-%20solving%20%5B461275582970462209%5D.txt)**, Git blob `1889cc948f86f5a4455de0d7310b15cdb1b88b5c`. It retains the apparent participants, timestamps and messages in the original conversation. The [canonical community README](https://github.com/twinysam/INSIDE-ARG/blob/master/readme.md) provides a second, retrospectively expanded account. The archive export's timezone is not documented and the Discord API was not independently queried; the two source types are therefore *corroborative*, not separate independent observations.
 
 | Source event | Source identity | What it proves and does not |
 |---|---|---|
 | March 20, 2020 | [Discord message 690408214470328390](https://discord.com/channels/460626942190813184/461275582970462209/690408214470328390), linked from community history | Candidate URL already being read from the nine-piece mosaic; reconstructed string has four disagreements from later-known path |
-| April 6, 2020 | [Discord messages 696749987991650315 and 696860529813094420](https://discord.com/channels/460626942190813184/461275582970462209/696860529813094420) | New C sticker improved lettering; later README records two partial alternatives, three or two disagreements with final URL |
-| **April 21, 2020** | [Discord message 702030280751317072](https://discord.com/channels/460626942190813184/461275582970462209/702030280751317072) | Community README specifically reports a newcomer inspecting the *Terminal41 site index* and **discovering four paths**, including the exact `dat/534brn9653f9j8mmd/`. The candidate was then **recognized** as matching the previously assembled tile mosaic |
+| April 6, 2020 | [Discord messages 696749987991650315 and 696860529813094420](https://discord.com/channels/460626942190813184/461275582970462209/696860529813094420) | New C sticker improved lettering, per source-linked history; **this does not timestamp either later candidate string** |
+| **April 21, 2020** | [Discord message 702030280751317072](https://discord.com/channels/460626942190813184/461275582970462209/702030280751317072) and pinned Discord export | **Direct archived first-person message** posts the exact URL, then says the paths were found by browsing site indexes. A solver immediately identifies it as the CE background code. This discovery channel is no longer merely a retrospective claim |
+| April 28–29, 2020 | [Pinned original Discord export](https://github.com/gamesbyian/playdead-unofficial-exports/blob/master/Playdead%20Unofficial%20-%20ARG%20-%20solving%20%5B461275582970462209%5D.txt) | A solver directly admits the path was **not fully decoded from the artwork**. Their closest remembered full-string reading is `dat/534brn9653f9i8rnd` (**18/21**). They independently count exactly three wrong characters. |
 | Prior project document | [README commit 386d4f82, April 21 00:54 UTC](https://github.com/twinysam/INSIDE-ARG/blob/386d4f82c89829e8af82dfd5b9fd90c5f0e36ac9/readme.md) | The exact `534brn...` URL was **not** yet present in this pinned README. This establishes absence from that documentation, **not** nonexistence of the URL or anyone's knowledge of it |
 | Subsequent project document | [README commit aefbe285, April 23 05:44 UTC](https://github.com/twinysam/INSIDE-ARG/blob/aefbe285c4df7324dad6e6998ab0a24ea24da49c/readme.md) | Explicitly names the later-known exact URL as the nine-texture puzzle solution |
 
-**Independent timing cross-check:** Discord's message identifiers encode creation times. The March-20 link decodes to **2020-03-20 03:55:45 UTC**; the April-6 evidence message to **2020-04-06 23:14:57 UTC**; and the April-21 website-index message to **2020-04-21 05:37:42 UTC**, between the two pinned Git commits. A message ID establishes the *timestamp of the linked message*, **not independent authentication of its content**. This report uses the community's source-linked summary and snapshots; direct Discord message bodies remain unverified here.
+**Independent timing cross-check:** Discord's message identifiers encode creation times. The March-20 link decodes to **2020-03-20 03:55:45 UTC**; the April-6 evidence message to **2020-04-06 23:14:57 UTC**; and the April-21 website-index message to **2020-04-21 05:37:42 UTC**, between the two pinned Git commits. A message ID establishes the *timestamp of the linked message*, **not independent authentication of its content**. The separately preserved 5 MB channel export now recovers the apparent original message bodies, including the website searcher's April-21 first-hand statement and the April-28 solver admission. Exported wall-clock times and Discord snowflake UTC timestamps should not be equated without the export timezone. Direct live Discord authentication remains outstanding.
 
 ## Fixed character comparison
 
@@ -29,11 +30,11 @@ All strings are **21 ASCII characters** long, `dat/` prefix included. We counted
 | Historically reported stage | Candidate reading | Exact matches | Mismatches |
 |---|---|---:|---:|
 | March 20 candidate | `uat/5345rn9653f9i8nmd` | **17/21** | **4** |
-| April 6 candidate A | `dat/534brn9653f9i8rnd` | **18/21** | **3** |
-| April 6 candidate B | `dat/534brn9653f9i8nmd` | **19/21** | **2** |
+| Retrospectively remembered pre-index candidate A (first-person April 28) | `dat/534brn9653f9i8rnd` | **18/21** | **3** |
+| Retrospective pre-index candidate B (README only; original message not located) | `dat/534brn9653f9i8nmd` | **19/21** | **2** |
 | Externally listed endpoint, April 21 | `dat/534brn9653f9j8mmd` | **21/21** | **0** |
 
-For the strongest earlier candidate, the remaining unresolved positions are **17** (`i` versus `j`) and **19** (`n` versus `m`). These were not cleanly forced by that historical reading. A discovered genuine path could settle them, while its strong **19/21 positional agreement** makes the CE background connection meaningful. This does not require believing an arbitrary textual coincidence.
+The **best directly preserved first-person pre-index candidate** is **18/21**, not 19/21: its three unresolved positions are **17** (`i` versus `j`), **19** (`r` versus `m`) and **20** (`n` versus `m`). The stronger **19/21** alternative appears in the later community README, but an exact original pre-index message containing that literal string was **not found in the available export**. This is a useful distinction between first-hand recollection and later retrospective candidate indexing. Neither case is a complete blind decode; both provide substantial partial artwork evidence that the genuine listed path matched a physically assembled clue.
 
 The auditable data are in [`data/experiment-460-background-url-discovery.json`](../data/experiment-460-background-url-discovery.json); the offline exact comparison and timestamp verifier is [`scripts/audit_2020_background_url_discovery.py`](../scripts/audit_2020_background_url_discovery.py):
 
@@ -41,11 +42,11 @@ The auditable data are in [`data/experiment-460-background-url-discovery.json`](
 python scripts/audit_2020_background_url_discovery.py
 ```
 
-The verifier optionally accepts separately obtained pinned upstream README source files via `--before` and `--after`, which check the respective exact-URL absence/presence. Its default offline fixture does **not** download Discord messages or establish original website backend behavior.
+The verifier optionally accepts separately obtained pinned upstream README source files via `--before` and `--after`, **and the 5 MB original exported chat** via `--export`, checking its exact Git blob SHA and eight bounded message/event strings. Its default offline fixture reproduces the frozen claims, not a live Discord or original website backend reconstruction.
 
 ## Important limitation: what “site index” means
 
-The saved [`terminal41.link/index.html`](https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/index.html) is simply a meta refresh to `loadSys/`; it is **not** an archival copy of the actual directory/server index reportedly examined on April 21. Thus we have strong **community-reported discovery-channel provenance**, but we do not yet have the original actual index listing bytes nor an independent server log of how the path was found.
+The saved [`terminal41.link/index.html`](https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/index.html) is simply a meta refresh to `loadSys/`; it is **not** an archival copy of the actual directory/server index reportedly examined on April 21. Thus we now have strong **contemporaneous first-person archived discovery-channel provenance**; however, the original website index listing bytes and actual server logs remain unavailable. The export says the path appeared among recent index entries, but this alone does not date when the underlying server content was created.
 
 We can nevertheless distinguish three statements that should **not** collapse into one row:
 
@@ -55,7 +56,7 @@ We can nevertheless distinguish three statements that should **not** collapse in
 
 ## Implications for current sticker theories
 
-**Discovery-channel leakage can turn an ambiguous code into an apparent complete decode.** The original CE background is an historical positive case for *answer-assisted recognition*. Future proposed sticker results should declare whether the output was fixed **before** opening/searching the candidate source. Otherwise a discovered page/code/URL may have guided symbol interpretations, orientation, OCR, or registration.
+**Discovery-channel exposure can turn a partially readable code into an apparently complete decode without an independent blind reading of every character.** The original CE background is an historical positive case for *answer-assisted recognition*. Future proposed sticker results should declare whether the output was fixed **before** opening/searching the candidate source. Otherwise a discovered page/code/URL may have guided symbol interpretations, orientation, OCR, or registration.
 
 This is especially important for the current open bridges:
 
