@@ -879,3 +879,16 @@ Physical acquisition now outranks further 534brn transform work.
 
 The current cover lane should only resume if another independently identified monitor/source pair supplies a repeated measurable transform. The current JPEG lane should only resume on genuinely new byte or dimension evidence.
 
+## Experiments 450–456 — Cube 4 instruction-axis discrimination (8 Oct 2026)
+
+A community four-3×3×3-cube proposal was tested under observation-only structural families without adopting the preferred recursive machine. Recovered 84 physical records / 66 unique H108 residues. Experiments 450–455 enumerate 233,280 conditional complete masters, demonstrate nonunique Q4 readouts, reproduce exactly the strictest Discord cube×letter shuffles (331,776, p-tail 0.060619), fail direct-copy and whole-quarter predictive baselines (22/33 vs 23/33; 19/32 vs 21/32), and quantify missing-mask sensitivity (primary complete 43–51/81 matches across the strict 18 bodies).
+
+Experiment 456 makes the next independently explicit consumer comparison. The same three-output-surface one-dash-per-column test leaves 12 masters when Q4 selects native depth, 0 when it selects the native quarter label without translation, or 10 distinct masters after searching all six **globally shared** quarter label maps. Those 10 are disjoint from the native-depth 12. Three prospective symbols directly distinguish the two conditional operation families:
+
+- Residue **50**: native-depth `-`, globally relabelled quarter `/`.
+- Residue **54**: native-depth `-`, globally relabelled quarter `/`.
+- Residue **93**: native-depth `.`, globally relabelled quarter `/`.
+
+Frozen as `data/frozen-q4-axis-consumer-discriminators.json`; do not overwrite prior machine prediction files. Full method: `docs/experiment-456-q4-axis-consumer.md`.
+
+**Stopping rule:** Do not widen arbitrary 3D/4D transforms, rotate until a picture appears, or treat a retrospective forced holdout as independent validation. The native-depth operation is simpler, but the quarter-axis family survives with extra arbitrary label choices. Reopen this lane for an independently recovered coordinate/consumer clue or a new physical sticker in residue classes 50/54/93 (or other preexisting frozen discriminators). No owner outreach is required of the project owner.
