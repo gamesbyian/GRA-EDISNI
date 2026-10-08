@@ -116,3 +116,19 @@ The data-island analysis was performed on the later preserved snapshot, so the *
 In addition to the GitHub-connector source-wide scan, an **independent Python assertion check** reproduced the 75-character length, exact seven field sizes, unique i/1 discrepancy at character offset 24, and incompatibility of the 22-character token with the three common Base32 alphabets. These assertions passed on the source-island and archive-transcription strings.
 
 The **committed standalone repository verifier** still needs a run from a checkout with the frozen `data/` and `archive/` files. The whole-source optional mode also requires locally acquired original `saf_dat_col.html`; the remote text inspection does not substitute for a binary-forensic reproduction.
+
+## Additional exact capacity rejection: raw binary → ordinary Base36
+
+A syntactic Base36 match is insufficient; the unsigned numeral must also fit the size of the presumed source bits.
+
+The preserved 22-character token parsed as an ordinary positional Base36 integer is:
+
+```text
+1552529186059802721063562269367888
+```
+
+This requires **111 bits**. A full H108 foreground read as binary under the observed sector alphabets could hold **at most 108 bits**, whose maximum unsigned value is `324518553658426726783156020576255`.
+
+So the **direct unsigned raw-foreground-to-Base36-token hypothesis is mathematically incompatible**, independently of all 42 missing marks. The companion verifier now asserts the 111-bit counterexample.
+
+This test does not reject adding checksums, concatenating data from background/serial information, applying keyed hashes/encryption, or the possibility that the sector alphabets change for missing stickers; those are separate hypotheses with additional premises. Do not choose one to rescue the hypothesis without an external cue.
