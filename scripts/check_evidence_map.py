@@ -51,8 +51,14 @@ def main() -> int:
     ]
     title_rows = [(int(num), title) for num, title in
                   LEDGER_LINE.findall(INDEX.read_text(encoding="utf-8"))]
-    if title_rows != expected_titles:
-        errors.append("historical title index diverges from canonical ledger")
+    # The historical index is a dated snapshot. New ledger rows must not make
+    # unrelated research PRs fail CI; changed/deleted historical titles should.
+    current_titles = dict(expected_titles)
+    if not title_rows or any(current_titles.get(num) != title for num, title in title_rows):
+        errors.append("historical title index contains a title absent/changed in ledger")
+    new_since_index = len(original) - len(title_rows)
+    if new_since_index > 0:
+        print(f"NOTE: historical title index needs a refresh for {new_since_index} newer entries")
 
     with REGISTER.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle)
