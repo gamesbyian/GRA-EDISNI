@@ -35,3 +35,16 @@ This is a **selective, inspectable source inventory**, not a certification that 
 ## Reproducible test
 
 Run `python scripts/audit_endgame_channel_budget.py --check-2026-10-08` to verify the physical ledger snapshot, raw information budget, invalid direct nine-digit permutation and zero possible contiguous old bunker-code placements without filling unknown symbols. Use `--output /tmp/inside-endgame-audit.json` to export machine-readable results. The test asserts the **frozen 2026-10-08 census**, so new confirmed observations should rightfully make that old-snapshot assertion fail until the historical fixture is updated, while a normal run recomputes live totals.
+
+
+## Incremental source acquisition, 8 October 2026
+
+The previously uninspected **large Terminal41 `saf_dat_col.html` asset** was read via its source Git blob's Unicode-decoded representation. It has Git blob SHA `349b818fce618ef55c404bedfb602b1d03f29a48`, reported Git blob size 1,986,163 bytes, and a connector-decoded text length of 1,265,970 code units. Its only contiguous `[A-Za-z0-9+]` run at least 35 characters long is the seven-field 75-character record analyzed in `docs/sticker-endgame-saf-dat-seven-field-audit-2026-10-08.md`.
+
+The original preserved run and independent researcher block transcription differ by one `i`→`1` character, and the earlier research's prose about record ordering and delimiters is incorrect. Exact source fidelity matters before any cipher or matching test. See the frozen derived JSON and verifier.
+
+This expands the archived site **static client-input census to 73 of 74 inventoried assets**: all 73 text-bearing assets have no literal HTML forms/inputs, though original server behavior remains unknown. The sole unexamined large asset for this purpose is the gate-98 image (which is not expected to contain interactive HTML).
+
+The high-resolution reversible-cover A/B JPEGs remain identified by stable source blob SHA but could not be obtained as binary bytes through the available connector. The small cover-monitor/source comparison thumbnails and two photographic cover views were inspected directly. Pixel-level homography/crop matching on the 6552×5040 masters remains **open**, not falsely reported complete.
+
+The BigDusty local-only Tier-29 `Sleep` bitmap claim remains **unverified** because source scripts and independently reproduced original bitmap bytes were not obtained. It should not be used as a sticker target until reproduced.
