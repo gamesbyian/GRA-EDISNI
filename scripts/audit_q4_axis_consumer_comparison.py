@@ -13,6 +13,7 @@ alternative structural grammars, not evidence of a solved 3D puzzle.
 """
 from collections import Counter
 from itertools import permutations, product
+from pathlib import Path
 import json
 
 from enumerate_sticker_completion_ensembles import (
@@ -193,7 +194,7 @@ def main():
         (x["residue"],x["depth_symbols"],x["quarter_symbols"])
         for x in differences if x["disjoint"]
     ] == [(50,"-","/"),(54,"-","/"),(93,".","/")]
-    frozen = json.loads((__import__("pathlib").Path(__file__).resolve().parents[1] /
+    frozen = json.loads((Path(__file__).resolve().parents[1] /
                          "data/frozen-q4-axis-consumer-discriminators.json")
                         .read_text(encoding="utf8"))
     expected = [(x["residue"],x["depth"],x["quarter"])
