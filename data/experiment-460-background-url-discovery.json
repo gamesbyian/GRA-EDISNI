@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "scope": "April 2020 CE background URL discovery channel; no foreground decoding",
+  "upstream_repo": "twinysam/INSIDE-ARG",
+  "upstream_readme": "readme.md",
+  "evidence": {
+    "before_april21": {
+      "commit": "386d4f82c89829e8af82dfd5b9fd90c5f0e36ac9",
+      "commit_date_utc": "2020-04-21T00:54:02Z",
+      "contains_exact_address": false,
+      "url": "https://github.com/twinysam/INSIDE-ARG/blob/386d4f82c89829e8af82dfd5b9fd90c5f0e36ac9/readme.md",
+      "caution": "Absence from this README is not proof no one had encountered the exact URL elsewhere."
+    },
+    "after_april21": {
+      "commit": "aefbe285c4df7324dad6e6998ab0a24ea24da49c",
+      "commit_date_utc": "2020-04-23T05:44:57Z",
+      "contains_exact_address": true,
+      "url": "https://github.com/twinysam/INSIDE-ARG/blob/aefbe285c4df7324dad6e6998ab0a24ea24da49c/readme.md",
+      "caution": "Git postdating supports documented outcome but does not independently verify raw March and April Discord wording."
+    },
+    "recorded_preindex_candidates": [
+      {
+        "label": "2020-03-20 first reported interpretation",
+        "text": "uat/5345rn9653f9i8nmd",
+        "discord_snowflake": "690408214470328390",
+        "source_tier": "May 2020 retrospective community timeline linking dated Discord discussion"
+      },
+      {
+        "label": "early April variant A",
+        "text": "dat/534brn9653f9i8rnd",
+        "discord_snowflake": "696860529813094420",
+        "source_tier": "Retrospective community timeline; no separate dated candidate-message link verified"
+      },
+      {
+        "label": "early April variant B",
+        "text": "dat/534brn9653f9i8nmd",
+        "discord_snowflake": "696860529813094420",
+        "source_tier": "Retrospective community timeline; no separate dated candidate-message link verified"
+      }
+    ],
+    "external_discovery": {
+      "discord_snowflake": "702030280751317072",
+      "url": "https://discord.com/channels/460626942190813184/461275582970462209/702030280751317072",
+      "documentation": "https://github.com/twinysam/INSIDE-ARG/blob/master/readme.md",
+      "channel": "website index/directory enumeration discovered paths",
+      "exact_target": "dat/534brn9653f9j8mmd",
+      "paths_reported": [
+        "sys/terminate_terminal/41/terminate.html",
+        "dat/534brn9653f9j8mmd/",
+        "sys/terminate_terminal/41/y/",
+        "sys/terminateall.html"
+      ],
+      "caution": "This discovery route establishes historic recognition of the URL; it is not a verified blind independent reading of all 21 characters of the background artwork."
+    }
+  },
+  "interpretive_boundaries": [
+    "Pre-index candidate strings are documented retrospectively and may reflect transcription/alternative-image uncertainty.",
+    "Git README update dates bound documentation time, not source-artifact creation time.",
+    "Discord snowflake encodes message creation time, not independent textual authenticity; source-link fetch was not accessible without Discord access.",
+    "Website-index recognition validates a strong relation to the CE background, not a foreground-symbol decoding grammar.",
+    "This event is distinct from the foreground code's 108-period model and does not falsify that puzzle."
+  ]
+}
