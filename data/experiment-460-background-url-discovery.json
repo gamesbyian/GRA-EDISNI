@@ -40,7 +40,7 @@
       "discord_snowflake": "702030280751317072",
       "url": "https://discord.com/channels/460626942190813184/461275582970462209/702030280751317072",
       "documentation": "https://github.com/twinysam/INSIDE-ARG/blob/master/readme.md",
-      "channel": "website index/directory enumeration discovered paths",
+      "channel": "Internet Archive/Wayback Machine site-map/index browsing inferred from same discoverer's contemporaneous 01:54–01:56 statements and 03:52 exact-URL post; original Wayback index capture bytes not independently recovered",
       "exact_target": "dat/534brn9653f9j8mmd",
       "paths_reported": [
         "sys/terminate_terminal/41/terminate.html",
@@ -57,6 +57,30 @@
       "permalink": "https://github.com/gamesbyian/playdead-unofficial-exports/blob/1889cc948f86f5a4455de0d7310b15cdb1b88b5c/Playdead%20Unofficial%20-%20ARG%20-%20solving%20%5B461275582970462209%5D.txt",
       "format": "DiscordChatExporter-style text, dates/times in export's unspecified local timezone, not necessarily UTC",
       "directly_recovered_events": [
+        {
+          "export_timestamp": "4/21/2020 1:54 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "so im looking on the internet archive database",
+          "role": "explicit initial source is third-party Internet Archive database"
+        },
+        {
+          "export_timestamp": "4/21/2020 1:55 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "its showing the site map",
+          "role": "external Wayback site-map navigation"
+        },
+        {
+          "export_timestamp": "4/21/2020 1:56 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "im just going and using the site map",
+          "role": "reiterates site-map provenance, with Wayback_Machine screenshot"
+        },
+        {
+          "export_timestamp": "4/21/2020 2:02 AM",
+          "author": "lifeguardpanda",
+          "content_contains": "http://www.terminal41.link/comms/gate/98/connect.html",
+          "role": "first explicit archived path before CE exact path appears"
+        },
         {
           "export_timestamp": "3/20/2020 12:35 AM",
           "author": "aperson1",
@@ -115,6 +139,7 @@
     "Discord snowflake encodes message creation time but not text authenticity; original messages are corroborated by the pinned community channel export, whose displayed wall-clock timezone is unknown.",
     "Website-index recognition validates a strong relation to the CE background, not a foreground-symbol decoding grammar.",
     "This event is distinct from the foreground code's 108-period model and does not falsify that puzzle.",
-    "The 19/21 version appears in the later retrospective community README but was not found as an exact original pre-index message in the 5MB available export; the best independently preserved first-person pre-index reading is 18/21 (3 incorrect)."
+    "The 19/21 version appears in the later retrospective community README but was not found as an exact original pre-index message in the 5MB available export; the best independently preserved first-person pre-index reading is 18/21 (3 incorrect).",
+    "Archived first-hand source explicitly identifies Internet Archive's site map as the discoverer's browsing method; the later exact URL is attributed by the same participant to indexes. The exact page listing that contained that URL is not independently preserved."
   ]
 }
