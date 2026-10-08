@@ -68,7 +68,7 @@ Keep conjecture work in `docs/conjecture-lab/` or separately named exploratory s
 
 ## Closed-corpus rules
 
-- Treat all 14 physical completions as live unless a machine-native operation eliminates them.
+- Keep every completion consistent with the **declared conditional grammar** alive until new observations or valid model-native constraints eliminate it. The historical 14-master U5 count predates physical sticker 427; on the current 84-record/66-residue corpus, recursive U5 has **10** conditional masters, while broader U2 has **324**. Neither represents all raw 42-cell completions.
 - Generic compression, visual tidiness, English-looking output, lore resemblance, endpoint arithmetic, and arbitrary transforms do not select a completion.
 - Operate on the whole symbolic family whenever possible.
 - New stickers are bonus validation only, never the next required step.
