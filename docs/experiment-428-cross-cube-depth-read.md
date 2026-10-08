@@ -7,7 +7,10 @@ Q3 whose foreground symbols agree more often across the three cubes
 than an independently chosen depth per A–I address?
 
 This tests the simplest literal interpretation of the community's four
-3×3×3-cube proposal. It uses *only* raw, confirmed foreground marks;
+3×3×3-cube proposal. Experiment 373 already independently establishes
+that the one-of-three tail coordinate is physically a depth address;
+this audit tests an additional cross-quarter *same-symbol concordance*
+criterion, which Experiment 373 did not establish. It uses *only* raw, confirmed foreground marks;
 the incumbent transducer, filled symbols, visual output, and semantic
 filters are excluded.
 
