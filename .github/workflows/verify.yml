@@ -28,6 +28,8 @@ jobs:
         run: python scripts/conjecture_lab_printer_substring_control.py
       - name: Check conjecture lab progression and matched null
         run: python scripts/conjecture_lab_progression_null.py
+      - name: Verify native gate98 positive-control planet fixture
+        run: python scripts/verify_gate98_phase_fixture.py
       - name: Verify canonical closed-corpus machine
         run: python scripts/verify_machine.py
       - name: Verify independent native-state model

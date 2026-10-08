@@ -1,5 +1,9 @@
 # CL-04: original gate-98 PNG byte-level research results
 
+**CL-05 correction, 8 October 2026:** this document is an **archived exploratory test using an assumed origin (0,0)**, not the authentic gate-98 pixel-grid phase. [A subsequent source-only exhaustive black-phase scan](2026-10-08-gate98-native-phase-positive-control.md) recovered **(4,12)** unambiguously (1,591 black sample positions versus 68 at the next best phase), reproducing the historical planet scan. The 0/207 palette's strong vertical regional concentration here is NOT exceptional alignment to the old sampling grid (~1.05× over upper-region off-grid pixels). The original reader negatives remain valid only **for the explicitly assumed former origin**; CL-05 retests those two models at the authentic phase and still finds no complete readout. The six exact historical text colours and the full URL extraction remain open.
+
+
+
 _Date: 8 October 2026. Modes: DISCOVER and DEVELOP. [Research setup](2026-10-08-native-receiver-archaeology.md). Original source [inside the archived community repository](https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png)._
 
 **The complete original data and negative-test outputs are retained**, rather than only a remembered visual impression:
