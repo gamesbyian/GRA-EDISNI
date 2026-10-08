@@ -68,3 +68,14 @@ jobs:
           name: cover-source-audit
           path: cover-audit/
           retention-days: 3
+
+      # Research PR #144 temporary source-byte acquisition; revert after export.
+      - name: Preserve original full-resolution scans for forensic registration
+        uses: actions/upload-artifact@v4
+        with:
+          name: inside-cover-raw-scans-6552x5040
+          path: |
+            /tmp/cover-source/A.jpg
+            /tmp/cover-source/B.jpg
+          if-no-files-found: error
+          retention-days: 2
