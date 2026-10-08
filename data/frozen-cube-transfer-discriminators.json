@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "freeze_date": "2026-10-08",
+  "experiment": 433,
+  "observation_source": "data/observations.csv",
+  "observation_blob_sha": "2bf9f1352c1632986e5c672b4832848fde1e6d0c",
+  "observation_records": 84,
+  "observation_unique_residues": 66,
+  "scope": "Previously unseen primary H108 residues where direct same-coordinate copy predicts the opposite symbol from the raw compatible exact one-minority-per-physical-column family.",
+  "copy_method": "For each target primary quarter, copy the single unanimously agreeing mark from its one or two observed same-depth/same-A-I coordinate peers in the other primary quarters; abstain on absent/conflicting peers.",
+  "column_method": "For each primary 9-cell A-I frame, retain slash/dash completions with three minority marks and exactly one minority in each physical IAB/CDE/FGH column, respecting all physically observed marks.",
+  "reliability_warning": "Cross-cube copying scored 22/33 leave-one-residue-out compared with 23/33 for majority, and 19/32 whole-cube-selected vs 21/32 baseline. These are frozen cross-family discriminators, not recommended high-confidence predictions.",
+  "disagreement_predictions": [
+    {
+      "residue": 11,
+      "letter": "B",
+      "copy": "/",
+      "column": "-",
+      "preferred_machine": "-",
+      "confidence_caveat": "hard_model_test",
+      "serials_up_to_600": [
+        11,
+        119,
+        227,
+        335,
+        443,
+        551
+      ]
+    },
+    {
+      "residue": 33,
+      "letter": "F",
+      "copy": "/",
+      "column": "-",
+      "preferred_machine": "-",
+      "confidence_caveat": "hard_model_test",
+      "serials_up_to_600": [
+        33,
+        141,
+        249,
+        357,
+        465,
+        573
+      ]
+    },
+    {
+      "residue": 41,
+      "letter": "E",
+      "copy": "-",
+      "column": "/",
+      "preferred_machine": "/",
+      "confidence_caveat": "primary_physical_gauge",
+      "serials_up_to_600": [
+        41,
+        149,
+        257,
+        365,
+        473,
+        581
+      ]
+    },
+    {
+      "residue": 64,
+      "letter": "A",
+      "copy": "-",
+      "column": "/",
+      "preferred_machine": "/",
+      "confidence_caveat": "hard_model_test",
+      "serials_up_to_600": [
+        64,
+        172,
+        280,
+        388,
+        496
+      ]
+    },
+    {
+      "residue": 68,
+      "letter": "E",
+      "copy": "-",
+      "column": "/",
+      "preferred_machine": "/",
+      "confidence_caveat": "hard_model_test",
+      "serials_up_to_600": [
+        68,
+        176,
+        284,
+        392,
+        500
+      ]
+    },
+    {
+      "residue": 77,
+      "letter": "E",
+      "copy": "-",
+      "column": "/",
+      "preferred_machine": "/",
+      "confidence_caveat": "hard_model_test",
+      "serials_up_to_600": [
+        77,
+        185,
+        293,
+        401,
+        509
+      ]
+    }
+  ],
+  "prospective_test_protocol": "Before viewing a new physical symbol, preserve this file unchanged and record the expected symbol under both operations; treat a column-rule contradiction as challenge to its grammar, not immediate proof of cube copying. Do not infer probabilities from 10/10 machine survivor counts."
+}
