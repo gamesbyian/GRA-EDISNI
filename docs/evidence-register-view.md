@@ -1,6 +1,6 @@
 # Auditable Evidence Record Cards
 
-**Curated pilot, 2026-10-08 (including Experiment 465):** 35 claim-level records, **not 35 independent studies**. Canonical structured rows are in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are [here](evidence-map-method.md). All study documents are staged together for main-branch merge. Original historical inputs are cited; independent reexecution of every original source is not claimed.
+**Curated pilot, 8 October 2026:** 36 claim-level records, **not 36 independent studies**. The canonical structured rows live in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are in [the codebook](evidence-map-method.md). Same-source rows R035 and R036 are explicitly dependent; their shared background URL does not give two independent confirmations of the foreground decoder.
 
 ## R001 · BASE: periodicity
 
@@ -421,4 +421,16 @@
 **Limit:** Pinned public Discord text-export preserves contemporaneous first-person text but is not directly authenticated via Discord API; exported timezone is unknown; actual 2020 Wayback index/capture result bytes unavailable, so the exact query path is inferred rather than independently replayed. No independent full blind URL readout or foreground decoding cue.
 
 **Discriminator:** original April 2020 index bytes, authenticated source messages and pre-index blind 21-character reading if one exists
+
+## R036 · BASE: source-assisted CE background URL identification
+
+**Source:** [experiment-466-background-route-lookup-control.md](experiment-466-background-route-lookup-control.md) (main; experiments 466)  
+**Design:** fixed-retrospective-dictionary-nearest-neighbor | **independence:** same-archived-source | **assessment:** retrospective-lookup-separation  
+**Corpus:** `historical-2020-readouts-vs-2026-74-route-mirror` | **dependence cluster:** `background-URL-provenance`
+
+**Finding:** Among 74 unique retrospectively archived Terminal41 routes, the known background destination is the unique nearest match to three recorded partial readouts, edit distances 4/3/2 versus next-best 17/15/15.
+
+**Limit:** Answer-containing 2026 route corpus selected retrospectively, not the original April-2020 Wayback index; this ranks lookup compatibility, not independent blind decoding or a likelihood of authorship; no foreground mapping.
+
+**Discriminator:** original Wayback April-2020 site-map index bytes and an authorially provided foreground-to-consumer registration
 
