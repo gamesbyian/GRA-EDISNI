@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "freeze_date": "2026-10-08",
-  "experiment": 433,
+  "experiment": 454,
   "observation_source": "data/observations.csv",
   "observation_blob_sha": "2bf9f1352c1632986e5c672b4832848fde1e6d0c",
   "observation_records": 84,
