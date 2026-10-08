@@ -295,7 +295,83 @@
         "data/conjecture-lab-gate98-cf-palette-2026-10-08.json"
       ],
       "next_source_only_test": "Recover authentic 2018 historical hex RGB legend and region, replay original solved gate-98 output as positive control without referencing sticker values, then attempt a frozen second-stage CE readout",
-      "evidence_status": "Authentic native RGB/pixel extraction established for historical ARG; NO CE foreground-to-gate98 receiver established"
+      "evidence_status": "Authentic native RGB/pixel extraction established for historical ARG; NO CE foreground-to-gate98 receiver established",
+      "supersession_by_CL05": {
+        "kind": "source-authored native pixel-grid positive-control correction",
+        "incorrect_initial_phase": [
+          0,
+          0
+        ],
+        "correct_black_16px_phase": [
+          4,
+          12
+        ],
+        "phase_selected_from_exact_black_only": true,
+        "source_native_planet_scan_recovered": true,
+        "old_palette_207_regional_enrichment_not_16px_marker": true,
+        "old_512bank_negatives_remain_valid_only_at_assumed_00_phase": true,
+        "correct_phase_512bank_negatives_in_CL05": true
+      }
+    },
+    {
+      "id": "CL-05",
+      "version": 1,
+      "title": "Authenticated Terminal41 16-pixel source grid: native phase and planet positive control",
+      "status": "source_native_planet_positive_control_reproduced_historical_text_legend_unrecovered",
+      "evidence_grade": {
+        "physical_pixel_source": "source-authenticated",
+        "native_phase": "source-derived",
+        "native_planet": "visual historical positive control",
+        "historic_url": "not reconstructed",
+        "CE_foreground_receiving_artifact": "NOT established"
+      },
+      "source": {
+        "blob_sha1": "127d8772912ffc499e5afaffe321d5bab7e920df",
+        "sha256": "db67f13634004b8f3914aae6e06bd40f01e4f71531d689603d0f1f3be2a99ded",
+        "size_bytes": 19360240
+      },
+      "phase": {
+        "method": "exhaustively rank all 256 x/y mod16 offsets solely by #000000 occurrences in original upper 2048x1024 source region",
+        "winner_xy": [
+          4,
+          12
+        ],
+        "winner_hits": 1591,
+        "runner_up_xy": [
+          5,
+          12
+        ],
+        "runner_up_hits": 68,
+        "old_assumed_00_hits": 62,
+        "bitmap_128x64_sha256": "38e3f2e176277851a059c9a8c9d37cc913e2602e5fc661b71298dbb9ccaf8411"
+      },
+      "palette_controls": {
+        "RGB_nonblack_207_upper_only_density_enrichment": 459,
+        "RGB_nonblack_207_true_phase00_enrichment_upper_vs_offgrid": 1.049842,
+        "RGB_nonblack_251_true_phase00_enrichment_upper_vs_offgrid": 1.022783,
+        "conclusion": "Strong vertical band enrichment is NOT grid-marker enrichment; do not count post-selected 207 as historical six-color legend."
+      },
+      "correct_phase_conditional_reader": {
+        "states": [
+          "0100",
+          "1100"
+        ],
+        "max_ascii_bytes": 3,
+        "full_nine_ascii_banks": 0,
+        "max_207_nonblack_sites": 3,
+        "max_0_207_251_palette_sites": 7,
+        "full_nine_tri_palette_banks": 0,
+        "scope": "64 hypothetical row-major 512-site banks, invented class/address/RGB readout; no actual CE reader established"
+      },
+      "files": [
+        "docs/conjecture-lab/2026-10-08-gate98-native-phase-positive-control.md",
+        "scripts/conjecture_lab_gate98_phase_replay.py",
+        "scripts/verify_gate98_phase_fixture.py",
+        "data/conjecture-lab-gate98-native-phase-2026-10-08.json",
+        "scripts/conjecture_lab_gate98_all_amplitudes.py",
+        "scripts/conjecture_lab_gate98_positive_control.py"
+      ],
+      "next_action": "Recover six historically attested exact RGB colour selectors and reproduce full gate98 shutdown URL without any sticker data; keep physically reached CE 534brn page as primary foreground destination."
     },
     {
       "id": "CONTROL-0",
@@ -316,5 +392,5 @@
     "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
     "A frozen exact failure refutes that implementation only"
   ],
-  "latest_update": "2026-10-08-cl04-native-pixel-source"
+  "latest_update": "2026-10-08-cl05-recovered-historical-planet-phase"
 }
