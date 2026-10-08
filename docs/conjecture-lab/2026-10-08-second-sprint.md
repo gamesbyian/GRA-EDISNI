@@ -9,6 +9,12 @@ _8 October 2026; follow-up to [first sprint](2026-10-08-first-sprint.md). CL-01 
 3. **The conjecture now exposes a sharp operation conflict:** in the exact Experiment-450 A∩B physical-column family, balancing Q4 intersects its selected-depth one-dash-per-column rule in **two full masters**, both with the same tail and one identical 27-symbol selected readout. But it intersects the *separately specified, simple* row-exception rule in **zero full masters**. The latter is Experiment 450's simple row criterion, **not** the full Experiment-329 frozen row-selector implementation.
 4. **Spatial Latin-square negative:** the solved A–I physical layout `IAB/CDE/FGH` cannot give one of each depth on every physical row or column, because B and I are already fixed to Q4 depth 2 in the first row, and B/H are both depth 2 in the third physical column. The weaker global 3/3/3 count remains possible. Do not confuse those.
 
+## Critical reconciliation: the two masters were already inside the incumbent
+
+An independent generator comparison, added **after** developing the balanced hunch, shows that both A∩B∩S+balance masters are **exactly existing live incumbent states `0100` and `1100`**, satisfying `p=0, G=0`. The associated selected 3×3 surface coordinates decode, under the existing column-one-dash ternary rule, as `102 / 002 / 120`, the already documented incumbent first-pass family for `p=0` (see `scripts/verify_machine.py`). The triple 189/252/315 is the slash=1 *binary* representation of those same three selected surfaces.
+
+This is a substantive dependency correction: **the guessed balance constraint picks out an old machine branch, not an independently reconstructed competing machine or a new physical confirmation**. The pair can still be a productive *conditional* hunch for consumers and future marks. Its attractiveness cannot be added to the established machine's evidence count.
+
 ## CL-01 v2: the direct 74-entry index fails before selecting a model
 
 Assume only this decoding proposal:
