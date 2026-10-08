@@ -30,6 +30,18 @@ Then run:
 python scripts/verify_machine.py
 ```
 
+## Research evidence map
+
+For a conceptual view of what has been tried and what would discriminate the rival decoders:
+
+- [Experiment concept map](docs/experiment-concept-map.md): carrier → decoding mechanism → downstream consumer, history and critical distinctions.
+- [Hypothesis-by-test coverage matrix](docs/hypothesis-test-coverage-matrix.md): operation families, comparison designs, negative results and specific missing evidence.
+- [Evidence record cards](docs/evidence-register-view.md) and [structured CSV](data/sticker-evidence-register.csv): each curated test's source, dependence, corpus vintage, result and limitation.
+- [Method and codebook](docs/evidence-map-method.md): scope, data dictionary, quality/appraisal criteria, refresh procedure.
+- [Historical experiment title index](docs/experiment-title-index.md): navigation-only transcript of the compact [canonical ledger](docs/experiment-ledger.md).
+
+The matrix is a curated decision map, **not** a score of theory truth, a systematic review of all original scripts, or independent confirmation of model-derived claims. Unmerged PRs remain provisional. Structural verification: `python scripts/check_evidence_map.py`.
+
 ## Operating posture
 
 Assume no new sticker will ever surface. The current 65 observed H108 residues plus the reconstructed symbolic family are the critical path.
