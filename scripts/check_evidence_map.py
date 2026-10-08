@@ -20,7 +20,7 @@ VIEW = ROOT / "docs/evidence-register-view.md"
 MATRIX = ROOT / "docs/hypothesis-test-coverage-matrix.md"
 CONCEPT = ROOT / "docs/experiment-concept-map.md"
 FAMILIES = {
-    "BASE", "ORDER", "GEOMETRY", "TAIL", "RECURSIVE",
+    "BASE", "CROSS", "ORDER", "GEOMETRY", "TAIL", "RECURSIVE",
     "CONVENTIONAL", "DIGIT", "LEVER", "OVERLAY", "CUBE", "PUNCH",
 }
 COLUMNS = [
@@ -113,7 +113,7 @@ def main() -> int:
     unknown = referenced - set(record_ids)
     if unknown:
         errors.append("unregistered matrix record IDs: " + ", ".join(sorted(unknown)))
-    if "422" not in INDEX.read_text(encoding="utf-8"):
+    if str(len(title_rows)) not in INDEX.read_text(encoding="utf-8"):
         errors.append("title index count description appears stale")
     if not CONCEPT.is_file():
         errors.append("conceptual map missing")
@@ -122,7 +122,7 @@ def main() -> int:
             print("FAIL:", error, file=sys.stderr)
         return 1
     print(f"PASS: {len(original)} historical titles; {len(rows)} curated claims; "
-          f"{len(FAMILIES)-1} mechanism families + BASE context; "
+          f"{len(FAMILIES)-2} mechanisms + BASE context + CROSS method; "
           f"{sum(r['source_state'] == 'open-pr' for r in rows)} pending claim cards; "
           f"{len(set(r['dependency_cluster'] for r in rows))} dependence clusters")
     return 0

@@ -1,12 +1,12 @@
 # Evidence Map Method, Coding Manual, and Update Policy
 
-**Version:** 2026-10-08 (first pilot). **Type:** internal research-evidence *inventory and decision map*, adapting principles from systematic evidence and gap maps. This is **not a formally conducted systematic/scoping review**, a GRADE certainty assessment, or a meta-analysis.
+**Version:** 2026-10-08 (pilot reconciled through Experiment 458). **Type:** internal research-evidence *inventory and decision map*, adapting principles from systematic evidence and gap maps. This is **not a formally conducted systematic/scoping review**, a GRADE certainty assessment, or a meta-analysis.
 
 ## Objective and boundary
 
 Question: *Which distinct, source-motivated decoding mechanisms for the INSIDE Collector's Edition sticker foreground have been examined, with what type of test, and which missing evidence would distinguish surviving mechanisms or validate an endgame consumer?*
 
-**Scope screened for this revision:** all 422 named experiment entries in `docs/experiment-ledger.md` (1–423, gap 341); the selectively read reports cited in `data/sticker-evidence-register.csv`; current research state and epistemic-reset instructions; and metadata/experiment summaries of open research PRs #140–144. The earlier exhaustive title index remains discoverable through `docs/experiment-title-index.md`. **No claim of exhaustive original source/implementation verification of all 422 experiments.** The claim-level register is a deliberately *curated pilot* of the most decision-relevant reports, not all experiments.
+**Scope screened for this revision:** all 443 canonical numbered experiment titles currently in `docs/experiment-ledger.md` (1–458, gaps 341 and 434–447); detailed reports selectively read and cited in the evidence register; current research state, original experiment code, physical source data and merged PRs #140, #142–144 and #149. PR #141 was closed as a duplicate with its unique methodological caution reconciled. The full title index is generated in `docs/experiment-title-index.md`. **This is not an exhaustive line-by-line original source or script audit of 443 experiments.** The claim register remains a curated 34-evaluation pilot.
 
 **Inclusion:** a fixed observation or historical provenance relevant to a decoder; a bounded falsifiable test or negative result; a model-family comparison; a prospective prediction; a source-constrained external consumer; an open PR with testable claimed results clearly marked pending. **Exclusion:** undocumented intuition as a verified result, repeated narrative restatements of the same experiment, code not tied to a finding, unconstrained visual or semantic guesses, and downstream consequences presented as independent support for their own premises. Retain excluded hypothesis narratives in other docs; do not label them falsified merely because they lack a register row.
 
@@ -17,7 +17,7 @@ Question: *Which distinct, source-motivated decoding mechanisms for the INSIDE C
 ### Three facets of a candidate pipeline
 
 1. **Carrier/organization:** H108 periodic serial registration; A–I background; body/tail 81/27 split; 12×9, 9×12, 3×3 tiles, 4 cubes. These are observations or *representations*, not rival decoding mechanisms.
-2. **Decoding operation (mutually exclusive primary family label per evidence record):** ORDER (reorder or shift), GEOMETRY (spatial glyph code, incl. Pigpen), TAIL (one-index selected line), RECURSIVE (POS3, repeated selectors, route), CONVENTIONAL (standard Trifid/Morse/Braille consumer), DIGIT (external numeric indexed lookup), LEVER (in-game directional command), OVERLAY (XOR/perimeter/cover combination), CUBE (explicit cross-cube transfer/depth/quarter operation), PUNCH (Hollerith/punch conversion). BASE is reserved for shared physical and historical *context* evidence, outside the decoder contest.
+2. **Decoding operation (mutually exclusive primary family label per evidence record):** ORDER (reorder or shift), GEOMETRY (spatial glyph code, incl. Pigpen), TAIL (one-index selected line), RECURSIVE (POS3, repeated selectors, route), CONVENTIONAL (standard Trifid/Morse/Braille consumer), DIGIT (external numeric indexed lookup), LEVER (in-game directional command), OVERLAY (XOR/perimeter/cover combination), CUBE (explicit cross-cube transfer/depth/quarter operation), PUNCH (Hollerith/punch conversion). **BASE** is shared physical/historical context rather than a decoder. **CROSS** is a special *test-design* code for studies comparing multiple decoder families at once; it must not be interpreted as an eleventh competing decoder.
 3. **Consumer/output:** registered word, instructions, image, coordinates, external URL, lever input, other interface, or **unresolved**. No output is presumed in advance. An encoding reformat without an externally fixed reader is not a solved output.
 
 A compound theory may involve multiple operations. Record its **first discriminatory operation** as its primary family and preserve secondary operations in the finding/scope. Avoid double counting its observations across families.
@@ -29,7 +29,7 @@ The authoritative curated rows are in [`data/sticker-evidence-register.csv`](../
 | Field | Interpretation |
 |---|---|
 | `record_id` | Immutable claim-level identifier R001, R002...; never recycle |
-| `family` | Exactly one code defined above; BASE means common context, not candidate |
+| `family` | One primary decoder code above, or BASE for common context, or CROSS for a multi-family comparator; CROSS is **not** a decoder |
 | `question` | Narrow subquestion or property evaluated |
 | `test_design` | Literal operation/test class, including exploratory or formal conditional |
 | `independence` | Physical novelty, archives, same-corpus reuse, full-data selection, internal result, pending |
@@ -64,7 +64,7 @@ The [coverage matrix](hypothesis-test-coverage-matrix.md) shows *availability an
 5. Update high-level coverage cells from register IDs; do not copy titles into multiple “study counts.” For new studies use the exact same withheld physical residues, null and baseline for head-to-head comparisons.
 6. Treat 'gap' explicitly as: **no documented test**, **untested but testable**, **test exists but not discriminating**, **test flawed/confounded**, or **requires unavailable external/physical evidence**. A gap is not automatically an experiment worth doing.
 7. Run `python scripts/check_evidence_map.py` and review diffs before merging. The script checks IDs/statuses, source paths and input counts, not scientific truth.
-8. Record update dates and corpus changes in the mapping PR. Refresh after new owner-confirmed symbols, merges of #140–144, or an independent operation cue. Avoid idle periodic rewriting.
+8. Record update dates and corpus changes in the mapping PR. Refresh after new owner-confirmed symbols, new merged research PRs, or an independent operation cue. Avoid idle periodic rewriting.
 
 ## Research-method precedents (analogies, not certification)
 
