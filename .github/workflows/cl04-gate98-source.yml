@@ -7,6 +7,7 @@ on:
       - .github/workflows/cl04-gate98-source.yml
       - scripts/conjecture_lab_gate98_real_pixels.py
       - scripts/conjecture_lab_gate98_palette_enrichment.py
+      - scripts/conjecture_lab_gate98_cf_palette.py
 permissions:
   contents: read
 jobs:
@@ -24,6 +25,11 @@ jobs:
         run: python scripts/conjecture_lab_gate98_real_pixels.py --output gate98-cl04-results.json
       - name: Audit exact RGB marker spatial enrichment
         run: python scripts/conjecture_lab_gate98_palette_enrichment.py --output gate98-cl04b-palette.json
+      - name: Test complete candidate three-bit exact-colour palette
+        run: python scripts/conjecture_lab_gate98_cf_palette.py --output gate98-cl04c-threebit.json
+      - name: Preserve complete candidate bit-palette matrix for repository
+        run: |
+          echo "CL04C_COMPACT_JSON=$(python -c 'import json;print(json.dumps(json.load(open("gate98-cl04c-threebit.json")),separators=(",",":")))' )"
       - name: Preserve small exact result for repository research record
         run: echo "CL04_RESULT_JSON_B64=$(base64 -w0 gate98-cl04-results.json)"
       - uses: actions/upload-artifact@v4
@@ -33,4 +39,5 @@ jobs:
           path: |
             gate98-cl04-results.json
             gate98-cl04b-palette.json
+            gate98-cl04c-threebit.json
           retention-days: 14
