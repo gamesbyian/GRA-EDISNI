@@ -124,6 +124,10 @@ All six physical-column symbols match the preferred symbols in the
 existing frozen machine prediction matrix. Residue 41 additionally
 lies on a known primary physical gauge support and is therefore
 less clean for comparing broader model families than 11,33,64,68,77.
+These six rows are frozen as a machine-readable pre-observation
+artifact in `data/frozen-cube-transfer-discriminators.json`, checked
+against the recomputed disagreements by the experiment script.
+
 These are **discriminator predictions**, not calibrated probabilities;
 there is no justification for favouring copy forecasts given its
 holdout failure.
@@ -153,5 +157,7 @@ python scripts/audit_cube_transfer_holdouts.py
 This runs exact counts, entire-cube holdouts and all 331,776 strict shuffles.
 It asserts key expected numbers and stops on corpus changes.
 The figures were independently calculated against the canonical
-CSV before writing the script; the committed Python version requires
-checkout-level execution.
+CSV before writing the script and replicated in a separate local
+Python verifier, including the 331,776-way strict enumeration,
+whole-cube holdouts and six disagreements. The committed Python
+script itself still requires checkout-level execution.
