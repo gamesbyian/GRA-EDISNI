@@ -24,6 +24,14 @@ Experiment 458 freezes identical 84-record/66-residue physical input for seven e
 
 **Next substantive research priority:** independently identify an external input surface / consumer and its **exact transform parameters** in surviving original game, cover, Terminal41 or platform-specific evidence. The old `534brn` E2 pair failed the fresh physical 427-dot check; generic text/bitmap searches remain quarantined. A new source-cued operation should be compared on the current fixed mask and against explicit baseline/negative controls, with existing frozen predictions preserved. New physical stickers would be welcome but are not a prerequisite for continued work.
 
+## Parallel conjecture-led workstream (introduced 8 October 2026)
+
+Keep the existing evidence-first priorities below as the **VALIDATE** track. In parallel, run a deliberately speculative **DISCOVER/DEVELOP** track using [the conjecture-lab protocol](conjecture-lab-protocol.md) and [first trial](conjecture-lab/2026-10-08-first-sprint.md). Source-fixed parameters are mandatory before *confirming* an answer, not before thinking through an unproved assumption.
+
+Initial tracks: (A) nine 9-bit class addresses plus ternary-tail channel selector, including the exact 74-entry corpus-size negative control; (B) Q4 as a single-use nine-action instruction rather than a recursive machine; (C) reversible cover as an operation keybook, with explicit source and physical-page obligations. Each should produce a complete conditional walkthrough, a fatal contradiction, or a risky future prediction. Never promote a fitted match to the observation/evidence registers. Lack of an independently found consumer is a deficit to document and work around hypothetically, not by itself an experiment-ending logical contradiction.
+
+The older Experiment-359 stopping rules remain intact **for validated model claims**. Prefer finite, auditable conjecture probes over unlimited random search.
+
 ## Operating directive
 
 Assume no new sticker will ever surface.
