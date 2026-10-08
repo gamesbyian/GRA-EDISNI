@@ -147,6 +147,7 @@ def main():
     selected_masters = []
     column_selected_masters = []
     selected_depth_patterns = Counter()
+    overlapping_masters = []
     for frames in itertools.product(*primary):
         valid_columns = all(primary_columns(frame) for frame in frames)
         for depths in tail_codes:
@@ -171,6 +172,7 @@ def main():
                     counts["column_selected"] += 1
                     if row_ok:
                         counts["column_row_and_selected"] += 1
+                        overlapping_masters.append(master)
                     column_selected_masters.append(master)
             if Counter(master) == Counter({"/": 54, "-": 36, ".": 18}):
                 counts["census_54_36_18"] += 1
@@ -194,6 +196,15 @@ def main():
             "z_matches_histogram": dict(sorted(Counter(z for _, z in edges).items()))
         }
 
+    overlap_splits = {}
+    for residue in range(1, 109):
+        ct = Counter(m[residue-1] for m in overlapping_masters)
+        if len(ct) > 1:
+            overlap_splits[residue] = dict(sorted(ct.items()))
+    assert len(overlapping_masters) == 6
+    assert {r for r, ct in overlap_splits.items()
+            if sorted(ct.values()) == [3, 3]} == {61, 100}
+
     result = {
         "physical_records": records,
         "observed_unique_residues": len(observed),
@@ -207,6 +218,7 @@ def main():
         "column_primary_3d_neighbours": neighbour_summary(column_masters),
         "column_selected_primary_3d_neighbours": neighbour_summary(column_selected_masters),
         "selected_depth_patterns": dict(sorted(selected_depth_patterns.items())),
+        "overlap_six_residue_splits": overlap_splits,
         "limits": [
             "exact enumeration is conditional on chosen structural rules",
             "A∩B∩C is a slice of the incumbent selector grammar, not independent confirmation",
