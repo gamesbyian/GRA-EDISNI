@@ -1,5 +1,8 @@
 # Experiment 337 — 534brn A/B/P exact loss-map alignment
 
+> **2026-10-08 correction (superseding the exact-recovery claim below):** An adversarial audit of five equally scored or fixed-anchor variants found only **18 of the 238** originally filled byte positions retained the same position and value across all five. The original 238 fills are **alignment-dependent candidates**, not a proved hard lower bound of exactly recovered original JPEG bytes. In addition, the GitHub connector's A capture yields a 12,150-byte rendition against the archived blob's 12,140-byte metadata, so its byte-exact provenance remains unverified. Preserve this original report as historical methodology; use [the updated canonical mask and sensitivity audit](experiment-534brn-canonical-partial-evidence-alignment-2026-10-08.md) for current conclusions. The 18 five-way-consistent sites are not proved uniquely forced across all optimal alignments.
+
+
 _Date: 30 Sep 2026_
 
 ## Question
