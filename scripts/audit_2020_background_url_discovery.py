@@ -70,11 +70,16 @@ def run(before: Path | None = None, after: Path | None = None,
         text = source.decode("utf-8")
         for event in direct["directly_recovered_events"]:
             marker = f"[{event['export_timestamp']}] {event['author']}\n"
-            start = text.find(marker)
-            assert start >= 0, event
-            stop = text.find("\n\n\n[", start)
-            block = text[start:stop if stop >= 0 else len(text)]
-            assert event["content_contains"] in block, event
+            cursor = 0
+            found = False
+            while (start := text.find(marker, cursor)) >= 0:
+                stop = text.find("\n\n\n[", start + len(marker))
+                block = text[start:stop if stop >= 0 else len(text)]
+                if event["content_contains"] in block:
+                    found = True
+                    break
+                cursor = start + len(marker)
+            assert found, event
 
     output = []
     for candidate in e["recorded_preindex_candidates"]:
