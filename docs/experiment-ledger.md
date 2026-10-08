@@ -462,6 +462,7 @@ Latest indexed experiment: **423**.
 | 422 | live acquisition ranking: residue 82 is the decisive U4-vs-U5 physical fork; residues 84/102 are exactly balanced one-bit U5 state resolvers; residue 94 is the clean prospective tail-stack validation target. |
 | 423 | JPEG entropy MCU constraint: exact structural baseline-Huffman propagation over the 4,156-token P scan permits every complete MCU count 16..300. All 43 MCU-grid products possible for 128..255 dimensions survive, so the entropy stream cannot establish 64 MCUs or 128×128. |
 | 429 | conditional completion ensemble: 233,280 3-of-9/Q4 full masters; 324 with physical-column placement; 4,528 Q4-selected one-dash-per-column; 12 with both; 6 also satisfy the simple row-exception rival. No extra 3D-neighbour agreement signal; residues 61 and 100 balance the six-way overlap 3/3. Reconciles earlier 324/12 counts from Experiment 418. |
+| 430 | registered Q4 depth-selected 27-mark readout versus fixed-layer controls: among 324 physical-column masters selector yields 68 distinct outputs (19 invariant positions), versus 3/1/6 for fixed depths 0/1/2; among 12 selected-column survivors selector yields three words (21/27 invariant positions), but the stability is not superior to fixed depth 1. Historical lever mapping only relabels slash/dash to Up/Right, and no 27-action consumer is independently supplied. |
 
 ## Current frontier
 
