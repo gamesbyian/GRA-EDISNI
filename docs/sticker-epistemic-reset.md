@@ -185,7 +185,7 @@ A bounded geometric candidate family is permitted: first-nine spatial structure 
 
 ### R3 — solved-puzzle operation replay
 
-Implement only historically demonstrated operation classes against the raw/partial H108 object:
+**This subsection governs confirmatory historical-operation replay.** Implement only historically demonstrated operation classes against the raw/partial H108 object **when asserting that an operation is evidenced by the source**. Separately labeled conjecture work may invent an operation, temporarily choose a mapping or pursue target-assisted searches; it must disclose selection and may not count its results as independent confirmation:
 
 - externally constrained reordering;
 - spatial registration followed by secondary-layer reading;
@@ -252,6 +252,6 @@ Experiment 359 audits these six criteria as sufficiently satisfied for **closed-
 5. surviving families have been compared on independent evidence and prospective prediction strongly enough to preserve accountability;
 6. the research queue states clearly which assumptions remain live and what evidence can reopen them.
 
-The stopping boundary is deliberately narrower than “puzzle solved.” It means further hypothesis widening from the same evidence is no longer the default productive action. Reopen a lane only when a concrete new physical observation, historical instruction, independently measured side channel, externally registered key/selector/transform, or preregistered independent consumer supplies new information.
+The stopping boundary is deliberately narrower than “puzzle solved.” It closes repetitive unrestricted testing **as a source of validated claims**; it does **not** prohibit developing new conditional conjectures. For VALIDATE mode, reopen a previously closed test only when concrete new evidence or an independently registered consumer supplies new information. For DISCOVER/DEVELOP, a clearly versioned hypothesis can be pursued from an unsupported assumption, but must preserve the earlier negative test and state how the new fixed operation differs. See [conjecture-lab protocol](conjecture-lab-protocol.md).
 
 The current ternary machine therefore survives the reset as a mature conditional model, not as an unquestioned starting premise.
