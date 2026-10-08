@@ -1,0 +1,23 @@
+name: Verify historical CE URL codebook identification
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rank fixed April 2020 readings against source-frozen archive routes
+        run: python scripts/audit_background_url_lookup_discrimination.py --output /tmp/experiment-466.json --summary
+      - name: Preserve full source-assistance test output
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-466-background-codebook-discrimination
+          path: /tmp/experiment-466.json
