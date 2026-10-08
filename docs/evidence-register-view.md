@@ -1,6 +1,6 @@
 # Auditable Evidence Record Cards
 
-**Curated pilot, 2026-10-08 (including Experiment 460):** 35 claim-level records, **not 35 independent studies**. Canonical structured rows are in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are [here](evidence-map-method.md). All study documents are staged together for main-branch merge. Original historical inputs are cited; independent reexecution of every original source is not claimed.
+**Curated pilot, 2026-10-08 (including Experiment 465):** 35 claim-level records, **not 35 independent studies**. Canonical structured rows are in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are [here](evidence-map-method.md). All study documents are staged together for main-branch merge. Original historical inputs are cited; independent reexecution of every original source is not claimed.
 
 ## R001 · BASE: periodicity
 
@@ -412,7 +412,7 @@
 
 ## R035 · BASE: CE background URL discovery channel
 
-**Source:** [experiment-460-background-url-discovery-provenance.md](experiment-460-background-url-discovery-provenance.md) (main; experiments 460)  
+**Source:** [experiment-465-background-url-discovery-provenance.md](experiment-465-background-url-discovery-provenance.md) (main; experiments 460)  
 **Design:** dated-archive-cross-version-and-fixed-string-comparison | **independence:** archived-source-replay | **assessment:** source-assisted-historical-identification  
 **Corpus:** `historical-2020-April-source` | **dependence cluster:** `background-URL-provenance`
 
