@@ -59,7 +59,7 @@ rule supplies no incremental practical advantage here.
 For each primary target quarter Q, hide *all* its symbols during operation
 selection. Compare the other two quarters under the same six fixed
 candidate transforms. Choose whichever has the highest Laplace-smoothed
-cross-quarter agreement \`(matches+1)/(pairs+2)\`, resolving ties in
+cross-quarter agreement `(matches+1)/(pairs+2)`, resolving ties in
 the fixed operation order. Only then apply that operation to the held-out
 quarter; vote using the other two quarters' available known symbols.
 
@@ -146,9 +146,9 @@ results and the six frozen cross-family discriminators.
 
 ## Reproduce
 
-\`\`\`bash
+```bash
 python scripts/audit_cube_transfer_holdouts.py
-\`\`\`
+```
 
 This runs exact counts, entire-cube holdouts and all 331,776 strict shuffles.
 It asserts key expected numbers and stops on corpus changes.
