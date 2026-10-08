@@ -1,6 +1,6 @@
 # Evidence Map Method, Coding Manual, and Update Policy
 
-**Version:** 2026-10-08 (pilot reconciled through Experiment 460; Experiment 459 remains separate active work). **Type:** internal research-evidence *inventory and decision map*, adapting principles from systematic evidence and gap maps. This is **not a formally conducted systematic/scoping review**, a GRADE certainty assessment, or a meta-analysis.
+**Version:** 2026-10-08 (pilot reconciled through Experiment 465; Experiment 459 remains separate active work). **Type:** internal research-evidence *inventory and decision map*, adapting principles from systematic evidence and gap maps. This is **not a formally conducted systematic/scoping review**, a GRADE certainty assessment, or a meta-analysis.
 
 ## Objective and boundary
 
@@ -49,7 +49,7 @@ The authoritative curated rows are in [`data/sticker-evidence-register.csv`](../
 
 For each row inspect (a) provenance and physical independence, (b) parameter and hypothesis-selection timing, (c) shared observation mask and duplicate-residue leakage, (d) appropriate null or trivial prediction baseline, (e) decoder complexity/flexible orientations, (f) directness of the measured outcome to the puzzle endgame, and (g) reproducibility. The register carries the critical limitations as specific fields, rather than forcing a misleading numerical evidence grade. No independent second coder or reliability statistic is claimed for this pilot.
 
-**Historic discovery-channel rule:** Record whether a supposed external endgame was (a) *blindly read from the clue* before source search, (b) *recognized among source-enumerated alternatives* after seeing candidate answers, or (c) *verified by an independent operating consumer*. Experiment 460 provides a real documented example of type (b) for the Collector's Edition background: the exact URL was reportedly surfaced through a website index after earlier partial sticker readings. Strongly associated physical evidence need not be a full blind decode.
+**Historic discovery-channel rule:** Record whether a supposed external endgame was (a) *blindly read from the clue* before source search, (b) *recognized among source-enumerated alternatives* after seeing candidate answers, or (c) *verified by an independent operating consumer*. Experiment 465 provides a real documented example of type (b) for the Collector's Edition background: the exact URL was reportedly surfaced through a website index after earlier partial sticker readings. Strongly associated physical evidence need not be a full blind decode.
 
 **Causal/evidence dependency rule:** If R001 proves repeat compatibility and R010 fits a conditional machine to those repeated stickers, R010 does not add a second independent empirical confirmation of the repeat. Likewise 329, 330, 339 and 340 share a selection episode; 378–391 and 418 follow one frozen external candidate, not multiple confirmations.
 
