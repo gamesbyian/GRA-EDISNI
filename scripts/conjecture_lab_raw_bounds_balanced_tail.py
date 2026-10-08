@@ -102,11 +102,14 @@ def balance_probe(observed):
                 if selected and row:
                     groups["both_balanced"] += 1
 
-    assert groups == {
+    expected = {
         "all": 324, "balanced": 36, "selected": 12,
         "selected_balanced": 2, "row": 108,
         "row_balanced": 0, "both": 6, "both_balanced": 0,
-    }, groups
+    }
+    # Counter omits zero keys; compare counts, including the important
+    # exact zero intersections, rather than dictionary key presence.
+    assert {k: groups[k] for k in expected} == expected, groups
     assert sorted(depth_balance_codes) == [
         "021101022", "120101022"
     ]
