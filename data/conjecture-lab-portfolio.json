@@ -136,7 +136,20 @@
           "106": "."
         },
         "scope": "Experiment 450's simple R criterion differs from Experiment 329's separately frozen row-selector",
-        "status": "candidate-specific forecasts, not physical observations"
+        "status": "candidate-specific forecasts, not physical observations",
+        "exact_incumbent_overlap": {
+          "states": [
+            "0100",
+            "1100"
+          ],
+          "branch": "p=0,G=0",
+          "already_documented_first_pass": [
+            "102",
+            "002",
+            "120"
+          ],
+          "no_independent_machine_confirmation": true
+        }
       },
       "printer_substring_control": {
         "script": "scripts/conjecture_lab_printer_substring_control.py",
@@ -170,7 +183,8 @@
           "AP_masters": 4,
           "balanced_AP_masters": 2
         },
-        "status": "post-selected curiosity, NOT p-value or source-independent clue"
+        "status": "post-selected curiosity, NOT p-value or source-independent clue",
+        "source_dependency": "The 189/252/315 values recode selected surfaces already produced by canonical p=0 first-pass family, not a novel independent decoder"
       }
     },
     {
