@@ -20,6 +20,8 @@ jobs:
         run: python scripts/check_evidence_map.py
       - name: Check conjecture lab conditional address probe
         run: python scripts/conjecture_lab_nine_bit_address_probe.py
+      - name: Check conjecture lab controlled command backsolve
+        run: python scripts/conjecture_lab_nine_action_subsequence.py
       - name: Verify canonical closed-corpus machine
         run: python scripts/verify_machine.py
       - name: Verify independent native-state model
