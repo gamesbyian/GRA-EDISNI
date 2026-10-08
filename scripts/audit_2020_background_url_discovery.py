@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment 460: independently check the April 2020 URL discovery chronology.
+"""Experiment 465: independently check the April 2020 URL discovery chronology.
 
 Checks only pinned community timeline claims and saved pre-/post-index readings.
 Source text is documented in a fixture with upstream GitHub commit permalinks.
@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-FIXTURE = ROOT / "data" / "experiment-460-background-url-discovery.json"
+FIXTURE = ROOT / "data" / "experiment-465-background-url-discovery.json"
 DISCORD_EPOCH_MS = 1420070400000
 
 
