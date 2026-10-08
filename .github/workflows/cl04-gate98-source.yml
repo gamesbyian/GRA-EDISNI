@@ -21,6 +21,8 @@ jobs:
         run: python -m pip install 'Pillow>=10,<13'
       - name: Scan original pinned 19.36 MB gate-98 source
         run: python scripts/conjecture_lab_gate98_real_pixels.py --output gate98-cl04-results.json
+      - name: Preserve small exact result for repository research record
+        run: echo "CL04_RESULT_JSON_B64=$(base64 -w0 gate98-cl04-results.json)"
       - uses: actions/upload-artifact@v4
         if: success()
         with:
