@@ -20,6 +20,8 @@ from enumerate_sticker_completion_ensembles import (
     make_master, simple_row_exception, selected_columns,
 )
 
+from generate_master import generate_master, legal_states
+
 ROOT = Path(__file__).resolve().parents[1]
 LETTERS = "ABCDEFGHI"
 
@@ -119,6 +121,28 @@ def balance_probe(observed):
     ]
     assert exact_differences == [22, 25]
 
+    # This is *not* a new independent decoder. The two selected/balanced
+    # full masters are exactly the p=0,G=0 branch of the established
+    # incumbent generator, filtered by the already known physical corpus.
+    live_incumbent = [
+        (state, generate_master(state))
+        for state in legal_states()
+        if all(generate_master(state)[residue-1] == value
+               for residue, value in observed.items())
+    ]
+    assert len(live_incumbent) == 10
+    exact_branch = {
+        master for state, master in live_incumbent
+        if state.p == 0 and state.G == 0
+    }
+    assert len(exact_branch) == 2
+    assert {master for master, _ in selected_balanced} == exact_branch
+    matching_states = [
+        "".join(map(str, (state.X, state.Y, state.Z, state.G)))
+        for state, master in live_incumbent if master in exact_branch
+    ]
+    assert matching_states == ["0100", "1100"]
+
     readouts = set()
     for m, d in selected_balanced:
         readouts.add(tuple(
@@ -144,6 +168,9 @@ def balance_probe(observed):
         "selected_balanced_code": "120101022",
         "selected_balanced_survivors": len(selected_balanced),
         "survivor_differences": exact_differences,
+        "existing_incumbent_states_matched_exactly": matching_states,
+        "existing_incumbent_branch": "p=0 and G=0",
+        "independence_warning": "These two masters are already the known canonical-machine first-pass 102/002/120 branch; discovering them through an invented 3/3/3 balance filter is not independent confirmation of that machine.",
         "common_selected_readout": next(iter(readouts)),
         "selected_balanced_unobserved_predictions": conditional_predictions,
         "warning": (
