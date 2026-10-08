@@ -96,3 +96,17 @@ The strongest direct negative is therefore that no validated layout or *consumer
 - The fixture preserves the exact original blob SHA. The verifier checks the source field grammar and archival one-character discrepancy; optional source scanning also tests uniqueness against the original decoded text.
 
 No private data was accessed and no individual was contacted. This is a structural-source correction and additional testable target, **not** a solved code.
+
+## Historical chronology countercheck: Viewgate predates the stickers
+
+The [Game Detectives historical page](https://wiki.gamedetectives.net/w/Inside_ARG) preserves a chronology compiled from contemporaneous source and `Last-Modified` headers. It dates `/comms_main_viewgate.html` to **7 December 2017**, and `/comms_main_viewgate_002.html` to **25 June 2018**. The Collector's Edition sticker distribution began in December **2019**.
+
+Those timestamps are secondary records of old HTTP metadata, not newly retrieved signed server logs, but their direction is decisive for proper framing. The **22-position Viewgate placeholder already existed before the Collector's Edition**. Therefore:
+
+- 22→108-bit packaging does not establish that Viewgate was designed for the CE sticker solution;
+- a CE connection would have to be deliberately **retroactive**, such as an earlier dormant interface meant to be unlocked by a later physical release, or reuse of an existing code vocabulary;
+- without an independently supplied bridge, prioritizing the candidate as a CE final password just because the lengths fit is weak.
+
+The original 2017–2018 stages did have dynamically accepted phrases on the **separate Playdead website printer endpoint**. No proof requires the static `terminal41.link` Viewgate text to be that interactive endpoint.
+
+The data-island analysis was performed on the later preserved snapshot, so the **75-character string itself is not thereby dated to 2017**. The key chronological fact is the earlier existence of a 22-character *display field*; the island's own historical first appearance remains an acquisition target.
