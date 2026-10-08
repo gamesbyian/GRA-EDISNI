@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "experiment": 476,
+  "date": "2026-10-08",
+  "focus_question": "Which independently sourced INSIDE/Collector's Edition artifacts have a demonstrated native means to consume a new foreground-derived value, rather than merely resembling a code or displaying a static token?",
+  "scope": "Closed-corpus source-first typed-affordance audit. Presence of an original historical interface does not imply it accepts CE stickers. Negative gates apply to preserved source versions, not inaccessible old backend revisions.",
+  "source_bases": {
+    "terminal_mirror": "archive/external/twinysam-inside-arg/terminal41.link/",
+    "game_inventory": "data/original-game-asset-consumer-inventory-2026-10-08.json",
+    "terminal_tree": "data/terminal41-source-tree.json",
+    "saf_island": "data/endgame-saf-dat-island-2026-10-08.json",
+    "historical_arg": "docs/arg-puzzle-mechanics-corpus.md",
+    "asset_audit": "docs/original-game-asset-consumer-audit-2026-10-08.md",
+    "cube_audit": "docs/cube-registration-research-2026-10-08.md"
+  },
+  "native_artifacts": [
+    {
+      "id": "secret_ending_lever",
+      "source_kind": "original_game_action",
+      "native_role": "Functional three-direction sequence consumer at the 2016 bunker",
+      "native_input_type": "ordered U/L/R actions; known existing solution uses fourteen actions",
+      "primary_source": "docs/original-game-asset-consumer-audit-2026-10-08.md",
+      "demonstrated_receives_new_ce_value": false,
+      "earliest_known": "2016",
+      "source_status": "historically_functional",
+      "ce_bridge_status": "candidate_unsupported",
+      "physically_supported_mapping": {
+        "slash": "U",
+        "dash": "R",
+        "dot": "L"
+      },
+      "mapping_provenance": "Archived 2020–2021 sleeve/lever discussion; candidate physical interpretation, not developer confirmation",
+      "strongest_negative": "The known bunker password has left and right commands. Neither a primary-only slash/dash readout nor the tail-only slash/dot readout can reproduce it without mixing sectors or adding a transform; separate direct-replay and 2023 brute-force tests already negative.",
+      "next_independent_evidence": "A second native lever handler or an artifact-supplied order/subset connecting sticker sectors to the lever."
+    },
+    {
+      "id": "terminal41_printer_four_schemes",
+      "source_kind": "historic_status_protocol",
+      "native_role": "Four named breach achievements PLANET/LIFE/PROBE/CONDISCON",
+      "native_input_type": "historically named printer credentials, not a CE nine/27/108-slot input",
+      "primary_source": "archive/external/twinysam-inside-arg/terminal41.link/sys/printreqstatus_SD.html",
+      "demonstrated_receives_new_ce_value": false,
+      "earliest_known": "2018",
+      "source_status": "historic_completed",
+      "ce_bridge_status": "no_fifth_slot_in_preserved_scheme",
+      "strongest_negative": "Four of four schemes marked obtained/applied; no observed fifth ordinary scheme in this status source.",
+      "next_independent_evidence": "Server code, original request/response, or a distinct post-shutdown interface."
+    },
+    {
+      "id": "terminal41_viewgate_22_placeholder",
+      "source_kind": "static_rendered_page",
+      "native_role": "22-underscore printed prompt appearing on two pages",
+      "native_input_type": "22 visible placeholder positions, but no verified input control or POST handler in archived HTML",
+      "primary_source": "archive/external/twinysam-inside-arg/terminal41.link/comms_main_viewgate.html",
+      "additional_source": "archive/external/twinysam-inside-arg/terminal41.link/comms_main_viewgate_002.html",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "static_display_only_in_mirror",
+      "ce_bridge_status": "no_executable_receiver",
+      "strongest_negative": "Each source displays 22 underscores but has no HTML form, input, select or maxlength. A displayed interface cannot validate a sticker-derived token.",
+      "next_independent_evidence": "Archived original live form or original server-side request/response."
+    },
+    {
+      "id": "terminal41_saf_seven_fields",
+      "source_kind": "static_text_data",
+      "native_role": "One 75-character plus-delimited ASCII island, with one 22-character field",
+      "native_input_type": "seven source fields of lengths 26/22/10/2/3/1/5; field meanings unlabeled",
+      "primary_source": "data/endgame-saf-dat-island-2026-10-08.json",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "source_field_only",
+      "ce_bridge_status": "no_field_consumer",
+      "strongest_negative": "The 22-character candidate field itself is an existing *value*, not a receiver. Direct unsigned base36 integer is 111 bits, larger than conditional 108-bit foreground ceiling.",
+      "next_independent_evidence": "A source-defined record schema or verified client/server use of a specific field."
+    },
+    {
+      "id": "ce_background_terminal41_path",
+      "source_kind": "solved_sticker_background_output",
+      "native_role": "Nine-piece background artwork recognized as the static URL dat/534brn9653f9j8mmd",
+      "native_input_type": "URL/path, already a solved output, not a new foreground form",
+      "primary_source": "archive/external/twinysam-inside-arg/terminal41.link/dat/534brn9653f9j8mmd/index.html",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "static_path_exists",
+      "ce_bridge_status": "no_native_foreground_key_declared",
+      "strongest_negative": "The exact URL was source-index-assisted historically, not a demonstrated blind 21-character foreground key. No native index mapping from foreground into this path is supplied by the page.",
+      "next_independent_evidence": "Original page saying how CE dash/slash/dot, A–I or 81/27 is used."
+    },
+    {
+      "id": "damaged_ce_jpeg",
+      "source_kind": "damaged_binary_page",
+      "native_role": "Preserved corrupted JFIF/Exif-like image content at CE background URL with footer",
+      "native_input_type": "damaged media, no typed sticker key or input operation present in accessible source",
+      "primary_source": "archive/external/twinysam-inside-arg/terminal41.link/dat/534brn9653f9j8mmd/index.html",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "source_byte_recovery_incomplete",
+      "ce_bridge_status": "no_input_semantics",
+      "strongest_negative": "Visible footer pe^!02un and 8/2/1 dots supplies no externally identified indexing/repair operation. Compromised HTML/media byte stream cannot be freely optimized to sticker plaintext.",
+      "next_independent_evidence": "Uncorrupted pre-damage media, original repair instructions or a source-fixed key/overlay coordinate."
+    },
+    {
+      "id": "terminal41_shutdown_nine_redirects",
+      "source_kind": "static_redirect_chain",
+      "native_role": "Fixed 09-to-01 shutdown sequence",
+      "native_input_type": "no choice or per-step input; nine HTTP redirect pages",
+      "primary_source": "docs/experiment-408-terminal41-nine-step-consumer-audit.md",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "fixed_redirects",
+      "ce_bridge_status": "direct_9_symbol_consumer_closed",
+      "strongest_negative": "Nine consecutive pages are fixed links and do not consume a nine-command CE output.",
+      "next_independent_evidence": "Previously uncaptured alternate branching source."
+    },
+    {
+      "id": "ce_reversible_cover",
+      "source_kind": "physical_registered_artwork",
+      "native_role": "Advertised clue-bearing cover with screens of previously seen ARG artifacts",
+      "native_input_type": "image panels with no supplied foreground sampling lattice or overlay alignment",
+      "primary_source": "docs/sticker-endgame-followup-cover-jpeg-terminal41-2026-10-08.md",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "physical_artifact_present",
+      "ce_bridge_status": "no_source_fixed_register_transform",
+      "strongest_negative": "Existing cover and comparison crops are perspective/blurred; no reliably exact pixel coordinate map from H108 to panel image.",
+      "next_independent_evidence": "Original print-ready cover art or explicit transformation cue with fixed coordinate reference."
+    },
+    {
+      "id": "original_2016_secretmap",
+      "source_kind": "original_game_texture_report",
+      "native_role": "Early extracted game map with approximately fourteen marks, potentially existing secret-orb sites",
+      "native_input_type": "static image/scene; no demonstrated CE sticker input, native texture/UV transform not recovered",
+      "primary_source": "docs/original-game-asset-consumer-audit-2026-10-08.md",
+      "contemporary_primary_url": "https://www.reddit.com/r/PlaydeadsInside/comments/4sav9x/curious_textures_found_in_the_game_files/",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "original_dds_unavailable",
+      "ce_bridge_status": "ordinary_14_orb_null_untested_in_native_bytes",
+      "strongest_negative": "Contemporaneous July 2016 discussion already counted a possible 14th marker and proposed the large final orb, years before CE. No unexplained native marks remain independently established.",
+      "next_independent_evidence": "Exact game-build native SecretMap DDS and matching scene UVs; preregister matching to fourteen known orbs first."
+    },
+    {
+      "id": "original_switch_joycon_printer",
+      "source_kind": "historic_functional_operation",
+      "native_role": "Switch printer yielded Joy-Con connection/disconnection actions",
+      "native_input_type": "platform-specific ordered controller actions already consumed during solved printer scheme",
+      "primary_source": "docs/arg-puzzle-mechanics-corpus.md",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "historically_functional_already_solved",
+      "ce_bridge_status": "no_ce_action_order",
+      "strongest_negative": "Proof that some codes are instructions does not specify which stickers to read or any CE-native controller sequence.",
+      "next_independent_evidence": "CE-specific independently printed attach/detach order."
+    },
+    {
+      "id": "original_pc_acorn_life",
+      "source_kind": "historically_cued_transform",
+      "native_role": "Acorn plus generation 41 supplied a Game of Life construction",
+      "native_input_type": "explicit seed + generation parameter, already consumed in original printer branch",
+      "primary_source": "docs/arg-puzzle-mechanics-corpus.md",
+      "demonstrated_receives_new_ce_value": false,
+      "source_status": "historically_functional_already_solved",
+      "ce_bridge_status": "no_ce_generation_seed_cue",
+      "strongest_negative": "Known Playdead generation mechanism does not license applying arbitrary Life rules to CE slash/dash/dot cells.",
+      "next_independent_evidence": "Sticker-native seed name and generation/transform parameters."
+    }
+  ],
+  "derived_projection_types": [
+    {
+      "id": "known_body_81",
+      "provenance": "physically observed 81/27 sector alphabet boundary",
+      "produced_value_type": "81-symbol slash/dash sector when complete",
+      "lever_commands_possible": [
+        "U",
+        "R"
+      ],
+      "no_transform_excludes": [
+        "L"
+      ]
+    },
+    {
+      "id": "known_tail_27",
+      "provenance": "physically observed 81/27 sector alphabet boundary",
+      "produced_value_type": "27-symbol slash/dot sector when complete",
+      "lever_commands_possible": [
+        "U",
+        "L"
+      ],
+      "no_transform_excludes": [
+        "R"
+      ]
+    },
+    {
+      "id": "native_depth_selected_body_27",
+      "provenance": "hypothesis 456 primary-body selected by Q4 depth",
+      "produced_value_type": "27-symbol slash/dash readout (nonunique)",
+      "lever_commands_possible": [
+        "U",
+        "R"
+      ],
+      "no_transform_excludes": [
+        "L"
+      ]
+    },
+    {
+      "id": "background_digit_index_9",
+      "provenance": "hypothesis 398 534brn digits indexing 9 classes",
+      "produced_value_type": "9 slash/dash commands under restricted U4/U5, stable --/--/-/-",
+      "lever_commands_possible": [
+        "U",
+        "R"
+      ],
+      "no_transform_excludes": [
+        "L"
+      ]
+    },
+    {
+      "id": "q4_depth_address_9",
+      "provenance": "Q4 one-slash-depth-stack grammar hypothesis",
+      "produced_value_type": "9 ternary depth addresses; no source-fixed map to U/L/R",
+      "lever_commands_possible": null,
+      "no_transform_excludes": []
+    },
+    {
+      "id": "full_h108_108",
+      "provenance": "physically observed structure, 42 incomplete residues",
+      "produced_value_type": "108 symbol code over sector-specific alphabets; fully ordered readout not given",
+      "lever_commands_possible": [
+        "U",
+        "R",
+        "L"
+      ],
+      "no_transform_excludes": []
+    }
+  ],
+  "verdict": "One original game functional three-command input is documented but already used for the known fourteen-command solution; no preserved post-CE artifact demonstrates a typed, functioning foreground receiver. Several *static surfaces* are genuine independent artifacts, not verified input interfaces. Exact missing joins are required before a sticker-derived decoded output can be claimed."
+}
