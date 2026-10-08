@@ -1,0 +1,33 @@
+name: Verify source-native consumer gates
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_source_native_consumer_affordances.py"
+      - "data/experiment-476-source-native-consumer-affordances.json"
+      - "data/observations.csv"
+      - "data/endgame-saf-dat-island-2026-10-08.json"
+      - "archive/external/twinysam-inside-arg/terminal41.link/comms_main_viewgate*.html"
+      - "archive/external/twinysam-inside-arg/terminal41.link/sys/printreqstatus_SD.html"
+      - "archive/external/twinysam-inside-arg/terminal41.link/dat/534brn9653f9j8mmd/index.html"
+      - ".github/workflows/verify-source-native-consumer.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: source-native-consumers-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check preserved HTML, corpus and typed lever output
+        run: python scripts/audit_source_native_consumer_affordances.py > /tmp/source-consumer-gates.json
+      - name: Show consumer audit summary
+        run: |
+          python -c 'import json; a=json.load(open("/tmp/source-consumer-gates.json")); print("sources:",a["artifact_total"],"new CE receivers:",a["verified_new_ce_value_receivers"],"type-compatible bunker direct placements:",a["known_lever_direct_replay_type_check"]["type_compatible_14_command_direct_placements"])'
