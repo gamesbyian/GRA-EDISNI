@@ -20,7 +20,7 @@ jobs:
       - name: Install source image decoder
         run: python -m pip install 'Pillow>=10,<13'
       - name: Reconstruct colour layers from byte-exact original image
-        run: python scripts/conjecture_lab_gate98_positive_control.py --output cl05-original-rgb-layers.json
+        run: python scripts/conjecture_lab_gate98_positive_control.py --output cl05-original-rgb-layers.json --preserve-source gate98-original.png
       - name: Exhaustive nontext 255-amplitude 16px lattice test
         run: python scripts/conjecture_lab_gate98_all_amplitudes.py --output cl05-source-all-rgb-levels.json
       - name: Audit reproducible colour amplitude source output
@@ -32,4 +32,5 @@ jobs:
           path: |
             cl05-original-rgb-layers.json
             cl05-source-all-rgb-levels.json
+            gate98-original.png
           retention-days: 14
