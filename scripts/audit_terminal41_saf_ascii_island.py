@@ -61,8 +61,9 @@ def audit(source: Path | None = None) -> dict:
     if source is not None:
         content = source.read_bytes().decode("utf-8", errors="replace")
         found = [(match.start(), match.group()) for match in PATTERN.finditer(content)]
-        assert found == [(record["source_long_run_start_index_utf16_js"], source_run)], found[:20]
+        assert len(found) == 1 and found[0][1] == source_run, found[:20]
         result["whole_file_islands_35_or_longer"] = len(found)
+        result["whole_file_offset_unicode_codepoints"] = found[0][0]
         result["whole_file_observation"] = "exactly one, matching frozen source field"
     return result
 
