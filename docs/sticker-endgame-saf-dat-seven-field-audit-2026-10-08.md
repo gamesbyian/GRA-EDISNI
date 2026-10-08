@@ -110,3 +110,9 @@ Those timestamps are secondary records of old HTTP metadata, not newly retrieved
 The original 2017–2018 stages did have dynamically accepted phrases on the **separate Playdead website printer endpoint**. No proof requires the static `terminal41.link` Viewgate text to be that interactive endpoint.
 
 The data-island analysis was performed on the later preserved snapshot, so the **75-character string itself is not thereby dated to 2017**. The key chronological fact is the earlier existence of a 22-character *display field*; the island's own historical first appearance remains an acquisition target.
+
+## Execution/verification note
+
+In addition to the GitHub-connector source-wide scan, an **independent Python assertion check** reproduced the 75-character length, exact seven field sizes, unique i/1 discrepancy at character offset 24, and incompatibility of the 22-character token with the three common Base32 alphabets. These assertions passed on the source-island and archive-transcription strings.
+
+The **committed standalone repository verifier** still needs a run from a checkout with the frozen `data/` and `archive/` files. The whole-source optional mode also requires locally acquired original `saf_dat_col.html`; the remote text inspection does not substitute for a binary-forensic reproduction.
