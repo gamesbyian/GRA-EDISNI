@@ -1,6 +1,6 @@
 # Auditable Evidence Record Cards
 
-**Curated pilot, 2026-10-08 (reconciled through Experiment 458):** 34 claim-level records, **not 34 independent studies**. Canonical structured rows are in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are [here](evidence-map-method.md). All linked study results in this snapshot have now merged to main; they remain conditional on their original evidence designs. No independent re-execution of every historical source is implied by these cards.
+**Curated pilot, 2026-10-08 (including Experiment 460):** 35 claim-level records, **not 35 independent studies**. Canonical structured rows are in [the CSV register](../data/sticker-evidence-register.csv); framework and appraisal rules are [here](evidence-map-method.md). All study documents are staged together for main-branch merge. Original historical inputs are cited; independent reexecution of every original source is not claimed.
 
 ## R001 · BASE: periodicity
 
@@ -409,4 +409,16 @@
 **Limit:** Descendant families share U2 assumptions; source corpus selected model grammars retrospectively; no physical post-freeze validation yet.
 
 **Discriminator:** new owner-confirmed r50 r54 r93 r102 and source-fixed external consumer
+
+## R035 · BASE: CE background URL discovery channel
+
+**Source:** [experiment-460-background-url-discovery-provenance.md](experiment-460-background-url-discovery-provenance.md) (main; experiments 460)  
+**Design:** dated-archive-cross-version-and-fixed-string-comparison | **independence:** archived-source-replay | **assessment:** source-assisted-historical-identification  
+**Corpus:** `historical-2020-April-source` | **dependence cluster:** `background-URL-provenance`
+
+**Finding:** Pre-index nine-tile candidates match 17/21, 18/21 or 19/21 of the later-known address, but the exact path was reportedly found by website index enumeration on 21 April 2020 and recognized; pinned Git sources before and after bracket recognition.
+
+**Limit:** Retrospective community chronology; Discord message content and original site index not independently preserved. Confirms source-assisted recognition, not blind full decode or a foreground decoding rule.
+
+**Discriminator:** original April 2020 index bytes, authenticated source messages and pre-index blind 21-character reading if one exists
 
