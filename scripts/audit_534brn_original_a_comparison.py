@@ -94,7 +94,7 @@ def main():
     assert old["counts"]==frozen["counts"]
     assert old["recoveries"]=={int(x["offset"]):(x["byte"],x["source"]) for x in frozen["recovered_sites"]}
     assert old["conflicts"]=={int(x["offset"]):{"a":x["a"],"p":x["p"]} for x in frozen["conflicts"]}
-    sm=SequenceMatcher(None,raw["original_a"],raw["rendition_a"],autojunk=False)
+    sm=SequenceMatcher(None,raw["original_a"],raw["rendition_a"],autojunk=True)
     ops=[{"operation":typ,"original_span":[i,j],"rendition_span":[k,l],
           "original_hex":raw["original_a"][i:j][:45].hex(),
           "rendition_hex":raw["rendition_a"][k:l][:45].hex()}
