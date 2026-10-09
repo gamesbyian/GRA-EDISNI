@@ -5,6 +5,7 @@ The four strings were fixed from historical sources before testing.
 The test does not assume any relationship to Collector's Edition stickers.
 """
 import json
+from itertools import product
 
 SAMPLES = {
     "Wow! 1977 positive reference": "6EQUJ5",
@@ -60,6 +61,15 @@ def analyze(s):
     }
 
 
+def glyph_readings(s):
+    """Explore only visually confusable 0/O and 1/I, with no claim of source ambiguity."""
+    options = [
+        (c, "O") if c == "0" else (c, "I") if c == "1" else (c,)
+        for c in s
+    ]
+    return ["".join(chars) for chars in product(*options)]
+
+
 def main():
     result = {name: analyze(value) for name, value in SAMPLES.items()}
     assert result["Wow! 1977 positive reference"]["authentic_printout_valid"]
@@ -70,6 +80,27 @@ def main():
     assert result["INSIDE station sign (2016)"]["non_authentic_zero_tolerant_values"] == [10, 1, 0, 23, 7]
     assert result["INSIDE wrecked train (2016)"]["non_authentic_zero_tolerant_values"] == [21, 0, 8]
     assert result["INSIDE lab label suffix (2016)"]["non_authentic_zero_tolerant_values"] == [11, 0, 2]
+    # An *exploratory*, after-inspection visual ambiguity model: 0/O and 1/I.
+    # Across 2+1+1 ambiguous positions there are exactly 16 joint readings.
+    ambiguous = {
+        name: [
+            analyze(s) for s in glyph_readings(original)
+            if analyze(s)["authentic_printout_valid"]
+            and analyze(s)["strict_interior_peak"]
+        ]
+        for name, original in list(SAMPLES.items())[1:]
+    }
+    assert [x["literal"] for x in ambiguous["INSIDE station sign (2016)"]] == ["AION7"]
+    assert [x["literal"] for x in ambiguous["INSIDE wrecked train (2016)"]] == ["LO8"]
+    assert [x["literal"] for x in ambiguous["INSIDE lab label suffix (2016)"]] == ["BO2"]
+    assert 4 * 2 * 2 == 16  # total joint possibilities for the narrow ambiguity model
+    result["exploratory_glyph_confusion_after_inspection"] = ambiguous
+    result["glyph_confusion_joint_readings"] = 16
+    result["glyph_confusion_joint_readings_all_single_interior_peak"] = (
+        len(ambiguous["INSIDE station sign (2016)"])
+        * len(ambiguous["INSIDE wrecked train (2016)"])
+        * len(ambiguous["INSIDE lab label suffix (2016)"])
+    )
     print(json.dumps(result, indent=2, sort_keys=True))
 
 
