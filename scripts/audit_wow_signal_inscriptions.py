@@ -101,6 +101,33 @@ def main():
         * len(ambiguous["INSIDE wrecked train (2016)"])
         * len(ambiguous["INSIDE lab label suffix (2016)"])
     )
+    # Negative control added after inspecting the appealing AION7 curve.
+    # Every A?ON7 (where ? is ANY Big Ear letter) is strictly interior-peaked:
+    # A=10 <= ?; O=24 > N=23 > terminal 7. A letter above O merely
+    # moves the peak one position earlier. The observed hump is thus forced
+    # by this post-hoc glyph reinterpretation + alphabet ranks.
+    replacement_controls = [
+        "A" + chr(ord("A") + offset) + "ON7" for offset in range(26)
+    ]
+    assert len(replacement_controls) == 26
+    assert all(
+        analyze(word)["authentic_printout_valid"]
+        and analyze(word)["strict_interior_peak"]
+        for word in replacement_controls
+    )
+    assert analyze("LO8")["strict_interior_peak"]
+    assert analyze("BO2")["strict_interior_peak"]
+    result["matched_null_A_any_letter_O_N_7"] = {
+        "total_letter_replacements": len(replacement_controls),
+        "single_interior_peak": sum(
+            analyze(word)["strict_interior_peak"]
+            for word in replacement_controls
+        ),
+        "interpretation": (
+            "The AION7 hump has no discriminating power against "
+            "the matched character-class null once 1/I and 0/O are adopted."
+        ),
+    }
     print(json.dumps(result, indent=2, sort_keys=True))
 
 
