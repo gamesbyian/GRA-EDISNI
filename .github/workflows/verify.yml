@@ -34,6 +34,8 @@ jobs:
         run: python scripts/audit_gate98_historical_layer_reconstruction.py
       - name: Verify complete original gate98 six-layer bright-mask reconstruction
         run: python scripts/verify_gate98_six_layer_reconstruction.py
+      - name: Validate source-only colour-registration negative control fixture
+        run: python scripts/conjecture_lab_gate98_source_only_alignments.py
       - name: Verify canonical closed-corpus machine
         run: python scripts/verify_machine.py
       - name: Verify independent native-state model
