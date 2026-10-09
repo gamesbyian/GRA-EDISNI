@@ -40,6 +40,8 @@ jobs:
         run: python scripts/verify_terminal41_historical_index_gaps.py
       - name: Audit original 534brn A byte provenance and exact candidate-fill delta
         run: python scripts/audit_534brn_original_a_comparison.py
+      - name: Audit true original A five-way damaged JPEG alignment sensitivity
+        run: python scripts/audit_534brn_true_a_alignment_sensitivity.py
       - name: Verify canonical closed-corpus machine
         run: python scripts/verify_machine.py
       - name: Verify independent native-state model
