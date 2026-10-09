@@ -1,0 +1,23 @@
+name: CL09 one-shot source history acquisition
+on:
+  pull_request:
+    paths:
+      - .github/workflows/cl09-one-shot-history.yml
+      - scripts/audit_historical_ce_registration_conversations.py
+permissions:
+  contents: read
+jobs:
+  source-history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch pinned public original Discord export and audit
+        run: |
+          curl -fLsS --retry 2 --max-time 65 -o /tmp/cl09-discord-source.txt 'https://raw.githubusercontent.com/gamesbyian/playdead-unofficial-exports/5e5897e2ce70dad5a2bd85e459770637cb36610f/Playdead%20Unofficial%20-%20ARG%20-%20solving%20%5B461275582970462209%5D.txt'
+          python scripts/audit_historical_ce_registration_conversations.py /tmp/cl09-discord-source.txt --out cl09-historical-conversations.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cl09-source-historical-conversations
+          path: cl09-historical-conversations.json
+          retention-days: 14
