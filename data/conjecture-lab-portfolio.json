@@ -857,6 +857,27 @@
       "next_action": "Find independently preserved original saf_dat_col_BACKUP bytes (e.g. different WARC provider/browser disk backup) or new source-authored sticker reader; not more byte fitting to known derivative copies."
     },
     {
+      "id": "CL-12",
+      "title": "External SAF byte workbench provenance and conditional repair classification",
+      "status": "external_repair_tooling_no_new_historic_backup",
+      "upstream": "burning-lnkr/saf_dat_col",
+      "commit": "cdb41453d0c2a61d09dcf341adb7e30762c7c2a6",
+      "original_source_git_sha": "349b818fce618ef55c404bedfb602b1d03f29a48",
+      "recorded_candidate_count": 17,
+      "original_input_variants": 10,
+      "community_input_variants": 7,
+      "new_historical_bytes_found": 0,
+      "limitations": [
+        "Missing original history modeled; synthetic block endings",
+        "Output pixel layout is a model choice",
+        "No receiver for CE foreground documented"
+      ],
+      "artifacts": [
+        "docs/conjecture-lab/2026-10-08-external-saf-deflate-workbench.md",
+        "data/conjecture-lab-saf-external-workbench-audit-2026-10-08.json"
+      ]
+    },
+    {
       "id": "CONTROL-0",
       "version": 1,
       "title": "Foreground has no further endgame",
@@ -875,5 +896,5 @@
     "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
     "A frozen exact failure refutes that implementation only"
   ],
-  "latest_update": "2026-10-08-cl11-saf-dat-col-captures-and-2023-zip-lineage"
+  "latest_update": "2026-10-08-cl12-source-provenance"
 }
