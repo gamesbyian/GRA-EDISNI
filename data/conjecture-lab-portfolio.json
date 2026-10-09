@@ -631,6 +631,77 @@
       ]
     },
     {
+      "id": "CL-08",
+      "version": 1,
+      "title": "Original source gate98 16-phase dot overlap is not sufficient to register historical colour panels",
+      "status": "conditional_source_only_registration_rule_falsified",
+      "precondition": "six source RGB colours were learned using historical answer image; source-only score blind to its pixels",
+      "method": "For each pair, restrict each source RGB to independently dominant 16px phase; histogram all 1002001 pixel differences across dx 600..1600 and dy -500..500 without consulting 2019 witness; inspect historical exact delta only after rank is frozen.",
+      "color_phase_points": {
+        "030101": 121,
+        "010401": 325,
+        "030303": 176,
+        "050105": 432,
+        "030300": 735,
+        "020206": 396
+      },
+      "pairs": [
+        {
+          "a": "050105",
+          "b": "020206",
+          "historical_delta": [
+            1137,
+            117
+          ],
+          "historic_overlap": 52,
+          "better_source_shifts": 136,
+          "top_wrong_delta": [
+            1201,
+            133
+          ],
+          "top_wrong_overlap": 88
+        },
+        {
+          "a": "030303",
+          "b": "030300",
+          "historical_delta": [
+            1107,
+            -64
+          ],
+          "historic_overlap": 24,
+          "better_source_shifts": 1148,
+          "top_wrong_delta": [
+            1155,
+            -256
+          ],
+          "top_wrong_overlap": 65
+        },
+        {
+          "a": "030101",
+          "b": "010401",
+          "historical_delta": [
+            1029,
+            21
+          ],
+          "historic_overlap": 5,
+          "better_source_shifts": 2233,
+          "top_wrong_delta": [
+            917,
+            37
+          ],
+          "top_wrong_overlap": 59
+        }
+      ],
+      "conclusion": "Source colour phase determines registration only modulo 16. Pairwise overlap maximization picks false whole-lattice offsets even when phase-filtered. No blind original placement rule recovered.",
+      "falsification_scope": "Only source-only overlap-maximizing registration rule for these six codebook colours; CL07 complete historic bright mask and no CE-specific decoder unchanged.",
+      "artifacts": [
+        "docs/conjecture-lab/2026-10-08-gate98-source-only-registration-negative.md",
+        "data/conjecture-lab-gate98-source-only-registration-control-2026-10-08.json",
+        "scripts/conjecture_lab_gate98_source_only_alignments.py"
+      ],
+      "next_action": "Source-native authored selection keybook for historical colour translations or independently CE-native registration geometry at 534brn."
+    },
+    {
       "id": "CONTROL-0",
       "version": 1,
       "title": "Foreground has no further endgame",
@@ -649,5 +720,5 @@
     "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
     "A frozen exact failure refutes that implementation only"
   ],
-  "latest_update": "2026-10-08-cl07-complete-2019-shutdown-bright-pixel-reproduction"
+  "latest_update": "2026-10-08-cl08-source-only-pairwise-registration-failure"
 }

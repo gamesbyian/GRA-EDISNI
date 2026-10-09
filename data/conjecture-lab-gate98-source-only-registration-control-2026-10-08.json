@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "id": "CL-08",
+  "claim": "Blinded pairwise overlap of source-native phase-specific original gate98 colours does not select historically correct translations.",
+  "original_gate98_source_sha256": "db67f13634004b8f3914aae6e06bd40f01e4f71531d689603d0f1f3be2a99ded",
+  "source_only_scoring": true,
+  "color_choice_was_already_target_assisted": true,
+  "notes": [
+    "The six original exact source RGBs were recovered using the 2019 historical image, not independently.",
+    "Within that given codebook, no 2019 pixels or intended text are used in the source-only cross-correlation or its ranking.",
+    "Only after scoring source-only translation histograms is the historical relative translation queried.",
+    "A source-native 16x16 phase determines offset residues modulo 16, but NOT which whole 16-pixel lattice shift is correct.",
+    "Every tested pair's historically correct shift is outranked by at least 136 alternatives in a wide, pre-specified coarse layout region; the seemingly convincing correlation maxima are not authored registrations.",
+    "Correlations over source-native colours also include artwork pixels outside the information panel. Restricting to individual colour's strongest source phase does not rescue the correct shift."
+  ],
+  "source_native_phases": {
+    "030101": [
+      4,
+      12
+    ],
+    "010401": [
+      9,
+      1
+    ],
+    "030303": [
+      2,
+      11
+    ],
+    "050105": [
+      3,
+      12
+    ],
+    "030300": [
+      5,
+      11
+    ],
+    "020206": [
+      4,
+      1
+    ]
+  },
+  "source_phase_point_counts": {
+    "030101": 121,
+    "010401": 325,
+    "030303": 176,
+    "050105": 432,
+    "030300": 735,
+    "020206": 396
+  },
+  "phase_filtered_pairs": [
+    {
+      "a_rgb": "050105",
+      "b_rgb": "020206",
+      "a_points": 432,
+      "b_points": 396,
+      "dx_search_range": [
+        600,
+        1600
+      ],
+      "dy_search_range": [
+        -500,
+        500
+      ],
+      "candidate_offsets_considered": 1002001,
+      "historical_delta_xy": [
+        1137,
+        117
+      ],
+      "historical_delta_residue_mod16": [
+        1,
+        5
+      ],
+      "correct_delta_overlap": 52,
+      "better_overlaps": 136,
+      "equal_overlaps": 5,
+      "top_overlap_count": 88,
+      "winning_delta_xy": [
+        1201,
+        133
+      ],
+      "source_only_success": false
+    },
+    {
+      "a_rgb": "030303",
+      "b_rgb": "030300",
+      "a_points": 176,
+      "b_points": 735,
+      "dx_search_range": [
+        600,
+        1600
+      ],
+      "dy_search_range": [
+        -500,
+        500
+      ],
+      "candidate_offsets_considered": 1002001,
+      "historical_delta_xy": [
+        1107,
+        -64
+      ],
+      "historical_delta_residue_mod16": [
+        3,
+        0
+      ],
+      "correct_delta_overlap": 24,
+      "better_overlaps": 1148,
+      "equal_overlaps": 93,
+      "top_overlap_count": 65,
+      "winning_delta_xy": [
+        1155,
+        -256
+      ],
+      "source_only_success": false
+    },
+    {
+      "a_rgb": "030101",
+      "b_rgb": "010401",
+      "a_points": 121,
+      "b_points": 325,
+      "dx_search_range": [
+        600,
+        1600
+      ],
+      "dy_search_range": [
+        -500,
+        500
+      ],
+      "candidate_offsets_considered": 1002001,
+      "historical_delta_xy": [
+        1029,
+        21
+      ],
+      "historical_delta_residue_mod16": [
+        5,
+        5
+      ],
+      "correct_delta_overlap": 5,
+      "better_overlaps": 2233,
+      "equal_overlaps": 164,
+      "top_overlap_count": 59,
+      "winning_delta_xy": [
+        917,
+        37
+      ],
+      "source_only_success": false
+    }
+  ],
+  "summary": {
+    "source_based_phase_yields_mod16_constraints": true,
+    "source_only_overlap_recovers_any_tested_historical_pair": false,
+    "absolute_shift_selection_requires_another_rule": true,
+    "does_not_falsify_six_layer_positive_control": true,
+    "does_not_establish_CE_application": true
+  },
+  "followups": [
+    "Find historically contemporary instructions / image software project layers listing crop offsets (or an authored registration key).",
+    "Test CE receiver hypotheses only if input geometry arises independently from nine sticker background classes or directly linked 534brn image, not from fitting human-readable content.",
+    "Do not sell phase maxima or pairwise overlap as independent proof of CL07 offsets."
+  ]
+}
