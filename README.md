@@ -32,7 +32,7 @@ python scripts/verify_machine.py
 
 ## Research evidence map
 
-- [2026-10-09 Wow!-signal inscription audit](docs/conjecture-lab/2026-10-09-wow-signal-environmental-inscriptions.md): bounded first-person Big Ear encoding test of `A10N7`, `L08`, and `B02` against the 1977 positive control. Exact printout reuse fails for transcribed zeros, but an explicitly post-hoc 0/O + 1/I glyph-reading variant yields three single-peaked curves. Requires original pixels; wider astronomy metaphor remains exploratory. Includes [deterministic replay](scripts/audit_wow_signal_inscriptions.py) and asset-source follow-ups.
+- [2026-10-09 Wow!-signal inscription audit](docs/conjecture-lab/2026-10-09-wow-signal-environmental-inscriptions.md): bounded first-person Big Ear encoding test of `A10N7`, `L08`, and `B02` against the 1977 positive control. Literal Big Ear encoding fails on written zeros and envelope shape. New byte-identical archives of the A10N7/L08 scene pair and B02 montage provide *low-resolution* visual evidence; the speculative 0/O + 1/I alternative has **no peak-shape discrimination** under its matched 26/26 alphabet control. Original full-resolution textures remain missing. Includes [deterministic replay](scripts/audit_wow_signal_inscriptions.py) and asset-source follow-ups.
 
 For a conceptual view of what has been tried and what would discriminate the rival decoders:
 
