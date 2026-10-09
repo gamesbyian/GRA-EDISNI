@@ -4,15 +4,15 @@ _Research date: 8 October 2026. Source-first archival archaeology, not a recover
 
 ## What was recovered
 
-The current [Terminal41 snapshot](../data/terminal41-source-tree.json) contains **74 files** from the public `twinysam/INSIDE-ARG` mirror. Previous source-native consumer audits searched that surviving set correctly but, through no fault of the parser, could not identify resources outside its inventory.
+The current [Terminal41 snapshot](../../data/terminal41-source-tree.json) contains **74 files** from the public `twinysam/INSIDE-ARG` mirror. Previous source-native consumer audits searched that surviving set correctly but, through no fault of the parser, could not identify resources outside its inventory.
 
-The **original April 2020 conversation** includes four photographic/screenshotted artifacts recording the server's directory listing and state differences. The archived messages and image bytes are publicly preserved by `gamesbyian/playdead-unofficial-exports`, pinned to their original blob hashes. **We have now copied their original bytes, hash-checked, into this repository** at `archive/external/terminal41-2020-index/`. Their origin, sizes, and evidentiary limits are enumerated in [the machine-readable directory census](../data/terminal41-screenshot-index-gaps-2026-10-08.json).
+The **original April 2020 conversation** includes four photographic/screenshotted artifacts recording the server's directory listing and state differences. The archived messages and image bytes are publicly preserved by `gamesbyian/playdead-unofficial-exports`, pinned to their original blob hashes. **We have now copied their original bytes, hash-checked, into this repository** at `archive/external/terminal41-2020-index/`. Their origin, sizes, and evidentiary limits are enumerated in [the machine-readable directory census](../../data/terminal41-screenshot-index-gaps-2026-10-08.json).
 
 Original unmodified screenshots:
-- [System directory](../archive/external/terminal41-2020-index/sys-index.png), upstream Git blob SHA1 `48cdd698a5d9303609cd2659d020a0c31a52cffc` (119,780 bytes).
-- [Terminate-terminal directory](../archive/external/terminal41-2020-index/terminate-terminal-index.png), `e3d7287527a5482cb58a41837873f396e0c79ee7` (40,251 bytes).
-- [Data directory](../archive/external/terminal41-2020-index/dat-index.png), `a56809a9856020489a87ff38d114ae4a67d83964` (70,405 bytes).
-- [Current versus backup contributor registry screenshot](../archive/external/terminal41-2020-index/breach-backup-contrast.png), `95bb5aaec9a9f2da0966744fbc80b67f7f358c99`.
+- [System directory](../../archive/external/terminal41-2020-index/sys-index.png), upstream Git blob SHA1 `48cdd698a5d9303609cd2659d020a0c31a52cffc` (119,780 bytes).
+- [Terminate-terminal directory](../../archive/external/terminal41-2020-index/terminate-terminal-index.png), `e3d7287527a5482cb58a41837873f396e0c79ee7` (40,251 bytes).
+- [Data directory](../../archive/external/terminal41-2020-index/dat-index.png), `a56809a9856020489a87ff38d114ae4a67d83964` (70,405 bytes).
+- [Current versus backup contributor registry screenshot](../../archive/external/terminal41-2020-index/breach-backup-contrast.png), `95bb5aaec9a9f2da0966744fbc80b67f7f358c99`.
 
 The first two images were attached by the original index discoverer at approximately **11:41–11:42 on 21 April 2020, in the export's unspecified local timezone**. The `/dat/` directory screenshot was reattached the following day. The separately archived 5,092,410-byte, 224,295-line primary Discord source has Git blob `1889cc948f86f5a4455de0d7310b15cdb1b88b5c`. See original historic screenshots rather than assuming secondary timelines accurately represented the entire website.
 
@@ -47,7 +47,7 @@ More importantly, original messages already describe **"[all systems hibernating
 
 ## Missing backup files are higher-value than missing hibernation pages
 
-A [22 April 2020 primary screenshot](../archive/external/terminal41-2020-index/breach-backup-contrast.png) compares nonidentical **current** and **BACKUP** contributor registry pages. The earlier backup display is in a caching/completed but data-missing condition, while the other copy contains detailed contributor entries, changing percentages and transmitted hexadecimal strings.
+A [22 April 2020 primary screenshot](../../archive/external/terminal41-2020-index/breach-backup-contrast.png) compares nonidentical **current** and **BACKUP** contributor registry pages. The earlier backup display is in a caching/completed but data-missing condition, while the other copy contains detailed contributor entries, changing percentages and transmitted hexadecimal strings.
 
 This is strong evidence that **backup route data can capture a different historical *state***. It does *not* prove the unpreserved 1.9MB `saf_dat_col_BACKUP.html` contains different or lossless data. But such a genuine alternative captured payload is a much better prospect for restoring damaged information than brute-forcing unknown JPEG entropy bytes or manufacturing new missing physical stickers.
 
@@ -57,15 +57,34 @@ Prefer original snapshots, original backup files, contemporary disk/browser cach
 
 A one-shot source-acquisition runner queried the public Internet Archive **availability** and **CDX** services for exactly six screenshot-derived route paths. All six availability requests succeeded at HTTP 200 with **empty `archived_snapshots` maps**. The corresponding CDX queries responded with HTTP 503 or timed out.
 
-This proves **no snapshot was returned by that particular availability API**, not that the original server pages never existed, not that an archivist has no private copy, and not that every alternative archive was searched. The historic `534brn` source is itself absent from some public archiving systems despite contemporaneous screenshots, so absence of an API hit should not be mistaken for source nonexistence. Full provenance can be regenerated using [the bounded archival query script](../scripts/probe_lost_terminal41_archive_routes.py); it targets archive services **only**, never the current domain. No account login, original-site requests, or user outreach occurred.
+This proves **no snapshot was returned by that particular availability API**, not that the original server pages never existed, not that an archivist has no private copy, and not that every alternative archive was searched. The historic `534brn` source is itself absent from some public archiving systems despite contemporaneous screenshots, so absence of an API hit should not be mistaken for source nonexistence. Full provenance can be regenerated using [the bounded archival query script](../../scripts/probe_lost_terminal41_archive_routes.py); it targets archive services **only**, never the current domain. No account login, original-site requests, or user outreach occurred.
 
 ## Concrete byte-source correction: A was still corrupted in *our* archive
 
-A separate [canonical 534brn evidence audit](experiment-534brn-canonical-partial-evidence-alignment-2026-10-08.md) had already flagged an important integrity hole. The previously retained `A-connector-rendition-not-original.bin` measures **12,150 bytes**, source Git blob `f9cdbd18bbd8713adee89ad93a3551b6310fd7ba`. It is *not* upstream original A.
+A separate [canonical 534brn evidence audit](../experiment-534brn-canonical-partial-evidence-alignment-2026-10-08.md) had already flagged an important integrity hole. The previously retained `A-connector-rendition-not-original.bin` measures **12,150 bytes**, source Git blob `f9cdbd18bbd8713adee89ad93a3551b6310fd7ba`. It is *not* upstream original A.
 
-We directly acquired and hash-verified the true historical **12,140-byte** A payload from `gamesbyian/playdead-unofficial-exports`, original blob SHA `ce55c03ee972954f6e80f55a1a279bb85024f99b`, and committed it as [A-original-capture.bin](../archive/external/terminal41-534brn/A-original-capture.bin). A GitHub connector response using even its explicit **base64** option reproduced the altered 12,150-byte form, so merely reading the metadata's stated Git SHA is **not authentication**. The upstream Git blob identity was checked on raw `curl` bytes in the source runner, then checked again against the committed branch Git tree. Its exact byte identity is now verified.
+We directly acquired and hash-verified the true historical **12,140-byte** A payload from `gamesbyian/playdead-unofficial-exports`, original blob SHA `ce55c03ee972954f6e80f55a1a279bb85024f99b`, and committed it as [A-original-capture.bin](../../archive/external/terminal41-534brn/A-original-capture.bin). A GitHub connector response using even its explicit **base64** option reproduced the altered 12,150-byte form, so merely reading the metadata's stated Git SHA is **not authentication**. The upstream Git blob identity was checked on raw `curl` bytes in the source runner, then checked again against the committed branch Git tree. Its exact byte identity is now verified.
 
-We keep the old 12,150-byte rendition so the original 2026-10-08 canonical partial-token fixture remains reproducible and explicitly tagged as **rendition-assisted**. The [authentic-A recomparison](../scripts/audit_534brn_original_a_comparison.py) checks whether the alternative exact source changes any aligned candidate recovery, still reporting every restored value as **heuristic alignment-supported**, never as a uniquely proved JPEG byte. The canonical alignment and decoder are not automatically overwritten by a new candidate count.
+We keep the old 12,150-byte rendition so the original 2026-10-08 canonical partial-token fixture remains reproducible and explicitly tagged as **rendition-assisted**. The [authentic-A recomparison](../../scripts/audit_534brn_original_a_comparison.py) checks whether the alternative exact source changes any aligned candidate recovery, still reporting every restored value as **heuristic alignment-supported**, never as a uniquely proved JPEG byte. The canonical alignment and decoder are not automatically overwritten by a new candidate count.
+
+## Authentic A changed the canonical damaged-JPEG candidate set
+
+The exact-source GHA comparison [run #37866222297](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/37866222297) now demonstrates that the connector's altered copy **did change the result** under the previously frozen B/P/A heuristic, despite B and P being unchanged:
+
+| Conditional edit-alignment metric | Rendition A (old) | Genuine source A |
+|---|---:|---:|
+| Source file length | 12,150 | **12,140** |
+| B-only known positions | 10,057 | 10,057 |
+| A-only candidate fills | 149 | **156** |
+| Shared A/P candidate fills | 79 | 79 |
+| P-only fills | 10 | 10 |
+| All selected candidate fills | 238 | **245** |
+| Unresolved tokens (including conflicts) | 1,757 | **1,750** |
+| Explicit A/P value conflicts | 10 | 10 |
+
+The exact source-versus-rendition binary comparison has **8 local edit operations** with a net 10-byte expansion under text normalization. Among the 238 old candidate fill locations, **236 still appear**, but only **234 preserve both the candidate byte and classification**. Nine candidate locations appear and two disappear. Exactly **13** normalized B positions differ in chosen byte or source status. All 13 changes are frozen in [the original-A comparison fixture](../../data/534brn-original-a-delta-2026-10-08.json), with the [original-byte delta validator](../../scripts/audit_534brn_original_a_comparison.py).
+
+The same experiment **does not** demonstrate that 245 original JPEG entropy bytes were uniquely recovered. The `make_map` edit alignment still chooses one cheap path through corrupted streams; the earlier five-way tie-breaking sensitivity showed only **18/238** of the *rendition-assisted* candidates stable across tested variants. Source authenticity and alignment uniqueness are two separate obligations. The correct way to express this result is **245 candidate fills under a fixed heuristic on the authentic A source, 1,750 unresolved token positions in that representation, no full JPEG reconstructed**.
 
 ## Priorities and decision gate
 
