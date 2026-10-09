@@ -42,7 +42,7 @@
   },
   "capture_comparison": {
     "april14_decoded_chars": 1265969,
-    "april16_decoded_chars": 1026768,
+    "april16_decoded_chars": 1026902,
     "replacement_character_count_each": 1900,
     "same_order_replacement_bounded_segments": 1901,
     "identical_normalized_segments": 1896,
