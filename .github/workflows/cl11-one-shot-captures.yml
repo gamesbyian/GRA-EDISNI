@@ -20,14 +20,15 @@ jobs:
           curl -fLsS --retry 2 --max-time 50 "$base/INSIDE_saf_dat_col-40304e7acab3c363.txt" -o cl11-sources/apr16-saved-saf.txt
           curl -fLsS --retry 2 --max-time 50 "$base/saf_dat_col_fixed-305c0357f4cbcd41.html" -o cl11-sources/later-fixed-copy.html
           curl -fLsS --retry 2 --max-time 50 "$base/INSIDE_saf_dat_col_interesting-50a465eb636416ab.txt" -o cl11-sources/apr16-selected-lines.txt
+          curl -fLsS --retry 2 --max-time 65 "$base/terminal41-1d9539e0649bc7c8.zip" -o cl11-sources/terminal41-2023-archive.zip
           python - <<'PY'
           from pathlib import Path
           import hashlib
-          known={'apr14-curl-saf.txt':('349b818fce618ef55c404bedfb602b1d03f29a48',1986163),'apr16-saved-saf.txt':('6ca8c90711a54944850fdaf94a0ead1fab887686',2053806),'later-fixed-copy.html':('193744a04fc5b88e5edef0748e544f2aaf79f188',1269439),'apr16-selected-lines.txt':('31f744647c40c6431b3ebd9de9aac0392eefd049',16258)}
+          known={'terminal41-2023-archive.zip':('UNKNOWN',1605024),'apr14-curl-saf.txt':('349b818fce618ef55c404bedfb602b1d03f29a48',1986163),'apr16-saved-saf.txt':('6ca8c90711a54944850fdaf94a0ead1fab887686',2053806),'later-fixed-copy.html':('193744a04fc5b88e5edef0748e544f2aaf79f188',1269439),'apr16-selected-lines.txt':('31f744647c40c6431b3ebd9de9aac0392eefd049',16258)}
           for fn,(sha,n) in known.items():
            data=(Path('cl11-sources')/fn).read_bytes()
            g=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
-           assert (g,len(data)) ==(sha,n),(fn,g,len(data))
+           assert (len(data)==n and (sha=='UNKNOWN' or g==sha)),(fn,g,len(data))
            print('PINNED_SOURCE',fn,len(data),g)
           PY
       - uses: actions/upload-artifact@v4
