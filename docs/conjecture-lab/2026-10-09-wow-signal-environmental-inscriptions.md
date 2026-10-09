@@ -1,6 +1,6 @@
 # Wow!-signal analogy for INSIDE transport inscriptions (2026-10-09)
 
-**Research mode:** DISCOVER (Discord hypothesis), DEVELOP (assume a Big Ear-inspired inscription scheme), and one bounded VALIDATE test (the historically documented *exact* Big Ear output alphabet and a single-transit envelope). **Status: exact Big Ear rendering contradicts the *reported literal transcriptions*; an explicitly post-hoc 0/O + 1/I glyph-confusion variant passes the elementary envelope test but lacks original-pixel support. Wider radio-astronomy inspiration not resolved.** No claim about the CE foreground, Terminal41 receiver, or Project 3 link is established.
+**Research mode:** DISCOVER (Discord hypothesis), DEVELOP (assume a Big Ear-inspired inscription scheme), and one bounded VALIDATE test (the historically documented *exact* Big Ear output alphabet and a single-transit envelope). **Status (updated with archival screenshot and matched controls): the literal transcriptions violate Big Ear's zero notation and single-transit envelope. A post-hoc 0/O + 1/I alternative fits a single-peak envelope, but its apparent success is forced by the chosen alphabet ranks (26/26 matched controls) and is not evidence for radio astronomy. The scene screenshot montage is now archived, but original Unity texture bytes remain missing.** No claim about the CE foreground, Terminal41 receiver, or Project 3 link is established.
 
 ## Hypothesis and preselected corpus
 
@@ -14,6 +14,21 @@ A Discord participant suggested that `A10N7` might work like the 1977 Wow! print
 | Laboratory text suffix | `B02` | Same July 2016 file/scene investigation | Suffix of longer `Fordsjh Gjfhdfdjfhd Ujhdfr B02`; do not pretend it is a standalone train label |
 
 The repo already records these source distinctions in `data/original-game-asset-consumer-inventory-2026-10-08.json`; this card does not add physical observation.
+
+
+## Recovered scene-image witness (new evidence intake)
+
+The project's already mirrored `sashaok123/BigDusty_INSIDE_ARG_Map` map had **omitted its image files**. GitHub code search found a block expressly tagged `A10N7 / L08`. I recovered and preserved two actual image files from the public original map repository as **byte-identical Git blobs** (checked SHA equality), not AI recreations:
+
+| Image | Repo evidence copy | Upstream original | Exact blob SHA | What it shows |
+|---|---|---|---|---|
+| `block_004.webp` | [A10N7 + L08 screenshot pair](../../archive/external/bigdusty/data/blocks/block_004.webp) | [BigDusty source](https://github.com/sashaok123/BigDusty_INSIDE_ARG_Map/blob/main/data/blocks/block_004.webp) | `b82846b2209c36176c36461aba508430086df63f` | Dark in-game transport-scene montage with both strings, explicitly **captioned by the 2026 map maker as A10N7 and L08**. |
+| `block_009.webp` | [B02 lab label montage](../../archive/external/bigdusty/data/blocks/block_009.webp) | [BigDusty source](https://github.com/sashaok123/BigDusty_INSIDE_ARG_Map/blob/main/data/blocks/block_009.webp) | `7a425c2daa9a0d1a06b0f1d950543cb7d0ea7c16` | Lab-window/prop code `Fordsjh … B02`; map also labels a screenshot **“2014 Trailer”**. This trailer attribution is not yet independently frame-verified. |
+
+**Image status:** authentic bytes of a **2026 community-produced montage**, not original lossless game textures, not independent confirmation of its own transcribed captions. Visual inspection confirms that a sign and another transport marking are depicted, but the crop is too small and dark to adjudicate whether their original glyphs are `1/I` and `0/O` by their strokes. The block's explicitly numeric captions and the repeated diegetic use of zero-padded `02`, `08` are evidence favoring a **label/ID** reading; a decisive typography comparison still requires better pixels.
+
+The map's `B02` panel explicitly foregrounds its appearance in a reported 2014-era trailer, supplying a chronology-check target independent of the 2019 CE. Playdead's [official press assets](https://playdead.com/press/) include E3 2014 footage, which could validate or falsify the montage caption. No causal bridge to the third game follows from these images.
+
 
 ## Actual historical rule (not generic base 36)
 
@@ -52,9 +67,11 @@ This is a **structural applicability test**, not a calibrated significance test:
 
 Exactly **1/16** of these narrow *joint glyph assignments* has all three authentic-printable, interior-peaked sequences. This is **not** a statistical p-value: the substitutions were selected in response to failure, the signs were not sampled randomly, and the three- and five-character sequences are not independent astronomical observations. In particular `LO8` and `BO2` are cheap successes: for a generic letter-`0`-digit label, changing 0 to O forces a middle intensity of 24, larger than *any* trailing digit 1–9; choosing a preceding letter A–O gives an automatic interior peak. `B02` is additionally extracted from a longer lab inscription.
 
-The five-sample **`AION7`** curve is still an interesting *conditional* outcome because it is monotonic up then down and the `O`–`N` values 24 and 23 form a near-plateau. The literal source-transcription **`A10N7`** fails exactly, while the **unverified visual reinterpretation** could pass the simplest beam-envelope screen. Neither implies an astronomical source or establishes an intentional message.
+**Critical matched-class control (subsequent audit): the seemingly elegant `AION7` hump is mathematically *automatic*.** Keep `A`, `O`, `N`, `7` fixed and replace the `I` with any of the alphabet's 26 letters. Every single `A?ON7` passes the one-interior-peak test (**26/26 exact enumeration**, confirmed by `scripts/audit_wow_signal_inscriptions.py`). Proof: `A=10` is the **minimum** letter value, `O=24` exceeds `N=23`, and all letter values exceed the final digit 7. For any intervening letter, the sequence must rise from A, peak at that letter or O, then descend through N to 7. The O/N near-plateau is determined by the preselected adjacent alphabetical letter identities in the alternative transcription, not independent source evidence.
 
-**New decisive acquisition target:** inspect an original-resolution image or byte-accurate texture for `A10N7` and the glyphs on `L08` and `B02`. If the scene fonts differentiate uppercase `O` from numeric `0` or uppercase `I` from `1`, this entire escape hatch can be closed or narrowed. Do not let a beautified typed replacement stand in for the actual sign pixels.
+`LO8` and `BO2` also pass trivially after replacing the zero with O=24: `L=21` and `B=11` are smaller than 24 while final digits 8 and 2 are smaller. Thus **the three curve matches add no discrimination over this narrow, after-the-fact interpretation**, despite exactly one of 16 jointly enumerated literal/glyph-confusion readings satisfying all tests. **1/16 describes the chosen *transcription repair* and must never be represented as a chance probability of a Wow! match.** The literal source-transcription `A10N7` still fails exactly, and we still need original pixels to determine if the speculative transcription is even plausible.
+
+**Still-decisive acquisition target after recovering the low-resolution montage:** inspect an original-resolution image or byte-accurate texture for `A10N7` and the glyphs on `L08` and `B02`. If the scene fonts differentiate uppercase `O` from numeric `0` or uppercase `I` from `1`, this entire escape hatch can be closed or narrowed. Do not let a beautified typed replacement stand in for the actual sign pixels.
 
 ## Three rival conditional explanations
 
