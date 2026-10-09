@@ -1,6 +1,6 @@
 # Wow!-signal analogy for INSIDE transport inscriptions (2026-10-09)
 
-**Research mode:** DISCOVER (Discord hypothesis), DEVELOP (assume a Big Ear-inspired inscription scheme), and one bounded VALIDATE test (the historically documented *exact* Big Ear output alphabet and a single-transit envelope). **Status: exact Big Ear rendering contradicted; broader radio-astronomy inspiration not resolved.** No claim about the CE foreground, Terminal41 receiver, or Project 3 link is established.
+**Research mode:** DISCOVER (Discord hypothesis), DEVELOP (assume a Big Ear-inspired inscription scheme), and one bounded VALIDATE test (the historically documented *exact* Big Ear output alphabet and a single-transit envelope). **Status: exact Big Ear rendering contradicts the *reported literal transcriptions*; an explicitly post-hoc 0/O + 1/I glyph-confusion variant passes the elementary envelope test but lacks original-pixel support. Wider radio-astronomy inspiration not resolved.** No claim about the CE foreground, Terminal41 receiver, or Project 3 link is established.
 
 ## Hypothesis and preselected corpus
 
@@ -39,6 +39,22 @@ python scripts/audit_wow_signal_inscriptions.py
 ```
 
 This is a **structural applicability test**, not a calibrated significance test: only three selected candidate markings were observed, and no complete game-wide marking census was available. Assigning a p-value from a random alphabet would mistake ad hoc signs for random samples.
+
+## A surprising exploratory escape hatch: are the zeros actually O?
+
+**DISCOVER; selected after seeing the incompatible literals.** A `0` in poor-resolution or stylized typography could be uppercase `O`, and `1` could be uppercase `I`. Those are **alternative readings of an as-yet-unverified glyph image**, not permitted changes to a verified source transcription. Restrict the sensitivity search to only these substitutions (no arbitrary digit-to-letter conversion); the three strings have 2+1+1 ambiguous positions, so exactly **16 joint readings**.
+
+| Reported transcription | Hypothetical glyph reading | Authentic Big Ear intensities | Single interior peak? |
+|---|---|---|---|
+| `A10N7` | **`AION7`** (`1→I`, `0→O`) | **10,18,24,23,7** | **yes** |
+| `L08` | **`LO8`** (`0→O`) | **21,24,8** | **yes** |
+| `B02` | **`BO2`** (`0→O`) | **11,24,2** | **yes** |
+
+Exactly **1/16** of these narrow *joint glyph assignments* has all three authentic-printable, interior-peaked sequences. This is **not** a statistical p-value: the substitutions were selected in response to failure, the signs were not sampled randomly, and the three- and five-character sequences are not independent astronomical observations. In particular `LO8` and `BO2` are cheap successes: for a generic letter-`0`-digit label, changing 0 to O forces a middle intensity of 24, larger than *any* trailing digit 1–9; choosing a preceding letter A–O gives an automatic interior peak. `B02` is additionally extracted from a longer lab inscription.
+
+The five-sample **`AION7`** curve is still an interesting *conditional* outcome because it is monotonic up then down and the `O`–`N` values 24 and 23 form a near-plateau. The literal source-transcription **`A10N7`** fails exactly, while the **unverified visual reinterpretation** could pass the simplest beam-envelope screen. Neither implies an astronomical source or establishes an intentional message.
+
+**New decisive acquisition target:** inspect an original-resolution image or byte-accurate texture for `A10N7` and the glyphs on `L08` and `B02`. If the scene fonts differentiate uppercase `O` from numeric `0` or uppercase `I` from `1`, this entire escape hatch can be closed or narrowed. Do not let a beautified typed replacement stand in for the actual sign pixels.
 
 ## Three rival conditional explanations
 
