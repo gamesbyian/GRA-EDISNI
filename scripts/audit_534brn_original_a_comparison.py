@@ -94,6 +94,12 @@ def main():
     assert old["counts"]==frozen["counts"]
     assert old["recoveries"]=={int(x["offset"]):(x["byte"],x["source"]) for x in frozen["recovered_sites"]}
     assert old["conflicts"]=={int(x["offset"]):{"a":x["a"],"p":x["p"]} for x in frozen["conflicts"]}
+    official=json.loads((ROOT/"data"/"534brn-original-a-delta-2026-10-08.json").read_text(encoding="utf8"))
+    assert new["counts"]==official["authentic_a_counts"]
+    assert old["counts"]==official["old_counts"]
+    assert len(new["recoveries"])==official["authentic_a_alignment_supported_fills"]==245
+    assert len(old["recoveries"])==official["old_alignment_supported_fills"]==238
+    assert len(new["conflicts"])==len(old["conflicts"])==official["ambiguous_conflicts_unchanged"]==10
     sm=SequenceMatcher(None,raw["original_a"],raw["rendition_a"],autojunk=True)
     ops=[{"operation":typ,"original_span":[i,j],"rendition_span":[k,l],
           "original_hex":raw["original_a"][i:j][:45].hex(),
@@ -133,6 +139,18 @@ def main():
         "shared_conflict_positions":len(set(old["conflicts"])&set(new["conflicts"])),
         "claim_scope":"Selected edit-map candidates, not uniquely recovered original entropy bytes; true A now source-authenticated.",
     }
+    assert change["status_or_byte_changed_positions"]==official["changed_positions_count"]==13
+    assert change["binary_edit_operation_count"]==official["binary_edit_operation_count"]==8
+    assert change["identical_byte_and_status_fills"]==official["identical_values_and_status_for_shared"]==234
+    assert change["candidate_offsets_lost"]==official["candidate_offsets_lost"]==2
+    assert change["candidate_offsets_gained"]==official["candidate_offsets_gained"]==9
+    assert [
+        (z["offset"],z["original_hex"],z["true_hex"],z["rendition_status"],z["original_status"])
+        for z in change["change_positions"]
+    ] == [
+        (z["normalized_b_offset"],z["old_value"],z["new_value"],z["old_flag"],z["new_flag"])
+        for z in official["changed_normalized_b_positions"]
+    ]
     if a.output:Path(a.output).write_text(json.dumps(change,indent=2)+"\n",encoding="utf8")
     print("CL09_TRUE_A_RESULT="+json.dumps({k:v for k,v in change.items()
         if k not in ("change_positions","binary_edit_operations")},separators=(",",":")))
