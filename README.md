@@ -32,6 +32,8 @@ python scripts/verify_machine.py
 
 ## Research evidence map
 
+- [2026-10-09 Wow!-signal inscription audit](docs/conjecture-lab/2026-10-09-wow-signal-environmental-inscriptions.md): bounded first-person Big Ear encoding test of `A10N7`, `L08`, and `B02` against the 1977 positive control. Exact printout reuse fails on literal zeros and signal envelopes; wider astronomy metaphor remains exploratory. Includes [deterministic replay](scripts/audit_wow_signal_inscriptions.py) and asset-source follow-ups.
+
 For a conceptual view of what has been tried and what would discriminate the rival decoders:
 
 - [Experiment 476 source-native receiver audit](docs/experiment-476-receiver-native-geometry-audit.md): direct Xbox 36-row reuse falsification, pinned Mac printer source, CE nine-sketch poster and ranked external reader gaps.
