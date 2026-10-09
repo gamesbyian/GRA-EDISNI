@@ -54,6 +54,14 @@ These source colours were confirmed through the authentic source image, not appr
 
 The historical Game Detectives prose states that the black layer and six *other* colour filters were used. Our six recovered **nonblack** exact RGB layers account for every bright pixel. The black-source planet extraction at independent offset `(4,12)` remains a separate valid [CL-05](2026-10-08-gate98-native-phase-positive-control.md) control, not an invented seventh bright layer.
 
+## Why the historical PNG also contains near-black pixels
+
+A separate check of **all nonzero RGB values with each component <=1** in the original June 2019 witness identifies **1,657** near-black pixels: `#010101` occurs **1,636** times, `#000001` **18**, `#000101` **2**, and `#000100` **1**.
+
+Of these **1,657**, **1,656** sit immediately **one pixel above a known bright foreground pixel** in the witness. The one exception is at coordinate `(207,912)`, the **bottommost image row**, so the pixel one step below would fall outside the image boundary. This is overwhelming structural evidence that the dark pixels are **one-pixel-offset presentation shadows/secondary outlines of the recovered white text**, not an independently decipherable seventh image or an unrelated hidden message.
+
+The 2019 witness also uses multiple near-white RGB values for the same source exact colour (typically the complement `255-sourceRGB` and `254-sourceRGB`), suggesting later compositing and presentation. **Do not claim the full RGB raster is reproduced:** the six source layers account for **every bright-position bit**; the historical witness's shadow styling and near-white RGB choices still require an independent rendering rule to achieve byte-for-byte equality. In particular, the historical prose's reference to filtering exact black from the *original source* still holds for the separate planet extraction, but the dark witness shadow does not establish an additional CE-relevant black-layer payload.
+
 ## New layout observation
 
 All six source information layers occupy roughly a **two-column, three-band arrangement** across the 2048×4096 source. Left group: origin x values **14/16/18**, y values **36/851/1638**. Right group: x values **1045/1121/1155**, y values **57/787/1755**. These offsets do **not** form a constant-pitch perfect grid.
