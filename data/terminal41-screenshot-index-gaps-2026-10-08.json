@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "id": "CL-09",
+  "title": "Historical Terminal41 directory namespace holes recovered from April 2020 screenshots",
+  "source": {
+    "historical_public_discord_export": {
+      "repository": "gamesbyian/playdead-unofficial-exports",
+      "path": "Playdead Unofficial - ARG - solving [461275582970462209].txt",
+      "git_blob_sha": "1889cc948f86f5a4455de0d7310b15cdb1b88b5c",
+      "size_bytes": 5092410,
+      "records_lines": 224295
+    },
+    "historical_screenshots": [
+      {
+        "slug": "sys_index",
+        "path": "assets/Index_of__sys-b25ece4407c92d8c.png",
+        "git_blob_sha": "48cdd698a5d9303609cd2659d020a0c31a52cffc",
+        "size_bytes": 119780,
+        "posted": "2020-04-21 11:41 (Discord-export local time)",
+        "seen_as": "Index of /sys"
+      },
+      {
+        "slug": "terminal_index",
+        "path": "assets/Index_of__sys_terminate_terminal_1-28689daeb41f78aa.png",
+        "git_blob_sha": "e3d7287527a5482cb58a41837873f396e0c79ee7",
+        "size_bytes": 40251,
+        "posted": "2020-04-21 11:42 (Discord-export local time)",
+        "seen_as": "Index of /sys/terminate_terminal"
+      },
+      {
+        "slug": "dat_index",
+        "path": "assets/dat_at_11.00.00_AM-ac7e759aa24eef08.png",
+        "git_blob_sha": "a56809a9856020489a87ff38d114ae4a67d83964",
+        "size_bytes": 70405,
+        "posted": "2020-04-22 18:33 (Discord-export local time)",
+        "seen_as": "Index of /dat; browser URL /dat/?C=N;O=A"
+      },
+      {
+        "slug": "dat_backup_comparison",
+        "path": "assets/Terminal41.link-day-breach_contribution_re-f048067891d74b84.png",
+        "git_blob_sha": "95bb5aaec9a9f2da0966744fbc80b67f7f358c99",
+        "posted": "2020-04-22 02:08 (Discord-export local time)",
+        "seen_as": "Current and BACKUP breach contributor registry differ"
+      }
+    ]
+  },
+  "directory_entries": [
+    {
+      "path": "sys/all_sys_hibernate/",
+      "type": "directory",
+      "evidence": "exact visible Apache listing name",
+      "displayed_modified": "2019-04-15 15:01",
+      "confidence": "screenshot_direct",
+      "status": "not in current 74-path source snapshot"
+    },
+    {
+      "path": "sys/terminate_terminal/11/",
+      "type": "directory",
+      "evidence": "exact visible Apache listing",
+      "displayed_modified": "2019-12-16 06:37",
+      "confidence": "screenshot_direct",
+      "status": "not in current 74-path source snapshot"
+    },
+    {
+      "path": "sys/terminate_terminal/23/",
+      "type": "directory",
+      "evidence": "exact visible Apache listing",
+      "displayed_modified": "2019-12-16 06:37",
+      "confidence": "screenshot_direct",
+      "status": "not in current 74-path source snapshot"
+    },
+    {
+      "path": "sys/terminate_terminal/41/",
+      "type": "directory",
+      "evidence": "exact visible Apache listing",
+      "displayed_modified": "2019-12-16 06:39",
+      "confidence": "screenshot_direct",
+      "status": "archived subtree present; not necessarily all original children"
+    },
+    {
+      "path": "sys/terminate_terminal/42/",
+      "type": "directory",
+      "evidence": "exact visible Apache listing",
+      "displayed_modified": "2019-12-16 06:37",
+      "confidence": "screenshot_direct",
+      "status": "not in current 74-path source snapshot"
+    },
+    {
+      "path": "sys/terminate_terminal/99/",
+      "type": "directory",
+      "evidence": "exact visible Apache listing",
+      "displayed_modified": "2019-12-16 06:37",
+      "confidence": "screenshot_direct",
+      "status": "not in current 74-path source snapshot"
+    },
+    {
+      "path": "dat/saf_dat_col_BACKUP.html",
+      "type": "file",
+      "evidence": "full visible link name and approximately 1.9M size in dated /dat screenshot",
+      "displayed_modified": "2019-04-16 13:59",
+      "displayed_size": "1.9M",
+      "confidence": "screenshot_direct",
+      "status": "not archived"
+    },
+    {
+      "path": "dat/breachlog_BACKUP.html",
+      "type": "file",
+      "evidence": "full visible link name and size in /dat screenshot",
+      "displayed_modified": "2019-04-16 13:53",
+      "displayed_size": "285",
+      "confidence": "screenshot_direct",
+      "status": "not archived"
+    },
+    {
+      "path": "dat/breach_contribution_reg_BACKUP.html",
+      "type": "file",
+      "evidence": "screenshot link label truncated; separately corroborated by 2020 Discord first-person comparison",
+      "displayed_modified": "2019-04-15 11:01",
+      "displayed_size": "11K",
+      "confidence": "name_inferred_from_truncated_listing_plus_original_source_message",
+      "status": "not archived"
+    },
+    {
+      "path": "sys/printreqstatus_BACKUP.html",
+      "type": "file",
+      "evidence": "screenshot label truncated; inferred from visible printreqstatus_BACKU…",
+      "displayed_modified": "2019-04-16 13:58",
+      "displayed_size": "2.7K",
+      "confidence": "name_inferred_from_truncated_listing",
+      "status": "not archived"
+    },
+    {
+      "path": "sys/printreqstatus_SD_BACKUP.html",
+      "type": "file",
+      "evidence": "screenshot label truncated; inferred from printreqstatus_SD_BA…",
+      "displayed_modified": "2019-04-14 03:26",
+      "displayed_size": "2.4K",
+      "confidence": "name_inferred_from_truncated_listing",
+      "status": "not archived"
+    }
+  ],
+  "evidence_constraints": [
+    {
+      "kind": "primary_first_person_2020",
+      "discord_export_line": 163806,
+      "meaning": "Other terminal-numbered URLs reportedly showed [systems hibernating] rather than a working CE input surface.",
+      "strength": "contemporaneous participant recollection, not original HTML bytes"
+    },
+    {
+      "kind": "primary_first_person_2020",
+      "discord_export_line": 163810,
+      "meaning": "Observer clarified 'everyone other then 41' and thought terminal 41 was added last.",
+      "strength": "participant account of other numbered routes"
+    },
+    {
+      "kind": "older_2019_history",
+      "discord_export_line": 117468,
+      "meaning": "All systems hibernating status was already discussed 17 April 2019, before the CE existed.",
+      "strength": "contemporaneous original-channel statement"
+    },
+    {
+      "kind": "primary_first_person_2020",
+      "discord_export_line": 166878,
+      "meaning": "Backup vs current contributor-registry comparison shows differing missing-data states.",
+      "strength": "2020 attachment + contemporaneous caption; no raw BACKUP file bytes"
+    },
+    {
+      "kind": "later_2026_pointing_to_source",
+      "discord_export_line": 221135,
+      "meaning": "July 2026 user independently identifies omitted all_sys_hibernate and original backup names.",
+      "strength": "later rediscovery corroborates visible original 2020 screenshot"
+    }
+  ],
+  "source_mirror": "data/terminal41-source-tree.json",
+  "source_mirror_file_count": 74,
+  "mirror_snapshot_date": "2026-09-29",
+  "original_game_ce_release": "2019-12",
+  "source_recency_conflict": "April 2019 hibernation path predates CE; do not call it a CE-specific endpoint on timing alone",
+  "online_archive_status": "not yet established",
+  "conclusions": [
+    "Old index screenshots document a strictly larger server namespace than the surviving 74-file tree.",
+    "A missing backup is an actionable alternate-data recovery target, especially saf_dat_col_BACKUP.html (1.9M), but screenshot size alone cannot prove it differs from other source files.",
+    "Five numbered terminal routes exist in original screenshot. Their mere coexistence neither specifies a five-entry selector nor proves that stickers drive them.",
+    "Terminal 23 is historically present, but 23 has many other occurrences in the ARG and matching cardinality is not a decoding rule.",
+    "No supplied source labels any of the original routes as consuming slash/dash/dot foreground symbols."
+  ]
+}
