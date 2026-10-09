@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "id": "CL-11",
+  "name": "original April 2019 saf_dat_col alternate copy lineage + Jan 2023 Terminal41 compiled ZIP census",
+  "source_git_blobs": {
+    "apr14": {
+      "sha1": "349b818fce618ef55c404bedfb602b1d03f29a48",
+      "bytes": 1986163
+    },
+    "apr16": {
+      "sha1": "6ca8c90711a54944850fdaf94a0ead1fab887686",
+      "bytes": 2053806
+    },
+    "jan2023zip": {
+      "sha1": "4f8958bd45a0e8874483b33e46e56a6a3b37a2f1",
+      "bytes": 1605024
+    }
+  },
+  "provenance": {
+    "original_discord_export_sha1": "1889cc948f86f5a4455de0d7310b15cdb1b88b5c",
+    "april14": {
+      "timestamp_local": "2019-04-14 13:13",
+      "poster": "lukefz",
+      "explicit_claim": "Original page downloaded using curl",
+      "path": "assets/saf_dat_col-fd944ab391ff5415.txt",
+      "mirror": "archive/external/twinysam-inside-arg/terminal41.link/dat/saf_dat_col.html"
+    },
+    "april16": {
+      "timestamp_local": "2019-04-16 17:24",
+      "poster": "Deleted User",
+      "description": "Browser-copied page saved as UTF-16 LE; not labeled BACKUP",
+      "path": "assets/INSIDE_saf_dat_col-40304e7acab3c363.txt"
+    },
+    "jan2023zip": {
+      "timestamp_local": "2023-01-25 01:59",
+      "poster": "darkmatter_11",
+      "description": "All known Terminal41 pages compiled mostly from Internet Archive; 19MB transmission image explicitly omitted",
+      "path": "assets/terminal41-1d9539e0649bc7c8.zip"
+    },
+    "backup_attested_elsewhere": "Screenshot /dat 2020-04-22 lists saf_dat_col_BACKUP.html approximately 1.9MB, not the Apr16 text file and not in 2023 ZIP"
+  },
+  "capture_comparison": {
+    "april14_decoded_chars": 1265969,
+    "april16_decoded_chars": 1026902,
+    "replacement_character_count_each": 1900,
+    "same_order_replacement_bounded_segments": 1901,
+    "identical_normalized_segments": 1896,
+    "subsequence_normalized_segments": 1901,
+    "different_segments": [
+      {
+        "replacement_segment_index": 0,
+        "normalized_apr14_chars": 612,
+        "normalized_apr16_chars": 338,
+        "removed_nonwhitespace_chars": 274
+      },
+      {
+        "replacement_segment_index": 1149,
+        "normalized_apr14_chars": 47,
+        "normalized_apr16_chars": 20,
+        "removed_nonwhitespace_chars": 27
+      },
+      {
+        "replacement_segment_index": 1209,
+        "normalized_apr14_chars": 735664,
+        "normalized_apr16_chars": 592983,
+        "removed_nonwhitespace_chars": 142681
+      },
+      {
+        "replacement_segment_index": 1240,
+        "normalized_apr14_chars": 972,
+        "normalized_apr16_chars": 708,
+        "removed_nonwhitespace_chars": 264
+      },
+      {
+        "replacement_segment_index": 1252,
+        "normalized_apr14_chars": 465606,
+        "normalized_apr16_chars": 381066,
+        "removed_nonwhitespace_chars": 84540
+      }
+    ]
+  },
+  "archive_zip_comparison": {
+    "archived_regular_files": 71,
+    "archived_uncompressed_bytes": 2087894,
+    "same_bytes_as_mirror": 71,
+    "no_corresponding_current_mirror_file": [],
+    "different_content": [],
+    "contains_explicit_backup_filename": false
+  },
+  "related_false_backup_lead": {
+    "paths": [
+      "assets/Terminal41.link-day-breach_contribution_re-d8f992b8122788b4.html",
+      "assets/Terminal41.link-day-breach_contribution_re-9621e434e1914143.html"
+    ],
+    "file_type": "PNG image data saved with .html filename, not raw HTML copies of backup routes",
+    "upstream_git_blob_sha1": [
+      "0f0c805f03b59b4fa1140217e7b5990496ec560e",
+      "6a2ee6f76c0953167760bff98acd5d9ac38b5160"
+    ],
+    "poster": "lifeguardpanda, April 21 2020 ~15:38, two screenshots of current/backup contributor registry"
+  },
+  "april16_is_authored_backup": false,
+  "contains_new_nonwhitespace_codepoints_in_april16": false,
+  "corrected_payload_original_bytes": 0,
+  "interpretation": [
+    "Subsequence relation is a character-content test after Unicode-whitespace removal, not a mathematical proof the original server bytes were identical on both dates.",
+    "Matching all 1900 replacement characters and content order shows April 16 text is a lossier presentation of the already preserved body; it does not repair original replacement positions.",
+    "2023 zip is an archived historical compilation, but its 71 payload files exactly duplicate current pinned mirror files; it has no saf_dat_col_BACKUP and no new omitted terminal route.",
+    "2019 backup HTML is independently screenshot-attested but remains genuinely missing; do not confuse Apr16 text with the BACKUP file.",
+    "PNG screenshots mislabeled .html are images of pages, not captured source HTML payloads.",
+    "No new CE foreground consumer, sticker symbol, or damaged-JPEG correction is established."
+  ],
+  "artifacts": [
+    "scripts/audit_saf_dat_col_capture_lineage.py",
+    "docs/conjecture-lab/2026-10-08-saf-dat-col-archival-duplicates.md"
+  ],
+  "next_source_gate": "Original saf_dat_col_BACKUP.html bytes or independently sourced pre-2020 captures with a different known-content fingerprint; avoid repeated analysis of these already exhausted derivatives."
+}

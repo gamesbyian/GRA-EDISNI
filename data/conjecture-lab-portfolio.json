@@ -813,6 +813,50 @@
       "next_source_gate": "Independently recovered 2019/2020 backups or uniquely authored byte alignment mechanism; otherwise treat damaged JPEG reconstruction as underdetermined."
     },
     {
+      "id": "CL-11",
+      "version": 1,
+      "title": "Two 2019 saf_dat_col source copies and original Jan 2023 site ZIP assessed for independent backup evidence",
+      "status": "NO_NEW_INDEPENDENT_SOURCE; EXACT_2023_ZIP_MIRROR_CONCORDANCE",
+      "research_mode": "source-only negative archival forensics; no stickers or target text",
+      "sources": {
+        "original_2019_april14_curl_sha1": "349b818fce618ef55c404bedfb602b1d03f29a48",
+        "original_2019_april16_utf16_sha1": "6ca8c90711a54944850fdaf94a0ead1fab887686",
+        "original_2023_zip_sha1": "4f8958bd45a0e8874483b33e46e56a6a3b37a2f1"
+      },
+      "apr16_vs_apr14": {
+        "shared_replacement_character_count": 1900,
+        "bounded_sections": 1901,
+        "identical_normalized_content_sections": 1896,
+        "subsequence_content_sections": 1901,
+        "apr16_additional_nonwhitespace_content_sections": 0,
+        "UTF16_data_source_new_original_bytes_proven": 0
+      },
+      "archived_2023_zip": {
+        "regular_files": 71,
+        "all_byte_identical_to_current_Terminal41_mirror": 71,
+        "independent_new_paths": 0,
+        "independent_new_contents": 0,
+        "backup_named_files": 0
+      },
+      "backup_source_trap": {
+        "two_html_suffixed_contributor_page_files_are_png_screenshots": true,
+        "raw_HTML_backup_captured": false,
+        "independent_screenshot_attested_saf_dat_col_BACKUP_html_remains_missing": true
+      },
+      "inference": "Alternative large-looking copies do not increase the source corpus. Strict char subsequence and complete ZIP SHA concordance prevent treating derivatives as independent witnesses or recovered missing bytes.",
+      "limitations": [
+        "Whitespace stripped solely to test monotone order, not to assert all original source bytes are equal.",
+        "UTF-16 copy is not identified as the authentic saf_dat_col_BACKUP.html.",
+        "The 2023 ZIP excludes 19MB gate98 source PNG by submitter design, and the mirrored 71 files are not evidence of nonexistence for 2020 missing backups."
+      ],
+      "artifacts": [
+        "docs/conjecture-lab/2026-10-08-saf-dat-col-archival-duplicates.md",
+        "data/conjecture-lab-saf-dat-col-original-captures-2026-10-08.json",
+        "scripts/audit_saf_dat_col_capture_lineage.py"
+      ],
+      "next_action": "Find independently preserved original saf_dat_col_BACKUP bytes (e.g. different WARC provider/browser disk backup) or new source-authored sticker reader; not more byte fitting to known derivative copies."
+    },
+    {
       "id": "CONTROL-0",
       "version": 1,
       "title": "Foreground has no further endgame",
@@ -831,5 +875,5 @@
     "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
     "A frozen exact failure refutes that implementation only"
   ],
-  "latest_update": "2026-10-08-cl10-authentic-source-alignment-stable-only18"
+  "latest_update": "2026-10-08-cl11-saf-dat-col-captures-and-2023-zip-lineage"
 }
