@@ -13,7 +13,7 @@ The [original April 2019 Playdead Discord conversation](https://github.com/games
 
 The April 14 original is already preserved byte-for-byte in this repo as `archive/external/twinysam-inside-arg/terminal41.link/dat/saf_dat_col.html`. The April 16 file was genuinely attached by a historical participant before the CE sticker puzzle but is **not** the independently screenshot-documented `saf_dat_col_BACKUP.html`.
 
-A larger encoded file does not necessarily preserve more information. Exact Unicode decoding shows **1,265,969 characters** in the April 14 source and **1,026,768 characters** in the April 16 source. Both contain **precisely 1,900 U+FFFD replacement characters**.
+A larger encoded file does not necessarily preserve more information. Exact Unicode decoding shows **1,265,969 characters** in the April 14 source and **1,026,902 characters** in the April 16 source. Both contain **precisely 1,900 U+FFFD replacement characters**.
 
 ### The decisive within-damage comparison
 
