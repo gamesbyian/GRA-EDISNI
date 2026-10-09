@@ -1,0 +1,37 @@
+name: CL11 one-shot 2019 data capture retrieval
+on:
+  pull_request:
+    paths:
+      - .github/workflows/cl11-one-shot-captures.yml
+permissions:
+  contents: read
+jobs:
+  original-captures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Acquire two April 2019 source captures byte-exact
+        run: |
+          set -euo pipefail
+          base='https://raw.githubusercontent.com/gamesbyian/playdead-unofficial-exports/5e5897e2ce70dad5a2bd85e459770637cb36610f/assets'
+          mkdir -p cl11-sources
+          curl -fLsS --retry 2 --max-time 50 "$base/saf_dat_col-fd944ab391ff5415.txt" -o cl11-sources/apr14-curl-saf.txt
+          curl -fLsS --retry 2 --max-time 50 "$base/INSIDE_saf_dat_col-40304e7acab3c363.txt" -o cl11-sources/apr16-saved-saf.txt
+          curl -fLsS --retry 2 --max-time 50 "$base/saf_dat_col_fixed-305c0357f4cbcd41.html" -o cl11-sources/later-fixed-copy.html
+          curl -fLsS --retry 2 --max-time 50 "$base/INSIDE_saf_dat_col_interesting-50a465eb636416ab.txt" -o cl11-sources/apr16-selected-lines.txt
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          known={'apr14-curl-saf.txt':('349b818fce618ef55c404bedfb602b1d03f29a48',1986163),'apr16-saved-saf.txt':('6ca8c90711a54944850fdaf94a0ead1fab887686',2053806),'later-fixed-copy.html':('193744a04fc5b88e5edef0748e544f2aaf79f188',1269439),'apr16-selected-lines.txt':('31f744647c40c6431b3ebd9de9aac0392eefd049',16258)}
+          for fn,(sha,n) in known.items():
+           data=(Path('cl11-sources')/fn).read_bytes()
+           g=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+           assert (g,len(data)) ==(sha,n),(fn,g,len(data))
+           print('PINNED_SOURCE',fn,len(data),g)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cl11-2019-four-saf-source-variants
+          path: cl11-sources/
+          retention-days: 5
