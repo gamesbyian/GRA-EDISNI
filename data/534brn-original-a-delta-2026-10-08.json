@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "research": "CL09 original damaged 534brn A byte-authenticated correction",
+  "source_original": {
+    "sha1": "ce55c03ee972954f6e80f55a1a279bb85024f99b",
+    "bytes": 12140
+  },
+  "prior_connector_rendition": {
+    "sha1": "f9cdbd18bbd8713adee89ad93a3551b6310fd7ba",
+    "bytes": 12150
+  },
+  "unchanged_b": {
+    "sha1": "f12c02c49f4c3f7589419fe8e20d655f7b95a9f4",
+    "bytes": 16922
+  },
+  "unchanged_p": {
+    "sha1": "9580913d043ca3efd54a01a38a9cff5767ea8ee7",
+    "bytes": 8760
+  },
+  "original_a_unknown_tokens": 2152,
+  "original_a_known_tokens": 9852,
+  "normalized_b_token_length": 12052,
+  "old_counts": {
+    "B": 10057,
+    "U": 1747,
+    "A": 149,
+    "D": 79,
+    "C": 10,
+    "P": 10
+  },
+  "authentic_a_counts": {
+    "B": 10057,
+    "U": 1740,
+    "A": 156,
+    "D": 79,
+    "C": 10,
+    "P": 10
+  },
+  "old_alignment_supported_fills": 238,
+  "authentic_a_alignment_supported_fills": 245,
+  "net_change": 7,
+  "shared_candidate_offsets": 236,
+  "candidate_offsets_lost": 2,
+  "candidate_offsets_gained": 9,
+  "identical_values_and_status_for_shared": 234,
+  "ambiguous_conflicts_unchanged": 10,
+  "changed_positions_count": 13,
+  "changed_normalized_b_positions": [
+    {
+      "normalized_b_offset": 8132,
+      "old_value": "??",
+      "new_value": "eb",
+      "old_flag": "U",
+      "new_flag": "A"
+    },
+    {
+      "normalized_b_offset": 8133,
+      "old_value": "??",
+      "new_value": "78",
+      "old_flag": "U",
+      "new_flag": "A"
+    },
+    {
+      "normalized_b_offset": 8839,
+      "old_value": "??",
+      "new_value": "14",
+      "old_flag": "U",
+      "new_flag": "A"
+    },
+    {
+      "normalized_b_offset": 8979,
+      "old_value": "??",
+      "new_value": "19",
+      "old_flag": "U",
+      "new_flag": "A"
+    },
+    {
+      "normalized_b_offset": 8983,
+      "old_value": "c3",
+      "new_value": "1b",
+      "old_flag": "A",
+      "new_flag": "A"
+    },
+    {
+      "normalized_b_offset": 8984,
+      "old_value": "96",
+      "new_value": "d6",
+      "old_flag": "A",
+      "new_flag": "A"
+    },
+    {
+      "normalized_b_offset": 10744,
+      "old_value": "??",
+      "new_value": "35",
+      "old_flag": "U",
+      "new_flag": "A"
+    },
+    {
+      "normalized_b_offset": 10748,
+      "old_value": "??",
+      "new_value": "8c",
+      "old_flag": "U",
+      "new_flag": "A"
+    },
+    {
+      "normalized_b_offset": 11363,
+      "old_value": "03",
+      "new_value": "??",
+      "old_flag": "A",
+      "new_flag": "U"
+    },
+    {
+      "normalized_b_offset": 11370,
+      "old_value": "26",
+      "new_value": "??",
+      "old_flag": "A",
+      "new_flag": "U"
+    },
+    {
+      "normalized_b_offset": 11376,
+      "old_value": "??",
+      "new_value": "34",
+      "old_flag": "U",
+      "new_flag": "A"
+    },
+    {
+      "normalized_b_offset": 11380,
+      "old_value": "??",
+      "new_value": "5f",
+      "old_flag": "U",
+      "new_flag": "A"
+    },
+    {
+      "normalized_b_offset": 11381,
+      "old_value": "??",
+      "new_value": "e5",
+      "old_flag": "U",
+      "new_flag": "A"
+    }
+  ],
+  "raw_byte_edits_in_original_vs_rendition": [
+    {
+      "source_original_span": [
+        2462,
+        2463
+      ],
+      "former_rendition_span": [
+        2462,
+        2464
+      ],
+      "source_original_hex": "83",
+      "former_rendition_hex": "c692"
+    },
+    {
+      "source_original_span": [
+        8411,
+        8412
+      ],
+      "former_rendition_span": [
+        8412,
+        8414
+      ],
+      "source_original_hex": "eb",
+      "former_rendition_hex": "c3ab"
+    },
+    {
+      "source_original_span": [
+        9070,
+        9071
+      ],
+      "former_rendition_span": [
+        9072,
+        9074
+      ],
+      "source_original_hex": "d5",
+      "former_rendition_hex": "c395"
+    },
+    {
+      "source_original_span": [
+        9204,
+        9208
+      ],
+      "former_rendition_span": [
+        9207,
+        9213
+      ],
+      "source_original_hex": "d63f3f3f",
+      "former_rendition_hex": "c3963f3f3fc2"
+    },
+    {
+      "source_original_span": [
+        10852,
+        10855
+      ],
+      "former_rendition_span": [
+        10857,
+        10862
+      ],
+      "source_original_hex": "8c3fe4",
+      "former_rendition_hex": "c5923fc3a4"
+    },
+    {
+      "source_original_span": [
+        11449,
+        11450
+      ],
+      "former_rendition_span": [
+        11456,
+        11458
+      ],
+      "source_original_hex": "e5",
+      "former_rendition_hex": "c3a5"
+    },
+    {
+      "source_original_span": [
+        11627,
+        11628
+      ],
+      "former_rendition_span": [
+        11635,
+        11637
+      ],
+      "source_original_hex": "d8",
+      "former_rendition_hex": "c398"
+    },
+    {
+      "source_original_span": [
+        12055,
+        12056
+      ],
+      "former_rendition_span": [
+        12064,
+        12066
+      ],
+      "source_original_hex": "ff",
+      "former_rendition_hex": "c3bf"
+    }
+  ],
+  "binary_edit_operation_count": 8,
+  "pass": true,
+  "interpretation": [
+    "Counts are conditional on old edit-alignment heuristic. Not guaranteed original JPEG byte positions.",
+    "Previously established five-way alignment tie sensitivity refutes treating all candidate fills as uniquely forced.",
+    "The extra seven candidate fills are improvement in source-authenticated heuristic constraints, not proof of seven recovered true JPEG entropy bytes.",
+    "Do not overwrite prior frozen rendition-based fixture without deliberately versioning and running tie-sensitivity audit."
+  ],
+  "actions_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/37866222297"
+}
