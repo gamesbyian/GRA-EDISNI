@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "id": "CL-12",
+  "title": "Third-party public SAF DEFLATE workbench evidence/type audit",
+  "upstream": {
+    "repository": "burning-lnkr/saf_dat_col",
+    "url": "https://github.com/burning-lnkr/saf_dat_col",
+    "commit_sha": "cdb41453d0c2a61d09dcf341adb7e30762c7c2a6",
+    "created_at": "2026-09-25T03:14:04Z",
+    "primary_docs": [
+      "README.md",
+      "data/index.json",
+      "tests/validation.json"
+    ],
+    "original_source_sha1_git": "349b818fce618ef55c404bedfb602b1d03f29a48",
+    "original_source_sha256": "53cd286fce00071b7a9b75ddbcec2f285d2e893718fc1226d5cea35fa4a6cd6c",
+    "original_source_bytes": 1986163,
+    "original_source_is_exact_existing_GRA_copy": true,
+    "community_input": {
+      "sha256": "f405ba37a341437635a94e91c5bc29fdcd7d0d5265c4ce30a9bbfa829ceb9746",
+      "bytes": 1249229,
+      "source_description": "extracted community edited/fixed attachment, not original 2019 server backup"
+    },
+    "sha256_tests_are_self_consistency_not_original_ground_truth": true
+  },
+  "implementation": {
+    "recorded_candidate_count": 17,
+    "original_input_candidate_count": 10,
+    "community_input_candidate_count": 7,
+    "reconstruction_classes": [
+      "editable single-byte inverse",
+      "raw DEFLATE header recovery",
+      "missing CR/space-or-NUL variants",
+      "LZ77 copy-context alternative selection",
+      "assumed history seeding",
+      "post-inflate output filters and pixel rendering",
+      "optional conditional LZW prefix exploration"
+    ],
+    "default_original_candidate": "original_combined",
+    "default_payload_bytes": 11779416,
+    "default_payload_sha256": "14bbfcec0f7d5a343c0fbd26b548e63ecc93d60db8a730573ca93231249c5b0a",
+    "default_raster_width": 5000,
+    "default_row_stride_bytes": 15001,
+    "default_interleaved_components": 3,
+    "source_native_decoded_payload_proven": false,
+    "upstream_test_file": "tests/validation.json",
+    "self_reported_tests_passed": true,
+    "original_unknown_LZ77_history": true,
+    "default_unknown_dictionary_zero_seeded": true,
+    "some_synthetic_block_endings": true,
+    "layout_hypothesis_not_derived_source_dimensions": true
+  },
+  "historical_scope": {
+    "contains_saf_dat_col_BACKUP_html": false,
+    "contains_534brn_JPEG_solution": false,
+    "contains_CE_sticker_foreground_consumer": false,
+    "source_may_be_useful_for": "hypothesis-typed variable uncertainty and conditional byte history, not direct authorial evidence",
+    "independent_original_data_acquisition": false
+  },
+  "key_constraints": [
+    "Do not cite 17 zlib-inflatable reconstructions as 17 independent surviving source captures.",
+    "Do not treat matching payload SHA256 or valid PNG export as proof of Playdead-intended raster dimensions or content.",
+    "Do not transfer 5000px raster or chosen magnitudes 7/4 to sticker data without a source-authored bridge.",
+    "Original 1986163-byte source already in GRA repository and in CL11 comparison.",
+    "Treat all candidate imagery and 11.78MB output as conditional on replacement/dictionary/header decisions."
+  ],
+  "followup": "If prioritized, adapt deterministic stream-replay and literal-versus-copy provenance to a preregistered robustness test across all 17 fixed candidates, with source-native invariants and explicit negative controls. Do not declare decoded image from self-consistency."
+}
