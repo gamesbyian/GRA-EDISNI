@@ -88,25 +88,24 @@ def main():
          help="Apr 16 2019 original UTF-16 Discord attachment, not original BACKUP file")
     p.add_argument("--jan2023zip",type=Path,
          help="Jan 25 2023 community-compiled Terminal41 pages ZIP")
-    p.add_argument("--discover",action="store_true",help="one-time initial exploration; do not use in CI")
     p.add_argument("--summary-json",type=Path)
     args=p.parse_args()
-    d=None if args.discover else json.loads(FIXTURE.read_text(encoding="utf8"))
-    assert args.discover or d["source_git_blobs"]=={
+    d=json.loads(FIXTURE.read_text(encoding="utf8"))
+    assert d["source_git_blobs"]=={
          k:{"sha1":v[0],"bytes":v[1]} for k,v in SRC.items()
     }
-    assert args.discover or d["april16_is_authored_backup"] is False
-    assert args.discover or d["contains_new_nonwhitespace_codepoints_in_april16"] is False
-    assert args.discover or d["corrected_payload_original_bytes"]==0
+    assert d["april16_is_authored_backup"] is False
+    assert d["contains_new_nonwhitespace_codepoints_in_april16"] is False
+    assert d["corrected_payload_original_bytes"]==0
     orig=checked(MIRROR/"dat"/"saf_dat_col.html","apr14")
     output={"fixture_verified":True,"original_apr14_git_blob_sha":git_sha(orig)}
     if args.apr16:
         result=audit_captures(orig,checked(args.apr16,"apr16"))
-        assert args.discover or result==d["capture_comparison"],(result,d["capture_comparison"])
+        assert result==d["capture_comparison"],(result,d["capture_comparison"])
         output["capture"]=result
     if args.jan2023zip:
         result=audit_zip(checked(args.jan2023zip,"jan2023zip"))
-        assert args.discover or result==d["archive_zip_comparison"],(result,d["archive_zip_comparison"])
+        assert result==d["archive_zip_comparison"],(result,d["archive_zip_comparison"])
         output["archive"]=result
     if args.summary_json:args.summary_json.write_text(json.dumps(output,indent=2)+"\n")
     print(json.dumps(output,indent=2))
