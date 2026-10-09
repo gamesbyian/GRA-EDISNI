@@ -1,63 +1,25 @@
-name: CL09 one-shot source history acquisition
+name: CL09 one-shot exact damaged source audit
 on:
   pull_request:
     paths:
       - .github/workflows/cl09-one-shot-history.yml
-      - scripts/audit_historical_ce_registration_conversations.py
+      - scripts/audit_534brn_original_a_comparison.py
 permissions:
-  contents: write
+  contents: read
 jobs:
-  source-history:
+  true-a-delta:
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           ref: research/cl09-2020-primary-source-registration-history-2026-10-08
-      - name: Fetch pinned public original Discord export and audit
-        run: |
-          curl -fLsS --retry 2 --max-time 65 -o /tmp/cl09-discord-source.txt 'https://raw.githubusercontent.com/gamesbyian/playdead-unofficial-exports/5e5897e2ce70dad5a2bd85e459770637cb36610f/Playdead%20Unofficial%20-%20ARG%20-%20solving%20%5B461275582970462209%5D.txt'
-          python scripts/audit_historical_ce_registration_conversations.py /tmp/cl09-discord-source.txt --out cl09-historical-conversations.json
-      - name: Archive service metadata probes for screenshot-verified missing routes
-        run: python scripts/probe_lost_terminal41_archive_routes.py --output cl09-wayback-route-results.json
-      - name: Recover byte-identical original capture and screenshot witnesses
-        run: |
-          set -euo pipefail
-          base='https://raw.githubusercontent.com/gamesbyian/playdead-unofficial-exports/5e5897e2ce70dad5a2bd85e459770637cb36610f/assets'
-          mkdir -p archive/external/terminal41-534brn archive/external/terminal41-2020-index
-          curl -fLsS --retry 2 --max-time 65 "$base/534brn9653f9j8mmd_original-4f038b969c841fd7.html" -o archive/external/terminal41-534brn/A-original-capture.bin
-          curl -fLsS --retry 2 --max-time 40 "$base/Index_of__sys-b25ece4407c92d8c.png" -o archive/external/terminal41-2020-index/sys-index.png
-          curl -fLsS --retry 2 --max-time 40 "$base/Index_of__sys_terminate_terminal_1-28689daeb41f78aa.png" -o archive/external/terminal41-2020-index/terminate-terminal-index.png
-          curl -fLsS --retry 2 --max-time 40 "$base/dat_at_11.00.00_AM-ac7e759aa24eef08.png" -o archive/external/terminal41-2020-index/dat-index.png
-          curl -fLsS --retry 2 --max-time 40 "$base/Terminal41.link-day-breach_contribution_re-f048067891d74b84.png" -o archive/external/terminal41-2020-index/breach-backup-contrast.png
-          python - <<'PY'
-          import hashlib
-          from pathlib import Path
-          expected={
-           'archive/external/terminal41-534brn/A-original-capture.bin':('ce55c03ee972954f6e80f55a1a279bb85024f99b',12140),
-           'archive/external/terminal41-2020-index/sys-index.png':('48cdd698a5d9303609cd2659d020a0c31a52cffc',119780),
-           'archive/external/terminal41-2020-index/terminate-terminal-index.png':('e3d7287527a5482cb58a41837873f396e0c79ee7',40251),
-           'archive/external/terminal41-2020-index/dat-index.png':('a56809a9856020489a87ff38d114ae4a67d83964',70405),
-           'archive/external/terminal41-2020-index/breach-backup-contrast.png':('95bb5aaec9a9f2da0966744fbc80b67f7f358c99',399000),
-          }
-          for path,(sha,size) in expected.items():
-           b=Path(path).read_bytes()
-           actual=hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest()
-           assert actual==sha,(path,len(b),actual,sha)
-           if size==399000: print('Contrast image size',len(b))
-           else: assert len(b)==size,(path,len(b),size)
-           print('ORIGINAL_GIT_BLOB_OK',path,len(b),sha)
-          PY
-          git config user.name 'CL09 source archivist'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add archive/external/terminal41-534brn/A-original-capture.bin archive/external/terminal41-2020-index
-          git commit -m 'evidence: preserve authentic original 534brn A and 2020 Terminal41 index screenshots'
-          git push origin HEAD:research/cl09-2020-primary-source-registration-history-2026-10-08
+      - name: Recompute original true A against connector-rendition and P/B
+        run: python scripts/audit_534brn_original_a_comparison.py --output cl09-true-a-delta.json
       - uses: actions/upload-artifact@v4
         with:
-          name: cl09-source-historical-conversations
+          name: cl09-true-original-a-delta
           path: |
-            cl09-historical-conversations.json
-            /tmp/cl09-discord-source.txt
-            cl09-wayback-route-results.json
-          retention-days: 3
+            cl09-true-a-delta.json
+            archive/external/terminal41-534brn/A-original-capture.bin
+          retention-days: 7
