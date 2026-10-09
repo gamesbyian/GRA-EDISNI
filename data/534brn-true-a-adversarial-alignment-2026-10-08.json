@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "id": "CL-10",
+  "title": "True 534brn A 5-way alignment stress versus old connector rendition",
+  "source_original_a_git_sha1": "ce55c03ee972954f6e80f55a1a279bb85024f99b",
+  "source_original_a_bytes": 12140,
+  "compared_to_prior_connector_rendition_sha1": "f9cdbd18bbd8713adee89ad93a3551b6310fd7ba",
+  "source_b_git_sha": "f12c02c49f4c3f7589419fe8e20d655f7b95a9f4",
+  "source_p_git_sha": "9580913d043ca3efd54a01a38a9cff5767ea8ee7",
+  "fixed_alignment_conditions": "same historical edit gap costs, 12-byte unique known anchors; variants change tie-breaking diagonal/up/left or anchor width 10/12/14",
+  "cases": {
+    "baseline": {
+      "fills": 245,
+      "conflicts": 10,
+      "offsetsMappedA": 11619,
+      "offsetsMappedP": 4711
+    },
+    "up_tiebreak": {
+      "fills": 277,
+      "conflicts": 10,
+      "offsetsMappedA": 11619,
+      "offsetsMappedP": 4711
+    },
+    "left_tiebreak": {
+      "fills": 273,
+      "conflicts": 30,
+      "offsetsMappedA": 11619,
+      "offsetsMappedP": 4711
+    },
+    "10wide": {
+      "fills": 245,
+      "conflicts": 10,
+      "offsetsMappedA": 11619,
+      "offsetsMappedP": 4711
+    },
+    "14wide": {
+      "fills": 245,
+      "conflicts": 10,
+      "offsetsMappedA": 11619,
+      "offsetsMappedP": 4711
+    }
+  },
+  "baseline_recovered": 245,
+  "stable_across_five": 18,
+  "variable_baseline": 227,
+  "changed_by_case": {
+    "up_tiebreak": 8,
+    "left_tiebreak": 227,
+    "10wide": 0,
+    "14wide": 0
+  },
+  "stable_position_values_hex": [
+    {
+      "offset": 8676,
+      "hex": "36"
+    },
+    {
+      "offset": 8677,
+      "hex": "20"
+    },
+    {
+      "offset": 8686,
+      "hex": "37"
+    },
+    {
+      "offset": 8688,
+      "hex": "11"
+    },
+    {
+      "offset": 8692,
+      "hex": "46"
+    },
+    {
+      "offset": 8694,
+      "hex": "50"
+    },
+    {
+      "offset": 9278,
+      "hex": "0b"
+    },
+    {
+      "offset": 9279,
+      "hex": "18"
+    },
+    {
+      "offset": 9282,
+      "hex": "63"
+    },
+    {
+      "offset": 9283,
+      "hex": "3f"
+    },
+    {
+      "offset": 9287,
+      "hex": "37"
+    },
+    {
+      "offset": 9288,
+      "hex": "44"
+    },
+    {
+      "offset": 9292,
+      "hex": "65"
+    },
+    {
+      "offset": 9296,
+      "hex": "56"
+    },
+    {
+      "offset": 9297,
+      "hex": "38"
+    },
+    {
+      "offset": 9300,
+      "hex": "55"
+    },
+    {
+      "offset": 9302,
+      "hex": "3c"
+    },
+    {
+      "offset": 9764,
+      "hex": "65"
+    }
+  ],
+  "prior_rendition_stable_across_five": 18,
+  "source_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/37866759723",
+  "interpretation": "Across five selected optimal-path variants, 18 candidate byte positions remain identical. This is a FIVE-PATH CONSENSUS, not uniqueness over every admissible optimal alignment or recovered original JPEG positions. 227 baseline fills vary across these variants. Correcting original A improved candidate provenance but not this tested consensus count.",
+  "provenance": "Original PNG/JPEG-like archive source A/B/P pinned by Git raw blob SHA. Original A true bytes acquired CL09; output against same original sensitivity script."
+}
