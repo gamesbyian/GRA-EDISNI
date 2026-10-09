@@ -32,6 +32,8 @@ jobs:
         run: python scripts/verify_gate98_phase_fixture.py
       - name: Audit historical 2019 gate98 five-layer reconstruction fixture
         run: python scripts/audit_gate98_historical_layer_reconstruction.py
+      - name: Verify complete original gate98 six-layer bright-mask reconstruction
+        run: python scripts/verify_gate98_six_layer_reconstruction.py
       - name: Verify canonical closed-corpus machine
         run: python scripts/verify_machine.py
       - name: Verify independent native-state model

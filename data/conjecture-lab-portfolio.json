@@ -377,7 +377,7 @@
       "id": "CL-06",
       "version": 1,
       "title": "Reconstruction of original June 2019 gate-98 multi-offset exact RGB layers",
-      "status": "historical_positive_control_five_exact_layers_of_six_or_more;no_CE_bridge",
+      "status": "historical_intermediate_five_layers_superseded_by_CL07",
       "research_mode": "DEVELOP retrospective with original 2019 answer-image available; do not score as out-of-sample historical or sticker discovery",
       "independent_date": "2019-06-03 historic Game Detectives witness before December 2019 CE release",
       "source_kind": "historical source pixel positive control",
@@ -516,7 +516,119 @@
         "data/conjecture-lab-gate98-historical-layer-control-2026-10-08.json",
         "scripts/audit_gate98_historical_layer_reconstruction.py"
       ],
-      "next_source_gate": "Sixth historical 507-site layer or original 2018 hex legend; recover source-native cross-panel crop address rule before porting technique to CE; preserve exact-shape negatives and pre-CE chronology."
+      "next_source_gate": "Sixth historical 507-site layer or original 2018 hex legend; recover source-native cross-panel crop address rule before porting technique to CE; preserve exact-shape negatives and pre-CE chronology.",
+      "superseded_by": "CL-07: sixth #020206 at (1155,1755), 2577/2577 exact 0 misses, 0 FP"
+    },
+    {
+      "id": "CL-07",
+      "version": 1,
+      "title": "Full 2019 historical shutdown-text bright foreground, exact six-layer source RGB replay",
+      "status": "HISTORICAL_BRIGHT_FOREGROUND_FULLY_RECONSTRUCTED; CE_BRIDGE_NOT_FOUND",
+      "research_mode": "retrospective target-assisted, no sticker data used",
+      "source": {
+        "original_png_sha256": "db67f13634004b8f3914aae6e06bd40f01e4f71531d689603d0f1f3be2a99ded",
+        "historical_witness_sha256": "ae685557122be8562028d8a1c4384c954a760bc4e42e6877c29391d810892d12",
+        "historical_image_uploaded": "2019-06-03",
+        "witness_dimensions": [
+          916,
+          913
+        ],
+        "binary_white_mask_sha256": "e730cd817bfdb952dad01d8a55a9684ca4114746e2398fce5418395527a0f5ff"
+      },
+      "source_layers": [
+        [
+          "030101",
+          16,
+          36,
+          309,
+          309
+        ],
+        [
+          "010401",
+          1045,
+          57,
+          463,
+          458
+        ],
+        [
+          "030303",
+          14,
+          851,
+          431,
+          420
+        ],
+        [
+          "050105",
+          18,
+          1638,
+          324,
+          324
+        ],
+        [
+          "030300",
+          1121,
+          787,
+          590,
+          559
+        ],
+        [
+          "020206",
+          1155,
+          1755,
+          560,
+          507
+        ]
+      ],
+      "results": {
+        "all_source_marks_with_overlap": 2677,
+        "unique_reconstruction": 2577,
+        "reference_bright": 2577,
+        "false_positive": 0,
+        "false_negative": 0,
+        "all_output_bright_pixels_equal": true,
+        "other_dark_grayscale_2019_witness_pixels_not_reproduced": true
+      },
+      "corrected_sixth": {
+        "original_rejected_offset": [
+          1123,
+          1755
+        ],
+        "corrected_offset": [
+          1155,
+          1755
+        ],
+        "delta_x": 32,
+        "correction_additional_original_pixels": 507,
+        "corrected_window_overhang_right": 23,
+        "source_all_560_pixels_within_image": true,
+        "old_falses": 309,
+        "new_falses": 0,
+        "legal_rectangle_cropping_was_overrestrictive": true
+      },
+      "shape_observations": {
+        "source_distribution": "approximate 2 source columns by 3 vertical regions; nonuniform exact origins",
+        "two_dominant_projected_phase_families": [
+          [
+            4,
+            8
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "chosen_offsets_used_historic_witness": true
+      },
+      "historical_open_questions": [
+        "Reconstruct 2019 PNG near-black 1636 grey pixels/black layer (does not affect full bright text)",
+        "Recover an authorial rule selecting six exact colours/offsets blind to known historical solution",
+        "Find independent physical foreground receiver for CE, likely via nine background image registrations to 534brn destination"
+      ],
+      "artifacts": [
+        "docs/conjecture-lab/2026-10-08-gate98-complete-six-layer-reconstruction.md",
+        "data/conjecture-lab-gate98-six-layer-complete-2026-10-08.json",
+        "scripts/verify_gate98_six_layer_reconstruction.py"
+      ]
     },
     {
       "id": "CONTROL-0",
@@ -537,5 +649,5 @@
     "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
     "A frozen exact failure refutes that implementation only"
   ],
-  "latest_update": "2026-10-08-cl06-historical-gate98-five-layer-precise-reconstruction"
+  "latest_update": "2026-10-08-cl07-complete-2019-shutdown-bright-pixel-reproduction"
 }
