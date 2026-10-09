@@ -31,6 +31,8 @@ jobs:
            assert (len(data)==n and (sha=='UNKNOWN' or g==sha)),(fn,g,len(data))
            print('PINNED_SOURCE',fn,len(data),g)
           PY
+      - name: Source-only preliminary capture and zip comparison
+        run: python scripts/audit_saf_dat_col_capture_lineage.py --discover --apr16 cl11-sources/apr16-saved-saf.txt --jan2023zip cl11-sources/terminal41-2023-archive.zip --summary-json cl11-sources/cl11-discovery.json
       - uses: actions/upload-artifact@v4
         with:
           name: cl11-2019-four-saf-source-variants
