@@ -16,10 +16,13 @@ jobs:
         run: |
           curl -fLsS --retry 2 --max-time 65 -o /tmp/cl09-discord-source.txt 'https://raw.githubusercontent.com/gamesbyian/playdead-unofficial-exports/5e5897e2ce70dad5a2bd85e459770637cb36610f/Playdead%20Unofficial%20-%20ARG%20-%20solving%20%5B461275582970462209%5D.txt'
           python scripts/audit_historical_ce_registration_conversations.py /tmp/cl09-discord-source.txt --out cl09-historical-conversations.json
+      - name: Archive service metadata probes for screenshot-verified missing routes
+        run: python scripts/probe_lost_terminal41_archive_routes.py --output cl09-wayback-route-results.json
       - uses: actions/upload-artifact@v4
         with:
           name: cl09-source-historical-conversations
           path: |
             cl09-historical-conversations.json
             /tmp/cl09-discord-source.txt
+            cl09-wayback-route-results.json
           retention-days: 3
