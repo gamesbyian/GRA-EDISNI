@@ -36,6 +36,10 @@ jobs:
         run: python scripts/verify_gate98_six_layer_reconstruction.py
       - name: Validate source-only colour-registration negative control fixture
         run: python scripts/conjecture_lab_gate98_source_only_alignments.py
+      - name: Verify 2020 Terminal41 index route preservation gaps
+        run: python scripts/verify_terminal41_historical_index_gaps.py
+      - name: Audit original 534brn A byte provenance and exact candidate-fill delta
+        run: python scripts/audit_534brn_original_a_comparison.py
       - name: Verify canonical closed-corpus machine
         run: python scripts/verify_machine.py
       - name: Verify independent native-state model
