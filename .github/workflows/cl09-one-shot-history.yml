@@ -19,5 +19,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: cl09-source-historical-conversations
-          path: cl09-historical-conversations.json
-          retention-days: 14
+          path: |
+            cl09-historical-conversations.json
+            /tmp/cl09-discord-source.txt
+          retention-days: 3
