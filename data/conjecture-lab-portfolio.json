@@ -702,6 +702,69 @@
       "next_action": "Source-native authored selection keybook for historical colour translations or independently CE-native registration geometry at 534brn."
     },
     {
+      "id": "CL-09",
+      "version": 1,
+      "title": "Original April 2020 Terminal41 index screenshots and true byte-exact damaged 534brn A capture",
+      "status": "SOURCE_AUTHENTIC_RESCUE_AND_HISTORICAL_NAMESPACE_GAP; NO_CE_FOREGROUND_INPUT_READER",
+      "source": {
+        "upstream_discord_export_git_blob": "1889cc948f86f5a4455de0d7310b15cdb1b88b5c",
+        "source_export_bytes": 5092410,
+        "original_screenshot_git_blobs": [
+          "48cdd698a5d9303609cd2659d020a0c31a52cffc",
+          "e3d7287527a5482cb58a41837873f396e0c79ee7",
+          "a56809a9856020489a87ff38d114ae4a67d83964",
+          "95bb5aaec9a9f2da0966744fbc80b67f7f358c99"
+        ],
+        "original_a_git_blob_sha": "ce55c03ee972954f6e80f55a1a279bb85024f99b",
+        "original_a_bytes": 12140,
+        "old_rendition_git_blob_sha": "f9cdbd18bbd8713adee89ad93a3551b6310fd7ba",
+        "old_rendition_bytes": 12150
+      },
+      "screenshots": {
+        "namespace_total_relevant": 11,
+        "absent_from_pinned_74_file_mirror": 10,
+        "notable_files": [
+          "dat/saf_dat_col_BACKUP.html",
+          "dat/breachlog_BACKUP.html",
+          "sys/all_sys_hibernate/"
+        ],
+        "numbered_terminals": [
+          11,
+          23,
+          41,
+          42,
+          99
+        ],
+        "only_41_archived": true,
+        "hibernate_mentioned_before_CE": "2019-04-17",
+        "full_backup_bytes_recovered": false,
+        "archive_org_availability": "empty six requests; CDX error/timeout; not proof of nonexistence"
+      },
+      "authentic_source_alignment_control": {
+        "unchanged_b_p": true,
+        "heuristic_old_candidate_fills": 238,
+        "heuristic_new_candidate_fills": 245,
+        "changed_normalized_positions": 13,
+        "added_candidate_offsets": 9,
+        "lost_candidate_offsets": 2,
+        "conflicts_remain": 10,
+        "original_b_unknown_tokens_after_heuristic_fills": 1750,
+        "source_alignment_uniqueness_proven": false,
+        "full_jpeg_reconstruction_proven": false
+      },
+      "interpretation": "Source byte authenticity corrects evidence inputs; candidate counts from one edit path are not guaranteed original JPEG bytes. Screenshots widen archival namespace but demonstrate no CE foreground reader.",
+      "artifacts": [
+        "docs/conjecture-lab/2026-10-08-terminal41-unarchived-route-recovery.md",
+        "data/terminal41-screenshot-index-gaps-2026-10-08.json",
+        "data/534brn-original-a-delta-2026-10-08.json",
+        "archive/external/terminal41-534brn/A-original-capture.bin",
+        "archive/external/terminal41-2020-index/README.md",
+        "scripts/audit_534brn_original_a_comparison.py",
+        "scripts/verify_terminal41_historical_index_gaps.py"
+      ],
+      "next_action": "Recover genuinely independent 1.9MB saf_dat_col_BACKUP.html or complete old site index snapshots and separate source-authored foreground type/cue; do not infer extra terminal-number inputs."
+    },
+    {
       "id": "CONTROL-0",
       "version": 1,
       "title": "Foreground has no further endgame",
@@ -720,5 +783,5 @@
     "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
     "A frozen exact failure refutes that implementation only"
   ],
-  "latest_update": "2026-10-08-cl08-source-only-pairwise-registration-failure"
+  "latest_update": "2026-10-08-cl09-authentic-original-damaged-A-and-site-namespace-rescue"
 }
