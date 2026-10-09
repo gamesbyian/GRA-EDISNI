@@ -765,6 +765,54 @@
       "next_action": "Recover genuinely independent 1.9MB saf_dat_col_BACKUP.html or complete old site index snapshots and separate source-authored foreground type/cue; do not infer extra terminal-number inputs."
     },
     {
+      "id": "CL-10",
+      "version": 1,
+      "title": "True original 534brn A exact-source alignment stability over 5 equally scored editing paths",
+      "status": "AUTHENTIC_SOURCE_RESTORES_245_HEURISTIC_FILLS_BUT_STABLE_CONSENSUS_REMAINS_18",
+      "source_A_git_blob": "ce55c03ee972954f6e80f55a1a279bb85024f99b",
+      "original_A_bytes": 12140,
+      "source_B_P_unchanged": true,
+      "five_sensitivity_cases": {
+        "diagonal12": {
+          "fills": 245,
+          "conflicts": 10
+        },
+        "up12": {
+          "fills": 277,
+          "conflicts": 10
+        },
+        "left12": {
+          "fills": 273,
+          "conflicts": 30
+        },
+        "diagonal10": {
+          "fills": 245,
+          "conflicts": 10
+        },
+        "diagonal14": {
+          "fills": 245,
+          "conflicts": 10
+        }
+      },
+      "consensus_across_five": 18,
+      "baseline_candidates": 245,
+      "variable_baseline": 227,
+      "old_rendition_consensus_across_five": 18,
+      "supersession": "Prior CL09 additional seven net baseline candidates do not improve tested source-robust consensus, though source byte provenance is corrected.",
+      "limitations": [
+        "Consensus across five selected optimal paths is NOT mathematical uniqueness across all optimal alignments.",
+        "Locations are within normalized corrupted B tokens, not proved original JPEG raster coefficients.",
+        "No original JPEG reconstruction and no CE foreground reader."
+      ],
+      "artifacts": [
+        "docs/conjecture-lab/2026-10-08-authentic-a-adversarial-jpeg-alignment.md",
+        "data/534brn-true-a-adversarial-alignment-2026-10-08.json",
+        "scripts/audit_534brn_true_a_alignment_sensitivity.py"
+      ],
+      "source_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/37866759723",
+      "next_source_gate": "Independently recovered 2019/2020 backups or uniquely authored byte alignment mechanism; otherwise treat damaged JPEG reconstruction as underdetermined."
+    },
+    {
       "id": "CONTROL-0",
       "version": 1,
       "title": "Foreground has no further endgame",
@@ -783,5 +831,5 @@
     "An exploratory lookup match selected after target exposure never counts as out-of-sample evidence",
     "A frozen exact failure refutes that implementation only"
   ],
-  "latest_update": "2026-10-08-cl09-authentic-original-damaged-A-and-site-namespace-rescue"
+  "latest_update": "2026-10-08-cl10-authentic-source-alignment-stable-only18"
 }
