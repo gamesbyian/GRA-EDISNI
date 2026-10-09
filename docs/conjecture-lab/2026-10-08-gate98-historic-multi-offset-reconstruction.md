@@ -1,4 +1,4 @@
-# CL-06: reconstructing the original gate-98 shutdown text from historical evidence
+**Superseded 8 October 2026 by [CL-07](2026-10-08-gate98-complete-six-layer-reconstruction.md):** This is the preserved *intermediate* five-layer account. The previously rejected `#020206` filter is the authentic sixth foreground colour after a **32-pixel registration correction to (1155,1755)**. All **507** formerly unexplained white pixels are recovered with **zero false positives**. The correct crop projects sparse pixels 23px beyond a rectangular source canvas edge, hence the earlier legal-crop restriction excluded it. Do not continue treating the 507-site residual as an open search target. The original six-offset authorial key selection and CE link remain open.\n\n# CL-06: reconstructing the original gate-98 shutdown text from historical evidence
 
 _Date: 8 October 2026. Research mode: DEVELOP; target-assisted exact-image reconstruction. This is **not** a Collector's Edition sticker decode._
 
