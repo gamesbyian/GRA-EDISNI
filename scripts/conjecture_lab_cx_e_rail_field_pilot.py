@@ -114,6 +114,15 @@ def run(path):
         opts = three_by_three_options(grid, "/." if q == 3 else "/-", "row")
         column_opts = three_by_three_options(grid, "/." if q == 3 else "/-", "column")
         compatible_total *= len(opts)
+        # A self-contained 3-trit token: minority column in each
+        # IAB/CDE/FGH physical row. Zero-indexed base three, never
+        # mapped to guessed letters or a selected source endpoint.
+        tokens = []
+        for polarity, completed in opts:
+            columns = [completed[r].index(polarity) for r in range(3)]
+            tokens.append({"minority": polarity,
+                           "trits": "".join(str(v) for v in columns),
+                           "base27_value_0based": columns[0]*9 + columns[1]*3 + columns[2]})
         forced = {}
         for r in range(3):
             for c in range(3):
@@ -134,6 +143,7 @@ def run(path):
             "suffix_12": "".join(row[15:]),
             "one_minority_per_physical_row_completions": len(opts),
             "row_rule_minority_polarities": sorted({p for p,_ in opts}),
+            "conditional_3trit_tokens": sorted(tokens, key=lambda x: (x["base27_value_0based"], x["minority"])),
             "one_minority_per_physical_column_completions": len(column_opts),
             "new_row_rule_forced_symbols": {str(k):v for k,v in sorted(forced.items())}
         })
