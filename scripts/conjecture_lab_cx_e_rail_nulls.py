@@ -29,6 +29,8 @@ def load(path):
         for r in csv.DictReader(stream):
             n, mark = int(r["residue"]), r["symbol"].strip()
             assert 1 <= n <= 108 and mark in ("/", "-", ".")
+            expected_cls = "ABCDEFGHI"[(n - 1) % 9]
+            assert r.get("image_class", "").strip() in ("", expected_cls)
             assert n not in marks or marks[n] == mark
             marks[n] = mark
     return marks
@@ -132,6 +134,27 @@ def run(path):
     simple, moments = quarter_shuffle_null(quarters, full)
     conditional, states, frame_counts, tail_count = typed_grammar_null(quarters, full)
     pairmask = sum(1 << full.index(col) for col in rails) if len(rails) == 2 else None
+    # The *observed* E/F slash rails, if interpreted as delimiters,
+    # expose one complete nine-class cycle in each quarter. This is a
+    # conditional readout, not an independently proven instruction.
+    fields = None
+    if rails == [5, 15]:
+        fields = []
+        order = "FGHIABCDE"
+        for row in quarters:
+            middle = row[5:14]
+            by_class = dict(zip(order, middle))
+            fields.append({
+                "header_4": "".join(row[:4]),
+                "first_rail_E": row[4],
+                "middle_9_serial_class_order": order,
+                "middle_9_symbols": "".join(middle),
+                "middle_9_physical_IAB_CDE_FGH": [
+                    "".join(by_class[cls] for cls in line)
+                    for line in ("IAB", "CDE", "FGH")],
+                "second_rail_F": row[14],
+                "suffix_12": "".join(row[15:]),
+            })
     return {
         "classification": "retrospective exploratory: no preregistered significance",
         "observed_unique_residues": len(marks), "unknown_residues": 108 - len(marks),
@@ -140,6 +163,7 @@ def run(path):
             [sum(x != "?" for x in row), row.count("/")] for row in quarters],
         "fully_observed_columns_1_based": full,
         "all_slash_columns_1_based": rails,
+        "hypothetical_4_rail_9_rail_12_fields": fields,
         "quarter_shuffle_any_two": float(simple),
         "quarter_shuffle_named_pair": float(moments[2]) if pairmask is not None else None,
         "typed_grammar_any_two": float(conditional),
