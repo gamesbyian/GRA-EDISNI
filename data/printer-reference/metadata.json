@@ -18,7 +18,7 @@
     ],
     "documented_spatial_product": "ASCII acorn with the number 41",
     "documented_valid_password": "LIFEDETECTED",
-    "derivation_status": "The accepted LIFEDETECTED string was initially guessed in April 2019. A June 2021 community reconstruction reportedly obtains it by evolving the standard Game of Life acorn seed to generation 41 and overlaying the result on the separately known running-man puzzle. Its original 2021 demonstration is cited, not independently replayed in this fixture.",
+    "derivation_status": "LIFEDETECTED was guessed and accepted April 2019, then demonstrated June 2021 by evolving the standard Conway Acorn to generation 41 and overlaying it onto the original PC/PS4 32x32 raster. In October 2026 the archived 2021 MP4 and exact historical raster were Git-SHA authenticated; independent replay achieved 102/102 identical Life overlay-mask sites and 90/90 matching final orange-letter pixels with zero mismatches.",
     "solved_row_order_status": "Recovered from a primary community text attachment posted 2018-07-09 as 'acorn order version'; all 32 rows exactly match the raw full-length corpus.",
     "solved_order_fixture": "data/printer-reference/pc-ps4-acorn-order.txt",
     "solved_order_provenance": {
@@ -38,7 +38,14 @@
       "original_discovery_message_url": "https://discord.com/channels/460626942190813184/461275582970462209/852612048482336788",
       "demonstration_url": "https://cdn.discordapp.com/attachments/461275582970462209/857907060334919700/acorn.mp4",
       "independent_community_announcement": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445/?ctp=69",
-      "replay_status": "not reproduced from original running-man overlay pixels"
+      "replay_status": "full source-pixel replay independently reproduced, 102/102 and 90/90 exact, with registration recovered from original video",
+      "original_archived_video": "assets/acorn-c53ef409753e9fa2.mp4",
+      "original_archived_video_git_blob_sha1": "0480da448164c0a1bbd115f1065ffd9d68f70bf2",
+      "authentic_original_pixel_art": "assets/Inside_pc_acorn_fixed-081372579ea1409c.png",
+      "authentic_original_pixel_art_sha1": "c04ac01fc6f3f3af05d00f7e2b104396ade440e1",
+      "replay_code": "scripts/verify_historical_acorn_41_full_overlay.py",
+      "replay_fixture": "data/historical-2021-acorn-41-overlay-positive-control.json",
+      "replay_research_note": "docs/conjecture-lab/2026-10-09-cl16-full-2021-life-overlay-replay.md"
     }
   },
   "xbox_one": {
