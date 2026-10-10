@@ -42,6 +42,10 @@ jobs:
         run: python scripts/speculative_tail_operator_preflight.py
       - name: Verify frozen CX-E speculative receiver and XOR controls
         run: python scripts/verify_cx_e_revived_channels.py
+      - name: Verify historical acorn generation-41 source-native operation
+        run: python scripts/verify_historical_acorn_41_life.py
+      - name: Calibrate GHI XOR with exact rail-conditioned null
+        run: python scripts/conjecture_lab_cx_e6_exact_xor_null.py
       - name: Verify 2020 Terminal41 index route preservation gaps
         run: python scripts/verify_terminal41_historical_index_gaps.py
       - name: Audit original 534brn A byte provenance and exact candidate-fill delta
