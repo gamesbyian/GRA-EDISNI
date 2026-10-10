@@ -1,0 +1,76 @@
+{
+  "schema": "inside-original-printer-acorn41-full-replay-v1",
+  "historical_operation": "LIFEDETECTED",
+  "status": "independently pixel-replayed from pinned historical binary art and a pinned archival MP4 video",
+  "sources": {
+    "original_printer_order": "data/printer-reference/pc-ps4-acorn-order.txt",
+    "archived_art_file": "gamesbyian/playdead-unofficial-exports/assets/Inside_pc_acorn_fixed-081372579ea1409c.png",
+    "archived_art_git_blob_sha1": "c04ac01fc6f3f3af05d00f7e2b104396ade440e1",
+    "archived_video_file": "gamesbyian/playdead-unofficial-exports/assets/acorn-c53ef409753e9fa2.mp4",
+    "archived_video_git_blob_sha1": "0480da448164c0a1bbd115f1065ffd9d68f70bf2",
+    "recovery_workflow_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38025192150",
+    "original_discord_2021": "https://discord.com/channels/460626942190813184/461275582970462209/852612048482336788"
+  },
+  "grid": [
+    32,
+    32
+  ],
+  "printer_alphabet": {
+    "/": "red",
+    "-": "blue",
+    ".": "orange"
+  },
+  "printer_alphabet_census": {
+    "/": 308,
+    "-": 613,
+    ".": 103
+  },
+  "seed": {
+    "game": "Conway B3/S23",
+    "pattern": "standard seven-cell Acorn bo$3bo$2o2b3o!",
+    "generations": 41,
+    "live_cells": 102,
+    "bounding_box_width_height": [
+      30,
+      15
+    ]
+  },
+  "video_derived_registration": {
+    "top_left_zero_based": [
+      1,
+      16
+    ],
+    "right_and_bottom_exclusive": [
+      31,
+      31
+    ],
+    "matches_mask_pixels": 102,
+    "disagrees_mask_pixels": 0
+  },
+  "palette_selection": {
+    "orange_output_rule": "(sourceDot AND NOT lifeMask) OR (sourceDash AND lifeMask)",
+    "masked_original_dash": 39,
+    "masked_original_dot": 52,
+    "masked_original_slash": 11,
+    "retained_unmasked_dot": 51,
+    "new_orange_from_masked_dash": 39,
+    "output_orange_cells": 90
+  },
+  "final_video_frame": {
+    "frame_index": 565,
+    "fps": 33.333333333333336,
+    "video_dimensions": [
+      512,
+      512
+    ],
+    "grid_pixel_size": 16,
+    "orange_brightness_sample_rule": "r>180 and 45<g<180 and b<70 at center of each 16px cell",
+    "observed_orange_pixels": 90,
+    "computed_orange_pixels": 90,
+    "symmetric_difference": 0
+  },
+  "expected_output_bitmap_sha256": "38ea14a45bffbd735cec104cad5ba0499bbb36163bc3c2bf0b9cf250b773bd6d",
+  "result_text": "LIFE DETECTED",
+  "script": "scripts/verify_historical_acorn_41_full_overlay.py",
+  "limit": "Offset and palette operation recovered from the archived 2021 video, not blindly deduced from the sticker or printer text; no CE foreground solution claimed."
+}
