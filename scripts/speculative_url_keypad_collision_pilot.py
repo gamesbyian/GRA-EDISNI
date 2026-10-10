@@ -34,6 +34,19 @@ def run():
         nodes[n].append({"ordinal":i+1,"background":GRID[i//3][i%3],
                          "physical_coord":[i//3,i%3]})
     assert sorted(len(x) for x in nodes.values())==[1,1,1,2,2,2]
+    # Three rival, predeclared duplicate-address semantics, deliberately
+    # independent of stickers and of any hoped-for readout.
+    # 1. Last-write: visiting a destination leaves it active.
+    # 2. Toggle: every revisit flips its active bit.
+    # 3. Visit count: retain 0/1/2 without forcing binary output.
+    count_by_slot={str(k):counts.get(str(k),0) for k in range(1,10)}
+    last_write=[int(counts.get(str(k),0)>0) for k in range(1,10)]
+    toggle=[int(counts.get(str(k),0)%2) for k in range(1,10)]
+    visit_count=[int(counts.get(str(k),0)) for k in range(1,10)]
+    assert last_write==[0,0,1,1,1,1,0,1,1]
+    assert toggle==[0,0,0,1,0,1,0,1,0]
+    assert visit_count==[0,0,2,1,2,1,0,1,2]
+    assert sum(toggle)==3 and sum(last_write)==6 and sum(visit_count)==9
     sym=[]
     for label,t in transformations(tuple(tuple(row) for row in GRID)):
         trail="".join(t[i//3][i%3] for i in range(9))
@@ -43,6 +56,8 @@ def run():
             "digit_counts":dict(sorted(counts.items())),"missing_digits":"127",
             "duplicate_digit_classes":"359","distinct_targets":6,
             "nonbijective":True,"digit_keypad_coordinates":routes,
+            "predeclared_slot_semantics":{"last_write":last_write,"toggle":toggle,
+                                          "visit_count":visit_count},
             "physical_repeated_label_classes":dict(nodes),
             "eight_orientation_controls":sym,
             "answer_claim":"none: collision geometry is source-fixed but output/consumer and orientation are not"}
