@@ -18,7 +18,7 @@
     ],
     "documented_spatial_product": "ASCII acorn with the number 41",
     "documented_valid_password": "LIFEDETECTED",
-    "derivation_status": "The source states that the acorn can be reconstructed, but the derivation from that object to LIFEDETECTED remains unresolved.",
+    "derivation_status": "The accepted LIFEDETECTED string was initially guessed in April 2019. A June 2021 community reconstruction reportedly obtains it by evolving the standard Game of Life acorn seed to generation 41 and overlaying the result on the separately known running-man puzzle. Its original 2021 demonstration is cited, not independently replayed in this fixture.",
     "solved_row_order_status": "Recovered from a primary community text attachment posted 2018-07-09 as 'acorn order version'; all 32 rows exactly match the raw full-length corpus.",
     "solved_order_fixture": "data/printer-reference/pc-ps4-acorn-order.txt",
     "solved_order_provenance": {
@@ -27,6 +27,18 @@
       "timestamp": "2018-07-09 17:35",
       "attachment": "assets/inside-pc-long-ascii-cdac293e0bbbcf9f.txt",
       "archived_blob_sha": "fe69159b0a31be20230aa66ce16be01deab0c108"
+    },
+    "derivation_provenance": {
+      "original_historical_summary_repo": "gamesbyian/playdead-unofficial-exports",
+      "summary_source": "Playdead Unofficial - ARG - tldr [462637922944811028].txt",
+      "summary_git_blob_sha": "20600a0756002ef7a7f2994b2a5e7b7e4852333d",
+      "discovery_report": "2021-06-10",
+      "summary_message": "2021-06-25 00:26-00:27 (export timezone unspecified)",
+      "discoverer": "4987372",
+      "original_discovery_message_url": "https://discord.com/channels/460626942190813184/461275582970462209/852612048482336788",
+      "demonstration_url": "https://cdn.discordapp.com/attachments/461275582970462209/857907060334919700/acorn.mp4",
+      "independent_community_announcement": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445/?ctp=69",
+      "replay_status": "not reproduced from original running-man overlay pixels"
     }
   },
   "xbox_one": {
