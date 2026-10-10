@@ -1,3 +1,7 @@
+## 9 October 2026: original-game clue sources (2016)
+
+[Source-graded original-game clue inventory and acquisition plan](original-game-ordinary-detail-clue-hunt-2026-10-09.md) is merged. First obtain original last-orb-board images/scene graph and `SecretMap` DDS, testing **13 earlier + final orb** with the *existing* `scripts/audit_secretmap_registered_orbs.py`. Independently source-check the single 2016 witness of a buried **12-button** `Cargo_Elevator_Narrow` console and four small screens, and recover original `FX_ScreenKaypro` glyph pixels if possible. Status: original scene/texture bytes **not acquired**; 9/12/4 coincidences **do not** establish CE-sticker linkage. Avoid speculative overlay/decoding until ordinary gameplay or discarded-content explanations are excluded.
+
 ## 9 October 2026: CX-E5 selected G/H/I XOR, exact truth table and seven new rival forecasts
 
 **New bounded DEVELOP finding:** Under the post-hoc `4 / 9 / (9+3)` two-grid premise, the three repeated background classes G/H/I form 12 typed triples per four quarters. Treat `/` as 1 and each quarter's other mark (`-` for first 81; `.` for final 27) as 0. Exhaustive existential enumeration of **all 16 two-input Boolean functions** gives **exactly one compatible global function: XOR**, including the partial-observation constraints. The native 3-layer index is (q×27+[7,8,9], q×27+[16,17,18], q×27+[25,26,27]). [Full CX-E5 derivation and adversarial controls](conjecture-lab/2026-10-09-cx-e5-ghi-xor-selector.md), [source-code check](../scripts/conjecture_lab_cx_e5_ghi_boolean.py).
