@@ -111,3 +111,14 @@ These are **interaction tests**, not evidence that the component claims support 
 
 **Scheduling:** CX-C and the cover keybook are especially cheap documentary reconstructions, and can run alongside already queued SR-03/04 rather than displacing their pilots. CX-A/B/D are dependent on scarce source-artifact recovery. Re-rank only when a genuinely new constraint, archival source, or falsification lands.
 
+
+## First cross-agent execution results: CX-C and CX-E / E2 (9 October 2026)
+
+The combined portfolio has now produced two scoped conjecture-lab investigations, not merely a refreshed plan:
+
+- **[CX-C four-stage cover theory, type checked](conjecture-lab/2026-10-09-cx-c-typed-cover-stage-pilot.md):** Four genuine old Terminal41 scheme labels correspond to four incompatible historical platform input/output types. Two cover reference families (planet/acorn) have semantic anchors; graph/login→PROBE/CONDISCON is still invented. A literal four-stage reuse of original operators on 27-symbol quarters cannot execute without four source-specified adapters, and no such adapters are known. Cover-as-standalone historical reference remains a live control.
+- **[CX-E rail audit](conjecture-lab/2026-10-09-cx-e-slash-rails-calibration.md):** Current 66-observed-residue mask exposes only five complete columns across the 4×27 view: 5,9,15,17,20; columns 5/15 are observed `////`. Under two exact count/mask-conditioned reference models, at least two slash columns occur with 2.9347% and 4.8689% probabilities. Those retrospective numbers are not independent evidence.
+- **[CX-E2 conditional 4 / 9 / 12 grammar](conjecture-lab/2026-10-09-cx-e2-four-nine-twelve-fields.md):** Treat the two observed slash columns as delimiters. The nine middle symbols in each quarter cover **F,G,H,I,A,B,C,D,E exactly once**, hence can be registered to the independently solved IAB/CDE/FGH *background classes*, avoiding Exp. 319's type error for a nine-occurrence-of-one-class body. A conjectural one-minority-per-*physical-row* model admits 48 middle-field combinations and **freezes** `6=-, 8=-, 11=-, 41=-, 64=-, 91=/`. At 6/41/64 it **contradicts** the older frame-minority interpretation's `/` forecasts. This is a useful new rivalry, not physical support for the new grammar. Four of 19 alternative nine-site windows also admit it, so compatibility alone is insufficient.
+
+**Disposition:** Promote the CX-E2 six predictions only to an explicitly speculative *prospective register*; do not alter observations or a validated model. Further work requires an independent physical symbol at a discriminating residue or an original source explicitly defining the delimiters and how to consume prefix4/suffix12. SR-03/SR-04 and direct `534brn` archive/reader recovery continue unchanged. Reproduction scripts: [rail nulls](../scripts/conjecture_lab_cx_e_rail_nulls.py), [rail field / 19-window enumerator](../scripts/conjecture_lab_cx_e_rail_field_pilot.py).
+
