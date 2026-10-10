@@ -31,7 +31,7 @@ class SafeRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         new = urllib.parse.urlsplit(newurl)
         if new.scheme != "https" or new.hostname not in self.hosts:
-            raise ValueError("redirect_outside_allowlist")
+            raise ValueError("redirect_outside_allowlist_host:" + str(new.hostname))
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 def check_manifest(doc: dict) -> None:
