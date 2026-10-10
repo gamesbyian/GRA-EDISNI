@@ -55,6 +55,12 @@ This is a strong Playdead-specific precedent for **side-channel-constrained orde
 
 It is not permission to permute H108 freely or apply Life without an equivalent cue.
 
+### Chronological correction: the acorn word was actually recovered in 2021
+
+The `LIFEDETECTED` phrase was **guessed and accepted** in April 2019, but a 25 June 2021 community #tldr post reports that solver `4987372` found its *source-operation derivation* on 10 June 2021: evolve the standard seven-cell **Conway Acorn seed to generation 41**, then **overlay the binary result on the separate running-man art** to yield `LIFE DETECTED`. The original message is [Discord ID 852612048482336788](https://discord.com/channels/460626942190813184/461275582970462209/852612048482336788); the archived #tldr Git blob is `20600a0756002ef7a7f2994b2a5e7b7e4852333d`. The 2021 demonstration video's original bytes and placement are **not independently replayed** in this project; see [CL-13](conjecture-lab/2026-10-09-cl13-2021-acorn-overlay-provenance.md).
+
+Crucially, this is an independently attested **multi-object generative overlay**, not merely a use of cellular automata or a guessed server password. The exact acorn B3/S23 generation-41 output is now separately reproducible with `scripts/verify_historical_acorn_41_life.py` (102 live cells, bounding box 30×15). This **does not establish** a source-fixed INSIDE CE foreground overlay. The related [CL-14](conjecture-lab/2026-10-09-cl14-cover-acorn-historical-clue.md) records an *original August/December 2022 community conjecture* that the 2019 PS4 reversible cover's acorn/running-man pairing was already a hint to this subsequently solved historical puzzle, rather than an unconsumed CE sticker reader.
+
 ## 2. Community solvers explicitly expected the stickers to have a comparable visual aid
 
 On 29 Oct 2023, while discussing the unresolved foreground, the community made the analogy directly.
