@@ -75,7 +75,7 @@ Noteworthy explicit counterexample: the otherwise similar **one minority per phy
 
 The comparison model applies the original **one common minority polarity in each three-column nine-site serial frame** (for the 81-symbol body) and the conditional **one slash per A–I class across three tail occurrences**. It is a mature but *conditional* structural model, not independently verified physical truth at these missing residues. CX-E2 is incompatible with that model at 6, 41 and 64; this is expected and desirable in a genuine rival-family experiment. Do not silently combine their forced marks.
 
-The six CX-E2 marks are **frozen now** as a prospective register. Because the rule was devised while looking at the original 66 known residues and selected its window from observed slash columns, none of the six is a prior independent validation. A future newly authenticated owner observation at residue **6, 41 or 64** would discriminate these exact competing variants immediately. Do not redefine the row grammar if it fails.
+The six CX-E2 marks are **frozen now** as a prospective register, including an immutable-by-convention [machine-readable forecast fixture](../../data/conjecture-lab-cx-e2-rail-predictions-2026-10-09.json) and [non-mutating physical holdout checker](../../scripts/check_conjecture_lab_cx_e2_forecasts.py). Because the rule was devised while looking at the original 66 known residues and selected its window from observed slash columns, none of the six is a prior independent validation. A future newly authenticated owner observation at residue **6, 41 or 64** would discriminate these exact competing variants immediately. Do not redefine the row grammar if it fails.
 
 ## A required look-elsewhere control
 
@@ -114,6 +114,7 @@ Run:
 ```sh
 python scripts/conjecture_lab_cx_e_rail_nulls.py
 python scripts/conjecture_lab_cx_e_rail_field_pilot.py
+python scripts/check_conjecture_lab_cx_e2_forecasts.py
 ```
 
 **Disposition: promising DEVELOP-level rival, not a verified decoder.** Promote as an experiment designed for next independent physical discriminator, while continuing source-first `534brn` and authentic receiving-artifact work. Stop if original source disproves the delimiter premise or a frozen forecast contradicts a newly observed sticker.
