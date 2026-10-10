@@ -1,0 +1,101 @@
+{
+  "schema": "inside-cover-source-native-registration-v1",
+  "freeze_date": "2026-10-09",
+  "original_scan": {
+    "file": "INSIDE_A-5d197786f158c567.JPG",
+    "upstream_git_blob_sha1": "875403acac93d83a8acae97e14240c35b88d33ab",
+    "source_sha256": "2a65c9dfe0abd819379a3a044e8c42f7c454a52fad68b5ebc22fd2ff7ffc787f",
+    "pixel_dimensions": [
+      6552,
+      5040
+    ],
+    "bytes": 6313480
+  },
+  "exterior_negative": {
+    "file": "INSIDE_B-80fbff1237c37913.JPG",
+    "upstream_git_blob_sha1": "d533d4161f0572b65d134d54f4fa6477029f2d64",
+    "source_sha256": "110772d5d2df45e793c87397f8d7d0c31fb0659ec67eacae58d5c3ac3a3627ba",
+    "pixel_dimensions": [
+      6552,
+      5040
+    ],
+    "bytes": 9396264
+  },
+  "comparison": {
+    "coordinates": "zero-based pixel positions on downsampled original 3276x2520 grayscale LANCZOS source scan",
+    "method": "fixed-after-retrospective-localization Pearson grayscale correlation, not a prospective decoded transform",
+    "controls": [
+      {
+        "role": "acorn_family_monitor",
+        "file": "image-7be117e2c68d1b1e.png",
+        "reference_pixel_dimensions": [
+          84,
+          62
+        ],
+        "origin_half_res": [
+          1890,
+          1647
+        ],
+        "original_A_native_bbox": [
+          3780,
+          3294,
+          3948,
+          3418
+        ],
+        "original_A_pearson": 0.9003,
+        "exterior_B_same_coordinates_pearson": 0.040212,
+        "original_ref_sha1": "40039a204800383f69c1b0e4475edcc0989944ef"
+      },
+      {
+        "role": "planet_family_monitor",
+        "file": "image-21b86ef8e34e269b.png",
+        "reference_pixel_dimensions": [
+          53,
+          49
+        ],
+        "origin_half_res": [
+          563,
+          1469
+        ],
+        "original_A_native_bbox": [
+          1126,
+          2938,
+          1232,
+          3036
+        ],
+        "original_A_pearson": 0.912542,
+        "exterior_B_same_coordinates_pearson": -0.038328,
+        "original_ref_sha1": "c07e87d72a92d4181b1014f3a8269e086a4ef471"
+      },
+      {
+        "role": "graph_family_monitor",
+        "file": "image-d6d0d0f76ab751ca.png",
+        "reference_pixel_dimensions": [
+          73,
+          56
+        ],
+        "origin_half_res": [
+          1116,
+          1441
+        ],
+        "original_A_native_bbox": [
+          2232,
+          2882,
+          2378,
+          2994
+        ],
+        "original_A_pearson": 0.859104,
+        "exterior_B_same_coordinates_pearson": -0.176659,
+        "original_ref_sha1": "b6216e584a62e44ae0594cb881c9ad27ef5266fe"
+      }
+    ]
+  },
+  "runner": "scripts/audit_original_cover_monitor_provenance.py",
+  "gha_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38024971110",
+  "visual_observations": [
+    "partial acorn-style bright monitor appears as foreground screen; authentic scene",
+    "tiny human figure in running posture visible on detached illuminated platform outside right window; authentic scene",
+    "these facts do NOT establish figure graphic identity with 2021 running-man cipher or any intended CE sticker overlay"
+  ],
+  "stage": "historical image source and crop provenance confirmed; historical overlay/authorial meaning unverified"
+}
