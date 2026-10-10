@@ -3,6 +3,7 @@
   "frozen_on": "2026-10-09",
   "purpose": "Fixed-URL source recovery of original-game pictures from 2016 reports. Never infer original game bytes from derivative images.",
   "allowed_hosts": [
+    "i.imgur.com",
     "i026.radikal.ru",
     "image.9game.cn",
     "imgur.com",
@@ -98,6 +99,22 @@
       "source_date": "2016-07-25",
       "source_reference": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445",
       "source_context": "Atøm July 25 screenshot, scene identity NOT verified as the buried elevator."
+    },
+    {
+      "id": "2016_bulletin_board_imgur_direct_candidate",
+      "url": "https://i.imgur.com/IUTzaee.jpg",
+      "kind": "image",
+      "source_date": "2016-07-12",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/365172547948628597/",
+      "source_context": "DETERMINISTIC CDN URL derived from exact contemporary imgur.com/IUTzaee image ID; extension .jpg is proposed, not original directly witnessed CDN URL. Inspect identity before calling this the board."
+    },
+    {
+      "id": "2016_polybius_album_embedded_og",
+      "url": "https://i.imgur.com/Xgc8hLr.png?fb",
+      "kind": "image",
+      "source_date": "2016-07-23",
+      "source_reference": "https://imgur.com/a/USImD",
+      "source_context": "Direct OG:image URL recovered from the actual captured original 2016 Polybius album HTML in first CI witness run. Likely one album image only."
     }
   ]
 }
