@@ -148,7 +148,10 @@ def scan_null(obs, trials, seed):
     counts=Counter()
     unique_counts=[]
     for t in range(trials):
-        sample={}
+        # Rails must remain observed slashes even when scanning all
+        # 84 class subsets (E/F include rail coordinates). Omitting
+        # them would make the subset-selection null spuriously loose.
+        sample={q*27+col:1 for q in range(4) for col in RAILS}
         for observed,k,_ in options:
             winners=set(rng.sample(observed,k))
             for n in observed:
