@@ -80,3 +80,10 @@ This **closes the physical coexistence question** with stronger evidence than th
 
 **Next retrieval:** [exact known 2021 acorn demonstration attachment](../../scripts/probe_historical_acorn_2021_video.py) has a separate one-time, read-only archival CDN probe ([workflow](../../.github/workflows/one-shot-acorn-video-2021.yml)). Any HTTP error must be reported as an access outcome, not treated as failure of the 2021 first-person witness testimony. Any retrieved MP4 still needs source/pixel verification before claiming independent reproduction of the historical overlay.
 
+
+
+## Post-CL16 boundary of the cover interpretation
+
+The actual [source-authenticated 2021 acorn video and independent 32×32 PC printer reexecution](2026-10-09-cl16-full-2021-life-overlay-replay.md) have now been recovered. The original historical “running man” recipient was the **32×32 PC printer graphic** with 90 final orange cells, which is *not* known to be an exact graphical depiction of the tiny three-dimensional runner outside the cover's window. The independently authenticated cover scan [CL15](2026-10-09-cl15-cover-source-authentic-a1.md) establishes that the acorn monitor and small running person coexisted on the **original cover**, and original 2022 primary testimony already noted that conjunction. It does **not** turn an apparent theme into a demonstrated pixel-accurate original author's clue.
+
+**Revised A1 interpretation:** COVER-A is a source-economical *thematic/meta-reference* explanation for why the 2019 cover displays a partial acorn and runner, not a validated re-creation of the original 2021 mask in the cover scene. There is presently no evidence the 32×32 historic raster overlays onto the cover runner at a native measurable registration. Testing for an exact graphical identity still requires a directly corresponding source graphic/author cue; do not fit scale/transparency to the scene just to manufacture it. COVER-B (CE-specific instructions) retains all existing source-evidence obligations.
