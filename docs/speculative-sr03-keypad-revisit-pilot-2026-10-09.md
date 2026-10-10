@@ -24,6 +24,18 @@ A strict 1–9 phone keypad offers row and column addresses for each digit, but 
 
 The [source-only prototype](../scripts/speculative_url_keypad_collision_pilot.py) verifies the nine digits, six targets, 3+3 repeated/singleton partitions, native keypad coordinates, and all eight unique physical rotations/reflections. It does **not** read sticker foreground symbols or fit any missing H108 cells.
 
+## Three competing repeat-address operations, now implemented
+
+Without using any foreground mark, the nine source digits supply nine visits to cells 1..9 in the exact sequence 5,3,4,9,6,5,3,9,8. The source-only script freezes three deliberately rival interpretations, represented as nine-cell vectors in **numeric keypad order**:
+
+| Predeclared operation | Vector for positions 1..9 | Consequence |
+| --- | --- | --- |
+| Visit at least once / last-write occupancy | 001111011 | Six occupied targets |
+| Toggle on each visit / parity | 000101010 | Three occupied targets (4,6,8) |
+| Retain visit count | 002121012 | Values 0,1,2; preserves all nine visits |
+
+These are three **alternative renderings of the same URL**, not three tests with independently observed payload answers. A subsequent source must tell us whether a digit denotes a visit, toggle, mask, timestamp or something else. We cannot select whichever vector yields attractive foreground patterns or pretend these three outputs are new evidence.
+
 ## What to do next
 
 Specify at most three operation families before scoring any H108 output: (a) ordinary revisit/update, (b) repeated-address XOR/toggle, (c) repeated-address selection with a second independent symbol. Each must have the same baseline and fixed physical orientation convention. If all three remain underdetermined, do not call it a decoder.
