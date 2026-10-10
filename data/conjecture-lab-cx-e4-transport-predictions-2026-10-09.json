@@ -1,0 +1,88 @@
+{
+  "id": "CX-E4-v1",
+  "origin": "data/observations.csv at 66 unique H108 residues, 9 October 2026",
+  "status": "DEVELOP, after-data selection; not prospectively validated",
+  "assumptions": [
+    "four 27-position quarters, all-slash separators at 5 and 15",
+    "suffix positions 16-24 provide native GHIABCDEF across-class 9-grid in IAB/CDE/FGH layout",
+    "Q1 second grid has one slash-minority per physical row",
+    "Q2 second grid has one dash-minority per physical column",
+    "Q1->Q2 transform is transpose plus binary complement (other zero-conflict D4 control exists)"
+  ],
+  "original_q1_partial": [
+    "--/",
+    "-?-",
+    "-?/"
+  ],
+  "original_q2_partial": [
+    "?//",
+    "/??",
+    "-/-"
+  ],
+  "conditional_q1_full": [
+    "--/",
+    "-/-",
+    "--/"
+  ],
+  "conditional_q2_full": [
+    "///",
+    "/-/",
+    "-/-"
+  ],
+  "source_transfer": "Q2[i,j] = opposite(Q1[j,i]) for slash/dash",
+  "observed_source_target_overlap": 6,
+  "observed_conflicts": 0,
+  "other_zero_conflict_orientation_count": 1,
+  "forecasts": [
+    {
+      "residue": 16,
+      "image_class": "G",
+      "predicted_symbol": "-",
+      "frame_rival_allowed": [
+        "-"
+      ]
+    },
+    {
+      "residue": 22,
+      "image_class": "D",
+      "predicted_symbol": "/",
+      "frame_rival_allowed": [
+        "-",
+        "/"
+      ]
+    },
+    {
+      "residue": 45,
+      "image_class": "I",
+      "predicted_symbol": "/",
+      "frame_rival_allowed": [
+        "-"
+      ],
+      "discriminator": true
+    },
+    {
+      "residue": 49,
+      "image_class": "D",
+      "predicted_symbol": "-",
+      "frame_rival_allowed": [
+        "-",
+        "/"
+      ]
+    },
+    {
+      "residue": 50,
+      "image_class": "E",
+      "predicted_symbol": "/",
+      "frame_rival_allowed": [
+        "-",
+        "/"
+      ]
+    }
+  ],
+  "universal_transfer_negatives": [
+    "Q2 -> Q3 second-field: 0 zero-conflict variants across eight D4 orientations and binary role preserve/swap",
+    "Q3 -> Q4 second-field: 0 zero-conflict variants across eight D4 orientations and two cross-alphabet binary role maps"
+  ],
+  "source": "docs/conjecture-lab/2026-10-09-cx-e4-dual-grid-transfer.md",
+  "generator": "scripts/conjecture_lab_cx_e4_dual_nine_fields.py"
+}
