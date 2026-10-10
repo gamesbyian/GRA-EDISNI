@@ -8,7 +8,7 @@ hypotheses and must not be used to report an independent validation.
 import argparse
 import csv
 import json
-from itertools import product
+from itertools import combinations, product
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -120,6 +120,56 @@ def row_or_column_transfer_forecasts(marks, grids):
     }
 
 
+def q1_q2_fixed_mask_exact_null(g1, g2):
+    """Enumerate observed-label permutations under each grid's symbol count.
+
+    Q1 contains 7 observed sites with 2 slashes, Q2 contains 6 with
+    4 slashes: C(7,2)*C(6,4)=315 states. This is a descriptive
+    after-selection calibration, not corrected for all prior research.
+    """
+    seen_a=[(i,j) for i in range(3) for j in range(3) if g1[i][j]!="?"]
+    seen_b=[(i,j) for i in range(3) for j in range(3) if g2[i][j]!="?"]
+    slash_a=sum(x=="/" for row in g1 for x in row)
+    slash_b=sum(x=="/" for row in g2 for x in row)
+    def relabel(src, spots, chosen):
+        z=[row[:] for row in src]
+        which=set(chosen)
+        for idx,(r,c) in enumerate(spots):
+            z[r][c]="/" if idx in which else "-"
+        return z
+    hist={"any_zero":0,"any_zero_with_six_overlap":0,
+          "row_col_unique":0,"row_col_unique_transpose_complement":0}
+    total=0
+    for ia in combinations(range(len(seen_a)),slash_a):
+        a=relabel(g1,seen_a,ia)
+        for ib in combinations(range(len(seen_b)),slash_b):
+            b=relabel(g2,seen_b,ib)
+            total+=1
+            tests=evaluate_source_target(a,b,"/-","/-")
+            zeros=[x for x in tests if x["mismatches"]==0]
+            hist["any_zero"]+=bool(zeros)
+            hist["any_zero_with_six_overlap"]+=any(x["overlap"]>=6 for x in zeros)
+            oa=minority_options(a,"/-","row")
+            ob=minority_options(b,"/-","column")
+            unique=len(oa)==len(ob)==1
+            hist["row_col_unique"]+=unique
+            if unique:
+                z=[list(row) for row in oa[0]["rows"]]
+                transformed=[["/" if z[j][i]=="-" else "-" for j in range(3)]
+                             for i in range(3)]
+                hist["row_col_unique_transpose_complement"]+=(
+                    transformed==[list(row) for row in ob[0]["rows"]])
+    assert total==315, total
+    return {"conditional_sample_space":total,
+            "fixed_known_masks":True,
+            "per_grid_observed_slash_counts":[slash_a,slash_b],
+            "event_counts":hist,
+            "fractions_of_all":{k:v/total for k,v in hist.items()},
+            "conditional_transform_fraction_given_unique_row_col":
+               hist["row_col_unique_transpose_complement"]/hist["row_col_unique"],
+            "caution":"post-hoc, missing global selection multiplicity"}
+
+
 def run(path):
     marks=get_observations(path)
     grids=[get_grid(marks,q) for q in range(4)]
@@ -163,6 +213,7 @@ def run(path):
         "quarter_suffix_fields":quarters,
         "adjacent_quarter_8D4_x_2role_edges":edges,
         "special_q1_q2_transform":row_or_column_transfer_forecasts(marks,grids),
+        "fixed_mask_q1_q2_exact_null":q1_q2_fixed_mask_exact_null(grids[0],grids[1]),
         "interpretation":"A literal same-axis row reader across all second fields is contradicted by Q2; only Q1->Q2 offers an exact D4+role-swap with >=6 overlapping known cells. No universal four-quarter rule established."
     }
 
