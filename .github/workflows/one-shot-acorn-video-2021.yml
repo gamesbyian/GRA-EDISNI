@@ -1,0 +1,39 @@
+name: One-shot historical 2021 acorn demonstration source probe
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/probe_historical_acorn_2021_video.py
+      - .github/workflows/one-shot-acorn-video-2021.yml
+
+permissions:
+  contents: read
+
+jobs:
+  archival-attachment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Probe one literal original June 2021 CDN attachment without guessing URLs
+        run: python scripts/probe_historical_acorn_2021_video.py
+      - name: Inspect recovered file media metadata only when present
+        run: |
+          if [ -f archive_video_probe/acorn-2021-cdn-retrieved.mp4 ]; then
+            ffprobe -v error -show_entries format=duration,size:stream=codec_name,width,height -of json archive_video_probe/acorn-2021-cdn-retrieved.mp4 > archive_video_probe/ffprobe.json
+            mkdir -p archive_video_probe/frames
+            ffmpeg -hide_banner -nostdin -loglevel error -i archive_video_probe/acorn-2021-cdn-retrieved.mp4 -vf 'fps=1/5,scale=640:-1' -frames:v 25 archive_video_probe/frames/frame_%03d.png
+          fi
+      - name: Preserve exact provenance outcome and any original MP4 candidate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-2021-acorn-overlay-attachment-witness
+          path: archive_video_probe/
+          retention-days: 30
+          if-no-files-found: warn
