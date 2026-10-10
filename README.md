@@ -2,7 +2,7 @@
 
 Working repository for the INSIDE Collector's Edition sticker-code investigation.
 
-## Purpose
+**Speculative-revival research (9 October 2026):** [36 ranked old-idea revivals](docs/speculative-revival-portfolio-2026-10-09.md), [SR-03 nonbijective nine-digit keypad pilot](docs/speculative-sr03-keypad-revisit-pilot-2026-10-09.md), and source-driven [SR-04 body/tail domain preflight](scripts/speculative_tail_operator_preflight.py). These are *candidate designs*, not decoded CE foreground.\n\n## Purpose
 
 This repository is the fast, executable research memory for the project.
 
