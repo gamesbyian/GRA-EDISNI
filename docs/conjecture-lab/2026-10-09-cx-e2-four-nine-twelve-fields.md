@@ -39,6 +39,12 @@ The following are **partial observation-only** physical 3×3 fields after reorde
 
 The 4+9+12 split also reveals four leading **four-symbol** fragments and four trailing **twelve-symbol** fragments, still uninterpreted. The nine-cell fields are not decoded pictures.
 
+### The twelve-site suffix has a natural but unproven 9+3 split
+
+For each quarter, positions **16–24** again traverse exactly one complete A–I class cycle (starting with G); the remaining **25–27** repeat the first three classes **G/H/I**. In other words the rail suffix admits `9 across-class sites + 3 repeated-class control sites`, and the entire layout can be written as **4 / 9 / (9+3)**, with two observed slash separators. The observed final triples are Q1 `?-?`, Q2 `?-?`, Q3 `///`, and Q4 `??/`.
+
+This is a usable *hypothetical* selector grammar, but the 9+3 repetition follows automatically from the known period-nine serial artwork. It must not be treated as independent evidence for the community's separate **within-one-class** nine-body/three-tail proposal. No literal index/readout or source-authored G/H/I control meaning has been recovered.
+
 ## A finite deliberately granted assumption
 
 **CX-E2 v1, invented bridge:** each selected physical 3×3 field has exactly **one minority symbol per *physical row***, with a uniform minority polarity for that quarter. For Q1–Q3 the alphabet is slash/dash; for Q4 slash/dot. This row grammar is a deliberately simple candidate, not an imported validated POS3 law.
