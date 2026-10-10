@@ -52,3 +52,33 @@ The workflow runs **once on its addition to main** (trigger paths deliberately r
 An actual **positive** COVER-A identification requires: a source-authentic running-man cipher image, a source-authentic cover detail, an independently specified source registration/crop that explains the omitted acorn portion, and a composition/interpretation deriving the 2021 operation. Matching the word “running” in Discord is *not* sufficient.
 
 **Current state:** script/workflow shipped, SHA expectations registered, original image identity comparison still **not completed**; no plaintext, valid CE operator, or physical sticker predictions. Prefer leaving the cover clue *unresolved* over crediting it as solved by an attractive story.
+
+
+## Actual execution: original binaries and three historical crops confirmed (10 October 2026 UTC)
+
+This pipeline has now **completed successfully**, not merely been proposed. [Acquisition run 38024716054](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38024716054) fetched the two **byte-authenticated, original** 6552×5040 scans and all four pinned historic monitor/reference crops. [Follow-on source-registration run 38024971110](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38024971110) passed the extra independent crop-provenance audit. The large original binary scans were retained intact in a 30-day downloadable Action artifact. This experiment does **not** change the sticker data.
+
+The genuine original A image visibly shows a glowing acorn-family **foreground monitor**, with a **small running person on a separately illuminated white platform outside the right-hand window**. This is a directly inspected spatial conjunction, not merely a textual report by a contemporary user. Two distinct uncertainties remain: whether the runner is an *exact graphic quotation of the old running-man cipher* rather than an ordinary game silhouette, and whether the designer intentionally used the juxtaposition to cue the generation-41 solution. In particular, the dated 2021 demonstration video and original independently registered running-man cipher pixels have not been recovered here.
+
+### Source-to-source provenance control: historical monitor crops originate in this scan
+
+An initial source-to-source template comparison localized three old, independently archived **small monitor crops** at fixed positions in the half-resolution version of original A. The [fully reproducible provenance checker](../../scripts/audit_original_cover_monitor_provenance.py) then froze the coordinates, checked the original images' Git blob hashes anew, and measured grayscale **Pearson correlation** between each crop and its native-scan rectangle. A matching rectangle on the original **exterior** scan B serves as a negative control. [Machine-readable exact-coordinate fixture](../../data/cover-original-monitor-registration-2026-10-09.json).
+
+| Historic image family | Native pixel bounds in original A: x0,y0,x1,y1 | Original A correlation | Exterior B same-position control |
+| --- | --- | ---: | ---: |
+| Acorn monitor | `3780,3294,3948,3418` | **0.900300** | 0.040212 |
+| Planet monitor | `1126,2938,1232,3036` | **0.912542** | −0.038328 |
+| Graph monitor | `2232,2882,2378,2994` | **0.859104** | −0.176659 |
+
+The comparison uses the intact original scan downscaled **exactly 50% with LANCZOS**, and the old source crops at their archived 84×62, 53×49 and 73×56 sizes. It checks this **fixed** registration; it does not represent a blind test of whether the *cover itself* matches a separately reconstructed game image. In particular, the correlations show that **older crop artifacts came from this same print/scan**, not that a new 4-stage CE code transform has been found. Source roles and naming were originally independently recorded in Experiment 410.
+
+Native-resolution visual inspection context crops (not puzzle-fitted):
+- acorn monitor x3630..4090, y3180..3520;
+- runner/window x5550..6500, y2850..3600.
+
+These crops can be re-created verbatim from the authenticated original A bytes. Inspection-brightened copies are **renditions**, not new recovered visual data. The original native artwork itself is in the acquisition artifact.
+
+### Status after actual A1/A2 work
+
+**Closed:** original A/B source byte integrity; true existence of acorn display and small running figure; archival monitor-crop provenance for acorn, planet and graph families. **Still open:** source-authentic 2021 running-man *cipher* image, a pixel-registered cover-to-cipher identity or overlay, and an explicit original author's intent. That is enough to **raise the historical COVER-A story above a purely imagined acorn juxtaposition**, but not enough to promote COVER-A to "solved".
+
