@@ -80,3 +80,8 @@ No actual sticker combination or physical holdout was used to choose these assoc
 **DEVELOP outcome:** Three complete conditional stories; one exact type mismatch for unchanged historical algorithms; no decoded foreground, new source artifact, reader or physical prediction. **Priority:** modest/cheap source-forensic continuation; do not finance a 24-permutation cover-key search based solely on four equals four.
 
 Related parallel CX-E rail census: [four-quarter rails and matched nulls](2026-10-09-cx-e-slash-rails-calibration.md).
+
+
+## Superseding source-level proof of the LIFE stage
+
+[CL-16](2026-10-09-cl16-full-2021-life-overlay-replay.md) closes the prior “historically reported but not replayed” limitation. The original 2021 video and 32×32 PC printer art now match the independent canonical printer-string reexecution at **102/102** generated Acorn-41 mask sites and **90/90** final orange `LIFE DETECTED` letters. Historical stage semantics are: **original printed glyph grid → author's acorn+41 cue → independently defined B3/S23 evolution → video-attested native (1,16) registration → source-colour selection**. This is a **registered binary mask operating on the same PC printer graphic**, not four printer operations consumed consecutively by sticker quarters, nor an exact graphic match to the reversible cover's tiny person. It makes the historical LIFE transformation *more concrete*, not the speculative CX-C four-stage CE routing more probable. Keep the latter behind actual CE receiver discovery.
