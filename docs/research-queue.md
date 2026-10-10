@@ -1,3 +1,13 @@
+## 9 October 2026: deliberate speculative revival sprint
+
+See [36 rank-ordered revival candidates](speculative-revival-portfolio-2026-10-09.md) for source-linked older experiment IDs, modified mechanisms, falsifiers, candidate operations and execution phases. This list reopens ideas as **design conjectures**, not as renewed evidence supporting them. SR-01/02/03/04/05/06/07/08/09/10 are top-tier, source-dependent but testable; twenty-six other bounded or high-variance mechanisms remain available.
+
+First prototypes:
+- [SR-03 nine URL digits as a nonbijective repeated keypad address](speculative-sr03-keypad-revisit-pilot-2026-10-09.md): `534965398` has duplicate digits 3/5/9 twice, singleton 4/6/8, missing 1/2/7. The historical 3x3 CE background geometry and digit count are real, but target consumer, orientation and collision semantics are not fixed.
+- [SR-04 direct observation domain check](../scripts/speculative_tail_operator_preflight.py): 9 physical *background classes* vs 9 *occurrences of one class* per 81-symbol body word remain different domains. Any body-position-to-physical-class bijection incurs 9! conventions, and 3-group partition 1680 conventions, unless independent source evidence fixes it.
+
+Next bound SR-03 to three predeclared revisit rules and SR-04 to row/column/depth once-applied selector rivals on identical observed masks. Then SR-01 observed-only master registration, SR-19 archival capture rescue and SR-05 source-cued 3D rigid projection. Do not let prettier hindsight images count as source instructions.
+
 ## CL-12: useful external SAF DEFLATE research tooling, not a missing archival payload (8 October 2026)
 
 A newly audited independent public repository, [burning-lnkr/saf_dat_col](https://github.com/burning-lnkr/saf_dat_col) at commit `cdb41453d0c2a61d09dcf341adb7e30762c7c2a6`, supplies **17 fixed speculative repairs** (10 original-source, 7 community-edited) of an April 2019 `saf_dat_col` response, plus a source-byte provenance viewer, DEFLATE reconstruction, renderers, alternate LZ77 history/repair models and internal hash/standard-zlib tests. Its purported **original input is byte-identical to our existing 1,986,163-byte source** (Git blob `349b818fce618ef55a1a279bb85024f99b`). The 11.78MB repaired streams are **conditional on modeled source damage, missing history, synthetic endpoints, and chosen raster dimensions**, not independent server copies or externally established plaintext. No `saf_dat_col_BACKUP.html` is present.
