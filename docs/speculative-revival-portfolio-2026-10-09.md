@@ -146,3 +146,20 @@ Three additional studies fundamentally change the interpretation of the speculat
 
 **Revised decisions:** demote CX-E5 as evidence while retaining it as a limited prospective prediction set. Prioritize source-native `534brn` data or a cover/running-man original-art identity comparison. Treat cover as a potentially already-completed **original acorn clue** unless fresh source features establish its CE-sticker coupling. Continue to preserve all physical symbols strictly apart from modeled completions. Source controls: [acorn-41 verifier](../scripts/verify_historical_acorn_41_life.py), [exact Boolean null](../scripts/conjecture_lab_cx_e6_exact_xor_null.py), and the [original 66-residue freeze](../data/conjecture-lab-h108-66-residue-freeze-2026-10-09.csv).
 
+
+
+## CL-16 source-native positive control: full 2021 Acorn→LIFE DETECTED replay
+
+**9–10 October 2026 update, experimental replay completed.** The [original source-preserved 2021 acorn demonstration and source grid](conjecture-lab/2026-10-09-cl16-full-2021-life-overlay-replay.md) have been recovered and **pixel-replayed**. The [positive-control fixture](../data/historical-2021-acorn-41-overlay-positive-control.json) records the original video's Git hash, its 32×32 source raster and the exact output; [reproduction script](../scripts/verify_historical_acorn_41_full_overlay.py) uses the independent canonical 2018 PC printer rows.
+
+The method is now **known**, not an operation invented for this portfolio:
+
+1. Arrange the **original PC/PS4 printer's own** 32×32 slash/dash/dot glyph surface (census 308 slash, 613 dash, 103 dot), which originally displays the acorn + 41 instruction. The original solved PC ordering was already preserved.
+2. Evolve the universally specified seven-cell **Conway Acorn** seed at B3/S23 for **41** generations, yielding a **102-cell** mask in a **30×15** native footprint.
+3. Register that mask at zero-based grid origin **(1,16)**, as attested by the 2021 video, matching all 102 original overlay sites.
+4. Read the **orange** output as `(original_dot AND NOT mask) OR (original_dash AND mask)`. This leaves 51 dots outside and converts 39 dashes inside, yielding **90** orange cells and the exact `LIFE DETECTED` text, independently identical to all 90 displayed video output cells.
+
+The full output is exactly reproduced, without source-sticker fitting. The receiver is the **same already-authenticated PC printer artwork**, not an otherwise unspecified third artifact. The 2020 original PS4 reversible cover has a real acorn monitor and a separate running person, confirmed in hash-verified 6552×5040 original scans, but the scene runner is **not** established as the original PC puzzle bitmap. Source-audience model [COVER-A](conjecture-lab/2026-10-09-cl14-cover-acorn-historical-clue.md) stays a historical intended-clue candidate, not a CE decoding success.
+
+**Effect on revivals:** SR-16/17 and other overlay proposals gain a *precise mechanism benchmark*, not evidence of actual CE decoding. Require each CE candidate to present its own authentic surface, symbol palette semantics, seed or parametric operator, independently source-cued registration and holdout-result check. If no original parameter/receiver exists, a 108-bit theoretical mask or an attractive fitted XOR should remain a low-evidence speculative exploration. Earlier paragraph claiming 2021 full image registration was unverified is **superseded** by this source-verified experiment. None of the previous CE model falsifications are reversed.
+
