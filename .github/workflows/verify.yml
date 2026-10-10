@@ -42,6 +42,8 @@ jobs:
         run: python scripts/speculative_tail_operator_preflight.py
       - name: Verify frozen CX-E speculative receiver and XOR controls
         run: python scripts/verify_cx_e_revived_channels.py
+      - name: Verify 2021 LIFE DETECTED overlay from canonical 2018 printer rows
+        run: python scripts/verify_historical_acorn_41_full_overlay.py
       - name: Verify historical acorn generation-41 source-native operation
         run: python scripts/verify_historical_acorn_41_life.py
       - name: Calibrate GHI XOR with exact rail-conditioned null
