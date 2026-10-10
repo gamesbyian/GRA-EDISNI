@@ -61,6 +61,22 @@ def run(obs_path, xbox_path):
         "quarter_physical": "".join("".join(f[c] for c in PHYSICAL) for f in fields),
         "class_major": "".join("".join(f[c] for f in fields) for c in PHYSICAL),
     }
+    # The twelve-site suffix itself begins with another full nine-class
+    # cycle. Give it the same *literal* Xbox-row controls, separately.
+    suffix_order = "GHIABCDEF"
+    suffix_fields = []
+    for quarter in range(4):
+        byclass = {suffix_order[j]: obs.get(quarter*27+16+j, "?")
+                   for j in range(9)}
+        suffix_fields.append(byclass)
+    raw.update({
+        "suffix_quarter_serial": "".join(
+            "".join(f[c] for c in suffix_order) for f in suffix_fields),
+        "suffix_quarter_physical": "".join(
+            "".join(f[c] for c in PHYSICAL) for f in suffix_fields),
+        "suffix_class_major": "".join(
+            "".join(f[c] for f in suffix_fields) for c in PHYSICAL),
+    })
     tests = {}
     for kind, target in raw.items():
         assert len(target) == 36
@@ -110,6 +126,7 @@ def run(obs_path, xbox_path):
         "classification": "literal receiver negative tests only",
         "known_h108_residues":len(obs),
         "middle_fields_known_of_36":sum(x != "?" for x in raw["quarter_serial"]),
+        "suffix_nine_fields_known_of_36":sum(x != "?" for x in raw["suffix_quarter_serial"]),
         "native_class_order":PHYSICAL,
         "native_url_digits":URL_DIGITS,
         "xbox_long_rows":36,
