@@ -38,6 +38,21 @@ Useful original detail should: (i) exist in original game / CE-era artifact; (ii
 8. **Existing project inventory:** [original 2016 game asset consumer inventory](../data/original-game-asset-consumer-inventory-2026-10-08.json) and [source-owned one verified 2016 BoardText DDS](../archive/external/inside-2016-game-assets/README.md).
 9. **External-puzzle operation prior:** [cross-ARG puzzle mechanics](arg-puzzle-mechanics-corpus.md), [historical Discord mechanics audit](discord-historical-technique-inventory.md), [existing consumer gate](external-consumer-audit.md) and [speculative revival portfolio](speculative-revival-portfolio-2026-10-09.md).
 
+## Prior work found during reconciliation (no duplicate experiment claims)
+
+The same original-game source limitation was **already** investigated on 8 October: [SecretMap original-asset null protocol](secretmap-original-asset-null-protocol-2026-10-08.md) and [source intake](secretmap-boardtext-source-intake-2026-10-08.md) examined the entire **2,725-file** Discord export tree, found exactly one raw DDS (`BoardText`), and introduced a **frozen-source transform, one-to-one fourteen-orb** matching script `scripts/audit_secretmap_registered_orbs.py`. Do **not** create a rival registration tool or count this as a new raw-source result.
+
+Crucially, a [July 2016 Reddit texture discussion](https://www.reddit.com/r/PlaydeadsInside/comments/4sav9x/curious_textures_found_in_the_game_files/) already suggests a **fourteenth map mark** may represent the large final orb. Thus “extra mark” cannot mean “extra beyond 13 earlier orbs”: the negative control must explain **13 earlier + 1 final** before any leftover becomes a clue. The source-linked 2018 [illustration](https://image.9game.cn/2018/3/2/19669991.jpg) is an archival visual witness, not a native DDS.
+
+The original July 2016 billboard thread also points to **three higher-resolution uploads** from the first week of release, at:
+- `http://radikal.ru/lfp/s017.radikal.ru/i413/1607/71/bf329be651c3.jpg/htm`
+- `http://radikal.ru/lfp/s017.radikal.ru/i424/1607/9a/b6d5480fe440.jpg/htm`
+- `http://radikal.ru/lfp/i026.radikal.ru/1607/6f/fdf397860235.jpg/htm`
+
+The original 2016 observer already reported broken/401 image hosts. Record present availability and distinguish recovered rehosted pixels from original image files. These exact filenames are higher-value archive search seeds than generic searches for “INSIDE orb map”. See https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=1 .
+
+**Novelty boundary for this pass:** expanded contemporary **board/wiring** and **buried-elevator** witness inventory plus a cross-artifact acquisition plan; **not** a newly invented SecretMap protocol, source DDS recovery or sticker decoder.
+
 ## Work performed this pass: source acquisition preflight
 
 - Revisited the July 2016 primary community thread, Aug 2016 full scene-inspection account, original Chinese July 2016 material and the existing GitHub extraction inventory.
