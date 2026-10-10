@@ -54,3 +54,15 @@ The verification is a *necessary mathematical subroutine*, not a reconstruction 
 Recover the original 2021 `acorn.mp4` or an exact contemporaneous frame sequence together with the original running-man art as separate genuine source assets. Freeze its initial registration *without studying CE glyph outputs*; independently replay the overlay. If that can be done, reuse the *methodological types* (authorial operation and parameter, exact registration, checkable output) as a calibration against hypothetical CX-E4/E5 steps. If assets remain inaccessible, the 2021 first-person source/archived community report is still adequate to correct the project's historical metadata but not to establish a new sticker cipher operation.
 
 **Disposition:** historical chronology and typing corrected; generation-41 code component verified; full 2021 running-man overlap not independently replayed; no CE foreground validation.
+
+
+## Verified follow-up (10 October 2026 UTC): source MP4 and full 90-pixel replay recovered
+
+The initial limitation in this CL-13 note, namely that the original `acorn.mp4` and full running-man/PC-grid registration could not be independently replayed, **has now been closed**. Read the [complete CL-16 source-pixel replay report](2026-10-09-cl16-full-2021-life-overlay-replay.md) and [source-anchored positive-control fixture](../../data/historical-2021-acorn-41-overlay-positive-control.json), not the now-superseded "unverified" status in the initial investigation above.
+
+The old Discord CDN direct URL returned HTTP 404, but the original `gamesbyian/playdead-unofficial-exports` asset tree retained an authentic 408,693-byte `acorn-c53ef409753e9fa2.mp4` (original Git blob `0480da448164c0a1bbd115f1065ffd9d68f70bf2`), along with the original 32×32 PC printer coloured raster `Inside_pc_acorn_fixed-081372579ea1409c.png` (Git blob `c04ac01fc6f3f3af05d00f7e2b104396ade440e1`). [Source recovery passed in GHA run 38025192150](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38025192150).
+
+**New completed result:** evolve standard B3/S23 Acorn to generation 41 (102 live cells, native footprint 30×15), place its normalized footprint at source pixel **(1,16)** in the 32×32 printer grid, and keep original orange-dot pixels *outside* the mask while recolouring original blue-dash pixels *under* the mask orange. Mask matches 2021 video **102/102**; output has exactly **90 orange cells**, matching the 2021 video's final `LIFE DETECTED` bitmap **90/90**, with **zero differences**. Exact output bitmap SHA256 `38ea14a45bffbd735cec104cad5ba0499bbb36163bc3c2bf0b9cf250b773bd6d`.
+
+The received image is visibly the **original PC/PS4 printer's own 32×32 acorn/running-man art**. Thus the later historical overlay is **two interpretations/layers of this authenticated puzzle surface**, not a demonstrated CE-sticker overlay or a novel, unrelated third artifact. The printed cover's tiny three-dimensional running figure remains a different, **unmatched** visual and authorial-intent question.
+
