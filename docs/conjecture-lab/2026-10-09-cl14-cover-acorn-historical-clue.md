@@ -66,3 +66,17 @@ Run the authentic standard **acorn generation-41 mathematics** by `python script
 A negative result on A1 (figure wholly unrelated to old running-man graphic) would seriously weaken COVER-A as a specific cover decoder, but not erase the original 2021 cross-artifact operation. A result on any new actual CE sticker cannot by itself prove this particular cover purpose.
 
 **No outreach undertaken. No symbol ledger changes. No new encoded message.**
+
+## New actual A1 source-pixel evidence: the juxtaposition is in the archival 2020 print scan
+
+[CL-15 original scan acquisition and source-registered crop audit](2026-10-09-cl15-cover-source-authentic-a1.md) has now **run successfully**, with all six original source Git hashes matched ([run 38024716054](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38024716054), [pixel-control run 38024971110](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38024971110)). The internal cover has two truly separate visible items:
+
+* A **small orange acorn-family raster on a lit front monitor**, with native-source monitor crop at `x3780..3948, y3294..3418`. Historic 84×62 crop correlation **0.900300** to the source scan at fixed half resolution, vs **0.040212** at same spot on exterior control.
+* A **running human silhouette on a brightly lit separate platform beyond the tall window**, visually visible in full-resolution native source A around `x5550..6500, y2850..3600`. This person is in a running pose; the image itself proves only a *scene figure*, not that it is the exact independent 2021 "running man" *cipher bitmap*.
+
+For provenance, the planet and graph monitors also independently match at their source coordinates with grayscale correlations **0.912542** and **0.859104** (exterior controls negative). Exact coordinates, byte hashes, and script are fixed in [the machine-readable A1 source-provenance fixture](../../data/cover-original-monitor-registration-2026-10-09.json).
+
+This **closes the physical coexistence question** with stronger evidence than the 2022 Discord interpretation, and eliminates the possibility that the source association was merely a misremembered composite screenshot. The remaining A1 question is **intentional reference/registration**, which remains open until an independently authenticated original running-man *puzzle graphic* or 2021 demonstration is available. Do not count a visual person as automatically the same piece of cipher data.
+
+**Next retrieval:** [exact known 2021 acorn demonstration attachment](../../scripts/probe_historical_acorn_2021_video.py) has a separate one-time, read-only archival CDN probe ([workflow](../../.github/workflows/one-shot-acorn-video-2021.yml)). Any HTTP error must be reported as an access outcome, not treated as failure of the 2021 first-person witness testimony. Any retrieved MP4 still needs source/pixel verification before claiming independent reproduction of the historical overlay.
+
