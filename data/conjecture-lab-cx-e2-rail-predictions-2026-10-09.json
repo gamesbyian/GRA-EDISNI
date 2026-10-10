@@ -1,0 +1,101 @@
+{
+  "id": "CX-E2-v1",
+  "frozen_utc_date": "2026-10-10",
+  "observations_input": "data/observations.csv",
+  "observed_unique_residues_at_freeze": 66,
+  "unknown_unique_residues_at_freeze": 42,
+  "selection_status": "retrospective DEVELOP; no independent physical validation",
+  "premises": [
+    "four consecutive 27-symbol quarters of H108",
+    "within each quarter columns 5 and 15 are an authored slash delimiter",
+    "columns 6 through 14 form one across-class F,G,H,I,A,B,C,D,E field",
+    "fields register to original background image layout IAB/CDE/FGH",
+    "each physical row has exactly one minority symbol, quarter-wide polarity"
+  ],
+  "middle_field_completions": 48,
+  "look_elsewhere": {
+    "tested_nine_site_windows": 19,
+    "surviving_windows": [
+      {
+        "start": 3,
+        "end": 11,
+        "completions": 12
+      },
+      {
+        "start": 4,
+        "end": 12,
+        "completions": 12
+      },
+      {
+        "start": 6,
+        "end": 14,
+        "completions": 48
+      },
+      {
+        "start": 8,
+        "end": 16,
+        "completions": 4
+      }
+    ]
+  },
+  "forecasts": [
+    {
+      "residue": 6,
+      "image_class": "F",
+      "predicted_symbol": "-",
+      "competing_frame_grammar": [
+        "/"
+      ],
+      "discriminator": true
+    },
+    {
+      "residue": 8,
+      "image_class": "H",
+      "predicted_symbol": "-",
+      "competing_frame_grammar": [
+        "-"
+      ],
+      "discriminator": false
+    },
+    {
+      "residue": 11,
+      "image_class": "B",
+      "predicted_symbol": "-",
+      "competing_frame_grammar": [
+        "-"
+      ],
+      "discriminator": false
+    },
+    {
+      "residue": 41,
+      "image_class": "E",
+      "predicted_symbol": "-",
+      "competing_frame_grammar": [
+        "/"
+      ],
+      "discriminator": true
+    },
+    {
+      "residue": 64,
+      "image_class": "A",
+      "predicted_symbol": "-",
+      "competing_frame_grammar": [
+        "/"
+      ],
+      "discriminator": true
+    },
+    {
+      "residue": 91,
+      "image_class": "A",
+      "predicted_symbol": "/",
+      "competing_frame_grammar": [
+        ".",
+        "/"
+      ],
+      "discriminator": false
+    }
+  ],
+  "scope_note": "Forecasts exist only under the frozen row-minority rail-field conjecture. Do not merge into observations or assert that the alternative frame rule is an established physical fact.",
+  "documentation": "docs/conjecture-lab/2026-10-09-cx-e2-four-nine-twelve-fields.md",
+  "producer": "scripts/conjecture_lab_cx_e_rail_field_pilot.py"
+}
