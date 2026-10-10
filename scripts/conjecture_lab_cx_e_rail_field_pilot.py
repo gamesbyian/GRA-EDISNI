@@ -73,6 +73,31 @@ def prior_frame_choices(marks, res):
     return sorted(out)
 
 
+def nine_site_window_control(marks):
+    """All 19 possible contiguous nine-site fields within each quarter.
+
+    Each naturally covers all A-I classes because serial image classes
+    repeat every nine; this is not special to the rail-selected window.
+    """
+    out = []
+    for start in range(1, 20):
+        counts = []
+        for q in range(4):
+            by_class = {
+                "ABCDEFGHI"[(27*q + start + j - 1) % 9]:
+                marks.get(27*q + start + j, "?")
+                for j in range(9)}
+            grid = [[by_class[c] for c in line] for line in PHYSICAL]
+            counts.append(len(three_by_three_options(
+                grid, "/." if q == 3 else "/-", "row")))
+        total = 1
+        for n in counts:
+            total *= n
+        out.append({"first_column": start, "last_column": start+8,
+                    "quarter_option_counts": counts, "joint_completions": total})
+    return out
+
+
 def run(path):
     marks = load(path)
     quarters = [[marks.get(27*q+j+1, "?") for j in range(27)] for q in range(4)]
@@ -112,6 +137,7 @@ def run(path):
             "one_minority_per_physical_column_completions": len(column_opts),
             "new_row_rule_forced_symbols": {str(k):v for k,v in sorted(forced.items())}
         })
+    windows = nine_site_window_control(marks)
     comparator = []
     for res, val in sorted(all_forced.items()):
         prior = prior_frame_choices(marks, res)
@@ -128,6 +154,10 @@ def run(path):
         "total_row_rule_middle_field_completions": compatible_total,
         "quarters": result,
         "frozen_conditional_forecasts": comparator,
+        "window_look_elsewhere": {
+            "n_tested": len(windows),
+            "n_all_four_quarters_survive": sum(x["joint_completions"] > 0 for x in windows),
+            "surviving_windows": [x for x in windows if x["joint_completions"] > 0]},
         "original_frame_grammar_is_only_a_rival_hypothesis": True
     }
 
