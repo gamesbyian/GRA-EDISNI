@@ -1,0 +1,91 @@
+{
+  "id": "CX-E5-v1",
+  "date": "2026-10-09",
+  "status": "retrospective DEVELOP frozen before new independent physical observations",
+  "observed_unique_h108_residues": 66,
+  "observed_record_count": 84,
+  "hypothetical_layout": "Within each 27-quarter, output G/H/I positions 25/26/27 consume matching first-layer 7/8/9 and second-layer 16/17/18 by class",
+  "bit_mapping": "slash=1; dash in Q1-Q3 and dot in Q4=0",
+  "truth_table": "C = A XOR B, bits 00->0,01->1,10->1,11->0 (integer 6)",
+  "alternatives_compared": 16,
+  "survivors_among_GHI": [
+    6
+  ],
+  "three_class_subset_controls": {
+    "subsets_tested": 84,
+    "unique_XOR_subsets": [
+      "AHI",
+      "DHI",
+      "GHI"
+    ],
+    "subsets_with_any_unique_binary_function": 19,
+    "subsets_with_zero_valid_functions": 44
+  },
+  "scope_negative": "Extending XOR to all nine classes fails on five completely observed original class triples; no global 4x27 XOR code demonstrated.",
+  "forecasts": [
+    {
+      "residue": 8,
+      "image_class": "H",
+      "predicted_symbol": "/",
+      "frame_rival_allowed": [
+        "-"
+      ],
+      "discriminator": true
+    },
+    {
+      "residue": 27,
+      "image_class": "I",
+      "predicted_symbol": "/",
+      "frame_rival_allowed": [
+        "/"
+      ]
+    },
+    {
+      "residue": 35,
+      "image_class": "H",
+      "predicted_symbol": "-",
+      "frame_rival_allowed": [
+        "-"
+      ]
+    },
+    {
+      "residue": 61,
+      "image_class": "G",
+      "predicted_symbol": "/",
+      "frame_rival_allowed": [
+        "-",
+        "/"
+      ]
+    },
+    {
+      "residue": 62,
+      "image_class": "H",
+      "predicted_symbol": "/",
+      "frame_rival_allowed": [
+        "-"
+      ],
+      "discriminator": true
+    },
+    {
+      "residue": 99,
+      "image_class": "I",
+      "predicted_symbol": "/",
+      "frame_rival_allowed": [
+        "."
+      ],
+      "discriminator": true
+    },
+    {
+      "residue": 107,
+      "image_class": "H",
+      "predicted_symbol": ".",
+      "frame_rival_allowed": [
+        "/"
+      ],
+      "discriminator": true
+    }
+  ],
+  "generator": "scripts/conjecture_lab_cx_e5_ghi_boolean.py",
+  "report": "docs/conjecture-lab/2026-10-09-cx-e5-ghi-xor-selector.md",
+  "warning": "The operation and GHI selector were suggested by observed data. Infer truth table uniquely *conditional on this chosen format* only, never interpret it as an independent blind decode or alter raw observations."
+}
