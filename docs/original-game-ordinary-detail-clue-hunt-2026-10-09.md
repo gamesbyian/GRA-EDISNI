@@ -53,6 +53,14 @@ The original 2016 observer already reported broken/401 image hosts. Record prese
 
 **Novelty boundary for this pass:** expanded contemporary **board/wiring** and **buried-elevator** witness inventory plus a cross-artifact acquisition plan; **not** a newly invented SecretMap protocol, source DDS recovery or sticker decoder.
 
+## New independent later check: 2 April 2026 buried-elevator cut-content reconstruction
+
+A source not used in the initial candidate ranking independently revisits OG-03: [Reddit, *Even more Cut Content, the Elevator under the corn field* (2 April 2026)](https://www.reddit.com/r/PlaydeadsInside/comments/1saorbf/even_more_cut_content_the_elevator_under_the_corn/). The investigator reports exposing the unused elevator scene through **level-file hex editing**, links video/image evidence, and writes that the elevator is **not interactable** even after enabling `Elevator_Logic`. They also associate nearby screen visuals with older “secret screens” material. The text is a firsthand **2026 reconstruction claim**, not a checked 2016 runtime asset dump or a verification that all buttons are functional.
+
+**Evidence update:** There are now two temporally separate witnesses to the hidden elevator's modeled existence (2016 and 2026), substantially strengthening *unused/cut content* as OG-03's mundane baseline. There is **still no independent test proving the reported 12-button console is actually 12 meaningful input states, nor that the four screens form a sequenced output machine**. If the original 2026 image/video bytes and a version-pinned modified level are acquired, record authored object hierarchy, `Elevator_Logic` calls and screen animation data; do not infer a CE four-quarter map from counts. Treat claims about unplayability as source-witness reports until independently replicated.
+
+For similar mechanics, the contemporary July 2016 forum description of “secret screens” says they depict characters progressing from kneeling to standing; the 2026 researcher connected the recovered screens with older image/video. This gives a specific animation/test-content alternative to four independent crypto channels, not an independently completed identification.
+
 ## Work performed this pass: source acquisition preflight
 
 - Revisited the July 2016 primary community thread, Aug 2016 full scene-inspection account, original Chinese July 2016 material and the existing GitHub extraction inventory.
