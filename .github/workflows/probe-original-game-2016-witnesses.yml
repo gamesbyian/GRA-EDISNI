@@ -28,7 +28,7 @@ jobs:
         run: |
           python scripts/probe_inside_original_game_witnesses.py --self-test
           python -m json.tool data/original-game-2016-witness-targets.json >/dev/null
-      - name: Probe exactly 11 already-published historical URLs once
+      - name: Probe bounded source-registered historical URLs once
         run: |
           python scripts/probe_inside_original_game_witnesses.py \
             --manifest data/original-game-2016-witness-targets.json \
