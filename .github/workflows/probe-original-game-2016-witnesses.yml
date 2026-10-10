@@ -1,0 +1,44 @@
+name: Probe historical INSIDE scene witnesses
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/probe_inside_original_game_witnesses.py'
+      - 'data/original-game-2016-witness-targets.json'
+      - '.github/workflows/probe-original-game-2016-witnesses.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: original-game-2016-image-probe-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline checks (never infer proof from image names)
+        run: |
+          python scripts/probe_inside_original_game_witnesses.py --self-test
+          python -m json.tool data/original-game-2016-witness-targets.json >/dev/null
+      - name: Probe bounded source-registered historical URLs once
+        run: |
+          python scripts/probe_inside_original_game_witnesses.py \
+            --manifest data/original-game-2016-witness-targets.json \
+            --output original-2016-witnesses \
+            --timeout 12 --max-bytes 6000000
+      - name: Preserve byte hashes, failures and retrieved witnesses separately from repo
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-inside-2016-witnesses
+          path: original-2016-witnesses/
+          retention-days: 30
+          if-no-files-found: warn

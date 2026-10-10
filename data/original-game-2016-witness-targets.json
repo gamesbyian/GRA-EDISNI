@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "frozen_on": "2026-10-09",
+  "purpose": "Fixed-URL source recovery of original-game pictures from 2016 reports. Never infer original game bytes from derivative images.",
+  "allowed_hosts": [
+    "i.imgur.com",
+    "i026.radikal.ru",
+    "image.9game.cn",
+    "imgur.com",
+    "postimg.org",
+    "pp.userapi.com",
+    "pp.vk.me",
+    "s017.radikal.ru"
+  ],
+  "targets": [
+    {
+      "id": "billboard_radikal_20160710_a",
+      "url": "https://s017.radikal.ru/i413/1607/71/bf329be651c3.jpg",
+      "kind": "image",
+      "source_date": "2016-07-10",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/365172547948628597/",
+      "source_context": "MASTAN group of three 4K scene screenshots; exact scene for this individual image unknown; 401 noted in 2016."
+    },
+    {
+      "id": "billboard_radikal_20160710_b",
+      "url": "https://s017.radikal.ru/i424/1607/9a/b6d5480fe440.jpg",
+      "kind": "image",
+      "source_date": "2016-07-10",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/365172547948628597/",
+      "source_context": "MASTAN 4K scene image, same source group, original image identity unverified."
+    },
+    {
+      "id": "billboard_radikal_20160710_c",
+      "url": "https://i026.radikal.ru/1607/6f/fdf397860235.jpg",
+      "kind": "image",
+      "source_date": "2016-07-10",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/365172547948628597/",
+      "source_context": "MASTAN 4K scene image, same source group, original image identity unverified."
+    },
+    {
+      "id": "secretmap_2018_9game_derived",
+      "url": "https://image.9game.cn/2018/3/2/19669991.jpg",
+      "kind": "image",
+      "source_date": "2018-03-02",
+      "source_reference": "https://www.9game.cn/news/2199070.html",
+      "source_context": "Republished 480x240 watermarked SecretMap picture, not original DDS."
+    },
+    {
+      "id": "secretmorse_2018_9game_derived",
+      "url": "https://image.9game.cn/2018/3/2/19669987.jpg",
+      "kind": "image",
+      "source_date": "2018-03-02",
+      "source_reference": "https://www.9game.cn/news/2199070.html",
+      "source_context": "Republished Sign_SecretMorse graphic; not native source file."
+    },
+    {
+      "id": "billboard_2016_imgur_photo",
+      "url": "https://imgur.com/IUTzaee",
+      "kind": "html",
+      "source_date": "2016-07-12",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/365172547948628597/",
+      "source_context": "2016 commenter cited image with positions 2 4 11 12; HTML capture is not the source image."
+    },
+    {
+      "id": "2016_polybius_photo_album",
+      "url": "https://imgur.com/a/USImD",
+      "kind": "html",
+      "source_date": "2016-07-23",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/365172547948628597/",
+      "source_context": "Original 2016 annotated Polybius/board album. HTML is not original photo bytes."
+    },
+    {
+      "id": "2016_scene_compilation_album",
+      "url": "https://imgur.com/a/TnMsM",
+      "kind": "html",
+      "source_date": "2016-07-26",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445",
+      "source_context": "Original 2016 collection of in-game mystery images; HTML may not embed assets."
+    },
+    {
+      "id": "2016_original_texture_gallery",
+      "url": "https://postimg.org/gallery/239os5ggo/",
+      "kind": "html",
+      "source_date": "2016-07-15",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2",
+      "source_context": "MASTAN original asset-extraction image gallery, potentially SecretMap/Kaypro; not DDS."
+    },
+    {
+      "id": "2016_vkontakte_scene_0725_a",
+      "url": "https://pp.vk.me/c626929/v626929249/1e8a3/uSXTJUAHzcE.jpg",
+      "kind": "image",
+      "source_date": "2016-07-25",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445",
+      "source_context": "Atøm July 25 screenshot, scene identity NOT verified as the buried elevator."
+    },
+    {
+      "id": "2016_vkontakte_scene_0725_b",
+      "url": "https://pp.vk.me/c626929/v626929249/1e89a/s0om5jgXwe4.jpg",
+      "kind": "image",
+      "source_date": "2016-07-25",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445",
+      "source_context": "Atøm July 25 screenshot, scene identity NOT verified as the buried elevator."
+    },
+    {
+      "id": "2016_bulletin_board_imgur_direct_candidate",
+      "url": "https://i.imgur.com/IUTzaee.jpg",
+      "kind": "image",
+      "source_date": "2016-07-12",
+      "source_reference": "https://steamcommunity.com/app/304430/discussions/0/365172547948628597/",
+      "source_context": "DETERMINISTIC CDN URL derived from exact contemporary imgur.com/IUTzaee image ID; extension .jpg is proposed, not original directly witnessed CDN URL. Inspect identity before calling this the board."
+    },
+    {
+      "id": "2016_polybius_album_embedded_og",
+      "url": "https://i.imgur.com/Xgc8hLr.png?fb",
+      "kind": "image",
+      "source_date": "2016-07-23",
+      "source_reference": "https://imgur.com/a/USImD",
+      "source_context": "Direct OG:image URL recovered from the actual captured original 2016 Polybius album HTML in first CI witness run. Likely one album image only."
+    }
+  ]
+}
