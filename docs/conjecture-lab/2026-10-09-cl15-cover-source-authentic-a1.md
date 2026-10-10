@@ -1,6 +1,6 @@
 # CL-15: source-integrity pipeline for original cover scan comparison
 
-_9 October 2026. Bounded implementation of [CL-14 COVER-A](2026-10-09-cl14-cover-acorn-historical-clue.md) A1/A2. **Status: hash-authenticated acquisition and preview pipeline committed, original full-resolution pixel comparison awaiting a successful run and inspection of artifacts.** No CE sticker foreground interpretation is derived._
+_9 October 2026. Bounded implementation of [CL-14 COVER-A](2026-10-09-cl14-cover-acorn-historical-clue.md) A1/A2. **Status: authenticated original A/B scans retrieved and three archived monitor crops independently registered in successful source-integrity runs; intended historical cover clue and exact 2021 cipher-to-cover graphic identity still unverified.** No CE sticker foreground interpretation is derived._
 
 ## Why this test needs actual source bytes
 
@@ -82,3 +82,10 @@ These crops can be re-created verbatim from the authenticated original A bytes. 
 
 **Closed:** original A/B source byte integrity; true existence of acorn display and small running figure; archival monitor-crop provenance for acorn, planet and graph families. **Still open:** source-authentic 2021 running-man *cipher* image, a pixel-registered cover-to-cipher identity or overlay, and an explicit original author's intent. That is enough to **raise the historical COVER-A story above a purely imagined acorn juxtaposition**, but not enough to promote COVER-A to "solved".
 
+
+
+## Follow-up: historical decoder source now recovered and exactly replayed
+
+The missing 2021 original acorn-decoder demonstration source is **no longer an acquisition blocker**. See [CL-16](2026-10-09-cl16-full-2021-life-overlay-replay.md): the old Discord CDN path was 404, but the authentic historical 2021 MP4 and PC raster survived, hash-verified, in `gamesbyian/playdead-unofficial-exports`. Its original PC 32×32 source mask, at original coordinate (1,16), has all **102/102** generation-41 Acorn pixels, and the resulting orange text mask has all **90/90** `LIFE DETECTED` pixels. The decoder is fully reproduced and committed with source and output hashes.
+
+**What this does not resolve in CL-15:** the high-resolution reversible-cover figure is a tiny scene runner, while the actual decoder is a **32×32 historical PC/PS4 printer graphic**. No original source demonstrates pixel identity or fixed registration between that scene figure and this PC printout. Accordingly, the possible cover clue is stronger as *juxtaposition evidence* but remains an **intended-purpose conjecture**. Treat the original source scan/crop provenance as verified; distinguish it from untested direct cover-to-cipher registration and the entirely unresolved CE foreground.
