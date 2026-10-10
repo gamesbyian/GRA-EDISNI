@@ -264,3 +264,8 @@ The operation is deterministic, not a free row permutation: each consecutive 9-s
 Experiment 364 tests whether that exact historical mosaic improves leave-one-out symbol interpolation. It does not: all-neighbor local prediction gets 19/46 correct versus 28/46 for the trivial alphabet-majority baseline; within-tile-only gets 21/47 versus 29/47.
 
 The historical value of the operation is therefore the independently attested 3×3 frame domain, not large-scale bitmap continuity. This strengthens the interpretation of Experiments 348–350 while closing naive visual-neighbor filling on the collective mosaic.
+
+
+### Exact historical source-pixel decoder finally reproduced
+
+[CL-16's archived MP4 and full registered positive control](conjecture-lab/2026-10-09-cl16-full-2021-life-overlay-replay.md) now supersede the earlier chronology paragraph's assertion that the original 2021 demonstration had not been replayed. The original archive retained a Git-authenticated `acorn-c53ef409753e9fa2.mp4` even after the CDN link expired. Independent replay from the canonical 2018 printer rows gives a 32×32 raster (308 slashes, 613 dashes, 103 dots), overlays the 102 live cells of standard Acorn generation 41 at (1,16), and selects `(dot AND NOT mask) OR (dash AND mask)` to yield the exact 90 orange pixels of `LIFE DETECTED` as displayed in the old video, zero mismatches. The **native receiver is that original 32×32 printer artwork**, not an unidentified third scene. This is a historical *positive control* for independently sourced operations, geometric registration and a checkable readout, **not** a completed CE foreground decoder or proof the cover's runner is the same raster.
