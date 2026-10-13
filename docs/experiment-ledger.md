@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **481** (with documented numbering gaps).
+Latest indexed experiment: **482** (with documented numbering gaps).
 
 | Experiment | Title |
 | ---: | --- |
@@ -465,6 +465,8 @@ Latest indexed experiment: **481** (with documented numbering gaps).
 | 479 | historical A–I twelve-sticker class-word lever order: alphabetical and native physical class order each can include U/R/L, but original fourteen-move bunker password, all cyclic rotations and reversals, has zero placements respecting the primary 81 U/R-only plus tail 27 U/L-only alphabets. 324 column/Q4-compatible masters independently confirm zero. See `docs/experiment-479-classword-lever-consumer.md`. |
 | 480 | historical Playdead print-button source transport: contemporary June 2018 witness identifies POSTs to `/print/prepare.php` and `/print/index.php`, a returned HTML fragment inserted into `#print-content`, and `window.print()`; empty, wrong and three accepted printout classes recorded. The 2019 publisher's PDF description is compatible with browser-generated printing and does not prove server-generated application/pdf bytes. Original handler, HAR and CE-era accepted response remain unrecovered. See `docs/experiment-480-original-print-transport.md`. |
 | 481 | publisher nine-sketch poster cross-edition source test: official CE AND standalone PS4 listings show the same distinctive `InsideCE_Lifestyle_00014` marketing photograph of the approximately 3x3 sketch poster, though exact physical sheet identity and reverse side are not proven. The repeated promotional scene weakens CE-exclusive poster registration, while confirming a native printed 9-sketch surface. No A–I foreground overlay cue. See `docs/experiment-481-poster-cross-edition-gallery.md`. |
+
+| 482 | six-mapping secret-ending lever alphabet boundary: exhaustive 6 bijections × 28 rotations/reflections × 108 cyclic H108 starts = 18,144 typed placements, zero compatible under the observed 81/27 zone-alphabet premise. The circular code requires at least three changes between the two non-slash directions while any 14-cell H108 window can cross only one zone boundary. This extends Experiment 343 across all mappings; no additional code or new consumer. See `docs/experiment-482-lever-six-mapping-boundary.md`. |
 
 ## Current frontier
 
