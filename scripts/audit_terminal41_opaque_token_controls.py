@@ -195,7 +195,7 @@ def audit()->dict:
     _u3,_u4,u5=machine_layers()
     assert len(u5)==10
     counts=Counter(selector_readout(master) for master in u5)
-    assert dict(sorted(counts.values()))=={4:1,6:1}
+    assert sorted(counts.values())==[4,6]
     control={}
     for name,token in SOURCE_TOKENS.items():
         control[name]=candidate_digests(digit_string(token),name,counts)
