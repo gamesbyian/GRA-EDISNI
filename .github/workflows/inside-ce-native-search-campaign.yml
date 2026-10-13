@@ -7,6 +7,8 @@ on:
       - 'scripts/run_global_forum_index_search.py'
       - 'tests/test_global_forum_index_resume.py'
       - 'tests/test_inside_ce_native_campaign.py'
+      - 'tests/test_global_forum_search_plan.py'
+      - 'data/reference/global-gaming-forum-archive-routes.tsv'
       - 'data/reference/inside-ce-native-search-lexicon.tsv'
       - 'data/reference/inside-ce-ownership-secondary-platforms.tsv'
       - '.github/workflows/inside-ce-native-search-campaign.yml'
@@ -82,6 +84,8 @@ jobs:
           python-version: "3.12"
       - name: Test cumulative index cursor and rate-limit regression
         run: python -m unittest discover -s tests -p test_global_forum_index_resume.py -v
+      - name: Verify exact global forum and archival source matrices
+        run: python -m unittest discover -s tests -p test_global_forum_search_plan.py -v
       - name: Test locale mappings and source joins
         run: python -m unittest discover -s tests -p 'test_inside_ce_native_campaign.py' -v
       - name: Build native-language, forum-scoped task ledger (offline)
