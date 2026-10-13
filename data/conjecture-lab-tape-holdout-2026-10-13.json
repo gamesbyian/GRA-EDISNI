@@ -1,0 +1,27 @@
+{
+  "controls": {
+    "original_frame9": {
+      "at_most_actual_error": 16,
+      "maximum": 0.5652263374485597,
+      "minimum": 0.21011831275720164,
+      "null_brier_mean": 0.3801828858024691,
+      "null_brier_median": 0.38112654320987654,
+      "replicates": 1000
+    },
+    "within_class": {
+      "at_most_actual_error": 18,
+      "maximum": 0.60570987654321,
+      "minimum": 0.23713991769547324,
+      "null_brier_mean": 0.39300031893004117,
+      "null_brier_median": 0.39081790123456794,
+      "replicates": 1000
+    }
+  },
+  "holdout": {
+    "Laplace_smoothed_global_prevalence_baseline_brier": 0.25029690847872665,
+    "brier": 0.2635288065843622,
+    "impossible": 5,
+    "n": 54
+  },
+  "status": "exploratory, not prospective"
+}

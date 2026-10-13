@@ -1,0 +1,110 @@
+{
+  "actual": {
+    "exact_survivors": 0,
+    "illustrative_best_fit_models": [
+      {
+        "errors": 12,
+        "initial_previous": 253,
+        "op": "xor",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "reverse": false,
+        "selectors": [
+          1,
+          2,
+          1,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ],
+        "shifts": [
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "minimum_bit_mismatch": 12,
+    "programs": 77760
+  },
+  "machine": {
+    "opcode_position_permutations": 6,
+    "operations": [
+      "add",
+      "subtract",
+      "reverse_subtract",
+      "xor",
+      "rotate_current_add",
+      "rotate_current_xor",
+      "rotate_previous_add",
+      "rotate_previous_xor"
+    ],
+    "orientations": 2,
+    "tail_selector_completions": 18,
+    "three_immediate_sets": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        -1,
+        0,
+        1
+      ],
+      [
+        0,
+        3,
+        6
+      ],
+      [
+        0,
+        9,
+        18
+      ],
+      [
+        0,
+        27,
+        54
+      ]
+    ]
+  },
+  "matched_controls": {
+    "nine_site_frame": {
+      "at_most_actual_errors": 6,
+      "histogram": {
+        "8": 1,
+        "11": 1,
+        "12": 4,
+        "13": 4,
+        "14": 6
+      },
+      "median": 13,
+      "trials": 16
+    },
+    "same_class": {
+      "at_most_actual_errors": 3,
+      "histogram": {
+        "12": 3,
+        "13": 6,
+        "14": 5,
+        "15": 1,
+        "16": 1
+      },
+      "median": 13,
+      "trials": 16
+    }
+  },
+  "physical": {
+    "observed_residues": 66,
+    "records": 84,
+    "unknown": 42
+  },
+  "status": "DISCOVER/DEVELOP; no authorized opcode table; not a decoded sticker"
+}
