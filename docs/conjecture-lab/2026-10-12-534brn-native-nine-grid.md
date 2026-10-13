@@ -53,6 +53,12 @@ The captured JPEG stores a luma/chroma sampling structure consistent with common
 
 This does not preclude Playdead deliberately putting a message in the decoded image, or the foreground providing instructions to decode it. It means that no such channel consumer has been demonstrated from the extant captures.
 
+## Domain bridge: nine CE backgrounds versus nine repeated foreground positions
+
+This geometric negative needs to be read together with [Experiment 319](../experiment-319-background-geometry-mask-domain-audit.md). The solved IAB/CDE/FGH grid indexes **nine different background classes**, each fixed by sticker serial modulo nine. But the nine consecutive occurrences in the *body of a single class's 9+3 foreground word* all carry the **same** background class. An A–I spatial mask cannot be moved to those within-class occurrences without an extra correspondence.
+
+Experiment 319 quantifies that missing class-to-occurrence identification as up to **9! = 362,880** bijections (or 1,680 ordered three-row partitions). The candidate nine-site **JPEG image** map studied here is a separate missing correspondence: JPEG pixel/MCU addresses to the nine A–I classes. Neither ambiguity is repaired simply by observing the cardinality nine. Do not conflate them or silently compose one invented map with the other.
+
 ## Interpretation and next evidence gates
 
 **Bounded negative:** neither the intact HTML/XMP wrapper nor verified JPEG header/entropy constraints supply a unique nine-slot RGB sampling rule. A 128-like footer and nine CE backgrounds together do not fix a pixel-address map.
