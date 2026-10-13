@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "purpose": "Single recovered public seller photo album from archived GameSale INSIDE CE listing; no owner attribution or sticker claim before visual review.",
+  "sources": [
+    {
+      "id": "p48PIzb",
+      "url": "https://imgur.com/a/p48PIzb",
+      "source_page_url": "https://www.reddit.com/comments/i0vgml/_/fzw1kzj/",
+      "evidence_role": "unreviewed-july2020-full-ce-resale-photo",
+      "note": "Found via Arctic Shift archived comment id fzw1kzj dated 2020-07-31. Seller post explicitly included complete INSIDE CE and Huddle; album contents unreviewed."
+    }
+  ]
+}
