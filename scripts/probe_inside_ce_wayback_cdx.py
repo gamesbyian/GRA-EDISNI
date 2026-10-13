@@ -143,6 +143,8 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--inventory", choices=("controls", "forums"),
                     default="controls")
+    ap.add_argument("--control-ids", default="",
+                    help="Optional comma-separated set of dated positive-control IDs")
     ap.add_argument("--execute", action="store_true",
                     help="Explicitly query the Internet Archive CDX API")
     ap.add_argument("--max-sources", type=int, default=6)
@@ -151,6 +153,19 @@ def main() -> None:
     ap.add_argument("--output", type=Path, required=True)
     args = ap.parse_args()
     rows = load_rows(CONTROLS if args.inventory == "controls" else FORUMS, args.inventory)
+    if args.control_ids:
+        if args.inventory != "controls":
+            ap.error("--control-ids requires --inventory controls")
+        selected = args.control_ids.split(",")
+        if not selected or any(not item.strip() for item in selected):
+            ap.error("--control-ids must be nonempty comma-separated IDs")
+        chosen = {x.strip() for x in selected}
+        available = {x["label"] for x in rows}
+        if not chosen.issubset(available):
+            ap.error("Unknown control IDs: " + str(sorted(chosen - available)))
+        if len(chosen) != len(selected):
+            ap.error("Duplicate control IDs")
+        rows = [r for r in rows if r["label"] in chosen]
     tasks = generate(rows, per_window_limit=args.per_window_limit,
                      max_sources=args.max_sources)
     if args.execute:
@@ -161,7 +176,8 @@ def main() -> None:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
     print(json.dumps({
         "inventory": args.inventory, "sources_selected": args.max_sources,
-        "tasks_written": len(tasks), "network_requests": len(tasks) if args.execute else 0,
+        "tasks_written": len(tasks),
+        "attempted_requests": sum(x["status"] != "planned_unexecuted" for x in tasks) if args.execute else 0,
         "execute": args.execute, "output": str(args.output),
         "scope": "archive_capture_metadata_only_not_full_post_search",
     }))
