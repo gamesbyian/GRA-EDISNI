@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
+      - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13" gallery-dl
       - name: Query exact public archived Reddit comment trees
         run: |
           python scripts/external_evidence/recover_reddit_comment_images.py \
@@ -25,11 +25,56 @@ jobs:
             --out visual-evidence-work --max-comments 600
       - name: Download twenty sourced negative controls
         run: python scripts/external_evidence/fetch_visual_references.py
+      - name: Recover exact two public historical Imgur galleries (bounded)
+        shell: bash
+        run: |
+          mkdir -p evidence-work
+          for item in "ipjWYEz:known-PS4-cover" "YLXcetH:unreconciled"; do
+            id="${item%%:*}"
+            name="${item#*:}"
+            dest="evidence-work/gallery-$id"
+            mkdir -p "$dest"
+            echo "GALLERY_RETRIEVAL $id $name"
+            timeout 90s gallery-dl --range 1-12 --filesize-max 20M \
+              --dest "$dest" --write-metadata "https://imgur.com/gallery/$id" \
+              > "$dest/gallery-dl.log" 2>&1 || echo "GALLERY_FAILED $id"
+            tail -c 3000 "$dest/gallery-dl.log" || true
+          done
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          comments={
+            "ipjWYEz":"https://www.reddit.com/comments/e9bteo/_/favh0go/",
+            "YLXcetH":"https://www.reddit.com/comments/e9bteo/_/ffptzb1/",
+          }
+          for gid, comment_url in comments.items():
+            root=Path("evidence-work")/("gallery-"+gid)
+            images=[p for p in root.rglob("*") if p.is_file() and p.suffix.lower() in {".jpg",".jpeg",".webp",".png",".gif"}]
+            meta={"source_id":"gallery-"+gid,"kind":"public-comment-linked-gallery",
+                  "url":comment_url,
+                  "image_urls":{p.name:"https://imgur.com/gallery/"+gid for p in images},
+                  "source_pages":{p.name:comment_url for p in images},
+                  "image_count":len(images),
+                  "sha256":{p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in images},
+                  "retrieval_status":"images-downloaded" if images else "no-public-image-recovered"}
+            (root/"acquisition.json").write_text(json.dumps(meta,indent=2)+"\\n")
+            print("IMGUR_GALLERY_REPORT",json.dumps(meta))
+          PY
       - name: Retrieve only bounded approved public images linked from these comments
         run: |
-          python scripts/external_evidence/fetch_html_images.py \
-            --leads visual-evidence-work/reddit-comment-photo-links.json \
-            --out evidence-work --max-images 40 --max-per-page 15
+          if python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=json.loads(Path("visual-evidence-work/reddit-comment-photo-links.json").read_text())["image_mentions"]
+          raise SystemExit(0 if rows else 1)
+          PY
+          then
+            python scripts/external_evidence/fetch_html_images.py \
+              --leads visual-evidence-work/reddit-comment-photo-links.json \
+              --out evidence-work --max-images 40 --max-per-page 15
+          else
+            echo "No directly fetchable comment images; gallery retrieval still proceeds."
+          fi
       - name: Fingerprint comment media against known original stickers and promotional controls
         run: |
           python scripts/external_evidence/visual_index.py \
