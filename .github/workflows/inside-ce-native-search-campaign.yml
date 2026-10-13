@@ -1,6 +1,18 @@
 name: Plan native-language INSIDE CE ownership searches
 
 on:
+  pull_request:
+    paths:
+      - 'scripts/build_inside_ce_native_search_campaign.py'
+      - 'tests/test_inside_ce_native_campaign.py'
+      - 'data/reference/inside-ce-native-search-lexicon.tsv'
+      - '.github/workflows/inside-ce-native-search-campaign.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_inside_ce_native_search_campaign.py'
+      - 'data/reference/inside-ce-native-search-lexicon.tsv'
+      - '.github/workflows/inside-ce-native-search-campaign.yml'
   workflow_dispatch:
     inputs:
       categories:
@@ -51,8 +63,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_inside_ce_native_campaign.py' -v
       - name: Build native-language, forum-scoped task ledger (offline)
         env:
-          CATEGORIES: ${{ inputs.categories }}
-          STATUSES: ${{ inputs.site_statuses }}
+          CATEGORIES: ${{ inputs.categories || 'all' }}
+          STATUSES: ${{ inputs.site_statuses || 'V,C,H' }}
         run: |
           python - <<'PY'
           import os
