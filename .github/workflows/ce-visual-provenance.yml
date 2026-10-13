@@ -4,9 +4,11 @@ on:
   pull_request:
     paths:
       - "scripts/external_evidence/visual_index.py"
+      - "scripts/external_evidence/discover_html_images.py"
       - "scripts/external_evidence/fetch_visual_references.py"
       - "scripts/external_evidence/visual_semantic.py"
       - "tests/test_ce_visual_provenance.py"
+      - "tests/test_ce_html_image_discovery.py"
       - "data/reference/inside-ce-visual-sources.json"
       - ".github/workflows/ce-visual-provenance.yml"
   workflow_dispatch:
@@ -40,8 +42,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
-      - run: python -m unittest discover -s tests -p 'test_ce_visual_provenance.py' -v
-      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py
+      - run: python -m unittest discover -s tests -p 'test_ce_*py' -v
+      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py
 
   public-run:
     if: github.event_name == 'workflow_dispatch'
@@ -65,6 +67,11 @@ jobs:
           args=(--source-id "$SOURCE_ID")
           if [[ "$INCLUDE_MEDIA" == "true" ]]; then args+=(--include-media); fi
           python scripts/external_evidence/harvest_public.py "${args[@]}"
+      - name: Extract image URLs from already acquired public HTML
+        run: |
+          mkdir -p evidence-work
+          python scripts/external_evidence/discover_html_images.py \
+            --acquired evidence-work --output visual-evidence-work/html-image-leads.json
       - name: Build provenance index and candidate triage
         env:
           MAX_IMAGES: ${{ inputs.max_images }}
