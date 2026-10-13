@@ -240,6 +240,36 @@ def audit() -> dict:
     assert [cell["quarter_1_based"] for cell in ambiguous_cells] == [2, 2, 3, 3]
     assert {cell["physical_row_col_1_based"][1] for cell in ambiguous_cells} == {2}
 
+    # Treat each A-I background class as a native nine-panel receiving site:
+    # the same class contributes one selected mark from each primary quarter.
+    # This projection is source-typed by the background artwork; its use
+    # as a final decoder is still a hypothesis.
+    per_class = {}
+    for family, words in groups.items():
+        per_class[family] = {}
+        for j, letter in enumerate(LETTERS):
+            options = sorted({
+                "".join(selected_read(word)[9*q+j] for q in range(3))
+                for word in words
+            })
+            per_class[family][letter] = {
+                "distinct_three_mark_words": len(options),
+                "three_mark_words": options,
+                "invariant_across_family": len(options) == 1,
+                "physical_row_col_1_based":
+                    [POS[letter][0]+1, POS[letter][1]+1],
+            }
+    assert {
+        family: [per_class[family][letter]["distinct_three_mark_words"]
+                 for letter in LETTERS]
+        for family in groups
+    } == {
+        "U2": [4,1,2,1,1,1,5,1,2],
+        "U3": [4,1,2,1,1,1,4,1,1],
+        "U4": [3,1,1,1,1,1,3,1,1],
+        "U5": [2,1,1,1,1,1,2,1,1],
+    }
+
     # A genuine hypothetical consumer example: parity of selected output.
     # Report as a functional projection, NOT evidence of parity/ECC authorship.
     hypothetical_parity = {}
@@ -280,6 +310,7 @@ def audit() -> dict:
                 "structural degeneracy, not a proven externally consumed key."
             )
         },
+        "selected_three_marks_per_A_to_I_class": per_class,
         "hypothetical_selected_dash_parity": hypothetical_parity,
         "limits": [
             "These finite operation choices are declared probes, not independently specified original decoders.",
