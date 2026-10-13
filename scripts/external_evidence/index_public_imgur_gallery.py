@@ -30,7 +30,8 @@ def gallery_metadata(root: Path, gallery: dict) -> dict:
     name = gallery["id"]
     if not name.isalnum() or len(name) > 20:
         raise ValueError("unsafe gallery id")
-    if gallery["url"] != "https://imgur.com/gallery/" + name:
+    if gallery["url"] not in {"https://imgur.com/gallery/" + name,
+                              "https://imgur.com/a/" + name}:
         raise ValueError("gallery URL/id mismatch")
     comment_url = gallery["source_page_url"]
     parsed = urlparse(comment_url)

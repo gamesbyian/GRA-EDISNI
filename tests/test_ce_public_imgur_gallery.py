@@ -52,6 +52,14 @@ class GalleryProvenanceTests(unittest.TestCase):
         self.assertEqual(records[0]["source_url"], self.gallery["source_page_url"])
         self.assertEqual(records[0]["image_url"], "https://i.imgur.com/example.jpg")
 
+    def test_imgur_a_album_link_accepted_without_changing_exact_source(self):
+        self.gallery["url"] = "https://imgur.com/a/demoGallery"
+        record = gallery_metadata(self.directory, self.gallery)
+        self.assertEqual(record["gallery_url"], self.gallery["url"])
+        self.assertEqual(record["image_count"], 1)
+        self.assertEqual(record["source_pages"][self.image.name],
+                         self.gallery["source_page_url"])
+
     def test_bad_metadata_does_not_bless_bytes(self):
         self.image.with_suffix(".jpg.json").write_text(json.dumps({
             "url": "http://127.0.0.1/example.jpg"}))
