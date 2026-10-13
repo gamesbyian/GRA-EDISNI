@@ -1,0 +1,46 @@
+name: INSIDE CE seven old eBay CDX public snapshot pilot
+
+# One-time, isolated public metadata acquisition only. DO NOT MERGE.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-ebay-cdx-live-pilot-20261013.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  capture-index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Enumerate bounded captures for seven exact public eBay listing IDs
+        run: python scripts/external_evidence/probe_ce_ebay_cdx.py
+      - name: Print full source-specific audit and absence/HTTP errors
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("visual-evidence-work/historic-ebay-cdx-captures.json")
+          print("CDX_EXACT_EBAY_PILOT_BEGIN")
+          if p.exists():
+            records=json.loads(p.read_text()).get("sources",[])
+            print("SOURCES",len(records))
+            for record in records:
+              print("CDX_RECORD",json.dumps(record,ensure_ascii=False))
+          else:
+            print("NO_RESULT_FILE: script failed before report")
+          print("CDX_EXACT_EBAY_PILOT_END")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-ebay-cdx-pilot-${{ github.run_id }}
+          path: visual-evidence-work/historic-ebay-cdx-captures.json
+          retention-days: 30
+          if-no-files-found: warn
