@@ -210,6 +210,26 @@ def audit()->dict:
             for name in SOURCE_TOKENS]==[1,1,3]
     actual=best_survival(CE_DIGITS,counts)
     assert actual["surviving_views"] == {"FGHCDEIAB":6}
+    # Literal natural reading orders are negative on this fitted grammar.
+    # Original 2016 Polybius reads coordinate digits column before row,
+    # but that does NOT itself instruct a 3x3 sheet's flattening order.
+    natural_read_orders={
+        "physical_sheet_row_major":"IABCDEFGH",
+        "physical_sheet_column_major":"ICFADGBEH",
+        "native_A_I_serial":"ABCDEFGHI",
+        "vertical_flip_then_row_major":"FGHCDEIAB",
+    }
+    native_views={
+        name: (sum(n for word,n in counts.items()
+                   if accepted_count(CE_DIGITS,class_words(word),layout)))
+        for name,layout in natural_read_orders.items()
+    }
+    assert native_views=={
+        "physical_sheet_row_major":0,
+        "physical_sheet_column_major":0,
+        "native_A_I_serial":0,
+        "vertical_flip_then_row_major":6,
+    }
     assert control["ce"]["all_order_preserving_9_digit_subsequences"]==1
     return {
         "mode":"DISCOVER/DEVELOP source-native identifier calibration; no solved CE foreground",
@@ -220,6 +240,7 @@ def audit()->dict:
         "iid_example_reference_calculations":binary_baselines(),
         "exact_order_preserving_9_digit_subsequence_controls":control,
         "source_CE_literal_9_digits_best_D4_survival":actual,
+        "natural_sheet_and_serial_order_readout_controls":native_views,
         "limits":[
             "The independent source of the 22-character SAF field is a static ASCII island, not a URL; the contrast is morphological, not a matched process.",
             "Only one source-matched protocol token exists in this bounded archive; no generative distribution is known.",
