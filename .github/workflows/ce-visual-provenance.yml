@@ -10,6 +10,7 @@ on:
       - "tests/test_ce_visual_provenance.py"
       - "tests/test_ce_html_image_discovery.py"
       - "data/reference/inside-ce-visual-sources.json"
+      - "data/reference/inside-ce-visual-historical-pages.json"
       - ".github/workflows/ce-visual-provenance.yml"
   workflow_dispatch:
     inputs:
@@ -20,6 +21,11 @@ on:
         type: string
       include_media:
         description: "Download source video (can be large); not needed for metadata thumbnails"
+        required: true
+        default: false
+        type: boolean
+      historical_pages:
+        description: "Also fetch six documented public owner/photo/press pages (no media download)"
         required: true
         default: false
         type: boolean
@@ -79,6 +85,12 @@ jobs:
           args=(--source-id "$SOURCE_ID")
           if [[ "$INCLUDE_MEDIA" == "true" ]]; then args+=(--include-media); fi
           python scripts/external_evidence/harvest_public.py "${args[@]}"
+      - name: Optionally harvest documented historical owner/photo/press pages
+        if: inputs.historical_pages
+        run: |
+          python scripts/external_evidence/harvest_public.py \
+            --manifest data/reference/inside-ce-visual-historical-pages.json \
+            --source-id all
       - name: Extract image URLs from already acquired public HTML
         run: |
           mkdir -p evidence-work
