@@ -191,7 +191,13 @@ def main():
     changed[0] = "".join(damaged)
     assert min_disagreements(changed, core, prepared[0][1]) >= 1
 
-    n = accepted = 0
+    # Four physical classes already have a single possible selected word.
+    # Checking these twelve compulsory signs first gives a fast, independent
+    # exact-match exclusion and avoids scoring almost all irrelevant windows.
+    forced = {j: projected["ABCDEFGHI"[j]][0] for j in (1, 4, 5, 7)}
+    assert forced == {1: "//-", 4: "///", 5: "///", 7: "--/"}
+    n = accepted = forced_exact = 0
+    forced_survivors = []
     best = (28, None)
     for perm in itertools.permutations(SIGNS):
         trans = dict(zip(SIGNS, perm))
@@ -202,17 +208,39 @@ def main():
             for y, x, panel in subwindows(
                 image, transpose, flip_rows, flip_columns
             ):
+                forced_misses = sum(
+                    panel[q][j] != word[q]
+                    for j, word in forced.items()
+                    for q in range(3)
+                )
+                if forced_misses == 0:
+                    forced_exact += 1
+                local_best = 28
                 for sel, requested in prepared:
                     n += 1
+                    if forced_misses > best[0] and forced_misses != 0:
+                        # This lower bound already exceeds the global best;
+                        # no exact hit or better minimum can occur here.
+                        continue
                     distance = min_disagreements(
                         panel, core, requested, best[0]
                     )
                     accepted += distance == 0
+                    local_best = min(local_best, distance)
                     if distance < best[0]:
                         best = (distance, (perm, transpose, flip_rows,
                                            flip_columns, y, x, sel))
+                if forced_misses == 0:
+                    forced_survivors.append(
+                        (perm, transpose, flip_rows, flip_columns,
+                         y, x, local_best)
+                    )
     assert n == 6 * 8 * 720 * 18 == 622080
     print("Exact PC/PS4 acorn window tests:", n)
+    print("Source windows matching all four forced class signatures:", forced_exact)
+    print("Their best full-selector costs:", forced_survivors)
+    assert forced_exact == 4
+    assert sorted(item[-1] for item in forced_survivors) == [3, 4, 4, 5]
     print("Zero-conflict compatible projections:", accepted)
     print("Minimum necessary output-symbol disagreements:", best[0])
     print("Best retrospective registration:", best[1])
