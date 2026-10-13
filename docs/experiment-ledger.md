@@ -476,6 +476,8 @@ Latest indexed experiment: **481** (with documented numbering gaps).
 - **241–249:** theorem graph, independent implementation equivalence, recursion uniqueness audits, raw primary axiom reduction, bounded polarity completion, human solve reconstruction, and primary leave-one-out robustness.
 - **250–344:** lower-level raw-constraint reconstruction, exact three-way implementation equivalence, emergent Q4/request-grant structure, non-circular raw-space recursion selection, Q4 polarity weakening and inverse recovery, physical-codebook holdout, primary-POS3 robustness, and historical carrier-provenance reclassification.
 
+| CL-534-N9 | source-native 534brn nine-position/RGB preflight: original B/XMP blobs hash-checked, intact wrapper/footer show no input/canvas before damaged JPEG, source JPEG dimensions remain 128..255 and all 43 MCU products survive; among 16,384 possible dimensions exactly 1,849 permit equal pixel thirds, 2,304 equal MCU thirds and nine strict pixel+MCU aligned thirds. Hypothetical 128×128 fails literal equal-thirds tiling; two simple nine-site sampling schemes already differ at that size. No source-fixed RGB or nine-slot consumer; original raster or independent registration cue still required. See `docs/conjecture-lab/2026-10-12-534brn-native-nine-grid.md`. |
+
 ## Status shorthand
 
 The current machine state is not encoded in this ledger. Read `docs/current-state.md` for authoritative compact state.
