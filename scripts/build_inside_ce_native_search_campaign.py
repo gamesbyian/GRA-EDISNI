@@ -49,7 +49,7 @@ def locales_for_site(label):
     return (label,)
 
 def build(directory, routes, archives, lexicon, *, allowed_statuses, max_tasks,
-          include_weak=False, categories=None):
+          include_weak=True, categories=None):
     if len(directory) != len(routes) or len(archives) != len(routes):
         raise ValueError("Directory, route and archive tables differ in length")
     for row, route, archive in zip(directory, routes, archives):
@@ -116,7 +116,8 @@ def main():
     parser.add_argument("--summary", type=Path)
     parser.add_argument("--statuses", default="V,C,H")
     parser.add_argument("--max-tasks", type=int, default=20000)
-    parser.add_argument("--include-weak", action="store_true")
+    parser.add_argument("--exclude-weak", action="store_true",
+                        help="Skip news/comment/deal pages; default includes them")
     parser.add_argument("--category", action="append")
     args = parser.parse_args()
     statuses = set(args.statuses.split(","))
@@ -126,7 +127,7 @@ def main():
         load_tsv(DIRECTORY), load_tsv(ROUTES),
         load_tsv(ARCHIVES), load_tsv(LEXICON),
         allowed_statuses=statuses, max_tasks=args.max_tasks,
-        include_weak=args.include_weak,
+        include_weak=not args.exclude_weak,
         categories=set(args.category) if args.category else None
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
