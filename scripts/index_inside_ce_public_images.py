@@ -103,6 +103,28 @@ def similar(a: dict, b: dict, *, dhash_limit: int = 7,
     h = (int(a["ahash64"], 16) ^ int(b["ahash64"], 16)).bit_count()
     return d <= dhash_limit and h <= ahash_limit
 
+def pair_candidates(items: list[dict]) -> set[tuple[int, int]]:
+    """Lossless candidate pruning for a dHash distance <= 7.
+
+    Partition the 64-bit dHash into eight 8-bit blocks. If two hashes differ
+    in at most seven bits, at least one of the eight blocks must be equal.
+    Indexing each block creates a recall-preserving candidate set for the
+    configured dHash threshold, without checking every image pair.
+    """
+    from collections import defaultdict
+    buckets = defaultdict(list)
+    for i, item in enumerate(items):
+        value = int(item["dhash64"], 16)
+        for block in range(8):
+            buckets[(block, (value >> (block * 8)) & 255)].append(i)
+    return {
+        (group[x], group[y])
+        for group in buckets.values()
+        for x in range(len(group))
+        for y in range(x + 1, len(group))
+    }
+
+
 def analyze(rows: list[dict], *, root: Path) -> tuple[list[dict], dict]:
     metadata = []
     seen = set()
@@ -135,8 +157,8 @@ def analyze(rows: list[dict], *, root: Path) -> tuple[list[dict], dict]:
             parent[max(pa, pb)] = min(pa, pb)
 
     candidates = []
-    for i in range(len(metadata)):
-        for j in range(i + 1, len(metadata)):
+    attempted_pairs = pair_candidates(metadata)
+    for i, j in sorted(attempted_pairs):
             a, b = metadata[i], metadata[j]
             if similar(a, b):
                 join(i, j)
@@ -174,7 +196,9 @@ def analyze(rows: list[dict], *, root: Path) -> tuple[list[dict], dict]:
         row["assessment"] = "unreviewed_image_provenance_only"
         row["new_confirmed_stickers"] = 0
     summary = {
-        "images": len(metadata), "candidate_pairs": len(candidates),
+        "images": len(metadata), "comparison_pairs": len(attempted_pairs),
+        "possible_pairs_before_pruning": len(metadata) * (len(metadata)-1) // 2,
+        "candidate_pairs": len(candidates),
         "candidate_clusters": len(ordered_groups),
         "possible_marketing_reuses": sum(
             v["marketing_reference_proximity"].startswith("potential_")
