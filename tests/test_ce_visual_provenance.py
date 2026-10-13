@@ -53,6 +53,14 @@ class VisualProvenanceTests(unittest.TestCase):
         self.assertEqual(summary["triage"][0]["classification"], "promotional-reuse-review")
         self.assertIs(summary["triage"][0]["new_sticker_confirmed"], False)
 
+    def test_standalone_product_photo_cannot_be_counted_as_ce(self):
+        original = self.record(self.original, "ps4-only", "standalone-product-reference")
+        candidate = self.inbox / "repost.jpg"
+        candidate.write_bytes(self.original.read_bytes())
+        result = analyze([original], [self.record(candidate, "c", "unreviewed-candidate")], 3)
+        self.assertEqual(result["triage"][0]["classification"], "standalone-ps4-image-review")
+        self.assertFalse(result["triage"][0]["new_sticker_confirmed"])
+
     def test_metadata_provenance_and_corrupt_input(self):
         folder = self.inbox / "auction-example"
         folder.mkdir()
