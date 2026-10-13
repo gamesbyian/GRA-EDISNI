@@ -51,6 +51,28 @@ But a window of length 14 can cross **at most one** boundary between the 81-posi
 
 The exhaustive script independently checks the whole finite search space and asserts the proof's run-count invariant.
 
+### Post-report sensitivity: a claimed unconfirmed dot inside the first 81
+
+A 12 Oct 2026 Discord reply reports **one unconfirmed dot in the middle of the first 81 symbols**, with no authenticated serial/photo yet provided here. It must be tracked as a *rumor requiring source/number confirmation*, not silently copied into `data/observations.csv`. A single dot would break the **strict** zone alphabet rule, so rerunning only the original zone-exclusion proof is insufficient.
+
+The stronger, observation-only sensitivity replays **all 18,144** mappings/orientations/start placements while **discarding the alphabet-zone restrictions entirely**. It holds just the 84 physical observation records (66 unique residues) fixed. The direct known bunker password has **exactly one** compatible 14-position arrangement, and even that requires **five** presently unseen out-of-zone dots:
+
+```
+start residue: 49
+rotated directions: URLLLUURLRRRUU
+U -> dot, R -> slash, L -> dash
+expected residues: 49 50 51 52 53 54 55 56 57 58 59 60 61 62
+expected marks:     .  /  -  -  -  .  .  /  -  /  /  /  .  .
+unknown dot needs:  49, 54, 55, 61, 62
+physical support:  6 observed matches; 8 positions unseen
+```
+
+This lone candidate uses a **different mapping** than the physically motivated sleeve mapping. The five dots are **necessary hypothetical exceptions**, not newly discovered physical stickers or a prediction licensed by Playdead. Under the stated six-bijection, 28-orientation, 108-start family, a **single** unconfirmed interior dot cannot reopen direct replay of the known ordinary lever code. This conclusion survives *removal* of the previously relied-upon strict 81/27 rule and depends only on the observed marks plus the fixed target.
+
+If the Discord participant can supply the exact sticker **serial number, image/link and confidence level**, check its residue (serial mod 108), possible background class and mark against source evidence, preserve tentative reports outside the canonical physical ledger, then rerun this sensitivity. A confirmed dot at one of the five positions would still not *prove* the code, and a confirmed dot elsewhere would exclude the only present physical-compatible candidate without further mark revisions.
+
+Reproduce with `python scripts/audit_lever_exception_sensitivity.py` and inspect `data/experiment-482-lever-exception-sensitivity.json`.
+
 ## What the negative does and does not establish
 
 **Ruled out, given the established sector model:** embedding the *already-known* 14-move original bunker password as any 14 **consecutive** H108 serial residues, under **any** one-to-one symbol mapping, forward/backward, with arbitrary cyclic origin.
