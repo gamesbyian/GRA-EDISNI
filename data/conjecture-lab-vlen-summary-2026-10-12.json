@@ -1,0 +1,488 @@
+{
+  "cross_zone_class_metadata": {
+    "classes": {
+      "A": {
+        "dot_op_positions": [
+          0,
+          1,
+          2
+        ],
+        "physical": "???",
+        "residues": [
+          82,
+          91,
+          100
+        ],
+        "slash_op_positions": [
+          0,
+          1,
+          2
+        ]
+      },
+      "B": {
+        "dot_op_positions": [
+          1
+        ],
+        "physical": "?./",
+        "residues": [
+          83,
+          92,
+          101
+        ],
+        "slash_op_positions": [
+          2
+        ]
+      },
+      "C": {
+        "dot_op_positions": [
+          0,
+          1,
+          2
+        ],
+        "physical": "???",
+        "residues": [
+          84,
+          93,
+          102
+        ],
+        "slash_op_positions": [
+          0,
+          1,
+          2
+        ]
+      },
+      "D": {
+        "dot_op_positions": [],
+        "physical": ".?.",
+        "residues": [
+          85,
+          94,
+          103
+        ],
+        "slash_op_positions": [
+          1
+        ]
+      },
+      "E": {
+        "dot_op_positions": [
+          1
+        ],
+        "physical": "/.?",
+        "residues": [
+          86,
+          95,
+          104
+        ],
+        "slash_op_positions": [
+          0
+        ]
+      },
+      "F": {
+        "dot_op_positions": [
+          0,
+          2
+        ],
+        "physical": "?/?",
+        "residues": [
+          87,
+          96,
+          105
+        ],
+        "slash_op_positions": [
+          1
+        ]
+      },
+      "G": {
+        "dot_op_positions": [
+          1
+        ],
+        "physical": "?.?",
+        "residues": [
+          88,
+          97,
+          106
+        ],
+        "slash_op_positions": [
+          0,
+          2
+        ]
+      },
+      "H": {
+        "dot_op_positions": [],
+        "physical": "..?",
+        "residues": [
+          89,
+          98,
+          107
+        ],
+        "slash_op_positions": [
+          2
+        ]
+      },
+      "I": {
+        "dot_op_positions": [
+          0
+        ],
+        "physical": ".?/",
+        "residues": [
+          90,
+          99,
+          108
+        ],
+        "slash_op_positions": [
+          2
+        ]
+      }
+    },
+    "exact_observation_label_permutation_nulls": {
+      "global_observed_counts": {
+        "compatible_one_dot": 0,
+        "compatible_one_slash": 280,
+        "one_dot_fraction": "0/495",
+        "one_slash_completion_counts": {
+          "0": 215,
+          "18": 160,
+          "36": 80,
+          "9": 40
+        },
+        "one_slash_fraction": "280/495",
+        "support": 495
+      },
+      "nine_frame_observed_counts": {
+        "compatible_one_dot": 0,
+        "compatible_one_slash": 28,
+        "one_dot_fraction": "0/60",
+        "one_slash_completion_counts": {
+          "0": 32,
+          "18": 16,
+          "36": 12
+        },
+        "one_slash_fraction": "28/60",
+        "support": 60
+      }
+    },
+    "note": "Compatibility only; 427 dot eliminates half the historically reported 36 one-slash completions.",
+    "one_dot_completions": 0,
+    "one_slash_completions": 18
+  },
+  "cross_zone_slash_binary": {
+    "best_of_72": [
+      2455353950208,
+      "reverse_serial",
+      "slash=1",
+      "prefix_forward"
+    ],
+    "best_of_72_null_controls": {
+      "original_nine_site_frame_shuffles": {
+        "fraction_ge_best": "92/121",
+        "frame9": true,
+        "note": "post-selection ensemble maximum; cross-zone slash-vs-nonslash mapping assumed",
+        "null_median": 2956380340224,
+        "null_q95": 3904695697408,
+        "observed_best": 2455353950208,
+        "search_size": 72,
+        "seed": 20261021,
+        "shuffles": 120
+      },
+      "original_zone_shuffles": {
+        "fraction_ge_best": "105/121",
+        "frame9": false,
+        "note": "post-selection ensemble maximum; cross-zone slash-vs-nonslash mapping assumed",
+        "null_median": 3030804070400,
+        "null_q95": 4011499454464,
+        "observed_best": 2455353950208,
+        "search_size": 72,
+        "seed": 20261020,
+        "shuffles": 120
+      }
+    },
+    "interpretation": "slash vs dash-or-dot collapses distinct 81/27 alphabets; speculative"
+  },
+  "experiment": "CL-VLEN-01",
+  "mixed_width_grouping_counts": {
+    "108": {
+      "ordered_partitions_total": 53501860,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 36
+        },
+        {
+          "ordered_partitions": 5984,
+          "quintets": 3,
+          "triples": 31
+        },
+        {
+          "ordered_partitions": 906192,
+          "quintets": 6,
+          "triples": 26
+        },
+        {
+          "ordered_partitions": 14307150,
+          "quintets": 9,
+          "triples": 21
+        },
+        {
+          "ordered_partitions": 30421755,
+          "quintets": 12,
+          "triples": 16
+        },
+        {
+          "ordered_partitions": 7726160,
+          "quintets": 15,
+          "triples": 11
+        },
+        {
+          "ordered_partitions": 134596,
+          "quintets": 18,
+          "triples": 6
+        },
+        {
+          "ordered_partitions": 22,
+          "quintets": 21,
+          "triples": 1
+        }
+      ],
+      "total_sites": 108
+    },
+    "12": {
+      "ordered_partitions_total": 1,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 4
+        }
+      ],
+      "total_sites": 12
+    },
+    "27": {
+      "ordered_partitions_total": 36,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 9
+        },
+        {
+          "ordered_partitions": 35,
+          "quintets": 3,
+          "triples": 4
+        }
+      ],
+      "total_sites": 27
+    },
+    "81": {
+      "ordered_partitions_total": 447702,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 27
+        },
+        {
+          "ordered_partitions": 2300,
+          "quintets": 3,
+          "triples": 22
+        },
+        {
+          "ordered_partitions": 100947,
+          "quintets": 6,
+          "triples": 17
+        },
+        {
+          "ordered_partitions": 293930,
+          "quintets": 9,
+          "triples": 12
+        },
+        {
+          "ordered_partitions": 50388,
+          "quintets": 12,
+          "triples": 7
+        },
+        {
+          "ordered_partitions": 136,
+          "quintets": 15,
+          "triples": 2
+        }
+      ],
+      "total_sites": 81
+    }
+  },
+  "source": "data/observations.csv, 84 physical observations of 66 unique residues",
+  "zone_results": {
+    "body": {
+      "adjacency_shuffles": {
+        "frame9": {
+          "max": 26,
+          "mean": 17.371417,
+          "method": "nine-site observed-count shuffled",
+          "min": 8,
+          "observed_matching_adjacent": 17,
+          "one_sided_ge": 0.63978,
+          "one_sided_le": 0.521957,
+          "replicates": 12000,
+          "sd": 2.458889,
+          "seed": 20261113
+        },
+        "global": {
+          "max": 27,
+          "mean": 17.30325,
+          "method": "zone observed-count shuffled",
+          "min": 7,
+          "observed_matching_adjacent": 17,
+          "one_sided_ge": 0.607783,
+          "one_sided_le": 0.527039,
+          "replicates": 12000,
+          "sd": 2.868877,
+          "seed": 20261013
+        }
+      },
+      "best_of_family_control": {
+        "frame9": {
+          "best_accepted_completions": 50331648,
+          "frames": true,
+          "max_family_ge_probability": 0.714571,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 62054400,
+          "null_q95": 109445120,
+          "replicates": 500,
+          "seed": 20261313
+        },
+        "global": {
+          "best_accepted_completions": 50331648,
+          "frames": false,
+          "max_family_ge_probability": 0.706587,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 62914560,
+          "null_q95": 109051904,
+          "replicates": 500,
+          "seed": 20261213
+        }
+      },
+      "equal_adjacent": 17,
+      "fully_known_native_quintets": 1,
+      "fully_known_native_triplets": 6,
+      "known_adjacent_pairs": 34,
+      "maximal_run_count_bounds_3": [
+        0,
+        12
+      ],
+      "maximal_run_count_bounds_5": [
+        0,
+        7
+      ],
+      "observed": 54,
+      "parser_counts": {
+        "-=0,/=1": {
+          "prefix_backward": 35377152,
+          "prefix_forward": 0,
+          "prefix_terminated": 337920,
+          "two_bit_backward": 50331648,
+          "two_bit_forward": 30408704,
+          "two_bit_terminated": 0
+        },
+        "/=0,-=1": {
+          "prefix_backward": 18382848,
+          "prefix_forward": 24756224,
+          "prefix_terminated": 0,
+          "two_bit_backward": 5807104,
+          "two_bit_forward": 25165824,
+          "two_bit_terminated": 0
+        }
+      },
+      "transition_min_max": [
+        22,
+        59
+      ],
+      "unknown": 27
+    },
+    "tail": {
+      "adjacency_shuffles": {
+        "frame9": {
+          "max": 4,
+          "mean": 2.809833,
+          "method": "nine-site observed-count shuffled",
+          "min": 2,
+          "observed_matching_adjacent": 2,
+          "one_sided_ge": 1.0,
+          "one_sided_le": 0.394884,
+          "replicates": 12000,
+          "sd": 0.750558,
+          "seed": 20261194
+        },
+        "global": {
+          "max": 5,
+          "mean": 2.578917,
+          "method": "zone observed-count shuffled",
+          "min": 0,
+          "observed_matching_adjacent": 2,
+          "one_sided_ge": 0.838847,
+          "one_sided_le": 0.467794,
+          "replicates": 12000,
+          "sd": 1.069239,
+          "seed": 20261094
+        }
+      },
+      "best_of_family_control": {
+        "frame9": {
+          "best_accepted_completions": 8320,
+          "frames": true,
+          "max_family_ge_probability": 0.708583,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 9216,
+          "null_q95": 11392,
+          "replicates": 500,
+          "seed": 20261394
+        },
+        "global": {
+          "best_accepted_completions": 8320,
+          "frames": false,
+          "max_family_ge_probability": 0.716567,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 9216,
+          "null_q95": 13184,
+          "replicates": 500,
+          "seed": 20261294
+        }
+      },
+      "equal_adjacent": 2,
+      "fully_known_native_quintets": 0,
+      "fully_known_native_triplets": 0,
+      "known_adjacent_pairs": 5,
+      "maximal_run_count_bounds_3": [
+        0,
+        6
+      ],
+      "maximal_run_count_bounds_5": [
+        0,
+        2
+      ],
+      "observed": 12,
+      "parser_counts": {
+        ".=0,/=1": {
+          "prefix_backward": 0,
+          "prefix_forward": 2048,
+          "prefix_terminated": 0,
+          "two_bit_backward": 1792,
+          "two_bit_forward": 7168,
+          "two_bit_terminated": 640
+        },
+        "/=0,.=1": {
+          "prefix_backward": 2432,
+          "prefix_forward": 8320,
+          "prefix_terminated": 0,
+          "two_bit_backward": 4736,
+          "two_bit_forward": 3072,
+          "two_bit_terminated": 0
+        }
+      },
+      "transition_min_max": [
+        7,
+        22
+      ],
+      "unknown": 15
+    }
+  }
+}

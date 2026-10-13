@@ -1,0 +1,3190 @@
+{
+  "corpus": {
+    "distinct_observed": 66,
+    "h108_length": 108,
+    "records": 84,
+    "unknown": 42
+  },
+  "cross_zone_class_metadata": {
+    "classes": {
+      "A": {
+        "dot_op_positions": [
+          0,
+          1,
+          2
+        ],
+        "physical": "???",
+        "residues": [
+          82,
+          91,
+          100
+        ],
+        "slash_op_positions": [
+          0,
+          1,
+          2
+        ]
+      },
+      "B": {
+        "dot_op_positions": [
+          1
+        ],
+        "physical": "?./",
+        "residues": [
+          83,
+          92,
+          101
+        ],
+        "slash_op_positions": [
+          2
+        ]
+      },
+      "C": {
+        "dot_op_positions": [
+          0,
+          1,
+          2
+        ],
+        "physical": "???",
+        "residues": [
+          84,
+          93,
+          102
+        ],
+        "slash_op_positions": [
+          0,
+          1,
+          2
+        ]
+      },
+      "D": {
+        "dot_op_positions": [],
+        "physical": ".?.",
+        "residues": [
+          85,
+          94,
+          103
+        ],
+        "slash_op_positions": [
+          1
+        ]
+      },
+      "E": {
+        "dot_op_positions": [
+          1
+        ],
+        "physical": "/.?",
+        "residues": [
+          86,
+          95,
+          104
+        ],
+        "slash_op_positions": [
+          0
+        ]
+      },
+      "F": {
+        "dot_op_positions": [
+          0,
+          2
+        ],
+        "physical": "?/?",
+        "residues": [
+          87,
+          96,
+          105
+        ],
+        "slash_op_positions": [
+          1
+        ]
+      },
+      "G": {
+        "dot_op_positions": [
+          1
+        ],
+        "physical": "?.?",
+        "residues": [
+          88,
+          97,
+          106
+        ],
+        "slash_op_positions": [
+          0,
+          2
+        ]
+      },
+      "H": {
+        "dot_op_positions": [],
+        "physical": "..?",
+        "residues": [
+          89,
+          98,
+          107
+        ],
+        "slash_op_positions": [
+          2
+        ]
+      },
+      "I": {
+        "dot_op_positions": [
+          0
+        ],
+        "physical": ".?/",
+        "residues": [
+          90,
+          99,
+          108
+        ],
+        "slash_op_positions": [
+          2
+        ]
+      }
+    },
+    "exact_observation_label_permutation_nulls": {
+      "global_observed_counts": {
+        "compatible_one_dot": 0,
+        "compatible_one_slash": 280,
+        "one_dot_fraction": "0/495",
+        "one_slash_completion_counts": {
+          "0": 215,
+          "9": 40,
+          "18": 160,
+          "36": 80
+        },
+        "one_slash_fraction": "280/495",
+        "support": 495
+      },
+      "nine_frame_observed_counts": {
+        "compatible_one_dot": 0,
+        "compatible_one_slash": 28,
+        "one_dot_fraction": "0/60",
+        "one_slash_completion_counts": {
+          "0": 32,
+          "18": 16,
+          "36": 12
+        },
+        "one_slash_fraction": "28/60",
+        "support": 60
+      }
+    },
+    "note": "Compatibility only; 427 dot eliminates half the historically reported 36 one-slash completions.",
+    "one_dot_completions": 0,
+    "one_slash_completions": 18
+  },
+  "cross_zone_slash_binary": {
+    "interpretation": "slash vs dash-or-dot collapses distinct 81/27 alphabets; speculative",
+    "null_controls": {
+      "original_nine_site_frame_shuffles": {
+        "fraction_ge_best": "92/121",
+        "frame9": true,
+        "note": "post-selection ensemble maximum; cross-zone slash-vs-nonslash mapping assumed",
+        "null_median": 2956380340224,
+        "null_q95": 3904695697408,
+        "observed_best": 2455353950208,
+        "search_size": 72,
+        "seed": 20261021,
+        "shuffles": 120
+      },
+      "original_zone_shuffles": {
+        "fraction_ge_best": "105/121",
+        "frame9": false,
+        "note": "post-selection ensemble maximum; cross-zone slash-vs-nonslash mapping assumed",
+        "null_median": 3030804070400,
+        "null_q95": 4011499454464,
+        "observed_best": 2455353950208,
+        "search_size": 72,
+        "seed": 20261020,
+        "shuffles": 120
+      }
+    },
+    "traversals": {
+      "class_A_I": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 739992666112,
+              "with_control_completions": 720665313280
+            },
+            "prefix_forward": {
+              "program_completions": 1333956444160,
+              "with_control_completions": 1314629091328
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 474670432256,
+              "with_control_completions": 474670432256
+            },
+            "two_bit_forward": {
+              "program_completions": 476741369856,
+              "with_control_completions": 476741369856
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_forward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 646545670144,
+              "with_control_completions": 646545670144
+            },
+            "two_bit_forward": {
+              "program_completions": 773094113280,
+              "with_control_completions": 773094113280
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        }
+      },
+      "picture_IAB_CDE_FGH": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 1483382194176,
+              "with_control_completions": 1454391164928
+            },
+            "prefix_forward": {
+              "program_completions": 1243000340480,
+              "with_control_completions": 1214009311232
+            },
+            "prefix_terminated": {
+              "program_completions": 24834867200,
+              "with_control_completions": 16781803520
+            },
+            "two_bit_backward": {
+              "program_completions": 284222816256,
+              "with_control_completions": 284222816256
+            },
+            "two_bit_forward": {
+              "program_completions": 476741369856,
+              "with_control_completions": 476741369856
+            },
+            "two_bit_terminated": {
+              "program_completions": 638189568,
+              "with_control_completions": 638189568
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_forward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_forward": {
+              "program_completions": 515396075520,
+              "with_control_completions": 515396075520
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        }
+      },
+      "reverse_class_A_I": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 566868574208,
+              "with_control_completions": 566868574208
+            },
+            "prefix_forward": {
+              "program_completions": 914425380864,
+              "with_control_completions": 914425380864
+            },
+            "prefix_terminated": {
+              "program_completions": 2099249152,
+              "with_control_completions": 2099249152
+            },
+            "two_bit_backward": {
+              "program_completions": 898256338944,
+              "with_control_completions": 898256338944
+            },
+            "two_bit_forward": {
+              "program_completions": 360777252864,
+              "with_control_completions": 360777252864
+            },
+            "two_bit_terminated": {
+              "program_completions": 3231055872,
+              "with_control_completions": 3231055872
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 245635219456,
+              "with_control_completions": 245635219456
+            },
+            "prefix_forward": {
+              "program_completions": 374933815296,
+              "with_control_completions": 374933815296
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_forward": {
+              "program_completions": 1099511627776,
+              "with_control_completions": 1099511627776
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        }
+      },
+      "reverse_picture_IAB_CDE_FGH": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 613549080576,
+              "with_control_completions": 613549080576
+            },
+            "prefix_forward": {
+              "program_completions": 55970889728,
+              "with_control_completions": 55970889728
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 865364606976,
+              "with_control_completions": 865364606976
+            },
+            "two_bit_forward": {
+              "program_completions": 992137445376,
+              "with_control_completions": 992137445376
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 708371283968,
+              "with_control_completions": 708371283968
+            },
+            "prefix_forward": {
+              "program_completions": 575118245888,
+              "with_control_completions": 575118245888
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_forward": {
+              "program_completions": 523986010112,
+              "with_control_completions": 523986010112
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        }
+      },
+      "reverse_serial": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_forward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_forward": {
+              "program_completions": 406948151296,
+              "with_control_completions": 406948151296
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 19,
+          "observed_adjacent_pairs": 39
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 549755813888,
+              "with_control_completions": 549755813888
+            },
+            "prefix_forward": {
+              "program_completions": 2455353950208,
+              "with_control_completions": 2455353950208
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_forward": {
+              "program_completions": 1591419600896,
+              "with_control_completions": 1591419600896
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 19,
+          "observed_adjacent_pairs": 39
+        }
+      },
+      "serial": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 1089782677504,
+              "with_control_completions": 1089749123072
+            },
+            "prefix_forward": {
+              "program_completions": 886228123648,
+              "with_control_completions": 886194569216
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 472111382528,
+              "with_control_completions": 472111382528
+            },
+            "two_bit_forward": {
+              "program_completions": 498216206336,
+              "with_control_completions": 498216206336
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 19,
+          "observed_adjacent_pairs": 39
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 252128526336,
+              "with_control_completions": 252086583296
+            },
+            "prefix_forward": {
+              "program_completions": 507552727040,
+              "with_control_completions": 507510784000
+            },
+            "prefix_terminated": {
+              "program_completions": 349962240,
+              "with_control_completions": 337379328
+            },
+            "two_bit_backward": {
+              "program_completions": 429094076416,
+              "with_control_completions": 429094076416
+            },
+            "two_bit_forward": {
+              "program_completions": 486405046272,
+              "with_control_completions": 486405046272
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 19,
+          "observed_adjacent_pairs": 39
+        }
+      }
+    }
+  },
+  "mixed_width_grouping_counts": {
+    "108": {
+      "ordered_partitions_total": 53501860,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 36
+        },
+        {
+          "ordered_partitions": 5984,
+          "quintets": 3,
+          "triples": 31
+        },
+        {
+          "ordered_partitions": 906192,
+          "quintets": 6,
+          "triples": 26
+        },
+        {
+          "ordered_partitions": 14307150,
+          "quintets": 9,
+          "triples": 21
+        },
+        {
+          "ordered_partitions": 30421755,
+          "quintets": 12,
+          "triples": 16
+        },
+        {
+          "ordered_partitions": 7726160,
+          "quintets": 15,
+          "triples": 11
+        },
+        {
+          "ordered_partitions": 134596,
+          "quintets": 18,
+          "triples": 6
+        },
+        {
+          "ordered_partitions": 22,
+          "quintets": 21,
+          "triples": 1
+        }
+      ],
+      "total_sites": 108
+    },
+    "12": {
+      "ordered_partitions_total": 1,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 4
+        }
+      ],
+      "total_sites": 12
+    },
+    "27": {
+      "ordered_partitions_total": 36,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 9
+        },
+        {
+          "ordered_partitions": 35,
+          "quintets": 3,
+          "triples": 4
+        }
+      ],
+      "total_sites": 27
+    },
+    "81": {
+      "ordered_partitions_total": 447702,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 27
+        },
+        {
+          "ordered_partitions": 2300,
+          "quintets": 3,
+          "triples": 22
+        },
+        {
+          "ordered_partitions": 100947,
+          "quintets": 6,
+          "triples": 17
+        },
+        {
+          "ordered_partitions": 293930,
+          "quintets": 9,
+          "triples": 12
+        },
+        {
+          "ordered_partitions": 50388,
+          "quintets": 12,
+          "triples": 7
+        },
+        {
+          "ordered_partitions": 136,
+          "quintets": 15,
+          "triples": 2
+        }
+      ],
+      "total_sites": 81
+    }
+  },
+  "status": "DISCOVER/DEVELOP only; no identified decoder",
+  "zones": {
+    "body": {
+      "bit_mappings": {
+        "-=0,/=1": {
+          "exact_run_counts_min_max": {
+            "1": [
+              5,
+              48
+            ],
+            "10": [
+              0,
+              1
+            ],
+            "11": [
+              0,
+              1
+            ],
+            "12": [
+              0,
+              1
+            ],
+            "2": [
+              2,
+              18
+            ],
+            "3": [
+              0,
+              12
+            ],
+            "4": [
+              0,
+              7
+            ],
+            "5": [
+              0,
+              7
+            ],
+            "6": [
+              0,
+              6
+            ],
+            "7": [
+              0,
+              3
+            ],
+            "8": [
+              0,
+              2
+            ],
+            "9": [
+              0,
+              1
+            ]
+          },
+          "grammar": {
+            "prefix_backward": {
+              "accepted_fraction": "35377152/134217728",
+              "example_completed_bits": "010010101000101010010000000011010001011101100111000000010011001011001000000111111",
+              "example_output": "1001010010110000000011100101101101111000001011010010100000000000",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 0,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "10100",
+                  "at": 4,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "101",
+                  "at": 11,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 15,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00000",
+                  "at": 19,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "011",
+                  "at": 26,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 30,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "101",
+                  "at": 34,
+                  "opcode": "0"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 38,
+                  "opcode": "110"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 41,
+                  "opcode": "110"
+                },
+                {
+                  "action": "emit",
+                  "argument": "111",
+                  "at": 44,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 48,
+                  "opcode": "0"
+                }
+              ],
+              "possible_completions": 134217728,
+              "program_completions": 35377152,
+              "with_control_completions": 35377152
+            },
+            "prefix_forward": {
+              "accepted_fraction": "0/134217728",
+              "example_completed_bits": null,
+              "example_output": null,
+              "example_trace": [],
+              "possible_completions": 134217728,
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_terminated": {
+              "accepted_fraction": "337920/134217728",
+              "example_completed_bits": "010010101000101010010000000011010001011101100111000000010011001011011000000101111",
+              "example_output": "1001010010110000000011100101101101111000001011010010010000101",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 0,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "10100",
+                  "at": 4,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "101",
+                  "at": 11,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 15,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00000",
+                  "at": 19,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "011",
+                  "at": 26,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 30,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "101",
+                  "at": 34,
+                  "opcode": "0"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 38,
+                  "opcode": "110"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 41,
+                  "opcode": "110"
+                },
+                {
+                  "action": "emit",
+                  "argument": "111",
+                  "at": 44,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 48,
+                  "opcode": "0"
+                }
+              ],
+              "possible_completions": 134217728,
+              "program_completions": 337920,
+              "with_control_completions": 337920
+            },
+            "two_bit_backward": {
+              "accepted_fraction": "50331648/134217728",
+              "example_completed_bits": "010010101000101010010000000011010001011101100111000000010011001011001000000101111",
+              "example_output": "0010100010000100001000000011000100100001000000101110001000011011010000001111",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "00101",
+                  "at": 0,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00010",
+                  "at": 7,
+                  "opcode": "01"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 14,
+                  "opcode": "10"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 16,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00000",
+                  "at": 18,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "011",
+                  "at": 25,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00010",
+                  "at": 30,
+                  "opcode": "01"
+                },
+                {
+                  "action": "reverse",
+                  "argument": "",
+                  "at": 37,
+                  "opcode": "11"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 39,
+                  "opcode": "10"
+                },
+                {
+                  "action": "reverse",
+                  "argument": "",
+                  "at": 41,
+                  "opcode": "11"
+                },
+                {
+                  "action": "emit",
+                  "argument": "111",
+                  "at": 43,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 48,
+                  "opcode": "00"
+                }
+              ],
+              "possible_completions": 134217728,
+              "program_completions": 50331648,
+              "with_control_completions": 50331648
+            },
+            "two_bit_forward": {
+              "accepted_fraction": "30408704/134217728",
+              "example_completed_bits": "010010101000101010010000000011010001011101100111000000110011011011001000000101111",
+              "example_output": "00101000100010111000010011101100000001111",              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "00101",
+                  "at": 0,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00010",
+                  "at": 7,
+                  "opcode": "01"
+                },
+                {
+                  "action": "skip",
+                  "argument": "100",
+                  "at": 14,
+                  "opcode": "10"
+                },
+                {
+                  "action": "skip",
+                  "argument": "000",
+                  "at": 19,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 24,
+                  "opcode": "00"
+                },
+                {
+                  "action": "skip",
+                  "argument": "100",
+                  "at": 29,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "01110",
+                  "at": 34,
+                  "opcode": "01"
+                },
+                {
+                  "action": "skip",
+                  "argument": "00111",
+                  "at": 41,
+                  "opcode": "11"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 48,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "10011",
+                  "at": 53,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "10110",
+                  "at": 60,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00000",
+                  "at": 67,
+                  "opcode": "01"
+                }
+              ],
+              "possible_completions": 134217728,
+              "program_completions": 30408704,
+              "with_control_completions": 30408704
+            },
+            "two_bit_terminated": {
+              "accepted_fraction": "0/134217728",
+              "example_completed_bits": null,
+              "example_output": null,
+              "example_trace": [],
+              "possible_completions": 134217728,
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "transitions_min_max": [
+            22,
+            59
+          ]
+        },
+        "/=0,-=1": {
+          "exact_run_counts_min_max": {
+            "1": [
+              5,
+              48
+            ],
+            "10": [
+              0,
+              1
+            ],
+            "11": [
+              0,
+              1
+            ],
+            "12": [
+              0,
+              1
+            ],
+            "2": [
+              2,
+              18
+            ],
+            "3": [
+              0,
+              12
+            ],
+            "4": [
+              0,
+              7
+            ],
+            "5": [
+              0,
+              7
+            ],
+            "6": [
+              0,
+              6
+            ],
+            "7": [
+              0,
+              3
+            ],
+            "8": [
+              0,
+              2
+            ],
+            "9": [
+              0,
+              1
+            ]
+          },
+          "grammar": {
+            "prefix_backward": {
+              "accepted_fraction": "18382848/134217728",
+              "example_completed_bits": "001100000101010001101011010000100000100000010000001111001000100000000111111000000",
+              "example_output": "011000101100110110100010001000000000000000010000000001111000000",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "011",
+                  "at": 0,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 4,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "101",
+                  "at": 8,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 12,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "110",
+                  "at": 16,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "11010",
+                  "at": 20,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 27,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 31,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 35,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 39,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00000",
+                  "at": 43,
+                  "opcode": "10"
+                },
+                {
+                  "action": "reverse",
+                  "argument": "",
+                  "at": 50,
+                  "opcode": "111"
+                }
+              ],
+              "possible_completions": 134217728,
+              "program_completions": 18382848,
+              "with_control_completions": 18251776
+            },
+            "prefix_forward": {
+              "accepted_fraction": "24756224/134217728",
+              "example_completed_bits": "001100000101010001101011010000100000100000010000001010001000000000000111011000000",
+              "example_output": "011000101100110110100010001000000000010001000000000000",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "011",
+                  "at": 0,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 4,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "101",
+                  "at": 8,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 12,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "110",
+                  "at": 16,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "11010",
+                  "at": 20,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 27,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 31,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 35,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 39,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00000",
+                  "at": 43,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "10001",
+                  "at": 50,
+                  "opcode": "10"
+                }
+              ],
+              "possible_completions": 134217728,
+              "program_completions": 24756224,
+              "with_control_completions": 24625152
+            },
+            "prefix_terminated": {
+              "accepted_fraction": "0/134217728",
+              "example_completed_bits": null,
+              "example_output": null,
+              "example_trace": [],
+              "possible_completions": 134217728,
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "accepted_fraction": "5807104/134217728",
+              "example_completed_bits": "001100000101010001101011010000100000100000010000001010101000000100000111111000000",
+              "example_output": "110001010000001001101001000000000000000000000000000000000001100001001000",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "110",
+                  "at": 0,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 5,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "01000",
+                  "at": 10,
+                  "opcode": "01"
+                },
+                {
+                  "action": "reverse",
+                  "argument": "",
+                  "at": 17,
+                  "opcode": "11"
+                },
+                {
+                  "action": "emit",
+                  "argument": "01101",
+                  "at": 19,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 26,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 31,
+                  "opcode": "00"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 36,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 38,
+                  "opcode": "00"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 43,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 45,
+                  "opcode": "00"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 50,
+                  "opcode": "10"
+                }
+              ],
+              "possible_completions": 134217728,
+              "program_completions": 5807104,
+              "with_control_completions": 5807104
+            },
+            "two_bit_forward": {
+              "accepted_fraction": "25165824/134217728",
+              "example_completed_bits": "001100000101010001101011010000101000100000010000011010001000000100000111011000000",
+              "example_output": "110001010000000100010000101000000000000000",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "110",
+                  "at": 0,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 5,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "01000",
+                  "at": 10,
+                  "opcode": "01"
+                },
+                {
+                  "action": "skip",
+                  "argument": "01011",
+                  "at": 17,
+                  "opcode": "11"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00001",
+                  "at": 24,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00010",
+                  "at": 31,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 38,
+                  "opcode": "00"
+                },
+                {
+                  "action": "skip",
+                  "argument": "000",
+                  "at": 43,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "10100",
+                  "at": 48,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00000",
+                  "at": 55,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00000",
+                  "at": 62,
+                  "opcode": "01"
+                },
+                {
+                  "action": "skip",
+                  "argument": "10110",
+                  "at": 69,
+                  "opcode": "11"
+                }
+              ],
+              "possible_completions": 134217728,
+              "program_completions": 25165824,
+              "with_control_completions": 25165824
+            },
+            "two_bit_terminated": {
+              "accepted_fraction": "0/134217728",
+              "example_completed_bits": null,
+              "example_output": null,
+              "example_trace": [],
+              "possible_completions": 134217728,
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "transitions_min_max": [
+            22,
+            59
+          ]
+        }
+      },
+      "contiguous": {
+        "certified_maximal_runs": [
+          {
+            "length": 1,
+            "starts_zone_relative": [
+              13,
+              14,
+              20,
+              31,
+              37
+            ]
+          },
+          {
+            "length": 2,
+            "starts_zone_relative": [
+              3,
+              18
+            ]
+          }
+        ],
+        "fully_observed_triples": 19,
+        "known_adjacent_pairs": 34,
+        "matching_pairs": 17,
+        "mismatching_pairs": 17,
+        "triple_counts": {
+          "---": 1,
+          "--/": 3,
+          "-/-": 2,
+          "-//": 1,
+          "/--": 3,
+          "/-/": 3,
+          "//-": 2,
+          "///": 4
+        }
+      },
+      "delimiters": {
+        "-": {
+          "certain_count": 22,
+          "certain_starts": [
+            3,
+            4,
+            10,
+            12,
+            14,
+            18,
+            19,
+            21,
+            23,
+            24,
+            26,
+            31,
+            37,
+            44,
+            51,
+            53,
+            57,
+            70,
+            71,
+            72,
+            74,
+            75
+          ],
+          "delimiter": "-",
+          "possible_count": 49,
+          "uncertain_count": 27
+        },
+        "--": {
+          "certain_count": 6,
+          "certain_starts": [
+            3,
+            18,
+            23,
+            70,
+            71,
+            74
+          ],
+          "delimiter": "--",
+          "possible_count": 28,
+          "uncertain_count": 22
+        },
+        "---": {
+          "certain_count": 1,
+          "certain_starts": [
+            70
+          ],
+          "delimiter": "---",
+          "possible_count": 17,
+          "uncertain_count": 16
+        },
+        "/": {
+          "certain_count": 32,
+          "certain_starts": [
+            2,
+            5,
+            7,
+            9,
+            13,
+            15,
+            17,
+            20,
+            29,
+            30,
+            32,
+            36,
+            38,
+            39,
+            40,
+            42,
+            43,
+            46,
+            47,
+            48,
+            56,
+            59,
+            60,
+            63,
+            65,
+            66,
+            69,
+            76,
+            78,
+            79,
+            80,
+            81
+          ],
+          "delimiter": "/",
+          "possible_count": 59,
+          "uncertain_count": 27
+        },
+        "//": {
+          "certain_count": 11,
+          "certain_starts": [
+            29,
+            38,
+            39,
+            42,
+            46,
+            47,
+            59,
+            65,
+            78,
+            79,
+            80
+          ],
+          "delimiter": "//",
+          "possible_count": 42,
+          "uncertain_count": 31
+        },
+        "///": {
+          "certain_count": 4,
+          "certain_starts": [
+            38,
+            46,
+            78,
+            79
+          ],
+          "delimiter": "///",
+          "possible_count": 32,
+          "uncertain_count": 28
+        }
+      },
+      "fixed_groups": {
+        "12": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 5,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 6,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 7,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 8,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 9,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 10,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 5
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 11,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 5
+          }
+        ],
+        "2": [
+          {
+            "distinct_fully_observed": 4,
+            "fully_observed": 18,
+            "phase": 0,
+            "repeated_fully_observed": 14,
+            "whole_blocks": 40
+          },
+          {
+            "distinct_fully_observed": 4,
+            "fully_observed": 16,
+            "phase": 1,
+            "repeated_fully_observed": 12,
+            "whole_blocks": 40
+          }
+        ],
+        "3": [
+          {
+            "distinct_fully_observed": 5,
+            "fully_observed": 6,
+            "phase": 0,
+            "repeated_fully_observed": 1,
+            "whole_blocks": 27
+          },
+          {
+            "distinct_fully_observed": 4,
+            "fully_observed": 5,
+            "phase": 1,
+            "repeated_fully_observed": 1,
+            "whole_blocks": 26
+          },
+          {
+            "distinct_fully_observed": 6,
+            "fully_observed": 8,
+            "phase": 2,
+            "repeated_fully_observed": 2,
+            "whole_blocks": 26
+          }
+        ],
+        "4": [
+          {
+            "distinct_fully_observed": 4,
+            "fully_observed": 4,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 20
+          },
+          {
+            "distinct_fully_observed": 3,
+            "fully_observed": 3,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 20
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 19
+          },
+          {
+            "distinct_fully_observed": 2,
+            "fully_observed": 2,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 19
+          }
+        ],
+        "5": [
+          {
+            "distinct_fully_observed": 1,
+            "fully_observed": 1,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 16
+          },
+          {
+            "distinct_fully_observed": 1,
+            "fully_observed": 1,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 16
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 15
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 15
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 15
+          }
+        ],
+        "6": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 13
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 13
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 13
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 13
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 12
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 5,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 12
+          }
+        ],
+        "7": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 11
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 11
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 11
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 11
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 11
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 5,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 10
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 6,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 10
+          }
+        ],
+        "8": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 10
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 10
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 9
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 9
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 9
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 5,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 9
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 6,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 9
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,            "phase": 7,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 9
+          }
+        ],
+        "9": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 9
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 8
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 8
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 8
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 8
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 5,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 8
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 6,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 8
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 7,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 8
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 8,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 8
+          }
+        ]
+      },
+      "nulls": {
+        "frame9": {
+          "max": 26,
+          "mean": 17.371417,
+          "method": "nine-site observed-count shuffled",
+          "min": 8,
+          "observed_matching_adjacent": 17,
+          "one_sided_ge": 0.63978,
+          "one_sided_le": 0.521957,
+          "replicates": 12000,
+          "sd": 2.458889,
+          "seed": 20261113
+        },
+        "global": {
+          "max": 27,
+          "mean": 17.30325,
+          "method": "zone observed-count shuffled",
+          "min": 7,
+          "observed_matching_adjacent": 17,
+          "one_sided_ge": 0.607783,
+          "one_sided_le": 0.527039,
+          "replicates": 12000,
+          "sd": 2.868877,
+          "seed": 20261013
+        },
+        "parser_best_of_family_frame9": {
+          "best_accepted_completions": 50331648,
+          "frames": true,
+          "max_family_ge_probability": 0.714571,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 62054400,
+          "null_q95": 109445120,
+          "replicates": 500,
+          "seed": 20261313
+        },
+        "parser_best_of_family_global": {
+          "best_accepted_completions": 50331648,
+          "frames": false,
+          "max_family_ge_probability": 0.706587,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 62914560,
+          "null_q95": 109051904,
+          "replicates": 500,
+          "seed": 20261213
+        }
+      },
+      "observed": 54,
+      "observed_counts": {
+        "-": 22,
+        "/": 32
+      },
+      "partial": "?/--/?/?/-?-/-/?/--/-?--?-??//-/???/-///?//-?///??-?-??/-?//??/?//??/---?--/?////",
+      "residues": [
+        1,
+        81
+      ],
+      "symbols": "-/",
+      "unknown": 27
+    },
+    "tail": {
+      "bit_mappings": {
+        ".=0,/=1": {
+          "exact_run_counts_min_max": {
+            "1": [
+              1,
+              19
+            ],
+            "10": [
+              0,
+              0
+            ],
+            "11": [
+              0,
+              0
+            ],
+            "12": [
+              0,
+              0
+            ],
+            "2": [
+              0,
+              8
+            ],
+            "3": [
+              0,
+              6
+            ],
+            "4": [
+              0,
+              5
+            ],
+            "5": [
+              0,
+              2
+            ],
+            "6": [
+              0,
+              2
+            ],
+            "7": [
+              0,
+              1
+            ],
+            "8": [
+              0,
+              1
+            ],
+            "9": [
+              0,
+              1
+            ]
+          },
+          "grammar": {
+            "prefix_backward": {
+              "accepted_fraction": "0/32768",
+              "example_completed_bits": null,
+              "example_output": null,
+              "example_trace": [],
+              "possible_completions": 32768,
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_forward": {
+              "accepted_fraction": "2048/32768",
+              "example_completed_bits": "000011100000001000011000001",
+              "example_output": "00001000100001",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 0,
+                  "opcode": "0"
+                },
+                {
+                  "action": "skip",
+                  "argument": "00000",
+                  "at": 4,
+                  "opcode": "111"
+                },
+                {
+                  "action": "emit",
+                  "argument": "010",
+                  "at": 12,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 16,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00001",
+                  "at": 20,
+                  "opcode": "10"
+                }
+              ],
+              "possible_completions": 32768,
+              "program_completions": 2048,
+              "with_control_completions": 2048
+            },
+            "prefix_terminated": {
+              "accepted_fraction": "0/32768",
+              "example_completed_bits": null,
+              "example_output": null,
+              "example_trace": [],
+              "possible_completions": 32768,
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "accepted_fraction": "1792/32768",
+              "example_completed_bits": "000010000000001000010000011",
+              "example_output": "001000001001000000",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 0,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 5,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 10,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 15,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 20,
+                  "opcode": "00"
+                },
+                {
+                  "action": "reverse",
+                  "argument": "",
+                  "at": 25,
+                  "opcode": "11"
+                }
+              ],
+              "possible_completions": 32768,
+              "program_completions": 1792,
+              "with_control_completions": 1408
+            },
+            "two_bit_forward": {
+              "accepted_fraction": "7168/32768",
+              "example_completed_bits": "000010000001001000010000001",
+              "example_output": "00100000100100001",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 0,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 5,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "00100",
+                  "at": 10,
+                  "opcode": "01"
+                },
+                {
+                  "action": "emit",
+                  "argument": "100",
+                  "at": 17,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 22,
+                  "opcode": "00"
+                }
+              ],
+              "possible_completions": 32768,
+              "program_completions": 7168,
+              "with_control_completions": 6784
+            },
+            "two_bit_terminated": {
+              "accepted_fraction": "640/32768",
+              "example_completed_bits": "000010000000001000010000011",
+              "example_output": "001000001001000",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 0,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 5,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 10,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 15,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 20,
+                  "opcode": "00"
+                },
+                {
+                  "action": "stop",
+                  "argument": "",
+                  "at": 25,
+                  "opcode": "11"
+                }
+              ],
+              "possible_completions": 32768,
+              "program_completions": 640,
+              "with_control_completions": 384
+            }
+          },
+          "transitions_min_max": [
+            7,
+            22
+          ]
+        },
+        "/=0,.=1": {
+          "exact_run_counts_min_max": {
+            "1": [
+              1,
+              19
+            ],
+            "10": [
+              0,
+              0
+            ],
+            "11": [
+              0,
+              0
+            ],
+            "12": [
+              0,
+              0
+            ],
+            "2": [
+              0,
+              8
+            ],
+            "3": [
+              0,
+              6
+            ],
+            "4": [
+              0,
+              5
+            ],
+            "5": [
+              0,
+              2
+            ],
+            "6": [
+              0,
+              2
+            ],
+            "7": [
+              0,
+              1
+            ],
+            "8": [
+              0,
+              1
+            ],
+            "9": [
+              0,
+              1
+            ]
+          },
+          "grammar": {
+            "prefix_backward": {
+              "accepted_fraction": "2432/32768",
+              "example_completed_bits": "100100011010010110000110110",
+              "example_output": "010000100001011000000000",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "01000",
+                  "at": 0,
+                  "opcode": "10"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 7,
+                  "opcode": "110"
+                },
+                {
+                  "action": "emit",
+                  "argument": "01011",
+                  "at": 10,
+                  "opcode": "10"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 17,
+                  "opcode": "0"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 21,
+                  "opcode": "110"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 24,
+                  "opcode": "110"
+                }
+              ],
+              "possible_completions": 32768,
+              "program_completions": 2432,
+              "with_control_completions": 2432
+            },
+            "prefix_forward": {
+              "accepted_fraction": "8320/32768",
+              "example_completed_bits": "000100011010010110000110000",
+              "example_output": "00100110010",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 0,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "001",
+                  "at": 4,
+                  "opcode": "0"
+                },
+                {
+                  "action": "emit",
+                  "argument": "10010",
+                  "at": 8,
+                  "opcode": "10"
+                },
+                {
+                  "action": "skip",
+                  "argument": "000",
+                  "at": 15,
+                  "opcode": "110"
+                },
+                {
+                  "action": "skip",
+                  "argument": "000",
+                  "at": 21,
+                  "opcode": "110"
+                }
+              ],
+              "possible_completions": 32768,
+              "program_completions": 8320,
+              "with_control_completions": 8320
+            },
+            "prefix_terminated": {
+              "accepted_fraction": "0/32768",
+              "example_completed_bits": null,
+              "example_output": null,
+              "example_trace": [],
+              "possible_completions": 32768,
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "accepted_fraction": "4736/32768",
+              "example_completed_bits": "000100011010110110000101010",
+              "example_output": "01011011001110000100001000010000",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "010",
+                  "at": 0,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "110",
+                  "at": 5,
+                  "opcode": "00"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 10,
+                  "opcode": "10"
+                },
+                {
+                  "action": "reverse",
+                  "argument": "",
+                  "at": 12,
+                  "opcode": "11"
+                },
+                {
+                  "action": "emit",
+                  "argument": "10000",
+                  "at": 14,
+                  "opcode": "01"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 21,
+                  "opcode": "10"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 23,
+                  "opcode": "10"
+                },
+                {
+                  "action": "repeat",
+                  "argument": "",
+                  "at": 25,
+                  "opcode": "10"
+                }
+              ],
+              "possible_completions": 32768,
+              "program_completions": 4736,
+              "with_control_completions": 4736
+            },
+            "two_bit_forward": {
+              "accepted_fraction": "3072/32768",
+              "example_completed_bits": "000100011010010110000100000",
+              "example_output": "010110000",
+              "example_trace": [
+                {
+                  "action": "emit",
+                  "argument": "010",
+                  "at": 0,
+                  "opcode": "00"
+                },
+                {
+                  "action": "emit",
+                  "argument": "110",
+                  "at": 5,
+                  "opcode": "00"
+                },
+                {
+                  "action": "skip",
+                  "argument": "010",
+                  "at": 10,
+                  "opcode": "10"
+                },
+                {
+                  "action": "skip",
+                  "argument": "00001",
+                  "at": 15,
+                  "opcode": "11"
+                },
+                {
+                  "action": "emit",
+                  "argument": "000",
+                  "at": 22,
+                  "opcode": "00"
+                }
+              ],
+              "possible_completions": 32768,
+              "program_completions": 3072,
+              "with_control_completions": 3072
+            },
+            "two_bit_terminated": {
+              "accepted_fraction": "0/32768",
+              "example_completed_bits": null,
+              "example_output": null,
+              "example_trace": [],
+              "possible_completions": 32768,
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "transitions_min_max": [
+            7,
+            22
+          ]
+        }
+      },
+      "contiguous": {
+        "certified_maximal_runs": [
+          {
+            "length": 1,
+            "starts_zone_relative": [
+              15
+            ]
+          }
+        ],
+        "fully_observed_triples": 2,
+        "known_adjacent_pairs": 5,
+        "matching_pairs": 2,
+        "mismatching_pairs": 3,
+        "triple_counts": {
+          "./.": 1,
+          "/..": 1
+        }
+      },
+      "delimiters": {
+        ".": {
+          "certain_count": 8,
+          "certain_starts": [
+            4,
+            8,
+            9,
+            11,
+            14,
+            16,
+            17,
+            22
+          ],
+          "delimiter": ".",
+          "possible_count": 23,
+          "uncertain_count": 15
+        },
+        "..": {
+          "certain_count": 2,
+          "certain_starts": [
+            8,
+            16
+          ],
+          "delimiter": "..",
+          "possible_count": 19,
+          "uncertain_count": 17
+        },
+        "...": {
+          "certain_count": 0,
+          "certain_starts": [],
+          "delimiter": "...",
+          "possible_count": 15,
+          "uncertain_count": 15
+        },
+        "/": {
+          "certain_count": 4,
+          "certain_starts": [
+            5,
+            15,
+            20,
+            27
+          ],
+          "delimiter": "/",
+          "possible_count": 19,
+          "uncertain_count": 15
+        },
+        "//": {
+          "certain_count": 0,
+          "certain_starts": [],
+          "delimiter": "//",
+          "possible_count": 12,
+          "uncertain_count": 12
+        },
+        "///": {
+          "certain_count": 0,
+          "certain_starts": [],
+          "delimiter": "///",
+          "possible_count": 7,
+          "uncertain_count": 7
+        }
+      },
+      "fixed_groups": {
+        "12": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 1
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 5,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 1
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 6,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 1
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 7,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 1
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 8,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 1
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 9,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 1
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 10,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 1
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 11,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 1
+          }
+        ],
+        "2": [
+          {
+            "distinct_fully_observed": 1,
+            "fully_observed": 1,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 13
+          },
+          {
+            "distinct_fully_observed": 2,
+            "fully_observed": 4,
+            "phase": 1,
+            "repeated_fully_observed": 2,
+            "whole_blocks": 13
+          }
+        ],
+        "3": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 9
+          },
+          {
+            "distinct_fully_observed": 1,
+            "fully_observed": 1,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 8
+          },
+          {
+            "distinct_fully_observed": 1,
+            "fully_observed": 1,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 8
+          }
+        ],
+        "4": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 1,
+            "fully_observed": 1,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 6
+          }
+        ],
+        "5": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 5
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 5
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 5
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 4
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 4
+          }
+        ],
+        "6": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 4
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 4
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 4
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 4
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 5,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          }
+        ],
+        "7": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 5,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 6,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          }
+        ],
+        "8": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 5,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 6,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 7,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          }
+        ],
+        "9": [
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 0,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 3
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 1,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 2,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 3,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 4,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 5,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 6,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 7,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          },
+          {
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
+            "phase": 8,
+            "repeated_fully_observed": 0,
+            "whole_blocks": 2
+          }
+        ]
+      },
+      "nulls": {
+        "frame9": {
+          "max": 4,
+          "mean": 2.809833,
+          "method": "nine-site observed-count shuffled",
+          "min": 2,
+          "observed_matching_adjacent": 2,
+          "one_sided_ge": 1.0,
+          "one_sided_le": 0.394884,
+          "replicates": 12000,
+          "sd": 0.750558,
+          "seed": 20261194
+        },
+        "global": {
+          "max": 5,
+          "mean": 2.578917,
+          "method": "zone observed-count shuffled",
+          "min": 0,
+          "observed_matching_adjacent": 2,
+          "one_sided_ge": 0.838847,
+          "one_sided_le": 0.467794,
+          "replicates": 12000,
+          "sd": 1.069239,
+          "seed": 20261094
+        },
+        "parser_best_of_family_frame9": {
+          "best_accepted_completions": 8320,
+          "frames": true,
+          "max_family_ge_probability": 0.708583,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 9216,
+          "null_q95": 11392,
+          "replicates": 500,
+          "seed": 20261394
+        },
+        "parser_best_of_family_global": {
+          "best_accepted_completions": 8320,
+          "frames": false,
+          "max_family_ge_probability": 0.716567,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 9216,
+          "null_q95": 13184,
+          "replicates": 500,
+          "seed": 20261294
+        }
+      },
+      "observed": 12,
+      "observed_counts": {
+        ".": 8,
+        "/": 4
+      },
+      "partial": "???./??..?.??./..??/?.????/",
+      "residues": [
+        82,
+        108
+      ],
+      "symbols": "./",
+      "unknown": 15
+    }
+  }
+}

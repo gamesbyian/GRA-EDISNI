@@ -32,6 +32,10 @@ python scripts/verify_machine.py
 
 ## Research evidence map
 
+- [CL-VLEN-01 variable-width and instruction-stream audit](docs/conjecture-lab/2026-10-12-variable-length-program-grammars.md): deterministic 3/5-bit prefix-code and opcode interpreters, exact raw-corpus run bounds, best-of-family shuffled controls, plus one-slash class-tail reconciliation after physical sticker 427 (36 historical assignments now 18). [Executable workbench](scripts/conjecture_lab_variable_length_grammar.py), [compact results](data/conjecture-lab-vlen-summary-2026-10-12.json) and [full machine-readable audit](data/conjecture-lab-variable-length-grammar-2026-10-12.json). This is a DISCOVER/DEVELOP experiment, not an identified decoder.
+
+
+
 - [2026-10-09 Wow!-signal inscription audit](docs/conjecture-lab/2026-10-09-wow-signal-environmental-inscriptions.md): bounded first-person Big Ear encoding test of `A10N7`, `L08`, and `B02` against the 1977 positive control. Literal Big Ear encoding fails on written zeros and envelope shape. New byte-identical archives of the A10N7/L08 scene pair and B02 montage provide *low-resolution* visual evidence; the speculative 0/O + 1/I alternative has **no peak-shape discrimination** under its matched 26/26 alphabet control. Original full-resolution textures remain missing. Includes [deterministic replay](scripts/audit_wow_signal_inscriptions.py) and asset-source follow-ups.
 
 For a conceptual view of what has been tried and what would discriminate the rival decoders:
