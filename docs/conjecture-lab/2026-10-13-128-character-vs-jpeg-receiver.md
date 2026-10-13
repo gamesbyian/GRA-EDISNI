@@ -36,16 +36,16 @@ This possibility is computationally ordinary but adds a major **invented operati
 
 ### H128-ROW: nine Q4 depth trits address a row of a hypothetical 128×128 recovered image
 
-Under the existing **conditional one-slash-per-A-I-class Q4 model**, the nine Q4 depth selectors have **18 physical-observation-compatible** assignments. In the native physical class order `IABCDEFGH`, interpret nine base-3 digits as one big-endian integer. The values range from **4,652 to 19,250**, so **none directly indexes an image row 0..127**. A *new*, unlicensed address reduction is required.
+Under the existing **conditional one-slash-per-A-I-class Q4 model**, the nine Q4 depth selectors have **18 physical-observation-compatible** assignments. In the native physical class order `IABCDEFGH`, interpret nine base-3 digits as one big-endian integer. In native physical order the values range from **14,672 to 19,538**, so **none directly indexes an image row 0..127**. For contrast, alphabetic A–I order yields a different range (**4,652–19,250**), also too large. A *new*, unlicensed address reduction is required.
 
 As a deliberately generous variant, taking the integer **modulo 128** produces 18 distinct candidate rows:
 
 ```text
-0, 5, 17, 23, 32, 38, 44, 50, 56,
-62, 71, 77, 89, 94, 95, 110, 112, 127
+54, 60, 65, 67, 71, 73, 76, 78, 80,
+82, 84, 86, 89, 91, 95, 97, 102, 108
 ```
 
-Those numbers identify possible row *indices*, not pixels. The damaged JPEG is not yet recovered as a trustworthy 128×128 raster, so no original 128-character/binary-row candidate exists to check. A binary row would be 128 **bits** represented by 128 `0/1` characters, not a uniformly variable 128-character ASCII or alphanumeric password. It remains possible that 128 would denote **columns, geometry, width, image grid or stage number** rather than textual length. The modulo operation and grouping are speculative and should not be counted as decoder evidence.
+The independently tested *alphabetic* A–I order, which must not be mislabeled as physical, instead yields row indices `0,5,17,23,32,38,44,50,56,62,71,77,89,94,95,110,112,127`. Neither ordering has been shown to be intended. Those numbers identify possible row *indices*, not pixels. The damaged JPEG is not yet recovered as a trustworthy 128×128 raster, so no original 128-character/binary-row candidate exists to check. A binary row would be 128 **bits** represented by 128 `0/1` characters, not a uniformly variable 128-character ASCII or alphanumeric password. It remains possible that 128 would denote **columns, geometry, width, image grid or stage number** rather than textual length. The modulo operation and grouping are speculative and should not be counted as decoder evidence.
 
 ## Exact capacity boundaries
 
