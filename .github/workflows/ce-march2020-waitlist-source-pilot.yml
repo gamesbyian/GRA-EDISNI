@@ -1,0 +1,71 @@
+name: INSIDE CE March 2020 archived waitlist-comment reconciliation
+
+# One-off public source check; never merge the trigger workflow.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-march2020-waitlist-source-pilot.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  public-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Retrieve exact 2020 public comment tree and assess documented ownership cases
+        run: |
+          python - <<'PY'
+          import hashlib,json,re
+          from pathlib import Path
+          from scripts.external_evidence.recover_reddit_comment_images import request_json,iter_comments
+          post_id="fhvflq"
+          url="https://arctic-shift.photon-reddit.com/api/comments/tree?link_id=t3_fhvflq&limit=120&start_breadth=100&start_depth=16"
+          obj,digest=request_json(url)
+          comments,collapsed=iter_comments(obj,max_nodes=150)
+          ledger=Path("archive/external/twinysam-inside-arg/stickers.md").read_text(encoding="utf-8")
+          relevant=[]
+          patterns=[
+            ("purchase-claimed",re.compile(r"\\b(?:just bought|i bought|i purchased|i ordered|placed my order|bought the damn thing)\\b",re.I)),
+            ("purchase-declined",re.compile(r"\\b(?:didn.t buy|did not buy|cancelled my order|never bought|won.t buy)\\b",re.I)),
+            ("received-claimed",re.compile(r"\\b(?:i received|i got mine|arrived today|my copy arrived)\\b",re.I)),
+          ]
+          for c in comments:
+            body=c.get("body","")
+            if not isinstance(body,str) or body.lower().startswith(("[deleted]","[removed]")):continue
+            outcomes=[label for label,pattern in patterns if pattern.search(body)]
+            if not outcomes: continue
+            username=str(c.get("author",""))
+            matches=[]
+            if re.fullmatch(r"[A-Za-z0-9_-]{3,32}",username):
+              matches=list(re.finditer(r"(?<![A-Za-z0-9_-])"+re.escape(username)+r"(?![A-Za-z0-9_-])",ledger,re.I))
+            relevant.append({
+              "comment_id":c.get("id"),"comment_url":"https://www.reddit.com/comments/fhvflq/_/"+str(c.get("id"))+"/",
+              "created_utc":c.get("created_utc"),
+              "author_public_pseudonym":username,
+              "context":re.sub(r"\\s+"," ",body)[:340],
+              "claim_types":outcomes,
+              "canonical_name_match_count":len(matches),
+              "canonical_excerpts":[ledger[max(0,m.start()-85):m.end()+150] for m in matches[:3]],
+              "interpretation":"public text claims only; acquisition does not prove receipt or numbered sticker"
+            })
+          report={"schema_version":1,"post_id":post_id,
+                  "source":"historical public archived comments",
+                  "response_sha256":digest,"archive_comments":len(comments),
+                  "possible_partial_tree":collapsed,"claim_comments":relevant,
+                  "note":"No owner contact, account history, physical-object or sticker confirmation."}
+          Path("ce-march2020-public-comments.json").write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\\n")
+          print("CE_MARCH2020_PUBLIC_CASE_REPORT",json.dumps(report,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-march2020-waitlist-case-source-${{ github.run_id }}
+          path: ce-march2020-public-comments.json
+          retention-days: 21
+          if-no-files-found: warn
