@@ -16,3 +16,10 @@ jobs:
         run: python scripts/audit_endgame_channel_budget.py --check-2026-10-08 > /dev/null
       - name: Check SAF data field and bit-capacity rejection
         run: python scripts/audit_terminal41_saf_ascii_island.py > /dev/null
+      - name: Audit source-native marked-record omission and error-correction labels
+        run: python scripts/audit_terminal41_marked_recovery.py --output /tmp/marked-recovery.json
+      - name: Preserve Terminal41 marked-record forensic witness
+        uses: actions/upload-artifact@v4
+        with:
+          name: terminal41-marked-record-source-audit
+          path: /tmp/marked-recovery.json
