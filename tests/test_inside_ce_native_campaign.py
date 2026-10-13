@@ -108,15 +108,34 @@ class NativeCECampaignTests(unittest.TestCase):
                 self.assertEqual(len(selected), expected_sites)
                 self.assertEqual(len({x["site"] for x in selected}), expected_sites)
                 self.assertTrue(all(x["expression"].count('"') == 4 for x in selected))
-        self.assertEqual(len(module.expressions(self.lexicon[0])), 19)
+        self.assertEqual(len(module.expressions(self.lexicon[0])), 28)
+
+    def test_raezore_documented_search_phrases_and_dedup(self):
+        categories = dict(module.expressions(next(
+            r for r in self.lexicon if r["locale"] == "en")))
+        self.assertEqual(categories["huddle_with_inside"], '"INSIDE" "Huddle"')
+        self.assertEqual(categories["huddle_with_iam8bit"], '"Huddle" "iam8bit"')
+        self.assertEqual(categories["statue_with_playdead"], '"Playdead" "statue"')
+        self.assertEqual(categories["figure_with_playdead"], '"Playdead" "figure"')
+        self.assertEqual(categories["collecters_typo"], '"INSIDE" "collecter\'s edition"')
+        self.assertEqual(categories["collectors_no_apostrophe"],
+                         '"INSIDE" "Collectors Edition"')
+        self.assertEqual(len(module.LANGUAGE_INDEPENDENT_CATEGORIES), 11)
+        # These terms are original-language English marketing/collector variants:
+        # no redundant repetition across the 50 locale profiles on multi sites.
+        original = module.build_secondary(
+            module.load_tsv(module.SECONDARY), self.lexicon,
+            categories={"huddle_with_inside"})
+        self.assertEqual(len(original), 30)
+        self.assertEqual(len({x["site"] for x in original}), 30)
 
     def test_full_native_lexicon_on_global_sources(self):
         expected = {x["locale"] for x in self.lexicon}
         self.assertEqual(set(module.MULTI_LOCALES), expected)
         forum_tasks = self.make_campaign()
-        self.assertEqual(len(forum_tasks), 11250)
+        self.assertEqual(len(forum_tasks), 15669)
         social_tasks = module.build_secondary(module.load_tsv(module.SECONDARY), self.lexicon)
-        self.assertEqual(len(social_tasks), 12249)
+        self.assertEqual(len(social_tasks), 12519)
         self.assertEqual({x["locale"] for x in forum_tasks}, expected)
         self.assertEqual({x["locale"] for x in social_tasks}, expected)
 
