@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Observation-only audit of the historical 9+3 tail-as-metadata idea.
 
-Uses only data/observations.csv. It does not import machine-spec, predicted
+Uses only data/observations.csv. The current corpus includes sticker 427; its\nclass-D dot at residue 103 reduces the old 36 surviving tail codes to 18.\nIt does not import machine-spec, predicted
 foregrounds, POS3, route criteria, or recursive operations.
 """
 
@@ -70,7 +70,7 @@ def main() -> None:
             }
         )
 
-    assert one_slash_total == 36, one_slash_total
+    assert one_slash_total == 18, one_slash_total
     assert one_dot_total == 0, one_dot_total
 
     forced = {
@@ -78,7 +78,7 @@ def main() -> None:
         for row in rows
         if len(row["one_slash_positions"]) == 1
     }
-    assert forced == {"B": 2, "E": 0, "F": 1, "H": 2, "I": 2}, forced
+    assert forced == {"B": 2, "D": 1, "E": 0, "F": 1, "H": 2, "I": 2}, forced
 
     print(
         json.dumps(
