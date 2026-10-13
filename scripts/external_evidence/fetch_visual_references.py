@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 from PIL import Image, UnidentifiedImageError
 
 Image.MAX_IMAGE_PIXELS = 40_000_000
-ALLOWED_HOSTS = {"www.iam8bit.com", "cdn.shopify.com", "cdn.vox-cdn.com"}
+ALLOWED_HOSTS = {"www.iam8bit.com", "cdn.shopify.com", "cdn.vox-cdn.com", "static0.polygonimages.com"}
 MAX_BYTES = 20 * 1024 * 1024
 
 

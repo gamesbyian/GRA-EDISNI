@@ -13,7 +13,7 @@ import json
 import re
 import urllib.request
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 from PIL import Image
 
@@ -22,7 +22,7 @@ MAX_IMAGE_BYTES = 15 * 1024 * 1024
 HOSTS = {
     "www.iam8bit.com", "cdn.shopify.com", "cdn.vox-cdn.com",
     "i.redd.it", "preview.redd.it", "i.imgur.com",
-    "pbs.twimg.com", "i.ebayimg.com",
+    "pbs.twimg.com", "i.ebayimg.com", "static0.polygonimages.com",
 }
 FORMATS = {"JPEG": ".jpg", "PNG": ".png", "WEBP": ".webp", "GIF": ".gif"}
 MAX_TOTAL_BYTES = 180 * 1024 * 1024
@@ -70,30 +70,67 @@ def safe_dir(name: str) -> str:
     return "htmlimg-" + re.sub(r"[^a-zA-Z0-9_-]+", "-", name)[:80]
 
 
+def asset_key(url: str) -> tuple[str, str, str]:
+    """Identical resource path at different CDN widths is one *candidate asset*.
+
+    This is deliberately weaker than byte or physical-object equivalence. Only
+    use to allocate fetching budget. The original individual URLs are retained.
+    """
+    parsed = urlparse(url)
+    query = parse_qs(parsed.query)
+    version = query.get("v", [""])[0]
+    return (parsed.hostname or "", parsed.path, version)
+
+
+def resolution_preference(url: str) -> float:
+    """Prefer usable large versions, but avoid huge 15 MiB downloads by default."""
+    q = parse_qs(urlparse(url).query)
+    try:
+        width = float(q.get("width", q.get("w", ["0"]))[0])
+        dpr = float(q.get("dpr", ["1"])[0])
+        effective = max(0, width * min(max(dpr, 1), 3))
+    except (ValueError, OverflowError):
+        return 0
+    # Reference photos should be legible, with a natural ceiling at 2048px.
+    return min(effective, 2048) - max(0, effective - 2048) * .1
+
+
 def select(leads: list[dict], per_page: int, total: int) -> list[dict]:
-    """Stable, bounded selection; no claim that the richest hint is the best image."""
-    grouped: dict[str, list[dict]] = {}
+    """Choose diverse full assets, not eight near-identical srcset resolutions.
+
+    Public promotional controls receive higher priority when their asset path
+    names the product; generic site assets are kept out of official-page pilot
+    budgets. Independent owner pages can still have opaque image names.
+    """
+    grouped: dict[str, dict[tuple[str, str, str], dict]] = {}
     for entry in leads:
         key = entry.get("source_id", "")
-        if not key:
+        url = entry.get("image_url", "")
+        if not key or not approved(url):
             continue
-        grouped.setdefault(key, []).append(entry)
+        # Official retail and syndicated press pages may embed unrelated shop
+        # carousels. Their original article media should include a product clue.
+        if key.startswith("ce-visual-official-") and not any(
+            word in url.lower() for word in ("inside", "playdead", "realdoll", "huddle")
+        ):
+            continue
+        assets = grouped.setdefault(key, {})
+        ident = asset_key(url)
+        previous = assets.get(ident)
+        score = (entry.get("hint_count", 0), resolution_preference(url))
+        if previous is None or score > (
+            previous.get("hint_count", 0),
+            resolution_preference(previous["image_url"]),
+        ):
+            assets[ident] = entry
     selected = []
     for key, rows in sorted(grouped.items()):
-        seen = set()
-        count = 0
-        for row in sorted(rows, key=lambda r: (-r.get("hint_count", 0), r["image_url"])):
-            if row["image_url"] in seen:
-                continue
-            seen.add(row["image_url"])
-            if not approved(row["image_url"]):
-                continue
-            selected.append(row)
-            count += 1
-            if count >= per_page:
-                break
-            if len(selected) >= total:
-                break
+        sorted_rows = sorted(
+            rows.values(),
+            key=lambda r: (-r.get("hint_count", 0),
+                           -resolution_preference(r["image_url"]), r["image_url"]),
+        )
+        selected.extend(sorted_rows[:min(per_page, total - len(selected))])
         if len(selected) >= total:
             break
     return selected
@@ -103,12 +140,16 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--leads", type=Path, default=Path("visual-evidence-work/html-image-leads.json"))
     p.add_argument("--out", type=Path, default=Path("evidence-work"))
+    p.add_argument("--additional-leads", type=Path,
+                   help="Optional JSON image_mentions from PUBLIC archive metadata")
     p.add_argument("--max-per-page", type=int, default=8)
     p.add_argument("--max-images", type=int, default=48)
     args = p.parse_args()
     if not (1 <= args.max_images <= 200 and 1 <= args.max_per_page <= 50):
         p.error("max-images must be 1..200 and max-per-page 1..50")
     rows = json.loads(args.leads.read_text(encoding="utf-8"))["image_mentions"]
+    if args.additional_leads:
+        rows += json.loads(args.additional_leads.read_text(encoding="utf-8"))["image_mentions"]
     chosen = select(rows, args.max_per_page, args.max_images)
     reports = []
     total_bytes = 0
