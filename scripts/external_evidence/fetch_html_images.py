@@ -151,6 +151,7 @@ def main() -> None:
     for lead_file in args.additional_leads or []:
         rows += json.loads(lead_file.read_text(encoding="utf-8"))["image_mentions"]
     chosen = select(rows, args.max_per_page, args.max_images)
+    args.out.mkdir(parents=True, exist_ok=True)
     reports = []
     total_bytes = 0
     by_source: dict[str, dict] = {}
