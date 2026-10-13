@@ -65,12 +65,13 @@ def evaluate(gold: list[dict], results: list[dict]) -> tuple[list[dict], dict]:
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     wanted = {x["control_id"]: x for x in gold}
+    tasks = {x["task_id"]: x["control_id"] for x in plan(gold)}
     observations = {g["control_id"]: {"attempted": 0, "successful": 0,
                                          "exact": 0, "topic_only": 0,
                                          "candidate_urls": set()}
                     for g in gold}
     for row in results:
-        control = row.get("control_id")
+        control = row.get("control_id") or tasks.get(row.get("task_id", ""))
         if control not in wanted:
             raise ValueError("Index result missing known gold control_id")
         slot = observations[control]
