@@ -32,6 +32,10 @@ python scripts/verify_machine.py
 
 ## Research evidence map
 
+- [CL-VLEN-04 27-mark instruction control of 81-bit body](docs/conjecture-lab/2026-10-12-tail-operated-triples.md): 160 exact class-tail-selected source/reverse/invert/copy operations over native contiguous or strided three-bit chunks; **0/160** can satisfy the 66 physical observations globally. Class B admits only two equivalent candidate maps, but those conflict with D, E and I. Failure is not unusual against equally restrictive body-label-shuffled controls (only 1/80 allows any complete model in either null). [Script](scripts/conjecture_lab_tail_operated_triples.py), [summary](data/conjecture-lab-tail-operated-triples-summary-2026-10-12.json) and [complete score atlas](data/conjecture-lab-tail-operated-triples-2026-10-12.json). This rules out these narrow uniform transforms, not an independently cued 27→81 instruction machine.
+
+
+
 - [CL-VLEN-03 streaming run-length instruction campaign](docs/conjecture-lab/2026-10-12-streaming-rle-instructions.md): a **real executable program**, with alternating unary opcode/operand runs and `EMIT`, `REPEAT`, `REVERSE`, optional `STOP`; exact finite-state accounting of 108 grammars across primary 81, tail 27 and collapsed full 108 symbols. None shows exceptional grammar-specific compatibility after 120 matched frame shuffles per region; a 14-number lever-shaped output does not distinguish the data. [Executable parser with exhaustive tiny-string oracle](scripts/conjecture_lab_streaming_rle.py), [compact summary](data/conjecture-lab-streaming-rle-summary-2026-10-12.json) and [full results/witnesses](data/conjecture-lab-streaming-rle-2026-10-12.json). No Playdead opcode table claimed.
 
 
