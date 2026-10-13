@@ -1,4 +1,170 @@
 {
+  "cross_zone_class_metadata": {
+    "classes": {
+      "A": {
+        "dot_op_positions": [
+          0,
+          1,
+          2
+        ],
+        "physical": "???",
+        "residues": [
+          82,
+          91,
+          100
+        ],
+        "slash_op_positions": [
+          0,
+          1,
+          2
+        ]
+      },
+      "B": {
+        "dot_op_positions": [
+          1
+        ],
+        "physical": "?./",
+        "residues": [
+          83,
+          92,
+          101
+        ],
+        "slash_op_positions": [
+          2
+        ]
+      },
+      "C": {
+        "dot_op_positions": [
+          0,
+          1,
+          2
+        ],
+        "physical": "???",
+        "residues": [
+          84,
+          93,
+          102
+        ],
+        "slash_op_positions": [
+          0,
+          1,
+          2
+        ]
+      },
+      "D": {
+        "dot_op_positions": [],
+        "physical": ".?.",
+        "residues": [
+          85,
+          94,
+          103
+        ],
+        "slash_op_positions": [
+          1
+        ]
+      },
+      "E": {
+        "dot_op_positions": [
+          1
+        ],
+        "physical": "/.?",
+        "residues": [
+          86,
+          95,
+          104
+        ],
+        "slash_op_positions": [
+          0
+        ]
+      },
+      "F": {
+        "dot_op_positions": [
+          0,
+          2
+        ],
+        "physical": "?/?",
+        "residues": [
+          87,
+          96,
+          105
+        ],
+        "slash_op_positions": [
+          1
+        ]
+      },
+      "G": {
+        "dot_op_positions": [
+          1
+        ],
+        "physical": "?.?",
+        "residues": [
+          88,
+          97,
+          106
+        ],
+        "slash_op_positions": [
+          0,
+          2
+        ]
+      },
+      "H": {
+        "dot_op_positions": [],
+        "physical": "..?",
+        "residues": [
+          89,
+          98,
+          107
+        ],
+        "slash_op_positions": [
+          2
+        ]
+      },
+      "I": {
+        "dot_op_positions": [
+          0
+        ],
+        "physical": ".?/",
+        "residues": [
+          90,
+          99,
+          108
+        ],
+        "slash_op_positions": [
+          2
+        ]
+      }
+    },
+    "exact_observation_label_permutation_nulls": {
+      "global_observed_counts": {
+        "compatible_one_dot": 0,
+        "compatible_one_slash": 280,
+        "one_dot_fraction": "0/495",
+        "one_slash_completion_counts": {
+          "0": 215,
+          "18": 160,
+          "36": 80,
+          "9": 40
+        },
+        "one_slash_fraction": "280/495",
+        "support": 495
+      },
+      "nine_frame_observed_counts": {
+        "compatible_one_dot": 0,
+        "compatible_one_slash": 28,
+        "one_dot_fraction": "0/60",
+        "one_slash_completion_counts": {
+          "0": 32,
+          "18": 16,
+          "36": 12
+        },
+        "one_slash_fraction": "28/60",
+        "support": 60
+      }
+    },
+    "note": "Compatibility only; 427 dot eliminates half the historically reported 36 one-slash completions.",
+    "one_dot_completions": 0,
+    "one_slash_completions": 18
+  },
   "experiment": "CL-VLEN-01",
   "source": "data/observations.csv, 84 physical observations of 66 unique residues",
   "zone_results": {
