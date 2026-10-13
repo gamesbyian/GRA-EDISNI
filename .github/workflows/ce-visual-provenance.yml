@@ -15,6 +15,7 @@ on:
       - "scripts/external_evidence/audit_historic_ebay_ce_sales.py"
       - "scripts/external_evidence/probe_ce_ebay_wayback.py"
       - "scripts/external_evidence/probe_ce_ebay_cdx.py"
+      - "scripts/external_evidence/audit_public_ce_thread_claims.py"
       - "scripts/external_evidence/visual_semantic.py"
       - "tests/test_ce_visual_provenance.py"
       - "tests/test_ce_html_image_discovery.py"
@@ -26,6 +27,7 @@ on:
       - "tests/test_ce_historic_ebay_index.py"
       - "tests/test_ce_ebay_wayback_availability.py"
       - "tests/test_ce_ebay_cdx_index.py"
+      - "tests/test_ce_public_thread_claims.py"
       - "data/reference/inside-ce-visual-sources.json"
       - "data/reference/inside-ce-archived-public-galleries.json"
       - "data/reference/inside-ce-public-reddit-cross-community-queries.json"
@@ -58,6 +60,11 @@ on:
         type: boolean
       archived_reddit_comment_images:
         description: "Also search public historical Reddit comment trees for CE/sticker photo URLs"
+        required: true
+        default: false
+        type: boolean
+      archived_waitlist_claim_audit:
+        description: "Audit one historical 2020 CE waitlist thread for self-contradictory buying claims"
         required: true
         default: false
         type: boolean
@@ -111,7 +118,7 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
       - run: python -m unittest discover -s tests -p 'test_ce_*py' -v
-      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py scripts/external_evidence/audit_historic_ebay_ce_sales.py scripts/external_evidence/probe_ce_ebay_wayback.py scripts/external_evidence/probe_ce_ebay_cdx.py
+      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py scripts/external_evidence/audit_historic_ebay_ce_sales.py scripts/external_evidence/probe_ce_ebay_wayback.py scripts/external_evidence/probe_ce_ebay_cdx.py scripts/external_evidence/audit_public_ce_thread_claims.py
       - name: Index all canonical original sticker photographs and validate source SHA256
         run: |
           mkdir -p /tmp/ce-empty-candidate-set
@@ -217,6 +224,9 @@ jobs:
       - name: Opt-in bounded Wayback CDX capture-index metadata query
         if: inputs.historical_ebay_cdx_check
         run: python scripts/external_evidence/probe_ce_ebay_cdx.py
+      - name: Optionally audit 2020 archived waitlist same-author purchase retractions
+        if: inputs.archived_waitlist_claim_audit
+        run: python scripts/external_evidence/audit_public_ce_thread_claims.py --post-id fhvflq
       - name: Build provenance index and candidate triage
         env:
           MAX_IMAGES: ${{ inputs.max_images }}
