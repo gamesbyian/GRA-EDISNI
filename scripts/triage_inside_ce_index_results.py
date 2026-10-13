@@ -51,7 +51,9 @@ def normalize_url(raw: str) -> tuple[str, str, str]:
             # Reddit permalinks use both /comments/TID/title/CID and
             # /comments/TID/comment/CID; preserve comment IDs when present.
             cid = ""
-            if len(rest) >= 2:
+            if len(rest) >= 3 and rest[1].lower() == "comment":
+                cid = rest[2].lower()
+            elif len(rest) >= 2:
                 cid = rest[1].lower()
             elif len(rest) == 1 and rest[0].lower().startswith("t1_"):
                 cid = rest[0][3:].lower()
