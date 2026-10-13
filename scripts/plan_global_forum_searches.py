@@ -88,7 +88,7 @@ def conditional_native_link(row: dict[str, str], term: str) -> str | None:
         return "https://api.stackexchange.com/2.3/search/advanced?" + urlencode(
             {"site": "gamedev", "q": term, "sort": "relevance", "pagesize": 100}
         )
-    if m == "reddit_oauth_search":
+    if m == "reddit_research_access_gate":
         path = urlsplit(row["url"]).path.rstrip("/")
         return "https://www.reddit.com" + path + "/search/?" + urlencode(
             {"q": term, "restrict_sr": "1"}
@@ -101,6 +101,7 @@ def generate(directory: list[dict[str, str]], routes: list[dict[str, str]],
              statuses: set[str]) -> dict[str, object]:
     check_routes(directory, routes)
     selected = [x for x in routes if x["directory_evidence"] in statuses]
+    metadata = {(x["community"], x["url"]): x for x in directory}
     total = len(selected) * len(terms)
     if total > max_tasks:
         raise ValueError(f"{total} planned queries exceed --max-tasks={max_tasks}; "
@@ -115,8 +116,11 @@ def generate(directory: list[dict[str, str]], routes: list[dict[str, str]],
                     (row["community"] + "\0" + row["url"] + "\0" + term +
                      "\0" + mode).encode("utf-8")
                 ).hexdigest()[:20]
+                descriptor = metadata[(row["community"], row["url"])]
                 task = {
                     "task_id": uid,
+                    "language": descriptor["language"],
+                    "region": descriptor["region"],
                     "community": row["community"],
                     "url": row["url"],
                     "term": term,
