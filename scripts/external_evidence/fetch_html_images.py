@@ -140,12 +140,16 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--leads", type=Path, default=Path("visual-evidence-work/html-image-leads.json"))
     p.add_argument("--out", type=Path, default=Path("evidence-work"))
+    p.add_argument("--additional-leads", type=Path,
+                   help="Optional JSON image_mentions from PUBLIC archive metadata")
     p.add_argument("--max-per-page", type=int, default=8)
     p.add_argument("--max-images", type=int, default=48)
     args = p.parse_args()
     if not (1 <= args.max_images <= 200 and 1 <= args.max_per_page <= 50):
         p.error("max-images must be 1..200 and max-per-page 1..50")
     rows = json.loads(args.leads.read_text(encoding="utf-8"))["image_mentions"]
+    if args.additional_leads:
+        rows += json.loads(args.additional_leads.read_text(encoding="utf-8"))["image_mentions"]
     chosen = select(rows, args.max_per_page, args.max_images)
     reports = []
     total_bytes = 0
