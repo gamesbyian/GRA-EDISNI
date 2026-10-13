@@ -1,0 +1,28 @@
+name: Verify Playdead operation-grammar pilots
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/conjecture_lab_playdead_operation_grammar_pilots.py'
+      - 'data/observations.csv'
+      - '.github/workflows/verify-playdead-operation-grammar.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/conjecture_lab_playdead_operation_grammar_pilots.py'
+      - 'data/observations.csv'
+      - '.github/workflows/verify-playdead-operation-grammar.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  observation-only-pilots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reproduce 5000 matched shuffles and all 495 exact tail controls
+        run: python3 scripts/conjecture_lab_playdead_operation_grammar_pilots.py --json > "$RUNNER_TEMP/playdead-operation-pilots.json"
+      - name: Show frozen summary
+        run: python3 scripts/conjecture_lab_playdead_operation_grammar_pilots.py
