@@ -140,6 +140,33 @@ class TriageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             mod.read_index_hits([path])
 
+    def test_community_canonical_exact_source_vs_thread_context(self):
+        markdown = """- [Known owner](https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/comment/falotig/)
+- [Known channel](https://www.youtube.com/watch?v=ZqYhhptmhmo&lc=UgwABC123)
+- [Other](https://www.example.net/some/thing)"""
+        urls, topics = mod.canonical_refs(markdown)
+        self.assertGreaterEqual(len(urls), 3)
+        self.assertIn("reddit:e9bteo", topics)
+        known, thread, evidence = mod.normalize_url(
+            "https://old.reddit.com/r/PlaydeadsInside/comments/e9bteo/comment/falotig/")
+        other, _, other_evidence = mod.normalize_url(
+            "https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/now_shipping/comment/OTHER9")
+        self.assertIn(known, urls)
+        self.assertNotIn(other, urls)
+        pool = {
+            known: {"thread_key": thread, "evidence_key": evidence,
+                    "first_title": "Known photo", "first_description": "",
+                    "index_hit_occurrences": 1, "tasks": {"x"}, "languages": {"en"}},
+            other: {"thread_key": thread, "evidence_key": other_evidence,
+                    "first_title": "Different reply", "first_description": "",
+                    "index_hit_occurrences": 1, "tasks": {"y"}, "languages": {"en"}},
+        }
+        classified = mod.classify(pool, [], urls, topics)
+        relations = {x["canonical_url"]: x["canonical_relation"] for x in classified}
+        self.assertEqual(relations[known], "canonical_exact_source_url")
+        self.assertEqual(relations[other], "canonical_thread_context_only")
+        self.assertTrue(all(x["new_confirmed_stickers"] == 0 for x in classified))
+
     def test_input_security_and_duplicate_task_detection(self):
         self.assertRaises(ValueError, mod.normalize_url, "file:///private/owner.jpg")
         p = self.root / "invalid.jsonl"

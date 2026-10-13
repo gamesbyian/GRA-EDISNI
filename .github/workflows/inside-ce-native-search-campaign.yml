@@ -151,11 +151,20 @@ jobs:
               "--expect-manifest-sha256", os.environ["EXPECTED_MANIFEST_SHA256"],
           ], check=True)
           PY
+      - name: Read canonical public community sticker link ledger
+        if: ${{ inputs.execute_index == 'yes' }}
+        uses: actions/checkout@v4
+        with:
+          repository: twinysam/INSIDE-ARG
+          ref: master
+          path: canonical-inside-arg
+          persist-credentials: false
       - name: Offline reconcile CE index results into unverified leads
         if: ${{ inputs.execute_index == 'yes' }}
         run: |
           python scripts/triage_inside_ce_index_results.py \
             --input search-output/inside-ce-index-results.jsonl \
+            --canonical-stickers canonical-inside-arg/stickers.md \
             --output search-output/inside-ce-index-candidates.tsv \
             --summary search-output/inside-ce-index-triage-summary.json
       - uses: actions/upload-artifact@v4
