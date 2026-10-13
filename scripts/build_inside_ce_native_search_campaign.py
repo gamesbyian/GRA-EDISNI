@@ -38,6 +38,11 @@ def expressions(lang):
         ("arg_discussion", f'{quote("INSIDE")} {quote("Playdead")} {v["puzzle_term"]}'),
         ("for_sale", f'{quote("INSIDE")} {quote("iam8bit")} {v["sale_phrase"]}'),
         ("unboxing", f'{quote("INSIDE")} {quote("RealDoll")} {v["unboxing_term"]}'),
+        ("outer_wrapper", f'{quote("INSIDE")} {v["outer_wrapper_term"]} {v["sticker_term"]}'),
+        ("wrapper_without_title", f'{quote("iam8bit")} {v["outer_wrapper_term"]}'),
+        ("edition_broad", f'{quote("INSIDE")} {v["edition_term"]}'),
+        ("unboxing_without_game_name", f'{quote("Playdead")} {v["unboxing_term"]}'),
+        ("sticker_with_number", f'{quote("Playdead")} {v["sticker_term"]} {v["number_term"]}'),
     )
 
 def locales_for_site(label):
