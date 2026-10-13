@@ -9,6 +9,8 @@
 **Bounded index executor:** [run_global_forum_index_search.py](../../scripts/run_global_forum_index_search.py)  
 **Manual workflow:** [forum-search-plan.yml](../../.github/workflows/forum-search-plan.yml)
 
+**Community baseline:** [Raezore's reported 2018–2026 manual, visual, multilingual, social and AI-assisted methods](raezore-community-search-baseline-2026-10-13.md). A site being present in the search directory is not a claim that its public owner posts were unsearched by the community or that the site was technically verified by this automation.
+
 ## Objective, unit of work and present state
 
 Accept **arbitrary search terms later**, including non-English strings, numeric serials, punctuation and multiword phrases. Build one independently accountable `(community, query, method, scope)` search task for every selected entry in the global directory. Preserve source URLs, original posting dates, attached media, uncertainty and archival provenance. A genuinely comprehensive campaign must search **post bodies and titles**, not just homepages or game-title names, and separate native results from externally indexed fragments.
