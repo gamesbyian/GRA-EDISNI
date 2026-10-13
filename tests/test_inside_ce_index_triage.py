@@ -120,6 +120,26 @@ class TriageTests(unittest.TestCase):
         self.assertEqual(results[0]["prior_ledger_relation"], "exact_ledger_url")
         self.assertEqual(results[0]["new_confirmed_stickers"], 0)
 
+    def test_spreadsheet_formula_and_missing_provider_fields(self):
+        self.assertEqual(mod.spreadsheet_safe("=HYPERLINK(\"x\")"),
+                         "'=HYPERLINK(\"x\")")
+        self.assertEqual(mod.spreadsheet_safe(" +IMPORTXML(...)"),
+                         "' +IMPORTXML(...)")
+        self.assertEqual(mod.spreadsheet_safe("ordinary item"), "ordinary item")
+        path = self.root / "malformed.jsonl"
+        path.write_text(json.dumps({
+            "task_id": "one", "status": "index_search_success",
+            "matches": [{"url": "https://forum.example/t/1",
+                         "title": None, "description": None}]
+        }))
+        found, _ = mod.read_index_hits([path])
+        self.assertEqual(next(iter(found.values()))["first_title"], "")
+        path.write_text(json.dumps({"task_id": "one",
+                                    "status": "index_search_success",
+                                    "matches": {"url": "https://forum.example"}}))
+        with self.assertRaises(ValueError):
+            mod.read_index_hits([path])
+
     def test_input_security_and_duplicate_task_detection(self):
         self.assertRaises(ValueError, mod.normalize_url, "file:///private/owner.jpg")
         p = self.root / "invalid.jsonl"
