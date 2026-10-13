@@ -136,7 +136,7 @@ def promotional_refs(repo_root: Path, directory: Path, manifest: Path) -> tuple[
             skipped.append({"id": ident, "reason": "not-downloaded", "source_url": source["url"]})
             continue
         rec = image_record(
-            path, root=repo_root, ref_id=ident, role="promotional-reference",
+            path, root=repo_root, ref_id=ident, role=("standalone-product-reference" if source["role"] == "negative-control-standalone" else "promotional-reference"),
             source_url=source["url"], source_kind=source["origin"],
         )
         records.append(rec)
@@ -254,8 +254,11 @@ def analyze(refs: list[dict], items: list[dict], limit: int) -> dict:
     for item in items:
         hit = by_candidate.get(item["id"], [])
         promo = any(x["reference_role"] == "promotional-reference" for x in hit)
+        standalone = any(x["reference_role"] == "standalone-product-reference" for x in hit)
         known = any(x["reference_role"] == "known-sticker-photo" for x in hit)
-        if promo:
+        if standalone:
+            label = "standalone-ps4-image-review"
+        elif promo:
             label = "promotional-reuse-review"
         elif known:
             label = "known-sticker-photo-repost-review"
