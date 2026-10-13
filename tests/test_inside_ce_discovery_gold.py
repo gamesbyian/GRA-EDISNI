@@ -70,7 +70,7 @@ class GoldBenchmarkTests(unittest.TestCase):
                 self.assertNotIn(path.lower(), task["index_query"].lower())
 
     def test_bad_controls_and_unknown_result(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(FileNotFoundError):
             gold.load_gold(Path("/this/file/should/not/exist.tsv"))
         cases = [self.records[0]]
         with self.assertRaises(ValueError):
