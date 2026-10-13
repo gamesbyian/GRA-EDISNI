@@ -171,6 +171,407 @@
     "one_dot_completions": 0,
     "one_slash_completions": 18
   },
+  "cross_zone_slash_binary": {
+    "interpretation": "slash vs dash-or-dot collapses distinct 81/27 alphabets; speculative",
+    "null_controls": {
+      "original_nine_site_frame_shuffles": {
+        "fraction_ge_best": "92/121",
+        "frame9": true,
+        "note": "post-selection ensemble maximum; cross-zone slash-vs-nonslash mapping assumed",
+        "null_median": 2956380340224,
+        "null_q95": 3904695697408,
+        "observed_best": 2455353950208,
+        "search_size": 72,
+        "seed": 20261021,
+        "shuffles": 120
+      },
+      "original_zone_shuffles": {
+        "fraction_ge_best": "105/121",
+        "frame9": false,
+        "note": "post-selection ensemble maximum; cross-zone slash-vs-nonslash mapping assumed",
+        "null_median": 3030804070400,
+        "null_q95": 4011499454464,
+        "observed_best": 2455353950208,
+        "search_size": 72,
+        "seed": 20261020,
+        "shuffles": 120
+      }
+    },
+    "traversals": {
+      "class_A_I": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 739992666112,
+              "with_control_completions": 720665313280
+            },
+            "prefix_forward": {
+              "program_completions": 1333956444160,
+              "with_control_completions": 1314629091328
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 474670432256,
+              "with_control_completions": 474670432256
+            },
+            "two_bit_forward": {
+              "program_completions": 476741369856,
+              "with_control_completions": 476741369856
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_forward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 646545670144,
+              "with_control_completions": 646545670144
+            },
+            "two_bit_forward": {
+              "program_completions": 773094113280,
+              "with_control_completions": 773094113280
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        }
+      },
+      "picture_IAB_CDE_FGH": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 1483382194176,
+              "with_control_completions": 1454391164928
+            },
+            "prefix_forward": {
+              "program_completions": 1243000340480,
+              "with_control_completions": 1214009311232
+            },
+            "prefix_terminated": {
+              "program_completions": 24834867200,
+              "with_control_completions": 16781803520
+            },
+            "two_bit_backward": {
+              "program_completions": 284222816256,
+              "with_control_completions": 284222816256
+            },
+            "two_bit_forward": {
+              "program_completions": 476741369856,
+              "with_control_completions": 476741369856
+            },
+            "two_bit_terminated": {
+              "program_completions": 638189568,
+              "with_control_completions": 638189568
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_forward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_forward": {
+              "program_completions": 515396075520,
+              "with_control_completions": 515396075520
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        }
+      },
+      "reverse_class_A_I": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 566868574208,
+              "with_control_completions": 566868574208
+            },
+            "prefix_forward": {
+              "program_completions": 914425380864,
+              "with_control_completions": 914425380864
+            },
+            "prefix_terminated": {
+              "program_completions": 2099249152,
+              "with_control_completions": 2099249152
+            },
+            "two_bit_backward": {
+              "program_completions": 898256338944,
+              "with_control_completions": 898256338944
+            },
+            "two_bit_forward": {
+              "program_completions": 360777252864,
+              "with_control_completions": 360777252864
+            },
+            "two_bit_terminated": {
+              "program_completions": 3231055872,
+              "with_control_completions": 3231055872
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 245635219456,
+              "with_control_completions": 245635219456
+            },
+            "prefix_forward": {
+              "program_completions": 374933815296,
+              "with_control_completions": 374933815296
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_forward": {
+              "program_completions": 1099511627776,
+              "with_control_completions": 1099511627776
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        }
+      },
+      "reverse_picture_IAB_CDE_FGH": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 613549080576,
+              "with_control_completions": 613549080576
+            },
+            "prefix_forward": {
+              "program_completions": 55970889728,
+              "with_control_completions": 55970889728
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 865364606976,
+              "with_control_completions": 865364606976
+            },
+            "two_bit_forward": {
+              "program_completions": 992137445376,
+              "with_control_completions": 992137445376
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 708371283968,
+              "with_control_completions": 708371283968
+            },
+            "prefix_forward": {
+              "program_completions": 575118245888,
+              "with_control_completions": 575118245888
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_forward": {
+              "program_completions": 523986010112,
+              "with_control_completions": 523986010112
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 15,
+          "observed_adjacent_pairs": 41
+        }
+      },
+      "reverse_serial": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_forward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_forward": {
+              "program_completions": 406948151296,
+              "with_control_completions": 406948151296
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 19,
+          "observed_adjacent_pairs": 39
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 549755813888,
+              "with_control_completions": 549755813888
+            },
+            "prefix_forward": {
+              "program_completions": 2455353950208,
+              "with_control_completions": 2455353950208
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_forward": {
+              "program_completions": 1591419600896,
+              "with_control_completions": 1591419600896
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 19,
+          "observed_adjacent_pairs": 39
+        }
+      },
+      "serial": {
+        "slash=0": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 1089782677504,
+              "with_control_completions": 1089749123072
+            },
+            "prefix_forward": {
+              "program_completions": 886228123648,
+              "with_control_completions": 886194569216
+            },
+            "prefix_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            },
+            "two_bit_backward": {
+              "program_completions": 472111382528,
+              "with_control_completions": 472111382528
+            },
+            "two_bit_forward": {
+              "program_completions": 498216206336,
+              "with_control_completions": 498216206336
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 19,
+          "observed_adjacent_pairs": 39
+        },
+        "slash=1": {
+          "grammar": {
+            "prefix_backward": {
+              "program_completions": 252128526336,
+              "with_control_completions": 252086583296
+            },
+            "prefix_forward": {
+              "program_completions": 507552727040,
+              "with_control_completions": 507510784000
+            },
+            "prefix_terminated": {
+              "program_completions": 349962240,
+              "with_control_completions": 337379328
+            },
+            "two_bit_backward": {
+              "program_completions": 429094076416,
+              "with_control_completions": 429094076416
+            },
+            "two_bit_forward": {
+              "program_completions": 486405046272,
+              "with_control_completions": 486405046272
+            },
+            "two_bit_terminated": {
+              "program_completions": 0,
+              "with_control_completions": 0
+            }
+          },
+          "matching_adjacent_pairs": 19,
+          "observed_adjacent_pairs": 39
+        }
+      }
+    }
+  },
   "status": "DISCOVER/DEVELOP only; no identified decoder",
   "zones": {
     "body": {
@@ -596,8 +997,7 @@
             "12": [
               0,
               1
-            ],
-            "2": [
+            ],            "2": [
               2,
               18
             ],
@@ -997,7 +1397,8 @@
             ]
           },
           {
-            "length": 2,            "starts_zone_relative": [
+            "length": 2,
+            "starts_zone_relative": [
               3,
               18
             ]
@@ -1595,8 +1996,7 @@
           "best_accepted_completions": 50331648,
           "frames": false,
           "max_family_ge_probability": 0.706587,
-          "note": "retrospective best-of-models control; not a prospective p-value",
-          "null_median": 62914560,
+          "note": "retrospective best-of-models control; not a prospective p-value",          "null_median": 62914560,
           "null_q95": 109051904,
           "replicates": 500,
           "seed": 20261213
@@ -1996,7 +2396,8 @@
                   "action": "skip",
                   "argument": "000",
                   "at": 21,
-                  "opcode": "110"                }
+                  "opcode": "110"
+                }
               ],
               "possible_completions": 32768,
               "program_completions": 8320,
@@ -2594,8 +2995,7 @@
             "whole_blocks": 2
           },
           {
-            "distinct_fully_observed": 0,
-            "fully_observed": 0,
+            "distinct_fully_observed": 0,            "fully_observed": 0,
             "phase": 6,
             "repeated_fully_observed": 0,
             "whole_blocks": 2
