@@ -1,0 +1,198 @@
+{
+  "experiment": "CL-VLEN-09",
+  "invariants": "GF(2) elimination, structural cycle and forced-bit synthetic fixtures passed",
+  "matched_null": {
+    "class": {
+      "any_compatible": 0,
+      "best_bf_ge": null,
+      "compatible_ge": 250,
+      "max_rail_ge": 245,
+      "median_compatible": 0.0,
+      "replicates": 250
+    },
+    "frame": {
+      "any_compatible": 0,
+      "best_bf_ge": null,
+      "compatible_ge": 250,
+      "max_rail_ge": 240,
+      "median_compatible": 0.0,
+      "replicates": 250
+    },
+    "zone": {
+      "any_compatible": 0,
+      "best_bf_ge": null,
+      "compatible_ge": 250,
+      "max_rail_ge": 234,
+      "median_compatible": 0.0,
+      "replicates": 250
+    }
+  },
+  "observed": {
+    "best_log2_bf_vs_iid": null,
+    "best_log2_likelihood": null,
+    "compatible_codebooks": 0,
+    "failed_models": [
+      {
+        "commands": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ],
+        "conflicts": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "commands": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ],
+        "conflicts": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "commands": [
+          0,
+          2,
+          1,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ],
+        "conflicts": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "commands": [
+          0,
+          2,
+          1,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ],
+        "conflicts": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "commands": [
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ],
+        "conflicts": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "commands": [
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ],
+        "conflicts": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ]
+      }
+    ],
+    "max_satisfied_rails": 2,
+    "selector_completions": 18,
+    "witnesses": []
+  },
+  "scope": "stateful 9-bit class-to-class XOR masks selected by three slash/dot control positions, cyclic 9 register program",
+  "source": "data/observations.csv; 84 records/66 unique H108 residues",
+  "status": "DISCOVER/DEVELOP only",
+  "two_step_obstruction": {
+    "body_residue_10_A": "-",
+    "body_residue_17_H": "/",
+    "class_H_command_positions": [
+      2
+    ],
+    "class_I_command_positions": [
+      2
+    ],
+    "involution_incompatible": true,
+    "proof": "H->I->A executes identical command 2 twice. Any command O with O^2=identity forces A==H at all body positions; raw residues 10 (-) and 17 (/) disagree."
+  }
+}
