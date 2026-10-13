@@ -136,7 +136,12 @@ def promotional_refs(repo_root: Path, directory: Path, manifest: Path) -> tuple[
             skipped.append({"id": ident, "reason": "not-downloaded", "source_url": source["url"]})
             continue
         rec = image_record(
-            path, root=repo_root, ref_id=ident, role=("standalone-product-reference" if source["role"] == "negative-control-standalone" else "promotional-reference"),
+            path, root=repo_root, ref_id=ident, role=(
+                "standalone-product-reference" if source["role"] == "negative-control-standalone"
+                else "historical-owner-photo-no-visible-sticker"
+                if source["role"] == "positive-control-public-owner-open-ce-no-visible-sticker"
+                else "promotional-reference"
+            ),
             source_url=source["url"], source_kind=source["origin"],
         )
         records.append(rec)
@@ -257,12 +262,15 @@ def analyze(refs: list[dict], items: list[dict], limit: int) -> dict:
         promo = any(x["reference_role"] == "promotional-reference" for x in hit)
         standalone = any(x["reference_role"] == "standalone-product-reference" for x in hit)
         known = any(x["reference_role"] == "known-sticker-photo" for x in hit)
+        owner_original = any(x["reference_role"] == "historical-owner-photo-no-visible-sticker" for x in hit)
         if standalone:
             label = "standalone-ps4-image-review"
         elif promo:
             label = "promotional-reuse-review"
         elif known:
             label = "known-sticker-photo-repost-review"
+        elif owner_original:
+            label = "known-owner-photo-repost-review"
         else:
             label = "unmatched-visual-review"
         triage.append({
