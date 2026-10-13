@@ -17,7 +17,10 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from scripts.external_evidence.fetch_html_images import approved
+if __package__:
+    from .fetch_html_images import approved
+else:
+    from fetch_html_images import approved
 
 POST_ID = re.compile(r"/comments/([0-9a-z]+)/", re.IGNORECASE)
 ARCHIVE_HOSTS = {"arctic-shift.photon-reddit.com", "api.pullpush.io"}

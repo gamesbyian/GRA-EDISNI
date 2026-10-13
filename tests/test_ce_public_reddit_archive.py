@@ -1,5 +1,8 @@
 """Offline controls for opt-in public historical Reddit media metadata."""
+import subprocess
+import sys
 import unittest
+from pathlib import Path
 
 from scripts.external_evidence.recover_reddit_image_links import (
     endpoints, scan, unpack, visible_image_urls
@@ -7,6 +10,13 @@ from scripts.external_evidence.recover_reddit_image_links import (
 
 
 class HistoricalMediaTests(unittest.TestCase):
+    def test_module_can_execute_directly_from_repository_root(self):
+        script = Path(__file__).resolve().parents[1] / "scripts/external_evidence/recover_reddit_image_links.py"
+        proc = subprocess.run([sys.executable, str(script), "--help"],
+                              check=False, capture_output=True, text=True, timeout=10)
+        self.assertEqual(proc.returncode, 0, proc.stderr)
+        self.assertIn("--manifest", proc.stdout)
+
     def test_known_post_media_fields_only(self):
         item = {
             "id": "eers0x", "url": "https://i.redd.it/outer-photo.jpg",
