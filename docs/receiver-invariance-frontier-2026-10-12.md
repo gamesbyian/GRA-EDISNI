@@ -98,9 +98,9 @@ Instead of asking only for a 27-mark contiguous word, use the **already-solved n
 
 | Physical A–I site | U2 | U3 | U4 | U5 | Complete U5 options |
 | --- | ---: | ---: | ---: | ---: | --- |
-| A (top middle) | 4 | 4 | 3 | **2** | `--/`, `-/ -` (remove space: `-/-`) |
+| A (top middle) | 4 | 4 | 3 | **2** | `--/`, `-/-` |
 | B (top right) | **1** | 1 | 1 | 1 | `//-` |
-| C (mid left) | 2 | 2 | **1** | 1 | `-/ -` → `-/ -` without spaces = `-/ -` |
+| C (mid left) | 2 | 2 | **1** | 1 | `-/-` |
 | D (centre) | **1** | 1 | 1 | 1 | `///` |
 | E (mid right) | **1** | 1 | 1 | 1 | `///` |
 | F (bottom left) | **1** | 1 | 1 | 1 | `///` |
