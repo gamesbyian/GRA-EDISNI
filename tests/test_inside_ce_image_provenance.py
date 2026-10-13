@@ -106,6 +106,25 @@ class MediaProvenanceTests(unittest.TestCase):
         self.assertRaises(ValueError, media.img_hash,
                           Image.open(self.root / "marketing.png").convert("L"), "bad")
 
+    def test_hash_bucket_pruning_never_misses_distance_at_most_seven(self):
+        import random
+        randomizer = random.Random(20261013)
+        base = randomizer.getrandbits(64)
+        near = base
+        for pos in (0, 9, 18, 27, 36, 45, 54):
+            near ^= 1 << pos
+        items = [{"dhash64": f"{v:016x}"} for v in
+                 [base, near] + [randomizer.getrandbits(64) for _ in range(100)]]
+        candidates = media.pair_candidates(items)
+        self.assertIn((0, 1), candidates)
+        for i in range(len(items)):
+            for j in range(i + 1, len(items)):
+                a, b = items[i], items[j]
+                distance = (int(a["dhash64"], 16) ^ int(b["dhash64"], 16)).bit_count()
+                if distance <= 7:
+                    self.assertIn((i, j), candidates)
+        self.assertLess(len(candidates), 5151)
+
     def test_manifest_output_scope_and_schema(self):
         manifest = self.root / "images.tsv"
         with manifest.open("w", newline="", encoding="utf-8") as f:
