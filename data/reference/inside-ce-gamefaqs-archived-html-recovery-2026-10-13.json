@@ -1,0 +1,32 @@
+{
+  "observation_date": "2026-10-13",
+  "record_type": "historical_archived_html_body",
+  "original_url": "https://gamefaqs.gamespot.com/boards/194097-inside/76386967",
+  "archive_capture_timestamp_utc": "2019-03-06T05:13:37Z",
+  "archive_replay_url": "https://web.archive.org/web/20190306051337id_/https://gamefaqs.gamespot.com/boards/194097-inside/76386967",
+  "source_cdx_run_id": 38441436347,
+  "source_cdx_digest": "MHNUGWQN4H3TEOTD2U3ZFVLWYUZJHLTC",
+  "body_replay_workflow_run_id": 38443126621,
+  "body_replay_artifact_id": 11836207996,
+  "body_replay_artifact_name": "inside-ce-gamefaqs-2019-body-probe",
+  "body_http_status": 200,
+  "body_content_type": "text/html;charset=utf-8",
+  "body_bytes": 38546,
+  "body_sha256": "20aafc7b365e81404a1c651c7ecede556a33635fc637dccdb586e8f0d49ff164",
+  "extracted_text_characters": 3081,
+  "keyword_context_snippets": 8,
+  "observed_page_title": "Collector's Edition announced - INSIDE Message Board for PlayStation 4 - GameFAQs",
+  "observed_forum_poster_handle_in_excerpt": "JonnyBoyFF",
+  "contextual_terms_observed": [
+    "INSIDE",
+    "iam8bit",
+    "Playdead",
+    "Real Doll",
+    "Collector's Edition"
+  ],
+  "direct_ce_delivery_claim_observed": false,
+  "physical_sticker_number_observed": false,
+  "new_confirmed_stickers": 0,
+  "evidence_interpretation": "actual archived HTML source recovered; early product announcement not evidence that the forum poster owned a CE",
+  "content_retention": "original third-party HTML is not committed; bounded excerpts in GHA artifact only"
+}
