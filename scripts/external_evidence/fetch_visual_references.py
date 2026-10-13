@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 from PIL import Image, UnidentifiedImageError
 
 Image.MAX_IMAGE_PIXELS = 40_000_000
-ALLOWED_HOSTS = {"www.iam8bit.com", "cdn.shopify.com", "cdn.vox-cdn.com", "static0.polygonimages.com"}
+ALLOWED_HOSTS = {"www.iam8bit.com", "cdn.shopify.com", "cdn.vox-cdn.com", "static0.polygonimages.com", "i.redd.it"}
 MAX_BYTES = 20 * 1024 * 1024
 
 
@@ -87,6 +87,9 @@ def main() -> None:
                 item["final_url"] = final_url
             item["bytes"] = len(data)
             item["sha256"] = hashlib.sha256(data).hexdigest()
+            expected = source.get("expected_sha256")
+            if expected and item["sha256"].lower() != expected.lower():
+                raise ValueError("source media changed: expected SHA256 " + expected)
         except (OSError, ValueError, UnidentifiedImageError, urllib.error.URLError) as exc:
             item["status"] = "unavailable"
             item["error"] = str(exc)[:240]
