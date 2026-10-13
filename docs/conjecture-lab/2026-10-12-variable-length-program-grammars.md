@@ -93,6 +93,14 @@ The new workbench exhaustively permutes the 12 observed tail symbols over **the 
 
 As an exploratory class-language prior, this gives a genuinely distinct way for *three control symbols* to instruct the use of an earlier nine-symbol field. It is not yet enough to infer which of the possible instructions is `take 3`, `take 5`, `reverse`, `repeat` or `reference another class`. The matrix of class-specific options, their exact residue support, and matched null denominators are in the JSON report. Unlike a fitted complete nine-opcode translation, these constraints don't invent missing foregrounds.
 
+### Cross-zone continuous programs and alternative reading orders
+
+An additional DEVELOP pass removes the initial assumption that the early slash/dash 81 cells and late slash/dot 27 cells must be parsed *separately*. Map **slash = 1 and both dash and dot = 0**, or reverse that polarity; the original non-slash symbols remain separately preserved in the physical evidence. This is a deliberately many-to-one translation, not a newly observed equivalence. Parse the full **108 cells as one uninterrupted program** under all six grammar variants and six predeclared physical traversals: serial, reversed serial, class-major A–I and its reversal, and independently solved physical-artwork `IAB/CDE/FGH` order and its reversal. This is **72 distinct model/reading choices**.
+
+Over the **2^42 = 4,398,046,511,104** raw-compatible full binary assignments, the best of 72 (reversed serial, slash=1, prefix-forward parser) admits **2,455,353,950,208** completions, about **55.8%**. A matched label-shuffle control shuffles physical observations *within their original early/late zones*, preserves each observed-cell mask and each zone's slash/non-slash frequencies, and evaluates the **maximum over the same 72 models** every time. Across 120 seeded shuffles the global observed-count null median is **3,030,804,070,400** and 104 of 120 shuffled best scores meet or exceed the real best (add-one tail fraction **105/121**). A nine-site-frame-preserving control gives median **2,956,380,340,224**, with 91/120 at least as high (add-one **92/121**). Both controls are negative for *exceptional grammar-acceptance fraction*, not universal refutations of a cross-zone program.
+
+This is especially instructive: dropping the binary-zone boundary, allowing reversed traversal, and optimizing across 72 languages **does** make spectacularly many full-length "programs" appear. But it makes even more under similarly shuffled physical symbols. Increasing grammar freedom raises the need for an independently motivated receiver or a testable operation, rather than a successful parse alone. The full 108-bit view is kept live as a distinct conjecture despite these negatives.
+
 ## Why a successful parse does not solve the mystery
 
 The user-facing point matters: an opcode length, operand length, mapping, zone boundary, END rule, and operations have all been supplied by this investigation. The observations only constrain those choices, mostly weakly. A high count of conforming programs tells us the grammar is flexible, and a low count only matters relative to baseline and the cost of having tried multiple grammars. Varying 3/5 to 3/6 or allowing skips until an English message appears would manufacture confidence.
@@ -120,9 +128,9 @@ python scripts/conjecture_lab_variable_length_grammar.py --test
 python scripts/conjecture_lab_variable_length_grammar.py \
   --observations data/observations.csv \
   --output data/conjecture-lab-variable-length-grammar-2026-10-12.json \
-  --replicates 12000 --parser-null-replicates 500
+  --replicates 12000 --parser-null-replicates 500 --cross-null-replicates 120
 ```
 
-The first command runs exhaustive small-bitstring comparisons of the DP against an independent executing interpreter and exact run-length bounds against brute-force fillings. The second regenerates the complete ~70KB JSON containing every phase, group width, delimiter possibility, parser counts, witnesses, and null scores. The experiment is deterministic and standard-library-only. If new observations change, the regenerated report may differ; a fixed historical snapshot can be pinned to reproduce today's JSON exactly.
+The first command runs exhaustive small-bitstring comparisons of the DP against an independent executing interpreter and exact run-length bounds against brute-force fillings. The second regenerates the complete research JSON containing every phase, group width, delimiter possibility, parser counts, witnesses, and null scores. The experiment is deterministic and standard-library-only. If new observations change, the regenerated report may differ; a fixed historical snapshot can be pinned to reproduce today's JSON exactly.
 
 **Disposition:** This genuinely opens a larger language family without claiming its existence. No canonical model, prediction, physical mark or historical negative was overwritten. The most valuable current result is that *generic* 3/5 mixed command grammars explain little on their own. The next serious discriminator must exploit authentic boundary/consumer constraints or a much more selective, testable code grammar.
