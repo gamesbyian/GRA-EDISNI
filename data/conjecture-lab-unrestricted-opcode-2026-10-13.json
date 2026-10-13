@@ -1,0 +1,185 @@
+{
+  "body_observed": 54,
+  "both_bit_values_still_possible": 27,
+  "complete_native_classes": [
+    "-----/---",
+    "/-//////-",
+    "---///-/-",
+    "-/--/---/",
+    "/--/--/--",
+    "-/--/-///",
+    "/---/---/",
+    "-/------/",
+    "/--/--/-/"
+  ],
+  "entry_count": 9,
+  "illustrative_naive_dictionary_bits": 180,
+  "missing_bit_forcing_experiment": [
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 1
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 28
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 55
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 64
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 73
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 11
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 22
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 49
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 58
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 67
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 41
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 50
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 68
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 77
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 6
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 33
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 16
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 25
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 34
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 52
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 61
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 8
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 35
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 62
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 27
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 45
+    },
+    {
+      "can_force_dash": true,
+      "can_force_slash": true,
+      "residue": 54
+    }
+  ],
+  "opcodes": [
+    0,
+    2,
+    0,
+    1,
+    0,
+    1,
+    0,
+    2,
+    2
+  ],
+  "partial_transition_tables": {
+    "0": {
+      "184": 274,
+      "273": 258,
+      "32": 253,
+      "73": 466
+    },
+    "1": {
+      "274": 73,
+      "466": 273
+    },
+    "2": {
+      "253": 184,
+      "258": 329,
+      "329": 32
+    }
+  },
+  "source": "data/observations.csv",
+  "status": "deliberately overfitted universal three-command lookup; NOT a decoded CE program",
+  "tail_onehot_vectors": 18
+}
