@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact publicly archived Imgur gallery controls recovered from historical Dec 2019 INSIDE CE Reddit comments; references and known sticker provenance, not new editions.",
+  "sources": [
+    {
+      "id": "ipjWYEz",
+      "url": "https://imgur.com/gallery/ipjWYEz",
+      "source_page_url": "https://www.reddit.com/comments/e9bteo/_/favh0go/",
+      "evidence_role": "historical-known-PS4-reversible-cover-control",
+      "observed_image_count": 6,
+      "note": "Gallery title: INSIDE x Iam8bit x RealDoll reverse cover. Already documented in twinysam/INSIDE-ARG main ARG narrative, not an unknown CE sticker."
+    },
+    {
+      "id": "YLXcetH",
+      "url": "https://imgur.com/gallery/YLXcetH",
+      "source_page_url": "https://www.reddit.com/comments/e9bteo/_/ffptzb1/",
+      "evidence_role": "historical-known-physical-sticker-171-publication",
+      "observed_image_count": 1,
+      "known_original_media_url": "https://i.imgur.com/mOHC6nr.jpg",
+      "known_original_sha256": "fc1bde45ecc8c7504c81729c3ec4fdebd60af83e3c649630fce63a21eaa068db",
+      "note": "Imgur title Inside collectors seal. Source matches bytes of canonical original 171 = slash background I; added source trail only, no new physical sticker or independent observation."
+    }
+  ]
+}
