@@ -22,7 +22,17 @@ MULTI_LOCALES = (
     "zh-CN", "zh-TW", "zh-HK", "ko", "vi", "th", "id", "ms", "tl", "hi",
     "bn", "ur", "ne", "si", "ru", "uk", "ar", "fa", "he", "sw"
 )
-LANGUAGE_INDEPENDENT_CATEGORIES = frozenset(("product_anchor_iam8bit", "product_anchor_realdoll"))
+# Raezore's October 2026 methods explicitly include Huddle, statue, figure,
+# edition variants and misspellings. These proper-noun/English marketing-name
+# probes are invariant across locale profiles and must run only ONCE per site.
+LANGUAGE_INDEPENDENT_CATEGORIES = frozenset((
+    "product_anchor_iam8bit", "product_anchor_realdoll",
+    "huddle_with_inside", "huddle_with_iam8bit",
+    "statue_with_playdead", "figure_with_playdead",
+    "collecters_typo", "collectors_no_apostrophe",
+    "special_edition_iam8bit", "limited_edition_playdead",
+    "deluxe_edition_playdead",
+))
 FIRST_PASS_LOCALES = (
     "en", "ja", "zh-TW", "zh-CN", "ko", "fr", "de", "es", "pt-BR",
     "it", "vi", "ar", "ru", "tr", "pl", "nl", "id", "th", "uk", "fa"
@@ -43,6 +53,15 @@ def expressions(lang):
         # per language. Native idiom queries below remain locale-specific.
         ("product_anchor_iam8bit", f'{quote("INSIDE")} {quote("iam8bit")}'),
         ("product_anchor_realdoll", f'{quote("INSIDE")} {quote("RealDoll")}'),
+        ("huddle_with_inside", f'{quote("INSIDE")} {quote("Huddle")}'),
+        ("huddle_with_iam8bit", f'{quote("Huddle")} {quote("iam8bit")}'),
+        ("statue_with_playdead", f'{quote("Playdead")} {quote("statue")}'),
+        ("figure_with_playdead", f'{quote("Playdead")} {quote("figure")}'),
+        ("collecters_typo", f'{quote("INSIDE")} {quote("collecter\'s edition")}'),
+        ("collectors_no_apostrophe", f'{quote("INSIDE")} {quote("Collectors Edition")}'),
+        ("special_edition_iam8bit", f'{quote("iam8bit")} {quote("special edition")}'),
+        ("limited_edition_playdead", f'{quote("Playdead")} {quote("limited edition")}'),
+        ("deluxe_edition_playdead", f'{quote("Playdead")} {quote("deluxe edition")}'),
         ("native_sticker_broad", f'{quote("INSIDE")} {v["sticker_term"]}'),
         ("native_arrival_broad", f'{quote("INSIDE")} {v["arrival_phrase"]}'),
         ("owner_bought", f'{quote("INSIDE")} {quote("iam8bit")} {v["ownership_phrase"]}'),
