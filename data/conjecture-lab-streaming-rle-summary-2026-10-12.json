@@ -1,0 +1,129 @@
+{
+  "experiment": "CL-VLEN-03",
+  "number_grammars": 108,
+  "number_grammars_per_stream": 36,
+  "output14_search": {
+    "body": {
+      "best_output14_log_BF": -3.984424296,
+      "positive_models": 1
+    },
+    "tail": {
+      "best_output14_log_BF": 1.354788011,
+      "positive_models": 8
+    },
+    "whole": {
+      "best_output14_log_BF": null,
+      "positive_models": 0
+    }
+  },
+  "physical_records": 84,
+  "postselected_nulls": {
+    "body": {
+      "output14": {
+        "null": "physical-mask-preserving separate nine-site-frame shuffles in 81/27 zones; optimize across same 36 models per region",
+        "null_ge_observed": 69,
+        "null_median_log_BF": 0.890773027,
+        "null_parsed": 77,
+        "observed_best_log_BF": -3.984424296,
+        "postselected_exceedance": "70/121",
+        "replicates": 120
+      },
+      "unrestricted": {
+        "null": "physical-mask-preserving separate nine-site-frame shuffles in 81/27 zones; optimize across same 36 models per region",
+        "null_ge_observed": 68,
+        "null_median_log_BF": 2.345534798,
+        "null_parsed": 93,
+        "observed_best_log_BF": 1.794858143,
+        "postselected_exceedance": "69/121",
+        "replicates": 120
+      }
+    },
+    "tail": {
+      "output14": {
+        "null": "physical-mask-preserving separate nine-site-frame shuffles in 81/27 zones; optimize across same 36 models per region",
+        "null_ge_observed": 99,
+        "null_median_log_BF": 1.904603967,
+        "null_parsed": 120,
+        "observed_best_log_BF": 1.354788011,
+        "postselected_exceedance": "100/121",
+        "replicates": 120
+      },
+      "unrestricted": {
+        "null": "physical-mask-preserving separate nine-site-frame shuffles in 81/27 zones; optimize across same 36 models per region",
+        "null_ge_observed": 80,
+        "null_median_log_BF": 1.409359628,
+        "null_parsed": 120,
+        "observed_best_log_BF": 1.30937189,
+        "postselected_exceedance": "81/121",
+        "replicates": 120
+      }
+    },
+    "whole": {
+      "output14": {
+        "null": "physical-mask-preserving separate nine-site-frame shuffles in 81/27 zones; optimize across same 36 models per region",
+        "null_ge_observed": null,
+        "null_median_log_BF": -1.754226032,
+        "null_parsed": 63,
+        "observed_best_log_BF": null,
+        "postselected_exceedance": null,
+        "replicates": 120
+      },
+      "unrestricted": {
+        "null": "physical-mask-preserving separate nine-site-frame shuffles in 81/27 zones; optimize across same 36 models per region",
+        "null_ge_observed": 60,
+        "null_median_log_BF": 1.6486867,
+        "null_parsed": 90,
+        "observed_best_log_BF": 0.913744638,
+        "postselected_exceedance": "61/121",
+        "replicates": 120
+      }
+    }
+  },
+  "status": "DISCOVER/DEVELOP only; invented streaming unary RLE program; no decoded puzzle",
+  "unique_positions": 66,
+  "unknown_positions": 42,
+  "winning_grammars": {
+    "body": {
+      "compatible_fraction_of_random_unknown_fillings": 0.03723145,
+      "compatible_programs_outputting_14_integers": 20,
+      "explicit_stop": false,
+      "log_BF_conditioned_on_14_output_numbers": -3.984424296,
+      "log_bayes_factor_vs_uniform_binary": 1.794858143,
+      "operand_cap": 9,
+      "operator_bit": "0",
+      "order": "serial",
+      "unconditional_programs_outputting_14_integers": 19367039875038831340,
+      "unconstrained_valid_programs": 14956933311861179696694,
+      "valid_completions": 4997120,
+      "zone": "body"
+    },
+    "tail": {
+      "compatible_fraction_of_random_unknown_fillings": 0.17565918,
+      "compatible_programs_outputting_14_integers": 105,
+      "explicit_stop": false,
+      "log_BF_conditioned_on_14_output_numbers": 1.160401616,
+      "log_bayes_factor_vs_uniform_binary": 1.30937189,
+      "operand_cap": 9,
+      "operator_bit": "1",
+      "order": "reverse",
+      "unconditional_programs_outputting_14_integers": 134770,
+      "unconstrained_valid_programs": 6365430,
+      "valid_completions": 5756,
+      "zone": "tail"
+    },
+    "whole": {
+      "compatible_fraction_of_random_unknown_fillings": 0.00558335,
+      "compatible_programs_outputting_14_integers": 0,
+      "explicit_stop": false,
+      "log_BF_conditioned_on_14_output_numbers": null,
+      "log_bayes_factor_vs_uniform_binary": 0.913744638,
+      "operand_cap": 9,
+      "operator_bit": "0",
+      "order": "serial",
+      "unconditional_programs_outputting_14_integers": 2727337317116846136368204,
+      "unconstrained_valid_programs": 726608360154120832662399500309,
+      "valid_completions": 24555847680,
+      "zone": "whole"
+    }
+  }
+}
