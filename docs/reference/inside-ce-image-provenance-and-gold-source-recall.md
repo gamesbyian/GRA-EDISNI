@@ -52,3 +52,11 @@ Raezore already uses reverse image searches, multilingual wording, marketplace a
 Prioritize an actual test of a few known examples from the image and reply categories before scaling the 28,188-query native-language campaign. Then use failures to select original permitted discussion pages, picture-only public posts, regional resale archives and historical video comments for additional retrieval. A rehosted photograph never proves a different sticker; an owner stating a serial without an image is only a reported serial until corroborated.
 
 **All automated outputs retain 0 new confirmed stickers until original evidence is independently reviewed.**
+
+## Optional controlled live index benchmark
+
+[Manual GHA workflow: Blind INSIDE CE known-source recall](../../.github/workflows/inside-ce-gold-recall.yml) prepares the **24 held-out source queries** and runs offline tests on a pull request with zero network/API requests. Real provider execution requires **manual workflow dispatch**, setting execute_index=yes, plus a configured authorized Brave Search API key. The default execute_index=no merely uploads the planned query manifest.
+
+A live run can consume 1–24 calls at a user-specified bound (12 by default), record rate-limit or provider failures, and calculate exact original URL matches versus weaker same-thread/video retrieval. The first batch starts at start_index=0. To resume later without spending twice, use next_index and manifest_sha256 from the prior uploaded index summary. The runner refuses a mismatched manifest fingerprint on nonzero offsets.
+
+This workflow does not itself authorize research access to Reddit/social native APIs, retrieve full post comments or inspect photographs. Passing the **blind URL benchmark** tests search-result source discovery, not human ownership confirmation or media recovery. Its measured exact-source count should be interpreted alongside source-specific access restrictions.

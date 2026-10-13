@@ -1,0 +1,83 @@
+name: Blind INSIDE CE known-source recall pilot
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/inside-ce-gold-recall.yml'
+      - 'scripts/benchmark_inside_ce_discovery.py'
+      - 'data/reference/inside-ce-discovery-gold-controls.tsv'
+      - 'tests/test_inside_ce_discovery_gold.py'
+  workflow_dispatch:
+    inputs:
+      execute_index:
+        description: 'Spend approved official Brave API quota? Defaults to offline plan only'
+        type: choice
+        options: ['no', 'yes']
+        default: 'no'
+      start_index:
+        description: 'First query index, 0 initially; resume from previous summary'
+        type: string
+        default: '0'
+      max_queries:
+        description: 'Maximum index requests this run, 1-24'
+        type: string
+        default: '12'
+      expected_manifest_sha256:
+        description: 'Required for nonzero start_index, copied from previous summary'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  blind-source-recall:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate exact source comparison and query leakage controls
+        run: python -m unittest discover -s tests -p test_inside_ce_discovery_gold.py -v
+      - name: Freeze and plan two blind queries for twelve canonical sources
+        run: |
+          python scripts/benchmark_inside_ce_discovery.py plan \
+            --output search-output/inside-ce-gold-index-plan.jsonl
+      - name: Optional bounded licensed index search
+        if: ${{ inputs.execute_index == 'yes' }}
+        env:
+          BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
+          START_INDEX: ${{ inputs.start_index }}
+          MAX_QUERIES: ${{ inputs.max_queries }}
+          EXPECTED_SHA256: ${{ inputs.expected_manifest_sha256 }}
+        run: |
+          python - <<'PY'
+          import os
+          import subprocess
+          cmd = [
+              "python", "scripts/run_global_forum_index_search.py",
+              "--tasks", "search-output/inside-ce-gold-index-plan.jsonl",
+              "--output", "search-output/inside-ce-gold-index-results.jsonl",
+              "--summary", "search-output/inside-ce-gold-index-summary.json",
+              "--start-index", os.environ["START_INDEX"],
+              "--max-queries", os.environ["MAX_QUERIES"],
+              "--expect-manifest-sha256", os.environ["EXPECTED_SHA256"],
+              "--max-results", "10",
+          ]
+          subprocess.run(cmd, check=True)
+          PY
+      - name: Report only measured original-URL or weaker thread-level hits
+        if: ${{ inputs.execute_index == 'yes' }}
+        run: |
+          python scripts/benchmark_inside_ce_discovery.py evaluate \
+            --input search-output/inside-ce-gold-index-results.jsonl \
+            --output search-output/inside-ce-gold-recall-results.json \
+            --summary search-output/inside-ce-gold-recall-summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inside-ce-gold-source-recall
+          path: search-output/
+          retention-days: 30
+          if-no-files-found: error
