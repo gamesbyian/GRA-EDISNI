@@ -77,7 +77,7 @@ UK-Ireland	en	The Games Forum	https://www.thegamesforum.com/	general	C
 UK-Ireland	en	Video Games & Computer Entertainment - Boards.ie	https://www.boards.ie/	general	C
 UK-Ireland	en	HotUKDeals Gaming	https://www.hotukdeals.com/tag/gaming	deals	C
 UK-Ireland	en	Steam Deck HQ Community	https://steamdeckhq.com/	comments	C
-Oceania	en	Australian Gamer Forums - Whirlpool	https://forums.whirlpool.net.au/	general	C
+Oceania	en	Australian Gamer Forums - Whirlpool	https://forums.whirlpool.net.au/forum/21	general	C
 Oceania	en	Overclockers Australia	https://forums.overclockers.com.au/	hardware	C
 Oceania	en	GamePlanet NZ Community	https://www.gameplanet.co.nz/	comments	C
 Oceania	en	AusGamers Community	https://www.ausgamers.com/	comments	C
@@ -278,7 +278,7 @@ Bangladesh	bn-en	Reddit r/bangladesh_gaming	https://www.reddit.com/r/bangladesh_
 Bangladesh	bn-en	BanglaGamer Community	https://www.banglagamer.com/	general	C
 Sri Lanka	en-si	Gamer.LK Forum	https://gamer.lk/	general	C
 Nepal	en-ne	Reddit r/NepalGaming	https://www.reddit.com/r/NepalGaming/	subreddit	C
-Vietnam	vi	GameVN Forum	https://forum.gamevn.com/	general	V
+Vietnam	vi	GameVN Forum	https://gamevn.com/forums/	general	V
 Vietnam	vi	VOZ Console Gaming	https://voz.vn/f/console-gaming.22/	platform	V
 Vietnam	vi	VOZ PC Gaming	https://voz.vn/	general	C
 Vietnam	vi	Tinhte Gaming Forum	https://tinhte.vn/	hardware	C
@@ -289,7 +289,7 @@ Thailand	th	Pantip Online Games	https://pantip.com/tag/%E0%B9%80%E0%B8%81%E0%B8%
 Thailand	th	Pantip Computer Games	https://pantip.com/	general	V
 Thailand	th	Online Station Discussions	https://www.online-station.net/	comments	C
 Thailand	th	ThaiGaming Forum	https://www.thaigaming.com/	general	C
-Indonesia	id	Kaskus Games	https://www.kaskus.co.id/	general	C
+Indonesia	id	Kaskus Games	https://www.kaskus.co.id/forum/44/games	general	C
 Indonesia	id	JagatPlay Comments	https://jagatplay.com/	comments	C
 Indonesia	id	Dunia Games Community	https://duniagames.co.id/	comments	C
 Indonesia	id	Gamebrott Comments	https://gamebrott.com/	comments	C
@@ -336,13 +336,13 @@ Latin-America	es	Reddit r/LatinoGamers	https://www.reddit.com/r/LatinoGamers/	su
 South-Africa	en	MyBroadband Gaming Forum	https://mybroadband.co.za/forum/forums/gaming.86/	general	V
 South-Africa	en	MyBroadband MyGaming Forum	https://mybroadband.co.za/forum/forums/mygaming.326/	general	V
 South-Africa	en	Reddit r/southafricangaming	https://www.reddit.com/r/southafricangaming/	subreddit	C
-South-Africa	en	SA Gamer Community	https://sagamer.co.za/	comments	C
+South-Africa	en	SA Gamer Community	https://sagamer.co.za/forum/	comments	C
 Africa	en	Reddit r/AfricanGaming	https://www.reddit.com/r/AfricanGaming/	subreddit	C
 North-Africa	ar-fr	Tunisie-Sat Gaming Forum	https://www.tunisia-sat.com/forums/	general	C
 North-Africa	fr-ar	Hespress Gaming Comments	https://www.hespress.com/	comments	C
 Middle-East	ar	TrueGaming Forums	https://www.true-gaming.net/boards/	general	V
 Middle-East	ar	Arabic Game Developers Network	https://agdn-online.com/	gamedev	V
-Middle-East	ar	Arab Hardware Games	https://arabhardware.net/	hardware	C
+Middle-East	ar	Arab Hardware Games	https://forum.arabhardware.net/	hardware	C
 Middle-East	ar	ArabGamerZ Community	https://www.arabgamerz.com/	comments	C
 Middle-East	ar	Saudi Gamer Community	https://saudigamer.com/	comments	C
 Middle-East	ar	Reddit r/saudi_gamers	https://www.reddit.com/r/saudi_gamers/	subreddit	V
@@ -471,3 +471,14 @@ Middle-East	ar	TrueGaming 2025 thread archive	https://www.true-gaming.net/boards
 Nigeria	en	Reddit r/NigeriaGaming	https://www.reddit.com/r/NigeriaGaming/	subreddit	C
 Brazil	pt-BR	Reddit r/gamingbrasil	https://www.reddit.com/r/gamingbrasil/	subreddit	C
 Africa	en	Reddit r/GameGlobal	https://www.reddit.com/r/GameGlobal/	subreddit	C
+Global	en	VOGONS	https://www.vogons.org/	retro	V
+Global	en	Racketboy Forum	https://racketboy.com/forum/	retro	V
+UK-Ireland	en	Nintendo Life Forums	https://www.nintendolife.com/forums	platform	V
+UK-Ireland	en	Pure Xbox Forums	https://www.purexbox.com/forums	platform	V
+US-Canada	en	MMORPG.com Forums	https://forums.mmorpg.com/	MMO	V
+Global	en	Speedrun.com Forums	https://www.speedrun.com/forums	game	V
+Europe	en	HLTV Forums	https://www.hltv.org/forums	game	V
+France	fr	Neo-Arcadia Forum	https://neo-arcadia.com/forum/	retro	C
+Oceania	en	GPForums New Zealand	https://www.gpforums.co.nz/	general	C
+Global	en	Game Development Stack Exchange	https://gamedev.stackexchange.com/	gamedev	C
+Spain	es	Gamereactor España Forums	https://www.gamereactor.es/foro/	general	C
