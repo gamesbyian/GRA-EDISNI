@@ -75,7 +75,7 @@ def selector_assignments(observed):
     return vectors, dict(zip(CLASSES, map(list, allowed)))
 
 
-def direct_sample(observed, assignments):
+def direct_sample(observed, assignments, strict_frozen=False):
     """Tail trit selects same depth in all three 27-cell body quarters."""
     body = observed[:81]
     possible = []
@@ -90,10 +90,12 @@ def direct_sample(observed, assignments):
                         "?" not in alternatives else "?")
         possible.append(detail)
         forced.append("".join(line))
-    assert forced == ["?/-///?-?", "?/////?-?", "?-??//?//"], forced
-    assert sum(ch != "?" for row in forced for ch in row) == 18
-    return {"forced_rows": forced, "forced_known": 18,
-            "unresolved": 9, "possibilities": possible}
+    count = sum(ch != "?" for row in forced for ch in row)
+    if strict_frozen:
+        assert forced == ["?/-///?-?", "?/////?-?", "?-??//?//"], forced
+        assert count == 17, count
+    return {"forced_rows": forced, "forced_known": count,
+            "unresolved": 27 - count, "possibilities": possible}
 
 
 def permute_source_to_destination(operation, trit):
@@ -223,13 +225,22 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--observations", default="data/observations.csv")
     parser.add_argument("--null-replicates", type=int, default=500)
+    parser.add_argument("--direct-null-replicates", type=int, default=5000)
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
 
     marks = physical(args.observations)
     selectors, allowed = selector_assignments(marks)
     body = "".join(marks[:81])
-    direct = direct_sample(marks, selectors)
+    direct = direct_sample(marks, selectors, strict_frozen=True)
+    direct_rng = LCG()
+    direct_null = []
+    for _ in range(args.direct_null_replicates):
+        shuffled = list(shuffled_body(body, direct_rng)) + marks[81:]
+        direct_null.append(direct_sample(shuffled, selectors)["forced_known"])
+    direct_ge = sum(x >= direct["forced_known"] for x in direct_null)
+    if args.direct_null_replicates == 5000:
+        assert direct_ge == 1052, direct_ge
     all_models = model_family(body, selectors)
 
     assert [(x["best_conflicts"]) for x in all_models] == [
@@ -264,6 +275,15 @@ def main():
         "conditional_onehot_tail_assignments": len(selectors),
         "tail_allowed_trits": allowed,
         "direct_select_81_to_27": direct,
+        "direct_select_matched_null": {
+            "replicates": args.direct_null_replicates,
+            "seed": "0x7A5B8321",
+            "observed_forced_positions": direct["forced_known"],
+            "as_many_forced_positions_or_more": direct_ge,
+            "null_mean_forced_positions": (
+                sum(direct_null) / len(direct_null) if direct_null else None),
+            "null_histogram": dict(sorted(Counter(direct_null).items())),
+        },
         "stream_model": {
             "description": "first nine-bit class-word literal; subsequent class-word = "
                            "tail-trit-selected three-way 3x3 shift/rotation of prior word",
@@ -287,6 +307,8 @@ def main():
         print("One-hot tail completions:", len(selectors))
         print("27 direct-selected outputs:", " / ".join(direct["forced_rows"]))
         print("Fixed symbols:", direct["forced_known"], "of 27")
+        print("Direct-selection matched null >= observed:", direct_ge,
+              "/", args.direct_null_replicates)
         print("Best 9-word genuine instruction stream:", best,
               "physical contradictions of 54 known body symbols")
         print("Exact model completions:",
