@@ -3,6 +3,7 @@
 **Research mode:** DISCOVER (public source discovery), with canonical-ledger reconciliation before any physical claim.  
 **Prepared:** 2026-10-12 (America/Edmonton)  
 **Canon for comparisons:** [twinysam/INSIDE-ARG stickers.md](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md); our own [physical observations](../../data/observations.csv).  
+**Next-stage archival controls:** [dated capture metadata controls and bounded Wayback probe](inside-ce-archive-cdx-positive-controls-2026-10-13.md).  
 **New assets:** [50 native-language search profiles](../../data/reference/inside-ce-native-search-lexicon.tsv), [483-forum native campaign planner](../../scripts/build_inside_ce_native_search_campaign.py), [30 additional social/video/resale platforms](../../data/reference/inside-ce-ownership-secondary-platforms.tsv), [source-backed preliminary lead ledger](../../data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv), and [manual/CI workflow](../../.github/workflows/inside-ce-native-search-campaign.yml).
 
 ## What we want to discover
