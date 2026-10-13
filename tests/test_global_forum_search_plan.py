@@ -37,6 +37,9 @@ class TestGlobalForumSearchPlan(unittest.TestCase):
             self.assertEqual(len(results), len({r["task_id"] for r in results}))
             self.assertTrue(all(r["state"] == "planned_unexecuted" for r in results))
             self.assertTrue(all(r["results"] == [] for r in results))
+            self.assertTrue(all(r["host_capture_status"] == "not_checked" for r in results))
+            self.assertTrue(all(r["historical_route"] for r in results))
+            self.assertTrue(all(r["language"] and r["region"] for r in results))
             self.assertTrue(any(r["term"] == "內幕 貼紙" for r in results))
             self.assertTrue(all(r["index_query"].startswith("site:") for r in results))
 
