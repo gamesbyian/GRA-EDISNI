@@ -29,17 +29,17 @@ class TriageTests(unittest.TestCase):
 
     def test_reddit_comment_identity_and_thread_context(self):
         urls = [
-            "https://old.reddit.com/r/GameSale/comments/i0vgml/my_listing/pid_a/?utm_source=foo",
-            "https://www.reddit.com/r/GameSale/comments/i0vgml/my_listing/pid_b/?context=3",
-            "https://reddit.com/r/GameSale/comments/i0vgml/my_listing/pid_a/",
-            "https://www.reddit.com/r/GameSale/comments/i0vgml/comment/pid_a",
+            "https://old.reddit.com/r/GameSale/comments/i0vgml/my_listing/pida/?utm_source=foo",
+            "https://www.reddit.com/r/GameSale/comments/i0vgml/my_listing/pidb/?context=3",
+            "https://reddit.com/r/GameSale/comments/i0vgml/my_listing/pida/",
+            "https://www.reddit.com/r/GameSale/comments/i0vgml/comment/pida",
         ]
         keys = [mod.normalize_url(x) for x in urls]
         self.assertEqual(keys[0], keys[2])
         self.assertEqual(keys[0], keys[3])
         self.assertNotEqual(keys[0][2], keys[1][2])
         self.assertEqual({x[1] for x in keys}, {"reddit:i0vgml"})
-        self.assertEqual(keys[0][2], "reddit-comment:pid_a")
+        self.assertEqual(keys[0][2], "reddit-comment:pida")
 
     def test_source_permalink_without_comment_cannot_prove_comment(self):
         u, thread, evidence = mod.normalize_url(
