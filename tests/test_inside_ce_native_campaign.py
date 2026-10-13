@@ -25,12 +25,12 @@ class NativeCECampaignTests(unittest.TestCase):
         )
 
     def test_full_inventory_and_native_locale_coverage(self):
-        self.assertEqual(len(self.directory), 484)
+        self.assertEqual(len(self.directory), 491)
         self.assertEqual(len(self.lexicon), 50)
         tasks = self.make_campaign()
         self.assertGreater(len(tasks), 3000)
         self.assertEqual(len({t["task_id"] for t in tasks}), len(tasks))
-        self.assertEqual(len({t["site"] for t in tasks}), 484)
+        self.assertEqual(len({t["site"] for t in tasks}), 491)
         self.assertEqual({t["state"] for t in tasks}, {"planned_unexecuted"})
 
     def test_region_specific_native_formulations(self):
@@ -99,13 +99,24 @@ class NativeCECampaignTests(unittest.TestCase):
         self.assertTrue(any(x["site"] == "Yahoo Auctions Japan" and x["locale"] == "ja"
                             for x in tasks))
 
+    def test_product_anchors_deduplicated_per_site(self):
+        sites = self.make_campaign()
+        social = module.build_secondary(module.load_tsv(module.SECONDARY), self.lexicon)
+        for population, expected_sites in ((sites, 491), (social, 30)):
+            for category in module.LANGUAGE_INDEPENDENT_CATEGORIES:
+                selected = [x for x in population if x["category"] == category]
+                self.assertEqual(len(selected), expected_sites)
+                self.assertEqual(len({x["site"] for x in selected}), expected_sites)
+                self.assertTrue(all(x["expression"].count('"') == 4 for x in selected))
+        self.assertEqual(len(module.expressions(self.lexicon[0])), 19)
+
     def test_full_native_lexicon_on_global_sources(self):
         expected = {x["locale"] for x in self.lexicon}
         self.assertEqual(set(module.MULTI_LOCALES), expected)
         forum_tasks = self.make_campaign()
-        self.assertEqual(len(forum_tasks), 8955)
+        self.assertEqual(len(forum_tasks), 11250)
         social_tasks = module.build_secondary(module.load_tsv(module.SECONDARY), self.lexicon)
-        self.assertEqual(len(social_tasks), 10755)
+        self.assertEqual(len(social_tasks), 12249)
         self.assertEqual({x["locale"] for x in forum_tasks}, expected)
         self.assertEqual({x["locale"] for x in social_tasks}, expected)
 
