@@ -2,7 +2,7 @@
 
 **Mode:** DISCOVER. **State:** code + positive controls prepared, not a completed 483-forum archive scan. **Date:** 2026-10-13.
 
-This is the second practical acquisition stage after [the 50-native-language CE ownership program](inside-ce-native-owner-hunt-2026-10-12.md) and [the offline SQLite/warcio indexer](forum-search-software-stack.md). It establishes whether known original **URLs** were captured in the 2016–2026 web archives before investing in WARC downloads and searches. The new [14-control dataset](../../data/reference/inside-ce-archive-positive-controls.tsv) includes five classes: known sticker serial discussions; first-person owners without sticker photos; preorder/non-owner negative controls; unverified original 2019 Twitch unboxing archive; and post-2019 marketplace/ARG discussions.
+This is the second practical acquisition stage after [the 50-native-language CE ownership program](inside-ce-native-owner-hunt-2026-10-12.md) and [the offline SQLite/warcio indexer](forum-search-software-stack.md). It establishes whether known original **URLs** were captured in the 2016–2026 web archives before investing in WARC downloads and searches. The new [15-control dataset](../../data/reference/inside-ce-archive-positive-controls.tsv) includes five classes: known sticker serial discussions; first-person owners without sticker photos; preorder/non-owner negative controls; unverified original 2019 Twitch unboxing archive; and post-2019 marketplace/ARG discussions.
 
 ## Additional source-first findings
 
@@ -16,7 +16,9 @@ This is the second practical acquisition stage after [the 50-native-language CE 
 
 5. **Oct 11 2026 Brazilian-language search seed:** a [Portuguese CE owner solicitation](https://www.reddit.com/r/PlaydeadsInside/comments/1x3fe8h) asks whether anyone in Brazil owns the CE. This is a **community request**, not a recovered owner. It offers literal Portuguese phrasing for future regional forum work.
 
-These five additions are in the [17-row evidence/lead ledger](../../data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv). No new physically observed sticker, new validated residue or inferred production count was added.
+6. **Apr 6 2020 independent collector-site documentation:** [Cheap Ass Gamer collector edition compilation thread](https://www.cheapassgamer.com/threads/official-collectors-edition-compilation-xi-2020.371308/page-17) reproduces the iam8bit waiting-list follow-up, including an offer to discuss later payment. The posting participant explicitly **declined** to buy, so this is a source for product availability and a *negative owner control*, not a new CE holder. The linked unboxing video `Y7OqMKBbM2Y` is already cited in the canonical sticker document. Its repeated quotations in subsequent replies are not independent email confirmations.
+
+These new findings are in the [18-row evidence/lead ledger](../../data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv). No new physically observed sticker, new validated residue or inferred production count was added.
 
 ## Metadata tool
 
