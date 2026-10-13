@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "purpose": "Historical PUBLIC image-bearing and contrast pages for visual lead extraction. Discovery controls, not new physical observations.",
+  "sources": [
+    {
+      "id": "ce-visual-official-full-product",
+      "kind": "webpage",
+      "url": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "public": true,
+      "media": false,
+      "evidence_role": "marketing-negative-control",
+      "note": "First-party full collector product page: gallery references may reveal additional exact official photo URLs."
+    },
+    {
+      "id": "ce-visual-official-standalone-ps4",
+      "kind": "webpage",
+      "url": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "public": true,
+      "media": false,
+      "evidence_role": "wrong-product-negative-control",
+      "note": "Standalone PS4 edition gallery; never infer numbered full CE or sticker ownership."
+    },
+    {
+      "id": "ce-visual-2019-huddle-owner-display",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/PlaydeadsInside/comments/eers0x/",
+      "public": true,
+      "media": false,
+      "evidence_role": "known-owner-photo-positive-control",
+      "note": "2019 first-person collector display post, associated in public comments with existing canonical sticker 328. Check original shared image URL; don't count a new copy."
+    },
+    {
+      "id": "ce-visual-2019-shipping-thread",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/",
+      "public": true,
+      "media": false,
+      "evidence_role": "known-sticker-positive-control",
+      "note": "December 2019 firsthand 306, 171, 125 reports; comments include old photo/video references. HTML likely incomplete; context alone is not photo acquisition."
+    },
+    {
+      "id": "ce-visual-2026-sticker-psa",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/PlaydeadsInside/comments/1wruv2d/",
+      "public": true,
+      "media": false,
+      "evidence_role": "known-sticker-example-positive-control",
+      "note": "2026 public sticker PSA with example full-sticker photo links; refer to canonical ledger to avoid treating examples as new."
+    },
+    {
+      "id": "ce-visual-2019-polygon-reveal",
+      "kind": "webpage",
+      "url": "https://www.polygon.com/2019/12/12/21013222/inside-real-doll-iam8bit-limited-edition-contents/",
+      "public": true,
+      "media": false,
+      "evidence_role": "syndicated-marketing-negative-control",
+      "note": "Historical press article reusing first-party promotional images; independent website is not independent CE owner."
+    }
+  ]
+}
