@@ -48,6 +48,12 @@ The official [iam8bit full Collector's Edition listing](https://www.iam8bit.com/
 3. Compare independently confirmed product identifiers against official registries or first-party item records; note if CE and standalone case barcodes coincide. Check checksum and segment AI structure **before** testing any overlap with sticker numbers, the `534brn` URL's nine digits, ARG string snippets, or conditional model outputs. All such cross-puzzle matches are post-hoc until an original physical cue specifies an operation.
 4. Never claim that a randomly scanned Code 128 text is "cryptic" because its content looks odd; or that a legitimate retail UPC necessarily contains ARG information. Actual scanner output, physical provenance, and explanation of why that field might be used are the discriminators.
 
+## New public metadata lead: PS4 retail UPC, not a physical scan
+
+The [PriceCharting standard PS4 product record](https://www.pricecharting.com/game/playstation-4/inside) independently indexes UPC-A **`850971008532`**; an [eBay standalone PS4 seller's public listing](https://www.ebay.com/itm/226923122130) repeats the value. The standard UPC-A check digit is mathematically valid (**expected 2, observed 2**) under `scripts/inspect_arg_barcodes.py`. **Neither record proves the physical barcode was scanned here**. The separate [Collector's Edition PriceCharting record](https://www.pricecharting.com/game/playstation-4/inside-collector%27s-edition) has UPC *unrecorded*, which is **not evidence that CE packaging has no barcode**. Provenance, explicit non-confirmations, and exact URLs: [candidate metadata JSON](../../data/reference/inside-ce-barcode-product-candidates-2026-10-13.json).
+
+**Source-driven next comparison:** obtain an original legible back-cover photograph to confirm the standalone UPC, and an independently attributable CE box/wrapper photograph to decide whether there is a *second* GS1/UPC object. The Discord participant's actual barcode cannot yet be matched to either.
+
 ## Status / evidence needed for next step
 
 - **Completed:** no mapping of three marks to three distinct widths yields a physically compatible standard six-element sequence across all 108 positions; control distributions included. Reproducer and JSON artifact linked above, and deterministic unit tests under `tests/test_inspect_arg_barcodes.py`.
