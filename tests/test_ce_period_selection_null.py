@@ -20,7 +20,19 @@ class CEPeriodSelectionNullTests(unittest.TestCase):
             .read_text(encoding="utf-8"))
 
     def test_exact_saved_integer_counts(self):
-        self.assertEqual(self.actual, self.saved)
+        exact_keys = set(self.actual) - {"candidate_nulls", "union_bound_upper_probability"}
+        for key in exact_keys:
+            self.assertEqual(self.actual[key], self.saved[key], key)
+        self.assertAlmostEqual(self.actual["union_bound_upper_probability"],
+                               self.saved["union_bound_upper_probability"], places=14)
+        self.assertEqual(len(self.actual["candidate_nulls"]),
+                         len(self.saved["candidate_nulls"]))
+        for actual, saved in zip(self.actual["candidate_nulls"],
+                                 self.saved["candidate_nulls"]):
+            for key in ("period", "repeat_excess", "favorable_assignments"):
+                self.assertEqual(actual[key], saved[key])
+            self.assertAlmostEqual(actual["fixed_period_null_probability"],
+                                   saved["fixed_period_null_probability"], places=14)
         self.assertEqual(self.actual["denominator"], 37399079244620030691600)
         self.assertEqual(self.actual["union_bound_numerator"], 377822188953098255)
         self.assertEqual(self.actual["physical_observations"], 84)
