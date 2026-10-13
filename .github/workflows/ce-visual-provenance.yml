@@ -6,6 +6,7 @@ on:
       - "scripts/external_evidence/visual_index.py"
       - "scripts/external_evidence/discover_html_images.py"
       - "scripts/external_evidence/fetch_visual_references.py"
+      - "scripts/external_evidence/fetch_html_images.py"
       - "scripts/external_evidence/visual_semantic.py"
       - "tests/test_ce_visual_provenance.py"
       - "tests/test_ce_html_image_discovery.py"
@@ -29,6 +30,11 @@ on:
         required: true
         default: false
         type: boolean
+      download_page_images:
+        description: "Download at most 48 approved public HTML-discovered image URLs"
+        required: true
+        default: false
+        type: boolean
       max_images:
         description: "Maximum images to fingerprint; shard large batches"
         required: true
@@ -49,7 +55,7 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
       - run: python -m unittest discover -s tests -p 'test_ce_*py' -v
-      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py
+      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py
       - name: Index all canonical original sticker photographs and validate source SHA256
         run: |
           mkdir -p /tmp/ce-empty-candidate-set
@@ -96,6 +102,12 @@ jobs:
           mkdir -p evidence-work
           python scripts/external_evidence/discover_html_images.py \
             --acquired evidence-work --output visual-evidence-work/html-image-leads.json
+      - name: Optionally download bounded public image URLs from harvested pages
+        if: inputs.download_page_images
+        run: |
+          python scripts/external_evidence/fetch_html_images.py \
+            --leads visual-evidence-work/html-image-leads.json --out evidence-work \
+            --max-images 48 --max-per-page 8
       - name: Build provenance index and candidate triage
         env:
           MAX_IMAGES: ${{ inputs.max_images }}
