@@ -32,6 +32,8 @@ python scripts/verify_machine.py
 
 ## Research evidence map
 
+- [Worldwide gaming-forum discovery directory](docs/reference/global-gaming-forums.md): 472 multilingual forum/discussion leads, [machine-readable TSV](data/reference/global-gaming-forums.tsv), per-entry discovery-status caveats, and a source-first INSIDE archival search procedure.
+
 - [2026-10-09 Wow!-signal inscription audit](docs/conjecture-lab/2026-10-09-wow-signal-environmental-inscriptions.md): bounded first-person Big Ear encoding test of `A10N7`, `L08`, and `B02` against the 1977 positive control. Literal Big Ear encoding fails on written zeros and envelope shape. New byte-identical archives of the A10N7/L08 scene pair and B02 montage provide *low-resolution* visual evidence; the speculative 0/O + 1/I alternative has **no peak-shape discrimination** under its matched 26/26 alphabet control. Original full-resolution textures remain missing. Includes [deterministic replay](scripts/audit_wow_signal_inscriptions.py) and asset-source follow-ups.
 
 For a conceptual view of what has been tried and what would discriminate the rival decoders:
