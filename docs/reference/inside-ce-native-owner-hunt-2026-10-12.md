@@ -51,6 +51,10 @@ Crucially, **the query planning does not simply translate an English sentence**.
 
 This is a **starting lexicon, not a claim of native-speaker proofreading**. Informal spellings, spelling inflections, code-switching, common abbreviations and colloquial local product names should be expanded per-site after actual source examples. Search phrases can fail through strict quoted multi-term AND logic; run broad title/product-anchor and site-native iterations before treating them as exhausted.
 
+### Additional 2018 geographical lead: iam8bit UK link
+
+A contemporary [Cheap Ass Gamer 2018 collector-edition catalogue](https://www.cheapassgamer.com/threads/official-collectors-edition-compilation-ix-2018.366036/page-59) lists INSIDE Collector's Edition as linked to **both “iam8bit” and “iam8bit UK”**. The latter hyperlink redirects to an old `goo.gl/NHiBDv` short URL through a CAG exit gateway. This establishes *a publicly listed UK-related purchase link* in 2018, **not** an actual purchasable UK allocation, confirmed shipping eligibility, a successful order or an additional production batch. Contrast with the [September 2019 firsthand account of being refused UK shipping](https://www.reddit.com/r/PlaydeadsInside/comments/czc89n/anybody_managed_to_snag_themselves_one_of_those/). Those statements can coexist if the catalog link was speculative, changed, expired or otherwise inaccessible. Future historical URL work should resolve archived destinations of the UK shortened link and check 2018–2019 British collector-board discussion before concluding that all potential CE owners were originally in the United States.
+
 ## Search strata, scoring and false-positive defense
 
 Candidate query categories include original purchase, arrival, edition mention, owner posts without game title, sticker photo, explicit number, number without title, ARG/riddle discussion, offered for sale, unboxing, black wrapper, wrapper without title, broadly co-mentioned collector edition, unboxing without game title and sticker plus number. **Every site receives multiple independent formulations**, not a translated single English query.
