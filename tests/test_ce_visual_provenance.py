@@ -77,12 +77,16 @@ class VisualProvenanceTests(unittest.TestCase):
             "id": "owner-ce-2019", "extension": ".jpg",
             "origin": "historical-independent-collector",
             "role": "positive-control-public-owner-open-ce-no-visible-sticker",
+            "canonical_case": "L08",
             "url": "https://i.redd.it/example.jpg",
         }]}))
         (self.refs / "owner-ce-2019.jpg").write_bytes(self.original.read_bytes())
         refs, skipped = promotional_refs(self.root, self.refs, ref_manifest)
         self.assertFalse(skipped)
         self.assertEqual(refs[0]["role"], "historical-owner-photo-no-visible-sticker")
+        self.assertEqual(refs[0]["canonical_case"], "L08")
+        resolved = analyze(refs, [repost], 5)
+        self.assertEqual(resolved["matches"][0]["reference_canonical_case"], "L08")
 
     def test_metadata_provenance_and_corrupt_input(self):
         folder = self.inbox / "auction-example"
