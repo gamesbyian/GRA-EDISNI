@@ -127,7 +127,10 @@ def read_index_hits(paths: list[Path]) -> tuple[dict[str, dict], dict]:
                 task = result.get("task_id", "")
                 if not task:
                     raise ValueError(f"Missing search task ID at {path}:{ln}")
-                for hit in result.get("matches", []):
+                matches = result.get("matches", [])
+                if not isinstance(matches, list):
+                    raise ValueError(f"Malformed matches list at {path}:{ln}")
+                for hit in matches:
                     stats["raw_search_hits"] += 1
                     if not isinstance(hit, dict) or not hit.get("url"):
                         stats["malformed_hits"] += 1
@@ -211,6 +214,12 @@ def classify(found: dict[str, dict], ledger: list[dict]) -> list[dict]:
     return sorted(output, key=lambda x: (x["prior_ledger_relation"],
                                          x["canonical_url"]))
 
+def spreadsheet_safe(v: object) -> object:
+    """Prevent untrusted index snippets being interpreted as spreadsheet formulas."""
+    if isinstance(v, str) and v.lstrip().startswith(("=", "+", "-", "@")):
+        return "'" + v
+    return v
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--input", type=Path, nargs="+", required=True)
@@ -224,7 +233,8 @@ def main() -> None:
     with args.output.open("w", encoding="utf-8", newline="") as out:
         writer = csv.DictWriter(out, fieldnames=OUTPUT, delimiter="\t")
         writer.writeheader()
-        writer.writerows(candidates)
+        writer.writerows([{k: spreadsheet_safe(v) for k, v in row.items()}
+                          for row in candidates])
     stats.update({
         "candidate_urls": len(candidates),
         "ledger_exact_urls": sum(x["prior_ledger_relation"] == "exact_ledger_url"
