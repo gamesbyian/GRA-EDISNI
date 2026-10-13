@@ -86,7 +86,7 @@ def audit() -> dict:
     # sampling 2/6, exactly 3 of 15 masks have only one occupied group.
     tiny = occupancy_distribution(total_observed=2,classes=3,capacity=2)
     assert sum(tiny.values()) == comb(6,2)
-    assert sum(v for (a,b),v in tiny.items() if a+b <= 1) == 3
+    assert sum(v for (a,b),v in tiny.items() if a+b == 0) == 3
 
     return {
         "mode":"DEVELOP: exact combinatorial null, not source-authored CE coding",
