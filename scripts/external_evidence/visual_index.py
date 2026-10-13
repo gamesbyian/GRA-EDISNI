@@ -149,7 +149,8 @@ def provenance(path: Path, candidate_root: Path, acquisition: dict) -> tuple[str
         source_id = relative.parts[0]
         if source_id in acquisition:
             record = acquisition[source_id]
-            return record.get("url", ""), source_id, record.get("image_urls", {}).get(path.name, "")
+            page = record.get("source_pages", {}).get(path.name, record.get("url", ""))
+            return page, source_id, record.get("image_urls", {}).get(path.name, "")
     return "", "", ""
 
 
