@@ -1,0 +1,49 @@
+name: INSIDE CE image provenance and discovery benchmark
+
+on:
+  pull_request:
+    paths:
+      - "scripts/index_inside_ce_public_images.py"
+      - "scripts/benchmark_inside_ce_discovery.py"
+      - "tests/test_inside_ce_image_provenance.py"
+      - "tests/test_inside_ce_discovery_gold.py"
+      - "data/reference/inside-ce-discovery-gold-controls.tsv"
+      - "requirements-ce-media.txt"
+      - ".github/workflows/inside-ce-lead-intelligence.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/index_inside_ce_public_images.py"
+      - "scripts/benchmark_inside_ce_discovery.py"
+      - "data/reference/inside-ce-discovery-gold-controls.tsv"
+      - "requirements-ce-media.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-image-and-recall:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install offline Pillow image support
+        run: python -m pip install -r requirements-ce-media.txt
+      - name: Confirm image hashing and provenance gates
+        run: python -m unittest discover -s tests -p 'test_inside_ce_image_provenance.py' -v
+      - name: Confirm blind gold-control source recall
+        run: python -m unittest discover -s tests -p 'test_inside_ce_discovery_gold.py' -v
+      - name: Build URL-free historical source recall task plan
+        run: |
+          python scripts/benchmark_inside_ce_discovery.py plan \
+            --output search-output/inside-ce-12-source-gold-plan.jsonl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inside-ce-blind-discovery-fixture
+          path: search-output/
+          retention-days: 30
+          if-no-files-found: error
