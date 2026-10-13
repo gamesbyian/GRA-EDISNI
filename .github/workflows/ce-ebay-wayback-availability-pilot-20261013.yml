@@ -1,0 +1,53 @@
+name: CE seven eBay historical Wayback availability pilot
+
+# One-shot exact seven public listing URLs; never merge this bootstrap trigger.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-ebay-wayback-availability-pilot-20261013.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  snapshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Reconcile exact 14 source IDs against canonical physical-sticker ledger
+        run: python scripts/external_evidence/audit_historic_ebay_ce_sales.py
+      - name: Check Wayback availability for 7 historical source URLs only
+        run: python scripts/external_evidence/probe_ce_ebay_wayback.py
+      - name: Source-first summary; no snapshot images are fetched
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for name,key in [
+              ("visual-evidence-work/historical-ebay-sale-source-audit.json","unreconciled_source_urls"),
+              ("visual-evidence-work/historical-ebay-wayback-availability.json","sources")]:
+              p=Path(name)
+              if not p.is_file():
+                  print("MISSING",name)
+                  continue
+              data=json.loads(p.read_text())
+              print("HISTORIC_EBAY_REPORT",name,len(data[key]))
+              for item in data[key]:
+                  print("HISTORIC_EBAY_ENTRY",json.dumps({
+                      k:item.get(k) for k in
+                      ("item_id","original_listing_url","original_ebay_url","status",
+                       "snapshot_url","capture_timestamp","reason","response_sha256")
+                      if k in item},ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-ebay-wayback-availability-${{ github.run_id }}
+          path: visual-evidence-work/
+          retention-days: 30
+          if-no-files-found: warn
