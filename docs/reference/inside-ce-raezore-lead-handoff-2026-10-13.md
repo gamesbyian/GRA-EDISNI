@@ -1,0 +1,31 @@
+# CE owner research: short candidate handoff for Raezore
+
+**Compiled:** 2026-10-13. **Evidence baseline:** current [canonical stickers.md](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md) checked October 13 and [Raezore research-method report](https://github.com/twinysam/INSIDE-ARG/blob/master/raezores-research.md). **Structured handoff:** [six-row TSV](../../data/reference/inside-ce-raezore-handoff-candidates-2026-10-13.tsv).
+
+**Important:** These are *possibly unreconciled original public sources*, **not six confirmed new Collector's Editions or stickers**. A missing source URL from the canonical markdown does not prove that the account or the CE is unknown. Raezore's Discord and outreach records may already contain these people under other names. No one has been contacted by this project, and no physical sticker observation was added.
+
+## Highest-priority sources to compare with existing case histories
+
+**H01. June 17, 2026, r/VGMvinyl first-person account, [original thread](https://www.reddit.com/r/VGMvinyl/comments/1u85cm0/what_are_your_thoughts_on_iam8bit/).** In an iam8bit customer-experience discussion outside Playdead fan circles, a commenter says their spending on iam8bit between 2017 and 2020 included **the INSIDE Collector's Edition**. They complain about shipping and having to update a mailing address after a long preorder delay. This is unusually explicit purchase-history testimony, from someone not obviously searching for the sticker ARG. The exact thread ID is absent from the canonical sticker markdown examined. **Unknowns:** original commenter identity equivalence to any U/L/numbered owner, whether the CE was received and retained, sticker condition and number. *Best next step:* review the specific dated public comment and compare it to community case histories before any owner follow-up.
+
+**H02. July/August 2020 r/GameSale CE resale, [original July thread](https://www.reddit.com/r/GameSale/comments/i0vgml) and [August re-offer](https://www.reddit.com/r/GameSale/comments/i8i1d9).** Public seller offers a CE with figure/sculpture and sealed PS4 game for about $400. The two listings have the same seller and very similar descriptions, so they should count as **one offering**, not two independent copies. Neither exact thread ID was in the canonical sticker file when checked, but the seller or eventual object may have other history there. *Next step:* original public listing images and any archived media, with sale transfers/aliases deduplicated.
+
+**H03. March 6, 2018, Cheap Ass Gamer collector forum, [page 79](https://www.cheapassgamer.com/threads/indie-limited-obscure-physical-release-deals-and-discussion-thread.357745/page-79).** An enthusiast responded to the freshly announced $375 INSIDE CE with a first-person statement about placing an order. The forum account name was not found by literal search of the current canonical markdown. **Only a preorder-intention lead**, not actual delivery or sticker evidence. *Next step:* check whether that forum conversation has later public receipt/unboxing information, without attempting account-history deanonymization or assuming delivery.
+
+**H04. March 13, 2020, [iam8bit waiting-list thread](https://www.reddit.com/r/PlaydeadsInside/comments/fhvflq).** A participant reports finally buying the CE after discussion of how long invoices take. Another participant explicitly abandoned or cancelled their purchase interest. The *speaker who bought* is a plausible conditional ownership lead, but the two accounts must not be collapsed. *Next step:* compare the specific original public comment/handle to the canonical known, lost and unknown cases. This is not a new sticker or evidence of ongoing ownership.
+
+## Lower-priority original media and historic listing evidence
+
+**H05. December 14, 2019, [Twitch VOD archive link](https://www.twitch.tv/videos/521529035).** A shipping-thread CE recipient posted their live unboxing's archive URL under [the dated Reddit thread](https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/now_shipping_finally/). This video ID was absent from the current canonical sticker markdown. However, the VOD wasn't retrievable during the first investigation, and no sticker/frame was confirmed. One additional potential **archival media witness**, not a distinct collector by default.
+
+**H06. [PriceCharting's historical INSIDE CE sales index](https://www.pricecharting.com/game/playstation-4/inside-collector%27s-edition)** contains thirteen apparently relevant CE-labeled completed-sale entries from 2021–2026. [The saved raw index snapshot](../../data/reference/inside-ce-pricecharting-historic-sales-2026-10-13.tsv) records dates/title/price metadata. Some prices and listing titles suggest partial/misclassified items; identical $1600 listings may be one repeated sale. Original eBay photos/item IDs are **not yet validated**. It is a possible backdoor to archival seller photographs, not thirteen stickers.
+
+## Negative control worth mentioning
+
+During this pass, a first-person December 2019 [r/gamecollecting CE delivery and photo post](https://www.reddit.com/r/gamecollecting/comments/eaktdt/the_inside_collectors_edition_finally_came_in/) looked new by thread URL. But the original poster **Knuckles316 is already known as lost sticker L08** in the canonical file. The post may add historical photographic context but **must not be sent as a new owner**. This illustrates why cross-checking the public handle is essential even when the source thread URL is absent from the sticker list.
+
+## Recommended format for communicating with Raezore
+
+Share the four priority original links above with the phrasing **“possible existing-case reconciliation or new source trail, no new sticker number confirmed.”** Ask only whether they are already logged under an alias and whether the public photographs are already assessed; Raezore decides if any outreach is appropriate. Avoid forwarding private contact details, speculation about anyone's real name or any implication that these are six more physical copies.
+
+**Our progress metric should be newly reconciled original-source leads, original sticker photographs or previously unaccounted-for public serial statements, not 28,188 generated search tasks or a count of unverified sale listings.**
