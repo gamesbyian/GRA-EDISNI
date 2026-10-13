@@ -118,6 +118,15 @@ The pilot manually investigated dozens of targeted English and native-language c
 
 The [lead ledger](../../data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv) records source URLs, source-supported claim type, canonical relationship, follow-up research action and `new_confirmed_stickers=0`. It does not include speculative identifications of private people.
 
+## Cumulative authorized index campaigns
+
+**Fixed Oct 13, 2026:** Running the same opt-in web-index workflow repeatedly used to repeat the first 20 queries. The [bounded index executor](../../scripts/run_global_forum_index_search.py) now supports `--start-index`, records `next_index`, `total_planned_tasks`, `manifest_sha256`, and `last_successful_task_id`, and stops **at the failed query index** on HTTP rejection, rate limit or network error instead of silently skipping a source.
+
+From the [manual CE workflow](../../.github/workflows/inside-ce-native-search-campaign.yml), select `execute_index=yes` only when an approved `BRAVE_SEARCH_API_KEY` secret and search API budget are available. Select source scope and category/locale cohort, set `start_index=0` for the first batch, and inspect the uploaded `inside-ce-index-summary.json`. For the next batch, set `start_index` to the prior summary's **`next_index`** and paste its **`manifest_sha256`** into `manifest_sha256`. Both files are required to be from the *same frozen query manifest*; the script refuses a mismatched digest. Do **not** combine offsets between forums and secondary surfaces, or between different category/status filters.
+
+This is **safe manual continuation**, not an autonomous or indefinitely retained cumulative service. GitHub Actions artifacts expire, so copy small rights-cleared result/evidence metadata into a durable project ledger before artifact expiry. A successful index lookup proves nothing about search completeness, and only actually retrieved original posts/photographs should influence sticker observations.
+
+
 ## Priority next actions
 
 1. **Preserve dated original positive controls** for the shipped 2019 serials and exact 2020 buyer/owner claims. Compare them to the canonical ledger automatically; source-lineage duplicates must be demoted.

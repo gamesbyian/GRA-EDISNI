@@ -133,6 +133,13 @@ The planner joins the [archive fallback matrix](../../data/reference/global-gami
 
 Later native workers can consume the same task JSONL and supply approved adapters. Execute in groups by **host** rather than one parallel GHA worker per task, to keep limits and prevent hammering the same domain. An eventual matrix with **8–32 host-shards per run**, per-host token buckets, persisted cursor/checkpoint, bounded retries/backoff, API-credential gating and per-host circuit breakers is preferable to 491 simultaneous workers. GitHub Actions has a documented **256 matrix-job limit**; a domain-sharded strategy avoids exceeding it. Check actual workflow concurrency and cost before enabling high-volume retrieval. The current implementation deliberately does not imply native workers exist.
 
+### Cumulative web-index batches and immutable query manifests
+
+A paid index run is now resumable: `run_global_forum_index_search.py --tasks ... --start-index 20 --expect-manifest-sha256 <digest> --max-queries 20`. The first run starts at index zero; subsequent runs must supply the **digest from the previous summary** so an edited site inventory, native language lexicon, or category filter cannot silently redirect previous offsets onto different queries. The result JSONL records stable `task_id` and `task_index`; the summary records `next_index`, provider failures, and the digest. On the first failed request the cursor stays on that task. Never turn a stopped/throttled batch into apparent exhaustive coverage.
+
+Both the [general search workflow](../../.github/workflows/forum-search-plan.yml) and the [CE native-language workflow](../../.github/workflows/inside-ce-native-search-campaign.yml) now expose these options. No recurring API execution occurs by default, and no vendor billing is triggered unless explicitly enabled with a secret. **This does not itself persist incremental source text**; preserve result artifacts and import rights-cleared retrieved post content into the offline corpus only after source-level verification.
+
+
 ## Platform mechanisms and technical references
 
 - Discourse `GET /search.json?q=...`: https://docs.discourse.org/ (public status and actual host must still be tested).
