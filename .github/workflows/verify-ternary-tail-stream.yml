@@ -1,0 +1,28 @@
+name: Verify ternary-tail stream conjecture
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/conjecture_lab_ternary_tail_stream.py'
+      - 'data/observations.csv'
+      - '.github/workflows/verify-ternary-tail-stream.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/conjecture_lab_ternary_tail_stream.py'
+      - 'data/observations.csv'
+      - '.github/workflows/verify-ternary-tail-stream.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact-sticker-stream:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reproduce exact 18 tail completions and 500 matched control shuffles
+        run: python3 scripts/conjecture_lab_ternary_tail_stream.py --json > "$RUNNER_TEMP/ternary-tail-stream.json"
+      - name: Show deterministic summary
+        run: python3 scripts/conjecture_lab_ternary_tail_stream.py --null-replicates 0
