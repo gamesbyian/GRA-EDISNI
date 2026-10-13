@@ -26,7 +26,7 @@ def load_rows(path: Path, inventory: str) -> list[dict]:
         rows = list(csv.DictReader(fh, delimiter="\t"))
     if inventory == "controls":
         return [
-            {"label": r["label"], "url": r["original_url"],
+            {"label": r["id"], "url": r["original_url"],
              "evidence": r["evidence_type"], "window": r["post_period"]}
             for r in rows
         ]
