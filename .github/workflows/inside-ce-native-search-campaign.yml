@@ -111,6 +111,11 @@ jobs:
           if scope == "owners_and_numbers":
               for category in ("product_anchor_iam8bit", "product_anchor_realdoll",
                                "native_sticker_broad", "native_arrival_broad",
+                               "huddle_with_inside", "huddle_with_iam8bit",
+                               "statue_with_playdead", "figure_with_playdead",
+                               "collecters_typo", "collectors_no_apostrophe",
+                               "special_edition_iam8bit", "limited_edition_playdead",
+                               "deluxe_edition_playdead",
                                "owner_bought", "owner_received",
                                "owner_without_game_name", "edition_number",
                                "serial_without_title", "for_sale",
@@ -120,7 +125,9 @@ jobs:
                   cmd.extend(("--category", category))
           if scope == "arg_and_unboxing":
               for category in ("product_anchor_iam8bit", "product_anchor_realdoll",
-                               "native_sticker_broad", "arg_discussion", "unboxing",
+                               "native_sticker_broad", "huddle_with_inside",
+                               "huddle_with_iam8bit", "statue_with_playdead",
+                               "figure_with_playdead", "arg_discussion", "unboxing",
                                "sticker_photograph", "edition_discussion",
                                "unboxing_without_game_name", "outer_wrapper"):
                   cmd.extend(("--category", category))
