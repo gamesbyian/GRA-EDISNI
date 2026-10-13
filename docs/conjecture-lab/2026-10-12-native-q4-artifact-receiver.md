@@ -72,11 +72,33 @@ Interpret `O` as a literal 3×9 raster, and ask whether it can be a contiguous e
 
 Tested `6 glyph bijections × 8 orientations × 720 placements × 18 selectors = 622,080` registered candidate windows.
 
-**Result: zero exact compatible windows.** The best retrospective window, after selecting all parameters, still needs **one disagreement** in the 27-symbol selected output. One disagreement is emphatically **not a near-solution**, because this is an aggressively multiple-tested minimum. The robust result is only the absence of an exact match in this generously parameterized, literal-window family.
+**Result: zero exact compatible windows.** Of the **34,560** possible printer windows after orientation and global sign relabelling, only **four** even match the twelve compulsory symbols from classes B/E/F/H. Those four each still require **3, 4, 4, or 5** disagreements after exact testing of the remaining primary constraints and all legal selectors. Among *all* 622,080 configurations, the best retrospective window still needs **one disagreement** in the 27-symbol selected output. One disagreement is emphatically **not a near-solution**, because this is an aggressively multiple-tested minimum. The robust result is only the absence of an exact match in this generously parameterized, literal-window family.
 
 The script computes exact minimum disagreements for each case using independent triplet constraint minimization; it does **not** greedily impute unknown stickers or assume that 27 output marks are independent.
 
 Controls: A synthetic 3×9 raster constructed from an actual compatible primary completion and one legal Q4 selector must cost zero. Altering the forced E-quarter-0 slash to a dot must incur at least one necessary disagreement. The original acorn input is sourced from the contemporaneous 2018 community archive; the unsolved Xbox printer's publication row order is **not** silently promoted to a true solved 2D image.
+
+## Nine-class output as a deliberately assumed nine-character base-27 code
+
+This is a new output hypothesis, not an identification of a Steam-specific password syntax. Concatenate the three symbols from each background class into a ternary 3-digit number `0..26`, and tentatively read A–I class order as nine characters. With one fixed global bijection between the three physical glyphs and ternary digits:
+
+- The simple Cartesian product of individually allowed class words contains **6,480** nine-class outputs.
+- Enforcing *all shared primary-triplet constraints* leaves exactly **5,808** globally realizable nine-class outputs, eliminating **672** impossible combinations. This exact count is enumerated by [`conjecture_lab_native_q4_base27.py`](../../scripts/conjecture_lab_native_q4_base27.py).
+- The E and F class words are both compulsory `///`. Therefore **characters five and six must be identical** in the natural serial A–I reading under any fixed 3-trit-to-character code.
+- Under the base-27 integer encoding, the two `///` characters must each represent **0, 13 or 26**, depending on which digit the slash denotes. With A=0, these correspond to A, N, or a 27th nonletter symbol; with A=1, they correspond to a 27th nonletter symbol, M or Z. This restriction is *conditional on alphabetical interpretation*, not a plaintext discovery.
+
+Exact nine-letter candidate counts after rejecting any out-of-alphabet value, across the 5,808 compatible raw outputs:
+
+| Ternary digit 0/1/2 mapped to | A=0 | A=1 |
+|---|---:|---:|
+| `./-` | 5,464 | 5,808 |
+| `.-/` | 0 | 5,808 |
+| `/.-` | 5,464 | 0 |
+| `/-.` | 5,808 | 0 |
+| `-./` | 0 | 5,464 |
+| `-/.` | 5,808 | 5,464 |
+
+These are **not six independent password predictions**. They are global relabellings of the *same conditional carrier*, and candidate counts do not confer evidential plausibility. A nine-character text that fails this reading says nothing about Q4-as-control in another reading, geometric ordering, a two-stage operator or a different receiving artifact.
 
 ## Significance for the receiving-artifact program
 
