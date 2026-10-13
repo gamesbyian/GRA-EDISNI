@@ -32,6 +32,10 @@ python scripts/verify_machine.py
 
 ## Research evidence map
 
+- [CL-VLEN-03 streaming run-length instruction campaign](docs/conjecture-lab/2026-10-12-streaming-rle-instructions.md): a **real executable program**, with alternating unary opcode/operand runs and `EMIT`, `REPEAT`, `REVERSE`, optional `STOP`; exact finite-state accounting of 108 grammars across primary 81, tail 27 and collapsed full 108 symbols. None shows exceptional grammar-specific compatibility after 120 matched frame shuffles per region; a 14-number lever-shaped output does not distinguish the data. [Executable parser with exhaustive tiny-string oracle](scripts/conjecture_lab_streaming_rle.py), [compact summary](data/conjecture-lab-streaming-rle-summary-2026-10-12.json) and [full results/witnesses](data/conjecture-lab-streaming-rle-2026-10-12.json). No Playdead opcode table claimed.
+
+
+
 - [CL-VLEN-02 class-run and reference instruction campaign](docs/conjecture-lab/2026-10-12-class-run-command-campaign.md): **462 exact three-opcode grammars** on the raw 84-record/66-residue corpus; 126 exact local run-statistic decoders fail, 23 of 336 reference interpreters remain compatible, and the best retrospective program loses against 119/120 and 118/120 matched shuffled controls. Physically held-out marker and class-group controls perform worse than one-hot-only baseline. [Executable analysis](scripts/conjecture_lab_class_run_programs.py), [summary](data/conjecture-lab-class-run-summary-2026-10-12.json) and [full archive](data/conjecture-lab-class-run-programs-2026-10-12.json). No decoded instruction claim.
 
 
