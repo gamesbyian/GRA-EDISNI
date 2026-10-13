@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "purpose": "Single December 2019 first-person INSIDE CE recipient photograph and comments outside the original Playdead subreddit. No contact or new sticker assertion.",
+  "sources": [
+    {
+      "id": "ce-gamecollecting-dec2019-eaktdt",
+      "url": "https://www.reddit.com/r/gamecollecting/comments/eaktdt/",
+      "kind": "reddit",
+      "subject": "The INSIDE collector's edition finally came in!",
+      "original_posted_date": "2019-12-14",
+      "evidence_role": "first-person-public-collector-owner-photo-unreviewed"
+    }
+  ]
+}
