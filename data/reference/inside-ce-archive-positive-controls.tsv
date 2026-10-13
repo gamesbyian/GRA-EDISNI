@@ -1,0 +1,15 @@
+id	original_url	post_period	evidence_type	known_limitation
+C01	https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/now_shipping_finally/	2019-12	firsthand_sticker_171_306_125	native_live_positive_control_with_reddit_research_gate
+C02	https://www.reddit.com/r/PlaydeadsInside/comments/eers0x	2019-12	known_328_and_standard_version_distinction	native_live_positive_control_with_reddit_research_gate
+C03	https://www.reddit.com/r/PlaydeadsInside/comments/fhvflq	2020-03	purchase_waitlist_success_and_cancelled_order	firsthand_claim_negative_control_pair
+C04	https://gamefaqs.gamespot.com/boards/194097-inside/76386967	2018-03	preorder_speculation_not_receipt	product_only_negative_control
+C05	https://www.reddit.com/r/GameSale/comments/i0vgml	2020-07	unreconciled_ce_listing_no_sticker	potential_firsthand_unresolved
+C06	https://www.twitch.tv/videos/521529035	2019-12	2019_ce_unboxing_vod_link	archive_availability_unverified
+C07	https://www.reddit.com/r/PlaydeadsInside/comments/e1mdlm	2019-11	buyer_claim_and_known_lost_sticker	canonical_reconciliation_control
+C08	https://www.reddit.com/r/PlaydeadsInside/comments/lfcms4	2021-02	restock_claim	inventory_context_not_new_print
+C09	https://www.reddit.com/r/PlaydeadsInside/comments/czc89n	2019-09	nonowner_uk_shipping_vs_purchase	positive_negative_owner_control
+C10	https://www.reddit.com/r/PlaydeadsInside/comments/ekmn1x	2020-01	some_owners_and_waiting_for_delivery	temporal_mixed_claim_control
+C11	https://www.reddit.com/r/PlaydeadsInside/comments/i8tt42	2020-08	portuguese_speaker_arg_comment	bilingual_interest_not_ce_ownership
+C12	https://www.reddit.com/r/PlaydeadsInside/comments/1x3fe8h	2026-10	brazilian_owner_solicitation	no_direct_owner_confirmed
+C13	https://www.reddit.com/r/PlaydeadsInside/comments/1ljwrra	2025-06	sealed_ce_secondhand_buyer_claim	possible_canonical_duplicate
+C14	https://www.resetera.com/threads/game-soundtracks-on-vinyl-45rpm-all-new-cartridge.446/page-16	2018-03	early_realdoll_ce_marketing_discussion	intent_not_receipt
