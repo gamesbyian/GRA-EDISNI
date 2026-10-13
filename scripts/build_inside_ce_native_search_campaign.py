@@ -77,7 +77,9 @@ def build(directory, routes, archives, lexicon, *, allowed_statuses, max_tasks,
                 key = (site["community"], site["url"], locale, category, expr)
                 task_id = hashlib.sha256("\0".join(key).encode("utf-8")).hexdigest()[:20]
                 record = {
-                    "task_id": task_id, "site": site["community"], "url": site["url"],
+                    "task_id": task_id, "site": site["community"],
+                    "community": site["community"], "url": site["url"],
+                    "term": expr, "language": locale,
                     "locale": locale, "site_language_label": site["language"],
                     "category": category, "expression": expr,
                     "index_query": index_query,
