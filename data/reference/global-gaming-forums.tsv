@@ -22,7 +22,6 @@ Global	en	Reddit r/Steam	https://www.reddit.com/r/Steam/	subreddit	C
 Global	en	Reddit r/playstation	https://www.reddit.com/r/playstation/	subreddit	C
 Global	en	Reddit r/xbox	https://www.reddit.com/r/xbox/	subreddit	C
 Global	en	Reddit r/NintendoSwitch	https://www.reddit.com/r/NintendoSwitch/	subreddit	C
-Global	en	Reddit r/Inside	https://www.reddit.com/r/Inside/	subreddit	C
 Global	en	ResetEra Gaming Hangouts	https://www.resetera.com/forums/gaming-hangouts.8/	general	V
 Global	en	NeoGAF Communities	https://www.neogaf.com/forums/communities.49/	general	V
 US-Canada	en	IGN Boards	https://www.ignboards.com/	general	C
@@ -33,8 +32,8 @@ US-Canada	en	Penny Arcade Forums	https://forums.penny-arcade.com/	general	C
 US-Canada	en	PC Gamer Forums	https://forums.pcgamer.com/	general	C
 US-Canada	en	RPG Codex	https://rpgcodex.net/forums/	genre	C
 US-Canada	en	RPGWatch Forums	https://www.rpgwatch.com/forums/	genre	C
-US-Canada	en	RPG Site Forums	https://www.rpgsite.net/	comments	C
-US-Canada	en	RPGFan Forums	https://www.rpgfan.com/	comments	C
+US-Canada	en	RPG Site Article Comments	https://www.rpgsite.net/	comments	C
+US-Canada	en	RPGFan Community	https://www.rpgfan.com/	comments	C
 US-Canada	en	The Escapist Forums	https://forums.escapistmagazine.com/	general	C
 US-Canada	en	The Quarter to Three Forums	https://forum.quartertothree.com/	general	C
 US-Canada	en	Shacknews Chatty	https://www.shacknews.com/chatty	general	C
@@ -44,7 +43,6 @@ US-Canada	en	Rock Paper Shotgun Comments	https://www.rockpapershotgun.com/	comme
 US-Canada	en	Eurogamer Comments	https://www.eurogamer.net/	comments	C
 US-Canada	en	Video Game Sage	https://www.videogamesage.com/forums/	retro	C
 US-Canada	en	AtariAge Forums	https://forums.atariage.com/	retro	C
-US-Canada	en	NintendoAge archive or successor	https://www.videogamesage.com/	retro	C
 US-Canada	en	Digital Press Forums	https://forum.digitpress.com/	retro	C
 US-Canada	en	Sega-16 Forums	https://www.sega-16.com/forum/	retro	C
 US-Canada	en	SegaXtreme	https://segaxtreme.net/	retro	C
@@ -59,7 +57,6 @@ US-Canada	en	GamesRadar+ Community	https://www.gamesradar.com/	comments	C
 US-Canada	en	Game Revolution Community	https://www.gamerevolution.com/	comments	C
 US-Canada	en	Gaming Latest	https://gaminglatest.com/	general	C
 US-Canada	en	JoyFreak	https://www.joyfreak.com/	general	C
-US-Canada	en	D-Pad Life	https://d-pad.life/	general	C
 US-Canada	en	GamingOnLinux Forum	https://www.gamingonlinux.com/forum/	platform	C
 US-Canada	en	LinuxQuestions Gaming	https://www.linuxquestions.org/questions/linux-games-33/	platform	C
 US-Canada	en	TechPowerUp Gaming	https://www.techpowerup.com/forums/	hardware	C
@@ -145,7 +142,6 @@ Italy	it	Nintendo Player	https://www.nplayer.it/	comments	C
 Portugal	pt	Zwame Jogos Forum	https://forum.zwame.pt/	hardware	C
 Portugal	pt	Forum Motorgames	https://www.motorgames.pt/	general	C
 Portugal	pt	Eurogamer Portugal Comments	https://www.eurogamer.pt/	comments	C
-Portugal	pt	MaisFutebol Gaming Forum	https://www.forumscp.com/	general	C
 Netherlands	nl	Tweakers Gaming Forum	https://tweakers.net/gaming/forum/	general	V
 Netherlands	nl	Tweakers Games Forum	https://tweakers.net/games/forum/	general	V
 Netherlands	nl	Gamer.nl Community	https://gamer.nl/	comments	C
@@ -160,7 +156,6 @@ Poland	pl	CD-Action Forum	https://forum.cdaction.pl/	general	C
 Poland	pl	Polygamia Community	https://polygamia.pl/	comments	C
 Poland	pl	PurePC Forum	https://forum.purepc.pl/	hardware	C
 Poland	pl	Benchmark.pl Forum	https://forum.benchmark.pl/	hardware	C
-Poland	pl	GOL General Talk	https://www.gry-online.pl/forum/	general	V
 Poland	pl	GryPlanszowe.net Forum	https://www.gry-planszowe.pl/	tabletop-adjacent	C
 Czechia	cs	Zing.cz Discussion	https://www.zing.cz/	comments	C
 Czechia	cs	Hrej.cz Discussion	https://hrej.cz/	comments	C
@@ -222,7 +217,6 @@ Japan	ja	GameWith Boards	https://gamewith.jp/	game-index	C
 Japan	ja	Game8 Boards	https://game8.jp/	game-index	C
 Japan	ja	Altema Boards	https://altema.jp/	game-index	C
 Japan	ja	Gamerch Boards	https://gamerch.com/	game-index	C
-Japan	ja	GameFAQs Japan Game Threads	https://gamefaqs.gamespot.com/boards	game-index	C
 Japan	ja	Yahoo Chiebukuro Games	https://chiebukuro.yahoo.co.jp/	qa	C
 Japan	ja	Niconico News Game Comments	https://news.nicovideo.jp/	comments	C
 Japan	ja	4Gamer.net Comments	https://www.4gamer.net/	comments	C
@@ -277,7 +271,6 @@ India	en	IndianVideoGamer Forums	https://www.indianvideogamer.com/forums/	genera
 India	en	TechEnclave Gaming	https://techenclave.com/	hardware	C
 India	en	Reddit r/IndianGaming	https://www.reddit.com/r/IndianGaming/	subreddit	C
 India	en	Digit Forum Gaming	https://geek.digit.in/community/	hardware	C
-India	en	Techenclave Game Deals	https://techenclave.com/	deals	C
 India	en	Gaming Central India	https://gamingcentral.in/	comments	C
 Pakistan	en-ur	Pakistan Gaming Forums	https://www.pakgamers.com/index.php	general	C
 Pakistan	en-ur	Reddit r/PakGamers	https://www.reddit.com/r/PakGamers/	subreddit	C
@@ -292,7 +285,6 @@ Vietnam	vi	Tinhte Gaming Forum	https://tinhte.vn/	hardware	C
 Vietnam	vi	GameK Discussion	https://gamek.vn/	comments	C
 Vietnam	vi	GameHub Vietnam	https://gamehub.vn/	comments	C
 Vietnam	vi	Game4V Discussion	https://game4v.com/	comments	C
-Vietnam	vi	Voz Forum Games	https://voz.vn/	general	C
 Thailand	th	Pantip Online Games	https://pantip.com/tag/%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C	general	V
 Thailand	th	Pantip Computer Games	https://pantip.com/	general	V
 Thailand	th	Online Station Discussions	https://www.online-station.net/	comments	C
@@ -302,7 +294,6 @@ Indonesia	id	JagatPlay Comments	https://jagatplay.com/	comments	C
 Indonesia	id	Dunia Games Community	https://duniagames.co.id/	comments	C
 Indonesia	id	Gamebrott Comments	https://gamebrott.com/	comments	C
 Indonesia	id	KotakGame Community	https://www.kotakgame.com/	comments	C
-Indonesia	id	Kaskus Game Discussions	https://www.kaskus.co.id/	game-index	C
 Malaysia	en-ms	Lowyat Gamers Hideout	https://forum.lowyat.net/GamersHideout	general	V
 Malaysia	en-ms	Lowyat Console Couch	https://forum.lowyat.net/	platform	C
 Malaysia	ms	Amanz Gaming Comments	https://amanz.my/	comments	C
@@ -322,7 +313,6 @@ Brazil	pt-BR	Players Forums historical	https://gamernation.org/t/lista-de-foruns
 Brazil	pt-BR	Jogo Justo Community	https://jogojusto.com.br/	comments	C
 Brazil	pt-BR	Nintendo Blast Forum	https://www.nintendoblast.com.br/	comments	C
 Brazil	pt-BR	PSX Brasil Community	https://psxbrasil.com.br/	comments	C
-Brazil	pt-BR	GameVicio historical discussion	https://www.gamevicio.com/	historic	H
 Brazil	pt-BR	Reddit r/jogatina	https://www.reddit.com/r/jogatina/	subreddit	C
 Brazil	pt-BR	Reddit r/gamesEcultura	https://www.reddit.com/r/gamesEcultura/	subreddit	C
 Brazil	pt-BR	Reddit r/brasilgames	https://www.reddit.com/r/brasilgames/	subreddit	C
@@ -333,7 +323,6 @@ Argentina	es-AR	Reddit r/ArgenGaming	https://www.reddit.com/r/ArgenGaming/	subre
 Mexico	es-MX	LevelUp Community	https://www.levelup.com/	comments	C
 Mexico	es-MX	Atomix Gaming Comments	https://atomix.vg/	comments	C
 Mexico	es-MX	Reddit r/VideojuegosMX	https://www.reddit.com/r/VideojuegosMX/	subreddit	C
-Mexico	es-MX	Reddit r/Videojuegos	https://www.reddit.com/r/Videojuegos/	subreddit	C
 Chile	es-CL	Tarreo Community	https://www.tarreo.com/	comments	C
 Chile	es-CL	CHW Comunidad	https://www.chw.net/	hardware	C
 Chile	es-CL	Capa9 Foro	https://www.capa9.net/	hardware	C
@@ -342,7 +331,6 @@ Colombia	es-CO	Reddit r/ColombiaGaming	https://www.reddit.com/r/ColombiaGaming/	
 Peru	es-PE	Bloodzone Forums	https://www.bloodzone.net/forums/	general	C
 Peru	es-PE	Peru Hardware Forum	https://www.peruhardware.net/	hardware	C
 Peru	es-PE	Reddit r/PeruGaming	https://www.reddit.com/r/PeruGaming/	subreddit	C
-Central-America	es	Reddit r/Videojuegos	https://www.reddit.com/r/Videojuegos/	subreddit	C
 Latin-America	es	Nintendo Latino Community	https://www.nintenderos.com/	comments	C
 Latin-America	es	Reddit r/LatinoGamers	https://www.reddit.com/r/LatinoGamers/	subreddit	C
 South-Africa	en	MyBroadband Gaming Forum	https://mybroadband.co.za/forum/forums/gaming.86/	general	V
@@ -361,23 +349,22 @@ Middle-East	ar	Reddit r/saudi_gamers	https://www.reddit.com/r/saudi_gamers/	subr
 Middle-East	ar	Reddit r/ArabGaming	https://www.reddit.com/r/ArabGaming/	subreddit	C
 Middle-East	ar	Reddit r/egyptgaming	https://www.reddit.com/r/egyptgaming/	subreddit	C
 Middle-East	fa	Persian Game Forum	https://forum.bazicenter.com/	general	C
-Middle-East	fa	BaziCenter	https://www.bazicenter.com/	general	C
 Middle-East	fa	P30World Games	https://forum.p30world.com/	hardware	C
 Middle-East	fa	Gamefa Persian Community	https://gamefa.com/	comments	C
 Middle-East	he	FXP Games Forum	https://www.fxp.co.il/	general	C
 Middle-East	he	Vgames Forums historical	https://www.vgames.co.il/	historic	C
 Middle-East	he	Gamer Israel Community	https://www.gamer.co.il/	comments	C
 Middle-East	he	Reddit r/IsraelGaming	https://www.reddit.com/r/IsraelGaming/	subreddit	C
-Caucasus	ru	StopGame.ru Forum	https://stopgame.ru/	comments	C
-Caucasus	ru	PlayGround.ru Forums	https://forums.playground.ru/	general	C
-Caucasus	ru	DTF Games	https://dtf.ru/games	discussion	V
-Caucasus	ru	iXBT Games Forum	https://forum.ixbt.com/	general	C
-Caucasus	ru	4PDA Games Forum	https://4pda.to/forum/	mobile	C
-Caucasus	ru	Kanobu Gaming Comments	https://kanobu.ru/	comments	C
-Caucasus	ru	GameGuru Community	https://gameguru.ru/	comments	C
-Caucasus	ru	Gamer.ru	https://gamer.ru/	discussion	C
-Caucasus	ru	AG.ru Discussion	https://ag.ru/	comments	C
-Caucasus	ru	Steam RU Discussion Forums	https://steamcommunity.com/discussions/forum/26/	platform	C
+Russian-language	ru	StopGame.ru Forum	https://stopgame.ru/	comments	C
+Russian-language	ru	PlayGround.ru Forums	https://forums.playground.ru/	general	C
+Russian-language	ru	DTF Games	https://dtf.ru/games	discussion	V
+Russian-language	ru	iXBT Games Forum	https://forum.ixbt.com/	general	C
+Russian-language	ru	4PDA Games Forum	https://4pda.to/forum/	mobile	C
+Russian-language	ru	Kanobu Gaming Comments	https://kanobu.ru/	comments	C
+Russian-language	ru	GameGuru Community	https://gameguru.ru/	comments	C
+Russian-language	ru	Gamer.ru	https://gamer.ru/	discussion	C
+Russian-language	ru	AG.ru Discussion	https://ag.ru/	comments	C
+Russian-language	ru	Steam RU Discussion Forums	https://steamcommunity.com/discussions/forum/26/	platform	C
 Ukraine	uk-ru	PlayUA Community	https://playua.net/	comments	C
 Ukraine	uk	GameDev DOU Game Discussions	https://gamedev.dou.ua/forums/	gamedev	C
 Ukraine	uk	ITC.ua Games Comments	https://itc.ua/	comments	C
@@ -386,10 +373,7 @@ Russia	ru	2ch Gaming Board	https://2ch.hk/vg/	anonymous-board	C
 Russia	ru	Pikabu Games	https://pikabu.ru/	discussion	C
 Russia	ru	VK Gaming Communities	https://vk.com/games	discussion	C
 Russia	ru	Reddit r/russian_gaming	https://www.reddit.com/r/russian_gaming/	subreddit	C
-Platforms	multi	Steam Discussions by Game	https://steamcommunity.com/app/	game-index	C
-Platforms	en	Microsoft Xbox Community	https://answers.microsoft.com/en-us/xbox/forum	official	C
-Platforms	en	PlayStation Support Community	https://www.playstation.com/en-us/support/	support	C
-Platforms	en	Nintendo Support Community	https://en-americas-support.nintendo.com/	support	C
+Platforms	en	Microsoft Xbox Answers	https://answers.microsoft.com/en-us/xbox/forum	official	C
 Platforms	en	Epic Games Community	https://forums.unrealengine.com/	official	V
 Platforms	en	GOG Community Forums	https://www.gog.com/forum	official	C
 Platforms	en	itch.io Community	https://itch.io/community	indie	C
@@ -407,8 +391,6 @@ Platforms	en	CD Projekt RED Forums	https://forums.cdprojektred.com/	official	C
 Platforms	en	Obsidian Forums	https://forums.obsidian.net/	official	C
 Platforms	en	inXile Forums	https://forums.inxile-entertainment.com/	official	C
 Platforms	en	Sega Forums	https://forums.sega.com/	official	C
-Platforms	en	Warner Bros Games Support	https://wbgamessupport.wbgames.com/	support	C
-Platforms	en	Discord Forum Channels	https://discord.com/	closed-index	C
 Platforms	en	Minecraft Forum	https://www.minecraftforum.net/forums	game	C
 Platforms	en	Minecraft Official Feedback	https://feedback.minecraft.net/	official	C
 Platforms	en	Planet Minecraft Forums	https://www.planetminecraft.com/forums/	game	C
@@ -423,7 +405,7 @@ Platforms	en	Overwatch Forums	https://us.forums.blizzard.com/en/overwatch/	game	
 Platforms	en	Final Fantasy XIV Lodestone Forums	https://forum.square-enix.com/ffxiv/	game	C
 Platforms	en	Elder Scrolls Online Forums	https://forums.elderscrollsonline.com/	game	C
 Platforms	en	Guild Wars 2 Forums	https://en-forum.guildwars2.com/	game	C
-Platforms	en	RuneScape Forums historic	https://secure.runescape.com/m=forum/forums	historic	C
+Platforms	en	RuneScape Forums historic	https://secure.runescape.com/m=forum/forums	historic	H
 Platforms	en	EVE Online Forums	https://forums.eveonline.com/	game	C
 Platforms	en	Warframe Forums	https://forums.warframe.com/	game	C
 Platforms	en	Path of Exile Forums	https://www.pathofexile.com/forum	game	C
@@ -433,7 +415,6 @@ Platforms	en	Fortnite Reddit	https://www.reddit.com/r/FortNiteBR/	subreddit	C
 Platforms	en	Destiny 2 Bungie Forums	https://www.bungie.net/en/Forums/	game	C
 Platforms	en	GTA Forums	https://gtaforums.com/	game	C
 Platforms	en	GTA Base Community	https://www.gtabase.com/	comments	C
-Platforms	en	Red Dead Redemption GTA Forums	https://gtaforums.com/	game	C
 Platforms	en	No Man's Sky Reddit	https://www.reddit.com/r/NoMansSkyTheGame/	subreddit	C
 Platforms	en	Terraria Community Forums	https://forums.terraria.org/	game	C
 Platforms	en	Stardew Valley Forums	https://forums.stardewvalley.net/	game	C
@@ -470,13 +451,13 @@ Indie-Gamedev	en	Love2D Forums	https://love2d.org/forums/	gamedev	C
 Indie-Gamedev	en	GB Studio Community	https://www.gbstudio.dev/	gamedev	C
 Indie-Gamedev	en	Scratch Discussion Forums	https://scratch.mit.edu/discuss/	gamedev	C
 Indie-Gamedev	en	Newgrounds Games Community	https://www.newgrounds.com/bbs/forum/5	indie	C
-Indie-Gamedev	en	Kongregate Forums	https://www.kongregate.com/forums	historic	C
+Indie-Gamedev	en	Kongregate Forums	https://www.kongregate.com/forums	historic	H
 Indie-Gamedev	en	ModdingWay Forums	https://www.moddingway.com/	modding	C
 Indie-Gamedev	en	OpenGameArt Forums	https://opengameart.org/forum	gamedev	C
-Indie-Gamedev	en	GameDetectives Forums / Wiki	https://wiki.gamedetectives.net/	ARG-index	C
-Indie-Gamedev	en	Unfiction Forums historical archive	https://www.unfiction.com/	historic	C
 Indie-Gamedev	en	ARGNet Community	https://www.argn.com/	ARG	C
-Indie-Gamedev	en	r/Playdead	https://www.reddit.com/r/Playdead/	subreddit	C
-Indie-Gamedev	en	r/insidegame	https://www.reddit.com/r/insidegame/	subreddit	C
-Indie-Gamedev	en	r/limbo	https://www.reddit.com/r/limbo/	subreddit	C
 Indie-Gamedev	en	r/IndieDev	https://www.reddit.com/r/IndieDev/	subreddit	C
+INSIDE-focused	multi	INSIDE Steam General Discussions	https://steamcommunity.com/app/304430/discussions/	game	V
+INSIDE-focused	en	r/PlaydeadsInside	https://www.reddit.com/r/PlaydeadsInside/	subreddit	V
+INSIDE-focused	en	GameDetectives INSIDE ARG Wiki (reference not forum)	https://wiki.gamedetectives.net/index.php?title=Inside_ARG	archive-index	C
+INSIDE-focused	multi	LIMBO Steam General Discussions	https://steamcommunity.com/app/48000/discussions/	game	C
+INSIDE-focused	multi	Playdead Steam Developer Discussions	https://steamcommunity.com/developer/Playdead	official	C
