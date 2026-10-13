@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "ce-july2020-gamesale-i0vgml",
+      "url": "https://www.reddit.com/r/GameSale/comments/i0vgml/",
+      "kind": "reddit",
+      "media": false,
+      "evidence_role": "unreconciled-resale-comment-media"
+    }
+  ]
+}
