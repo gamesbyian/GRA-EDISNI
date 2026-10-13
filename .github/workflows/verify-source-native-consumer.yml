@@ -41,11 +41,16 @@ jobs:
           python scripts/conjecture_lab_steam_password_direct.py > /tmp/steam-direct-control.txt
           python scripts/conjecture_lab_q4_roles.py > /tmp/q4-comparison.txt
           python scripts/conjecture_lab_native_q4_receiver.py > /tmp/native-q4-receiver.txt
-          python scripts/conjecture_lab_native_q4_base27.py > /tmp/native-q4-base27.txt
+          python scripts/conjecture_lab_native_q4_base27.py --out-json /tmp/native-q4-mask-bank.json > /tmp/native-q4-base27.txt
           python scripts/conjecture_lab_native_q4_receiver.py --allow-primary-dots > /tmp/native-q4-permissive.txt
           python scripts/conjecture_lab_native_q4_base27.py --allow-primary-dots > /tmp/native-q4-base27-permissive.txt
           cat /tmp/native-q4-receiver.txt
           cat /tmp/native-q4-base27.txt
+      - name: Preserve exact speculative A-I/Q4 3x3 mask family
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-q4-binary-mask-bank
+          path: /tmp/native-q4-mask-bank.json
       - name: Show consumer audit summary
         run: |
           python -c 'import json; a=json.load(open("/tmp/source-consumer-gates.json")); print("sources:",a["artifact_total"],"new CE receivers:",a["verified_new_ce_value_receivers"],"type-compatible bunker direct placements:",a["known_lever_direct_replay_type_check"]["type_compatible_14_command_direct_placements"])'
