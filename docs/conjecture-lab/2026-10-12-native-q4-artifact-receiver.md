@@ -36,35 +36,49 @@ G = 0,2       H = 2       I = 2
 
 This is a machine-readable, bounded set of nine panel-selection instructions. Whether these positions address a poster, A–I backgrounds, the solved nine-part image, image layers, or no actual artifact at all remains open.
 
-## Conditional output constraints
+## Conditional output constraints: binary primary versus a permissive alternative
 
-For each of the nine primary frames, enforce the observation-compatible three-vertical-triplet grammar: every 1-4-7, 2-5-8 and 3-6-9 triplet has exactly one minority symbol (two matching signs, one different), without filling any unknown symbol as though physically found. Unlike an ASCII translation, the new output is still original dot/dash/slash glyphs.
+The **observed alphabet split** is slash/dash in primary residues 1–81 and slash/dot in Q4 residues 82–108. It is still an **assumption**, rather than independently discovered marks at the 42 missing positions, to impose this binary alphabet on every unknown primary cell. Both variants are now explicitly reproducible:
 
-Exact projection of all allowed triplet assignments and 18 selectors yields:
+```sh
+# Evidence-aligned, conditional two-sign primary alphabet:
+python scripts/conjecture_lab_native_q4_receiver.py
+python scripts/conjecture_lab_native_q4_base27.py
 
-| Background class | Distinct three-symbol selected outputs |
-|---|---:|
-| A | 18 |
-| B | **1: `//-`** |
-| C | 2: `-/-`, `-//` |
-| D | 3: `//-`, `//.`, `///` |
-| E | **1: `///`** |
-| F | **1: `///`** |
-| G | 15 |
-| H | **1: `--/`** |
-| I | 4 |
+# Deliberately permissive three-sign primary stress test:
+python scripts/conjecture_lab_native_q4_receiver.py --allow-primary-dots
+python scripts/conjecture_lab_native_q4_base27.py --allow-primary-dots
+```
 
-These per-class projections should **not** be naively multiplied into a count of globally compatible outputs: multiple classes share minority constraints inside individual primary frames.
+For each of the nine primary frames, enforce exactly one minority in each vertical 1-4-7 / 2-5-8 / 3-6-9 triplet. In the **binary** case, only slash and dash are possible in primary missing cells; in the permissive alternative, unknown dots are also admitted. Q4's same 18 depth assignments are unchanged.
 
-Globally, over every admissible sticker completion and Q4 depth assignment, the 27-symbol output contains:
+Exact output projections:
 
-- between **14 and 23 slashes**;
-- between **4 and 12 dashes**;
-- between **0 and 6 dots**.
+| Background class | Binary primary: distinct three-sign selected outputs | Permissive primary |
+|---|---:|---:|
+| A | 8 | 18 |
+| B | **1: `//-`** | **1: `//-`** |
+| C | 2: `-/-`, `-//` | 2 |
+| D | 2: `//-`, `///` | 3 |
+| E | **1: `///`** | **1: `///`** |
+| F | **1: `///`** | **1: `///`** |
+| G | 6 | 15 |
+| H | **1: `--/`** | **1: `--/`** |
+| I | 2 | 4 |
 
-The extrema are found exactly by minimizing/maximizing within each independent primary triplet for each of the 18 selectors; they are not sampling estimates. This implies at most **13 non-slash positions**. If a proposed 22-character Viewgate payload needs *one non-slash mark per character position*, this direct 27-cell interpretation cannot supply all 22. Other interpretations (slash as data, grouped trits, further processing) remain possible. Historical Viewgate's 22 underscores are **not established as a live form**.
+The per-class sets cannot be freely multiplied as though independent; multiple selected cells may share a primary minority triplet.
 
-A tempting alternate claim is that each class supplies a two-dimensional 3×3 poster coordinate: Q4 picks one coordinate and the exceptional position among the three selected quarter marks picks the other. **That fixed implementation is falsified**. In two classes, **E and F**, all three selected quarter symbols must be `///`, so there is no exceptional position to select. A source-defined default/fallback could still rescue a *different* rule, but cannot be silently assumed to satisfy this one.
+Exact 27-output-symbol count bounds across all compatible primary completions and 18 Q4 selectors:
+
+| Symbol | Conditional binary primary | Permissive primary |
+|---|---:|---:|
+| Slash `/` | **15–23** | 14–23 |
+| Dash `-` | **4–12** | 4–12 |
+| Dot `.` | **0** | 0–6 |
+
+Each bound is obtained by optimizing the admissible primary-triplet assignments for every Q4 selector, not by replacing missing observations with guessed physical marks. Under the binary assumption, there can be at most **12 non-slash positions** (13 under the permissive model). A literal one-non-slash-per-character fill of the 22-character historical Viewgate placeholder is therefore impossible under either specified operation; a different packing convention, slash-as-data reader or downstream transform remains available. The archived 22 underscores are **not evidence of a functioning input field**.
+
+A tempting alternate idea is to treat the Q4-selected three quarter marks per class as an exceptional-position index for a second 3×3 coordinate on each poster sketch. **That fixed implementation fails:** classes E and F must both read `///`, providing no unique minority. A separately specified fallback would constitute a new variant, not a confirmation of this rule.
 
 ## First direct receiver test: original 32×32 acorn printer artwork
 
@@ -78,27 +92,26 @@ The script computes exact minimum disagreements for each case using independent 
 
 Controls: A synthetic 3×9 raster constructed from an actual compatible primary completion and one legal Q4 selector must cost zero. Altering the forced E-quarter-0 slash to a dot must incur at least one necessary disagreement. The original acorn input is sourced from the contemporaneous 2018 community archive; the unsolved Xbox printer's publication row order is **not** silently promoted to a true solved 2D image.
 
-## Nine-class output as a deliberately assumed nine-character base-27 code
+## Nine-class readout as a speculative nine-character ternary/base-27 code
 
-This is a new output hypothesis, not an identification of a Steam-specific password syntax. Concatenate the three symbols from each background class into a ternary 3-digit number `0..26`, and tentatively read A–I class order as nine characters. With one fixed global bijection between the three physical glyphs and ternary digits:
+One natural consumer-oriented experiment reads each class's selected three signs as one three-trit character, tentatively in serial A–I order. This is a **deliberately assumed** symbol-to-text bridge, not evidence of a password.
 
-- The simple Cartesian product of individually allowed class words contains **6,480** nine-class outputs.
-- Enforcing *all shared primary-triplet constraints* leaves exactly **5,808** globally realizable nine-class outputs, eliminating **672** impossible combinations. This exact count is enumerated by [`conjecture_lab_native_q4_base27.py`](../../scripts/conjecture_lab_native_q4_base27.py).
-- The E and F class words are both compulsory `///`. Therefore **characters five and six must be identical** in the natural serial A–I reading under any fixed 3-trit-to-character code.
-- Under the base-27 integer encoding, the two `///` characters must each represent **0, 13 or 26**, depending on which digit the slash denotes. With A=0, these correspond to A, N, or a 27th nonletter symbol; with A=1, they correspond to a 27th nonletter symbol, M or Z. This restriction is *conditional on alphabetical interpretation*, not a plaintext discovery.
+**Key correction from the initial exploratory report:** allowing dots at unobserved primary positions produced **6,480** classwise combinations and **5,808** globally compatible nine-class raw outputs. That number is valid only for the *permissive ternary-primary alternative*. The much more source-aligned **binary-primary** model yields **384** classwise combinations and only **364** globally compatible outputs. Across the nine classes, 20 combinations are eliminated by shared-triplet constraints. These counts and the alphabetic projections below are checked by [`conjecture_lab_native_q4_base27.py`](../../scripts/conjecture_lab_native_q4_base27.py) in both modes.
 
-Exact nine-letter candidate counts after rejecting any out-of-alphabet value, across the 5,808 compatible raw outputs:
+For each legal output and every fixed global assignment of slash/dash/dot to ternary 0/1/2, three trits give a number from 0 through 26. The two class words E and F are *both compulsory `///`*, so **fifth and sixth output codes must be identical**. Their shared code is always **0, 13 or 26**, depending on the slash's digit value. Under an A=0 alphabet, this maps to A, N, or a nonalphabetic 27th code; under A=1, to a nonalphabetic zero, M, or Z.
 
-| Ternary digit 0/1/2 mapped to | A=0 | A=1 |
-|---|---:|---:|
-| `./-` | 5,464 | 5,808 |
-| `.-/` | 0 | 5,808 |
-| `/.-` | 5,464 | 0 |
-| `/-.` | 5,808 | 0 |
-| `-./` | 0 | 5,464 |
-| `-/.` | 5,808 | 5,464 |
+Exact counts of nine-class outputs in which *all nine* base-27 codes fall within the specified alphabet:
 
-These are **not six independent password predictions**. They are global relabellings of the *same conditional carrier*, and candidate counts do not confer evidential plausibility. A nine-character text that fails this reading says nothing about Q4-as-control in another reading, geometric ordering, a two-stage operator or a different receiving artifact.
+| Glyphs mapped to digits 0/1/2 | Binary A=0 | Binary A=1 | Permissive A=0 | Permissive A=1 |
+|---|---:|---:|---:|---:|
+| `./-` | 320 | 364 | 5,464 | 5,808 |
+| `.-/` | 0 | 364 | 0 | 5,808 |
+| `/.-` | 320 | 0 | 5,464 | 0 |
+| `/-.` | 364 | 0 | 5,808 | 0 |
+| `-./` | 0 | 320 | 0 | 5,464 |
+| `-/.` | 364 | 320 | 5,808 | 5,464 |
+
+**These are not independent predictions of different passwords.** All are alternative conventions for the same observed data and conditional model. In particular, 364 compatible raw outputs are still far too many to constitute a decipherment without another selector, artifact-specific mapping or independent receiver response. The natural serial A–I order itself remains a reading choice; rotating/reordering by the physical IAB/CDE/FGH image layout moves, but does not abolish, the equality of the two class outputs.
 
 ## Significance for the receiving-artifact program
 
