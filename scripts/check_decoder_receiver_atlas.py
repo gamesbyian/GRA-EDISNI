@@ -26,7 +26,7 @@ PROGRAM = DOCS / "closed-corpus-reader-bridge-program-2026-10-12.md"
 ITEM = re.compile(r"^\| ([RD]\d{3}) \| (.+) \| (.+) \| (.+) \|\s*$")
 SECTION = re.compile(r"^## ([RD]\d+)\. (.+)$")
 LINK = re.compile(r"\]\(([^)#]+)(?:#[^)]*)?\)")
-CAMPAIGN = re.compile(r"^\| \*\*B(\d{2}):")
+CAMPAIGN = re.compile(r"^\| \*\*B(\d{2}):", re.MULTILINE)
 
 
 def parse_catalog(kind: str, path: Path, prefix: str, expected: int) -> list[dict]:
