@@ -1,0 +1,57 @@
+name: July 2020 historical CE resale primary post and reply probe
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-july2020-resale-source-pilot-20261013.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  source-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: One exact public Reddit post-ID call, CE-specific excerpt
+        run: |
+          python scripts/external_evidence/lookup_public_ce_resale_posts.py \
+            --manifest data/reference/inside-ce-july2020-source-probe.json \
+            --out visual-evidence-work/july2020-post.json
+      - name: Public archived reply links, single historical post
+        run: |
+          python scripts/external_evidence/recover_reddit_comment_images.py \
+            --manifest data/reference/inside-ce-july2020-source-probe.json \
+            --max-comments 200 --out visual-evidence-work/july2020-replies
+      - name: Print precise primary context and reply image leads
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          def load(file,field):
+            p=Path(file)
+            if not p.is_file(): return []
+            data=json.loads(p.read_text())
+            return data.get(field,[])
+          for name,key in [
+            ("visual-evidence-work/july2020-post.json","records"),
+            ("visual-evidence-work/july2020-replies/reddit-comment-archive-report.json","sources"),
+            ("visual-evidence-work/july2020-replies/reddit-comment-photo-links.json","image_mentions"),
+            ("visual-evidence-work/july2020-replies/reddit-comment-gallery-review.json","gallery_links")]:
+            rows=load(name,key)
+            print("JULY_2020_PROBE",name,"count",len(rows))
+            for r in rows[:25]:
+              print(json.dumps(r,ensure_ascii=False)[:1600])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-july2020-source-pilot-${{ github.run_id }}
+          path: visual-evidence-work/
+          retention-days: 30
+          if-no-files-found: warn
