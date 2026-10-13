@@ -160,7 +160,7 @@ def canonical_refs(markdown: str) -> tuple[set[str], set[str]]:
     urls, threads = set(), set()
     # Markdown is a source list, not a verified equivalence table. Only URLs
     # and Reddit/video topic IDs are used for context checks.
-    for match in re.finditer(r"https?://[^\\s<>\\]\)\"]+", markdown):
+    for match in re.finditer(r'https?://[^\s<>\])"]+', markdown):
         original = match.group(0).rstrip(".,;:'")
         try:
             url, topic, _ = normalize_url(original)
