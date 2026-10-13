@@ -32,6 +32,11 @@ python scripts/verify_machine.py
 
 ## Research evidence map
 
+- [CL-VLEN-04 27-mark instructions controlling 81-site reconstruction](docs/conjecture-lab/2026-10-12-tail-operated-triples.md): 160 exact native-tail-selected triplet generators all contradict current physical observations; body-label shuffled controls also almost always contradict them. [Reproducible script](scripts/conjecture_lab_tail_operated_triples.py), [short results](data/conjecture-lab-tail-operated-triples-summary-2026-10-12.json) and [full atlas](data/conjecture-lab-tail-operated-triples-2026-10-12.json). Ported cleanly from the conflicted PR #198.
+- [CL-VLEN-05/06 packet checksums and four-quarter cellular automata](docs/conjecture-lab/2026-10-13-operand-microcode-campaign.md): 144 nine-data/three-checkbit models, 400 shuffles per null and 66 physical leave-one-out tests; plus 256 Wolfram CA rules across four 27-site quarters, two topologies and both time directions. The sole distinct compatible XOR rule is ordinary under nulls and fails 11 physical holdouts; CA has no exact fit (minimum nine contradictions) and 16/30 frame shuffles match its best. [ECC script](scripts/conjecture_lab_class_ecc.py), [ECC results](data/conjecture-lab-class-ecc-2026-10-13.json), [CA script](scripts/conjecture_lab_27cell_ca.py), [CA results](data/conjecture-lab-27cell-ca-2026-10-13.json). All are exploratory counterfactuals, not verified CE decoders.
+
+
+
 - [CL-VLEN-03 streaming run-length instruction campaign](docs/conjecture-lab/2026-10-12-streaming-rle-instructions.md): a **real executable program**, with alternating unary opcode/operand runs and `EMIT`, `REPEAT`, `REVERSE`, optional `STOP`; exact finite-state accounting of 108 grammars across primary 81, tail 27 and collapsed full 108 symbols. None shows exceptional grammar-specific compatibility after 120 matched frame shuffles per region; a 14-number lever-shaped output does not distinguish the data. [Executable parser with exhaustive tiny-string oracle](scripts/conjecture_lab_streaming_rle.py), [compact summary](data/conjecture-lab-streaming-rle-summary-2026-10-12.json) and [full results/witnesses](data/conjecture-lab-streaming-rle-2026-10-12.json). No Playdead opcode table claimed.
 
 
