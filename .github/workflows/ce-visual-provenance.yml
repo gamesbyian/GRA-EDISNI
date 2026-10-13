@@ -8,10 +8,12 @@ on:
       - "scripts/external_evidence/fetch_visual_references.py"
       - "scripts/external_evidence/fetch_html_images.py"
       - "scripts/external_evidence/recover_reddit_image_links.py"
+      - "scripts/external_evidence/recover_reddit_comment_images.py"
       - "scripts/external_evidence/visual_semantic.py"
       - "tests/test_ce_visual_provenance.py"
       - "tests/test_ce_html_image_discovery.py"
       - "tests/test_ce_public_reddit_archive.py"
+      - "tests/test_ce_reddit_comment_images.py"
       - "data/reference/inside-ce-visual-sources.json"
       - "data/reference/inside-ce-visual-historical-pages.json"
       - ".github/workflows/ce-visual-provenance.yml"
@@ -34,6 +36,11 @@ on:
         type: boolean
       archived_reddit_images:
         description: "Also try bounded public Arctic Shift/PullPush archive metadata for blocked Reddit owner posts"
+        required: true
+        default: false
+        type: boolean
+      archived_reddit_comment_images:
+        description: "Also search public historical Reddit comment trees for CE/sticker photo URLs"
         required: true
         default: false
         type: boolean
@@ -62,7 +69,7 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
       - run: python -m unittest discover -s tests -p 'test_ce_*py' -v
-      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py
+      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py
       - name: Index all canonical original sticker photographs and validate source SHA256
         run: |
           mkdir -p /tmp/ce-empty-candidate-set
@@ -115,6 +122,12 @@ jobs:
           python scripts/external_evidence/recover_reddit_image_links.py \
             --manifest data/reference/inside-ce-visual-historical-pages.json \
             --out visual-evidence-work
+      - name: Optionally recover archived public Reddit comment photo URLs
+        if: inputs.archived_reddit_comment_images
+        run: |
+          python scripts/external_evidence/recover_reddit_comment_images.py \
+            --manifest data/reference/inside-ce-visual-historical-pages.json \
+            --out visual-evidence-work --max-comments 600
       - name: Optionally download bounded public image URLs from harvested pages
         if: inputs.download_page_images
         run: |
@@ -122,6 +135,9 @@ jobs:
             --max-images 48 --max-per-page 8)
           if [[ -f visual-evidence-work/reddit-archival-image-leads.json ]]; then
             args+=(--additional-leads visual-evidence-work/reddit-archival-image-leads.json)
+          fi
+          if [[ -f visual-evidence-work/reddit-comment-photo-links.json ]]; then
+            args+=(--additional-leads visual-evidence-work/reddit-comment-photo-links.json)
           fi
           python scripts/external_evidence/fetch_html_images.py "${args[@]}"
       - name: Build provenance index and candidate triage
