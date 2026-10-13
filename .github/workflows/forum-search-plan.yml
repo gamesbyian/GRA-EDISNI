@@ -1,0 +1,78 @@
+name: Plan multilingual gaming-forum searches
+
+on:
+  workflow_dispatch:
+    inputs:
+      terms:
+        description: "One arbitrary search query per line; Unicode supported"
+        required: true
+        type: string
+      query_mode:
+        description: "Literal phrases or search-engine expressions"
+        required: true
+        default: literal
+        type: choice
+        options:
+          - literal
+          - expression
+      statuses:
+        description: "Include verified leads, candidates, or all"
+        required: true
+        default: V,C,H
+        type: choice
+        options:
+          - V,C,H
+          - V
+          - V,C
+          - V,H
+      max_tasks:
+        description: "Hard budget for forum x query task count"
+        required: true
+        default: "10000"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  plan-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify matrix and planner tests
+        run: python -m unittest discover -s tests -p 'test_global_forum_search_plan.py' -v
+      - name: Build offline campaign plan (no target-site traffic)
+        env:
+          SEARCH_TERMS: ${{ inputs.terms }}
+          SEARCH_MODE: ${{ inputs.query_mode }}
+          SEARCH_STATUSES: ${{ inputs.statuses }}
+          SEARCH_MAX_TASKS: ${{ inputs.max_tasks }}
+        run: |
+          python - <<'PY'
+          import os
+          import pathlib
+          import subprocess
+          pathlib.Path("forum-queries.txt").write_text(
+              os.environ["SEARCH_TERMS"], encoding="utf-8"
+          )
+          subprocess.run([
+              "python", "scripts/plan_global_forum_searches.py",
+              "--terms-file", "forum-queries.txt",
+              "--query-mode", os.environ["SEARCH_MODE"],
+              "--statuses", os.environ["SEARCH_STATUSES"],
+              "--max-tasks", os.environ["SEARCH_MAX_TASKS"],
+              "--output", "search-output/forum-search-tasks.jsonl",
+              "--summary", "search-output/forum-search-summary.json",
+          ], check=True)
+          PY
+      - name: Upload prepared search tasks and summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: forum-search-plan
+          path: search-output/
+          if-no-files-found: error
+          retention-days: 30
