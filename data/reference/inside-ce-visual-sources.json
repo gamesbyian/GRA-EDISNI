@@ -37,6 +37,24 @@
       "subject": "Overlapping printed art cards; promotional photo reused by reporting",
       "source_page": "https://www.polygon.com/2019/12/12/21013222/inside-real-doll-iam8bit-limited-edition-contents/",
       "role": "negative-control-press-repost"
+    },
+    {
+      "id": "iam8bit-standalone-ps4-packshot",
+      "url": "https://www.iam8bit.com/cdn/shop/products/web_storeicon_INSIDE_PS4.jpg?v=1574887739&width=2048",
+      "extension": ".jpg",
+      "origin": "first-party-standalone-ps4-product",
+      "subject": "Official standalone INSIDE PS4 case and disc; separate $29.99 product",
+      "source_page": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "role": "negative-control-standalone"
+    },
+    {
+      "id": "iam8bit-standalone-ps4-lifestyle",
+      "url": "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00013.jpg?v=1588895388&width=5472",
+      "extension": ".jpg",
+      "origin": "first-party-standalone-ps4-product",
+      "subject": "Lifestyle shot of single INSIDE PS4 disc and case; filename InsideCE is NOT evidence of full Collector's Edition",
+      "source_page": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "role": "negative-control-standalone"
     }
   ]
 }
