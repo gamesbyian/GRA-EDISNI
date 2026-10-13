@@ -64,7 +64,7 @@ Every named row in the forum directory has exactly one corresponding row in `dat
 | `vendor_qa_search` / `mod_site_search` | Use provider/native filters and distinguish Q&A or download descriptions from community replies | Different entity types; only discussion threads count as forum evidence |
 | `archive_first` | Locate historical forum URL, migrations and surviving archive captures; search captured text only where allowed | Wayback CDX is URL capture discovery; missing capture or search index ≠ post absent |
 
-There are 21 distinct primary method identifiers. Some candidates use broad platform-discovery classes where independent endpoint verification remains necessary. **The TSV is the exhaustive per-row mapping**; this guide intentionally avoids duplicating hundreds of nearly identical row descriptions.
+There are 22 distinct primary method identifiers. Some candidates use broad platform-discovery classes where independent endpoint verification remains necessary. **The TSV is the exhaustive per-row mapping**; this guide intentionally avoids duplicating hundreds of nearly identical row descriptions.
 
 ## Workflow stages
 
