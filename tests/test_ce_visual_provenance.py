@@ -61,6 +61,33 @@ class VisualProvenanceTests(unittest.TestCase):
         self.assertEqual(result["triage"][0]["classification"], "standalone-ps4-image-review")
         self.assertFalse(result["triage"][0]["new_sticker_confirmed"])
 
+    def test_verified_collector_box_photo_is_distinct_from_promotional_and_serial_photos(self):
+        owner_photo = self.record(self.original, "owner-ce-2019", "historical-owner-photo-no-visible-sticker")
+        repost_file = self.inbox / "collector-repost.jpg"
+        repost_file.write_bytes(self.original.read_bytes())
+        repost = self.record(repost_file, "new-source-reposting-owner", "unreviewed-candidate")
+        out = analyze([owner_photo], [repost], 5)
+        self.assertEqual(out["matches"][0]["reference_role"],
+                         "historical-owner-photo-no-visible-sticker")
+        self.assertEqual(out["triage"][0]["classification"], "known-owner-photo-repost-review")
+        self.assertFalse(out["triage"][0]["new_sticker_confirmed"])
+
+        ref_manifest = self.root / "owner-positive-ref.json"
+        ref_manifest.write_text(json.dumps({"sources": [{
+            "id": "owner-ce-2019", "extension": ".jpg",
+            "origin": "historical-independent-collector",
+            "role": "positive-control-public-owner-open-ce-no-visible-sticker",
+            "canonical_case": "L08",
+            "url": "https://i.redd.it/example.jpg",
+        }]}))
+        (self.refs / "owner-ce-2019.jpg").write_bytes(self.original.read_bytes())
+        refs, skipped = promotional_refs(self.root, self.refs, ref_manifest)
+        self.assertFalse(skipped)
+        self.assertEqual(refs[0]["role"], "historical-owner-photo-no-visible-sticker")
+        self.assertEqual(refs[0]["canonical_case"], "L08")
+        resolved = analyze(refs, [repost], 5)
+        self.assertEqual(resolved["matches"][0]["reference_canonical_case"], "L08")
+
     def test_metadata_provenance_and_corrupt_input(self):
         folder = self.inbox / "auction-example"
         folder.mkdir()
