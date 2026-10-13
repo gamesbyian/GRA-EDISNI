@@ -199,6 +199,117 @@
     "interpretation": "slash vs dash-or-dot collapses distinct 81/27 alphabets; speculative"
   },
   "experiment": "CL-VLEN-01",
+  "mixed_width_grouping_counts": {
+    "108": {
+      "ordered_partitions_total": 53501860,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 36
+        },
+        {
+          "ordered_partitions": 5984,
+          "quintets": 3,
+          "triples": 31
+        },
+        {
+          "ordered_partitions": 906192,
+          "quintets": 6,
+          "triples": 26
+        },
+        {
+          "ordered_partitions": 14307150,
+          "quintets": 9,
+          "triples": 21
+        },
+        {
+          "ordered_partitions": 30421755,
+          "quintets": 12,
+          "triples": 16
+        },
+        {
+          "ordered_partitions": 7726160,
+          "quintets": 15,
+          "triples": 11
+        },
+        {
+          "ordered_partitions": 134596,
+          "quintets": 18,
+          "triples": 6
+        },
+        {
+          "ordered_partitions": 22,
+          "quintets": 21,
+          "triples": 1
+        }
+      ],
+      "total_sites": 108
+    },
+    "12": {
+      "ordered_partitions_total": 1,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 4
+        }
+      ],
+      "total_sites": 12
+    },
+    "27": {
+      "ordered_partitions_total": 36,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 9
+        },
+        {
+          "ordered_partitions": 35,
+          "quintets": 3,
+          "triples": 4
+        }
+      ],
+      "total_sites": 27
+    },
+    "81": {
+      "ordered_partitions_total": 447702,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 27
+        },
+        {
+          "ordered_partitions": 2300,
+          "quintets": 3,
+          "triples": 22
+        },
+        {
+          "ordered_partitions": 100947,
+          "quintets": 6,
+          "triples": 17
+        },
+        {
+          "ordered_partitions": 293930,
+          "quintets": 9,
+          "triples": 12
+        },
+        {
+          "ordered_partitions": 50388,
+          "quintets": 12,
+          "triples": 7
+        },
+        {
+          "ordered_partitions": 136,
+          "quintets": 15,
+          "triples": 2
+        }
+      ],
+      "total_sites": 81
+    }
+  },
   "source": "data/observations.csv, 84 physical observations of 66 unique residues",
   "zone_results": {
     "body": {
