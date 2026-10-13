@@ -6,7 +6,10 @@ interface or claiming that base27 is the intended CE interpretation.
 Run: python scripts/conjecture_lab_native_q4_base27.py
 """
 import argparse
+import hashlib
 import itertools
+import json
+from pathlib import Path
 
 from conjecture_lab_native_q4_receiver import (
     SIGNS, class_options, core_groups, min_disagreements,
@@ -53,6 +56,8 @@ def alphabetic_counts(words):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--allow-primary-dots", action="store_true")
+    parser.add_argument("--out-json", type=Path,
+                        help="Write exact mask bank for an authenticated downstream artifact")
     args = parser.parse_args()
     observed, _ = source_data()
     primary_alphabet = SIGNS if args.allow_primary_dots else "/-"
@@ -68,6 +73,52 @@ def main():
     print("Rejected by cross-class primary triplet dependence:", total - len(outputs))
     print("Per-class option counts:", {k:len(v) for k,v in class_sets.items()})
     assert all(w[4] == w[5] == "///" for w in outputs)
+    layout = ("IAB", "CDE", "FGH")
+    fixed = tuple(
+        tuple("".join(
+            (next(iter(signs)) if len(signs) == 1 else "?")
+            for char in row
+            for signs in [{out["ABCDEFGHI".index(char)][quarter]
+                           for out in outputs}]
+        ) for row in layout)
+        for quarter in range(3)
+    )
+    if not args.allow_primary_dots:
+        assert fixed == (("/?/", "-//", "/?-"),
+                         ("??/", "///", "/?-"),
+                         ("/?-", "??/", "/?/"))
+        assert sum(row.count("?") for quarter in fixed for row in quarter) == 9
+    print("Forced/unknown 3x3 quarter masks in physical IAB/CDE/FGH layout:")
+    for quarter, rows in enumerate(fixed):
+        print("quarter", quarter, *rows, sep=" | ")
+    if args.out_json:
+        from conjecture_lab_native_q4_receiver import ROOT
+        raw_source = (ROOT / "data/observations.csv").read_bytes()
+        payload = {
+            "schema": "inside-ce-native-q4-mask-bank-v1",
+            "research_mode": "DISCOVER / conditional",
+            "observation_csv_sha256": hashlib.sha256(raw_source).hexdigest(),
+            "observed_unique_residues": 66,
+            "assumed_primary_alphabet": primary_alphabet,
+            "layout_rows": list(layout),
+            "fixed_masks": [list(rows) for rows in fixed],
+            "q4_depth_options": [list(s) for s in choices],
+            "output_count": len(outputs),
+            "outputs": [
+                {
+                    "class_symbols_A_to_I": list(words),
+                    "physical_3x3_by_quarter": [
+                        ["".join(words["ABCDEFGHI".index(char)][q] for char in row)
+                         for row in layout]
+                        for q in range(3)
+                    ],
+                }
+                for words in outputs
+            ],
+        }
+        args.out_json.parent.mkdir(parents=True, exist_ok=True)
+        args.out_json.write_text(json.dumps(payload, indent=2) + "\n")
+        print("Wrote exact conditional output bank:", args.out_json)
 
     rows = alphabetic_counts(outputs)
     expected = (
