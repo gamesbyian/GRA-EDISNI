@@ -38,3 +38,15 @@ Likewise, a successful zero-result response for C16 in 2021–2026 only describe
 For a new offline plan, use the existing probe with the dated control IDs C04,C14,C15,C16 and a per-window limit of eight. The completed live run explicitly enabled execution and allowed a two-second delay. New network attempts require their own bounded purpose and should be recorded independently of this baseline.
 
 The artifact provides **the first observed archival capture witness**, not a recovered sticker or a completed archival full-text search.
+
+## Follow-up: archived HTML actually retrieved (2026-10-13)
+
+The original metadata-only finding was extended by a second, independently source-pinned one-record experiment, [GitHub Actions run 38443126621](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38443126621), artifact ID 11836207996. Its five synthetic checks all passed before it requested a single raw Wayback replay URL for the known 2019 GameFAQs capture.
+
+**The archived HTML replay succeeded:** HTTP 200, response content type text/html;charset=utf-8, **38,546 downloaded bytes** and **3,081 characters of extracted visible text**. SHA256 of the returned HTML body was **20aafc7b365e81404a1c651c7ecede556a33635fc637dccdb586e8f0d49ff164**. Eight small keyword-context excerpts were retained as a research artifact. The original HTML is not committed to the repo.
+
+The extracts included an original GameFAQs thread titled *Collector's Edition announced*, a forum author labeled JonnyBoyFF, the first-party iam8bit product URL, and contemporary Playdead and RealDoll discussion. They confirm **an actual retrievable period discussion**, not merely an archived URL listing. The extracted text **did not establish CE receipt or disclose a numbered sticker**. Do not infer that the named forum commenter was an owner merely because they shared the announcement.
+
+Machine-readable immutable witness: [GameFAQs archived HTML recovery JSON](../../data/reference/inside-ce-gamefaqs-archived-html-recovery-2026-10-13.json). The recovery program and tests are [here](../../scripts/retrieve_inside_ce_known_wayback_body.py) and [here](../../tests/test_inside_ce_archive_body.py).
+
+**This supersedes only the earlier statement that the archived page text could not be retrieved.** The 8 CDX request results above remain unchanged. It now makes sense to validate repeatable extraction and historical thread-body completeness on a few more positive controls, **not** to announce that 491 forum histories are archived or searched.
