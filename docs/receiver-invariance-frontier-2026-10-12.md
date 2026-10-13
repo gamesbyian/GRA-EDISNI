@@ -92,6 +92,34 @@ This supplies a practical, finite target for a recipient audit: does the authent
 
 The nine Q4 selector codes fall into only **four** distinct patterns inside U5; the U5 selected-readout is even coarser at two. Different sticker sequences can thus already produce the same selected output. Claiming the 108-cell master must be uniquely recovered is stronger than the actual identification requirement for such a receptor.
 
+## Native A–I receiving surface: class triplets, not just 27-character streams
+
+Instead of asking only for a 27-mark contiguous word, use the **already-solved nine-picture A–I class structure as the receiver's native coordinates**. For each class take the three selected symbols from Q1, Q2 and Q3. Exact conditional distinct **three-character outputs per picture** are:
+
+| Physical A–I site | U2 | U3 | U4 | U5 | Complete U5 options |
+| --- | ---: | ---: | ---: | ---: | --- |
+| A (top middle) | 4 | 4 | 3 | **2** | `--/`, `-/ -` (remove space: `-/-`) |
+| B (top right) | **1** | 1 | 1 | 1 | `//-` |
+| C (mid left) | 2 | 2 | **1** | 1 | `-/ -` → `-/ -` without spaces = `-/ -` |
+| D (centre) | **1** | 1 | 1 | 1 | `///` |
+| E (mid right) | **1** | 1 | 1 | 1 | `///` |
+| F (bottom left) | **1** | 1 | 1 | 1 | `///` |
+| G (bottom middle) | 5 | 4 | 3 | **2** | `/-/`, `//-` |
+| H (bottom right) | **1** | 1 | 1 | 1 | `--/` |
+| I (top left) | 2 | **1** | 1 | 1 | `/-/` |
+
+The key is the **number of distinct outputs**, not the visual appeal of the codes. Five sites (B,D,E,F,H) are fully determined even in U2, with no dependence on recursion; seven sites are determined under U5, leaving only A and G.
+
+Using the actual physical arrangement, the nine sites look like:
+
+```text
+I  A? B
+C  D  E
+F  G? H
+```
+
+Here question marks mean *U5 output uncertainty* rather than an undeciphered physical sticker. This is an exact **source-typed nine-position readout candidate** with a tightly constrained ambiguity pattern, but no real cover/poster/JPEG artifact has yet been shown to consume these particular three-mark class words.
+
 ## Selection-aware correction: A/G cover fewer physical sticker positions
 
 The physical class coverage is uneven:
