@@ -56,6 +56,24 @@ def bit_string(physical: str, zero: str, one: str):
     return "".join("?" if c == "?" else ("0" if c == zero else "1") for c in physical)
 
 
+def mixed_width_partitions(n: int, widths=(3,5)):
+    """All compositions of total length n by widths, without examining marks.
+
+    The count is the multinomial number of distinct width *orderings*, not
+    codewords. For (3,5), each tuple gives (#triples,#quintets,count).
+    """
+    assert widths == (3,5) and n >= 0
+    ans=[]
+    for quintets in range(n//5+1):
+        remainder=n-5*quintets
+        if remainder % 3==0:
+            triples=remainder//3
+            ans.append({"triples":triples,"quintets":quintets,
+                        "ordered_partitions":math.comb(triples+quintets,quintets)})
+    return {"total_sites":n,"possible_mixtures":ans,
+            "ordered_partitions_total":sum(p["ordered_partitions"] for p in ans)}
+
+
 def fixed_groups(s: str):
     out = {}
     for w in WIDTHS:
@@ -477,6 +495,7 @@ def analyze(s, nperm=12000, nparser=500, ncross=200):
         z["nulls"]["parser_best_of_family_global"] = parser_null(bit_string(zone,symbols[0],symbols[1]),n=nparser,seed=20261212+start)
         z["nulls"]["parser_best_of_family_frame9"] = parser_null(bit_string(zone,symbols[0],symbols[1]),n=nparser,seed=20261312+start,frames=True)
         out["zones"][label]=z
+    out["mixed_width_grouping_counts"]={str(n):mixed_width_partitions(n) for n in (12,27,81,108)}
     out["cross_zone_class_metadata"] = one_hot_tail_audit(s[81:])
     out["cross_zone_slash_binary"] = cross_zone_audit(s,n=ncross)
     return out
@@ -486,6 +505,10 @@ def test():
     assert traversal("ABCDEF","serial")=="ABCDEF"
     assert traversal("ABCDEF","reverse_serial")=="FEDCBA"
     assert slash_as_single_bit("-/./?", "1")=="0101?"
+    assert mixed_width_partitions(12)["ordered_partitions_total"]==1
+    assert mixed_width_partitions(27)["ordered_partitions_total"]==36
+    assert mixed_width_partitions(81)["ordered_partitions_total"]==447702
+    assert mixed_width_partitions(108)["ordered_partitions_total"]==53501860
     assert all(is_prefix_free(x) for x in CODEBOOKS.values())
     assert not is_prefix_free({"0":None,"01":None})
     assert matches("?0?","101") and not matches("00","01")
@@ -568,6 +591,7 @@ def main():
                 print("    ",g,"accepted",p["program_completions"],"of",p["possible_completions"])
     print("tail class one-hot",report["cross_zone_class_metadata"]["one_slash_completions"],
           "exact null",report["cross_zone_class_metadata"]["exact_observation_label_permutation_nulls"])
+    print("mixed-width 3/5 grouping counts",{n:d["ordered_partitions_total"] for n,d in report["mixed_width_grouping_counts"].items()})
     print("cross-zone controls",report["cross_zone_slash_binary"]["null_controls"])
     print("wrote",args.output)
 
