@@ -56,6 +56,12 @@ The lone potential colour is (3,1,1), never more than a single member of the six
 
 The script verifies a constructive positive control: the six known colours **can** be converted to exactly 36 trits, physically encoded into a complete **108-sticker symbol cycle** respecting the primary one-minority-per-column and Q4 one-slash-per-class rules, and decoded back to their six RGB triples. This synthetic master deliberately does **not** claim to match the real observed stickers. The negative result arises from the observed physical restrictions, not insufficient capacity or a decoder unable to represent the target palette.
 
+## Related channel-sampling control already done
+
+An important neighbouring test exists, rather than needing to reinvent it: [CL-05's native gate-98 phase audit](2026-10-08-gate98-native-phase-positive-control.md) recovered source-grid origin (4,12), stride 16, on the **actual original gate-98 PNG**, then reused two conditional sticker machine states to address all 64 consecutive row-major 512-pixel banks and let Q4 depth select one R/G/B component. There were **zero banks with nine printable ASCII bytes** and zero banks with nine exact nonblack 0/207 palette keys; the highest per-bank nonblack count was 3/9. This is a well-defined negative of a *specific invented* 512-site bank reader, not a negative for all RGB-component address schemes.
+
+Thus both routes now have negative controls: (A) the present **sticker-transmits-six-literal-colours** packing family and (B) the earlier **sticker-selects-nine-source-pixels-within-a-512-site-bank** lookup. A new channel hypothesis should change an operation because an independent original asset supplies it, not because an earlier readout was uninteresting.
+
 ## What the negative result does and does not say
 
 **Ruled out inside this defined family:** direct six-colour gate-98 key transmission by the specified 36-trit positional reader, even under alternative major orders, trit endianness and global channel permutation.
