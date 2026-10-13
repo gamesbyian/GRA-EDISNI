@@ -82,7 +82,6 @@ def main() -> None:
                 item["final_url"] = url  # existing bytes, not a fresh retrieval claim
             else:
                 data, final_url = fetch(url)
-                dest.write_bytes(data)
                 item["status"] = "downloaded"
                 item["final_url"] = final_url
             item["bytes"] = len(data)
@@ -90,6 +89,8 @@ def main() -> None:
             expected = source.get("expected_sha256")
             if expected and item["sha256"].lower() != expected.lower():
                 raise ValueError("source media changed: expected SHA256 " + expected)
+            if item["status"] == "downloaded":
+                dest.write_bytes(data)
         except (OSError, ValueError, UnidentifiedImageError, urllib.error.URLError) as exc:
             item["status"] = "unavailable"
             item["error"] = str(exc)[:240]
