@@ -121,7 +121,23 @@ Every body mark in these four triplets has been physically observed. The Q4 dept
 
 **Evidence level:** This is a smaller, cleaner conditional input to any genuinely native nine-artwork/three-channel receiver. It is much less dependent on our 3×3-machine inventions than U5's 23/27 invariant, but it still does not establish the output rule. Reproduce with [observation-first triplet audit](../scripts/audit_observation_first_class_triplets.py).
 
-## Native A–I receiving surface: class triplets, not just 27-character streams
+## A cheap actual-source incompatibility: duplicated digits in the background URL
+
+The independently recovered background page has nine digits in its path, `534965398`. Suppose, **just for a deliberately literal test**, those digits align sequentially with the A–I picture classes and the same digit must signify the same *three-symbol Q4-selected foreground triplet*. This defines a fixed function from a URL digit to a single class word.
+
+Three source digit groups repeat:
+
+| URL digit | A–I classes | Do the weak observation-first class-word sets overlap? |
+| --- | --- | --- |
+| 5 | A and F | Yes, `///` is possible for both |
+| 3 | B and G | Yes, `//-` is possible for both |
+| **9** | **D and H** | **No. D can only be `//-` or `///`; H is fixed `--/`** |
+
+Consequently, **this precise same-digit→same-three-symbol direct codebook fails on physical sticker evidence**, assuming only the one-slash Q4 rule, *without* needing U2/POS3 or new stickers. A different source ordering, codebook with unequal outputs for duplicate digits, use of digit position instead of value, or nonliteral transform is unaffected. Earlier experiments rejected other direct URL digit equality constructions; this extends the negative to the weakest Q4-selected per-class triple.
+
+The candidate's 9-digit alignment and equality rule were chosen as an explicit cheap null, **not** verified original Playdead instructions. The program preserves the pairwise common possible readouts and fails loudly if the verdict drifts.
+
+## Native A–I receiving surface: class triplets, not just 27-character streams## Native A–I receiving surface: class triplets, not just 27-character streams
 
 Instead of asking only for a 27-mark contiguous word, use the **already-solved nine-picture A–I class structure as the receiver's native coordinates**. For each class take the three selected symbols from Q1, Q2 and Q3. Exact conditional distinct **three-character outputs per picture** are:
 
