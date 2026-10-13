@@ -44,13 +44,19 @@ def normalize_url(raw: str) -> tuple[str, str, str]:
                 tid = match.group(1).lower()
                 return "https://www.reddit.com/comments/" + tid, "reddit:" + tid, "reddit:" + tid
         host = "www.reddit.com"
-        m = re.search(r"/comments/([a-z0-9]+)(?:/[^/]*)?(?:/comment/([a-z0-9]+))?", path, re.I)
+        m = re.search(r"/comments/([a-z0-9]+)(?=/|$)", path, re.I)
         if m:
-            tid, cid = m.group(1).lower(), (m.group(2) or "").lower()
-            if not cid:
-                # A Reddit URL can also use /comments/TID/comment/CID directly.
-                p = re.search(r"/comment/([a-z0-9]+)", path, re.I)
-                cid = p.group(1).lower() if p else ""
+            tid = m.group(1).lower()
+            rest = [p for p in path[m.end():].split("/") if p]
+            # Reddit permalinks use both /comments/TID/title/CID and
+            # /comments/TID/comment/CID; preserve comment IDs when present.
+            cid = ""
+            if len(rest) >= 2:
+                cid = rest[1].lower()
+            elif len(rest) == 1 and rest[0].lower().startswith("t1_"):
+                cid = rest[0][3:].lower()
+            if cid and not re.fullmatch(r"[a-z0-9]+", cid):
+                cid = ""
             canonical = ("https://www.reddit.com/comments/" + tid +
                          ("/comment/" + cid if cid else ""))
             return canonical, "reddit:" + tid, ("reddit-comment:" + cid if cid
