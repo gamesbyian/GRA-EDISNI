@@ -8,7 +8,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from scripts.external_evidence.search_public_reddit_ce_media import (
-    clean_item, curated_case_map, known_status, media_urls, relevant, scan, search_url
+    clean_item, curated_case_map, known_status, media_urls, relevant, relevant_excerpt, scan, search_url
 )
 
 
@@ -57,6 +57,26 @@ class ArchivedMarketSearchTests(unittest.TestCase):
                 {"reddit_post_id": "iuutfq", "case_ref": "invalid-new-owner"}]}))
             with self.assertRaisesRegex(ValueError, "case"):
                 curated_case_map(file)
+
+    def test_ce_phrase_deep_in_inventory_retained_in_short_excerpt(self):
+        old_inventory = "One game for sale. " * 150
+        post = {"id": "i0vgml", "title": "Games, collectibles, swag for sale",
+                "selftext": old_inventory + "INSIDE Collector's Edition from iam8bit; includes Huddle."}
+        row = clean_item(post, "post")
+        self.assertIsNotNone(row)
+        self.assertGreater(row["excerpt_body_offset"], 1500)
+        self.assertIn("Collector", row["context_excerpt"])
+        self.assertIn("iam8bit", row["context_excerpt"])
+        self.assertLessEqual(len(row["context_excerpt"]), 320)
+        self.assertNotIn("One game for sale. One game for sale. One game for sale.", row["context_excerpt"])
+
+    def test_context_sample_redacts_external_urls(self):
+        post = {"title": "Sale", "selftext": "Hello " + "filler " * 70 +
+                "iam8bit CE sticker https://i.imgur.com/example.jpg and a numbered seal"}
+        excerpt, start = relevant_excerpt(post)
+        self.assertGreater(start, 55)
+        self.assertIn("[public URL]", excerpt)
+        self.assertNotIn("https://", excerpt)
 
     def test_comment_media_and_archived_deleted_not_counted(self):
         row = clean_item({"id":"f12345", "link_id":"t3_e9bteo",
