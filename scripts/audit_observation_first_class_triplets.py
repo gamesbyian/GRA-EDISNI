@@ -82,6 +82,32 @@ def audit()->dict:
         for k in ("B","E","F","H")
         for detail in classes[k]["by_tail_depth"]
     )
+    # A deliberately narrow original-CE-background source check: if the
+    # nine digits of the real 534brn path were a direct A-I codebook with
+    # identical digits requiring identical selected three-mark words,
+    # the D/H (digit 9) pair is already impossible before invoking U2.
+    # Digit-to-class *alignment* is stipulated, not independently proved.
+    url_digits="".join(c for c in "534brn9653f9j8mmd" if c.isdigit())
+    assert url_digits=="534965398"
+    digit_groups={}
+    for j,ch in enumerate(LETTERS):
+        digit_groups.setdefault(url_digits[j],[]).append(ch)
+    repeated_equal_word_test={}
+    for digit,group in sorted(digit_groups.items()):
+        if len(group)<2:continue
+        possibilities=[set(classes[ch]["possible_three_character_words"])
+                       for ch in group]
+        intersection=set.intersection(*possibilities)
+        repeated_equal_word_test[digit]={
+            "class_group":group,
+            "common_possible_triplets":sorted(intersection),
+            "compatible_with_literal_equal_digit_equal_triplet":bool(intersection),
+        }
+    assert repeated_equal_word_test["9"]["class_group"]==["D","H"]
+    assert not repeated_equal_word_test["9"]["common_possible_triplets"]
+    assert repeated_equal_word_test["5"]["common_possible_triplets"]==["///"]
+    assert repeated_equal_word_test["3"]["common_possible_triplets"]==["//-"]
+
     # Ensure the local one-hot/no-body-grammar spaces strictly contain the
     # U2-selected output class supports; a separate enumerator owns U2.
     return {
@@ -89,6 +115,13 @@ def audit()->dict:
         "observed_records":84,"unique_residues":66,
         "conditional_Q4_hypothesis":"one slash and two dots per A-I class stack",
         "class_readouts":classes,
+        "literal_A_I_path_digit_equivalence_test":{
+            "source_path_digits":"534965398",
+            "alignment_assumption":"sequential digits correspond exactly to A,B,C,D,E,F,G,H,I",
+            "requirement":"same source digit implies same selected 3-mark class word",
+            "duplicate_digit_groups":repeated_equal_word_test,
+            "verdict":"contradicted for digit 9 (D/H), even in weak one-hot-only model",
+        },
         "already_fixed_classes_without_primary_code":"BEFH",
         "fully_physically_seen_body_sites_of_these_classes":{
             k:classes[k]["by_tail_depth"][0]["selected_primary_residues"]
