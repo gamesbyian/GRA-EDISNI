@@ -46,7 +46,7 @@ class TestGlobalForumSearchPlan(unittest.TestCase):
     def test_scope_separation(self):
         row = next(x for x in self.routes if x["community"] == "r/PlaydeadsInside")
         self.assertEqual(row["index_query_scope"], "site:reddit.com/r/PlaydeadsInside")
-        self.assertEqual(row["primary_method"], "reddit_oauth_search")
+        self.assertEqual(row["primary_method"], "reddit_research_access_gate")
         native = planner.conditional_native_link(row, "sticker /043")
         self.assertIn("restrict_sr=1", native)
         self.assertIn("sticker+%2F043", native)
