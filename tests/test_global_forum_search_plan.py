@@ -21,6 +21,9 @@ class TestGlobalForumSearchPlan(unittest.TestCase):
     def test_exact_inventory_coverage(self):
         self.assertEqual(len(self.directory), 483)
         self.assertEqual(len(self.routes), 483)
+        self.archives = planner.load_tsv(planner.ARCHIVES)
+        self.assertEqual(len(self.archives), 483)
+        self.assertEqual([(x["community"], x["original_url"]) for x in self.archives], [(x["community"], x["url"]) for x in self.routes])
         planner.check_routes(self.directory, self.routes)
 
     def test_multiple_arbitrary_queries_and_escaping(self):
