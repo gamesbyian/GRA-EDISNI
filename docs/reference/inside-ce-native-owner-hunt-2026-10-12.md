@@ -67,6 +67,10 @@ Seven first-party-relevant subreddit communities have been added to the primary 
 
 **Retrieval improvement:** the query planner now generates high-recall exact proper-name pairs once per community (`INSIDE iam8bit`, `INSIDE RealDoll`) and additional locally worded broad two-part queries for sticker and arrival. Language-independent anchors are deliberately **deduplicated across a global site's 50 language profiles**, preventing repetitive paid API calls. These complement, not replace, each locale's first-person purchase/receipt wording.
 
+### Dated standalone-game sale, not CE ownership (April 2020)
+
+A [Cheap Ass Gamer April 22, 2020 collector-market post](https://www.cheapassgamer.com/threads/indie-limited-obscure-physical-release-deals-and-discussion-thread.357745/page-133) directly links an iam8bit store product for **INSIDE (PS4) game alone at $29.99**, distinct from the $375 Collector's Edition. This contemporaneous retail witness helps screen later marketplace listings described vaguely as “INSIDE iam8bit edition”, even if they say **sealed** or **collectible**. Unlike speculative reports that the standalone units were leftovers from CE shipments, this establishes only that a *separately listed physical product existed*; it does not determine how the discs were manufactured or packaged. Entered as the negative control `R24` in the [source ledger](../../data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv).
+
 ## Search strata, scoring and false-positive defense
 
 Candidate query categories include original purchase, arrival, edition mention, owner posts without game title, sticker photo, explicit number, number without title, ARG/riddle discussion, offered for sale, unboxing, black wrapper, wrapper without title, broadly co-mentioned collector edition, unboxing without game title and sticker plus number. **Every site receives multiple independent formulations**, not a translated single English query.
