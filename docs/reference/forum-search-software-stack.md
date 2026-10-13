@@ -1,12 +1,12 @@
 # Software stack for worldwide forum search
 
 **Status:** first offline indexing component implemented; optional retrieval tools evaluated (2026-10-12).  
-**Scope:** INSIDE historical discussions, arbitrary Unicode terms, symbolic identifiers, 484 candidate forum locations, approved archives.  
-**Related:** [per-site retrieval matrix](../../data/reference/global-gaming-forum-search-routing.tsv), [484 archive routes](../../data/reference/global-gaming-forum-archive-routes.tsv), [forum search methodology](global-gaming-forum-search-methods.md).
+**Scope:** INSIDE historical discussions, arbitrary Unicode terms, symbolic identifiers, 491 candidate forum locations, approved archives.  
+**Related:** [per-site retrieval matrix](../../data/reference/global-gaming-forum-search-routing.tsv), [491 archive routes](../../data/reference/global-gaming-forum-archive-routes.tsv), [forum search methodology](global-gaming-forum-search-methods.md).
 
 ## Practical recommendation
 
-Do **not** deploy a 484-domain crawler or a managed search server as the first step. The repository already produces explicit per-site search tasks and has a licensed web-index fallback. What was missing is a **persistent, independently searchable collection** of the public source text actually recovered by those workers. Search data once at acquisition, then run subsequent arbitrary queries offline for essentially zero per-query retrieval cost.
+Do **not** deploy a 491-domain crawler or a managed search server as the first step. The repository already produces explicit per-site search tasks and has a licensed web-index fallback. What was missing is a **persistent, independently searchable collection** of the public source text actually recovered by those workers. Search data once at acquisition, then run subsequent arbitrary queries offline for essentially zero per-query retrieval cost.
 
 ### Deployed in this repository
 
@@ -82,7 +82,7 @@ Search returns JSON objects; \`coverage=only_documents_present_in_local_database
 
 ### What this implementation does not claim
 
-It **does not yet** fetch WARC records from CDX itself, run Scrapy, conduct unrestricted site crawls, collect all 484 communities, reconstruct authors from forum HTML, automate translations or persist a shared full corpus between GHA runs. The immediate shipped value is a reproducible, searchable local collection once allowed data are supplied. That directly addresses the expensive repeated-query problem while preserving a clear path to richer retrieval later.
+It **does not yet** fetch WARC records from CDX itself, run Scrapy, conduct unrestricted site crawls, collect all 491 communities, reconstruct authors from forum HTML, automate translations or persist a shared full corpus between GHA runs. The immediate shipped value is a reproducible, searchable local collection once allowed data are supplied. That directly addresses the expensive repeated-query problem while preserving a clear path to richer retrieval later.
 
 ## Primary software references
 
