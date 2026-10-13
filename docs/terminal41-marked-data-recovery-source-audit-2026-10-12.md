@@ -75,6 +75,23 @@ Using **only the 84 physical sticker records (66 unique H108 positions)**, leave
 
 The counts apply identically to indexing 0..132 and 1..133. As a particularly concrete example, the **physically observed B-class body template is `/?//////-`**, with only one unknown body mark. Treating slash as a 1 in serial order gives **minimum binary value 382**, already above the entire 133-row address space.
 
+### What if each nine-bit class word contains an omitted parity/check bit?
+
+Because the page itself uses `err. corr.(1)` and `Omit MARKED` language, I also granted a *broader but still bounded* possibility: every class's nine-bit body word contains **one shared-position non-address bit**. Discard that position, interpret the other eight bits directly as a registry index, and test all **nine choices of discarded position × two serial directions × two symbol polarities = 36 configurations**.
+
+For each combination, *unknown physical bits are free*, and a common dropped position must apply across **all nine** classes. Results:
+
+| Bit polarity / traversal | Best of nine positions to discard | Minimum classes still guaranteed outside 133 rows |
+| --- | --- | ---: |
+| Forward / slash=1 | Position 1 | **2** |
+| Forward / dash=1 | Position 4 | **1** |
+| Reverse / slash=1 | Position 5 | **2** |
+| Reverse / dash=1 | Any position 1–9 | **1** |
+
+**Zero of 36** configurations can give valid direct registry row addresses for all nine classes. This is a stronger negative than the full nine-bit gate because it allows an arbitrary common parity/check-bit slot without using or learning that bit. Dropping more than one bit, changing bit positions per class, or applying modulo/lookup arithmetic could alter the outcome, but those extra operations have no source authorization. Nor does `err. corr.(1)` establish that *any* sticker bit is parity.
+
+The existing [address gate script](../scripts/audit_registry_nine_bit_address_gate.py) now checks all 36 cases as well as the four original full-nine-bit conventions with frozen expected minima and synthetic controls.
+
 **Conclusion:** No full nine-A–I direct row-address interpretation is type-compatible with this original registry under **any** of those four simple untransformed conventions, *regardless of the missing stickers*. Modulo 133, bit truncation, hashing, addressing only some classes, or using triplets instead of full nine-bit words remains logically possible, but **none is specified by this source**. Adding such a transformation merely to rescue the hypothesis would weaken it.
 
 A separate standard-library [physical-only indexed receiver gate](../scripts/audit_registry_nine_bit_address_gate.py) runs this without POS3, U2, U5, recursion, or model-completed mark assumptions. This is a productive use of closed-corpus research: a precise impossible receiver mapping despite unresolved stickers.
