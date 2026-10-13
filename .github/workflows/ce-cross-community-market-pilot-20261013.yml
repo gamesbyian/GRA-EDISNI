@@ -1,0 +1,85 @@
+name: CE cross-community archived collector-media pilot 2026-10-13
+
+# One-time isolated acquisition experiment. Do not merge this workflow.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-cross-community-market-pilot-20261013.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
+      - name: Search 24 historic public Reddit collector and resale query slices
+        run: |
+          python scripts/external_evidence/search_public_reddit_ce_media.py \
+            --max-queries 24 --per-query 25
+      - name: Acquire up to 24 eligible images from archived posts and comments
+        run: |
+          python scripts/external_evidence/fetch_html_images.py \
+            --leads visual-evidence-work/archived-market-discovery/image-leads.json \
+            --out evidence-work --max-images 24 --max-per-page 8
+      - name: Acquire known promotional and standalone controls
+        run: python scripts/external_evidence/fetch_visual_references.py
+      - name: Compare retrieved public media with all physical original sticker images
+        run: |
+          python scripts/external_evidence/visual_index.py \
+            --candidates evidence-work --max-files 250 --max-matches 8
+      - name: Print bounded source-first research audit for evidence review
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          def load(p,k):
+            f=Path(p)
+            if not f.exists(): return []
+            try: return json.loads(f.read_text()).get(k,[])
+            except (ValueError,OSError): return []
+          root="visual-evidence-work/archived-market-discovery/"
+          queries=load(root+"search-report.json","searches")
+          records=load(root+"review-queue.json","candidates")
+          image=load(root+"image-leads.json","image_mentions")
+          gallery=load(root+"gallery-leads.json","galleries")
+          dl=load("evidence-work/html-image-download-report.json","image_downloads")
+          triage=load("visual-evidence-work/visual-matches.json","triage")
+          print("CE_CROSS_MARKET_PILOT_BEGIN")
+          print("COUNTS",json.dumps({"queries":len(queries),
+            "failed_queries":sum(q.get("status")!="ok" for q in queries),
+            "records":len(records),"unreconciled_exact_links":sum(
+              r.get("source_status")=="unreconciled-by-exact-url" for r in records),
+            "direct_image_urls":len(image),"gallery_urls":len(gallery),
+            "retrieved_images":sum(x.get("status")=="downloaded" for x in dl),
+            "triage":len(triage)}))
+          for prefix,rows,keys in [
+            ("QUERY",queries,("search_id","kind","subreddit","term","status","returned","relevant","possibly_truncated","reason")),
+            ("LEAD",records,("kind","id","source_page_url","subreddit","created_utc","context_excerpt","score","source_status","direct_image_urls","gallery_urls","matched_search_ids")),
+            ("PHOTO",image,("source_page_url","image_url")),
+            ("GALLERY",gallery,("source_page_url","gallery_url")),
+            ("DOWNLOAD",dl,("source_page_url","image_url","status","sha256","bytes","error")),
+            ("TRIAGE",triage,("source_url","image_url","classification"))]:
+            print(prefix+"_COUNT",len(rows))
+            for record in rows[:100 if prefix in ("QUERY","DOWNLOAD") else 65]:
+              print(prefix,json.dumps({k:record.get(k) for k in keys if k in record},ensure_ascii=False))
+          print("CE_CROSS_MARKET_PILOT_END")
+          PY
+      - name: Upload full source-backed review corpus, no private tokens
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ce-cross-community-pilot-${{ github.run_id }}
+          path: |
+            evidence-work/
+            visual-reference-work/
+            visual-evidence-work/
+          retention-days: 30
+          if-no-files-found: warn
