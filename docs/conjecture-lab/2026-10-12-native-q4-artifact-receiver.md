@@ -80,6 +80,24 @@ Each bound is obtained by optimizing the admissible primary-triplet assignments 
 
 A tempting alternate idea is to treat the Q4-selected three quarter marks per class as an exceptional-position index for a second 3×3 coordinate on each poster sketch. **That fixed implementation fails:** classes E and F must both read `///`, providing no unique minority. A separately specified fallback would constitute a new variant, not a confirmation of this rule.
 
+## Three 3×3 masks: a bounded receiving-artifact input
+
+Arranging the nine background classes in the **historically reconstructed physical layout IAB/CDE/FGH**, and projecting the selected marks across three quarters, yields the following symbol masks. A question mark is an unresolved conditional output (NOT an unobserved physical sticker supplied as if known):
+
+```text
+Quarter 0             Quarter 1             Quarter 2
+ I A B                 I A B                 I A B
+ / ? /                 ? ? /                 / ? -
+ - / /                 / / /                 ? ? /
+ / ? -                 / ? -                 / ? /
+```
+
+There are **18 forced marks and nine unresolved binary positions**, so naively there would be `2^9 = 512` such matrices. Enforcing the *individual class-word* possibilities reduces this to **384**; enforcing the shared primary-triplet constraints reduces it further to **364**. Every one of these 364 masks is compatible with the frozen existing observations *conditional on the specified Q4 depth and binary minority grammar*. No single mask is preferred by the evidence yet.
+
+The [exact-mask generator](../../scripts/conjecture_lab_native_q4_base27.py) provides `--out-json /path/to/masks.json`, emitting all 364 candidates in both class-order and three-3×3-quarters representations, including the observation-source SHA-256 and explicit Q4 choices. The existing receiver-verification CI uploads this complete bank as the artifact `native-q4-binary-mask-bank`, rather than highlighting a lucky-looking drawing.
+
+These masks can be tested against the authentic nine-piece background reconstruction or a verified original poster master using **predeclared** crop/registration rules. Neither master has yet supplied a demonstrated selector-to-pixel transform, so a forced overlay result is not claimed.
+
 ## First direct receiver test: original 32×32 acorn printer artwork
 
 Interpret `O` as a literal 3×9 raster, and ask whether it can be a contiguous exact window of the 32×32 *original solved-order PC/PS4 acorn glyph image*. To avoid privileging an arbitrary placement, enumerate all windows of either native 3×9 or transposed 9×3 shape; all row/column reflections; and every global permutation of the three glyphs. For every window, check exact compatibility with **every observed physical sticker symbol**, the primary one-minority-per-triplet rule, and all 18 Q4 choices. Unobserved physical marks are free and chosen optimally within these hard constraints.
