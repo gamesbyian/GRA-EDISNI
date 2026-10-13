@@ -8,6 +8,7 @@ on:
       - "scripts/conjecture_lab_steam_password_direct.py"
       - "scripts/conjecture_lab_q4_roles.py"
       - "scripts/conjecture_lab_native_q4_receiver.py"
+      - "scripts/conjecture_lab_native_q4_base27.py"
       - "data/printer-reference/pc-ps4-acorn-order.txt"
       - "data/experiment-478-source-native-consumer-affordances.json"
       - "data/observations.csv"
@@ -40,7 +41,9 @@ jobs:
           python scripts/conjecture_lab_steam_password_direct.py > /tmp/steam-direct-control.txt
           python scripts/conjecture_lab_q4_roles.py > /tmp/q4-comparison.txt
           python scripts/conjecture_lab_native_q4_receiver.py > /tmp/native-q4-receiver.txt
+          python scripts/conjecture_lab_native_q4_base27.py > /tmp/native-q4-base27.txt
           cat /tmp/native-q4-receiver.txt
+          cat /tmp/native-q4-base27.txt
       - name: Show consumer audit summary
         run: |
           python -c 'import json; a=json.load(open("/tmp/source-consumer-gates.json")); print("sources:",a["artifact_total"],"new CE receivers:",a["verified_new_ce_value_receivers"],"type-compatible bunker direct placements:",a["known_lever_direct_replay_type_check"]["type_compatible_14_command_direct_placements"])'
