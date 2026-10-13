@@ -20,6 +20,8 @@ jobs:
         run: python scripts/check_evidence_map.py
       - name: Verify mixed-width and opcode grammar parser invariants
         run: python scripts/conjecture_lab_variable_length_grammar.py --test
+      - name: Check raw class-run and reference instruction DP smoke
+        run: python scripts/conjecture_lab_class_run_programs.py --test
       - name: Check conjecture lab conditional address probe
         run: python scripts/conjecture_lab_nine_bit_address_probe.py
       - name: Check conjecture lab controlled command backsolve
