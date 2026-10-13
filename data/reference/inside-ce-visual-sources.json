@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "purpose": "Exact public promotional image controls for detecting image reuse; they are not CE-owner evidence.",
+  "purpose": "Exact public CE photographic reference controls: promotional/standalone negative controls plus separately reviewed real collector photo. No reference is proof of a new sticker.",
   "sources": [
     {
       "id": "iam8bit-insidece-00001b",
@@ -186,6 +186,16 @@
       "source_page": "https://www.iam8bit.com/products/inside-ps4-physical-game",
       "role": "negative-control-standalone",
       "expected_sha256": "c5c996918d3d87d8e7481edda7495f0b645fa80b3ddcfda046815420eece6b19"
+    },
+    {
+      "id": "gamecollecting-2019-firstperson-open-ce",
+      "url": "https://i.redd.it/xat8isnm7m441.jpg",
+      "extension": ".jpg",
+      "origin": "first-person-Reddit-collector-original-open-box-photo-2019-12-14",
+      "subject": "4032x3024 original real collector's photo of open INSIDE CE: uncovered PS4 case, bagged Huddle, art card, internal contents panel; no numbered sticker visible.",
+      "source_page": "https://www.reddit.com/r/gamecollecting/comments/eaktdt/",
+      "role": "positive-control-public-owner-open-ce-no-visible-sticker",
+      "expected_sha256": "cd095cdfcfc9179d632876cceb8a3744da46e3248c34f7ad1bc2e3d301a129df"
     }
   ]
 }
