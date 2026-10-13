@@ -158,6 +158,20 @@ The identity row-order `IAB/CDE/FGH` is actually the native physical artwork arr
 
 **It is not evidence that Playdead intended a vertical flip.** The repeated-digit equality rule was invented for this test, and all eight views were inspected. A genuine externally printed mirror/flip/orientation instruction would be needed to promote the surviving branch. The four weak-model source-compatible orientations and their partial outputs are just as important to preserve as the strict-model six-state survival.
 
+### Exact reference null for the repeated-digit placement
+
+Because the literal same-digit codebook was invented after inspecting the existing candidate outputs, the single surviving strict-model vertical flip needs a selection-aware control. The source path has **three repeated pairs of digits plus three unique digits**. There are exactly **1,260 ways** to place three *unlabeled*, disjoint pairs among nine slots (equivalent to 45,360 distinct digit-multiset arrangements, 36 assignments per pair structure).
+
+For **each of all 1,260 reference pairings**, allow the *best of the same eight physical D4 orientations* to satisfy the U5 candidate codebook. Count complete U5 physical masters, not independently selected class marginals.
+
+| Event over the eight-view search | Number / 1,260 | Exact reference frequency |
+| --- | ---: | ---: |
+| At least one view retains any U5 master | 44 | **3.4921%** |
+| A view retains at least six of the ten U5 masters | 24 | **1.9048%** |
+| No view retains any U5 master | 1,216 | 96.5079% |
+
+These are **bounded combinatorial reference frequencies, not evidential p-values**. The 8 views are adjusted for, but the hypothetical repeated-digit equality rule, choice of three-mark class outputs, U5 machine assumptions, original URL selection and large wider hypothesis search were *all chosen with hindsight*. The result is therefore only a constrained speculative lead, requiring an independent Playdead-authored instruction before it could become support for a vertical flip.
+
 Reproduce: [exhaustive eight-orientation duplicate-digit codebook script](../scripts/audit_url_digit_triplet_d4.py). It keeps the full-model survivor sets separate from the much looser product of independent class-word possibilities and includes synthetic positive/negative controls.
 
 ## Native A–I receiving surface: class triplets, not just 27-character streams## Native A–I receiving surface: class triplets, not just 27-character streams
