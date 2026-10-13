@@ -2,11 +2,13 @@
   "schema_version": 1,
   "sources": [
     {
-      "id": "ce-july2020-gamesale-i0vgml",
+      "id": "i0vgml",
       "url": "https://www.reddit.com/r/GameSale/comments/i0vgml/",
       "kind": "reddit",
       "media": false,
-      "evidence_role": "unreconciled-resale-comment-media"
+      "evidence_role": "unreconciled-resale-comment-media",
+      "source_page_url": "https://www.reddit.com/r/GameSale/comments/i0vgml/",
+      "source_role": "unreconciled-2020-resale-lead"
     }
   ]
 }
