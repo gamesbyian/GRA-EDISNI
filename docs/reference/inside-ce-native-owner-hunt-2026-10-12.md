@@ -79,6 +79,8 @@ A [November 29, 2019 ResetEra physical-releases discussion](https://www.resetera
 
 These contemporaneous sources are in the [owner and negative-control ledger](../../data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv) as `R24`–`R27`; **none contributes a new physical sticker**.
 
+**Community-method provenance update (2026-10-13):** [Raezore's firsthand research-method account](https://github.com/twinysam/INSIDE-ARG/blob/master/raezores-research.md) documents years of manual and AI-assisted CE/ARG discovery, including multilingual searches, Huddle photographs, Google Images, deep replies, sales, aliases and scheduled searches. Read our [source-grounded overlap and reproducibility audit](raezore-community-search-baseline-2026-10-13.md) before presenting any of those activities as newly devised. **Nine Raezore-documented, marketing-name search families** have been added once per website. The full prepared manifest now contains **15,669 forum + 12,519 other-source = 28,188** planned tasks, **28 expression categories**; these are still not 28,188 executed searches.
+
 ## Search strata, scoring and false-positive defense
 
 Candidate query categories include original purchase, arrival, edition mention, owner posts without game title, sticker photo, explicit number, number without title, ARG/riddle discussion, offered for sale, unboxing, black wrapper, wrapper without title, broadly co-mentioned collector edition, unboxing without game title and sticker plus number. **Every site receives multiple independent formulations**, not a translated single English query.
@@ -108,7 +110,7 @@ High-value positive examples from the canonical research history: YouTube unboxi
 
 ## Execution and automation
 
-The new [planner](../../scripts/build_inside_ce_native_search_campaign.py) joins every source to the existing forum and archive route matrix, emits reproducible UTF-8 JSONL tasks, verifies unique task IDs, and fairly interleaves **locale and source-site tasks** so a small paid-search budget does not exhaust one platform or language. Current full plans: **11,250 forum queries** plus **12,249 social/video/resale queries** across 19 query categories and 50 native locale profiles. They are proposed queries, not executed retrievals. The manual [GitHub Actions campaign workflow](../../.github/workflows/inside-ce-native-search-campaign.yml) runs offline tests and emits planned work. It supports optional limited **official Brave Search API** index lookups only when the user explicitly enables paid searches and has configured the API key.
+The new [planner](../../scripts/build_inside_ce_native_search_campaign.py) joins every source to the existing forum and archive route matrix, emits reproducible UTF-8 JSONL tasks, verifies unique task IDs, and fairly interleaves **locale and source-site tasks** so a small paid-search budget does not exhaust one platform or language. Current full plans: **15,669 forum queries** plus **12,519 social/video/resale queries** across 28 query categories and 50 native locale profiles. They are proposed queries, not executed retrievals. The manual [GitHub Actions campaign workflow](../../.github/workflows/inside-ce-native-search-campaign.yml) runs offline tests and emits planned work. It supports optional limited **official Brave Search API** index lookups only when the user explicitly enables paid searches and has configured the API key.
 
 Example:
 
