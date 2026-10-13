@@ -1,0 +1,101 @@
+name: Plan native-language INSIDE CE ownership searches
+
+on:
+  workflow_dispatch:
+    inputs:
+      categories:
+        description: "Campaign scope"
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - owners_and_numbers
+          - arg_and_unboxing
+      site_statuses:
+        description: "Existing forum evidence groups"
+        required: true
+        default: V,C,H
+        type: choice
+        options:
+          - V,C,H
+          - V
+          - V,C
+      execute_index:
+        description: "Run the opt-in official web-index API if secret is configured"
+        required: true
+        default: "no"
+        type: choice
+        options:
+          - "no"
+          - "yes"
+      max_index_queries:
+        description: "Paid API index calls, 1-1000 (default 20)"
+        required: true
+        default: "20"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  build-native-campaign:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test locale mappings and source joins
+        run: python -m unittest discover -s tests -p 'test_inside_ce_native_campaign.py' -v
+      - name: Build native-language, forum-scoped task ledger (offline)
+        env:
+          CATEGORIES: ${{ inputs.categories }}
+          STATUSES: ${{ inputs.site_statuses }}
+        run: |
+          python - <<'PY'
+          import os
+          import subprocess
+          cmd = [
+              "python", "scripts/build_inside_ce_native_search_campaign.py",
+              "--output", "search-output/inside-ce-native-tasks.jsonl",
+              "--summary", "search-output/inside-ce-native-summary.json",
+              "--statuses", os.environ["STATUSES"],
+          ]
+          scope = os.environ["CATEGORIES"]
+          if scope == "owners_and_numbers":
+              for category in ("owner_bought", "owner_received",
+                               "owner_without_game_name", "edition_number",
+                               "serial_without_title", "for_sale",
+                               "sticker_photograph"):
+                  cmd.extend(("--category", category))
+          if scope == "arg_and_unboxing":
+              for category in ("arg_discussion", "unboxing",
+                               "sticker_photograph", "edition_discussion"):
+                  cmd.extend(("--category", category))
+          subprocess.run(cmd, check=True)
+          PY
+      - name: Optional, bounded official Brave Search API index lookup
+        if: ${{ inputs.execute_index == 'yes' }}
+        env:
+          BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
+          MAX_INDEX_QUERIES: ${{ inputs.max_index_queries }}
+        run: |
+          python - <<'PY'
+          import os
+          import subprocess
+          subprocess.run([
+              "python", "scripts/run_global_forum_index_search.py",
+              "--tasks", "search-output/inside-ce-native-tasks.jsonl",
+              "--output", "search-output/inside-ce-index-results.jsonl",
+              "--summary", "search-output/inside-ce-index-summary.json",
+              "--max-queries", os.environ["MAX_INDEX_QUERIES"],
+          ], check=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inside-ce-native-search-campaign
+          path: search-output/
+          retention-days: 30
+          if-no-files-found: error
