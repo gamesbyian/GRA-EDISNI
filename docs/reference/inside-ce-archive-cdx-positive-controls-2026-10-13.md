@@ -1,6 +1,6 @@
 # INSIDE CE historical retrieval: dated controls and bounded archive probes
 
-**Mode:** DISCOVER. **State:** code + positive controls prepared, not a completed 484-forum archive scan. **Date:** 2026-10-13.
+**Mode:** DISCOVER. **State:** code + positive controls prepared, not a completed 491-forum archive scan. **Date:** 2026-10-13.
 
 This is the second practical acquisition stage after [the 50-native-language CE ownership program](inside-ce-native-owner-hunt-2026-10-12.md) and [the offline SQLite/warcio indexer](forum-search-software-stack.md). It establishes whether known original **URLs** were captured in the 2016–2026 web archives before investing in WARC downloads and searches. The new [16-control dataset](../../data/reference/inside-ce-archive-positive-controls.tsv) includes five classes: known sticker serial discussions; first-person owners without sticker photos; preorder/non-owner negative controls; unverified original 2019 Twitch unboxing archive; and post-2019 marketplace/ARG discussions.
 
@@ -24,7 +24,7 @@ These new findings are in the [19-row evidence/lead ledger](../../data/reference
 
 ## Metadata tool
 
-The opt-in [Wayback CDX metadata probe](../../scripts/probe_inside_ce_wayback_cdx.py) selects dated source controls or the [484-forum archival matrix](../../data/reference/global-gaming-forum-archive-routes.tsv), and queries historical capture **metadata** only. It records original URL, timestamp, status, MIME, digest and sample limit; it **does not retrieve page bodies, inspect archived comments or claim full historical coverage**. Each original URL is searched independently within two broad windows, **2016–2020** and **2021–2026**. The maximum is 50 source URLs, two bounded CDX metadata requests per source, and a minimum two-second delay between actual requests. HTTP 429/403/401/503 stops the run, with no circumvention.
+The opt-in [Wayback CDX metadata probe](../../scripts/probe_inside_ce_wayback_cdx.py) selects dated source controls or the [491-forum archival matrix](../../data/reference/global-gaming-forum-archive-routes.tsv), and queries historical capture **metadata** only. It records original URL, timestamp, status, MIME, digest and sample limit; it **does not retrieve page bodies, inspect archived comments or claim full historical coverage**. Each original URL is searched independently within two broad windows, **2016–2020** and **2021–2026**. The maximum is 50 source URLs, two bounded CDX metadata requests per source, and a minimum two-second delay between actual requests. HTTP 429/403/401/503 stops the run, with no circumvention.
 
 Example, offline planning (default):
 

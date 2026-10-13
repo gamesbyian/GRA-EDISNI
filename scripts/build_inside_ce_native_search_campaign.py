@@ -22,6 +22,7 @@ MULTI_LOCALES = (
     "zh-CN", "zh-TW", "zh-HK", "ko", "vi", "th", "id", "ms", "tl", "hi",
     "bn", "ur", "ne", "si", "ru", "uk", "ar", "fa", "he", "sw"
 )
+LANGUAGE_INDEPENDENT_CATEGORIES = frozenset(("product_anchor_iam8bit", "product_anchor_realdoll"))
 FIRST_PASS_LOCALES = (
     "en", "ja", "zh-TW", "zh-CN", "ko", "fr", "de", "es", "pt-BR",
     "it", "vi", "ar", "ru", "tr", "pl", "nl", "id", "th", "uk", "fa"
@@ -38,6 +39,12 @@ def expressions(lang):
     """Native expressions: the identifying proper names are not translated."""
     v = {k: quote(x) for k, x in lang.items() if k != "locale"}
     return (
+        # Shared proper-name searches get emitted once per site, not once
+        # per language. Native idiom queries below remain locale-specific.
+        ("product_anchor_iam8bit", f'{quote("INSIDE")} {quote("iam8bit")}'),
+        ("product_anchor_realdoll", f'{quote("INSIDE")} {quote("RealDoll")}'),
+        ("native_sticker_broad", f'{quote("INSIDE")} {v["sticker_term"]}'),
+        ("native_arrival_broad", f'{quote("INSIDE")} {v["arrival_phrase"]}'),
         ("owner_bought", f'{quote("INSIDE")} {quote("iam8bit")} {v["ownership_phrase"]}'),
         ("owner_received", f'{quote("INSIDE")} {quote("iam8bit")} {v["arrival_phrase"]}'),
         ("edition_discussion", f'{quote("Playdead")} {v["edition_term"]}'),
@@ -124,6 +131,9 @@ def build(directory, routes, archives, lexicon, *, allowed_statuses, max_tasks,
             for category, expr in expressions(dictionary[locale]):
                 if categories and category not in categories:
                     continue
+                if (category in LANGUAGE_INDEPENDENT_CATEGORIES
+                        and locale != locales_for_site(site["language"])[0]):
+                    continue
                 index_query = route["index_query_scope"] + " " + expr
                 key = (site["community"], site["url"], locale, category, expr)
                 task_id = hashlib.sha256("\0".join(key).encode("utf-8")).hexdigest()[:20]
@@ -166,6 +176,9 @@ def build_secondary(sources, lexicon, *, max_tasks=20000, categories=None):
                 raise ValueError(f"Secondary {source['source']} has unknown locale {locale}")
             for category, expr in expressions(dictionary[locale]):
                 if categories and category not in categories:
+                    continue
+                if (category in LANGUAGE_INDEPENDENT_CATEGORIES
+                        and locale != locales_for_site(source["language"])[0]):
                     continue
                 key = "\0".join((source["source"], source["url"], locale, category, expr))
                 task_id = hashlib.sha256(key.encode("utf-8")).hexdigest()[:20]

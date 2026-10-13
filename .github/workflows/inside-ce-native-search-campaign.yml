@@ -87,7 +87,9 @@ jobs:
           ]
           scope = os.environ["CATEGORIES"]
           if scope == "owners_and_numbers":
-              for category in ("owner_bought", "owner_received",
+              for category in ("product_anchor_iam8bit", "product_anchor_realdoll",
+                               "native_sticker_broad", "native_arrival_broad",
+                               "owner_bought", "owner_received",
                                "owner_without_game_name", "edition_number",
                                "serial_without_title", "for_sale",
                                "sticker_photograph", "outer_wrapper",
@@ -95,7 +97,8 @@ jobs:
                                "edition_broad"):
                   cmd.extend(("--category", category))
           if scope == "arg_and_unboxing":
-              for category in ("arg_discussion", "unboxing",
+              for category in ("product_anchor_iam8bit", "product_anchor_realdoll",
+                               "native_sticker_broad", "arg_discussion", "unboxing",
                                "sticker_photograph", "edition_discussion",
                                "unboxing_without_game_name", "outer_wrapper"):
                   cmd.extend(("--category", category))
