@@ -66,14 +66,15 @@ class VisualProvenanceTests(unittest.TestCase):
         folder.mkdir()
         (folder / "acquisition.json").write_text(json.dumps({
             "url": "https://example.org/public-auction/1", "classification": "ok",
-            "image_urls": {"scan.jpg": "https://i.redd.it/known-public-source.jpg"}
+            "image_urls": {"scan.jpg": "https://i.redd.it/known-public-source.jpg"},
+            "source_pages": {"scan.jpg": "https://www.reddit.com/comments/e9bteo/_/gabc12/"}
         }))
         (folder / "scan.jpg").write_bytes(self.original.read_bytes())
         (folder / "broken.png").write_text("not an image")
         records, errors = candidates(self.inbox, max_files=10)
         self.assertEqual(len(records), 1)
         self.assertEqual(len(errors), 1)
-        self.assertEqual(records[0]["source_url"], "https://example.org/public-auction/1")
+        self.assertEqual(records[0]["source_url"], "https://www.reddit.com/comments/e9bteo/_/gabc12/")
         self.assertEqual(records[0]["source_kind"], "auction-example")
         self.assertEqual(records[0]["image_url"], "https://i.redd.it/known-public-source.jpg")
 
