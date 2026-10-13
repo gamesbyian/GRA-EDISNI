@@ -21,7 +21,7 @@ Canon: **84 physical serial records, 66 H108 residues, 42 unknown**. Use the exi
 | U4 | **12** | first selector-selected surfaces must have valid one-dash-per-column POS3 |
 | U5 | **10** | second selected surface must also have valid POS3 |
 
-All populations use the exact same physical CSV, and U5⊂U4⊂U3⊂U2. Enumerators are \`scripts/build_completion_universe.py\` and \`scripts/audit_completion_universe_layers.py\`. Each model is conditional. Especially, U2 is **not** a statistically proven generative code.
+All populations use the exact same physical CSV, and U5⊂U4⊂U3⊂U2. Enumerators are `scripts/build_completion_universe.py` and `scripts/audit_completion_universe_layers.py`. Each model is conditional. Especially, U2 is **not** a statistically proven generative code.
 
 ## Twelve frozen readout probes
 
@@ -48,11 +48,11 @@ The probes are explicitly stipulated, not Playdead-authored or selected because 
 
 The fixed middle-depth read is
 
-\`\`\`
+```
 ---/-/-/--//////--//////---
-\`\`\`
+```
 
-It consists of 27 body sites at primary depths \`d=1\` in Q1/Q2/Q3. Of the 27 sites:
+It consists of 27 body sites at primary depths `d=1` in Q1/Q2/Q3. Of the 27 sites:
 
 - **20 are directly physically observed** in the canonical sticker list;
 - **seven are imputed solely by U2's 3×3 column rule**;
@@ -60,9 +60,9 @@ It consists of 27 body sites at primary depths \`d=1\` in Q1/Q2/Q3. Of the 27 si
 
 The strictly physical mark template, before applying any completion model, is:
 
-\`\`\`
+```
 -?-/-/?/--///?//-??//??/---
-\`\`\`
+```
 
 A literal recipient that accepts a 27-site string could in principle consume the entire first word even without more stickers **if the U2 rule is correct**. But the fixed-depth middle slice was considered in Experiment 451 as a *control* rather than an independently discovered intended operation. It must not be chosen solely because it is invariant.
 
@@ -70,16 +70,16 @@ A literal recipient that accepts a 27-site string could in principle consume the
 
 The ten U5 masters yield **two** selected 27-mark words, with four and six master occurrences respectively:
 
-\`\`\`
+```
 -/-////-/  -//////--  /--///-//
 -/-////-/  //////---  ---//////
-\`\`\`
+```
 
 (Space separates the three nine-site primary quarters; it is not printed.)
 
 Only readout positions **10, 16, 19 and 25** differ. They map to:
 
-| 1-based readout position | Quarter | Image class | Row, column in \`IAB/CDE/FGH\` |
+| 1-based readout position | Quarter | Image class | Row, column in `IAB/CDE/FGH` |
 | ---: | --- | --- | --- |
 | 10 | Q2 | A | (1,2) |
 | 16 | Q2 | G | (3,2) |
@@ -92,18 +92,35 @@ This supplies a practical, finite target for a recipient audit: does the authent
 
 The nine Q4 selector codes fall into only **four** distinct patterns inside U5; the U5 selected-readout is even coarser at two. Different sticker sequences can thus already produce the same selected output. Claiming the 108-cell master must be uniquely recovered is stronger than the actual identification requirement for such a receptor.
 
-## Result C: terminal \`100\` is a very weak *output discriminator*
+## Selection-aware correction: A/G cover fewer physical sticker positions
 
-Read the Q4 chosen depth at both original body coordinates: \`(q,d,j)=(S(j),S(j),j)\`. If the resulting nine-cell 3×3 surface has exactly one dash per physical column, its POS3 readout is:
+The physical class coverage is uneven:
 
-| Population | Valid terminal \`100\` | Invalid terminal POS3 |
+| Class | A | B | C | D | E | F | G | H | I |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Observed of 12 | **4** | 10 | 9 | 7 | 7 | 8 | **5** | 8 | 8 |
+
+A and G have **only 9 of their 24 physical positions witnessed**, the two sparsest classes. Under the simplified null of uniformly choosing 66 of the 108 distinct positions:
+
+- a **pre-specified** pair A/G would have at most nine combined observed positions with probability **0.7519%**;
+- the **two least-covered classes chosen after seeing the data** would have a combined nine or fewer with probability **18.8450%**.
+
+The second is the relevant reference for the discovered A/G sparsity, since the classes were singled out after inspecting the readout. It is not evidence for a deliberately authored center-column clue. This model conditions on 66 distinct logical residues, not the real socially mediated discovery process or unequal physical copy counts. The exact combinatorial DP and a synthetic positive control are in [the class-coverage selection-null audit](../scripts/audit_class_coverage_selection_null.py).
+
+**Interpretation:** A/G are useful *locations* to examine on a source-authored physical receiver, but their apparent rarity is largely a selection effect.
+
+## Result C: terminal `100` is a very weak *output discriminator*
+
+Read the Q4 chosen depth at both original body coordinates: `(q,d,j)=(S(j),S(j),j)`. If the resulting nine-cell 3×3 surface has exactly one dash per physical column, its POS3 readout is:
+
+| Population | Valid terminal `100` | Invalid terminal POS3 |
 | --- | ---: | ---: |
 | U2 | **144** | 180 |
 | U3 | **48** | 60 |
 | U4 | **10** | 2 |
 | U5 | **10** | 0 |
 
-**Crucially, no valid terminal under this exact operation reads anything other than \`100\`, even in the broad U2 population before imposing first-pass constraints.** Thus the terminal \`100\` is a structural *conditional consequence* of the occupied-column grammar, Q4 one-hot assumptions and actual observed marks, not a highly selective independently supplied password. It remains mechanically reproducible; its semantic authority has not been demonstrated.
+**Crucially, no valid terminal under this exact operation reads anything other than `100`, even in the broad U2 population before imposing first-pass constraints.** Thus the terminal `100` is a structural *conditional consequence* of the occupied-column grammar, Q4 one-hot assumptions and actual observed marks, not a highly selective independently supplied password. It remains mechanically reproducible; its semantic authority has not been demonstrated.
 
 ## Result D: literal 27-site direct-printer receiver control is negative
 
@@ -129,12 +146,13 @@ Compare every contiguous width-27 window, for exactly four source-simple order/p
 
 ## Reproducibility and evidence status
 
-\`\`\`sh
+```sh
 python scripts/audit_finite_receiver_invariance.py --self-test
 python scripts/audit_finite_receiver_invariance.py --output /tmp/receiver-frontier.json
 python scripts/audit_middle_depth_printer_control.py --self-test
 python scripts/audit_middle_depth_printer_control.py --output /tmp/printer-comparison.json
-\`\`\`
+python scripts/audit_class_coverage_selection_null.py --output /tmp/coverage-null.json
+```
 
 The readout counts, U5 A/G address mapping, and literal original-printer window distances were **independently enumerated against the live canonical CSV and genuine source text via a separate JavaScript implementation in this research turn**. The committed standard-library Python programs add their own hard assertions, explicit physical counts and small synthetic positive controls. **The committed Python entrypoints have not yet been executed in the repository's CI and do not replace that independent verification.**
 
