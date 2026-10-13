@@ -323,6 +323,83 @@ def delimiter_bounds(s, delimiter: str):
             "certain_count":len(certain),"uncertain_count":len(possible)-len(certain)}
 
 
+def slash_as_single_bit(physical: str, slash_bit: str = "1"):
+    """Cross-zone collapse: / vs (dash OR dot). Intentional invented rival.
+
+    The two physical alphabets remain recorded distinctly in the source; this
+    binary view is a possible interpretation, NOT a correction to the corpus.
+    """
+    other = "0" if slash_bit == "1" else "1"
+    return "".join("?" if c == "?" else slash_bit if c == "/" else other
+                   for c in physical)
+
+
+def traversal(s: str, ordering: str):
+    """Simple physically/canonically motivated H108 traversals. Index choices
+    are frozen before looking at parser output. Reversals are separate trials.
+    """
+    if ordering == "serial":
+        return s
+    if ordering == "reverse_serial":
+        return s[::-1]
+    order = "ABCDEFGHI" if "class_A_I" in ordering else "IABCDEFGH"
+    if ordering not in ("class_A_I","reverse_class_A_I","picture_IAB_CDE_FGH","reverse_picture_IAB_CDE_FGH"):
+        raise ValueError(ordering)
+    part = "".join(s[ord(c)-ord("A")::9] for c in order)
+    return part[::-1] if ordering.startswith("reverse_") else part
+
+
+FULL_TRAVERSALS=("serial","reverse_serial","class_A_I","reverse_class_A_I",
+                 "picture_IAB_CDE_FGH","reverse_picture_IAB_CDE_FGH")
+
+
+def cross_zone_null(s: str, *, n=200, seed=20261012, frame9=False):
+    """Multiple-comparison control for best of 6 traversals, 2 polarities,
+    and 6 full-stream program languages, preserving original physical zones.
+    """
+    rng=random.Random(seed)
+    slices=[(start,min(start+9,end)) for a,end in ((0,81),(81,108))
+            for start in range(a,end,9)] if frame9 else [(0,81),(81,108)]
+    groups=[[i for i in range(a,b) if s[i]!="?"] for a,b in slices]
+    def best(t):
+        return max(parse_program(traversal(slash_as_single_bit(t,polarity),view),cb)["program_completions"]
+                   for view in FULL_TRAVERSALS for polarity in ("1","0") for cb in CODEBOOKS.values())
+    observed=best(s)
+    vals=[]
+    for _ in range(n):
+        chars=list(s)
+        for indices in groups:
+            labels=[s[i] for i in indices]
+            rng.shuffle(labels)
+            for i,label in zip(indices,labels):chars[i]=label
+        vals.append(best("".join(chars)))
+    vals.sort()
+    return {"observed_best":observed,"shuffles":n,"null_median":vals[n//2],
+            "null_q95":vals[min(n-1,int(n*.95))],
+            "fraction_ge_best":f"{1+sum(v>=observed for v in vals)}/{n+1}",
+            "seed":seed,"frame9":frame9,"search_size":len(FULL_TRAVERSALS)*2*len(CODEBOOKS),
+            "note":"post-selection ensemble maximum; cross-zone slash-vs-nonslash mapping assumed"}
+
+
+def cross_zone_audit(s: str, *, n=200):
+    out={"interpretation":"slash vs dash-or-dot collapses distinct 81/27 alphabets; speculative",
+         "traversals":{},"null_controls":{}}
+    for view in FULL_TRAVERSALS:
+        partial=traversal(s,view)
+        out["traversals"][view]={}
+        for slash in ("1","0"):
+            bits=slash_as_single_bit(partial,slash)
+            out["traversals"][view][f"slash={slash}"]={
+                "grammar":{k:{"program_completions":v["program_completions"],
+                              "with_control_completions":v["with_control_completions"]}
+                           for k,book in CODEBOOKS.items() if (v:=parse_program(bits,book))},
+                "observed_adjacent_pairs":contiguous_observation(bits)["known_adjacent_pairs"],
+                "matching_adjacent_pairs":contiguous_observation(bits)["matching_pairs"]}
+    out["null_controls"]["original_zone_shuffles"] = cross_zone_null(s,n=n,seed=20261020)
+    out["null_controls"]["original_nine_site_frame_shuffles"] = cross_zone_null(s,n=n,seed=20261021,frame9=True)
+    return out
+
+
 def one_hot_tail_audit(tail: str):
     """Independent class-local 9+3 instruction-header census, with exact nulls.
 
@@ -376,7 +453,7 @@ def one_hot_tail_audit(tail: str):
             "note":"Compatibility only; 427 dot eliminates half the historically reported 36 one-slash completions."}
 
 
-def analyze(s, nperm=12000, nparser=500):
+def analyze(s, nperm=12000, nparser=500, ncross=200):
     assert len(s)==108
     out={"status":"DISCOVER/DEVELOP only; no identified decoder", "corpus":{"records":None,"distinct_observed":len(s)-s.count("?"),"unknown":s.count("?"),"h108_length":108},"zones":{}}
     for start,end,label,symbols in ZONES:
@@ -401,10 +478,14 @@ def analyze(s, nperm=12000, nparser=500):
         z["nulls"]["parser_best_of_family_frame9"] = parser_null(bit_string(zone,symbols[0],symbols[1]),n=nparser,seed=20261312+start,frames=True)
         out["zones"][label]=z
     out["cross_zone_class_metadata"] = one_hot_tail_audit(s[81:])
+    out["cross_zone_slash_binary"] = cross_zone_audit(s,n=ncross)
     return out
 
 
 def test():
+    assert traversal("ABCDEF","serial")=="ABCDEF"
+    assert traversal("ABCDEF","reverse_serial")=="FEDCBA"
+    assert slash_as_single_bit("-/./?", "1")=="0101?"
     assert all(is_prefix_free(x) for x in CODEBOOKS.values())
     assert not is_prefix_free({"0":None,"01":None})
     assert matches("?0?","101") and not matches("00","01")
@@ -465,6 +546,7 @@ def main():
     ap.add_argument("--output",type=Path,default=Path("data/conjecture-lab-variable-length-grammar-2026-10-12.json"))
     ap.add_argument("--replicates",type=int,default=12000)
     ap.add_argument("--parser-null-replicates",type=int,default=500)
+    ap.add_argument("--cross-null-replicates",type=int,default=200)
     ap.add_argument("--test",action="store_true")
     args=ap.parse_args()
     test()
@@ -472,7 +554,7 @@ def main():
         print("parser and run-DP invariants passed")
         return
     s,n=load_observations(args.observations)
-    report=analyze(s,nperm=args.replicates,nparser=args.parser_null_replicates)
+    report=analyze(s,nperm=args.replicates,nparser=args.parser_null_replicates,ncross=args.cross_null_replicates)
     report["corpus"]["records"]=n
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(report,indent=2,sort_keys=True)+"\n",encoding="utf-8")
@@ -486,6 +568,7 @@ def main():
                 print("    ",g,"accepted",p["program_completions"],"of",p["possible_completions"])
     print("tail class one-hot",report["cross_zone_class_metadata"]["one_slash_completions"],
           "exact null",report["cross_zone_class_metadata"]["exact_observation_label_permutation_nulls"])
+    print("cross-zone controls",report["cross_zone_slash_binary"]["null_controls"])
     print("wrote",args.output)
 
 if __name__=="__main__":
