@@ -1,6 +1,10 @@
 # 2019 first-person collector photograph: independent INSIDE CE packaging evidence
 
-**Observed / reviewed:** October 13, 2026. **Original Reddit publication:** December 14, 2019. **Status:** genuine **first-person photographed physical CE** with **no numbered sticker visible**; **no new sticker/serial confirmed**. **Owner case:** not independently reconciled to the existing U/L/known-photo transfer ledger by original post ID. No owner outreach was undertaken.
+**Observed / reviewed:** October 13, 2026. **Original Reddit publication:** December 14, 2019. **Status:** real first-person CE photograph, no numbered sticker visible. **Owner case:** already known **L08** (canonical lost sticker; public account Knuckles316). No new physical owner or serial confirmed; no outreach.
+
+## Resolved public source identity and case
+
+Original public post `eaktdt` → archived public author `Knuckles316` → **existing community L08**. The sticker ledger tracks the account, not this exact photo-post ID. The first exact-URL search therefore produced a false 'new owner' impression, resolved by checking the original public account against canonical owner-case text. No account-profile crawling, messaging or other outreach occurred.
 
 ## Exact primary evidence
 
@@ -18,15 +22,15 @@ The internal contents card includes the wording “INSIDE FOR PS4” and “EXCL
 
 ## Comparative result
 
-The actual two retrieved image files were compared with **82 canonical original sticker photographs** plus the **20 publisher/standalone/press controls** using `visual_index.py`. Both were unmatched: **0 reference matches, 0 machine-reported readable stickers**. This does **not** mean the owner's physical box is unique or that the source username is absent from all existing U/L transfer histories, only that this *photograph* is not a known original sticker photo or publisher reference.
+The actual two retrieved image files were compared with **82 canonical original sticker photographs** plus **20 publisher/standalone/press controls** via `visual_index.py`. Both were unmatched: 0 reference matches. The subsequent public account reconciliation demonstrated they belong to **already-known lost-sticker case L08**; a novel image or post URL alone would have been an unreliable signal of a novel owner.
 
 ### New positive-control class
 
-The SHA-locked full-resolution JPEG is now a separate image reference with `role=positive-control-public-owner-open-ce-no-visible-sticker` (source manifest), mapped by the visual engine to `historical-owner-photo-no-visible-sticker`. Future exact/reencoded reposts should appear under `known-owner-photo-repost-review`, **not** `promotional-reuse-review`, `known-sticker-photo-repost-review` or newly confirmed owner. A regression verifies the role propagation and never-set `new_sticker_confirmed` state.
+The SHA-locked full-resolution JPEG is now an image reference with `role=positive-control-public-owner-open-ce-no-visible-sticker` and explicit **`canonical_case=L08`**, mapped to `historical-owner-photo-no-visible-sticker`. Future exact/reencoded reposts should be classified `known-owner-photo-repost-review`, rather than promotional artwork, known numbered sticker, or a newly confirmed physical copy. A regression enforces this.
 
 ## Qualification and useful follow-up
 
-This is an original, public, dated **CE collector/recipient photo-source lead**, new by exact image URL and post ID relative to the captured public sticker ledger. Its **source freshness does not establish a new physical edition or a new owner case**. Before passing it to raezores as a novel owner, reconcile the public author's established 2019 context against already recorded U/L owners and any other cross-posted images; avoid messaging or contacting them.
+This is new **photographic provenance for previously known case L08**, not a new CE owner or sticker. The original post's archived public author is **Knuckles316**, whose exact username occurs in the [canonical community ledger](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md) as **L08, sticker confirmed lost**, recorded January 28, 2020. The [one-shot public post-ID source comparison](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38473137674) confirmed this exact name match and original 2019 photo's date. Do not forward this as a new owner to raezores. The picture offers a valuable earlier historical view of that same collector's copy, but cannot establish why or when its sticker was lost.
 
 The original 2019 high-resolution photograph remains retrievable via its exact Reddit CDN URL and under the 30-day GHA evidence artifact. Preserve its known digest so subsequent retrieval cannot silently substitute a different photo.
 
