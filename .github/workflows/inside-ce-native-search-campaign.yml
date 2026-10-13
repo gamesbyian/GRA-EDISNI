@@ -6,6 +6,7 @@ on:
       - 'scripts/build_inside_ce_native_search_campaign.py'
       - 'tests/test_inside_ce_native_campaign.py'
       - 'data/reference/inside-ce-native-search-lexicon.tsv'
+      - 'data/reference/inside-ce-ownership-secondary-platforms.tsv'
       - '.github/workflows/inside-ce-native-search-campaign.yml'
   push:
     branches: [main]
@@ -24,6 +25,14 @@ on:
           - all
           - owners_and_numbers
           - arg_and_unboxing
+      source_scope:
+        description: "Where optional paid index lookups start"
+        required: true
+        default: secondary
+        type: choice
+        options:
+          - secondary
+          - forums
       site_statuses:
         description: "Existing forum evidence groups"
         required: true
@@ -73,6 +82,7 @@ jobs:
               "python", "scripts/build_inside_ce_native_search_campaign.py",
               "--output", "search-output/inside-ce-native-tasks.jsonl",
               "--summary", "search-output/inside-ce-native-summary.json",
+              "--secondary-output", "search-output/inside-ce-secondary-tasks.jsonl",
               "--statuses", os.environ["STATUSES"],
           ]
           scope = os.environ["CATEGORIES"]
@@ -93,13 +103,17 @@ jobs:
         env:
           BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
           MAX_INDEX_QUERIES: ${{ inputs.max_index_queries }}
+          SOURCE_SCOPE: ${{ inputs.source_scope || 'secondary' }}
         run: |
           python - <<'PY'
           import os
           import subprocess
+          tasks = ("search-output/inside-ce-secondary-tasks.jsonl"
+                   if os.environ["SOURCE_SCOPE"] == "secondary"
+                   else "search-output/inside-ce-native-tasks.jsonl")
           subprocess.run([
               "python", "scripts/run_global_forum_index_search.py",
-              "--tasks", "search-output/inside-ce-native-tasks.jsonl",
+              "--tasks", tasks,
               "--output", "search-output/inside-ce-index-results.jsonl",
               "--summary", "search-output/inside-ce-index-summary.json",
               "--max-queries", os.environ["MAX_INDEX_QUERIES"],
