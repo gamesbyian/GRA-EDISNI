@@ -30,12 +30,21 @@ def load_rows(path: Path, inventory: str) -> list[dict]:
              "evidence": r["evidence_type"], "window": r["post_period"]}
             for r in rows
         ]
-    return [
+    indexed = [
         {"label": r["community"], "url": r["original_url"],
          "evidence": r["source_assurance"], "window": "2016-2026",
          "access": r["handling"], "priority": r["priority"]}
         for r in rows
     ]
+    # The 483-row inventory is geographical. For a small archive pilot,
+    # prioritize actual documentary rescue/archive leads rather than the
+    # earliest English sites in original directory order.
+    ranks = {"P0": 0, "P1": 1, "P2": 2, "P3": 3}
+    return sorted(indexed, key=lambda r: (
+        ranks.get(r["priority"], 9),
+        0 if "INSIDE" in r["label"] else 1,
+        r["label"]
+    ))
 
 def generate(rows: list[dict], *, per_window_limit: int, max_sources: int) -> list[dict]:
     if not 1 <= per_window_limit <= 100:
