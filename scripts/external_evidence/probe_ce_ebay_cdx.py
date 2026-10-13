@@ -99,6 +99,8 @@ def fetch_cdx(item_id: str) -> tuple[list, str]:
 
 
 def parse_capture_rows(body: object, item_id: str) -> tuple[list[dict], int]:
+    if body == []:
+        return [], 0  # Wayback CDX returns [] for a successful empty capture-index query.
     if not isinstance(body, list) or not body:
         raise ValueError("Expected CDX array with field-name header")
     header = body[0]
