@@ -96,7 +96,31 @@ def known_url_evidence(path: Path) -> dict[str, set[str]]:
     }
 
 
+def curated_case_map(path: Path) -> dict[str, str]:
+    """Exact source ID whitelist, explicitly curated from known public case ledgers."""
+    if not path.is_file():
+        return {}
+    entries = json.loads(path.read_text(encoding="utf-8")).get("sources", [])
+    result = {}
+    for item in entries:
+        post_id = item.get("reddit_post_id")
+        if not post_id:
+            continue
+        if not re.fullmatch(r"[a-z0-9]{5,9}", str(post_id), re.I):
+            raise ValueError("invalid curated public post ID")
+        case_ref = item.get("case_ref")
+        if not isinstance(case_ref, str) or not re.fullmatch(r"(?:U\d{1,3}|L\d{1,3}|[/.-]\d{3})", case_ref):
+            raise ValueError("invalid curated case reference")
+        if post_id.lower() in result:
+            raise ValueError("duplicate curated post ID")
+        result[post_id.lower()] = case_ref
+    return result
+
+
 def known_status(record: dict, known: dict[str, set[str]]) -> str:
+    case_ref = known.get("case_by_post_id", {}).get(record["post_id"].lower())
+    if case_ref:
+        return "existing-curated-case-" + case_ref
     if record["post_id"].lower() in known["reddit"]:
         return "post-id-present-in-known-ledger"
     for url in record["direct_image_urls"] + record["gallery_urls"]:
@@ -221,6 +245,7 @@ def scan(searches: list[dict], known: dict[str, set[str]], requester=request_jso
                     break
                 row["matched_search_ids"] = {sid}
                 row["source_status"] = known_status(row, known)
+                row["curated_case_ref"] = known.get("case_by_post_id", {}).get(row["post_id"])
                 hits[identity] = row
             audit.append({"search_id": sid, "kind": kind, "subreddit": search["subreddit"],
                           "term": search["term"], "status": "ok", "archive_sha256": digest,
@@ -273,6 +298,8 @@ def main() -> None:
     p.add_argument("--canonical-ledger", type=Path,
                    default=Path("archive/external/twinysam-inside-arg/stickers.md"))
     p.add_argument("--output", type=Path, default=Path("visual-evidence-work/archived-market-discovery"))
+    p.add_argument("--curated-known-sales", type=Path,
+                   default=Path("data/reference/inside-ce-curated-known-public-sale-links.json"))
     p.add_argument("--max-queries", type=int, default=8)
     p.add_argument("--start-query", type=int, default=0)
     p.add_argument("--per-query", type=int, default=30)
@@ -283,8 +310,10 @@ def main() -> None:
     selected = manifest["searches"][args.start_query:args.start_query + args.max_queries]
     if len({x["id"] for x in selected}) != len(selected):
         p.error("duplicate query ID in selected manifest")
+    known = known_url_evidence(args.canonical_ledger)
+    known["case_by_post_id"] = curated_case_map(args.curated_known_sales)
     records, audit, failures, photos, galleries = scan(
-        selected, known_url_evidence(args.canonical_ledger), per_query=args.per_query,
+        selected, known, per_query=args.per_query,
         max_total=manifest.get("limits", {}).get("max_total_unique_records", 500))
     args.output.mkdir(parents=True, exist_ok=True)
     contents = {

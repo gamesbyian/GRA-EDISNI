@@ -2,11 +2,13 @@
 from __future__ import annotations
 
 import json
+import tempfile
 import unittest
+from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from scripts.external_evidence.search_public_reddit_ce_media import (
-    clean_item, known_status, media_urls, relevant, scan, search_url
+    clean_item, curated_case_map, known_status, media_urls, relevant, scan, search_url
 )
 
 
@@ -32,6 +34,29 @@ class ArchivedMarketSearchTests(unittest.TestCase):
                          "post-id-present-in-known-ledger")
         self.assertEqual(known_status(row, {"reddit": set(), "imgur": set()}),
                          "unreconciled-by-exact-url")
+
+    def test_curated_known_case_by_exact_post_id_only(self):
+        with tempfile.TemporaryDirectory() as folder:
+            file = Path(folder) / "curated.json"
+            file.write_text(json.dumps({"sources": [
+                {"reddit_post_id": "iuutfq", "case_ref": "U32"},
+                {"reddit_post_id": "izs23a", "case_ref": "U32"},
+                {"ebay_item_id": "257753799919", "case_ref": "/047"}
+            ]}))
+            c = curated_case_map(file)
+            self.assertEqual(c, {"iuutfq": "U32", "izs23a": "U32"})
+            partial = {"post_id": "iuutfq", "direct_image_urls": [], "gallery_urls": []}
+            self.assertEqual(known_status(partial, {"reddit": set(), "imgur": set(),
+                                                      "case_by_post_id": c}),
+                             "existing-curated-case-U32")
+            partial["post_id"] = "i0vgml"
+            self.assertEqual(known_status(partial, {"reddit": set(), "imgur": set(),
+                                                      "case_by_post_id": c}),
+                             "unreconciled-by-exact-url")
+            file.write_text(json.dumps({"sources": [
+                {"reddit_post_id": "iuutfq", "case_ref": "invalid-new-owner"}]}))
+            with self.assertRaisesRegex(ValueError, "case"):
+                curated_case_map(file)
 
     def test_comment_media_and_archived_deleted_not_counted(self):
         row = clean_item({"id":"f12345", "link_id":"t3_e9bteo",

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "purpose": "Curated exact public post/listing URL -> already known canonical case associations. No user-contact enrichment or claim of multiple/new physical editions.",
+  "sources": [
+    {
+      "source_id": "u32-gameswap-20200912",
+      "source_url": "https://www.reddit.com/r/gameswap/comments/irlw53",
+      "reddit_post_id": "irlw53",
+      "case_ref": "U32",
+      "association": "same-public-resale-account-as-known-U32",
+      "physical_copy_relation": "likely-repeat-offer-not-independently-verified",
+      "evidence_url": "https://www.reddit.com/r/gameswap/comments/irlw53",
+      "note": "Sept 12 2020 LRG trade post; substantially identical CE+Huddle offer to subsequent GameSale advertisements."
+    },
+    {
+      "source_id": "u32-gamesale-20200917",
+      "source_url": "https://www.reddit.com/r/GameSale/comments/iuutfq",
+      "reddit_post_id": "iuutfq",
+      "case_ref": "U32",
+      "association": "same-public-resale-account-as-known-U32",
+      "physical_copy_relation": "likely-repeat-offer-not-independently-verified",
+      "evidence_url": "https://www.reddit.com/r/GameSale/comments/iuutfq",
+      "note": "Sept 17 2020 advertised $250 or LRG trade, matched same public account and offer text."
+    },
+    {
+      "source_id": "u32-gamesale-20200925",
+      "source_url": "https://www.reddit.com/r/GameSale/comments/izs23a",
+      "reddit_post_id": "izs23a",
+      "case_ref": "U32",
+      "association": "same-public-resale-account-as-known-U32",
+      "physical_copy_relation": "likely-repeat-offer-not-independently-verified",
+      "evidence_url": "https://www.reddit.com/r/GameSale/comments/izs23a",
+      "note": "Sept 25 2020 identical title, seller and copy description to Sept 17 offer."
+    },
+    {
+      "source_id": "u32-gamesale-20201201",
+      "source_url": "https://www.reddit.com/r/GameSale/comments/k4wyvu",
+      "reddit_post_id": "k4wyvu",
+      "case_ref": "U32",
+      "association": "community-canonical-U32-source",
+      "physical_copy_relation": "community-tracked-existing-case",
+      "evidence_url": "https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md",
+      "note": "Original discovery URL in the U32 ledger; CE advertised with Switch dock."
+    },
+    {
+      "source_id": "u32-gamesale-20240515",
+      "source_url": "https://www.reddit.com/r/GameSale/comments/1csyklf",
+      "reddit_post_id": "1csyklf",
+      "case_ref": "U32",
+      "association": "community-canonical-U32-source",
+      "physical_copy_relation": "community-tracked-transfer-chain",
+      "evidence_url": "https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md",
+      "note": "2024 sale and eventual purchaser are already incorporated into U32's community transfer history."
+    },
+    {
+      "source_id": "known-047-ebay-20260920",
+      "source_url": "https://www.ebay.com/itm/257753799919",
+      "ebay_item_id": "257753799919",
+      "case_ref": "/047",
+      "association": "community-canonical-physical-sticker-source",
+      "physical_copy_relation": "community-tracked-transfer-chain",
+      "evidence_url": "https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md",
+      "note": "Actual marketplace photo/listing already tied to slash-047, not a fresh owner."
+    }
+  ]
+}
