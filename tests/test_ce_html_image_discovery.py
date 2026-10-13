@@ -3,7 +3,7 @@ import unittest
 
 from scripts.external_evidence.discover_html_images import extract, normal_url
 from scripts.external_evidence.visual_semantic import LABELS, ranking
-from scripts.external_evidence.fetch_html_images import approved, select, safe_dir
+from scripts.external_evidence.fetch_html_images import approved, select, safe_dir, asset_key
 
 
 class HtmlLeadTests(unittest.TestCase):
@@ -47,6 +47,34 @@ class HtmlLeadTests(unittest.TestCase):
         ]
         result = select(rows, per_page=1, total=5)
         self.assertEqual([x["image_url"] for x in result], ["https://i.redd.it/high.jpg"])
+
+    def test_srcset_resolution_family_collapses_to_one_download(self):
+        base = "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00001B.jpg?v=123"
+        rows = [{"source_id": "ce-visual-official-full-product",
+                 "image_url": base + "&width=" + str(w),
+                 "source_page_url": "https://www.iam8bit.com/products/inside-collector-s-edition",
+                 "keyword_hints": ["inside"], "hint_count": 1}
+                for w in (200, 400, 1000, 1600, 2000, 3648)]
+        rows += [{"source_id": "ce-visual-official-full-product",
+                  "image_url": "https://www.iam8bit.com/cdn/shop/files/Billboardstickers.png?width=500",
+                  "source_page_url": "https://www.iam8bit.com/products/inside-collector-s-edition",
+                  "keyword_hints": ["sticker"], "hint_count": 1}]
+        chosen = select(rows, per_page=8, total=20)
+        self.assertEqual(len(chosen), 1)
+        self.assertTrue(chosen[0]["image_url"].endswith("&width=2000"))
+        self.assertEqual(asset_key(rows[0]["image_url"]), asset_key(rows[1]["image_url"]))
+
+    def test_polygon_image_variants_are_distinct_by_original_asset(self):
+        base = "https://static0.polygonimages.com/wordpress/wp-content/uploads/chorus/uploads/chorus_asset/file/"
+        rows = []
+        for path in ("19487418/InsideCE_Lifestyle_00001.jpg", "19487419/InsideCE_Lifestyle_00008.jpg"):
+            for w in (500, 825):
+                rows.append({"source_id": "press-article", "image_url": base + path + "?q=50&fit=crop&w=" + str(w),
+                             "source_page_url": "https://polygon.com/article", "keyword_hints": ["inside"],
+                             "hint_count": 1})
+        chosen = select(rows, per_page=8, total=20)
+        self.assertEqual(len(chosen), 2)
+        self.assertTrue(all("w=825" in item["image_url"] for item in chosen))
 
     def test_semantic_ranks_are_relative_and_untrusted(self):
         keys = list(LABELS)[:3]
