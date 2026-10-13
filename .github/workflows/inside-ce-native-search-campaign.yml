@@ -8,6 +8,8 @@ on:
       - 'tests/test_global_forum_index_resume.py'
       - 'scripts/triage_inside_ce_index_results.py'
       - 'tests/test_inside_ce_index_triage.py'
+      - 'scripts/rank_inside_ce_public_leads.py'
+      - 'tests/test_inside_ce_public_leads.py'
       - 'tests/test_inside_ce_native_campaign.py'
       - 'tests/test_global_forum_search_plan.py'
       - 'data/reference/global-gaming-forum-archive-routes.tsv'
@@ -84,6 +86,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Test Raezore-facing multilingual public lead rankings
+        run: python -m unittest discover -s tests -p test_inside_ce_public_leads.py -v
       - name: Test owner evidence index triage and permalink provenance
         run: python -m unittest discover -s tests -p test_inside_ce_index_triage.py -v
       - name: Test cumulative index cursor and rate-limit regression
