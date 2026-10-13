@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "purpose": "Known public Reddit post IDs for exact archived CE resale-photo recovery, including duplicate/known controls; these are not evidence of new physical stickers.",
+  "sources": [
+    {
+      "id": "i0vgml",
+      "source_page_url": "https://www.reddit.com/r/GameSale/comments/i0vgml/",
+      "source_role": "unreconciled-2020-resale-lead",
+      "note": "July 2020 CE + figure + sealed PS4 game claim, previously identified in native owner hunt; confirm relationship to September relistings."
+    },
+    {
+      "id": "iuutfq",
+      "source_page_url": "https://www.reddit.com/r/GameSale/comments/iuutfq/",
+      "source_role": "unreconciled-september-resale-photo-search",
+      "note": "September 17, 2020 public GameSale post retrieved by Arctic Shift keyword realdoll; possible same CE as next post."
+    },
+    {
+      "id": "izs23a",
+      "source_page_url": "https://www.reddit.com/r/GameSale/comments/izs23a/",
+      "source_role": "unreconciled-september-repeat-listing",
+      "note": "September 25, 2020 public GameSale post with almost identical description to iuutfq; not a second physical owner by default."
+    },
+    {
+      "id": "k4wyvu",
+      "source_page_url": "https://www.reddit.com/r/GameSale/comments/k4wyvu/",
+      "source_role": "known-unknown-sticker-U32",
+      "note": "December 2020 public GameSale post already reconciled in canonical U32 list."
+    },
+    {
+      "id": "e9bteo",
+      "source_page_url": "https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/",
+      "source_role": "known-historical-shipping-thread-control",
+      "note": "Previously recovered official NOW SHIPPING promotional screenshot; discussion includes known /171."
+    }
+  ]
+}
