@@ -1,0 +1,178 @@
+{
+  "experiment": "CL-VLEN-01",
+  "source": "data/observations.csv, 84 physical observations of 66 unique residues",
+  "zone_results": {
+    "body": {
+      "adjacency_shuffles": {
+        "frame9": {
+          "max": 26,
+          "mean": 17.371417,
+          "method": "nine-site observed-count shuffled",
+          "min": 8,
+          "observed_matching_adjacent": 17,
+          "one_sided_ge": 0.63978,
+          "one_sided_le": 0.521957,
+          "replicates": 12000,
+          "sd": 2.458889,
+          "seed": 20261113
+        },
+        "global": {
+          "max": 27,
+          "mean": 17.30325,
+          "method": "zone observed-count shuffled",
+          "min": 7,
+          "observed_matching_adjacent": 17,
+          "one_sided_ge": 0.607783,
+          "one_sided_le": 0.527039,
+          "replicates": 12000,
+          "sd": 2.868877,
+          "seed": 20261013
+        }
+      },
+      "best_of_family_control": {
+        "frame9": {
+          "best_accepted_completions": 50331648,
+          "frames": true,
+          "max_family_ge_probability": 0.714571,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 62054400,
+          "null_q95": 109445120,
+          "replicates": 500,
+          "seed": 20261313
+        },
+        "global": {
+          "best_accepted_completions": 50331648,
+          "frames": false,
+          "max_family_ge_probability": 0.706587,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 62914560,
+          "null_q95": 109051904,
+          "replicates": 500,
+          "seed": 20261213
+        }
+      },
+      "equal_adjacent": 17,
+      "fully_known_native_quintets": 1,
+      "fully_known_native_triplets": 6,
+      "known_adjacent_pairs": 34,
+      "maximal_run_count_bounds_3": [
+        0,
+        12
+      ],
+      "maximal_run_count_bounds_5": [
+        0,
+        7
+      ],
+      "observed": 54,
+      "parser_counts": {
+        "-=0,/=1": {
+          "prefix_backward": 35377152,
+          "prefix_forward": 0,
+          "prefix_terminated": 337920,
+          "two_bit_backward": 50331648,
+          "two_bit_forward": 30408704,
+          "two_bit_terminated": 0
+        },
+        "/=0,-=1": {
+          "prefix_backward": 18382848,
+          "prefix_forward": 24756224,
+          "prefix_terminated": 0,
+          "two_bit_backward": 5807104,
+          "two_bit_forward": 25165824,
+          "two_bit_terminated": 0
+        }
+      },
+      "transition_min_max": [
+        22,
+        59
+      ],
+      "unknown": 27
+    },
+    "tail": {
+      "adjacency_shuffles": {
+        "frame9": {
+          "max": 4,
+          "mean": 2.809833,
+          "method": "nine-site observed-count shuffled",
+          "min": 2,
+          "observed_matching_adjacent": 2,
+          "one_sided_ge": 1.0,
+          "one_sided_le": 0.394884,
+          "replicates": 12000,
+          "sd": 0.750558,
+          "seed": 20261194
+        },
+        "global": {
+          "max": 5,
+          "mean": 2.578917,
+          "method": "zone observed-count shuffled",
+          "min": 0,
+          "observed_matching_adjacent": 2,
+          "one_sided_ge": 0.838847,
+          "one_sided_le": 0.467794,
+          "replicates": 12000,
+          "sd": 1.069239,
+          "seed": 20261094
+        }
+      },
+      "best_of_family_control": {
+        "frame9": {
+          "best_accepted_completions": 8320,
+          "frames": true,
+          "max_family_ge_probability": 0.708583,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 9216,
+          "null_q95": 11392,
+          "replicates": 500,
+          "seed": 20261394
+        },
+        "global": {
+          "best_accepted_completions": 8320,
+          "frames": false,
+          "max_family_ge_probability": 0.716567,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 9216,
+          "null_q95": 13184,
+          "replicates": 500,
+          "seed": 20261294
+        }
+      },
+      "equal_adjacent": 2,
+      "fully_known_native_quintets": 0,
+      "fully_known_native_triplets": 0,
+      "known_adjacent_pairs": 5,
+      "maximal_run_count_bounds_3": [
+        0,
+        6
+      ],
+      "maximal_run_count_bounds_5": [
+        0,
+        2
+      ],
+      "observed": 12,
+      "parser_counts": {
+        ".=0,/=1": {
+          "prefix_backward": 0,
+          "prefix_forward": 2048,
+          "prefix_terminated": 0,
+          "two_bit_backward": 1792,
+          "two_bit_forward": 7168,
+          "two_bit_terminated": 640
+        },
+        "/=0,.=1": {
+          "prefix_backward": 2432,
+          "prefix_forward": 8320,
+          "prefix_terminated": 0,
+          "two_bit_backward": 4736,
+          "two_bit_forward": 3072,
+          "two_bit_terminated": 0
+        }
+      },
+      "transition_min_max": [
+        7,
+        22
+      ],
+      "unknown": 15
+    }
+  }
+}
