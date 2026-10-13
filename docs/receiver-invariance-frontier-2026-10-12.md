@@ -137,6 +137,29 @@ Consequently, **this precise same-digit→same-three-symbol direct codebook fail
 
 The candidate's 9-digit alignment and equality rule were chosen as an explicit cheap null, **not** verified original Playdead instructions. The program preserves the pairwise common possible readouts and fails loudly if the verdict drifts.
 
+## Extension: all eight physical rotations/reflections of the source-digit codebook
+
+The immediately preceding D/H rejection holds only when the URL's nine digits are assigned to the nine classes in *serial A–I order*. The original solved background geometry itself supplies a more natural finite trial: arrange the classes as `IAB/CDE/FGH`, then scan **each of the eight D4 rotations/reflections**, without allowing an arbitrary nine-letter permutation.
+
+For each view, impose the same speculative equality rule: identical source digits in `534965398` require identical three-mark class triplets. Count compatible **independent observation-first class words** and the actual complete surviving **U2/U3/U4/U5 masters**, keeping all eight comparisons rather than selecting one attractive orientation.
+
+| Orientated physical 3×3 layout | Weak one-slash-only distinct class outputs | U2 masters | U3 | U4 | U5 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| IAB/CDE/FGH | 2 | 2 | 0 | 0 | 0 |
+| FCI/GDA/HEB | 0 | 0 | 0 | 0 | 0 |
+| HGF/EDC/BAI | 0 | 0 | 0 | 0 | 0 |
+| BEH/ADG/ICF | 4 | 8 | 0 | 0 | 0 |
+| BAI/EDC/HGF | 0 | 0 | 0 | 0 | 0 |
+| HEB/GDA/FCI | 8 | 3 | 0 | 0 | 0 |
+| **FGH/CDE/IAB** | **16** | **28** | **6** | **6** | **6** |
+| ICF/ADG/BEH | 0 | 0 | 0 | 0 | 0 |
+
+The identity row-order `IAB/CDE/FGH` is actually the native physical artwork arrangement, whereas `FGH/CDE/IAB` is its **vertical flip**. Under the stronger U5 model, the invented equal-digit rule leaves **six of ten** physically compatible masters *only* with this vertical-flip alignment, and they all produce the **same one of the two U5 selector-readout strings**. That is a precise, finite **conditional branch-selection result**.
+
+**It is not evidence that Playdead intended a vertical flip.** The repeated-digit equality rule was invented for this test, and all eight views were inspected. A genuine externally printed mirror/flip/orientation instruction would be needed to promote the surviving branch. The four weak-model source-compatible orientations and their partial outputs are just as important to preserve as the strict-model six-state survival.
+
+Reproduce: [exhaustive eight-orientation duplicate-digit codebook script](../scripts/audit_url_digit_triplet_d4.py). It keeps the full-model survivor sets separate from the much looser product of independent class-word possibilities and includes synthetic positive/negative controls.
+
 ## Native A–I receiving surface: class triplets, not just 27-character streams## Native A–I receiving surface: class triplets, not just 27-character streams
 
 Instead of asking only for a 27-mark contiguous word, use the **already-solved nine-picture A–I class structure as the receiver's native coordinates**. For each class take the three selected symbols from Q1, Q2 and Q3. Exact conditional distinct **three-character outputs per picture** are:
