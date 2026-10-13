@@ -2,7 +2,7 @@
 
 **Mode:** DISCOVER. **State:** code + positive controls prepared, not a completed 483-forum archive scan. **Date:** 2026-10-13.
 
-This is the second practical acquisition stage after [the 50-native-language CE ownership program](inside-ce-native-owner-hunt-2026-10-12.md) and [the offline SQLite/warcio indexer](forum-search-software-stack.md). It establishes whether known original **URLs** were captured in the 2016–2026 web archives before investing in WARC downloads and searches. The new [15-control dataset](../../data/reference/inside-ce-archive-positive-controls.tsv) includes five classes: known sticker serial discussions; first-person owners without sticker photos; preorder/non-owner negative controls; unverified original 2019 Twitch unboxing archive; and post-2019 marketplace/ARG discussions.
+This is the second practical acquisition stage after [the 50-native-language CE ownership program](inside-ce-native-owner-hunt-2026-10-12.md) and [the offline SQLite/warcio indexer](forum-search-software-stack.md). It establishes whether known original **URLs** were captured in the 2016–2026 web archives before investing in WARC downloads and searches. The new [16-control dataset](../../data/reference/inside-ce-archive-positive-controls.tsv) includes five classes: known sticker serial discussions; first-person owners without sticker photos; preorder/non-owner negative controls; unverified original 2019 Twitch unboxing archive; and post-2019 marketplace/ARG discussions.
 
 ## Additional source-first findings
 
@@ -18,7 +18,9 @@ This is the second practical acquisition stage after [the 50-native-language CE 
 
 6. **Apr 6 2020 independent collector-site documentation:** [Cheap Ass Gamer collector edition compilation thread](https://www.cheapassgamer.com/threads/official-collectors-edition-compilation-xi-2020.371308/page-17) reproduces the iam8bit waiting-list follow-up, including an offer to discuss later payment. The posting participant explicitly **declined** to buy, so this is a source for product availability and a *negative owner control*, not a new CE holder. The linked unboxing video `Y7OqMKBbM2Y` is already cited in the canonical sticker document. Its repeated quotations in subsequent replies are not independent email confirmations.
 
-These new findings are in the [18-row evidence/lead ledger](../../data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv). No new physically observed sticker, new validated residue or inferred production count was added.
+7. **March 6 2018 early preorder self-report:** the [Cheap Ass Gamer indie physical-releases thread](https://www.cheapassgamer.com/threads/indie-limited-obscure-physical-release-deals-and-discussion-thread.357745/page-79) contains a first-person declaration of placing an order in response to the newly advertised $375 INSIDE CE. The account name is absent from the canonical sticker document by simple text search, but the source does **not** establish fulfillment, later possession or sticker identity. Preserve as *potential previously unlinked preorder*, not a confirmed owner or physical record.
+
+These new findings are in the [19-row evidence/lead ledger](../../data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv). No new physically observed sticker, new validated residue or inferred production count was added.
 
 ## Metadata tool
 
