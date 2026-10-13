@@ -12,10 +12,10 @@ import re
 from pathlib import Path
 
 if __package__:
-    from .search_public_reddit_ce_media import (clean_item, known_status,
+    from .search_public_reddit_ce_media import (clean_item, curated_case_map, known_status,
                                                  known_url_evidence, request_json)
 else:
-    from search_public_reddit_ce_media import (clean_item, known_status,
+    from search_public_reddit_ce_media import (clean_item, curated_case_map, known_status,
                                                known_url_evidence, request_json)
 
 API = "https://arctic-shift.photon-reddit.com/api/posts/ids?ids="
@@ -56,6 +56,7 @@ def probe(sources: list[dict], known: dict[str, set[str]], requester=request_jso
                 continue
             candidate["source_role"] = source["source_role"]
             candidate["source_status"] = known_status(candidate, known)
+            candidate["curated_case_ref"] = known.get("case_by_post_id", {}).get(ident)
             candidate["retrieval"] = "exact-public-archived-post-id"
             candidate["status"] = "archived-post-available"
             output.append(candidate)
@@ -75,11 +76,15 @@ def main() -> None:
                         default=Path("data/reference/inside-ce-public-archived-resale-posts.json"))
     parser.add_argument("--canonical-ledger", type=Path,
                         default=Path("archive/external/twinysam-inside-arg/stickers.md"))
+    parser.add_argument("--curated-known-sales", type=Path,
+                        default=Path("data/reference/inside-ce-curated-known-public-sale-links.json"))
     parser.add_argument("--out", type=Path,
                         default=Path("visual-evidence-work/exact-ce-resale-posts.json"))
     args = parser.parse_args()
     sources = json.loads(args.manifest.read_text(encoding="utf-8"))["sources"]
-    report = probe(sources, known_url_evidence(args.canonical_ledger))
+    known = known_url_evidence(args.canonical_ledger)
+    known["case_by_post_id"] = curated_case_map(args.curated_known_sales)
+    report = probe(sources, known)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps({
         "schema_version": 1, "interpretation": "Public archival leads only, not owner or sticker proof",
