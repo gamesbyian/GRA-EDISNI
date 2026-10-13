@@ -26,7 +26,7 @@ REDDIT_HOSTS = {"old.reddit.com", "new.reddit.com", "www.reddit.com",
 OUTPUT = ("candidate_id", "canonical_url", "thread_key", "evidence_key",
           "first_title", "first_description", "index_hit_occurrences",
           "distinct_query_tasks", "query_languages", "prior_ledger_relation",
-          "source_relation", "review_warning", "review_status",
+          "canonical_relation", "source_relation", "review_warning", "review_status",
           "new_confirmed_stickers")
 
 def normalize_url(raw: str) -> tuple[str, str, str]:
@@ -155,8 +155,29 @@ def read_index_hits(paths: list[Path]) -> tuple[dict[str, dict], dict]:
     stats["result_manifests"] = sorted(manifests)
     return found, stats
 
-def classify(found: dict[str, dict], ledger: list[dict]) -> list[dict]:
+def canonical_refs(markdown: str) -> tuple[set[str], set[str]]:
+    """Parse source URLs in canonical sticker markdown; no HTTP or owner inference."""
+    urls, threads = set(), set()
+    # Markdown is a source list, not a verified equivalence table. Only URLs
+    # and Reddit/video topic IDs are used for context checks.
+    for match in re.finditer(r"https?://[^\\s<>\\]\)\"]+", markdown):
+        original = match.group(0).rstrip(".,;:'")
+        try:
+            url, topic, _ = normalize_url(original)
+        except ValueError:
+            continue
+        urls.add(url)
+        if topic:
+            threads.add(topic)
+    return urls, threads
+
+
+def classify(found: dict[str, dict], ledger: list[dict],
+             canonical_urls: set[str] | None = None,
+             canonical_threads: set[str] | None = None) -> list[dict]:
     prior_urls, prior_threads = set(), set()
+    canonical_urls = canonical_urls or set()
+    canonical_threads = canonical_threads or set()
     for item in ledger:
         url = item.get("source_url", "").strip()
         if not url:
@@ -176,6 +197,11 @@ def classify(found: dict[str, dict], ledger: list[dict]) -> list[dict]:
     for key, item in found.items():
         exact = key in prior_urls
         context = bool(item["thread_key"] and item["thread_key"] in prior_threads)
+        can_exact = key in canonical_urls
+        can_context = bool(item["thread_key"] and item["thread_key"] in canonical_threads)
+        canonical_relation = ("canonical_exact_source_url" if can_exact else
+                              "canonical_thread_context_only" if can_context else
+                              "not_in_canonical_link_list_or_not_provided")
         prior = ("exact_ledger_url" if exact else
                  "same_thread_only_no_independent_owner_proof" if context else
                  "not_in_local_ledger_unreconciled")
@@ -205,6 +231,7 @@ def classify(found: dict[str, dict], ledger: list[dict]) -> list[dict]:
             "distinct_query_tasks": len(item["tasks"]),
             "query_languages": ",".join(sorted(item["languages"])),
             "prior_ledger_relation": prior,
+            "canonical_relation": canonical_relation,
             "source_relation": "index_candidate_url_only",
             "review_warning": ",".join(caveats),
             "review_status": "unreviewed_source_content",
@@ -224,11 +251,24 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--input", type=Path, nargs="+", required=True)
     ap.add_argument("--ledger", type=Path, default=LEDGER)
+    ap.add_argument("--canonical-stickers", type=Path,
+                    help="Optional downloaded twinysam/INSIDE-ARG stickers.md for exact URL checks")
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--summary", type=Path, required=True)
     args = ap.parse_args()
     found, stats = read_index_hits(args.input)
-    candidates = classify(found, load_ledger(args.ledger))
+    urls, threads = set(), set()
+    if args.canonical_stickers:
+        source = args.canonical_stickers.read_bytes()
+        stats["canonical_sha256"] = hashlib.sha256(source).hexdigest()
+        urls, threads = canonical_refs(source.decode("utf-8"))
+        stats["canonical_urls_indexed"] = len(urls)
+        stats["canonical_threads_indexed"] = len(threads)
+    else:
+        stats["canonical_sha256"] = None
+        stats["canonical_urls_indexed"] = 0
+        stats["canonical_threads_indexed"] = 0
+    candidates = classify(found, load_ledger(args.ledger), urls, threads)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8", newline="") as out:
         writer = csv.DictWriter(out, fieldnames=OUTPUT, delimiter="\t")
@@ -242,6 +282,10 @@ def main() -> None:
         "ledger_thread_context_only": sum(
             x["prior_ledger_relation"] == "same_thread_only_no_independent_owner_proof"
             for x in candidates),
+        "canonical_exact_urls": sum(
+            x["canonical_relation"] == "canonical_exact_source_url" for x in candidates),
+        "canonical_thread_context_only": sum(
+            x["canonical_relation"] == "canonical_thread_context_only" for x in candidates),
         "new_confirmed_stickers": 0,
         "status": "index_candidate_triage_requires_original_source_review",
         "caveat": "A URL, title, snippet or alias never establishes a new owner or sticker.",
