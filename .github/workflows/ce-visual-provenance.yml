@@ -11,6 +11,7 @@ on:
       - "scripts/external_evidence/recover_reddit_comment_images.py"
       - "scripts/external_evidence/index_public_imgur_gallery.py"
       - "scripts/external_evidence/search_public_reddit_ce_media.py"
+      - "scripts/external_evidence/lookup_public_ce_resale_posts.py"
       - "scripts/external_evidence/visual_semantic.py"
       - "tests/test_ce_visual_provenance.py"
       - "tests/test_ce_html_image_discovery.py"
@@ -18,9 +19,11 @@ on:
       - "tests/test_ce_reddit_comment_images.py"
       - "tests/test_ce_public_imgur_gallery.py"
       - "tests/test_ce_public_reddit_market_search.py"
+      - "tests/test_ce_archive_search_reliability.py"
       - "data/reference/inside-ce-visual-sources.json"
       - "data/reference/inside-ce-archived-public-galleries.json"
       - "data/reference/inside-ce-public-reddit-cross-community-queries.json"
+      - "data/reference/inside-ce-public-archived-resale-posts.json"
       - "data/reference/inside-ce-visual-historical-pages.json"
       - ".github/workflows/ce-visual-provenance.yml"
   workflow_dispatch:
@@ -47,6 +50,11 @@ on:
         type: boolean
       archived_reddit_comment_images:
         description: "Also search public historical Reddit comment trees for CE/sticker photo URLs"
+        required: true
+        default: false
+        type: boolean
+      archived_ce_resale_exact_ids:
+        description: "Look up five specific historical CE post IDs, without keyword search"
         required: true
         default: false
         type: boolean
@@ -85,7 +93,7 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
       - run: python -m unittest discover -s tests -p 'test_ce_*py' -v
-      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py
+      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py
       - name: Index all canonical original sticker photographs and validate source SHA256
         run: |
           mkdir -p /tmp/ce-empty-candidate-set
@@ -144,12 +152,15 @@ jobs:
           python scripts/external_evidence/recover_reddit_comment_images.py \
             --manifest data/reference/inside-ce-visual-historical-pages.json \
             --out visual-evidence-work --max-comments 600
+      - name: Optionally look up known public CE resale post IDs exactly
+        if: inputs.archived_ce_resale_exact_ids
+        run: python scripts/external_evidence/lookup_public_ce_resale_posts.py
       - name: Optionally discover public cross-community archived resale/collector sources
         if: inputs.archived_cross_community_search
         run: |
           python scripts/external_evidence/search_public_reddit_ce_media.py \
             --manifest data/reference/inside-ce-public-reddit-cross-community-queries.json \
-            --max-queries 24 --per-query 30
+            --max-queries 8 --per-query 25
       - name: Optionally download bounded public image URLs from harvested pages
         if: inputs.download_page_images
         run: |

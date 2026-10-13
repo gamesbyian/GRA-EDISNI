@@ -11,6 +11,7 @@ import hashlib
 import html
 import json
 import re
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -142,6 +143,13 @@ def search_url(entry: dict, limit: int) -> str:
     return "https://" + API_HOST + endpoint + "?" + urllib.parse.urlencode(parameters)
 
 
+class ArchiveHTTPFailure(OSError):
+    def __init__(self, code: int, detail: str, retry_after: str = ""):
+        super().__init__(f"archive HTTP {code}: {detail[:260]}")
+        self.code = code
+        self.retry_after = retry_after[:80]
+
+
 class SafeRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         parsed = urllib.parse.urlparse(newurl)
@@ -157,7 +165,13 @@ def request_json(url: str) -> tuple[dict, str]:
     request = urllib.request.Request(url, headers={
         "Accept": "application/json", "User-Agent": "GRA-EDISNI-public-CE-photo-search/1.0"
     })
-    with urllib.request.build_opener(SafeRedirect()).open(request, timeout=25) as response:
+    try:
+        response = urllib.request.build_opener(SafeRedirect()).open(request, timeout=25)
+    except urllib.error.HTTPError as exc:
+        detail = re.sub(r"\s+", " ", exc.read(1200).decode("utf-8", "replace"))
+        raise ArchiveHTTPFailure(exc.code, detail,
+                                 exc.headers.get("Retry-After", "") if exc.headers else "") from exc
+    with response:
         if response.headers.get_content_type() != "application/json":
             raise ValueError("archive response is not JSON")
         blob = response.read(MAX_BYTES + 1)
@@ -175,13 +189,20 @@ def scan(searches: list[dict], known: dict[str, set[str]], requester=request_jso
     hits: dict[str, dict] = {}
     failures = []
     audit = []
+    consecutive_rejections = 0
+    stopped_reason = None
     for search in searches:
         sid = search["id"]
         kind = search["kind"]
+        if stopped_reason:
+            audit.append({"search_id": sid, "status": "not-attempted",
+                          "reason": stopped_reason})
+            continue
         try:
             url = search_url(search, per_query)
             payload, digest = requester(url)
             rows = payload["data"]
+            consecutive_rejections = 0
             if not isinstance(rows, list):
                 raise ValueError("response data is not an array")
             matched = 0
@@ -207,9 +228,21 @@ def scan(searches: list[dict], known: dict[str, set[str]], requester=request_jso
                           "page_limit": per_query, "possibly_truncated": len(rows) >= per_query})
         except (OSError, ValueError, urllib.error.URLError) as exc:
             error = {"search_id": sid, "status": "unavailable",
-                     "reason": str(exc)[:250]}
+                     "reason": str(exc)[:350]}
+            if isinstance(exc, ArchiveHTTPFailure):
+                error["http_status"] = exc.code
+                if exc.retry_after:
+                    error["retry_after"] = exc.retry_after
+                if exc.code == 429:
+                    stopped_reason = "HTTP 429; postponed to a future run (respect Retry-After)"
+                elif exc.code == 422:
+                    consecutive_rejections += 1
+                    if consecutive_rejections >= 3:
+                        stopped_reason = "Three consecutive HTTP 422 query rejections; inspect diagnostics before retry"
             audit.append(error)
             failures.append(error)
+        if requester is request_json and not stopped_reason:
+            time.sleep(1.5)
     records = list(hits.values())
     for r in records:
         r["matched_search_ids"] = sorted(r["matched_search_ids"])
@@ -240,13 +273,14 @@ def main() -> None:
     p.add_argument("--canonical-ledger", type=Path,
                    default=Path("archive/external/twinysam-inside-arg/stickers.md"))
     p.add_argument("--output", type=Path, default=Path("visual-evidence-work/archived-market-discovery"))
-    p.add_argument("--max-queries", type=int, default=24)
+    p.add_argument("--max-queries", type=int, default=8)
+    p.add_argument("--start-query", type=int, default=0)
     p.add_argument("--per-query", type=int, default=30)
     args = p.parse_args()
-    if not 1 <= args.max_queries <= 32 or not 1 <= args.per_query <= 40:
-        p.error("max-queries must be 1..32, per-query 1..40")
+    if not 1 <= args.max_queries <= 32 or not 1 <= args.per_query <= 40 or not 0 <= args.start_query < 32:
+        p.error("max-queries must be 1..32, per-query 1..40, start-query 0..31")
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
-    selected = manifest["searches"][:args.max_queries]
+    selected = manifest["searches"][args.start_query:args.start_query + args.max_queries]
     if len({x["id"] for x in selected}) != len(selected):
         p.error("duplicate query ID in selected manifest")
     records, audit, failures, photos, galleries = scan(
@@ -267,6 +301,7 @@ def main() -> None:
     print(json.dumps({"queries": len(selected), "query_failures": len(failures),
                       "candidate_records": len(records), "direct_image_mentions": len(photos),
                       "gallery_mentions": len(galleries),
+                      "not_attempted_queries": sum(a["status"] == "not-attempted" for a in audit),
                       "unreconciled_exact_urls": sum(
                           r["source_status"] == "unreconciled-by-exact-url" for r in records)}))
 
