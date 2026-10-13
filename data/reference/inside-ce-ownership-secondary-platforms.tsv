@@ -1,0 +1,31 @@
+source	url	surface_type	language	primary_search	fallback	access_gate	why_relevant	priority
+YouTube	https://www.youtube.com/	video_comments	multi	native_video_search_then_video_comment_threads	youtube_data_api_v3_or_permitted_public_index	published_API_v3_key_quota	Existing canonical stickers and lost stickers came from unboxings and comments; video description/body not interchangeable with comments	P0
+Reddit	https://www.reddit.com/	thread_comments	multi	licensed_index_and_authorized_research_access	third_party_index_leads_only	reddit_2026_research_approval_required	2019 owner and numbered sticker admissions; already partly enumerated	P0
+X Twitter	https://x.com/	public_posts	multi	licensed_public_post_search	web_index_and_wayback	platform_API_terms	Numerous original CE-owner admissions and sticker photo sightings in sticker ledger	P0
+Instagram	https://www.instagram.com/	public_images_comments	multi	authorized_platform_search_and_public_hashtag_index	web_index_and_wayback	platform_automation_policy	Photo galleries and responses by collectors; image not automatically sticker	P0
+Facebook	https://www.facebook.com/	public_groups_marketplace_comments	multi	authorized_public_post_search	web_index_and_wayback	public_only_no_private_groups	iam8bit post comments and public collecting groups; avoid private group crawling	P0
+eBay	https://www.ebay.com/	marketplace_listings	multi	official_browse_active_listings_then_archives	completed_sales_manual_and_wayback	ebay_app_token_and_terms	Listing images often expose stickers even without ARG keywords; Browse API does not generally return historical sold listings	P0
+PriceCharting	https://www.pricecharting.com/	collector_listings	en	native_listing_search	web_index_and_wayback	site_policy_review	Canonical unknown owner leads from collector listings	P0
+Twitch	https://www.twitch.tv/	video_archives_comments	multi	permitted_vod_discovery	web_index_and_wayback	video_rights_and_expiration	Original live 2019 unboxings; older VODs may have expired	P0
+Mercari US	https://www.mercari.com/	marketplace_listings	en	native_site_search	web_index_and_wayback	site_terms_review	Vintage and sealed collector edition resale offers	P1
+Mercari Japan	https://jp.mercari.com/	marketplace_listings	ja	native_site_search	web_index_and_wayback	site_terms_review	Japanese secondhand market discovery; import listings vary	P1
+Rakuma Japan	https://fril.jp/	marketplace_listings	ja	native_site_search	web_index_and_wayback	site_terms_review	Japanese collectors and import listings	P1
+Yahoo Auctions Japan	https://auctions.yahoo.co.jp/	marketplace_listings	ja	native_site_search	web_index_and_wayback	site_terms_review	Potential Japanese resale photographs	P1
+Vinted	https://www.vinted.com/	marketplace_listings	multi	native_site_search	web_index_and_wayback	site_terms_review	European owner and resale evidence	P1
+Willhaben	https://www.willhaben.at/	marketplace_listings	de	native_site_search	web_index_and_wayback	site_terms_review	Confirmed 317 sticker originated from Austrian resale marketplace	P0
+Wallapop	https://es.wallapop.com/	marketplace_listings	es	native_site_search	web_index_and_wayback	site_terms_review	Spanish-language game collector resale	P1
+Leboncoin	https://www.leboncoin.fr/	marketplace_listings	fr	native_site_search	web_index_and_wayback	site_terms_review	French collector resale and photos	P1
+Allegro	https://allegro.pl/	marketplace_listings	pl	native_site_search	web_index_and_wayback	site_terms_review	Polish collector/resale discovery	P1
+OLX	https://www.olx.com/	marketplace_listings	multi	localized_country_portal_search	web_index_and_wayback	site_terms_review	Country specific domains should be enumerated before claims of exhaustive coverage	P2
+Mercado Libre	https://www.mercadolibre.com/	marketplace_listings	es	localized_country_portal_search	web_index_and_wayback	site_terms_review	Spanish Latin American resale discovery	P1
+Mercado Livre	https://www.mercadolivre.com.br/	marketplace_listings	pt-BR	native_site_search	web_index_and_wayback	site_terms_review	Brazilian resale photographs	P1
+Carousell	https://www.carousell.com/	marketplace_listings	en-ms	native_site_search	web_index_and_wayback	site_terms_review	South East Asia collectible resale	P2
+Gumtree	https://www.gumtree.com/	marketplace_listings	en	native_site_search	web_index_and_wayback	site_terms_review	UK/AU regional secondhand listings; country path differences	P2
+Trade Me	https://www.trademe.co.nz/	marketplace_listings	en	native_site_search	web_index_and_wayback	site_terms_review	New Zealand collector resale leads	P2
+Bluesky	https://bsky.app/	public_posts	multi	atproto_searchposts_permitted	web_index_and_wayback	auth_may_be_required	SearchPosts public lexicon provides keyword query; coverage only post-2023	P2
+Mastodon	https://joinmastodon.org/	federated_posts	multi	instance_specific_public_search	web_index_and_wayback	instance_rules_and_independence	No single global complete post index or timeline	P2
+TikTok	https://www.tiktok.com/	videos_comments	multi	licensed_public_search	web_index_and_wayback	platform_research_api_eligibility	Unboxings and resale clips not covered by gamer web forums	P2
+Flickr	https://www.flickr.com/	photos	multi	official_public_photo_search	web_index_and_wayback	API_key_terms	Original high-resolution collectible photographs may expose sticker	P1
+Imgur	https://imgur.com/	photos_comments	multi	public_image_index	web_index_and_wayback	image_privacy_terms	Reddit-hosted unboxing galleries	P1
+CollecTit	https://collectedit.com/	collector_catalogs	en	public_collection_search	web_index_and_wayback	site_policy_review	Known sticker 092 originates from collector catalogue	P0
+Archive of forums WATMM	https://watmm-archive.com/	historical_forum_mirror	en	archive_native_search	web_index_and_wayback	archive_rights_review	Original CE buyer U44 was found in older independent music forum archive	P0
