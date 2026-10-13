@@ -24,6 +24,10 @@ jobs:
         run: python scripts/conjecture_lab_class_run_programs.py --test
       - name: Check streaming unary-run finite-state interpreter
         run: python scripts/conjecture_lab_streaming_rle.py --test
+      - name: Check raw 9-data 3-control packet truth tables
+        run: python scripts/conjecture_lab_class_ecc.py --test
+      - name: Check tail-selected triplet generator exact enumeration
+        run: python scripts/conjecture_lab_tail_operated_triples.py --test
       - name: Check conjecture lab conditional address probe
         run: python scripts/conjecture_lab_nine_bit_address_probe.py
       - name: Check conjecture lab controlled command backsolve
