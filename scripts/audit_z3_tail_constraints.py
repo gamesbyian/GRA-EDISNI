@@ -121,9 +121,9 @@ def analyze(observed: dict[int, str]) -> dict:
 
     # The strict controls come from the already documented Experiment 317,
     # not from a claim that this pilot has discovered a new cipher.
-    assert len(slash_completions) == 36, len(slash_completions)
+    assert len(slash_completions) == 18, len(slash_completions)
     assert {cls: values[0] for cls, values in allowed.items() if len(values) == 1} == {
-        "B": 2, "E": 0, "F": 1, "H": 2, "I": 2
+        "B": 2, "D": 1, "E": 0, "F": 1, "H": 2, "I": 2
     }
 
     return {
