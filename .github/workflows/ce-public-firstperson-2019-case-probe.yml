@@ -1,0 +1,52 @@
+name: CE public Dec 2019 first-person source U-L reconciliation
+
+# One-time source-author comparison only; do not merge this workflow.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-public-firstperson-2019-case-probe.yml"
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compare public original post account to existing canonical owner-case text
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,re
+          from scripts.external_evidence.search_public_reddit_ce_media import request_json
+          url="https://arctic-shift.photon-reddit.com/api/posts/ids?ids=eaktdt"
+          body, sha = request_json(url)
+          posts=[r for r in body.get("data",[]) if r.get("id")=="eaktdt"]
+          result={"post_id":"eaktdt","source_url":"https://www.reddit.com/r/gamecollecting/comments/eaktdt/",
+                  "archive_response_sha256":sha,"match_count":0,
+                  "status":"missing-or-incomplete"}
+          if posts:
+            post=posts[0]
+            handle=post.get("author","")
+            result["status"]="retrieved-original-public-post"
+            result["public_post_author"]=handle if isinstance(handle,str) else None
+            result["created_utc"]=post.get("created_utc")
+            source=Path("archive/external/twinysam-inside-arg/stickers.md").read_text(encoding="utf-8")
+            if isinstance(handle,str) and re.fullmatch(r"[A-Za-z0-9_-]{3,32}",handle):
+              m=list(re.finditer(r"(?<![A-Za-z0-9_-])"+re.escape(handle)+r"(?![A-Za-z0-9_-])",
+                                source, flags=re.I))
+              result["match_count"]=len(m)
+              result["canonical_excerpts"]=[source[max(0,x.start()-110):x.end()+150] for x in m[:5]]
+          print("PUBLIC_CE_CASE_RECONCILIATION",json.dumps(result,ensure_ascii=False))
+          Path("source-reconciliation.json").write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-public-firstperson-2019-case-reconciliation-${{ github.run_id }}
+          path: source-reconciliation.json
+          retention-days: 14
+          if-no-files-found: warn
