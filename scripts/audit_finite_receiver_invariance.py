@@ -225,6 +225,20 @@ def audit() -> dict:
     assert u5_words and len(u5_words) == 2
     diff = [j+1 for j in range(27) if u5_words[0][j] != u5_words[1][j]]
     assert diff == [10, 16, 19, 25], diff
+    ambiguous_cells = [
+        {"output_slot_1_based": slot,
+         "quarter_1_based": (slot - 1)//9 + 1,
+         "background_class": LETTERS[(slot - 1)%9],
+         "physical_row_col_1_based":
+             [POS[LETTERS[(slot - 1)%9]][0]+1,
+              POS[LETTERS[(slot - 1)%9]][1]+1]}
+        for slot in diff
+    ]
+    assert [cell["background_class"] for cell in ambiguous_cells] == [
+        "A", "G", "A", "G"
+    ]
+    assert [cell["quarter_1_based"] for cell in ambiguous_cells] == [2, 2, 3, 3]
+    assert {cell["physical_row_col_1_based"][1] for cell in ambiguous_cells} == {2}
 
     # A genuine hypothetical consumer example: parity of selected output.
     # Report as a functional projection, NOT evidence of parity/ECC authorship.
@@ -249,6 +263,10 @@ def audit() -> dict:
         "u5_selected_depth27": {
             "two_possible_words": u5_words,
             "differing_output_slots_1_based": diff,
+            "ambiguous_cells": ambiguous_cells,
+            "invariant_slots_1_based": [
+                slot for slot in range(1, 28) if slot not in diff
+            ],
         },
         "terminal_100_scope": {
             "U2": {"valid_100": 144, "invalid": 180},
