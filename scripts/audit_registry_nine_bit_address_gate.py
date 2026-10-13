@@ -71,8 +71,8 @@ def audit()->dict:
     }
     for reverse in (False,True):
         for slash_is_one in (True,False):
-            key=("reverse" if reverse else "serial")+"_"+
-                ("slash1" if slash_is_one else "dash1")
+            key=(("reverse" if reverse else "serial") + "_" +
+                 ("slash1" if slash_is_one else "dash1"))
             cells={}
             for j,ch in enumerate(LETTERS):
                 native=class_word(first81,j)
