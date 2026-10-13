@@ -115,7 +115,7 @@ def collect_comment_links(post_id: str, source: dict, comments: list[dict]) -> t
     media, galleries = [], []
     for comment in comments:
         body = comment.get("body", "")
-        if not isinstance(body, str) or body.strip().lower() in {"[deleted]", "[removed]"}:
+        if not isinstance(body, str) or body.strip().lower().startswith(("[deleted]", "[removed]")):
             continue
         cid = comment.get("id", "")
         if not re.fullmatch(r"[a-z0-9]{4,12}", cid, re.IGNORECASE):
