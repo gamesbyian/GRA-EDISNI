@@ -95,7 +95,9 @@ def axis_options(low: int, high: int) -> dict:
     px = [d for d in values if d % 3 == 0]
     mcus = [d for d in values if math.ceil(d / 16) % 3 == 0]
     aligned = [d for d in values if d % 48 == 0]
-    assert set(px).intersection(mcus) == set(aligned)
+    # Equal-count MCU bands and equal-width pixel bands need not have the SAME
+    # boundaries. Strict grid registration additionally requires d/3 % 16 == 0.
+    assert set(aligned).issubset(set(px).intersection(mcus))
     return {"values": len(values),
             "pixel_equal": px,
             "mcu_equal": mcus,
