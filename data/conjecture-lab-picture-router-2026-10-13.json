@@ -1,0 +1,131 @@
+{
+  "boards": {
+    "ABC/DEF/GHI": {
+      "compatible_onehot_count": 280,
+      "exact_permutations": 495,
+      "general_ge": 495,
+      "literal_ge": 495,
+      "median_general": 0,
+      "median_literal": 0,
+      "observed": {
+        "any_three_moves": 0,
+        "literal": 0,
+        "options": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "tail_completions": 18,
+        "witness": null
+      }
+    },
+    "IAB/CDE/FGH": {
+      "compatible_onehot_count": 280,
+      "exact_permutations": 495,
+      "general_ge": 156,
+      "literal_ge": 495,
+      "median_general": 0,
+      "median_literal": 0,
+      "observed": {
+        "any_three_moves": 4,
+        "literal": 0,
+        "options": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "tail_completions": 18,
+        "witness": [
+          "IAB/CDE/FGH",
+          "general",
+          [
+            [
+              -1,
+              -1
+            ],
+            [
+              1,
+              -1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          [
+            2,
+            2,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2,
+            2
+          ]
+        ]
+      }
+    }
+  },
+  "experiment": "CL-VLEN-07",
+  "oracle": "compiled transition table agrees with independent geometric walk",
+  "status": "Invented nine-address route model; not a recovered map."
+}

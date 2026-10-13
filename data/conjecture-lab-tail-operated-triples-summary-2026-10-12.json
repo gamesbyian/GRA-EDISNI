@@ -1,0 +1,48 @@
+{
+  "B_survivors": [
+    [
+      "strided",
+      1,
+      "single",
+      "reverse",
+      null,
+      2
+    ],
+    [
+      "strided",
+      -1,
+      "single",
+      "reverse",
+      null,
+      1
+    ]
+  ],
+  "baseline_onehot_completions": 2415919104,
+  "best_individual_class_coverage": 6,
+  "compatible_models": 0,
+  "experiment": "CL-VLEN-04",
+  "highest_scoring_model": null,
+  "matched_nulls": {
+    "classes": {
+      "models_with_any_survivor": 1,
+      "n": 80,
+      "null": "fixed physical site mask, early-zone counts preserved within classes, tail unchanged",
+      "observed_best_log_bayes_factor": null,
+      "shuffle_ge_actual": null,
+      "shuffle_median_best_log_bayes_factor": 6.120541589
+    },
+    "frames": {
+      "models_with_any_survivor": 1,
+      "n": 80,
+      "null": "fixed physical site mask, early-zone counts preserved within frames, tail unchanged",
+      "observed_best_log_bayes_factor": null,
+      "shuffle_ge_actual": null,
+      "shuffle_median_best_log_bayes_factor": 6.120541589
+    }
+  },
+  "model_count": 160,
+  "observed_residues": 66,
+  "physical_records": 84,
+  "status": "DISCOVER/DEVELOP only; no external decoder",
+  "tail_onehot_assignments": 18
+}

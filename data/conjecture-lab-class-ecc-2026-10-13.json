@@ -1,0 +1,1253 @@
+{
+  "best": {
+    "best": [
+      [
+        "col",
+        2,
+        "xor",
+        0,
+        1
+      ],
+      3.0,
+      [
+        32,
+        1,
+        1,
+        4,
+        8,
+        2,
+        16,
+        4,
+        2
+      ]
+    ],
+    "best_log2_bf": 3.0,
+    "compatible": 2,
+    "max_classes": 9
+  },
+  "experiment": "CL-VLEN-05",
+  "failed_alternatives": [
+    [
+      [
+        "row",
+        0,
+        "xor",
+        0,
+        0
+      ],
+      [
+        "B",
+        "I"
+      ]
+    ],
+    [
+      [
+        "row",
+        0,
+        "xor",
+        0,
+        1
+      ],
+      [
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        0,
+        "xor",
+        1,
+        0
+      ],
+      [
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        0,
+        "xor",
+        1,
+        1
+      ],
+      [
+        "B",
+        "I"
+      ]
+    ],
+    [
+      [
+        "row",
+        0,
+        "maj",
+        0,
+        0
+      ],
+      [
+        "B",
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        0,
+        "maj",
+        1,
+        1
+      ],
+      [
+        "B",
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        0,
+        "exact1",
+        0,
+        0
+      ],
+      [
+        "B",
+        "I"
+      ]
+    ],
+    [
+      [
+        "row",
+        0,
+        "exact1",
+        0,
+        1
+      ],
+      [
+        "B",
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        0,
+        "exact1",
+        1,
+        0
+      ],
+      [
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        1,
+        "xor",
+        0,
+        1
+      ],
+      [
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        1,
+        "xor",
+        1,
+        0
+      ],
+      [
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        1,
+        "maj",
+        0,
+        0
+      ],
+      [
+        "B",
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        1,
+        "maj",
+        1,
+        1
+      ],
+      [
+        "B",
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        1,
+        "exact1",
+        0,
+        1
+      ],
+      [
+        "B",
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        1,
+        "exact1",
+        1,
+        0
+      ],
+      [
+        "E"
+      ]
+    ],
+    [
+      [
+        "row",
+        2,
+        "xor",
+        0,
+        1
+      ],
+      [
+        "D"
+      ]
+    ],
+    [
+      [
+        "row",
+        2,
+        "xor",
+        1,
+        0
+      ],
+      [
+        "D"
+      ]
+    ],
+    [
+      [
+        "row",
+        2,
+        "maj",
+        0,
+        0
+      ],
+      [
+        "B",
+        "D"
+      ]
+    ],
+    [
+      [
+        "row",
+        2,
+        "maj",
+        1,
+        1
+      ],
+      [
+        "B",
+        "D"
+      ]
+    ],
+    [
+      [
+        "row",
+        2,
+        "exact1",
+        0,
+        0
+      ],
+      [
+        "F",
+        "I"
+      ]
+    ]
+  ],
+  "holdout": {
+    "attempted": 66,
+    "brier": 0.337121,
+    "details": [
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 1.0,
+        "prob_slash": 1.0,
+        "residue": 2,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 3,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "row",
+          2,
+          "exact1",
+          1,
+          0
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 1.0,
+        "residue": 4,
+        "trained": 5
+      },
+      {
+        "actual": "/",
+        "model": [
+          "row",
+          0,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 0.0,
+        "residue": 5,
+        "trained": 4
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 7,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 9,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 10,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 12,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "row",
+          2,
+          "exact1",
+          1,
+          0
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 0.0,
+        "residue": 13,
+        "trained": 5
+      },
+      {
+        "actual": "-",
+        "model": [
+          "row",
+          1,
+          "exact1",
+          1,
+          0
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 1.0,
+        "residue": 14,
+        "trained": 8
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 15,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 17,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 18,
+        "trained": 3
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 19,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 20,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 21,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "row",
+          1,
+          "exact1",
+          1,
+          0
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 1.0,
+        "residue": 23,
+        "trained": 8
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 24,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 1.0,
+        "prob_slash": 0.0,
+        "residue": 26,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 1.0,
+        "prob_slash": 1.0,
+        "residue": 29,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 30,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 31,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "row",
+          1,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 0.0,
+        "residue": 32,
+        "trained": 4
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 36,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 37,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 38,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 39,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 40,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 42,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 43,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 44,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 46,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 47,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 48,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 51,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 1.0,
+        "prob_slash": 0.0,
+        "residue": 53,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 1.0,
+        "prob_slash": 1.0,
+        "residue": 56,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 57,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 1.0,
+        "prob_slash": 1.0,
+        "residue": 59,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 60,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 63,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 65,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 66,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 69,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 70,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 71,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 72,
+        "trained": 3
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 74,
+        "trained": 2
+      },
+      {
+        "actual": "-",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 75,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "row",
+          2,
+          "exact1",
+          1,
+          0
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 0.0,
+        "residue": 76,
+        "trained": 5
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          1,
+          "same",
+          0,
+          0
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 0.0,
+        "residue": 78,
+        "trained": 4
+      },      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 79,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 1.0,
+        "prob_slash": 1.0,
+        "residue": 80,
+        "trained": 4
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 81,
+        "trained": 2
+      },
+      {
+        "actual": ".",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 85,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "row",
+          1,
+          "exact1",
+          1,
+          0
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 0.0,
+        "residue": 86,
+        "trained": 8
+      },
+      {
+        "actual": ".",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 1.0,
+        "prob_slash": 0.0,
+        "residue": 89,
+        "trained": 6
+      },
+      {
+        "actual": ".",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 90,
+        "trained": 2
+      },
+      {
+        "actual": ".",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 1.0,
+        "prob_slash": 0.0,
+        "residue": 92,
+        "trained": 2
+      },
+      {
+        "actual": ".",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 1.0,
+        "prob_slash": 0.0,
+        "residue": 95,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          1,
+          "same",
+          0,
+          0
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 0.0,
+        "residue": 96,
+        "trained": 4
+      },
+      {
+        "actual": ".",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 97,
+        "trained": 2
+      },
+      {
+        "actual": ".",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 98,
+        "trained": 2
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 101,
+        "trained": 2
+      },
+      {
+        "actual": ".",
+        "model": [
+          "row",
+          2,
+          "exact1",
+          1,
+          0
+        ],
+        "prob_actual": 0.0,
+        "prob_slash": 1.0,
+        "residue": 103,
+        "trained": 5
+      },
+      {
+        "actual": "/",
+        "model": [
+          "col",
+          2,
+          "xor",
+          0,
+          1
+        ],
+        "prob_actual": 0.5,
+        "prob_slash": 0.5,
+        "residue": 108,
+        "trained": 3
+      }
+    ],
+    "predictive_folds": 66,
+    "unavailable_folds": 0,
+    "wrong_zero_folds": 11
+  },
+  "model_definition": "class 9 body bits, three three-input Boolean checks, by row/col with 3 rotations, six operators, separate input and output polarities",
+  "models": 144,
+  "null": {
+    "class": {
+      "any_compatible": 268,
+      "best_factor_ge": 253,
+      "compatible_ge": 251,
+      "ge_classes": 268,
+      "median_best_factor": 4.7083328,
+      "median_compatible": 3.0,
+      "median_max_classes": 9.0,
+      "replicates": 400
+    },
+    "frame": {
+      "any_compatible": 277,
+      "best_factor_ge": 266,
+      "compatible_ge": 250,
+      "ge_classes": 277,
+      "median_best_factor": 4.584962501,
+      "median_compatible": 3.0,
+      "median_max_classes": 9.0,
+      "replicates": 400
+    },
+    "region": {
+      "any_compatible": 308,
+      "best_factor_ge": 291,
+      "compatible_ge": 280,
+      "ge_classes": 308,
+      "median_best_factor": 4.942085259500001,
+      "median_compatible": 3.0,
+      "median_max_classes": 9.0,
+      "replicates": 400
+    }
+  },
+  "physical_records": 84,
+  "status": "DISCOVER/DEVELOP not evidence of checksum",
+  "unique": 66,
+  "unit_tests": "all 144 codeword truth tables x 512 nine-bit inputs tested"
+}
