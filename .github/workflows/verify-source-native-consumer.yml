@@ -10,6 +10,7 @@ on:
       - "scripts/conjecture_lab_native_q4_receiver.py"
       - "scripts/conjecture_lab_native_q4_base27.py"
       - "scripts/conjecture_lab_q4_tile_band.py"
+      - "scripts/conjecture_lab_url_digits_q4_depth.py"
       - "artifacts/background-tile-evidence-masters/**"
       - "data/printer-reference/pc-ps4-acorn-order.txt"
       - "data/experiment-478-source-native-consumer-affordances.json"
@@ -49,6 +50,7 @@ jobs:
           python scripts/conjecture_lab_native_q4_receiver.py --allow-primary-dots > /tmp/native-q4-permissive.txt
           python scripts/conjecture_lab_native_q4_base27.py --allow-primary-dots > /tmp/native-q4-base27-permissive.txt
           python scripts/conjecture_lab_q4_tile_band.py --out-json /tmp/native-q4-tile-band.json > /tmp/native-q4-tile-band.txt
+          python scripts/conjecture_lab_url_digits_q4_depth.py > /tmp/native-q4-url-depth.txt
           cat /tmp/native-q4-receiver.txt
           cat /tmp/native-q4-base27.txt
           cat /tmp/native-q4-tile-band.txt
