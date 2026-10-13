@@ -1,0 +1,89 @@
+"""Offline synthetic controls for public archived cross-community CE image discovery."""
+from __future__ import annotations
+
+import json
+import unittest
+from urllib.parse import parse_qs, urlparse
+
+from scripts.external_evidence.search_public_reddit_ce_media import (
+    clean_item, known_status, media_urls, relevant, scan, search_url
+)
+
+
+class ArchivedMarketSearchTests(unittest.TestCase):
+    def test_shop_vague_inside_word_is_filtered(self):
+        self.assertFalse(relevant({"title": "Inside the Limited Collectors Studio"}))
+        self.assertTrue(relevant({"title": "INSIDE Collector's Edition iam8bit new photos"}))
+        self.assertTrue(relevant({"body": "Received the Playdead Huddle model today"}))
+
+    def test_exact_photo_gallery_and_relative_media_sources(self):
+        post = {"id": "i0vgml", "title": "[US] Inside Collector's Edition sale",
+                "selftext": "Selling my copy. Photo: https://i.imgur.com/abc123.jpg "
+                            "and https://imgur.com/gallery/XYZ123",
+                "url": "https://www.reddit.com/r/GameSale/comments/i0vgml/",
+                "created_utc": 1596153600, "subreddit": "GameSale"}
+        row = clean_item(post, "post")
+        self.assertEqual(row["post_id"], "i0vgml")
+        self.assertIn("https://i.imgur.com/abc123.jpg", row["direct_image_urls"])
+        self.assertIn("https://imgur.com/gallery/XYZ123", row["gallery_urls"])
+        self.assertGreaterEqual(row["score"], 10)
+        self.assertEqual(row["source_page_url"], "https://www.reddit.com/comments/i0vgml/")
+        self.assertEqual(known_status(row, {"reddit": {"i0vgml"}, "imgur": set()}),
+                         "post-id-present-in-known-ledger")
+        self.assertEqual(known_status(row, {"reddit": set(), "imgur": set()}),
+                         "unreconciled-by-exact-url")
+
+    def test_comment_media_and_archived_deleted_not_counted(self):
+        row = clean_item({"id":"f12345", "link_id":"t3_e9bteo",
+                          "subreddit":"PlaydeadsInside",
+                          "body":"My iam8bit sticker photo https://i.redd.it/photo.jpg"},
+                         "comment")
+        self.assertEqual(row["source_page_url"],
+                         "https://www.reddit.com/comments/e9bteo/_/f12345/")
+        self.assertEqual(len(row["direct_image_urls"]), 1)
+        self.assertIsNone(clean_item({"id":"f12346", "link_id":"t3_e9bteo",
+                             "body":"[removed] iam8bit photo https://i.redd.it/file.jpg"},
+                             "comment"))
+        self.assertIsNone(clean_item({"id":"f12347", "link_id":"t3_e9bteo",
+                             "body":"just a game no CE information"}, "comment"))
+
+    def test_preview_and_embedded_src_cannot_be_arbitrary_hosts(self):
+        item = {"url":"https://i.redd.it/public.jpg",
+                "preview":{"images":[{"source":{"url":"https://preview.redd.it/a.jpg?width=100&amp;format=jpg"}}]},
+                "media_metadata":{"x":{"s":{"u":"http://i.redd.it/unsecured.jpg"}}},
+                "selftext":"https://example.com/other.jpg https://imgur.com/a/AlbumCode"}
+        direct, galleries=media_urls(item)
+        self.assertEqual(len(direct),2)
+        self.assertEqual(len(galleries),1)
+        self.assertIn("https://preview.redd.it/a.jpg?width=100&format=jpg",direct)
+
+    def test_archive_filters_are_bounded_and_typed(self):
+        entry={"id":"q","kind":"post","subreddit":"GameSale","term":"inside collector"}
+        parsed=urlparse(search_url(entry,30))
+        self.assertEqual(parsed.hostname,"arctic-shift.photon-reddit.com")
+        self.assertEqual(parse_qs(parsed.query)["query"], ["inside collector"])
+        with self.assertRaises(ValueError):
+            search_url({**entry, "subreddit":"GameSale&author=someone"},30)
+
+    def test_duplicate_cross_query_records_and_failure_are_explicit(self):
+        queries=[{"id":"q1","kind":"post","subreddit":"GameSale","term":"iam8bit"},
+                 {"id":"q2","kind":"post","subreddit":"gamecollecting","term":"real doll"},
+                 {"id":"q3","kind":"comment","subreddit":"gamecollecting","term":"realdoll"}]
+        post={"id":"i0vgml","title":"Selling my iam8bit Playdead inside collector",
+              "url":"https://i.redd.it/salephoto.jpg","created_utc":1596153600}
+        def get(url):
+            if "comments/search" in url: raise OSError("temporary API outage")
+            return {"data":[post]}, "abc"*21+"a"
+        records,audit,failures,photos,galleries=scan(queries,
+                    {"reddit":set(),"imgur":set()},requester=get,per_query=10)
+        self.assertEqual(len(records),1)
+        self.assertEqual(records[0]["matched_search_ids"], ["q1","q2"])
+        self.assertEqual(len(photos),1)
+        self.assertEqual(len(galleries),0)
+        self.assertEqual(len(failures),1)
+        self.assertEqual(audit[2]["status"],"unavailable")
+        self.assertEqual(photos[0]["source_page_url"], records[0]["source_page_url"])
+
+
+if __name__ == "__main__":
+    unittest.main()

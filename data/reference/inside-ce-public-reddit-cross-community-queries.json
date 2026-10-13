@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "purpose": "Bounded, unauthenticated search of archived public Reddit collectors/resale discussions for INSIDE full CE photographs, listings and independent first-person reports; results are only discovery leads.",
+  "archive": "Arctic Shift /api/posts/search and /api/comments/search",
+  "limits": {"max_queries": 32, "max_results_per_query": 40, "max_total_unique_records": 500},
+  "searches": [
+    {"id":"sales-inside-ce","kind":"post","subreddit":"GameSale","term":"inside collector"},
+    {"id":"sales-iam8bit","kind":"post","subreddit":"GameSale","term":"iam8bit"},
+    {"id":"sales-realdoll","kind":"post","subreddit":"GameSale","term":"realdoll"},
+    {"id":"sales-huddle","kind":"post","subreddit":"GameSale","term":"huddle"},
+    {"id":"collecting-inside-ce","kind":"post","subreddit":"gamecollecting","term":"inside collector"},
+    {"id":"collecting-iam8bit","kind":"post","subreddit":"gamecollecting","term":"iam8bit"},
+    {"id":"collecting-realdoll","kind":"post","subreddit":"gamecollecting","term":"realdoll"},
+    {"id":"collecting-huddle","kind":"post","subreddit":"gamecollecting","term":"huddle"},
+    {"id":"playdead-ce","kind":"post","subreddit":"PlaydeadsInside","term":"collector"},
+    {"id":"playdead-sticker","kind":"post","subreddit":"PlaydeadsInside","term":"sticker"},
+    {"id":"playdead-huddle","kind":"post","subreddit":"PlaydeadsInside","term":"huddle"},
+    {"id":"limited-iam8bit","kind":"post","subreddit":"limitedprintgames","term":"iam8bit"},
+    {"id":"limited-inside","kind":"post","subreddit":"limitedprintgames","term":"inside"},
+    {"id":"limited-realdoll","kind":"post","subreddit":"limitedprintgames","term":"realdoll"},
+    {"id":"ps4-iam8bit","kind":"post","subreddit":"PS4","term":"iam8bit"},
+    {"id":"ps4-realdoll","kind":"post","subreddit":"PS4","term":"realdoll"},
+    {"id":"sales-comments-iam8bit","kind":"comment","subreddit":"GameSale","term":"iam8bit"},
+    {"id":"sales-comments-realdoll","kind":"comment","subreddit":"GameSale","term":"realdoll"},
+    {"id":"collect-comments-realdoll","kind":"comment","subreddit":"gamecollecting","term":"realdoll"},
+    {"id":"collect-comments-inside-ce","kind":"comment","subreddit":"gamecollecting","term":"inside collector"},
+    {"id":"playdead-comments-collector","kind":"comment","subreddit":"PlaydeadsInside","term":"collector"},
+    {"id":"playdead-comments-sticker","kind":"comment","subreddit":"PlaydeadsInside","term":"sticker"},
+    {"id":"playdead-comments-unboxing","kind":"comment","subreddit":"PlaydeadsInside","term":"unboxing"},
+    {"id":"ps4-comments-realdoll","kind":"comment","subreddit":"PS4","term":"realdoll"}
+  ],
+  "notes": "Each query is an archive-retrieval attempt, not a complete market census. The archive is not guaranteed to index all historical posts. No accounts, outreach, owner identity graph or credentials."
+}
