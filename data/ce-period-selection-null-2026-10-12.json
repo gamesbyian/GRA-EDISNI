@@ -1,0 +1,182 @@
+{
+  "mode": "DISCOVER_DEVELOP_zone_preserving_label_shuffle_union_bound",
+  "physical_observations": 84,
+  "body_entries": 72,
+  "tail_entries": 12,
+  "body_slashes": 44,
+  "tail_slashes": 4,
+  "period_range": [
+    1,
+    216
+  ],
+  "minimum_repeat_support": 18,
+  "eligible_periods": 137,
+  "nonzero_null_periods": 27,
+  "denominator": 37399079244620030691600,
+  "union_bound_numerator": 377822188953098255,
+  "union_bound_upper_probability": 0.000010102446279006965,
+  "candidate_nulls": [
+    {
+      "period": 77,
+      "repeat_excess": 26,
+      "favorable_assignments": 4378250063636,
+      "fixed_period_null_probability": 1.1706839184458865e-10
+    },
+    {
+      "period": 97,
+      "repeat_excess": 25,
+      "favorable_assignments": 12441063316643,
+      "fixed_period_null_probability": 3.326569415056571e-10
+    },
+    {
+      "period": 98,
+      "repeat_excess": 23,
+      "favorable_assignments": 281996676452862,
+      "fixed_period_null_probability": 7.540203720213997e-9
+    },
+    {
+      "period": 99,
+      "repeat_excess": 23,
+      "favorable_assignments": 45069465509144,
+      "fixed_period_null_probability": 1.2050955911067618e-9
+    },
+    {
+      "period": 100,
+      "repeat_excess": 22,
+      "favorable_assignments": 2063302821245368,
+      "fixed_period_null_probability": 5.5169882866626466e-8
+    },
+    {
+      "period": 101,
+      "repeat_excess": 25,
+      "favorable_assignments": 22604449562433,
+      "fixed_period_null_probability": 6.044119272183611e-10
+    },
+    {
+      "period": 102,
+      "repeat_excess": 23,
+      "favorable_assignments": 40285239493266,
+      "fixed_period_null_probability": 1.077171960030571e-9
+    },
+    {
+      "period": 103,
+      "repeat_excess": 25,
+      "favorable_assignments": 11322706754777,
+      "fixed_period_null_probability": 3.0275362344397306e-10
+    },
+    {
+      "period": 104,
+      "repeat_excess": 20,
+      "favorable_assignments": 21111467581552590,
+      "fixed_period_null_probability": 5.644916401140956e-7
+    },
+    {
+      "period": 105,
+      "repeat_excess": 24,
+      "favorable_assignments": 1396262717229105,
+      "fixed_period_null_probability": 3.7334146867531815e-8
+    },
+    {
+      "period": 106,
+      "repeat_excess": 22,
+      "favorable_assignments": 2480732343305278,
+      "fixed_period_null_probability": 6.633137482020066e-8
+    },
+    {
+      "period": 107,
+      "repeat_excess": 21,
+      "favorable_assignments": 14467111534112760,
+      "fixed_period_null_probability": 3.86830687447844e-7
+    },
+    {
+      "period": 108,
+      "repeat_excess": 18,
+      "favorable_assignments": 217839326948876160,
+      "fixed_period_null_probability": 0.000005824724334094749
+    },
+    {
+      "period": 109,
+      "repeat_excess": 20,
+      "favorable_assignments": 57397219789825440,
+      "fixed_period_null_probability": 0.0000015347228046552029
+    },
+    {
+      "period": 110,
+      "repeat_excess": 23,
+      "favorable_assignments": 7129753433045928,
+      "fixed_period_null_probability": 1.906398119165344e-7
+    },
+    {
+      "period": 111,
+      "repeat_excess": 24,
+      "favorable_assignments": 3944105955371160,
+      "fixed_period_null_probability": 1.0545997481845844e-7
+    },
+    {
+      "period": 112,
+      "repeat_excess": 25,
+      "favorable_assignments": 785666574565407,
+      "fixed_period_null_probability": 2.1007644852070187e-8
+    },
+    {
+      "period": 113,
+      "repeat_excess": 21,
+      "favorable_assignments": 4163897279108592,
+      "fixed_period_null_probability": 1.1133689286501836e-7
+    },
+    {
+      "period": 115,
+      "repeat_excess": 22,
+      "favorable_assignments": 2079531786619508,
+      "fixed_period_null_probability": 5.560382310531495e-8
+    },
+    {
+      "period": 116,
+      "repeat_excess": 18,
+      "favorable_assignments": 31997862800510840,
+      "fixed_period_null_probability": 8.555788924967672e-7
+    },
+    {
+      "period": 117,
+      "repeat_excess": 23,
+      "favorable_assignments": 1161684787387664,
+      "fixed_period_null_probability": 3.1061855287647916e-8
+    },
+    {
+      "period": 118,
+      "repeat_excess": 21,
+      "favorable_assignments": 351318229929112,
+      "fixed_period_null_probability": 9.393766825947999e-9
+    },
+    {
+      "period": 131,
+      "repeat_excess": 20,
+      "favorable_assignments": 437613111853320,
+      "fixed_period_null_probability": 1.1701173416355482e-8
+    },
+    {
+      "period": 133,
+      "repeat_excess": 20,
+      "favorable_assignments": 1772595725885820,
+      "fixed_period_null_probability": 4.73967745112552e-8
+    },
+    {
+      "period": 144,
+      "repeat_excess": 19,
+      "favorable_assignments": 2858052352132008,
+      "fixed_period_null_probability": 7.642039349252555e-8
+    },
+    {
+      "period": 148,
+      "repeat_excess": 18,
+      "favorable_assignments": 786744615300018,
+      "fixed_period_null_probability": 2.1036470180297115e-8
+    },
+    {
+      "period": 182,
+      "repeat_excess": 19,
+      "favorable_assignments": 3179840714089416,
+      "fixed_period_null_probability": 8.502457221715814e-8
+    }
+  ]
+}
