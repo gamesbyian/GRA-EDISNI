@@ -92,7 +92,7 @@ def resolution_preference(url: str) -> float:
     except (ValueError, OverflowError):
         return 0
     # Reference photos should be legible, with a natural ceiling at 2048px.
-    return min(effective, 2048) - max(0, effective - 2048) * .01
+    return min(effective, 2048) - max(0, effective - 2048) * .1
 
 
 def select(leads: list[dict], per_page: int, total: int) -> list[dict]:
