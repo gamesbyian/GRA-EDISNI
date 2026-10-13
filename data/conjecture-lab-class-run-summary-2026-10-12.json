@@ -1,0 +1,135 @@
+{
+  "best_model": [
+    1.3862943611198943,
+    "reference",
+    "alphabetical_reverse",
+    [
+      "reverse",
+      "copy",
+      "literal"
+    ],
+    "triplet_0",
+    true,
+    12582912,
+    61966892988215484494118912
+  ],
+  "distinct_residues": 66,
+  "experiment": "CL-VLEN-02",
+  "missing_residues": 42,
+  "nulls": {
+    "image_class": {
+      "conditioned_on": "same physical observed mask, mark counts per image_class",
+      "ge_count": 118,
+      "iterations": 120,
+      "median_null_log_bayes_factor": 2.7080502,
+      "nonzero_models_shuffles": 120,
+      "null_max": 5.5037986,
+      "observed_best_log_bayes_factor": 1.3862944,
+      "post_selection_tail_fraction": "119/121",
+      "seed": 20261113
+    },
+    "serial_frame": {
+      "conditioned_on": "same physical observed mask, mark counts per serial_frame",
+      "ge_count": 119,
+      "iterations": 120,
+      "median_null_log_bayes_factor": 2.95838,
+      "nonzero_models_shuffles": 120,
+      "null_max": 7.0585872,
+      "observed_best_log_bayes_factor": 1.3862944,
+      "post_selection_tail_fraction": "120/121",
+      "seed": 20261012
+    }
+  },
+  "physical_records": 84,
+  "positive_models": 23,
+  "retrospective_class_holdouts": {
+    "baseline": {
+      "brier": 0.2449495,
+      "mean_actual_probability": 0.510101,
+      "mean_clipped_log_loss": 0.68285,
+      "n": 66,
+      "wrong_confident": 0
+    },
+    "model": {
+      "brier": 0.2752489,
+      "mean_actual_probability": 0.4982323,
+      "mean_clipped_log_loss": 1.725342,
+      "n": 66,
+      "wrong_confident": 2
+    }
+  },
+  "retrospective_single_residue_holdouts": {
+    "baseline": {
+      "all": {
+        "falsified_zero_probability": 0,
+        "indeterminate_p05": 61,
+        "mean_brier": 0.2394781,
+        "mean_log_loss": 0.663425,
+        "mean_probability_actual": 0.522727,
+        "n": 66,
+        "strict_majority_correct": 4,
+        "strict_majority_wrong": 1
+      },
+      "body": {
+        "falsified_zero_probability": 0,
+        "indeterminate_p05": 54,
+        "mean_brier": 0.25,
+        "mean_log_loss": 0.693147,
+        "mean_probability_actual": 0.5,
+        "n": 54,
+        "strict_majority_correct": 0,
+        "strict_majority_wrong": 0
+      },
+      "tail": {
+        "falsified_zero_probability": 0,
+        "indeterminate_p05": 7,
+        "mean_brier": 0.1921296,
+        "mean_log_loss": 0.529676,
+        "mean_probability_actual": 0.625,
+        "n": 12,
+        "strict_majority_correct": 4,
+        "strict_majority_wrong": 1
+      }
+    },
+    "model": {
+      "all": {
+        "falsified_zero_probability": 12,
+        "indeterminate_p05": 38,
+        "mean_brier": 0.3998583,
+        "mean_log_loss": 6.870913,
+        "mean_probability_actual": 0.415388,
+        "n": 66,
+        "strict_majority_correct": 6,
+        "strict_majority_wrong": 22
+      },
+      "body": {
+        "falsified_zero_probability": 10,
+        "indeterminate_p05": 37,
+        "mean_brier": 0.4094033,
+        "mean_log_loss": 7.003288,
+        "mean_probability_actual": 0.389506,
+        "n": 54,
+        "strict_majority_correct": 0,
+        "strict_majority_wrong": 17
+      },
+      "tail": {
+        "falsified_zero_probability": 2,
+        "indeterminate_p05": 1,
+        "mean_brier": 0.3569059,
+        "mean_log_loss": 6.275227,
+        "mean_probability_actual": 0.531854,
+        "n": 12,
+        "strict_majority_correct": 6,
+        "strict_majority_wrong": 5
+      }
+    }
+  },
+  "source": "data/observations.csv",
+  "status": "exploratory exact negative and low-specificity conditional survivor; no decoded instructions",
+  "tail_onehot_assignments": 18,
+  "tested_families": {
+    "local": 126,
+    "reference": 336
+  },
+  "tested_models": 462
+}

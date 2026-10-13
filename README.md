@@ -32,6 +32,10 @@ python scripts/verify_machine.py
 
 ## Research evidence map
 
+- [CL-VLEN-02 class-run and reference instruction campaign](docs/conjecture-lab/2026-10-12-class-run-command-campaign.md): **462 exact three-opcode grammars** on the raw 84-record/66-residue corpus; 126 exact local run-statistic decoders fail, 23 of 336 reference interpreters remain compatible, and the best retrospective program loses against 119/120 and 118/120 matched shuffled controls. Physically held-out marker and class-group controls perform worse than one-hot-only baseline. [Executable analysis](scripts/conjecture_lab_class_run_programs.py), [summary](data/conjecture-lab-class-run-summary-2026-10-12.json) and [full archive](data/conjecture-lab-class-run-programs-2026-10-12.json). No decoded instruction claim.
+
+
+
 - [Worldwide gaming-forum discovery directory](docs/reference/global-gaming-forums.md): 472 multilingual forum/discussion leads, [machine-readable TSV](data/reference/global-gaming-forums.tsv), evidence-status caveats, and a source-first INSIDE archival search procedure.
 
 - [CL-VLEN-01 variable-width and instruction-stream audit](docs/conjecture-lab/2026-10-12-variable-length-program-grammars.md): deterministic 3/5-bit prefix-code and opcode interpreters, exact raw-corpus run bounds, best-of-family shuffled controls, plus one-slash class-tail reconciliation after physical sticker 427 (36 historical assignments now 18). [Executable workbench](scripts/conjecture_lab_variable_length_grammar.py), [compact results](data/conjecture-lab-vlen-summary-2026-10-12.json) and [full machine-readable audit](data/conjecture-lab-variable-length-grammar-2026-10-12.json). This is a DISCOVER/DEVELOP experiment, not an identified decoder.
