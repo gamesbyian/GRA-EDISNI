@@ -54,6 +54,7 @@ Run offline after a bounded index campaign:
 python scripts/triage_inside_ce_index_results.py \
   --input search-output/inside-ce-index-results.jsonl \
   --ledger data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv \
+  --canonical-stickers /research/twinysam-INSIDE-ARG/stickers.md \
   --output search-output/inside-ce-index-candidates.tsv \
   --summary search-output/inside-ce-index-triage-summary.json
 
@@ -61,6 +62,12 @@ python -m unittest discover -s tests -p test_inside_ce_index_triage.py -v
 \`\`\`
 
 The [GitHub Actions owner campaign](../../.github/workflows/inside-ce-native-search-campaign.yml) now runs this **offline triage after an explicitly authorized API batch**, publishing a candidate TSV and a summary alongside the original returned URLs and search manifest metadata.
+
+### Community-canonical link cross-check
+
+As an optional second source of *already documented URLs*, the offline triager accepts `--canonical-stickers /path/to/twinysam-INSIDE-ARG/stickers.md`. It extracts public `http(s)` links from the existing community chronology, normalizes source and thread IDs with the same method used for fresh hits, and stores the canonical file's **SHA-256** in the output summary. The GHA owner-search workflow obtains this public file through a separate read-only checkout when index searches are explicitly enabled. No API call or owner outreach is needed for URL comparison.
+
+`canonical_exact_source_url` means a result links the same normalized source URL already present in the community's sticker ledger. `canonical_thread_context_only` means a different result links the same Reddit thread or YouTube video, possibly a **different person or physical CE**. `not_in_canonical_link_list_or_not_provided` is only an absence from extracted **links**, not proof the CE is unknown to the community; accounts may appear as text, seller names or private-contact notes. The triager never tries to infer identity from aliases or automatically assign a serial.
 
 **Known limitations:** canonical ledger normalization recognizes common Reddit permalinks, YouTube watch/comment identifiers, item-number eBay URLs and query-tracking parameters. It does not prove usernames are the same person, that two eBay item IDs represent two physical CEs, that an old Reddit shortlink resolves to a specific comment, or that a missed result does not exist. Social-site live/API permission and rights remain separate. No full-text archive acquisition or native-language 23,499-query campaign is claimed here.
 
