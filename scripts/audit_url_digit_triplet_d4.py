@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 from collections import Counter
+from itertools import combinations
 from math import prod
 from pathlib import Path
 
@@ -79,6 +80,74 @@ def weak_count(allowed: dict[str,set[str]],group:dict[str,list[str]]) -> tuple[i
     return prod(map(len,local.values())),local
 
 
+def unordered_three_pairings() -> list[tuple[tuple[int,int],...]]:
+    """Exactly 1260 possible duplicate-pair patterns among nine positions.
+
+    The three repeated digit labels and the three distinct singletons
+    each have 3! assignments to a fixed pairing. Thus all 1260 unlabeled
+    pair structures have equal mass in the 45360 distinct multiset
+    permutations of 534965398; no 9! false denominator.
+    """
+    result=set()
+    sites=set(range(9))
+    for a in combinations(range(9),2):
+        rest=sorted(sites-set(a))
+        for b in combinations(rest,2):
+            rest2=sorted(set(rest)-set(b))
+            for c in combinations(rest2,2):
+                result.add(tuple(sorted((a,b,c))))
+    assert len(result)==1260,len(result)
+    return sorted(result)
+
+
+def exact_multiset_pairing_null(layouts: list[dict], u5: list[str]) -> dict:
+    """One bounded look-elsewhere axis: repeated-digit placements, D4 views.
+
+    This does NOT correct the post-hoc invention of the equal-word rule,
+    the U5 model, the nine-digit reader, or the whole hypothesis atlas.
+    """
+    assert len(layouts)==8
+    counts=Counter(u5)
+    assert sorted(counts.values())==[4,6]
+    class_patterns={word:class_words(word) for word in counts}
+    orbit=[row["physical_layout_in_URL_digit_order"] for row in layouts]
+    histogram_orientations=Counter()
+    histogram_max=Counter()
+    for three_pairs in unordered_three_pairings():
+        by_orientation=[]
+        for orient in orbit:
+            survivors=0
+            for word,n in counts.items():
+                pattern=class_patterns[word]
+                if all(pattern[orient[a]]==pattern[orient[b]]
+                       for a,b in three_pairs):
+                    survivors+=n
+            by_orientation.append(survivors)
+        histogram_orientations[sum(v>0 for v in by_orientation)]+=1
+        histogram_max[max(by_orientation)]+=1
+    assert dict(sorted(histogram_orientations.items()))=={0:1216,1:40,2:4}
+    assert dict(sorted(histogram_max.items()))=={0:1216,4:20,6:24}
+    observed_pairing=tuple(sorted(((0,5),(1,6),(3,7))))
+    observed=[]
+    for orient in orbit:
+        observed.append(sum(n for w,n in counts.items()
+                            if all(class_patterns[w][orient[a]]==
+                                   class_patterns[w][orient[b]]
+                                   for a,b in observed_pairing)))
+    assert observed==[0,0,0,0,0,0,6,0]
+    return {
+        "null_model":"uniform placements of three unlabeled disjoint duplicate pairs among nine digit slots; allow any D4 view",
+        "total_pair_patterns":1260,
+        "equivalent_distinct_nine_digit_multiset_orders":45360,
+        "orientations_with_any_surviving_U5_histogram":dict(sorted(histogram_orientations.items())),
+        "maximum_surviving_U5_master_count_histogram":dict(sorted(histogram_max.items())),
+        "reference_probability_any_D4_view_survives":44/1260,
+        "reference_probability_max_U5_survivors_at_least_observed_6":24/1260,
+        "actual_source_digit_pattern_orientation_counts":observed,
+        "warning":"only one bounded combinatorial comparison corrected; NOT a validation p-value after all postselection",
+    }
+
+
 def audit() -> dict:
     raw=raw_triplet_audit()["class_readouts"]
     allowed={ch:set(row["possible_three_character_words"])
@@ -129,6 +198,10 @@ def audit() -> dict:
                for i,row in enumerate(layouts) if i!=6)
     assert layouts[6]["models"]["U5"]["compatible_physical_masters"]==6
     assert layouts[6]["models"]["U5"]["distinct_compatible_readouts"]==1
+    # Calibrate the deliberately selected duplicate-digit codebook against
+    # all 1260 unlabeled pair placements, with the entire eight-view D4
+    # portfolio allowed to compete on each reference case.
+    multiset_null=exact_multiset_pairing_null(layouts,selected["U5"])
 
     return {
         "research_mode":"DISCOVER/DEVELOP; post-selected hypothetical equal-digit codebook",
@@ -140,6 +213,7 @@ def audit() -> dict:
         "weak_raw_onehot_distinct_class_words_before_equality":768,
         "model_population_counts":{k:len(v) for k,v in models.items()},
         "orientation_results":layouts,
+        "selection_aware_nine_digit_pairing_control":multiset_null,
         "interpretation":(
             "Four of eight D4 layouts permit this equal-digit codebook at the "
             "weak one-slash-only level. U2 has survivors on the same four "
