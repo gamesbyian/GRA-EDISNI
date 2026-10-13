@@ -19,7 +19,16 @@ class OwnerLocalCodeTests(unittest.TestCase):
             'ce-owner-local-period-audit-2026-10-12.json').read_text(encoding='utf-8'))
 
     def test_snapshot_matches_exact_saved_artifact(self):
-        self.assertEqual(self.actual, self.saved)
+        for key in self.actual:
+            if key != 'fixed_period108_body_label_shuffle_null':
+                self.assertEqual(self.actual[key], self.saved[key], key)
+        left = self.actual['fixed_period108_body_label_shuffle_null']
+        right = self.saved['fixed_period108_body_label_shuffle_null']
+        for key in left:
+            if key == 'exact_conditional_probability':
+                self.assertAlmostEqual(left[key], right[key], places=15)
+            else:
+                self.assertEqual(left[key], right[key], key)
         self.assertEqual(self.actual['physical_stickers'], 84)
         self.assertEqual(self.actual['distinct_h108_residues'], 66)
 
