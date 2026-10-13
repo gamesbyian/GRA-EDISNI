@@ -130,6 +130,31 @@ def known_status(record: dict, known: dict[str, set[str]]) -> str:
     return "unreconciled-by-exact-url"
 
 
+CE_CONTEXT = ("iam8bit", "real doll", "realdoll", "inside collector",
+              "inside ce", "huddle", "playdead")
+FALLBACK_CONTEXT = ("collector", "inside", "sticker")
+
+
+def relevant_excerpt(item: dict, limit: int = 320) -> tuple[str, int]:
+    """Keep a small source excerpt around CE evidence in lengthy resale lists.
+
+    Character offset belongs to the original post *body*, not a transcript.
+    Never mistake a 240-character introductory excerpt for the only CE mention.
+    """
+    title = re.sub(r"\s+", " ", str(item.get("title") or ""))[:90]
+    body = str(item.get("selftext") or item.get("body") or "")
+    lower = body.lower()
+    positions = [lower.find(term) for term in CE_CONTEXT if term in lower]
+    if not positions:
+        positions = [lower.find(term) for term in FALLBACK_CONTEXT if term in lower]
+    first = min(positions) if positions else 0
+    start = max(0, first - 55)
+    sample = body[start:start + max(1, limit - len(title) - 10)]
+    sample = re.sub(r"\s+", " ", URL_RE.sub("[public URL]", sample))
+    excerpt = (title + " | " + ("…" if start else "") + sample).strip()[:limit]
+    return excerpt, start
+
+
 def clean_item(item: dict, kind: str) -> dict | None:
     ident = str(item.get("id") or "").removeprefix("t1_").removeprefix("t3_")
     if not re.fullmatch(r"[a-z0-9]{5,12}", ident, flags=re.I):
@@ -142,12 +167,12 @@ def clean_item(item: dict, kind: str) -> dict | None:
     direct, galleries = media_urls(item)
     page = (f"https://www.reddit.com/comments/{post_id}/"
             if kind == "post" else f"https://www.reddit.com/comments/{post_id}/_/{ident}/")
-    sample = " ".join(str(item.get(k) or "") for k in ("title", "selftext", "body"))
-    sample = re.sub(r"\s+", " ", URL_RE.sub("[public URL]", sample))[:240]
+    sample, excerpt_offset = relevant_excerpt(item)
     return {"id": ident.lower(), "kind": kind, "post_id": post_id.lower(),
             "source_page_url": page, "created_utc": item.get("created_utc"),
             "subreddit": str(item.get("subreddit") or "")[:90],
-            "context_excerpt": sample, "score": score_item(item, direct, galleries),
+            "context_excerpt": sample, "excerpt_body_offset": excerpt_offset,
+            "score": score_item(item, direct, galleries),
             "direct_image_urls": direct, "gallery_urls": galleries,
             "archived-source-only": True}
 
