@@ -24,7 +24,7 @@ Using **CMUDICT 1.1.3** (13,124 ASCII alphabetic nine-character entries after no
 - **Q4-rotated**: exactly one dictionary entry, `GOLIGHTLY`, with A0, column permutation (1,2,0), and frame indices (8,5,2,7,4,1,6,3,0). The entry is also a surname, so do not interpret it as an instruction without independent support.
 - **250 shuffled-frame nulls**, deterministic NumPy RNG seed 20261012, repeating the same layout/alphabet/column search: 134 runs yielded 0 hits, 88 yielded 1, 22 yielded 2, four yielded 3, and two yielded 4. Thus **116/250 (46.4%)** had at least one match. Observed = 1 is unremarkable under this test.
 
-The shuffle control tests the limited word-recognition claim after trying many arrangements, not whether this is the actual CE grammar. The wordlist experiment is exploratory and was selected after seeing the attractive output; it is not a validation p-value. The script above covers the pure positional arithmetic; the dictionary test currently needs CMUDICT 1.1.3 and NumPy to replay, and is not a CI check.
+The shuffle control tests the limited word-recognition claim after trying many arrangements, not whether this is the actual CE grammar. The wordlist experiment is exploratory and was selected after seeing the attractive output; it is not a validation p-value. The positional counts are replayed by [the core script](../../scripts/conjecture_lab_q4_roles.py). The shuffle result is now replayed by [the deterministic optional-dependency script](../../scripts/conjecture_lab_q4_dictionary_null.py), requiring CMUDICT 1.1.3 and NumPy; it is not a default CI check.
 
 ## Research disposition
 
