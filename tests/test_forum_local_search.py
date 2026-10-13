@@ -86,6 +86,33 @@ class ForumLocalSearchTests(unittest.TestCase):
         self.assertIn("貼紙", text)
         self.assertNotIn("private", text)
 
+
+    def test_warc_round_trip(self):
+        from io import BytesIO
+        from warcio.warcwriter import WARCWriter
+        from warcio.statusandheaders import StatusAndHeaders
+        target = Path(self.temp.name) / "archived.warc.gz"
+        page = "<html><body><p>Playdead /043 シール</p></body></html>".encode("utf-8")
+        with target.open("wb") as out:
+            writer = WARCWriter(out, gzip=True)
+            headers = StatusAndHeaders(
+                "200 OK", [("Content-Type", "text/html; charset=utf-8")],
+                protocol="HTTP/1.1"
+            )
+            rec = writer.create_warc_record(
+                "https://archive.example/thread/99", "response",
+                payload=BytesIO(page), http_headers=headers
+            )
+            writer.write_record(rec)
+        first = module.ingest_warc(self.db, target, max_records=10)
+        self.assertEqual(first["inserted"], 1)
+        result = module.search(self.db, "/043", host="archive.example")
+        self.assertEqual(result["hits_shown"], 1)
+        self.assertEqual(result["matches"][0]["source_kind"], "warc_capture")
+        self.assertTrue(result["matches"][0]["captured_at"])
+        second = module.ingest_warc(self.db, target, max_records=10)
+        self.assertEqual(second["duplicates"], 1)
+
     def test_no_url_or_empty_data(self):
         with self.assertRaises(ValueError):
             module.add_document(self.db, {"url": "file:///secret", "text": "hello"})
