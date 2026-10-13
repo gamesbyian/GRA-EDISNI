@@ -1,0 +1,85 @@
+name: CE visual provenance / image discovery
+
+on:
+  pull_request:
+    paths:
+      - "scripts/external_evidence/visual_index.py"
+      - "scripts/external_evidence/fetch_visual_references.py"
+      - "scripts/external_evidence/visual_semantic.py"
+      - "tests/test_ce_visual_provenance.py"
+      - "data/reference/inside-ce-visual-sources.json"
+      - ".github/workflows/ce-visual-provenance.yml"
+  workflow_dispatch:
+    inputs:
+      source_id:
+        description: "Existing public acquisition source ID, or 'none' for reference-only indexing"
+        required: true
+        default: "none"
+        type: string
+      include_media:
+        description: "Download source video (can be large); not needed for metadata thumbnails"
+        required: true
+        default: false
+        type: boolean
+      max_images:
+        description: "Maximum images to fingerprint; shard large batches"
+        required: true
+        default: "500"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
+      - run: python -m unittest discover -s tests -p 'test_ce_visual_provenance.py' -v
+      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py
+
+  public-run:
+    if: github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13" "yt-dlp[default]" gallery-dl
+      - name: Fetch verified public marketing photo controls
+        run: python scripts/external_evidence/fetch_visual_references.py
+      - name: Harvest one public manifest source
+        if: inputs.source_id != 'none'
+        env:
+          SOURCE_ID: ${{ inputs.source_id }}
+          INCLUDE_MEDIA: ${{ inputs.include_media }}
+        run: |
+          args=(--source-id "$SOURCE_ID")
+          if [[ "$INCLUDE_MEDIA" == "true" ]]; then args+=(--include-media); fi
+          python scripts/external_evidence/harvest_public.py "${args[@]}"
+      - name: Build provenance index and candidate triage
+        env:
+          MAX_IMAGES: ${{ inputs.max_images }}
+        run: |
+          mkdir -p evidence-work
+          python scripts/external_evidence/visual_index.py \
+            --candidates evidence-work --max-files "$MAX_IMAGES" \
+            --output visual-evidence-work
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-visual-provenance-${{ github.run_id }}
+          path: |
+            visual-reference-work/
+            visual-evidence-work/
+            evidence-work/
+          retention-days: 14
+          if-no-files-found: warn
