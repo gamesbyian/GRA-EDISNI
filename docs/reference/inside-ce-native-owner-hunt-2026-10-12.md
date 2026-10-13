@@ -139,6 +139,8 @@ From the [manual CE workflow](../../.github/workflows/inside-ce-native-search-ca
 This is **safe manual continuation**, not an autonomous or indefinitely retained cumulative service. GitHub Actions artifacts expire, so copy small rights-cleared result/evidence metadata into a durable project ledger before artifact expiry. A successful index lookup proves nothing about search completeness, and only actually retrieved original posts/photographs should influence sticker observations.
 
 
+**Search-result triage and standalone false positives:** [first-party product differentiation and automated evidence-cautious review](inside-ce-edition-product-differentiation-and-triage.md). The separately marketed $29.99 PS4 game was explicitly limited to 2,000 copies, which does **not** define the CE production count. Index hits are deduplicated by exact source URL and thread context before manual review, without automatically validating any sticker.  
+
 ## Priority next actions
 
 1. **Preserve dated original positive controls** for the shipped 2019 serials and exact 2020 buyer/owner claims. Compare them to the canonical ledger automatically; source-lineage duplicates must be demoted.
