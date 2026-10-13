@@ -24,6 +24,7 @@ on:
       - "data/reference/inside-ce-archived-public-galleries.json"
       - "data/reference/inside-ce-public-reddit-cross-community-queries.json"
       - "data/reference/inside-ce-public-archived-resale-posts.json"
+      - "data/reference/inside-ce-curated-known-public-sale-links.json"
       - "data/reference/inside-ce-visual-historical-pages.json"
       - ".github/workflows/ce-visual-provenance.yml"
   workflow_dispatch:
