@@ -30,9 +30,7 @@ class NativeCECampaignTests(unittest.TestCase):
         tasks = self.make_campaign()
         self.assertGreater(len(tasks), 3000)
         self.assertEqual(len({t["task_id"] for t in tasks}), len(tasks))
-        self.assertEqual(len({t["site"] for t in tasks}), 483 - sum(
-            r["type"] in ("comments", "deals", "tabletop-adjacent")
-            for r in self.directory))
+        self.assertEqual(len({t["site"] for t in tasks}), 483)
         self.assertEqual({t["state"] for t in tasks}, {"planned_unexecuted"})
 
     def test_region_specific_native_formulations(self):
@@ -85,6 +83,7 @@ class NativeCECampaignTests(unittest.TestCase):
         self.assertIn("zh-TW", first)
         self.assertIn("pt-BR", first)
         self.assertIn("ar", first)
+        self.assertTrue(any(x["site"] == "Gameblog Community" for x in tasks))
 
     def test_rejects_mismatched_archive_rows(self):
         archives = [dict(x) for x in self.archives]
