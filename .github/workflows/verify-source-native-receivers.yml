@@ -25,6 +25,8 @@ jobs:
         run: python scripts/audit_finite_receiver_invariance.py --output /tmp/finite-receiver-invariance.json
       - name: Check source-native literal printer-window negative controls
         run: python scripts/audit_middle_depth_printer_control.py --output /tmp/middle-depth-printer-control.json
+      - name: Check selection-aware A/G image-class coverage null
+        run: python scripts/audit_class_coverage_selection_null.py --output /tmp/class-coverage-selection-null.json
       - name: Preserve finite receiver research witnesses
         uses: actions/upload-artifact@v4
         with:
@@ -32,3 +34,4 @@ jobs:
           path: |
             /tmp/finite-receiver-invariance.json
             /tmp/middle-depth-printer-control.json
+            /tmp/class-coverage-selection-null.json
