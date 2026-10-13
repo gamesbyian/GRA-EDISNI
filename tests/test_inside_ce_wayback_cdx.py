@@ -26,7 +26,7 @@ class Response(io.BytesIO):
 class WaybackProbeTests(unittest.TestCase):
     def test_control_rows_have_real_urls_and_limits(self):
         rows = probe.load_rows(probe.CONTROLS, "controls")
-        self.assertEqual(len(rows), 14)
+        self.assertEqual(len(rows), 15)
         tasks = probe.generate(rows, per_window_limit=5, max_sources=4)
         self.assertEqual(len(tasks), 8)
         self.assertEqual({x["status"] for x in tasks}, {"planned_unexecuted"})
