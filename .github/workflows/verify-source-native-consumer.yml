@@ -42,6 +42,8 @@ jobs:
           python scripts/conjecture_lab_q4_roles.py > /tmp/q4-comparison.txt
           python scripts/conjecture_lab_native_q4_receiver.py > /tmp/native-q4-receiver.txt
           python scripts/conjecture_lab_native_q4_base27.py > /tmp/native-q4-base27.txt
+          python scripts/conjecture_lab_native_q4_receiver.py --allow-primary-dots > /tmp/native-q4-permissive.txt
+          python scripts/conjecture_lab_native_q4_base27.py --allow-primary-dots > /tmp/native-q4-base27-permissive.txt
           cat /tmp/native-q4-receiver.txt
           cat /tmp/native-q4-base27.txt
       - name: Show consumer audit summary
