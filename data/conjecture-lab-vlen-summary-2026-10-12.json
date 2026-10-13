@@ -165,6 +165,39 @@
     "one_dot_completions": 0,
     "one_slash_completions": 18
   },
+  "cross_zone_slash_binary": {
+    "best_of_72": [
+      2455353950208,
+      "reverse_serial",
+      "slash=1",
+      "prefix_forward"
+    ],
+    "best_of_72_null_controls": {
+      "original_nine_site_frame_shuffles": {
+        "fraction_ge_best": "92/121",
+        "frame9": true,
+        "note": "post-selection ensemble maximum; cross-zone slash-vs-nonslash mapping assumed",
+        "null_median": 2956380340224,
+        "null_q95": 3904695697408,
+        "observed_best": 2455353950208,
+        "search_size": 72,
+        "seed": 20261021,
+        "shuffles": 120
+      },
+      "original_zone_shuffles": {
+        "fraction_ge_best": "105/121",
+        "frame9": false,
+        "note": "post-selection ensemble maximum; cross-zone slash-vs-nonslash mapping assumed",
+        "null_median": 3030804070400,
+        "null_q95": 4011499454464,
+        "observed_best": 2455353950208,
+        "search_size": 72,
+        "seed": 20261020,
+        "shuffles": 120
+      }
+    },
+    "interpretation": "slash vs dash-or-dot collapses distinct 81/27 alphabets; speculative"
+  },
   "experiment": "CL-VLEN-01",
   "source": "data/observations.csv, 84 physical observations of 66 unique residues",
   "zone_results": {
