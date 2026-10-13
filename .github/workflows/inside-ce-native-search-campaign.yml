@@ -90,11 +90,14 @@ jobs:
               for category in ("owner_bought", "owner_received",
                                "owner_without_game_name", "edition_number",
                                "serial_without_title", "for_sale",
-                               "sticker_photograph"):
+                               "sticker_photograph", "outer_wrapper",
+                               "wrapper_without_title", "sticker_with_number",
+                               "edition_broad"):
                   cmd.extend(("--category", category))
           if scope == "arg_and_unboxing":
               for category in ("arg_discussion", "unboxing",
-                               "sticker_photograph", "edition_discussion"):
+                               "sticker_photograph", "edition_discussion",
+                               "unboxing_without_game_name", "outer_wrapper"):
                   cmd.extend(("--category", category))
           subprocess.run(cmd, check=True)
           PY
