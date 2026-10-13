@@ -1,10 +1,9 @@
 name: One-shot historical INSIDE CE archive metadata pilot
 
-# This is intentionally one-time on inclusion into main, plus explicit manual
-# dispatch. Future general commits do NOT contact archival services.
+# One small source-audited pilot when THIS workflow is modified in a PR.
+# Merge/push does not repeat the requests. Explicit manual rerun is available.
 on:
-  push:
-    branches: [main]
+  pull_request:
     paths:
       - ".github/workflows/inside-ce-archive-one-shot.yml"
   workflow_dispatch:
