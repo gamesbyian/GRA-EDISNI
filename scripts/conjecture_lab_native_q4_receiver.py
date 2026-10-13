@@ -223,7 +223,8 @@ def main():
                         # no exact hit or better minimum can occur here.
                         continue
                     distance = min_disagreements(
-                        panel, core, requested, best[0]
+                        panel, core, requested,
+                        28 if forced_misses == 0 else best[0]
                     )
                     accepted += distance == 0
                     local_best = min(local_best, distance)
