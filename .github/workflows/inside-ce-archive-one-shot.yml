@@ -1,0 +1,43 @@
+name: One-shot historical INSIDE CE archive metadata pilot
+
+# This is intentionally one-time on inclusion into main, plus explicit manual
+# dispatch. Future general commits do NOT contact archival services.
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/inside-ce-archive-one-shot.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  four-public-forum-controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify bounded metadata probe and source schemas offline
+        run: python -m unittest discover -s tests -p test_inside_ce_wayback_cdx.py -v
+      - name: Query four public, non-Reddit historical forum URLs once
+        run: |
+          python scripts/probe_inside_ce_wayback_cdx.py \
+            --inventory controls \
+            --control-ids C04,C14,C15,C16 \
+            --max-sources 4 \
+            --per-window-limit 8 \
+            --delay-seconds 2.0 \
+            --execute \
+            --output search-output/inside-ce-cdx-initial-pilot.jsonl
+      - name: Archive machine-readable pilot responses
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: inside-ce-first-cdx-pilot
+          path: search-output/
+          if-no-files-found: warn
+          retention-days: 30
