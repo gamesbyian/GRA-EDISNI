@@ -1,0 +1,73 @@
+name: Audit historical forum archive captures
+
+on:
+  pull_request:
+    paths:
+      - "scripts/probe_inside_ce_wayback_cdx.py"
+      - "tests/test_inside_ce_wayback_cdx.py"
+      - "data/reference/inside-ce-archive-positive-controls.tsv"
+      - ".github/workflows/inside-ce-archive-cdx.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/probe_inside_ce_wayback_cdx.py"
+      - "tests/test_inside_ce_wayback_cdx.py"
+      - "data/reference/inside-ce-archive-positive-controls.tsv"
+      - ".github/workflows/inside-ce-archive-cdx.yml"
+  workflow_dispatch:
+    inputs:
+      inventory:
+        description: "Dated source positive controls or community archive inventory"
+        type: choice
+        default: controls
+        options: [controls, forums]
+      execute:
+        description: "Actually query Wayback public CDX API for metadata, no page downloads"
+        type: choice
+        default: "no"
+        options: ["no", "yes"]
+      max_sources:
+        description: "Maximum original URLs to check (1..50, default 6)"
+        type: string
+        default: "6"
+
+permissions:
+  contents: read
+
+jobs:
+  archive-metadata-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Offline synthetic tests
+        run: python -m unittest discover -s tests -p test_inside_ce_wayback_cdx.py -v
+      - name: Bounded metadata probe, network explicitly gated
+        env:
+          RUN_PROBE: ${{ inputs.execute || 'no' }}
+          INVENTORY: ${{ inputs.inventory || 'controls' }}
+          MAX_SOURCES: ${{ inputs.max_sources || '6' }}
+        run: |
+          python - <<'PY'
+          import os
+          import subprocess
+          command = [
+              "python", "scripts/probe_inside_ce_wayback_cdx.py",
+              "--inventory", os.environ["INVENTORY"],
+              "--max-sources", os.environ["MAX_SOURCES"],
+              "--per-window-limit", "12",
+              "--output", "search-output/inside-ce-cdx-metadata.jsonl",
+          ]
+          if os.environ["RUN_PROBE"] == "yes":
+              command.append("--execute")
+          subprocess.run(command, check=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inside-ce-archive-cdx-metadata
+          path: search-output/
+          retention-days: 30
+          if-no-files-found: error
