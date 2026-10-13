@@ -111,6 +111,54 @@ def audit()->dict:
                 "all_nine_class_values_can_fit_as_direct_native_registry_indices":
                     not zero_impossible and not one_impossible,
             }
+    # Give the parity interpretation every cheap shared-bit position:
+    # drop any one of the nine primary sites from EACH class before viewing
+    # the remaining eight as a raw 0..255 index. The omitted bit position
+    # is GLOBAL across all A-I classes, not tuned per class. Exact lowest
+    # 8-bit values still prove at least one impossible class every time.
+    dropped_bit_controls={}
+    expected_min_failures={
+        "serial_slash1":2,"serial_dash1":1,
+        "reverse_slash1":2,"reverse_dash1":1,
+    }
+    for reverse in (False,True):
+        for slash_is_one in (True,False):
+            key=(("reverse" if reverse else "serial")+"_"+
+                 ("slash1" if slash_is_one else "dash1"))
+            trials=[]
+            for removed_index in range(9):
+                out_of_range=[]
+                minima={}
+                for j,ch in enumerate(LETTERS):
+                    word=class_word(first81,j)
+                    oriented=word[::-1] if reverse else word
+                    eight=oriented[:removed_index]+oriented[removed_index+1:]
+                    assert len(eight)==8
+                    one="/" if slash_is_one else "-"
+                    lo=int("".join("0" if mark=="?" else
+                                   "1" if mark==one else "0"
+                                   for mark in eight),2)
+                    minima[ch]=lo
+                    if lo>=capacity:
+                        out_of_range.append(ch)
+                trials.append({
+                    "removed_bit_position_1_based_in_read_order":
+                        removed_index+1,
+                    "provably_out_of_range_classes":out_of_range,
+                    "minimum_8bit_values":minima,
+                    "all_nine_class_8bit_indices_fit":not out_of_range,
+                })
+            assert len(trials)==9
+            assert min(len(x["provably_out_of_range_classes"])
+                       for x in trials)==expected_min_failures[key]
+            assert all(x["provably_out_of_range_classes"] for x in trials)
+            dropped_bit_controls[key]={
+                "total_shared_omission_positions_tested":9,
+                "minimum_out_of_range_classes":expected_min_failures[key],
+                "trials":trials,
+            }
+    assert sum(len(x["trials"]) for x in dropped_bit_controls.values())==36
+
     return {
         "mode":"DEVELOP: physically observed sticker index bounds; no structural model",
         "physical_records":84,"physical_unique_residues":66,
@@ -119,7 +167,8 @@ def audit()->dict:
         "source":"archive/external/twinysam-inside-arg/terminal41.link/dat/breach_contribution_reg.html",
         "hypothesized_join":"nine physical class body bit words -> nine raw registry row addresses",
         "four_source_simple_read_conventions":choices,
-        "verdict":"ALL four direct 9-bit read conventions require at least three A-I class values outside the 133-row source index domain, regardless of missing marks.",
+        "single_common_parity_bit_discarded_controls":dropped_bit_controls,
+        "verdict":"All four raw 9-bit and all 36 shared one-bit-discarded 8-bit conventions leave at least one A-I class outside the 133-row source domain, irrespective of missing marks.",
         "limitations":[
             "The direct 9-bit index role is a declared cheap trial, not Playdead-authored source instruction.",
             "This excludes ONLY raw nine-bit values as full row indices in this 133-row registry, without transforming/modulo/masking/discarding bits.",
