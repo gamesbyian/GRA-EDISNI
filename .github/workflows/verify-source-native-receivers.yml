@@ -21,3 +21,14 @@ jobs:
         with:
           name: experiment-476-source-native-receiver-control
           path: /tmp/experiment-476.json
+      - name: Audit finite CE readout invariance on canonical physical corpus
+        run: python scripts/audit_finite_receiver_invariance.py --output /tmp/finite-receiver-invariance.json
+      - name: Check source-native literal printer-window negative controls
+        run: python scripts/audit_middle_depth_printer_control.py --output /tmp/middle-depth-printer-control.json
+      - name: Preserve finite receiver research witnesses
+        uses: actions/upload-artifact@v4
+        with:
+          name: finite-receiver-invariance-controls
+          path: |
+            /tmp/finite-receiver-invariance.json
+            /tmp/middle-depth-printer-control.json
