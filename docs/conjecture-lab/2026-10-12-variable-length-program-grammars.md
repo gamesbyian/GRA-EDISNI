@@ -40,6 +40,19 @@ These grammars intentionally cover both directions of instruction dependency, fi
 
 A dynamic program tracks input position, existence of a preceding emitted chunk, and whether a nontrivial control instruction occurred. Because an unknown operand bit can take either value, the program counts **exactly** how many missing-mark completions yield legal instruction streams. Witness completions and outputs are mechanically generated using a lexicographic path. They are invented demonstrations and cannot be promoted as physical sticker readings.
 
+## Exact framing arithmetic: an important constraint independent of symbols
+
+If a stream is covered *entirely* by successive blocks of length **3 or 5**, with no headers, padding or overlap, the number of ordered chunkings is computable without knowing a single mark. For `3a + 5b = N`, each nonnegative solution contributes `choose(a+b, b)` possible width sequences:
+
+| Domain size | Ordered 3/5 segmentations | Implication |
+| --- | ---: | --- |
+| **12** (one complete A–I class trace) | **1** | Four 3-site blocks; **no 5-site block fits** |
+| **27** (final symbol zone) | **36** | Nine triplets, or four triplets and three quintets |
+| **81** (early symbol zone) | **447,702** | Huge freedom even before assigning opcode meanings |
+| **108** (entire H108 cycle) | **53,501,860** | Tens of millions of width patterns without inspecting the marks |
+
+Thus a native *class-local* 12-symbol stream cannot consist solely of 3- and 5-symbol packets **with any quintets** unless something else is present: extra headers, a boundary crossing, a length other than 3/5, an excluded prefix/suffix or overlap. This is a genuine mathematical constraint on that precise framing family, and makes cross-class parsing relatively more interesting. In an undelimited 108-site stream, on the other hand, unfixed mixed-width segmentation is almost unconstrained. The exact counts and all allowed mixtures are programmatically included in the result JSON.
+
 ## Measured results
 
 ### Unfilled physical runs and grouping
