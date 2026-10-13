@@ -41,6 +41,7 @@ python scripts/verify_machine.py
 
 
 - [INSIDE CE dated archive controls and CDX metadata checks](docs/reference/inside-ce-archive-cdx-positive-controls-2026-10-13.md): 16 original-source controls, 27 source/ownership/context lead records, bounded opt-in Wayback capture probes and synthetic CI validation.
+- [CE edition-source differentiation and indexed lead triage](docs/reference/inside-ce-edition-product-differentiation-and-triage.md): first-party CE vs standalone PS4 distinction, cautious source dedup and automated post-search candidate review.
 - [Native-language INSIDE CE ownership hunt](docs/reference/inside-ce-native-owner-hunt-2026-10-12.md): 50 native locale profiles, 491 forum and 30 public marketplace/social search surfaces, GHA planning workflow, source-backed ownership/ARG lead ledger.
 - [Forum search software stack and offline corpus index](docs/reference/forum-search-software-stack.md): tested SQLite FTS5 exact-symbol/multilingual search, optional warcio WARC ingestion, CI regressions, and researched CDX/DuckDB/crawler alternatives.
 - [Public 2017 Steam forum preservation ZIP inventory](data/reference/inside-ce-archival-collection-candidates.tsv): two separately indexed ~4 GB SPUF files, uninspected and **not** modern Steam Community archives.

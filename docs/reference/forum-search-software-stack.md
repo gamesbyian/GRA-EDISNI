@@ -56,6 +56,8 @@ Search returns JSON objects; \`coverage=only_documents_present_in_local_database
 
 **Data lifecycle:** do not commit a massive local SQLite database, third-party WARC, copyrighted posts or personal data into git. Store source archives in access-controlled artifact storage, subject to permitted retention and licensing; GitHub Actions artifacts have a retention period and are not a permanent source-of-truth storage service. Commit compact manifests, checksums, source links and rights-cleared extracts only. Use the same corpus digest and import version across comparison runs.
 
+**Post-retrieval source triage:** [the CE index-hit triager](../../scripts/triage_inside_ce_index_results.py) normalizes source URLs, keeps Reddit post-level identity distinct from its thread, and warns about the separately marketed standalone PS4 edition. It generates an *unreviewed* queue after authorized searches and never creates a physical sticker confirmation. See [evidence controls](inside-ce-edition-product-differentiation-and-triage.md).
+
 ## Evaluated tools to integrate next (not deployed yet)
 
 | Priority | Software | Why it matters | Activation decision |
