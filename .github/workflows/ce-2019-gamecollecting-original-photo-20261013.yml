@@ -37,7 +37,7 @@ jobs:
               for url in r.get("direct_image_urls",[]):
                   direct.append({"source_id":"eaktdt-2019-public-post",
                                  "source_page_url":r["source_page_url"],
-                                 "image_url":url,"hint_count":1,
+                                 "image_url":url,"hint_count":1,"keyword_hints":["inside","collector"],
                                  "review_status":"primary-photo-awaiting-visual-verification"})
               for url in r.get("gallery_urls",[]):
                   galleries.append({"source_page_url":r["source_page_url"],
