@@ -1,10 +1,10 @@
 # Search architecture for every worldwide gaming-forum lead
 
-**Status:** DISCOVER / operational design, not a claim that 483 sites were crawled  
-**Source directory:** [483-entry forum inventory](../../data/reference/global-gaming-forums.tsv)  
-**Per-site routing:** [483-entry methods matrix](../../data/reference/global-gaming-forum-search-routing.tsv)  
+**Status:** DISCOVER / operational design, not a claim that 484 sites were crawled  
+**Source directory:** [484-entry forum inventory](../../data/reference/global-gaming-forums.tsv)  
+**Per-site routing:** [484-entry methods matrix](../../data/reference/global-gaming-forum-search-routing.tsv)  
 **Local corpus search implementation:** [software evaluation and SQLite/warcio importer](forum-search-software-stack.md). Extract once, query arbitrary later terms without remote searches.  
-**Historical search and mirrors:** [archive/mirror research](global-gaming-forum-archives-and-mirrors.md) and [483-entry archival fallback matrix](../../data/reference/global-gaming-forum-archive-routes.tsv)  
+**Historical search and mirrors:** [archive/mirror research](global-gaming-forum-archives-and-mirrors.md) and [484-entry archival fallback matrix](../../data/reference/global-gaming-forum-archive-routes.tsv)  
 **Query planner:** [plan_global_forum_searches.py](../../scripts/plan_global_forum_searches.py)  
 **Bounded index executor:** [run_global_forum_index_search.py](../../scripts/run_global_forum_index_search.py)  
 **Manual workflow:** [forum-search-plan.yml](../../.github/workflows/forum-search-plan.yml)
@@ -13,7 +13,7 @@
 
 Accept **arbitrary search terms later**, including non-English strings, numeric serials, punctuation and multiword phrases. Build one independently accountable `(community, query, method, scope)` search task for every selected entry in the global directory. Preserve source URLs, original posting dates, attached media, uncertainty and archival provenance. A genuinely comprehensive campaign must search **post bodies and titles**, not just homepages or game-title names, and separate native results from externally indexed fragments.
 
-All **483** current entries have a primary/fallback route, an index scope, a GHA execution designation, an access gate and explicit limitations in the TSV. These recommendations are **algorithmic or platform-level routing hypotheses**, not per-site live confirmations. The parent forum inventory itself contains many unverified candidate destinations. A host may be dead, renamed or not support a gaming discussion section; such failures must remain visible in audit results.
+All **484** current entries have a primary/fallback route, an index scope, a GHA execution designation, an access gate and explicit limitations in the TSV. These recommendations are **algorithmic or platform-level routing hypotheses**, not per-site live confirmations. The parent forum inventory itself contains many unverified candidate destinations. A host may be dead, renamed or not support a gaming discussion section; such failures must remain visible in audit results.
 
 The approach distinguishes **coverage attempted** from **coverage achieved**. No individual site should be certified as fully searched just because a search engine returned zero hits or a forum returned the first page. A `site:` query can surface historical evidence, but cannot prove absence; Wayback CDX indexes archived **URLs**, not forum-post full text. A multilingual AI pass expands recall and ranks evidence only after collection.
 
@@ -95,7 +95,7 @@ For each `(forum, term)`, the prioritized sequence is:
 - **AI-assisted review:** classify relevant hits, language, dates, directly observed evidence vs claims, unique photos and repeats. Preserve original language and link. Translate only for analysis; never overwrite originals.
 - **Result/reconciliation pass:** append evidence ledger and a coverage record. Zero matches means **zero found by these methods**, not universal absence.
 
-For very large services (Steam, Reddit, Tieba, PTT, 5ch, Bahamut), the named URL often represents an *unbounded collection of user-created forums*. Scope its title-specific communities first rather than pretending every newly created per-game board is enumerable. Do not multiply the 483 lead count by arbitrarily guessed number of subboards and label it coverage.
+For very large services (Steam, Reddit, Tieba, PTT, 5ch, Bahamut), the named URL often represents an *unbounded collection of user-created forums*. Scope its title-specific communities first rather than pretending every newly created per-game board is enumerable. Do not multiply the 484 lead count by arbitrarily guessed number of subboards and label it coverage.
 
 ### Phase 3. Evidence schema and provenance
 
@@ -107,7 +107,7 @@ For INSIDE stickers, multiple posts circulating one image are still a single phy
 
 ## GitHub Actions execution: ready now vs dependent on credentials
 
-The new [manual workflow](../../.github/workflows/forum-search-plan.yml) has **no schedule or push trigger**. It consumes multiple queries through `workflow_dispatch`, verifies the routing matrix, invokes the [offline planner](../../scripts/plan_global_forum_searches.py), and uploads a JSONL task manifest and JSON summary. It has a default task ceiling of **10,000**, which prevents accidentally expanding 483 sites × hundreds of terms into a runaway campaign. **No site is contacted** in the planner.
+The new [manual workflow](../../.github/workflows/forum-search-plan.yml) has **no schedule or push trigger**. It consumes multiple queries through `workflow_dispatch`, verifies the routing matrix, invokes the [offline planner](../../scripts/plan_global_forum_searches.py), and uploads a JSONL task manifest and JSON summary. It has a default task ceiling of **10,000**, which prevents accidentally expanding 484 sites × hundreds of terms into a runaway campaign. **No site is contacted** in the planner.
 
 Example from the repo checkout:
 
@@ -131,7 +131,7 @@ The planner joins the [archive fallback matrix](../../data/reference/global-gami
 
 **Why Brave as the first indexed adapter:** Its current first-party documentation describes a supported official web-search API with authenticated, bounded `q` requests: https://api-dashboard.search.brave.com/api-reference/web/search/get . Google's legacy Custom Search JSON API is **closed to new customers** and slated for transition, so building new automation around it would create a short-lived dependency: https://developers.google.com/custom-search/v1/overview .
 
-Later native workers can consume the same task JSONL and supply approved adapters. Execute in groups by **host** rather than one parallel GHA worker per task, to keep limits and prevent hammering the same domain. An eventual matrix with **8–32 host-shards per run**, per-host token buckets, persisted cursor/checkpoint, bounded retries/backoff, API-credential gating and per-host circuit breakers is preferable to 483 simultaneous workers. GitHub Actions has a documented **256 matrix-job limit**; a domain-sharded strategy avoids exceeding it. Check actual workflow concurrency and cost before enabling high-volume retrieval. The current implementation deliberately does not imply native workers exist.
+Later native workers can consume the same task JSONL and supply approved adapters. Execute in groups by **host** rather than one parallel GHA worker per task, to keep limits and prevent hammering the same domain. An eventual matrix with **8–32 host-shards per run**, per-host token buckets, persisted cursor/checkpoint, bounded retries/backoff, API-credential gating and per-host circuit breakers is preferable to 484 simultaneous workers. GitHub Actions has a documented **256 matrix-job limit**; a domain-sharded strategy avoids exceeding it. Check actual workflow concurrency and cost before enabling high-volume retrieval. The current implementation deliberately does not imply native workers exist.
 
 ## Platform mechanisms and technical references
 

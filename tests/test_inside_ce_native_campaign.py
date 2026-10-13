@@ -25,12 +25,12 @@ class NativeCECampaignTests(unittest.TestCase):
         )
 
     def test_full_inventory_and_native_locale_coverage(self):
-        self.assertEqual(len(self.directory), 483)
+        self.assertEqual(len(self.directory), 484)
         self.assertEqual(len(self.lexicon), 50)
         tasks = self.make_campaign()
         self.assertGreater(len(tasks), 3000)
         self.assertEqual(len({t["task_id"] for t in tasks}), len(tasks))
-        self.assertEqual(len({t["site"] for t in tasks}), 483)
+        self.assertEqual(len({t["site"] for t in tasks}), 484)
         self.assertEqual({t["state"] for t in tasks}, {"planned_unexecuted"})
 
     def test_region_specific_native_formulations(self):
@@ -103,7 +103,7 @@ class NativeCECampaignTests(unittest.TestCase):
         expected = {x["locale"] for x in self.lexicon}
         self.assertEqual(set(module.MULTI_LOCALES), expected)
         forum_tasks = self.make_campaign()
-        self.assertEqual(len(forum_tasks), 8940)
+        self.assertEqual(len(forum_tasks), 8955)
         social_tasks = module.build_secondary(module.load_tsv(module.SECONDARY), self.lexicon)
         self.assertEqual(len(social_tasks), 10755)
         self.assertEqual({x["locale"] for x in forum_tasks}, expected)

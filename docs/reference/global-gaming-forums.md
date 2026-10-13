@@ -1,21 +1,21 @@
 # Global video-game forums and discussion-board census
 
 **Research mode:** DISCOVER (source discovery, not semantic validation)  
-**Compiled:** 2026-10-12  
+**Compiled:** 2026-10-12; updated 2026-10-13  
 **Temporal eligibility:** evidence of at least one relevant post/activity on or after **2014-10-12**, or potential eligibility awaiting confirmation  
 **Data:** [global-gaming-forums.tsv](../../data/reference/global-gaming-forums.tsv)  
-**Archival research and per-forum mirror routes:** [archive/mirror audit](global-gaming-forum-archives-and-mirrors.md) and [483-row historical fallback matrix](../../data/reference/global-gaming-forum-archive-routes.tsv). Where specific rescued datasets exist they are named, but no per-host capture availability has yet been established.  
-**Per-forum search method:** [483-route search matrix](../../data/reference/global-gaming-forum-search-routing.tsv) and [AI/GitHub Actions search architecture](global-gaming-forum-search-methods.md). Each entry has a recommended method, fallback, search scope and access gate. Most assignments remain platform-level inferences requiring per-site verification; the plan/workflow does not itself certify searches.
+**Archival research and per-forum mirror routes:** [archive/mirror audit](global-gaming-forum-archives-and-mirrors.md) and [484-row historical fallback matrix](../../data/reference/global-gaming-forum-archive-routes.tsv). Where specific rescued datasets exist they are named, but no per-host capture availability has yet been established.  
+**Per-forum search method:** [484-route search matrix](../../data/reference/global-gaming-forum-search-routing.tsv) and [AI/GitHub Actions search architecture](global-gaming-forum-search-methods.md). Each entry has a recommended method, fallback, search scope and access gate. Most assignments remain platform-level inferences requiring per-site verification; the plan/workflow does not itself certify searches.
 
 ## Purpose and coverage
 
-This is a deliberately wide, language-inclusive search inventory for finding first-hand discussion of video games, including *INSIDE* (2016), Playdead, the collector's edition, visual clues and ARG-related puzzle mechanisms. It is **not a census of all extant forums on Earth** and is **not a list of 483 confirmed living forums**.
+This is a deliberately wide, language-inclusive search inventory for finding first-hand discussion of video games, including *INSIDE* (2016), Playdead, the collector's edition, visual clues and ARG-related puzzle mechanisms. It is **not a census of all extant forums on Earth** and is **not a list of 484 confirmed living forums**.
 
-The expanded inventory contains **483 named community or discussion leads** distributed across **59 region/market labels** and **53 language-tag variants**. It spans large general forums, per-game forum indexes, national portals, enthusiast hardware/game subforums, game-specific support boards, independent game-development communities, archival boards, subreddits and sites with article comment discussions. Numerous entries still need historical activity, URL and topical verification.
+The expanded inventory contains **484 named community or discussion leads** distributed across **59 region/market labels** and **53 language-tag variants**. It spans large general forums, per-game forum indexes, national portals, enthusiast hardware/game subforums, game-specific support boards, independent game-development communities, archival boards, subreddits and sites with article comment discussions. Numerous entries still need historical activity, URL and topical verification.
 
-| Status | Count on 2026-10-12 | Interpretation |
+| Status | Count on 2026-10-13 | Interpretation |
 |---|---:|---|
-| `V` | 68 | A relevant, publicly indexed discussion/forum surface or dated gaming discussion was found during discovery, sometimes through source/search excerpts. **Not a promise of current activity**, working logins or complete historical access. |
+| `V` | 69 | A relevant, publicly indexed discussion/forum surface or dated gaming discussion was found during discovery, sometimes through source/search excerpts. **Not a promise of current activity**, working logins or complete historical access. |
 | `C` | 411 | Candidate forum or discussion lead. **Not independently established** to have video-game discussion on/after the cutoff or an accessible URL. May be an outdated URL, wrong category, redirected property or dead board. |
 | `H` | 4 | Historical lead with claimed activity or closure inside the twelve-year eligibility window. Its listed URL may be a successor or historical-source page rather than a functional board. |
 
@@ -36,6 +36,9 @@ For closed, migrated and post-2014 historically relevant forums, use dated posts
 ### Type taxonomy
 
 The `type` field distinguishes `general`, `game-index`, `game`, `platform`, `retro`, `hardware`, `MMO`, `genre`, `mobile`, `indie`, `modding`, `gamedev`, `ARG`, `official`, `subreddit`, `anonymous-board`, `discussion`, `qa`, `comments`, `archive-index`, `historic`, `simulation`, `sim-racing`, `deals`, `support` and other narrow labels. Classification represents a discovery use-case, not an independent site audit. Any `comments`, `deals` or `support` row is a **weak search lead** until a dated, pertinent user exchange is located.
+
+
+**New firsthand-source addition (2026-10-13):** [Cheap Ass Gamer forums](https://www.cheapassgamer.com/forums/) have a live, verified XenForo search interface and a March 2018 INSIDE CE preorder statement, plus an April 2020 remaining-stock email reproduced in a separate thread. Source discussion witnesses: [2018 collector purchasing discussion](https://www.cheapassgamer.com/threads/indie-limited-obscure-physical-release-deals-and-discussion-thread.357745/page-79) and [2020 collector compilation](https://www.cheapassgamer.com/threads/official-collectors-edition-compilation-xi-2020.371308/page-17). No new sticker established.
 
 ## High-value verified discovery entry points
 

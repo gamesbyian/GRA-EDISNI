@@ -1,16 +1,16 @@
 # Historical archives and mirrors for difficult gaming-forum searches
 
 **Status:** source-supported architectural research, 12 October 2026 (America/Edmonton).  
-**Source directories:** [original 483 sites](../../data/reference/global-gaming-forums.tsv), [primary query routes](../../data/reference/global-gaming-forum-search-routing.tsv), and **[483-item archival fallback matrix](../../data/reference/global-gaming-forum-archive-routes.tsv)**.  
+**Source directories:** [original 484 sites](../../data/reference/global-gaming-forums.tsv), [primary query routes](../../data/reference/global-gaming-forum-search-routing.tsv), and **[484-item archival fallback matrix](../../data/reference/global-gaming-forum-archive-routes.tsv)**.  
 **Parent architecture:** [global-gaming-forum-search-methods.md](global-gaming-forum-search-methods.md).  
-**Research mode:** DISCOVER/DEVELOP; not a finding that 483 hosts are archived or searchable.  
+**Research mode:** DISCOVER/DEVELOP; not a finding that 484 hosts are archived or searchable.  
 **Question:** Where a site's current search fails, which indexed archives, mirrors, rescue datasets and corpus methods can retrieve its historical discussion for arbitrary future terms?
 
 ## What has been established, and what has not
 
 **Established:** several *services and genuinely existing collections* can serve as an alternative to a site's own search. The highest-value newly identified forum-specific cases are ArchiveTeam's UOL Forums rescue (Brazil, 2018–19), ArchiveTeam's Steam Powered User Forums/“SPUF” rescue (2017; distinct from Steam Community Discussions), PTTweb.cc for PTT game boards, and GameFAQs' own permanent topic archives for certain modern game boards. Arquivo.pt is a rare public web archive with **actual archived-page full-text search**, not merely a URL history index. Common Crawl stores WARC and WET corpus content, so captured forum pages can be indexed offline. Archive.ph offers human-searchable snapshot URL/host discovery.
 
-**Not established:** no live 483-host CDX sweep, capture-density census, bulk WARCs download or end-to-end recall evaluation was conducted in this session. The presence of a host name in the Wayback or Common Crawl index is not verified in this matrix. Equally, identifying ArchiveTeam's rescue project does **not** establish that its files can be downloaded from a GitHub Actions runner or freely republished under all circumstances. Every row's `host_capture_status` is deliberately `not_checked`. These are *candidate retrieval routes*, with different levels of supporting evidence.
+**Not established:** no live 484-host CDX sweep, capture-density census, bulk WARCs download or end-to-end recall evaluation was conducted in this session. The presence of a host name in the Wayback or Common Crawl index is not verified in this matrix. Equally, identifying ArchiveTeam's rescue project does **not** establish that its files can be downloaded from a GitHub Actions runner or freely republished under all circumstances. Every row's `host_capture_status` is deliberately `not_checked`. These are *candidate retrieval routes*, with different levels of supporting evidence.
 
 **Research correction:** the prior forum-search plan had **not fully researched** mirrors, archive full-text systems, offsite rescue collections, language-specific archival search or Reddit's latest research-access rules. This document addresses those omissions using current first-party references, without claiming an exhaustive global audit or a deployed all-corpus scraper.
 
@@ -41,7 +41,7 @@
 
 ## Per-forum identification and fallback decisions
 
-The [483-row archival matrix](../../data/reference/global-gaming-forum-archive-routes.tsv) contains one-for-one keys `community` and `original_url`, a preferred historical search route, additional archives, known mirrored or rescued corpus and source link (where established), confidence/availability flags, Wayback URL, Common Crawl entry point, priority and handling notes.
+The [484-row archival matrix](../../data/reference/global-gaming-forum-archive-routes.tsv) contains one-for-one keys `community` and `original_url`, a preferred historical search route, additional archives, known mirrored or rescued corpus and source link (where established), confidence/availability flags, Wayback URL, Common Crawl entry point, priority and handling notes.
 
 **Evidence vocabulary:**
 - `source_assurance=project_documented_data_not_inspected`: a specific rescue collection is documented, but bytes and searchability are not yet witnessed.
@@ -49,7 +49,7 @@ The [483-row archival matrix](../../data/reference/global-gaming-forum-archive-r
 - `source_assurance=official_archiving_documented`: first-party site describes its retention policy for some boards.
 - `source_assurance=global_service_only_no_host_capture_checked`: global archive exists, **forum capture unverified**.
 - `source_assurance=archive_service_documented_host_not_checked`: full-text archive search exists, **host-specific capture unverified**.
-- `host_capture_status=not_checked` applies to **all 483 rows**, until a probe actually establishes captures and date boundaries.
+- `host_capture_status=not_checked` applies to **all 484 rows**, until a probe actually establishes captures and date boundaries.
 
 **Prioritize** known rescues and historical archives (P0), per-game and long-lived discussion boards that might contain first-hand INSIDE clues (P1), general or hardware discovery (P2), then weak article comment pages (P3). Priorities are *workload suggestions*, not probabilities of finding the solution.
 
@@ -109,7 +109,7 @@ Run at least **one documented known-hit positive control** in each chosen langua
 - **WARC/WET and on-disk search stage:** separate one-off, checkpointed archival-analysis jobs, partitioned by host and capture date. Content can be huge; GitHub Actions' ephemeral disk and artifact retention are unsuitable for a permanent corpus. Store reusable indexed snapshots outside the repo, with checksums and retrieval manifests, subject to terms, then publish only compact findings/ledger as source-safe outputs.
 - **AI relevance stage:** run only on rights-cleared, minimally retained text; redact private information, respect removed-post preferences, keep every claim linked to the original capture. No background autonomous access to Reddit research APIs without eligibility/permission; no CAPTCHA solving or proxy cycling.
 
-This architecture is a roadmap, not a claim the full archive-index, WARC or native workers have shipped. Avoid 483 simultaneous forum visits, broad cross-domain crawling and fixed "100% coverage" thresholds when corpus ground truth is missing.
+This architecture is a roadmap, not a claim the full archive-index, WARC or native workers have shipped. Avoid 484 simultaneous forum visits, broad cross-domain crawling and fixed "100% coverage" thresholds when corpus ground truth is missing.
 
 ## 2026 platform policy correction: Reddit
 
