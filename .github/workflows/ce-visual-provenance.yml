@@ -44,6 +44,18 @@ jobs:
       - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
       - run: python -m unittest discover -s tests -p 'test_ce_*py' -v
       - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py
+      - name: Index all canonical original sticker photographs and validate source SHA256
+        run: |
+          mkdir -p /tmp/ce-empty-candidate-set
+          python scripts/external_evidence/visual_index.py \
+            --candidates /tmp/ce-empty-candidate-set --output /tmp/ce-canonical-reference-index
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("/tmp/ce-canonical-reference-index/reference-index.json").read_text())
+          assert len([r for r in p["references"] if r["role"] == "known-sticker-photo"]) >= 82
+          assert all(r["sha256"] for r in p["references"])
+          PY
 
   public-run:
     if: github.event_name == 'workflow_dispatch'
