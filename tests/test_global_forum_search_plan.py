@@ -19,10 +19,10 @@ class TestGlobalForumSearchPlan(unittest.TestCase):
         cls.routes = planner.load_tsv(planner.ROUTES)
 
     def test_exact_inventory_coverage(self):
-        self.assertEqual(len(self.directory), 483)
-        self.assertEqual(len(self.routes), 483)
+        self.assertEqual(len(self.directory), 484)
+        self.assertEqual(len(self.routes), 484)
         self.archives = planner.load_tsv(planner.ARCHIVES)
-        self.assertEqual(len(self.archives), 483)
+        self.assertEqual(len(self.archives), 484)
         self.assertEqual([(x["community"], x["original_url"]) for x in self.archives], [(x["community"], x["url"]) for x in self.routes])
         planner.check_routes(self.directory, self.routes)
 
@@ -32,7 +32,7 @@ class TestGlobalForumSearchPlan(unittest.TestCase):
             terms = ['INSIDE \"collector edition\"', "內幕 貼紙", "привет код"]
             stats = planner.generate(self.directory, self.routes, terms, "literal",
                                      1500, output, {"V", "C", "H"})
-            self.assertEqual(stats["task_count"], 483 * len(terms))
+            self.assertEqual(stats["task_count"], 484 * len(terms))
             results = [json.loads(line) for line in output.read_text().splitlines()]
             self.assertEqual(len(results), len({r["task_id"] for r in results}))
             self.assertTrue(all(r["state"] == "planned_unexecuted" for r in results))
