@@ -1,0 +1,77 @@
+{
+  "actual": {
+    "changed_step": {
+      "best": null,
+      "best_log2_bf": null,
+      "compatible": 0,
+      "models": 512,
+      "survivors": []
+    },
+    "fixed_step": {
+      "best": null,
+      "best_log2_bf": null,
+      "compatible": 0,
+      "models": 32,
+      "survivors": []
+    }
+  },
+  "experiment": "CL-VLEN-10",
+  "matched_null": {
+    "class": {
+      "changed_step": {
+        "any_compatible": 0,
+        "best_bf_ge": null,
+        "compatible_ge": 100,
+        "median_compatible": 0.0,
+        "replicates": 100
+      },
+      "fixed_step": {
+        "any_compatible": 0,
+        "best_bf_ge": null,
+        "compatible_ge": 100,
+        "median_compatible": 0.0,
+        "replicates": 100
+      }
+    },
+    "frame": {
+      "changed_step": {
+        "any_compatible": 0,
+        "best_bf_ge": null,
+        "compatible_ge": 100,
+        "median_compatible": 0.0,
+        "replicates": 100
+      },
+      "fixed_step": {
+        "any_compatible": 0,
+        "best_bf_ge": null,
+        "compatible_ge": 100,
+        "median_compatible": 0.0,
+        "replicates": 100
+      }
+    },
+    "quarter": {
+      "changed_step": {
+        "any_compatible": 0,
+        "best_bf_ge": null,
+        "compatible_ge": 100,
+        "median_compatible": 0.0,
+        "replicates": 100
+      },
+      "fixed_step": {
+        "any_compatible": 0,
+        "best_bf_ge": null,
+        "compatible_ge": 100,
+        "median_compatible": 0.0,
+        "replicates": 100
+      }
+    }
+  },
+  "observed_sites_by_quarter": [
+    19,
+    17,
+    18,
+    12
+  ],
+  "oracle": "all 256 ordered Boolean generator pairs checked against independently computed four-site trajectories",
+  "status": "DISCOVER/DEVELOP, invented temporal operator not source cue"
+}
