@@ -1,5 +1,10 @@
 """Public HTML image candidate extraction controls; deliberately no network."""
+import json
+import sys
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
 from scripts.external_evidence.discover_html_images import extract, normal_url
 from scripts.external_evidence.visual_semantic import LABELS, ranking
@@ -75,6 +80,20 @@ class HtmlLeadTests(unittest.TestCase):
         chosen = select(rows, per_page=8, total=20)
         self.assertEqual(len(chosen), 2)
         self.assertTrue(all("w=825" in item["image_url"] for item in chosen))
+
+    def test_no_direct_photo_links_produces_empty_valid_download_report(self):
+        from scripts.external_evidence.fetch_html_images import main
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            leads = root / "links.json"
+            leads.write_text(json.dumps({"image_mentions": []}))
+            output = root / "created-by-run"
+            argv = ["fetch_html_images.py", "--leads", str(leads), "--out", str(output)]
+            with patch.object(sys, "argv", argv):
+                main()
+            result = json.loads((output / "html-image-download-report.json").read_text())
+            self.assertEqual(result["image_downloads"], [])
+            self.assertEqual(result["bytes_downloaded"], 0)
 
     def test_semantic_ranks_are_relative_and_untrusted(self):
         keys = list(LABELS)[:3]
