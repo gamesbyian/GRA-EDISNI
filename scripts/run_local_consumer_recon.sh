@@ -29,4 +29,5 @@ fi
 mkdir -p "$OUT/decompiled"
 ilspycmd -p -o "$OUT/decompiled" "$INSTALL/$ASSEMBLY_REL"
 python3 "$ROOT/scripts/audit_decompiled_consumer_hits.py" --source-dir "$OUT/decompiled" --output "$OUT/candidate-hits.json"
-echo "Produced local intake.json, candidate-hits.json and decompiled source in $OUT"
+python3 "$ROOT/scripts/audit_managed_consumer_structures.py" --source-dir "$OUT/decompiled" --output "$OUT/structural-candidates.json"
+echo "Produced local intake.json, candidate-hits.json, structural-candidates.json and decompiled source in $OUT"
