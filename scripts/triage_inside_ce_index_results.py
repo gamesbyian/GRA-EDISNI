@@ -142,8 +142,8 @@ def read_index_hits(paths: list[Path]) -> tuple[dict[str, dict], dict]:
                         continue
                     item = found.setdefault(canonical, {
                         "canonical_url": canonical, "thread_key": thread,
-                        "evidence_key": evidence, "first_title": hit.get("title", ""),
-                        "first_description": hit.get("description", ""),
+                        "evidence_key": evidence, "first_title": str(hit.get("title") or "")[:500],
+                        "first_description": str(hit.get("description") or "")[:800],
                         "index_hit_occurrences": 0,
                         "tasks": set(), "languages": set(), "manifests": set(),
                     })
