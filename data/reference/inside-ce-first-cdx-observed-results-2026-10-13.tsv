@@ -1,0 +1,9 @@
+control_id	source_url	cdx_window	response_status	sampled_200_captures	first_capture_utc	capture_statuscode	capture_mimetype	capture_digest	error_type	evidentiary_interpretation	gha_run_id	gha_artifact_id
+C04	https://gamefaqs.gamespot.com/boards/194097-inside/76386967	2016-2020	metadata_sample_received	1	20190306051337	200	text/html	MHNUGWQN4H3TEOTD2U3ZFVLWYUZJHLTC		bounded_capture_metadata_positive_not_page_body	38441436347	11835003067
+C04	https://gamefaqs.gamespot.com/boards/194097-inside/76386967	2021-2026	request_error						TimeoutError	provider_timeout_no_inference	38441436347	11835003067
+C14	https://www.resetera.com/threads/game-soundtracks-on-vinyl-45rpm-all-new-cartridge.446/page-16	2016-2020	request_error						URLError	provider_network_error_no_inference	38441436347	11835003067
+C14	https://www.resetera.com/threads/game-soundtracks-on-vinyl-45rpm-all-new-cartridge.446/page-16	2021-2026	request_error						URLError	provider_network_error_no_inference	38441436347	11835003067
+C15	https://www.cheapassgamer.com/threads/official-collectors-edition-compilation-xi-2020.371308/page-17	2016-2020	request_error						URLError	provider_network_error_no_inference	38441436347	11835003067
+C15	https://www.cheapassgamer.com/threads/official-collectors-edition-compilation-xi-2020.371308/page-17	2021-2026	request_error						URLError	provider_network_error_no_inference	38441436347	11835003067
+C16	https://www.cheapassgamer.com/threads/indie-limited-obscure-physical-release-deals-and-discussion-thread.357745/page-79	2016-2020	request_error						TimeoutError	provider_timeout_no_inference	38441436347	11835003067
+C16	https://www.cheapassgamer.com/threads/indie-limited-obscure-physical-release-deals-and-discussion-thread.357745/page-79	2021-2026	metadata_sample_received	0						no_matching_status_200_capture_in_this_bounded_query_not_a_global_negative	38441436347	11835003067
