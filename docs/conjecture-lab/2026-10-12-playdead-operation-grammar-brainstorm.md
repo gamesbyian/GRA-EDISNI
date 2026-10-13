@@ -15,7 +15,7 @@ This file preserves the October 12 brainstorm in full working form, with explici
 | PC/PS4 printer | 32x32 image reconstruction; Acorn seed + 41 generations; fixed overlay on **the same original printer artwork** | Recognizable imagery and a number may be executable instructions |
 | Switch printer | Decode action words, manipulate physical Joy-Cons, read response | Codes can be programs, not messages |
 | Playdead print form and Gate98 | Submit phrases; print response; image-to-audio; exact RGB/lattice filtering | Outputs select later media, parameters, website routes |
-| Mac printer | Marks over the *in-game-cued* E. E. Cummings poem | Another authentic artifact can be the text/coordinate key |
+| Mac printer | **Community-reported** marks-over-in-game-cued E. E. Cummings poem | Candidate external-text key; original exact letter-by-letter extraction has **not** been independently reproduced ([Exp. 476](../experiment-476-receiver-native-geometry-audit.md)) |
 | CE nine backgrounds | Reassemble physical faint pictures to a printer/page route | The same CE object already has an established external payoff |
 
 Sources: [historical mechanic census](../arg-puzzle-mechanics-corpus.md), [acorn exact video positive control](2026-10-09-cl16-full-2021-life-overlay-replay.md), [historical website intake](../experiment-480-original-print-transport.md), [CE receiving-artifact audit](../experiment-476-receiver-native-geometry-audit.md).
@@ -25,7 +25,7 @@ Sources: [historical mechanic census](../arg-puzzle-mechanics-corpus.md), [acorn
 - The frozen direct physical ledger has **84 records, 66 unique H108 positions and 42 unknown**. The first 81 residues use slash/dash, and the last 27 slash/dot. This is a structural observation, not a recovered bitstring.
 - Nine faint image classes recur according to serial modulo nine, assembling into **IAB / CDE / FGH**. The solved image leads to the independently real route **dat/534brn9653f9j8mmd**. The marked foreground remains unconsumed.
 - Twelve serial-consecutive 3x3 frames and four 27-position planes are natural physical representations of 108, not unique required read orders.
-- The Playdead website accepted earlier known passwords reportedly in any order; PLANET/LIFE/PROBE/CONDISCON cannot simply be declared a required historical stage sequence.
+- The Playdead website accepted earlier known passwords reportedly in any order; PLANET/LIFE/PROBE/CONDISCON cannot simply be declared a required historical stage sequence. **More strongly, Playdead's 3 January 2019 developer-side Xbox Wire account expressly says the printer secret always remained solvable from the beginning even as platform-specific material expanded.** Therefore treat later branches as possibly redundant/parallel clue routes, not necessarily mandatory serial locks. Source: https://news.xbox.com/en-us/2019/01/03/unsolved-secret-in-inside/.
 - The reversible PS4 cover was clue-bearing and also sold with a standalone edition. Its acorn/running-figure content might already have cued the eventually solved original PC puzzle; it is not automatically a CE-exclusive receiver.
 - Earlier attempts to extend a mathematically coherent ternary code into an endgame do not count as independent source evidence. A U2 or U5 completion is conditional on its grammar and does not become a newly photographed sticker.
 - A solved CE background from only nine image classes is precedent for *limited sampling*; it does not prove that the foreground is completely recoverable from our 66 observed positions.
