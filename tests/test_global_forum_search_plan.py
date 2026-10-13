@@ -62,6 +62,18 @@ class TestGlobalForumSearchPlan(unittest.TestCase):
         self.assertEqual(row["classification_basis"], "unconfirmed_engine_hint")
         self.assertEqual(row["gha_mode"], "browser_after_probe")
 
+    def test_legacy_spuf_public_zip_index_cannot_impersonate_modern_steam(self):
+        archives = planner.load_tsv(planner.ARCHIVES)
+        old_steam = [x for x in archives
+                     if x["historical_route"] == "steam_native_then_historical_cdx"]
+        self.assertEqual(len(old_steam), 6)
+        for row in old_steam:
+            self.assertIn("predecessor", row["named_mirror_or_rescue"])
+            self.assertIn("valvearchive.com", row["supporting_source"])
+            self.assertEqual(row["host_capture_status"], "not_checked")
+            self.assertEqual(row["source_assurance"],
+                             "public_zip_index_documented_contents_not_downloaded_legacy_predecessor")
+
     def test_source_inventory_is_immutable(self):
         for x in self.directory:
             self.assertIn(x["evidence_status"], {"V", "C", "H"})
