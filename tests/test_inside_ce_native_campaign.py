@@ -85,6 +85,20 @@ class NativeCECampaignTests(unittest.TestCase):
         self.assertIn("ar", first)
         self.assertTrue(any(x["site"] == "Gameblog Community" for x in tasks))
 
+    def test_secondary_video_and_resale_leads(self):
+        sources = module.load_tsv(module.SECONDARY)
+        self.assertEqual(len(sources), 30)
+        tasks = module.build_secondary(sources, self.lexicon)
+        self.assertGreater(len(tasks), 300)
+        self.assertEqual(len({x["site"] for x in tasks}), 30)
+        self.assertTrue(all(x["state"] == "planned_unexecuted" for x in tasks))
+        self.assertTrue(any(x["site"] == "YouTube" and x["locale"] == "ja"
+                            for x in tasks))
+        self.assertTrue(any(x["site"] == "Mercado Livre" and x["locale"] == "pt-BR"
+                            for x in tasks))
+        self.assertTrue(any(x["site"] == "Yahoo Auctions Japan" and x["locale"] == "ja"
+                            for x in tasks))
+
     def test_rejects_mismatched_archive_rows(self):
         archives = [dict(x) for x in self.archives]
         archives[0]["community"] = "WRONG"
