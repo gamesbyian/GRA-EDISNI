@@ -31,9 +31,9 @@ jobs:
           ledger=Path("archive/external/twinysam-inside-arg/stickers.md").read_text(encoding="utf-8")
           relevant=[]
           patterns=[
-            ("purchase-claimed",re.compile(r"\\b(?:just bought|i bought|i purchased|i ordered|placed my order|bought the damn thing)\\b",re.I)),
-            ("purchase-declined",re.compile(r"\\b(?:didn.t buy|did not buy|cancelled my order|never bought|won.t buy)\\b",re.I)),
-            ("received-claimed",re.compile(r"\\b(?:i received|i got mine|arrived today|my copy arrived)\\b",re.I)),
+            ("purchase-claimed",re.compile(r"\b(?:just bought|i bought|i purchased|i ordered|placed my order|bought the damn thing)\b",re.I)),
+            ("purchase-declined",re.compile(r"\b(?:didn.t buy|did not buy|cancelled my order|never bought|won.t buy)\b",re.I)),
+            ("received-claimed",re.compile(r"\b(?:i received|i got mine|arrived today|my copy arrived)\b",re.I)),
           ]
           for c in comments:
             body=c.get("body","")
@@ -48,7 +48,7 @@ jobs:
               "comment_id":c.get("id"),"comment_url":"https://www.reddit.com/comments/fhvflq/_/"+str(c.get("id"))+"/",
               "created_utc":c.get("created_utc"),
               "author_public_pseudonym":username,
-              "context":re.sub(r"\\s+"," ",body)[:340],
+              "context":re.sub(r"\s+"," ",body)[:340],
               "claim_types":outcomes,
               "canonical_name_match_count":len(matches),
               "canonical_excerpts":[ledger[max(0,m.start()-85):m.end()+150] for m in matches[:3]],
@@ -59,7 +59,7 @@ jobs:
                   "response_sha256":digest,"archive_comments":len(comments),
                   "possible_partial_tree":collapsed,"claim_comments":relevant,
                   "note":"No owner contact, account history, physical-object or sticker confirmation."}
-          Path("ce-march2020-public-comments.json").write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\\n")
+          Path("ce-march2020-public-comments.json").write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n")
           print("CE_MARCH2020_PUBLIC_CASE_REPORT",json.dumps(report,ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
