@@ -6,7 +6,7 @@ import csv
 import hashlib
 import json
 from urllib.parse import urlsplit
-from collections import Counter
+from collections import Counter, deque
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,7 +15,17 @@ SECONDARY = ROOT / "data/reference/inside-ce-ownership-secondary-platforms.tsv"
 DIRECTORY = ROOT / "data/reference/global-gaming-forums.tsv"
 ROUTES = ROOT / "data/reference/global-gaming-forum-search-routing.tsv"
 ARCHIVES = ROOT / "data/reference/global-gaming-forum-archive-routes.tsv"
-MULTI_LOCALES = ("en", "fr", "de", "es", "pt-BR", "ja", "zh-CN", "zh-TW", "ko", "ru", "ar")
+MULTI_LOCALES = (
+    "en", "fr", "de", "es", "es-AR", "es-MX", "es-CL", "es-CO", "es-PE",
+    "pt", "pt-BR", "it", "nl", "pl", "cs", "sk", "hu", "ro", "bg", "sr",
+    "hr", "sl", "el", "tr", "sv", "no", "da", "fi", "is", "ja",
+    "zh-CN", "zh-TW", "zh-HK", "ko", "vi", "th", "id", "ms", "tl", "hi",
+    "bn", "ur", "ne", "si", "ru", "uk", "ar", "fa", "he", "sw"
+)
+FIRST_PASS_LOCALES = (
+    "en", "ja", "zh-TW", "zh-CN", "ko", "fr", "de", "es", "pt-BR",
+    "it", "vi", "ar", "ru", "tr", "pl", "nl", "id", "th", "uk", "fa"
+)
 
 def load_tsv(path):
     with path.open(encoding="utf-8", newline="") as f:
@@ -54,6 +64,40 @@ def locales_for_site(label):
     if label in ("ar-fr", "fr-ar", "uk-ru"):
         return tuple(dict.fromkeys(label.split("-")))
     return (label,)
+
+def interleave_search_tasks(tasks):
+    """Diversify early API queries across locales and source websites.
+
+    One term from each locale per round; within a locale rotate sources before
+    returning to another category on the same site. Reproducible and O(tasks).
+    """
+    pools = {}
+    for task in tasks:
+        pools.setdefault(task["locale"], {}).setdefault(task["site"], deque()).append(task)
+    priority = {label: i for i, label in enumerate(FIRST_PASS_LOCALES)}
+    ordered_locales = sorted(pools, key=lambda l: (priority.get(l, 1000), l))
+    site_cycles = {}
+    for idx, locale in enumerate(ordered_locales):
+        sites = sorted(
+            pools[locale],
+            key=lambda s: (0 if pools[locale][s][0].get("priority", "P1") == "P0" else 1, s)
+        )
+        turn = idx % len(sites)
+        site_cycles[locale] = deque(sites[turn:] + sites[:turn])
+    ordered, remaining = [], len(tasks)
+    while remaining:
+        for locale in ordered_locales:
+            sites = site_cycles[locale]
+            if not sites:
+                continue
+            site = sites.popleft()
+            queue = pools[locale][site]
+            ordered.append(queue.popleft())
+            remaining -= 1
+            if queue:
+                sites.append(site)
+    return ordered
+
 
 def build(directory, routes, archives, lexicon, *, allowed_statuses, max_tasks,
           include_weak=True, categories=None):
@@ -107,17 +151,7 @@ def build(directory, routes, archives, lexicon, *, allowed_statuses, max_tasks,
         raise ValueError("Missing language profiles: " + repr(dict(omissions)))
     if len(records) != len({v["task_id"] for v in records}):
         raise ValueError("Duplicate task identifier")
-    # Distribute first-pass queries across countries/languages, rather than
-    # exhaust one English forum before visiting an East-Asian/Arabic forum.
-    by_locale = {}
-    for item in records:
-        by_locale.setdefault(item["locale"], []).append(item)
-    ordered = []
-    while any(by_locale.values()):
-        for locale in sorted(by_locale):
-            if by_locale[locale]:
-                ordered.append(by_locale[locale].pop(0))
-    return ordered
+    return interleave_search_tasks(records)
 
 def build_secondary(sources, lexicon, *, max_tasks=20000, categories=None):
     """Discovery-only tasks for social/video/collector platforms, not API access."""
@@ -157,7 +191,7 @@ def build_secondary(sources, lexicon, *, max_tasks=20000, categories=None):
                     raise ValueError("Secondary search tasks exceed --max-tasks")
     if len(tasks) != len({x["task_id"] for x in tasks}):
         raise ValueError("Duplicate auxiliary search tasks")
-    return tasks
+    return interleave_search_tasks(tasks)
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
