@@ -83,7 +83,9 @@ class LCG:
 
 
 def temporal_test(observed, n=5000):
-    frames = [observed[i * 9:(i + 1) * 9] for i in range(9)]
+    frames = [observed[i * 9:(i + 1) * 9] for i in range(12)]
+    # The null draw order includes all 12 physical frames even though the
+    # D4 temporal comparison uses only the nine slash/dash body frames.
     actual = temporal_scores(frames)
     best, identity = actual[0], next(
         x for x in actual if x["transform"] == 0 and x["invert"] == 0)
