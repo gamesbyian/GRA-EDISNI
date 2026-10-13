@@ -36,6 +36,7 @@ python scripts/verify_machine.py
 
 
 
+- [Automatable multilingual forum search plan](docs/reference/global-gaming-forum-search-methods.md): per-forum methods for all 483 leads, [routing matrix](data/reference/global-gaming-forum-search-routing.tsv), safe query planner and opt-in indexed GHA workflow.
 - [Worldwide gaming-forum discovery directory](docs/reference/global-gaming-forums.md): 483 multilingual forum/discussion leads, [machine-readable TSV](data/reference/global-gaming-forums.tsv), evidence-status caveats, and a source-first INSIDE archival search procedure.
 
 - [CL-VLEN-01 variable-width and instruction-stream audit](docs/conjecture-lab/2026-10-12-variable-length-program-grammars.md): deterministic 3/5-bit prefix-code and opcode interpreters, exact raw-corpus run bounds, best-of-family shuffled controls, plus one-slash class-tail reconciliation after physical sticker 427 (36 historical assignments now 18). [Executable workbench](scripts/conjecture_lab_variable_length_grammar.py), [compact results](data/conjecture-lab-vlen-summary-2026-10-12.json) and [full machine-readable audit](data/conjecture-lab-variable-length-grammar-2026-10-12.json). This is a DISCOVER/DEVELOP experiment, not an identified decoder.
