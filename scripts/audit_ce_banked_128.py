@@ -30,7 +30,7 @@ def audit(path):
         }
         name = f'reverse{int(reversed_word)}_one{one}'
         interpretations[name] = {
-            'bank_patterns': bank_patterns,
+            'bank_patterns': [list(p) for p in bank_patterns],
             'bank_pattern_count': len(bank_patterns),
             'bank_counts': [{str(n): list(bank).count(n) for n in range(4)}
                             for bank in bank_patterns],
@@ -52,8 +52,8 @@ def main():
     assert (result['corpus_records'], result['distinct_residues'],
             result['conditional_bodies']) == (84, 66, 18)
     assert all(t['bank_pattern_count'] == 1 for t in result['interpretations'].values())
-    assert result['interpretations']['reverse0_one/']['bank_patterns'] == [(
-        2, 2, 0, 1, 2, 3, 2, 1, 2)]
+    assert result['interpretations']['reverse0_one/']['bank_patterns'] == [[
+        2, 2, 0, 1, 2, 3, 2, 1, 2]]
     assert all(t['distinct_nine_addresses_per_body']
                for t in result['interpretations'].values())
     output = json.dumps(result, sort_keys=True, indent=2) + '\n'
