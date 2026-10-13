@@ -54,7 +54,7 @@ Input: frozen [9 October physical observations](../../data/conjecture-lab-h108-6
 
 The lone potential colour is (3,1,1), never more than a single member of the six-colour set. Multiple completions and readout conventions are highly dependent; treating 15,552 as independent chance trials would be invalid.
 
-The script verifies an arithmetic positive control: the six known colours **can** be converted to exactly 36 trits by dividing each component by 3, then losslessly recovered. The failure comes from constraints imposed by the observed stickers, not insufficient carrying capacity.
+The script verifies a constructive positive control: the six known colours **can** be converted to exactly 36 trits, physically encoded into a complete **108-sticker symbol cycle** respecting the primary one-minority-per-column and Q4 one-slash-per-class rules, and decoded back to their six RGB triples. This synthetic master deliberately does **not** claim to match the real observed stickers. The negative result arises from the observed physical restrictions, not insufficient capacity or a decoder unable to represent the target palette.
 
 ## What the negative result does and does not say
 
