@@ -9,12 +9,12 @@
 
 This is a deliberately wide, language-inclusive search inventory for finding first-hand discussion of video games, including *INSIDE* (2016), Playdead, the collector's edition, visual clues and ARG-related puzzle mechanisms. It is **not a census of all extant forums on Earth** and is **not a list of 472 confirmed living forums**.
 
-The first-pass inventory contains **472 named community or discussion leads** distributed across **59 region/market labels** and **53 language-tag variants**. It spans large general forums, per-game forum indexes, national portals, enthusiast hardware/game subforums, game-specific support boards, independent game-development communities, archival boards, subreddits and sites with article comment discussions. Numerous entries still need historical activity, URL and topical verification.
+The expanded inventory contains **483 named community or discussion leads** distributed across **59 region/market labels** and **53 language-tag variants**. It spans large general forums, per-game forum indexes, national portals, enthusiast hardware/game subforums, game-specific support boards, independent game-development communities, archival boards, subreddits and sites with article comment discussions. Numerous entries still need historical activity, URL and topical verification.
 
 | Status | Count on 2026-10-12 | Interpretation |
 |---|---:|---|
-| `V` | 61 | A relevant, publicly indexed discussion/forum surface or dated gaming discussion was found during discovery, sometimes through source/search excerpts. **Not a promise of current activity**, working logins or complete historical access. |
-| `C` | 407 | Candidate forum or discussion lead. **Not independently established** to have video-game discussion on/after the cutoff or an accessible URL. May be an outdated URL, wrong category, redirected property or dead board. |
+| `V` | 68 | A relevant, publicly indexed discussion/forum surface or dated gaming discussion was found during discovery, sometimes through source/search excerpts. **Not a promise of current activity**, working logins or complete historical access. |
+| `C` | 411 | Candidate forum or discussion lead. **Not independently established** to have video-game discussion on/after the cutoff or an accessible URL. May be an outdated URL, wrong category, redirected property or dead board. |
 | `H` | 4 | Historical lead with claimed activity or closure inside the twelve-year eligibility window. Its listed URL may be a successor or historical-source page rather than a functional board. |
 
 These are evidence-status codes, **not** probabilities, independent confirmations, or confidence scores. `V` is a discovery-level finding and still deserves an open-and-inspect check before citing a particular thread as evidence.
@@ -76,6 +76,20 @@ Links below are **examples with inspectable search/discussion landing pages**, r
 ### Search priority heuristic (a proposed workflow, not evidence)
 
 For a candidate forum, prioritize `direct game relevance > documented 2016–2024 thread/search access > language/geographical novelty > site indexing/retrievability > likelihood of original photographs`. A narrow historical forum with a dated image is substantially more informative than a broad contemporary media portal without thread-level access.
+
+## Integration of the attached *Worldwide Video-Game Forum Census* report (12 October 2026)
+
+**Provenance:** User-supplied `deep-research-report (1).md`, titled *Worldwide Video-Game Forum Census*, describing a separately researched **184-endpoint** census. Only the supplied Markdown report was available for ingestion. It references CSV, JSON, ZIP, schemas and charts at paths from a separate execution environment; **those backing files were not attached here**, so the claimed 184 full individual records could not be diffed or imported. The report excerpts expose named endpoints and a cross-sectional table; only those substantiated in its text were candidates for incorporation. Do **not** claim all 184 entries were compared.
+
+**Newly added entries (11):** [VOGONS](https://www.vogons.org/), [Racketboy](https://racketboy.com/forum/), [Nintendo Life forums](https://www.nintendolife.com/forums), [Pure Xbox forums](https://www.purexbox.com/forums), [MMORPG.com forums](https://forums.mmorpg.com/), [Speedrun.com forums](https://www.speedrun.com/forums), [HLTV forums](https://www.hltv.org/forums), [Neo-Arcadia](https://neo-arcadia.com/forum/), [GPForums NZ](https://www.gpforums.co.nz/), [Game Development Stack Exchange](https://gamedev.stackexchange.com/) and [Gamereactor España](https://www.gamereactor.es/foro/). The first seven are reported as inspected current forum surfaces in the attachment (`V` by discovery status); the others are candidates until directly checked (`C`). The report explicitly corrects Neo-Arcadia's forum entry point.
+
+**Refined URLs for already-listed sources (five):** GameVN → `https://gamevn.com/forums/`; SAGamer → `https://sagamer.co.za/forum/`; Kaskus → `https://www.kaskus.co.id/forum/44/games`; ArabHardware → `https://forum.arabhardware.net/`; Whirlpool → `https://forums.whirlpool.net.au/forum/21`. These are *report-suggested canonicalizations*, not fresh HTTP reachability test results. Their pre-existing discovery grades were retained.
+
+**Other genuinely useful methods** from the report: distinguish forum size from thread count and concurrent users; record newest observed gaming-post dates independently from inferred activity level; distinguish game publisher ownership from independent site moderation; note public-readable vs login-walled discussion, RSS/API availability, and historical archive links without pretending wildcard Wayback queries prove snapshots exist. The proposed extended schema appears in the maintenance section above. These fields were **not fabricated** for existing rows.
+
+**Temporal caveat:** The attachment calls its October 13, 2026 snapshot contemporaneous, but it was provided late on October 12 in America/Edmonton. Its claimed October 13 same-day observations may reflect time-zone or timestamp inconsistency and have **not been independently confirmed**. No precise newest-post dates or reported membership counts were ingested as verified facts.
+
+**Scope warning:** The attachment's `184 endpoints`, `40 high-confidence records` and `44 dated records` are statistics claimed for its own unseen structured dataset; they should not be added to, or treated as validation statistics for, the project's TSV. Its emphasis on specialist retro, speedrunning and esports venues is a valuable correction to our earlier coverage.
 
 ## Future validation and maintenance
 
