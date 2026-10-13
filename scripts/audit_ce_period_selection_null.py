@@ -48,8 +48,11 @@ def favorable(group_sizes, wanted_body, wanted_tail):
     return dp.get((wanted_body, wanted_tail), 0)
 
 
-def audit(path, maximum=216, min_support=18):
+def audit(path, maximum=None, min_support=18):
     data = read_data(path)
+    observable_max = max(s for s, _, _ in data) - min(s for s, _, _ in data)
+    if maximum is None:
+        maximum = observable_max
     body = [r for r in data if r[1] <= 81]
     tail = [r for r in data if r[1] > 81]
     slash_body = sum(s == "/" for _, _, s in body)
@@ -80,7 +83,8 @@ def audit(path, maximum=216, min_support=18):
         "physical_observations": len(data),
         "body_entries": len(body), "tail_entries": len(tail),
         "body_slashes": slash_body, "tail_slashes": slash_tail,
-        "period_range": [1, maximum], "minimum_repeat_support": min_support,
+        "period_range": [1, maximum], "maximum_observable_period": observable_max,
+        "minimum_repeat_support": min_support,
         "eligible_periods": eligible, "nonzero_null_periods": len(positive),
         "denominator": denominator, "union_bound_numerator": total_favorable,
         "union_bound_upper_probability": total_favorable / denominator,
@@ -106,13 +110,15 @@ def small_oracle():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--observations", default="data/observations.csv")
-    parser.add_argument("--max-period", type=int, default=216)
+    parser.add_argument("--max-period", type=int, default=None)
     parser.add_argument("--min-support", type=int, default=18)
     parser.add_argument("--output")
     args = parser.parse_args()
     small_oracle()
     result = audit(args.observations, args.max_period, args.min_support)
-    if (args.max_period, args.min_support) == (216, 18):
+    if (args.max_period is None and args.min_support == 18):
+        assert result["maximum_observable_period"] == 595
+        assert result["period_range"] == [1, 595]
         assert (result["eligible_periods"], result["nonzero_null_periods"]) == (137, 27)
         assert result["denominator"] == 37399079244620030691600
         assert result["union_bound_numerator"] == 377822188953098255
