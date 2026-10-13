@@ -58,9 +58,34 @@ The independently tested *alphabetic* A–I order, which must not be mislabeled 
 
 These bounds are **not impossibility claims** about deterministic expansion, highly structured texts, preexisting images, or a keyed output. The currently observed 66 positions reveal at most 66 binary bits before additional model constraints, not the whole 108-bit master.
 
+## Existing definitive stop: Experiment 423 already tested the MCU count
+
+The existing [Experiment 423](../experiment-423-534brn-mcu-constraint.md), [JSON result](../../data/experiment-423-534brn-mcu-constraint.json) and [exact P-capture Huffman automaton](../../scripts/audit_534brn_mcu_constraint.py) were found during follow-up to this PR. Its source-constrained scan model admits **every complete MCU count 16..300**. Intersecting that range with the independent 128..255 per-axis SOF domain leaves **all 43 geometrically possible products**, including 64 but also 72, 80, 81, etc. **The surviving damaged entropy capture cannot independently prove 64 MCUs or a 128×128 image** under that model.
+
+This invalidates the earlier proposed action to `count 64 MCUs` by simply rereading the same P capture. The correct next action is to seek **new information**, not to repeat or retune the closed experiment. Experiment 423's negative is stronger than the conditional Experiment 416 proof, which merely states what a hypothetical exact 64-MCU count would entail.
+
+## New follow-up: type consistency of A/B/P byte proposals
+
+Reproduce with:
+
+```sh
+python scripts/conjecture_lab_534brn_capture_type_gate.py
+```
+
+The October 8 canonical A/B/P alignment proposes **238** filled B-unknown positions; its existing provenance warns that the alignment is heuristic, and the purported original A asset was a connector rendition. A crucial missing guard becomes visible when comparing these fills against the conditional *one U+FFFD = one missing high byte from 0x80..0xff* decoder model.
+
+- **231/238** alignment-dependent candidate fills have values **below 0x80**, outside that particular lost-byte domain.
+- The remaining **7/238** lie in the high-byte domain and thus avoid this *single* contradiction, but are **not independently verified** because their alignment remains unfixed.
+- In the **4,295-token B-aligned entropy corridor**, there are 1,544 wholly unknown U positions, ten cross-capture conflicts, 238 speculative fills and 2,503 preserved B tokens. Applying the fills directly as hard evidence under the original erasure model would assert inconsistent data.
+- The independently preserved **2,804-byte XMP fragment** supplies the creator and 2016 timestamp but **no ImageWidth/ImageLength or PixelX/YDimension tags**. It is not a hidden dimension readout.
+
+This does **not** establish that every proposed fill is wrong. B has HTML/parser transformations, A is a non-byte-identical connector rendition and alignment choice can shift the apparent correspondence. It *does* establish that the earlier 238 candidate fills cannot be indiscriminately promoted to reliable byte constraints while retaining a high-only erasure model. A future reattempt must model edit shifts and distinct source-transformation channels explicitly before rerunning a JPEG automaton.
+
+**Status:** The JPEG lane is blocked by **information loss / missing source-side constraints**, not by absence of a decoder or computational effort. The practical reopened targets are a lower-loss original capture, original image dimensions independently present in another artifact, or proven cross-capture byte registrations.
+
 ## Decision and next independent tests
 
-1. **Prioritize the image interpretation:** recover/verify an exact **64-MCU** JPEG or an authentic 128×128 original raster. That could discriminate the native dimension hypothesis independently of output-word aesthetics.
+1. **Honor the existing MCU negative:** Experiment 423 already allows all 43 dimension-compatible products; seek a lower-loss capture, independently fixed original pixel dimensions, or demonstrably correct cross-capture byte reconstruction before any new scan-count inference.
 2. **Inspect an authentic Steam beta field/client or official technical definition for length/charset constraints** before upgrading the 128-character beta consumer. No login-password inference and no automated guessing.
 3. **If a genuine 128-character historical input field or content line is found**, test the frozen H128-CYCLE first20/last20 periodic equality *before* fitting additional cipher transforms.
 4. **If a verified 128×128 image becomes available**, test the frozen 18 Q4 candidate rows against explicitly sourced extraction rules. The modulo-128 reduction must stay tagged **invented bridge**; avoid retuning it against favorable pixels.
