@@ -4,3 +4,8 @@ playwright/.auth/
 cookies.txt
 cookies-*.txt
 *.cookies.txt
+
+# Ephemeral external visual provenance artifacts (downloaded/derived media)
+evidence-work/
+visual-reference-work/
+visual-evidence-work/
