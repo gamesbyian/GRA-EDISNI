@@ -153,6 +153,11 @@ def run():
     native_rows = tuple(sorted({value % 128 for value in native.values()}))
     assert len(native_rows) == 18  # modulo row selection is one-to-one HERE, not necessarily always.
     assert native_rows == (
+        54, 60, 65, 67, 71, 73, 76, 78, 80,
+        82, 84, 86, 89, 91, 95, 97, 102, 108
+    )
+    alphabetic_rows = tuple(sorted({value % 128 for value in alphabetical.values()}))
+    assert alphabetic_rows == (
         0, 5, 17, 23, 32, 38, 44, 50, 56,
         62, 71, 77, 89, 94, 95, 110, 112, 127
     )
@@ -195,7 +200,8 @@ def run():
             "straight_base3_0_to_127_rows": 0,
             "invented_modulo_128_candidate_rows": list(native_rows),
             "candidate_row_count": len(native_rows),
-            "alphabetical_order_alternative_count": len(alphabetical)
+            "alphabetical_order_alternative_count": len(alphabetical),
+            "alphabetical_order_candidate_rows": list(alphabetic_rows)
         },
         "damaged_jpeg": {
             "footer": "128 UNSOLVED",
