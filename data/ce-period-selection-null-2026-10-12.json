@@ -7,8 +7,9 @@
   "tail_slashes": 4,
   "period_range": [
     1,
-    216
+    595
   ],
+  "maximum_observable_period": 595,
   "minimum_repeat_support": 18,
   "eligible_periods": 137,
   "nonzero_null_periods": 27,
