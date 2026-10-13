@@ -1,0 +1,35 @@
+name: Z3 closed-corpus constraint pilot
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/audit_z3_tail_constraints.py"
+      - "scripts/audit_tail_metadata.py"
+      - "data/observations.csv"
+      - "docs/cryptanalysis-tools-and-consumer-first-plan-2026-10-12.md"
+      - ".github/workflows/z3-constraint-smoke.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  z3-tail:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned optional solver
+        run: python -m pip install z3-solver==4.16.0.0
+      - name: Replay independent observation-only baseline
+        run: python scripts/audit_tail_metadata.py > /dev/null
+      - name: Validate Z3 SAT/UNSAT and corpus-fixed controls
+        run: python scripts/audit_z3_tail_constraints.py > z3-tail-audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: z3-tail-audit
+          path: z3-tail-audit.json
+          retention-days: 14
