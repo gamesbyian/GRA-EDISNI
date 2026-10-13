@@ -5,6 +5,7 @@ on:
   pull_request:
     paths:
       - ".github/workflows/ce-2019-gamecollecting-original-photo-20261013.yml"
+      - "data/reference/inside-ce-dec2019-gamecollecting-photo.json"
 
 permissions:
   contents: read
