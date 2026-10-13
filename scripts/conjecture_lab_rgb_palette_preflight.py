@@ -98,12 +98,40 @@ def six_colors(trits: tuple[int, ...], layout: str, digit_order: str,
     return tuple(result)
 
 
+def encode_synthetic_master(trits: tuple[int, ...]) -> str:
+    """Encode 36 trits into a physically valid 108-sticker symbol cycle.
+
+    Choose '-' as the primary majority and '/' as its single mark per physical
+    column; the tail has one '/' at the selected depth per A..I class.
+    This is a *constructive illustration*, not a completion of real stickers.
+    """
+    if len(trits) != 36 or any(t not in (0, 1, 2) for t in trits):
+        raise ValueError("Expected exactly 36 ternary digits")
+    marks = ["?"] * 108
+    for frame in range(9):
+        for column, positions in enumerate(PHYSICAL_COLUMNS):
+            chosen = trits[frame * 3 + column]
+            for depth, serial_pos in enumerate(positions):
+                marks[frame * 9 + serial_pos] = "/" if depth == chosen else "-"
+    for image_class, chosen in enumerate(trits[27:]):
+        for depth in range(3):
+            marks[81 + depth * 9 + image_class] = "/" if depth == chosen else "."
+    assert "?" not in marks
+    return "".join(marks)
+
+
 def rgb_positive_control() -> None:
     """36 free ternary digits can represent six RGB triples in range 0..8."""
     trits = tuple(x for color in GATE98_PALETTE for component in color
                   for x in divmod(component, 3))
     assert len(trits) == 36
     assert six_colors(trits, "color_major", "high", (0, 1, 2)) == GATE98_PALETTE
+    synthetic_master = encode_synthetic_master(trits)
+    synthetic_observations = {i + 1: symbol for i, symbol in enumerate(synthetic_master)}
+    for frame in range(9):
+        assert trits[frame * 3:frame * 3 + 3] in primary_frame_candidates(synthetic_observations, frame)
+    for image_class in range(9):
+        assert trits[27 + image_class] in tail_selector_candidates(synthetic_observations, image_class)
 
 
 def audit(obs: dict[int, str], record_count: int) -> dict:
