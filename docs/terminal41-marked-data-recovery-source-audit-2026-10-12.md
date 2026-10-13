@@ -24,6 +24,16 @@ The literal source markers are:
 
 These **exist in an original Playdead ARG-themed source page**; they are stronger historical evidence that the author deliberately used **error-correction and selective omission terminology** than a similarity inferred from CE symbol frequency. Nevertheless, this page is authored fiction/display text. There is **no verified executable erasure-code algorithm, no parity check matrix and no demonstrated CE input**.
 
+## Provenance/chronology gate: archived in 2023, not dated by source syntax
+
+I checked the **original upstream GitHub path history** directly:
+
+- Source repo: [twinysam/INSIDE-ARG](https://github.com/twinysam/INSIDE-ARG).
+- `terminal41.link/dat/breach_contribution_reg.html` appears in the upstream archive-upload commit [`d0b11cf8c6462c9592bc141ee6a4dddc0a029da6`](https://github.com/twinysam/INSIDE-ARG/commit/d0b11cf8c6462c9592bc141ee6a4dddc0a029da6), **18 August 2023** (`Uploaded terminal41.link archive`).
+- The `534brn9653f9j8mmd/index.html` mirror file also enters the upstream repository in that same archive-upload commit.
+
+This dates **repository preservation**, *not* original website authorship or publication. The footer/terminal chronology and contemporary 2018 mission pages are compatible with earlier content, but **a pre-December-2019 original live page/capture witness for this particular registry has not been recovered here**. Consequently the marker/correction operation is demonstrably part of the *archived original-site material*, not proven to have been available as a CE-era clue. This is a substantive qualification on treating the page as an instruction source for stickers shipped in 2019.
+
 ## Exact stage census
 
 The page visibly presents 64-character uppercase hexadecimal-looking records (256 raw representational bits per record), some with \`[*]\`, \`[alt]\`, \`[alt][alt]\`, or \`[/]\` suffixes. These might be hashes, random data, encrypted records or generated noise. A 64-character hexadecimal display **does not identify SHA-256** or a specific cryptosystem.
