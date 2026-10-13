@@ -1,0 +1,88 @@
+name: CE visual pilot v2 archive and CDN diversity 2026-10-13
+
+# One-off research trigger; never merge this into main.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-visual-pilot-v2-20261013.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
+      - name: Historical pages (Reddit 403 recorded as data)
+        run: |
+          python scripts/external_evidence/harvest_public.py \
+            --manifest data/reference/inside-ce-visual-historical-pages.json \
+            --output evidence-work
+      - name: Fifteen sourced first-party and syndicated media controls
+        run: python scripts/external_evidence/fetch_visual_references.py
+      - name: Recover historical Reddit public post media metadata with archival fallback
+        run: python scripts/external_evidence/recover_reddit_image_links.py
+      - name: Extract original HTML image mentions
+        run: python scripts/external_evidence/discover_html_images.py
+      - name: Acquire asset-diverse public CDN images
+        run: |
+          python scripts/external_evidence/fetch_html_images.py \
+            --additional-leads visual-evidence-work/reddit-archival-image-leads.json \
+            --max-per-page 12 --max-images 48
+      - name: Compare images to 82 original sticker photographs and 15 promotional controls
+        run: |
+          python scripts/external_evidence/visual_index.py \
+            --candidates evidence-work --max-files 500 --max-matches 8
+      - name: Print compact audit inventory for subsequent reports
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          def load(path, key):
+              file=Path(path)
+              if not file.exists(): return []
+              try: return json.loads(file.read_text()).get(key, [])
+              except (OSError, ValueError): return []
+          pages=load("evidence-work/acquisition-summary.json","sources")
+          references=load("visual-reference-work/retrieval-report.json","sources")
+          archived=load("visual-evidence-work/reddit-archival-report.json","sources")
+          archived_images=load("visual-evidence-work/reddit-archival-image-leads.json","image_mentions")
+          mentions=load("visual-evidence-work/html-image-leads.json","image_mentions")
+          images=load("evidence-work/html-image-download-report.json","image_downloads")
+          candidates=load("visual-evidence-work/candidate-index.json","candidates")
+          matches=load("visual-evidence-work/visual-matches.json","matches")
+          triage=load("visual-evidence-work/visual-matches.json","triage")
+          print("CE_PILOT_V2_AUDIT_BEGIN")
+          print("counts",json.dumps({"pages":len(pages),"promotional_refs":len(references),
+              "archives":len(archived),"archive_media_mentions":len(archived_images),
+              "html_mentions":len(mentions),"image_downloads":len(images),
+              "candidate_images":len(candidates),"matches":len(matches)}))
+          for group, rows, keys in [
+            ("PAGE",pages,["source_id","url","classification","error"]),
+            ("PROMOTIONAL",references,["id","status","bytes","sha256","error"]),
+            ("ARCHIVE",archived,["source_id","status","provider","image_url_count","archive_attempts"]),
+            ("IMAGE",images,["source_id","image_url","status","bytes","error"]),
+            ("MATCH",matches,["candidate_id","candidate_source_url","candidate_image_url","reference_id","reference_role","kind","dhash_distance","ahash_distance"]),
+            ("TRIAGE",triage,["candidate_id","source_url","image_url","classification"])]:
+              print(group+"_COUNT",len(rows))
+              for row in rows[:60]:
+                print(group,json.dumps({k:row[k] for k in keys if k in row},ensure_ascii=False))
+          print("CE_PILOT_V2_AUDIT_END")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-visual-pilot-v2-${{ github.run_id }}
+          path: |
+            evidence-work/
+            visual-reference-work/
+            visual-evidence-work/
+          retention-days: 30
+          if-no-files-found: warn
