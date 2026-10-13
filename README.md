@@ -40,6 +40,7 @@ python scripts/verify_machine.py
 
 
 
+- [INSIDE CE dated archive controls and CDX metadata checks](docs/reference/inside-ce-archive-cdx-positive-controls-2026-10-13.md): 14 original-source controls, 17 lead records, bounded opt-in Wayback capture probes and synthetic CI validation.
 - [Native-language INSIDE CE ownership hunt](docs/reference/inside-ce-native-owner-hunt-2026-10-12.md): 50 native locale profiles, 483 forum and 30 public marketplace/social search surfaces, GHA planning workflow, source-backed ownership/ARG lead ledger.
 - [Forum search software stack and offline corpus index](docs/reference/forum-search-software-stack.md): tested SQLite FTS5 exact-symbol/multilingual search, optional warcio WARC ingestion, CI regressions, and researched CDX/DuckDB/crawler alternatives.
 - [Worldwide gaming-forum archives and mirrors](docs/reference/global-gaming-forum-archives-and-mirrors.md): 483-row [historical fallback matrix](data/reference/global-gaming-forum-archive-routes.tsv), documented Steam/UOL rescue datasets, PTT mirrors, Arquivo.pt full-text, Common Crawl and 2026 access/coverage best practices.
