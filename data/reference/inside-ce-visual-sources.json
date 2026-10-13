@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact public promotional image controls for detecting image reuse; they are not CE-owner evidence.",
+  "sources": [
+    {
+      "id": "iam8bit-insidece-00001b",
+      "url": "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00001B.jpg?v=1588895007&width=2048",
+      "extension": ".jpg",
+      "origin": "first-party-product-marketing",
+      "subject": "Huddle, red premium box, INSIDE game, art cards, Boy figurine",
+      "source_page": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "role": "negative-control-marketing-repost"
+    },
+    {
+      "id": "iam8bit-insidece-00018",
+      "url": "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00018.jpg?v=1588895007&width=3648",
+      "extension": ".jpg",
+      "origin": "first-party-product-marketing",
+      "subject": "Huddle, game and fan of art cards on dark background",
+      "source_page": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "role": "negative-control-marketing-repost"
+    },
+    {
+      "id": "iam8bit-insidece-00014",
+      "url": "https://cdn.shopify.com/s/files/1/0580/0965/products/InsideCE_Lifestyle_00014_cf6a9295-f926-4f34-880f-2ddd6d75ce3d.jpg",
+      "extension": ".jpg",
+      "origin": "publisher-product-photo-cdn-copy",
+      "subject": "Foldout nine-sketch poster next to INSIDE PS4 case and disc",
+      "source_page": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "role": "negative-control-marketing-repost"
+    },
+    {
+      "id": "polygon-insidece-00025",
+      "url": "https://cdn.vox-cdn.com/uploads/chorus_asset/file/19487428/InsideCE_Lifestyle_00025.jpg",
+      "extension": ".jpg",
+      "origin": "press-copy-of-promotional-imagery",
+      "subject": "Overlapping printed art cards; promotional photo reused by reporting",
+      "source_page": "https://www.polygon.com/2019/12/12/21013222/inside-real-doll-iam8bit-limited-edition-contents/",
+      "role": "negative-control-press-repost"
+    },
+    {
+      "id": "iam8bit-standalone-ps4-packshot",
+      "url": "https://www.iam8bit.com/cdn/shop/products/web_storeicon_INSIDE_PS4.jpg?v=1574887739&width=2048",
+      "extension": ".jpg",
+      "origin": "first-party-standalone-ps4-product",
+      "subject": "Official standalone INSIDE PS4 case and disc; separate $29.99 product",
+      "source_page": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "role": "negative-control-standalone"
+    },
+    {
+      "id": "iam8bit-standalone-ps4-lifestyle",
+      "url": "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00013.jpg?v=1588895388&width=5472",
+      "extension": ".jpg",
+      "origin": "first-party-standalone-ps4-product",
+      "subject": "Lifestyle shot of single INSIDE PS4 disc and case; filename InsideCE is NOT evidence of full Collector's Edition",
+      "source_page": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "role": "negative-control-standalone"
+    }
+  ]
+}
