@@ -27,7 +27,7 @@ jobs:
       - name: Fifteen sourced first-party and syndicated media controls
         run: python scripts/external_evidence/fetch_visual_references.py
       - name: Recover historical Reddit public post media metadata with archival fallback
-        run: python scripts/external_evidence/recover_reddit_image_links.py
+        run: PYTHONPATH=. python scripts/external_evidence/recover_reddit_image_links.py
       - name: Extract original HTML image mentions
         run: python scripts/external_evidence/discover_html_images.py
       - name: Acquire asset-diverse public CDN images
