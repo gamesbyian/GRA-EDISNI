@@ -140,7 +140,7 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--leads", type=Path, default=Path("visual-evidence-work/html-image-leads.json"))
     p.add_argument("--out", type=Path, default=Path("evidence-work"))
-    p.add_argument("--additional-leads", type=Path,
+    p.add_argument("--additional-leads", type=Path, action="append",
                    help="Optional JSON image_mentions from PUBLIC archive metadata")
     p.add_argument("--max-per-page", type=int, default=8)
     p.add_argument("--max-images", type=int, default=48)
@@ -148,8 +148,8 @@ def main() -> None:
     if not (1 <= args.max_images <= 200 and 1 <= args.max_per_page <= 50):
         p.error("max-images must be 1..200 and max-per-page 1..50")
     rows = json.loads(args.leads.read_text(encoding="utf-8"))["image_mentions"]
-    if args.additional_leads:
-        rows += json.loads(args.additional_leads.read_text(encoding="utf-8"))["image_mentions"]
+    for lead_file in args.additional_leads or []:
+        rows += json.loads(lead_file.read_text(encoding="utf-8"))["image_mentions"]
     chosen = select(rows, args.max_per_page, args.max_images)
     reports = []
     total_bytes = 0
@@ -176,9 +176,10 @@ def main() -> None:
             bucket = by_source.setdefault(row["source_id"], {
                 "source_id": safe_dir(row["source_id"]), "url": row["source_page_url"],
                 "kind": "public-html-image-candidate", "classification": "unreviewed",
-                "image_urls": {},
+                "image_urls": {}, "source_pages": {},
             })
             bucket["image_urls"][dest.name] = row["image_url"]
+            bucket["source_pages"][dest.name] = row["source_page_url"]
         except (OSError, ValueError, urllib.error.URLError) as exc:
             record["error"] = str(exc)[:240]
         reports.append(record)
