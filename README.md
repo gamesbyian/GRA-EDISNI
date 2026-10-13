@@ -40,6 +40,7 @@ python scripts/verify_machine.py
 
 
 
+- [First measured INSIDE CE Wayback capture audit](docs/reference/inside-ce-first-archive-cdx-pilot-results-2026-10-13.md): eight real public CDX requests, a dated 2019 GameFAQs capture record, one no-match response and six provider errors (not absence claims).
 - [INSIDE CE dated archive controls and CDX metadata checks](docs/reference/inside-ce-archive-cdx-positive-controls-2026-10-13.md): 16 original-source controls, 27 source/ownership/context lead records, bounded opt-in Wayback capture probes and synthetic CI validation.
 - [CE edition-source differentiation and indexed lead triage](docs/reference/inside-ce-edition-product-differentiation-and-triage.md): first-party CE vs standalone PS4 distinction, cautious source dedup and automated post-search candidate review.
 - [Native-language INSIDE CE ownership hunt](docs/reference/inside-ce-native-owner-hunt-2026-10-12.md): 50 native locale profiles, 491 forum and 30 public marketplace/social search surfaces, GHA planning workflow, source-backed ownership/ARG lead ledger.
