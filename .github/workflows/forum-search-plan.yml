@@ -25,6 +25,19 @@ on:
           - V
           - V,C
           - V,H
+      execute_index:
+        description: "Run an explicitly authorized, limited Brave web-index pass"
+        required: true
+        default: "no"
+        type: choice
+        options:
+          - "no"
+          - "yes"
+      max_index_queries:
+        description: "Paid API query budget for optional Brave pass, 1-1000"
+        required: true
+        default: "20"
+        type: string
       max_tasks:
         description: "Hard budget for forum x query task count"
         required: true
@@ -67,6 +80,23 @@ jobs:
               "--max-tasks", os.environ["SEARCH_MAX_TASKS"],
               "--output", "search-output/forum-search-tasks.jsonl",
               "--summary", "search-output/forum-search-summary.json",
+          ], check=True)
+          PY
+      - name: Optional bounded web-index lookup (never crawls forums)
+        if: ${{ inputs.execute_index == 'yes' }}
+        env:
+          BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
+          MAX_INDEX_QUERIES: ${{ inputs.max_index_queries }}
+        run: |
+          python - <<'PY'
+          import os
+          import subprocess
+          subprocess.run([
+              "python", "scripts/run_global_forum_index_search.py",
+              "--tasks", "search-output/forum-search-tasks.jsonl",
+              "--output", "search-output/index-results.jsonl",
+              "--summary", "search-output/index-summary.json",
+              "--max-queries", os.environ["MAX_INDEX_QUERIES"],
           ], check=True)
           PY
       - name: Upload prepared search tasks and summary
