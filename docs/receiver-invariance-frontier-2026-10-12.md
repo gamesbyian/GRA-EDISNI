@@ -92,6 +92,35 @@ This supplies a practical, finite target for a recipient audit: does the authent
 
 The nine Q4 selector codes fall into only **four** distinct patterns inside U5; the U5 selected-readout is even coarser at two. Different sticker sequences can thus already produce the same selected output. Claiming the 108-cell master must be uniquely recovered is stronger than the actual identification requirement for such a receptor.
 
+## Stronger observation-first result: four class words require no primary-machine grammar
+
+The native nine-class triplet construction can be calculated using **only the actual physical records and one independent Q4 assumption**: each class's last three positions contain exactly one slash. Leave every unobserved *primary* position freely binary. Do **not** import POS3, 3/6 per frame, quarter polarity or recursion. Enumerate all compatible depth choices and freely missing primary marks for each class.
+
+| A–I class | Distinct 3-mark words: observations + Q4 one-slash | Under U2 | Under U5 |
+| --- | ---: | ---: | ---: |
+| A | 8 | 4 | 2 |
+| **B** | **1** | 1 | 1 |
+| C | 2 | 2 | 1 |
+| D | 2 | 1 | 1 |
+| **E** | **1** | 1 | 1 |
+| **F** | **1** | 1 | 1 |
+| G | 6 | 5 | 2 |
+| **H** | **1** | 1 | 1 |
+| I | 4 | 2 | 1 |
+
+Four class triplets are already completely determined **without any primary occupancy model**:
+
+```text
+B = //-  (body residues 20, 47, 74)
+E = ///  (body residues 5, 32, 59)
+F = ///  (body residues 15, 42, 69)
+H = --/  (body residues 26, 53, 80)
+```
+
+Every body mark in these four triplets has been physically observed. The Q4 depth is directly given by an observed slash in B, E and F; H has two observed dots, so its slash at the remaining depth is forced **only if** the one-slash Q4 premise holds.
+
+**Evidence level:** This is a smaller, cleaner conditional input to any genuinely native nine-artwork/three-channel receiver. It is much less dependent on our 3×3-machine inventions than U5's 23/27 invariant, but it still does not establish the output rule. Reproduce with [observation-first triplet audit](../scripts/audit_observation_first_class_triplets.py).
+
 ## Native A–I receiving surface: class triplets, not just 27-character streams
 
 Instead of asking only for a 27-mark contiguous word, use the **already-solved nine-picture A–I class structure as the receiver's native coordinates**. For each class take the three selected symbols from Q1, Q2 and Q3. Exact conditional distinct **three-character outputs per picture** are:
