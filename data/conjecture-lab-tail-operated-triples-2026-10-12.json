@@ -1,0 +1,4033 @@
+{
+  "baseline_onehot_completions": 2415919104,
+  "compatible_models": 0,
+  "experiment": "CL-VLEN-04",
+  "highest_scoring_model": null,
+  "limitations": [
+    "hypothetical across-class one-hot selector applied within a class body; differs from source-registered recursive G5/G6",
+    "all operation pairs are invented and compared retrospectively",
+    "imputation only inside conditional enumerator; no raw observations altered"
+  ],
+  "matched_nulls": {
+    "classes": {
+      "models_with_any_survivor": 1,
+      "n": 80,
+      "null": "fixed physical site mask, early-zone counts preserved within classes, tail unchanged",
+      "observed_best_log_bayes_factor": null,
+      "shuffle_ge_actual": null,
+      "shuffle_median_best_log_bayes_factor": 6.120541589
+    },
+    "frames": {
+      "models_with_any_survivor": 1,
+      "n": 80,
+      "null": "fixed physical site mask, early-zone counts preserved within frames, tail unchanged",
+      "observed_best_log_bayes_factor": null,
+      "shuffle_ge_actual": null,
+      "shuffle_median_best_log_bayes_factor": 6.120541589
+    }
+  },
+  "model_count": 160,
+  "models": [
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "identity",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "identity",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "identity",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "identity",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "identity",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "identity",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "identity",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "identity",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "reverse",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "reverse",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "reverse",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "reverse",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 3,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "reverse",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "reverse",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "reverse",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 3,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "reverse",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "reverse_invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "reverse_invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "reverse_invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "reverse_invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "reverse_invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "reverse_invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "fanout",
+        "reverse_invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "chain",
+        "reverse_invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 4,
+        "F": 0,
+        "G": 8,
+        "H": 0,
+        "I": 4
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "single",
+        "identity",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 5,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 8,
+        "E": 4,
+        "F": 2,
+        "G": 4,
+        "H": 0,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "single",
+        "identity",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 16,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 12,
+        "H": 0,
+        "I": 4
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "single",
+        "reverse",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 16,
+        "B": 0,
+        "C": 0,
+        "D": 4,
+        "E": 0,
+        "F": 1,
+        "G": 8,
+        "H": 2,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "single",
+        "reverse",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 2,
+        "E": 0,
+        "F": 0,
+        "G": 8,
+        "H": 4,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "single",
+        "invert",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 5,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 12,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "single",
+        "invert",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 4,
+        "E": 4,
+        "F": 0,
+        "G": 4,
+        "H": 2,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "single",
+        "reverse_invert",
+        null,        1
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 4,
+        "F": 0,
+        "G": 8,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        1,
+        "single",
+        "reverse_invert",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "identity",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "identity",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "identity",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "identity",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "identity",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "identity",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "identity",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "identity",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "reverse",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "reverse",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "reverse",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "reverse",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "reverse",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "reverse",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "reverse",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "reverse",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 3,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 3,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "reverse_invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "reverse_invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "reverse_invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "reverse_invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "reverse_invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "reverse_invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "fanout",
+        "reverse_invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "chain",
+        "reverse_invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 8,
+        "E": 4,
+        "F": 2,
+        "G": 4,
+        "H": 0,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "single",
+        "identity",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 4,
+        "F": 0,
+        "G": 8,
+        "H": 0,
+        "I": 4
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "single",
+        "identity",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 5,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 16,
+        "B": 0,
+        "C": 0,
+        "D": 4,
+        "E": 0,
+        "F": 1,
+        "G": 8,
+        "H": 2,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "single",
+        "reverse",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 16,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 12,
+        "H": 0,
+        "I": 4
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "single",
+        "reverse",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 12,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "single",
+        "invert",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 2,
+        "E": 0,
+        "F": 0,
+        "G": 8,
+        "H": 4,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "single",
+        "invert",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 5,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 4,
+        "F": 0,
+        "G": 8,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "single",
+        "reverse_invert",
+        null,        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 4,
+        "E": 4,
+        "F": 0,
+        "G": 4,
+        "H": 2,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "contiguous",
+        -1,
+        "single",
+        "reverse_invert",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "identity",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 0,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "identity",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 0,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "identity",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "identity",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "identity",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "identity",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "identity",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "identity",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "reverse",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 0,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "reverse",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "reverse",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "reverse",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 0,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "reverse",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "reverse",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "reverse",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "reverse",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "reverse_invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "reverse_invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "reverse_invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "reverse_invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "reverse_invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "reverse_invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "fanout",
+        "reverse_invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "chain",
+        "reverse_invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 2,
+        "E": 0,
+        "F": 0,
+        "G": 8,
+        "H": 1,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "single",
+        "identity",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 0,
+        "F": 1,
+        "G": 4,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "single",
+        "identity",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 4,
+        "E": 0,
+        "F": 0,
+        "G": 8,
+        "H": 1,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "single",
+        "reverse",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 1,
+        "C": 1,
+        "D": 0,
+        "E": 0,
+        "F": 1,
+        "G": 12,
+        "H": 8,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "single",
+        "reverse",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 4,
+        "F": 0,
+        "G": 8,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "single",
+        "invert",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 5,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 8,
+        "E": 4,
+        "F": 0,
+        "G": 12,
+        "H": 0,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "single",
+        "invert",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 5,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 16,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 4,
+        "F": 0,
+        "G": 8,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "single",
+        "reverse_invert",
+        null,        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 16,
+        "B": 0,
+        "C": 0,
+        "D": 4,
+        "E": 4,
+        "F": 0,
+        "G": 4,
+        "H": 0,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        1,
+        "single",
+        "reverse_invert",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 5,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "identity",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 0,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "identity",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 0,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "identity",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 0,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "identity",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 0,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "identity",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "identity",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 1,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "identity",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "identity",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "reverse",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "reverse",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "reverse",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "reverse",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "reverse",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "reverse",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "reverse",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "reverse",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 3,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 0,
+        "F": 0,
+        "G": 2,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "reverse_invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "reverse_invert",
+        "identity",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "reverse_invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "reverse_invert",
+        "reverse",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "reverse_invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "reverse_invert",
+        "invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "fanout",
+        "reverse_invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 2,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "E": 0,
+        "F": 0,
+        "G": 1,
+        "H": 0,
+        "I": 1
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "chain",
+        "reverse_invert",
+        "reverse_invert",
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 2641807540224
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 0,
+        "F": 1,
+        "G": 4,
+        "H": 0,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "single",
+        "identity",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 2,
+        "E": 0,
+        "F": 0,
+        "G": 8,
+        "H": 1,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "single",
+        "identity",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 1,
+        "C": 1,
+        "D": 0,
+        "E": 0,
+        "F": 1,
+        "G": 12,
+        "H": 8,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "single",
+        "reverse",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 1,
+        "D": 4,
+        "E": 0,
+        "F": 0,
+        "G": 8,
+        "H": 1,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "single",
+        "reverse",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 6,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 8,
+        "E": 4,
+        "F": 0,
+        "G": 12,
+        "H": 0,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "single",
+        "invert",
+        null,
+        1
+      ],
+      "observed_classes_compatible": 5,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 4,
+        "F": 0,
+        "G": 8,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "single",
+        "invert",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 5,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 16,
+        "B": 0,
+        "C": 0,
+        "D": 4,
+        "E": 4,
+        "F": 0,
+        "G": 4,
+        "H": 0,
+        "I": 2
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "single",
+        "reverse_invert",
+        null,        1
+      ],
+      "observed_classes_compatible": 5,
+      "source_grammar_volume": 354577405862133891072
+    },
+    {
+      "class_counts": {
+        "A": 16,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 4,
+        "F": 0,
+        "G": 8,
+        "H": 1,
+        "I": 0
+      },
+      "compatible_completions": 0,
+      "log_bayes_factor_vs_onehot_baseline": null,
+      "model": [
+        "strided",
+        -1,
+        "single",
+        "reverse_invert",
+        null,
+        2
+      ],
+      "observed_classes_compatible": 4,
+      "source_grammar_volume": 354577405862133891072
+    }
+  ],
+  "observed_residues": 66,
+  "physical_records": 84,
+  "source": "data/observations.csv",
+  "status": "DISCOVER/DEVELOP only; no external decoder",
+  "tail_onehot_assignments": 18
+}

@@ -1,0 +1,72 @@
+{
+  "actual": {
+    "forward:cyclic": {
+      "best_errors": 11,
+      "best_matches": 36,
+      "comparisons": 47,
+      "exact_program_count": 0,
+      "first_best_rule": 109,
+      "sample_seed": 69816786,
+      "seed_candidates": 256
+    },
+    "forward:open": {
+      "best_errors": 11,
+      "best_matches": 36,
+      "comparisons": 47,
+      "exact_program_count": 0,
+      "first_best_rule": 109,
+      "sample_seed": 17387986,
+      "seed_candidates": 256
+    },
+    "reverse:cyclic": {
+      "best_errors": 9,
+      "best_matches": 45,
+      "comparisons": 54,
+      "exact_program_count": 0,
+      "first_best_rule": 110,
+      "sample_seed": 88623634,
+      "seed_candidates": 32768
+    },
+    "reverse:open": {
+      "best_errors": 11,
+      "best_matches": 43,
+      "comparisons": 54,
+      "exact_program_count": 0,
+      "first_best_rule": 77,
+      "sample_seed": 67911762,
+      "seed_candidates": 32768
+    }
+  },
+  "directions": [
+    "forward",
+    "reverse"
+  ],
+  "experiment": "CL-VLEN-06",
+  "four_quarter_marks": [
+    19,
+    17,
+    18,
+    12
+  ],
+  "matched_controls": {
+    "frame": {
+      "best_at_least_as_good": 16,
+      "median_best_errors": 9.0,
+      "observed_best_errors": 9,
+      "replicates": 30
+    },
+    "quarter": {
+      "best_at_least_as_good": 15,
+      "median_best_errors": 9.5,
+      "observed_best_errors": 9,
+      "replicates": 30
+    }
+  },
+  "note": "Exploratory 4x27 ECA programs. No source clue to ECA rule, topology, time direction. Failed exact models are narrow negatives.",
+  "oracle": "all 256 ECA rules on both cyclic/open 27-cell topologies verified against scalar oracle",
+  "rules": 256,
+  "topologies": [
+    "cyclic",
+    "open"
+  ]
+}
