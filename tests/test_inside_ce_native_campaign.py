@@ -99,6 +99,23 @@ class NativeCECampaignTests(unittest.TestCase):
         self.assertTrue(any(x["site"] == "Yahoo Auctions Japan" and x["locale"] == "ja"
                             for x in tasks))
 
+    def test_full_native_lexicon_on_global_sources(self):
+        expected = {x["locale"] for x in self.lexicon}
+        self.assertEqual(set(module.MULTI_LOCALES), expected)
+        forum_tasks = self.make_campaign()
+        self.assertEqual(len(forum_tasks), 8940)
+        social_tasks = module.build_secondary(module.load_tsv(module.SECONDARY), self.lexicon)
+        self.assertEqual(len(social_tasks), 10755)
+        self.assertEqual({x["locale"] for x in forum_tasks}, expected)
+        self.assertEqual({x["locale"] for x in social_tasks}, expected)
+
+    def test_small_paid_batch_is_multilingual_and_multisource(self):
+        social_tasks = module.build_secondary(module.load_tsv(module.SECONDARY), self.lexicon)
+        head = social_tasks[:20]
+        self.assertGreaterEqual(len({x["locale"] for x in head}), 15)
+        self.assertGreaterEqual(len({x["site"] for x in head}), 5)
+        self.assertEqual({x["state"] for x in head}, {"planned_unexecuted"})
+
     def test_rejects_mismatched_archive_rows(self):
         archives = [dict(x) for x in self.archives]
         archives[0]["community"] = "WRONG"

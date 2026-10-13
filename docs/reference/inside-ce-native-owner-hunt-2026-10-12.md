@@ -45,7 +45,7 @@ Examples of intentionally natural source-language wording:
 | Turkish | `elime ulaştı`, `koleksiyoncu sürümü`, `çıkartma`, `seri numarası` |
 | Russian | `мне пришло`, `коллекционное издание`, `наклейка`, `распаковка` |
 
-Crucially, **the query planning does not simply translate an English sentence**. It uses each language's authored purchase, receipt, packaging and selling vocabulary, then selects language/region-specific forum targets. Hybrid-language countries use both relevant vernacular profiles. For the two game-specific Steam hubs marked `multi`, eleven large language families are included.
+Crucially, **the query planning does not simply translate an English sentence**. It uses each language's authored purchase, receipt, packaging and selling vocabulary, then selects language/region-specific forum targets. Hybrid-language countries use both relevant vernacular profiles. For global or multilingual surfaces, **all 50 native-language profiles** are now generated rather than silently omitting languages without a country-specific gaming forum. Local-language site restrictions still apply to regional forums.
 
 This is a **starting lexicon, not a claim of native-speaker proofreading**. Informal spellings, spelling inflections, code-switching, common abbreviations and colloquial local product names should be expanded per-site after actual source examples. Search phrases can fail through strict quoted multi-term AND logic; run broad title/product-anchor and site-native iterations before treating them as exhausted.
 
@@ -78,7 +78,7 @@ High-value positive examples from the canonical research history: YouTube unboxi
 
 ## Execution and automation
 
-The new [planner](../../scripts/build_inside_ce_native_search_campaign.py) joins every source to the existing forum and archive route matrix, emits reproducible UTF-8 JSONL tasks, verifies unique task IDs, and distributes its first-pass **site+locale tasks across regions** instead of exhausting one English forum first. The manual [GitHub Actions campaign workflow](../../.github/workflows/inside-ce-native-search-campaign.yml) runs offline tests and emits planned work. It supports optional limited **official Brave Search API** index lookups only when the user explicitly enables paid searches and has configured the API key.
+The new [planner](../../scripts/build_inside_ce_native_search_campaign.py) joins every source to the existing forum and archive route matrix, emits reproducible UTF-8 JSONL tasks, verifies unique task IDs, and fairly interleaves **locale and source-site tasks** so a small paid-search budget does not exhaust one platform or language. Current full plans: **8,940 forum queries** plus **10,755 social/video/resale queries** across 15 query categories and 50 native locale profiles. They are proposed queries, not executed retrievals. The manual [GitHub Actions campaign workflow](../../.github/workflows/inside-ce-native-search-campaign.yml) runs offline tests and emits planned work. It supports optional limited **official Brave Search API** index lookups only when the user explicitly enables paid searches and has configured the API key.
 
 Example:
 
