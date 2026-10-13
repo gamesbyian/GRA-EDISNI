@@ -5,6 +5,7 @@ Enumerates compatible *output classes* without testing any live password
 interface or claiming that base27 is the intended CE interpretation.
 Run: python scripts/conjecture_lab_native_q4_base27.py
 """
+import argparse
 import itertools
 
 from conjecture_lab_native_q4_receiver import (
@@ -50,13 +51,18 @@ def alphabetic_counts(words):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--allow-primary-dots", action="store_true")
+    args = parser.parse_args()
     observed, _ = source_data()
-    groups = core_groups(observed)
+    primary_alphabet = SIGNS if args.allow_primary_dots else "/-"
+    groups = core_groups(observed, primary_alphabet)
+    print("Assumed primary alphabet:", primary_alphabet)
     choices = q4_choices(observed)
     assert all(choices)
     total, outputs, class_sets = compatible_outputs(groups, choices)
-    assert total == 6480
-    assert len(outputs) == 5808
+    assert total == (6480 if args.allow_primary_dots else 384)
+    assert len(outputs) == (5808 if args.allow_primary_dots else 364)
     print("Raw independent class-word Cartesian product:", total)
     print("Exactly compatible nine-class words:", len(outputs))
     print("Rejected by cross-class primary triplet dependence:", total - len(outputs))
@@ -65,12 +71,13 @@ def main():
 
     rows = alphabetic_counts(outputs)
     expected = (
-        ("./-", 5464, 5808),
-        (".-/", 0, 5808),
-        ("/.-", 5464, 0),
-        ("/-.", 5808, 0),
-        ("-./", 0, 5464),
-        ("-/.", 5808, 5464),
+        (("./-", 5464, 5808), (".-/", 0, 5808),
+         ("/.-", 5464, 0), ("/-.", 5808, 0),
+         ("-./", 0, 5464), ("-/.", 5808, 5464))
+        if args.allow_primary_dots else
+        (("./-", 320, 364), (".-/", 0, 364),
+         ("/.-", 320, 0), ("/-.", 364, 0),
+         ("-./", 0, 320), ("-/.", 364, 320))
     )
     assert rows == expected, (rows, expected)
     print("Trit digit 0/1/2 | A=0 nine-letter outputs | A=1 nine-letter outputs")
