@@ -4,6 +4,7 @@
 **Compiled:** 2026-10-12  
 **Temporal eligibility:** evidence of at least one relevant post/activity on or after **2014-10-12**, or potential eligibility awaiting confirmation  
 **Data:** [global-gaming-forums.tsv](../../data/reference/global-gaming-forums.tsv)  
+**Archival research and per-forum mirror routes:** [archive/mirror audit](global-gaming-forum-archives-and-mirrors.md) and [483-row historical fallback matrix](../../data/reference/global-gaming-forum-archive-routes.tsv). Where specific rescued datasets exist they are named, but no per-host capture availability has yet been established.  
 **Per-forum search method:** [483-route search matrix](../../data/reference/global-gaming-forum-search-routing.tsv) and [AI/GitHub Actions search architecture](global-gaming-forum-search-methods.md). Each entry has a recommended method, fallback, search scope and access gate. Most assignments remain platform-level inferences requiring per-site verification; the plan/workflow does not itself certify searches.
 
 ## Purpose and coverage
