@@ -85,3 +85,25 @@ These are **descriptive** fractions under a particular null, *not* the chance th
 - Script: [`conjecture_lab_url_digits_q4_depth.py`](../../scripts/conjecture_lab_url_digits_q4_depth.py)
 - Source evidence: `data/observations.csv`, Experiments [378](../experiment-378-534brn-one-shot-consumer.md), [380](../experiment-380-534brn-keypad-coordinate.md), [382](../experiment-382-534brn-native-cell-registration.md).
 - No physical ledger edits, model changes, password guesses, or changes to previously frozen predictions.
+
+## Frozen conditional physical predictions from the one monotone match
+
+The *retrospectively fitted* mirror and reverse thresholds above determine one complete nine-class selector. In native `I A B / C D E / F G H` row-major order, it is:
+
+```
+I=2  A=2  B=2
+C=2  D=1  E=0
+F=1  G=0  H=2
+```
+
+Only classes **A, C and G** were ambiguous under the ordinary one-slash-per-stack rule, so this variant makes the following additional conditional predictions (a dot at any unselected Q4 depth; a slash at the selected one):
+
+| Class | Predictions by residue | Independent observation at time of fit |
+|---|---|---|
+| A | **82 = .; 91 = .; 100 = /** | none |
+| C | **84 = .; 93 = .; 102 = /** | none |
+| G | **88 = /; 97 = .; 106 = .** | **97 = .** already observed |
+
+Thus it exposes **eight previously unobserved residue outcomes**, including 93 and 102, which the existing Experiment 458 atlas identifies as informative contrasts between the quarter/row families. However this is **a same-corpus selected model**: no agreement with the already-known residue 97 is a prospective success, and future alignment with the depth or row family would share assumptions rather than constitute an independent evidentiary vote.
+
+The deterministic script prints and asserts the exact fitted assignment/predictions. Freeze these parameters before any new owner-confirmed symbol; if a future observed mark contradicts one, reject this specific monotone mapping without tuning the threshold or orientation in response. Different speculative URL readers remain separately testable.
