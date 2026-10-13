@@ -63,8 +63,9 @@ class HistoricCDXTests(unittest.TestCase):
     def test_unexpected_schema_fails_closed(self):
         with self.assertRaisesRegex(ValueError, "Unexpected"):
             parse_capture_rows([["foo", "original"], ["bar", "sample"]], self.item)
+        self.assertEqual(parse_capture_rows([], self.item), ([], 0))
         with self.assertRaisesRegex(ValueError, "Expected"):
-            parse_capture_rows([], self.item)
+            parse_capture_rows({}, self.item)
 
     def test_rate_limit_causes_remaining_ids_to_be_skipped(self):
         next_id = "294530200626"
@@ -89,6 +90,12 @@ class HistoricCDXTests(unittest.TestCase):
         self.assertEqual(result[0]["status"], "CDX-capture-pointers-unverified")
         result = inspect([self.record], fetcher=lambda _: ([self.header], "e" * 64))
         self.assertEqual(result[0]["status"], "CDX-no-capture-pointers")
+
+    def test_genuine_empty_cdx_json_is_no_capture_not_error(self):
+        result = inspect([self.record], fetcher=lambda _: ([], "a" * 64))
+        self.assertEqual(result[0]["status"], "CDX-no-capture-pointers")
+        self.assertEqual(result[0]["archive_query_sha256"], "a" * 64)
+        self.assertEqual(result[0]["capture_count"], 0)
 
     def test_known_case_source_cannot_enter_unknown_probe(self):
         with self.assertRaisesRegex(ValueError, "Known or non-CE"):
