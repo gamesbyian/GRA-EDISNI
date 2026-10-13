@@ -40,6 +40,7 @@ python scripts/verify_machine.py
 
 
 
+- [Forum search software stack and offline corpus index](docs/reference/forum-search-software-stack.md): tested SQLite FTS5 exact-symbol/multilingual search, optional warcio WARC ingestion, CI regressions, and researched CDX/DuckDB/crawler alternatives.
 - [Worldwide gaming-forum archives and mirrors](docs/reference/global-gaming-forum-archives-and-mirrors.md): 483-row [historical fallback matrix](data/reference/global-gaming-forum-archive-routes.tsv), documented Steam/UOL rescue datasets, PTT mirrors, Arquivo.pt full-text, Common Crawl and 2026 access/coverage best practices.
 - [Automatable multilingual forum search plan](docs/reference/global-gaming-forum-search-methods.md): per-forum methods for all 483 leads, [routing matrix](data/reference/global-gaming-forum-search-routing.tsv), safe query planner and opt-in indexed GHA workflow.
 - [Worldwide gaming-forum discovery directory](docs/reference/global-gaming-forums.md): 483 multilingual forum/discussion leads, [machine-readable TSV](data/reference/global-gaming-forums.tsv), evidence-status caveats, and a source-first INSIDE archival search procedure.

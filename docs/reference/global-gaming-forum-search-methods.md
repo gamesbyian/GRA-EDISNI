@@ -3,6 +3,7 @@
 **Status:** DISCOVER / operational design, not a claim that 483 sites were crawled  
 **Source directory:** [483-entry forum inventory](../../data/reference/global-gaming-forums.tsv)  
 **Per-site routing:** [483-entry methods matrix](../../data/reference/global-gaming-forum-search-routing.tsv)  
+**Local corpus search implementation:** [software evaluation and SQLite/warcio importer](forum-search-software-stack.md). Extract once, query arbitrary later terms without remote searches.  
 **Historical search and mirrors:** [archive/mirror research](global-gaming-forum-archives-and-mirrors.md) and [483-entry archival fallback matrix](../../data/reference/global-gaming-forum-archive-routes.tsv)  
 **Query planner:** [plan_global_forum_searches.py](../../scripts/plan_global_forum_searches.py)  
 **Bounded index executor:** [run_global_forum_index_search.py](../../scripts/run_global_forum_index_search.py)  
