@@ -66,7 +66,7 @@ class ArchiveBodyTests(unittest.TestCase):
         denied = mod.probe(execute=True, opener=reject)
         self.assertEqual(denied["http_status"], 403)
         self.assertEqual(denied["capture_body_state"], "http_error")
-        def timeout(req, timeout_s):
+        def timeout(req, **kwargs):
             raise TimeoutError("simulated")
         blocked = mod.probe(execute=True, opener=timeout)
         self.assertEqual(blocked["capture_body_state"], "request_error")
