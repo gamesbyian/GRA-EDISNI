@@ -20,8 +20,12 @@ ENDPOINT = "https://api.search.brave.com/res/v1/web/search"
 STOP_CODES = {401, 402, 403, 429}
 
 
-def search_brave(query: str, key: str, count: int) -> list[dict[str, str]]:
-    params = urllib.parse.urlencode({"q": query, "count": count})
+def search_brave(query: str, key: str, count: int, language: str) -> list[dict[str, str]]:
+    options = {"q": query, "count": count, "spellcheck": "false"}
+    code = language.split("-")[0].lower()
+    if len(code) == 2 and code.isalpha():
+        options["search_lang"] = code
+    params = urllib.parse.urlencode(options)
     req = urllib.request.Request(
         ENDPOINT + "?" + params,
         headers={
@@ -82,6 +86,7 @@ def main() -> None:
                 "community": task["community"],
                 "term": task["term"],
                 "query": q,
+                "language_hint": task.get("language", ""),
                 "retrieval_source": "brave_web_index_only",
                 "coverage": "partial_external_index_no_negative_evidence",
                 "status": "not_attempted",
@@ -91,7 +96,7 @@ def main() -> None:
                 time.sleep(args.delay_seconds)
             queried += 1
             try:
-                result["matches"] = search_brave(q, key, args.max_results)
+                result["matches"] = search_brave(q, key, args.max_results, task.get("language", ""))
                 result["status"] = "index_search_success"
             except urllib.error.HTTPError as exc:
                 failed += 1
