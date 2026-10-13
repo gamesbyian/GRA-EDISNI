@@ -1,0 +1,91 @@
+name: CE visual historical source pilot 2026-10-13
+
+# One-time isolated research run. Create via PR, review the downloaded evidence and
+# remove this bootstrap workflow once source coverage is documented.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-visual-historical-pilot-20261013.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install bounded image processing dependencies
+        run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
+      - name: Preserve six historical public webpages, including failures
+        run: |
+          python scripts/external_evidence/harvest_public.py \
+            --manifest data/reference/inside-ce-visual-historical-pages.json \
+            --source-id all --output evidence-work
+      - name: Retrieve official first-party visual controls
+        run: python scripts/external_evidence/fetch_visual_references.py
+      - name: Extract original linked image URL candidates from HTML
+        run: |
+          python scripts/external_evidence/discover_html_images.py \
+            --acquired evidence-work --output visual-evidence-work/html-image-leads.json
+      - name: Retrieve allowlisted original public images
+        run: |
+          python scripts/external_evidence/fetch_html_images.py \
+            --leads visual-evidence-work/html-image-leads.json \
+            --out evidence-work --max-images 48 --max-per-page 8
+      - name: Index public photos against 82 preserved sticker originals and controls
+        run: |
+          python scripts/external_evidence/visual_index.py \
+            --candidates evidence-work --max-files 500 --max-matches 8 \
+            --output visual-evidence-work
+      - name: Print machine-readable research inventory to log
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          def read(p, default):
+              path=Path(p)
+              try:
+                  return json.loads(path.read_text()) if path.exists() else default
+              except (OSError, ValueError):
+                  return default
+          reference=read("visual-reference-work/retrieval-report.json",{}).get("sources",[])
+          site=read("evidence-work/acquisition-summary.json",{}).get("sources",[])
+          links=read("visual-evidence-work/html-image-leads.json",{}).get("image_mentions",[])
+          photos=read("evidence-work/html-image-download-report.json",{}).get("image_downloads",[])
+          index=read("visual-evidence-work/candidate-index.json",{}).get("candidates",[])
+          matches=read("visual-evidence-work/visual-matches.json",{}).get("matches",[])
+          print("CE_VISUAL_PILOT_REPORT_BEGIN")
+          for key, rows in [("reference_fetch",reference),("source_pages",site),("image_downloads",photos)]:
+              print(key, len(rows))
+              for r in rows:
+                  print(json.dumps({k:r.get(k) for k in ("id","source_id","source_url","url","image_url","source_page_url","status","classification","bytes","sha256","error") if r.get(k) is not None},ensure_ascii=False))
+          print("image_link_mentions",len(links))
+          for l in links[:40]:
+              print("IMAGE_URL",json.dumps({k:l.get(k) for k in ("source_id","source_page_url","image_url","keyword_hints")},ensure_ascii=False))
+          print("candidate_images",len(index))
+          for c in index[:40]:
+              print("CANDIDATE",json.dumps({k:c.get(k) for k in ("id","path","source_url","image_url","sha256")},ensure_ascii=False))
+          print("perceptual_matches",len(matches))
+          for m in matches[:50]:
+              print("MATCH",json.dumps(m,ensure_ascii=False))
+          print("CE_VISUAL_PILOT_REPORT_END")
+          PY
+      - name: Upload exact retrieved source material and review queue
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ce-visual-historical-pilot-${{ github.run_id }}
+          path: |
+            evidence-work/
+            visual-reference-work/
+            visual-evidence-work/
+          retention-days: 30
+          if-no-files-found: warn
