@@ -189,6 +189,29 @@ def main():
         else:
             assert len(free) == 0 and not winners
 
+    # Preserve the sole retrospectively fitted monotone variant as a frozen,
+    # distinctly NON-BLIND physical discriminator, not evidence of intent.
+    mirror = next(indices for flip, turns, indices in orientations
+                  if flip and turns == 0)
+    digits = tuple(URL_DIGITS[i] for i in mirror)
+    depths = tuple(2 if d <= 5 else 1 if d <= 8 else 0 for d in digits)
+    fitted_depths = dict(zip(NATIVE_CLASSES, depths))
+    assert fitted_depths == {
+        "I": 2, "A": 2, "B": 2, "C": 2, "D": 1,
+        "E": 0, "F": 1, "G": 0, "H": 2
+    }
+    variant = {
+        82 + ALPHABETIC_CLASSES.index(cls) + 9 * depth:
+        "/" if depth == fitted_depths[cls] else "."
+        for cls in "ACG" for depth in range(3)
+    }
+    assert variant == {82: ".", 91: ".", 100: "/",
+                       84: ".", 93: ".", 102: "/",
+                       88: "/", 97: ".", 106: "."}
+    print("Fitted native depth assignment:", fitted_depths)
+    print("Conditional A/C/G Q4 predictions, r97 already confirmed:",
+          dict(sorted(variant.items())))
+
     arbitrary, monotone = exact_shuffle_control(q4, orientations, mappings)
     total = sum(arbitrary.values())
     assert total == sum(monotone.values()) == 45360
