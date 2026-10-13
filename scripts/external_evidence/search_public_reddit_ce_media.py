@@ -109,7 +109,7 @@ def curated_case_map(path: Path) -> dict[str, str]:
         if not re.fullmatch(r"[a-z0-9]{5,9}", str(post_id), re.I):
             raise ValueError("invalid curated public post ID")
         case_ref = item.get("case_ref")
-        if not isinstance(case_ref, str) or not re.fullmatch(r"(?:U\\d{1,3}|L\\d{1,3}|[/.-]\\d{3})", case_ref):
+        if not isinstance(case_ref, str) or not re.fullmatch(r"(?:U\d{1,3}|L\d{1,3}|[/.-]\d{3})", case_ref):
             raise ValueError("invalid curated case reference")
         if post_id.lower() in result:
             raise ValueError("duplicate curated post ID")
