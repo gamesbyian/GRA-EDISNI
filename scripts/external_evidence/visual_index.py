@@ -75,7 +75,7 @@ def variants(image: Image.Image) -> dict[str, dict[str, str]]:
 
 
 def image_record(path: Path, *, root: Path, ref_id: str, role: str,
-                 source_url: str = "", source_kind: str = "") -> dict:
+                 source_url: str = "", source_kind: str = "", image_url: str = "") -> dict:
     if path.suffix.lower() not in EXTENSIONS:
         raise ValueError(f"unsupported extension: {path}")
     with Image.open(path) as raw:
@@ -93,7 +93,7 @@ def image_record(path: Path, *, root: Path, ref_id: str, role: str,
     return {
         "id": ref_id, "role": role, "path": path.relative_to(root).as_posix(),
         "sha256": digest(path), "width": w, "height": h,
-        "source_url": source_url, "source_kind": source_kind,
+        "source_url": source_url, "source_kind": source_kind, "image_url": image_url,
         "fingerprints": fp,
     }
 
@@ -143,13 +143,14 @@ def promotional_refs(repo_root: Path, directory: Path, manifest: Path) -> tuple[
     return records, skipped
 
 
-def provenance(path: Path, candidate_root: Path, acquisition: dict) -> tuple[str, str]:
+def provenance(path: Path, candidate_root: Path, acquisition: dict) -> tuple[str, str, str]:
     relative = path.relative_to(candidate_root)
     if len(relative.parts) > 1:
         source_id = relative.parts[0]
         if source_id in acquisition:
-            return acquisition[source_id].get("url", ""), source_id
-    return "", ""
+            record = acquisition[source_id]
+            return record.get("url", ""), source_id, record.get("image_urls", {}).get(path.name, "")
+    return "", "", ""
 
 
 def read_acquisition(candidate_root: Path) -> dict:
@@ -171,11 +172,12 @@ def candidates(root: Path, *, max_files: int) -> tuple[list[dict], list[dict]]:
     if len(paths) > max_files:
         raise ValueError(f"{len(paths)} images exceeds --max-files={max_files}; shard corpus")
     for index, path in enumerate(paths):
-        url, source_id = provenance(path, root, acquisition)
+        url, source_id, original_image_url = provenance(path, root, acquisition)
         try:
             rec = image_record(
                 path, root=root, ref_id=f"candidate-{index:06d}",
-                role="unreviewed-candidate", source_url=url, source_kind=source_id)
+                role="unreviewed-candidate", source_url=url, source_kind=source_id,
+                image_url=original_image_url)
             out.append(rec)
         except (UnidentifiedImageError, ValueError, OSError, Image.DecompressionBombError) as exc:
             errors.append({"path": path.relative_to(root).as_posix(), "error": str(exc)[:240]})
@@ -236,7 +238,8 @@ def analyze(refs: list[dict], items: list[dict], limit: int) -> dict:
             if match:
                 found.append({
                     "candidate_id": item["id"], "candidate_path": item["path"],
-                    "candidate_source_url": item["source_url"], "reference_id": ref["id"],
+                    "candidate_source_url": item["source_url"], "candidate_image_url": item["image_url"],
+                    "reference_id": ref["id"],
                     "reference_role": ref["role"], "reference_url": ref["source_url"],
                     **match,
                 })
@@ -260,7 +263,7 @@ def analyze(refs: list[dict], items: list[dict], limit: int) -> dict:
             label = "unmatched-visual-review"
         triage.append({
             "candidate_id": item["id"], "path": item["path"], "source_url": item["source_url"],
-            "classification": label, "match_count": len(hit),
+            "image_url": item["image_url"], "classification": label, "match_count": len(hit),
             "review_required": True, "new_sticker_confirmed": False,
         })
     return {"matches": matches, "triage": triage, "exact_candidate_groups": cluster_exact(items)}
@@ -303,7 +306,7 @@ def main() -> None:
         "schema_version": 1, **result,
     }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     with (output / "review-queue.csv").open("w", newline="", encoding="utf-8") as fh:
-        cols = ["candidate_id", "path", "source_url", "classification",
+        cols = ["candidate_id", "path", "source_url", "image_url", "classification",
                 "match_count", "review_required", "new_sticker_confirmed"]
         writer = csv.DictWriter(fh, fieldnames=cols)
         writer.writeheader()
