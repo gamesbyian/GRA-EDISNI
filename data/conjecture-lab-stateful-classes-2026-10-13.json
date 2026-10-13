@@ -1,0 +1,62 @@
+{
+  "actual": {
+    "best": [],
+    "best_support": 0,
+    "body_observed": [
+      4,
+      8,
+      9,
+      5,
+      5,
+      7,
+      4,
+      6,
+      6
+    ],
+    "complete_programs": 0,
+    "survivor_dictionaries": 0,
+    "tail_selector_completions": 18,
+    "top_dictionaries": []
+  },
+  "classes": 9,
+  "experiment": "CL-VLEN-08",
+  "grammars": 336,
+  "null": {
+    "81": {
+      "any_compatible": 0,
+      "best_support_ge": 250,
+      "compatible_dictionaries_ge": 250,
+      "median_programs": 0.0,
+      "replicates": 250,
+      "whole_programs_ge": 250
+    },
+    "class": {
+      "any_compatible": 0,
+      "best_support_ge": 250,
+      "compatible_dictionaries_ge": 250,
+      "median_programs": 0.0,
+      "replicates": 250,
+      "whole_programs_ge": 250
+    },
+    "nine": {
+      "any_compatible": 0,
+      "best_support_ge": 250,
+      "compatible_dictionaries_ge": 250,
+      "median_programs": 0.0,
+      "replicates": 250,
+      "whole_programs_ge": 250
+    }
+  },
+  "ops": [
+    "id",
+    "invert",
+    "rot1",
+    "rot-1",
+    "rot3",
+    "rot-3",
+    "cw",
+    "mirror"
+  ],
+  "oracle": "all 512 nine-bit register states, inverses and fixed complete programs checked",
+  "status": "Exploratory shared three-command cyclic nine-register machine, not confirmed CE parser"
+}
