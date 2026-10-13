@@ -5,6 +5,10 @@ on:
     paths:
       - "scripts/audit_source_native_consumer_affordances.py"
       - "scripts/audit_classword_lever_consumer.py"
+      - "scripts/conjecture_lab_steam_password_direct.py"
+      - "scripts/conjecture_lab_q4_roles.py"
+      - "scripts/conjecture_lab_native_q4_receiver.py"
+      - "data/printer-reference/pc-ps4-acorn-order.txt"
       - "data/experiment-478-source-native-consumer-affordances.json"
       - "data/observations.csv"
       - "data/endgame-saf-dat-island-2026-10-08.json"
@@ -21,7 +25,7 @@ concurrency:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -31,6 +35,12 @@ jobs:
         run: python scripts/audit_source_native_consumer_affordances.py > /tmp/source-consumer-gates.json
       - name: Verify natural A-I class-word bunker replay
         run: python scripts/audit_classword_lever_consumer.py > /tmp/classword-lever-477.json
+      - name: Verify speculative sticker receiving-artifact controls
+        run: |
+          python scripts/conjecture_lab_steam_password_direct.py > /tmp/steam-direct-control.txt
+          python scripts/conjecture_lab_q4_roles.py > /tmp/q4-comparison.txt
+          python scripts/conjecture_lab_native_q4_receiver.py > /tmp/native-q4-receiver.txt
+          cat /tmp/native-q4-receiver.txt
       - name: Show consumer audit summary
         run: |
           python -c 'import json; a=json.load(open("/tmp/source-consumer-gates.json")); print("sources:",a["artifact_total"],"new CE receivers:",a["verified_new_ce_value_receivers"],"type-compatible bunker direct placements:",a["known_lever_direct_replay_type_check"]["type_compatible_14_command_direct_placements"])'
