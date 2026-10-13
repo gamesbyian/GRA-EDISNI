@@ -168,7 +168,7 @@ def request_json(url: str) -> tuple[dict, str]:
     try:
         response = urllib.request.build_opener(SafeRedirect()).open(request, timeout=25)
     except urllib.error.HTTPError as exc:
-        detail = re.sub(r"\\s+", " ", exc.read(1200).decode("utf-8", "replace"))
+        detail = re.sub(r"\s+", " ", exc.read(1200).decode("utf-8", "replace"))
         raise ArchiveHTTPFailure(exc.code, detail,
                                  exc.headers.get("Retry-After", "") if exc.headers else "") from exc
     with response:
