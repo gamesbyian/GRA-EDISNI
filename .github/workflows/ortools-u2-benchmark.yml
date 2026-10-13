@@ -1,0 +1,30 @@
+name: Optional CP-SAT closed-corpus benchmark
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/benchmark_ortools_u2.py'
+      - 'scripts/enumerate_sticker_completion_ensembles.py'
+      - 'data/observations.csv'
+      - '.github/workflows/ortools-u2-benchmark.yml'
+      - 'docs/ortools-u2-benchmark-2026-10-12.md'
+permissions:
+  contents: read
+jobs:
+  cpsat-versus-exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned optional optimizer
+        run: python -m pip install ortools==9.15.6755
+      - name: Compare full candidate sets, not counts alone
+        run: python scripts/benchmark_ortools_u2.py > ortools-u2-benchmark.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ortools-u2-exact-comparison
+          path: ortools-u2-benchmark.json
+          retention-days: 14
