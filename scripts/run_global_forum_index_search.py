@@ -150,6 +150,8 @@ def main() -> None:
     parser.add_argument("--delay-seconds", type=float, default=1.5)
     args = parser.parse_args()
     tasks, digest = load_manifest(args.tasks)
+    if args.start_index > 0 and not args.expect_manifest_sha256:
+        parser.error("Resumed runs require --expect-manifest-sha256 from the previous summary")
     if args.expect_manifest_sha256 and args.expect_manifest_sha256 != digest:
         parser.error("Campaign manifest changed; refuse to reuse old offset")
     key = os.environ.get("BRAVE_SEARCH_API_KEY", "")
