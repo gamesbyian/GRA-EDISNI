@@ -85,6 +85,14 @@ One strikingly successful-looking first-zone invented backward-codebook accepts 
 
 Conversely, the specific `prefix_forward` with `-=0 /=1` first-zone readout and both first-zone fixed STOP orientations have exactly zero valid completions. That is a **hard negative for those precise candidate codebooks, boundaries and polarities**, and nothing broader.
 
+### Native A–I instruction headers: a useful correction to historical counts
+
+The nine class words are also a *second* kind of grammar. Treat every A–I class as a 9-symbol operand plus three final slash/dot symbols. A literal "one slash selects one of three operations" requires one slash within the class's last three sites. This is the same local structural family historically audited by Experiment 317, but **the original report's 36 admissible class-tail completions is now stale**: physical sticker 427 confirms residue 103 as a **dot**, constraining class D's triple from `.??` to `.?.`. The third D position cannot be slash, so D's slash must be residue 94. Current total is **18**, not 36, with physical evidence only. This is an internal conditional inference, **not a newly acquired sticker or confirmed prediction**.
+
+The new workbench exhaustively permutes the 12 observed tail symbols over **the exact same 12 positions**, retaining four slashes and eight dots. Across **all 495** symbol allocations, **280/495** remain compatible with a one-slash-per-class operator. When observed slash counts are additionally fixed within each of the three nine-site tail rows, **28/60** allocations remain compatible. Neither fraction implies exceptional one-hot structuring. With the current eight observed dots spread over only seven class identities, the opposite one-dot-per-class version is impossible even under every observed-count shuffle; that particular negative is a mask/count consequence, not confirmation of one-slash polarity.
+
+As an exploratory class-language prior, this gives a genuinely distinct way for *three control symbols* to instruct the use of an earlier nine-symbol field. It is not yet enough to infer which of the possible instructions is `take 3`, `take 5`, `reverse`, `repeat` or `reference another class`. The matrix of class-specific options, their exact residue support, and matched null denominators are in the JSON report. Unlike a fitted complete nine-opcode translation, these constraints don't invent missing foregrounds.
+
 ## Why a successful parse does not solve the mystery
 
 The user-facing point matters: an opcode length, operand length, mapping, zone boundary, END rule, and operations have all been supplied by this investigation. The observations only constrain those choices, mostly weakly. A high count of conforming programs tells us the grammar is flexible, and a low count only matters relative to baseline and the cost of having tried multiple grammars. Varying 3/5 to 3/6 or allowing skips until an English message appears would manufacture confidence.
