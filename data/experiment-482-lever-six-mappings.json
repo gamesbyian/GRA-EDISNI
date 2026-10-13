@@ -1,0 +1,117 @@
+{
+  "experiment": 482,
+  "title": "complete secret-ending lever alphabet sensitivity audit",
+  "mode": "VALIDATE (bounded negative under the observed-sector-alphabet assumption)",
+  "original_bunker_sequence": "UURLRRRUUURLLL",
+  "directed_symbol_counts": {
+    "U": 5,
+    "R": 5,
+    "L": 4
+  },
+  "h108_sector_assumption": {
+    "residues_1_through_81": [
+      "/",
+      "-"
+    ],
+    "residues_82_through_108": [
+      "/",
+      "."
+    ]
+  },
+  "all_six_direction_symbol_bijections": 6,
+  "orientations_per_bijection": 28,
+  "distinct_password_dihedral_orientations": 28,
+  "cyclic_H108_starts": 108,
+  "total_placements_tested": 18144,
+  "alphabet_compatible_placements": 0,
+  "shortest_sector_length": 27,
+  "password_length": 14,
+  "proof": "The fourteen-move word contains four circular alternating runs between either pair of directions after deleting the third direction. Each linear rotation/reversal retains at least three switches between those two directions. Under any bijection the two non-slash marks occupy disjoint H108 sectors. A 14-slot window is shorter than the 27-slot shorter sector and crosses at most one sector boundary, permitting at most one switch between the non-slash marks.",
+  "mappings": [
+    {
+      "direction_to_symbol": {
+        "U": "/",
+        "R": "-",
+        "L": "."
+      },
+      "shared_slash_direction": "U",
+      "orientations": 28,
+      "starts_per_orientation": 108,
+      "candidate_placements": 3024,
+      "alphabet_compatible_placements": 0,
+      "non_slash_projection_min_linear_switches": 3,
+      "non_slash_projection_max_linear_switches": 4
+    },
+    {
+      "direction_to_symbol": {
+        "U": "/",
+        "R": ".",
+        "L": "-"
+      },
+      "shared_slash_direction": "U",
+      "orientations": 28,
+      "starts_per_orientation": 108,
+      "candidate_placements": 3024,
+      "alphabet_compatible_placements": 0,
+      "non_slash_projection_min_linear_switches": 3,
+      "non_slash_projection_max_linear_switches": 4
+    },
+    {
+      "direction_to_symbol": {
+        "U": "-",
+        "R": "/",
+        "L": "."
+      },
+      "shared_slash_direction": "R",
+      "orientations": 28,
+      "starts_per_orientation": 108,
+      "candidate_placements": 3024,
+      "alphabet_compatible_placements": 0,
+      "non_slash_projection_min_linear_switches": 3,
+      "non_slash_projection_max_linear_switches": 4
+    },
+    {
+      "direction_to_symbol": {
+        "U": "-",
+        "R": ".",
+        "L": "/"
+      },
+      "shared_slash_direction": "L",
+      "orientations": 28,
+      "starts_per_orientation": 108,
+      "candidate_placements": 3024,
+      "alphabet_compatible_placements": 0,
+      "non_slash_projection_min_linear_switches": 3,
+      "non_slash_projection_max_linear_switches": 4
+    },
+    {
+      "direction_to_symbol": {
+        "U": ".",
+        "R": "/",
+        "L": "-"
+      },
+      "shared_slash_direction": "R",
+      "orientations": 28,
+      "starts_per_orientation": 108,
+      "candidate_placements": 3024,
+      "alphabet_compatible_placements": 0,
+      "non_slash_projection_min_linear_switches": 3,
+      "non_slash_projection_max_linear_switches": 4
+    },
+    {
+      "direction_to_symbol": {
+        "U": ".",
+        "R": "-",
+        "L": "/"
+      },
+      "shared_slash_direction": "L",
+      "orientations": 28,
+      "starts_per_orientation": 108,
+      "candidate_placements": 3024,
+      "alphabet_compatible_placements": 0,
+      "non_slash_projection_min_linear_switches": 3,
+      "non_slash_projection_max_linear_switches": 4
+    }
+  ],
+  "caveat": "The sector alphabets constrain the unobserved 42 H108 positions as a conditional extrapolation from the observed carrier; a future physically confirmed out-of-sector mark would require rerunning and revising this result. No new consumer, decipherment, or physical sticker data is claimed."
+}
