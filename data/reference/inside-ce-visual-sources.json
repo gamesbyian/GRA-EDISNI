@@ -146,6 +146,46 @@
       "source_page": "https://www.reddit.com/r/PlaydeadsInside/comments/e9bteo/",
       "role": "negative-control-promotional-screenshot",
       "expected_sha256": "cc90d751fb2e2d6efe0b59e66ef09d1fd914a81ae90cb6e3cedd88bc638471cf"
+    },
+    {
+      "id": "iam8bit-ce-lifestyle-00024",
+      "url": "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00024.jpg?v=1588895007&width=2200",
+      "extension": ".jpg",
+      "origin": "first-party-publisher-shop-product-page",
+      "subject": "Official full CE photograph of fan-spread art cards on grey fabric",
+      "source_page": "https://www.iam8bit.com/products/inside-collector-s-edition",
+      "role": "negative-control-marketing-repost",
+      "expected_sha256": "036cb9552862fbd67477293a4c824aff1329c36667fb5b2e7afa9c93b2a0c0b3"
+    },
+    {
+      "id": "iam8bit-standalone-ps4-case-02",
+      "url": "https://www.iam8bit.com/cdn/shop/products/web_productimage_INSIDE_PS4_02.jpg?v=1574890339&width=768",
+      "extension": ".jpg",
+      "origin": "first-party-publisher-shop-product-page",
+      "subject": "Official INSIDE PS4 case-only standalone product packshot",
+      "source_page": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "role": "negative-control-standalone",
+      "expected_sha256": "e3cda627a2f8df8808538db5c83947905849fdc36b5f6a92c3735b8949b2f7eb"
+    },
+    {
+      "id": "iam8bit-standalone-ps4-disc-04",
+      "url": "https://www.iam8bit.com/cdn/shop/products/web_productimage_INSIDE_PS4_04.jpg?v=1574890346&width=768",
+      "extension": ".jpg",
+      "origin": "first-party-publisher-shop-product-page",
+      "subject": "Official INSIDE PS4 disc-only standalone product packshot",
+      "source_page": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "role": "negative-control-standalone",
+      "expected_sha256": "187cca3fe60903d0d41858f2536b6efceb984ac6cdd784f69a65c8c46ec93573"
+    },
+    {
+      "id": "iam8bit-standalone-ps4-05",
+      "url": "https://www.iam8bit.com/cdn/shop/products/web_productimage_INSIDE_PS4_05.jpg?v=1574890359&width=768",
+      "extension": ".jpg",
+      "origin": "first-party-publisher-shop-product-page",
+      "subject": "Official standalone INSIDE PS4 physical game case/disc with Limited Edition label, not the full CE",
+      "source_page": "https://www.iam8bit.com/products/inside-ps4-physical-game",
+      "role": "negative-control-standalone",
+      "expected_sha256": "c5c996918d3d87d8e7481edda7495f0b645fa80b3ddcfda046815420eece6b19"
     }
   ]
 }
