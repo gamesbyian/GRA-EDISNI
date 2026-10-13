@@ -60,6 +60,25 @@ Twelve distinct 64-hex values recur, yielding 15 *extra repeated occurrences* ov
 
 **Local edit check:** among 118 distinct 256-bit displayed values, the minimum pairwise Hamming distance is **98 of 256 bits**. The four \`[alt]\`-labeled values each have nearest *other* displayed values **102, 104, 106 and 106 bits** away. There are no immediately obvious one-bit or small-bit local alternatives in the displayed 256-bit strings. If these are actual cryptographic digests, a source-level one-character correction would of course result in a radically different digest, so this observation **does not refute** any hypothetical correction upstream.
 
+## Direct CE class-address receiver: falsified without any missing sticker reconstruction
+
+The registry offers **133 physical displayed records**. A cheap proposed reader would interpret each class A–I's native **nine primary body symbols** as a raw nine-bit integer (0..511), and use each integer to select one of the 133 records. The nine body positions per class are fixed by the independently physical serial/A–I cadence. The candidate reader is not original authorial instruction, so treat it as a bounded negative.
+
+Using **only the 84 physical sticker records (66 unique H108 positions)**, leave every unobserved body mark entirely free. Test the four conventional ways to read a binary strip (serial vs reverse order; slash=1 vs dash=1) and both zero-/one-based row addressing. For each class, compute exact possible extrema from all unknown bit choices.
+
+| Raw nine-bit reading | Physically guaranteed class values outside native 133-row range |
+| --- | --- |
+| Serial order, slash = 1 | **B, D, E, F, G, I** (6/9) |
+| Serial order, dash = 1 | **A, C, D, E** (4/9) |
+| Reversed order, slash = 1 | **B, C, D, F, G, H, I** (7/9) |
+| Reversed order, dash = 1 | **B, C, H** (3/9) |
+
+The counts apply identically to indexing 0..132 and 1..133. As a particularly concrete example, the **physically observed B-class body template is `/?//////-`**, with only one unknown body mark. Treating slash as a 1 in serial order gives **minimum binary value 382**, already above the entire 133-row address space.
+
+**Conclusion:** No full nine-A–I direct row-address interpretation is type-compatible with this original registry under **any** of those four simple untransformed conventions, *regardless of the missing stickers*. Modulo 133, bit truncation, hashing, addressing only some classes, or using triplets instead of full nine-bit words remains logically possible, but **none is specified by this source**. Adding such a transformation merely to rescue the hypothesis would weaken it.
+
+A separate standard-library [physical-only indexed receiver gate](../scripts/audit_registry_nine_bit_address_gate.py) runs this without POS3, U2, U5, recursion, or model-completed mark assumptions. This is a productive use of closed-corpus research: a precise impossible receiver mapping despite unresolved stickers.
+
 ## Relationship to the CE's 108-repeating sticker symbols
 
 The page establishes a **real historical operation vocabulary**:
@@ -85,6 +104,7 @@ The code's *nominal tag filtering* should nevertheless be saved as an operation 
 \`\`\`sh
 python scripts/audit_terminal41_marked_recovery.py --self-test
 python scripts/audit_terminal41_marked_recovery.py --output /tmp/terminal41-marked-recovery.json
+python scripts/audit_registry_nine_bit_address_gate.py --output /tmp/terminal41-direct-address-gate.json
 \`\`\`
 
 The standard-library script reads the pinned original-text copy, enumerates the natural stage breaks, distinguishes exact 64-hex strings from their suffix tags, computes identity overlaps and bounded Hamming-distance negatives, and tests a tiny deliberately constructed marked-operation positive control.
