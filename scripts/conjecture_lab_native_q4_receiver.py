@@ -4,6 +4,7 @@
 No network or live password submission. Uses repo fixtures, missing cells stay
 unknown. Run: python scripts/conjecture_lab_native_q4_receiver.py
 """
+import argparse
 import csv
 import itertools
 from pathlib import Path
@@ -29,9 +30,9 @@ def source_data():
     return known, acorn
 
 
-def core_groups(known):
-    """All admissible raw triplets at positions 1-4-7, 2-5-8, 3-6-9."""
-    patterns = ("".join(s) for s in itertools.product(SIGNS, repeat=3))
+def core_groups(known, primary_alphabet="/-"):
+    """All admissible minority triplets for a declared primary alphabet."""
+    patterns = ("".join(s) for s in itertools.product(primary_alphabet, repeat=3))
     patterns = tuple(s for s in patterns if len(set(s)) == 2)
     output = []
     for frame in range(9):
@@ -158,8 +159,14 @@ def subwindows(source, transpose, flip_rows, flip_columns):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--allow-primary-dots", action="store_true",
+                        help="Permissive alternate model: allow dots in unobserved core cells")
+    args = parser.parse_args()
     observed, acorn = source_data()
-    core = core_groups(observed)
+    primary_alphabet = SIGNS if args.allow_primary_dots else "/-"
+    core = core_groups(observed, primary_alphabet)
+    print("Assumed primary alphabet:", primary_alphabet)
     depth_options = q4_choices(observed)
     assert all(depth_options)
     selectors = tuple(itertools.product(*depth_options))
@@ -179,7 +186,10 @@ def main():
     assert projected["E"] == projected["F"] == ("///",)
     assert projected["H"] == ("--/",)
     bounds = symbol_bounds(core, selectors)
-    assert bounds == {".": (0, 6), "/": (14, 23), "-": (4, 12)}
+    expected_bounds = ({".": (0, 6), "/": (14, 23), "-": (4, 12)}
+                       if args.allow_primary_dots else
+                       {".": (0, 0), "/": (15, 23), "-": (4, 12)})
+    assert bounds == expected_bounds, bounds
     print("Exact output-sign count bounds:", bounds)
 
     prepared = tuple((sel, requested_cells(sel)) for sel in selectors)
