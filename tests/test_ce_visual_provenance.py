@@ -79,6 +79,7 @@ class VisualProvenanceTests(unittest.TestCase):
             "role": "positive-control-public-owner-open-ce-no-visible-sticker",
             "url": "https://i.redd.it/example.jpg",
         }]}))
+        (self.refs / "owner-ce-2019.jpg").write_bytes(self.original.read_bytes())
         refs, skipped = promotional_refs(self.root, self.refs, ref_manifest)
         self.assertFalse(skipped)
         self.assertEqual(refs[0]["role"], "historical-owner-photo-no-visible-sticker")
