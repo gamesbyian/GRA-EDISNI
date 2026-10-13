@@ -40,6 +40,7 @@ python scripts/verify_machine.py
 
 
 
+- [Recovered 2019 GameFAQs INSIDE forum HTML](data/reference/inside-ce-gamefaqs-archived-html-recovery-2026-10-13.json): 38,546-byte archived page, independently hashed, 3,081 characters extracted, eight source excerpts; no new CE owner or sticker confirmed.
 - [First measured INSIDE CE Wayback capture audit](docs/reference/inside-ce-first-archive-cdx-pilot-results-2026-10-13.md): eight real public CDX requests, a dated 2019 GameFAQs capture record, one no-match response and six provider errors (not absence claims).
 - [INSIDE CE dated archive controls and CDX metadata checks](docs/reference/inside-ce-archive-cdx-positive-controls-2026-10-13.md): 16 original-source controls, 27 source/ownership/context lead records, bounded opt-in Wayback capture probes and synthetic CI validation.
 - [CE edition-source differentiation and indexed lead triage](docs/reference/inside-ce-edition-product-differentiation-and-triage.md): first-party CE vs standalone PS4 distinction, cautious source dedup and automated post-search candidate review.
