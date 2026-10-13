@@ -5,11 +5,13 @@ import argparse
 import csv
 import hashlib
 import json
+from urllib.parse import urlsplit
 from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LEXICON = ROOT / "data/reference/inside-ce-native-search-lexicon.tsv"
+SECONDARY = ROOT / "data/reference/inside-ce-ownership-secondary-platforms.tsv"
 DIRECTORY = ROOT / "data/reference/global-gaming-forums.tsv"
 ROUTES = ROOT / "data/reference/global-gaming-forum-search-routing.tsv"
 ARCHIVES = ROOT / "data/reference/global-gaming-forum-archive-routes.tsv"
@@ -112,10 +114,52 @@ def build(directory, routes, archives, lexicon, *, allowed_statuses, max_tasks,
                 ordered.append(by_locale[locale].pop(0))
     return ordered
 
+def build_secondary(sources, lexicon, *, max_tasks=20000, categories=None):
+    """Discovery-only tasks for social/video/collector platforms, not API access."""
+    dictionary = {row["locale"]: row for row in lexicon}
+    tasks = []
+    for source in sources:
+        domain = urlsplit(source["url"]).netloc.lower()
+        if not domain:
+            raise ValueError("Missing auxiliary source host")
+        for locale in locales_for_site(source["language"]):
+            if locale not in dictionary:
+                raise ValueError(f"Secondary {source['source']} has unknown locale {locale}")
+            for category, expr in expressions(dictionary[locale]):
+                if categories and category not in categories:
+                    continue
+                key = "\0".join((source["source"], source["url"], locale, category, expr))
+                task_id = hashlib.sha256(key.encode("utf-8")).hexdigest()[:20]
+                tasks.append({
+                    "task_id": task_id,
+                    "community": source["source"], "site": source["source"],
+                    "url": source["url"], "locale": locale, "language": locale,
+                    "site_language_label": source["language"],
+                    "term": expr, "expression": expr, "category": category,
+                    "index_query": "site:" + domain + " " + expr,
+                    "primary_method": source["primary_search"],
+                    "access_gate": source["access_gate"],
+                    "historical_route": source["fallback"],
+                    "surface_type": source["surface_type"],
+                    "why_relevant": source["why_relevant"],
+                    "priority": source["priority"],
+                    "source_scope": "secondary_social_resale",
+                    "state": "planned_unexecuted",
+                    "findings": [],
+                    "interpretation": "index_discovery_only_neither_ownership_nor_sticker_verified",
+                })
+                if len(tasks) > max_tasks:
+                    raise ValueError("Secondary search tasks exceed --max-tasks")
+    if len(tasks) != len({x["task_id"] for x in tasks}):
+        raise ValueError("Duplicate auxiliary search tasks")
+    return tasks
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--summary", type=Path)
+    parser.add_argument("--secondary-output", type=Path,
+                        help="Also prepare licensed-index leads for video/social/resale sites")
     parser.add_argument("--statuses", default="V,C,H")
     parser.add_argument("--max-tasks", type=int, default=20000)
     parser.add_argument("--exclude-weak", action="store_true",
@@ -145,6 +189,19 @@ def main():
         "categories": dict(Counter(x["category"] for x in items)),
         "note": "No network search or ownership verification was performed by this planner.",
     }
+    if args.secondary_output:
+        secondary = build_secondary(
+            load_tsv(SECONDARY), load_tsv(LEXICON),
+            max_tasks=args.max_tasks,
+            categories=set(args.category) if args.category else None
+        )
+        args.secondary_output.parent.mkdir(parents=True, exist_ok=True)
+        args.secondary_output.write_text(
+            "".join(json.dumps(x, ensure_ascii=False, sort_keys=True) + "\n"
+                    for x in secondary), encoding="utf-8"
+        )
+        stats["secondary_site_count"] = len({x["site"] for x in secondary})
+        stats["secondary_tasks"] = len(secondary)
     if args.summary:
         args.summary.parent.mkdir(parents=True, exist_ok=True)
         args.summary.write_text(json.dumps(stats, ensure_ascii=False, indent=2) + "\n",
