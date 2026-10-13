@@ -4,7 +4,7 @@
 **Prepared:** 2026-10-12 (America/Edmonton)  
 **Canon for comparisons:** [twinysam/INSIDE-ARG stickers.md](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md); our own [physical observations](../../data/observations.csv).  
 **Next-stage archival controls:** [dated capture metadata controls and bounded Wayback probe](inside-ce-archive-cdx-positive-controls-2026-10-13.md).  
-**New assets:** [50 native-language search profiles](../../data/reference/inside-ce-native-search-lexicon.tsv), [483-forum native campaign planner](../../scripts/build_inside_ce_native_search_campaign.py), [30 additional social/video/resale platforms](../../data/reference/inside-ce-ownership-secondary-platforms.tsv), [source-backed preliminary lead ledger](../../data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv), and [manual/CI workflow](../../.github/workflows/inside-ce-native-search-campaign.yml).
+**New assets:** [50 native-language search profiles](../../data/reference/inside-ce-native-search-lexicon.tsv), [484-forum native campaign planner](../../scripts/build_inside_ce_native_search_campaign.py), [30 additional social/video/resale platforms](../../data/reference/inside-ce-ownership-secondary-platforms.tsv), [source-backed preliminary lead ledger](../../data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv), and [manual/CI workflow](../../.github/workflows/inside-ce-native-search-campaign.yml).
 
 ## What we want to discover
 
@@ -72,7 +72,7 @@ Search **photograph descriptions and original image context**, not only prose. O
 
 ## Wider source universe
 
-The existing [483 community directory](../../data/reference/global-gaming-forums.tsv) misses large quantities of public **YouTube comments and unboxing video descriptions, image posts, Facebook public product comments, Twitter replies, old eBay listings, collector catalogues and music forums**. The new [30-surface extension](../../data/reference/inside-ce-ownership-secondary-platforms.tsv) indexes such leads as a separate cohort with API/permission gates and native-language scopes.
+The existing [484 community directory](../../data/reference/global-gaming-forums.tsv) misses large quantities of public **YouTube comments and unboxing video descriptions, image posts, Facebook public product comments, Twitter replies, old eBay listings, collector catalogues and music forums**. The new [30-surface extension](../../data/reference/inside-ce-ownership-secondary-platforms.tsv) indexes such leads as a separate cohort with API/permission gates and native-language scopes.
 
 High-value positive examples from the canonical research history: YouTube unboxing screenshots, iam8bit promotional post comments, collector listing sites (CollecTit), archived WATMM music forum buyer posts, Twitter/Instagram photo replies, multiple eBay resale images and an Austrian Willhaben listing. A strict “gaming forums only” strategy would systematically miss many of these.
 
@@ -80,7 +80,7 @@ High-value positive examples from the canonical research history: YouTube unboxi
 
 ## Execution and automation
 
-The new [planner](../../scripts/build_inside_ce_native_search_campaign.py) joins every source to the existing forum and archive route matrix, emits reproducible UTF-8 JSONL tasks, verifies unique task IDs, and fairly interleaves **locale and source-site tasks** so a small paid-search budget does not exhaust one platform or language. Current full plans: **8,940 forum queries** plus **10,755 social/video/resale queries** across 15 query categories and 50 native locale profiles. They are proposed queries, not executed retrievals. The manual [GitHub Actions campaign workflow](../../.github/workflows/inside-ce-native-search-campaign.yml) runs offline tests and emits planned work. It supports optional limited **official Brave Search API** index lookups only when the user explicitly enables paid searches and has configured the API key.
+The new [planner](../../scripts/build_inside_ce_native_search_campaign.py) joins every source to the existing forum and archive route matrix, emits reproducible UTF-8 JSONL tasks, verifies unique task IDs, and fairly interleaves **locale and source-site tasks** so a small paid-search budget does not exhaust one platform or language. Current full plans: **8,955 forum queries** plus **10,755 social/video/resale queries** across 15 query categories and 50 native locale profiles. They are proposed queries, not executed retrievals. The manual [GitHub Actions campaign workflow](../../.github/workflows/inside-ce-native-search-campaign.yml) runs offline tests and emits planned work. It supports optional limited **official Brave Search API** index lookups only when the user explicitly enables paid searches and has configured the API key.
 
 Example:
 
