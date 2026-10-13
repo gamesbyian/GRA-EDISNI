@@ -1,6 +1,6 @@
 # Closed-corpus decoder → consumer bridge research program (12 October 2026)
 
-**DISCOVER / DEVELOP plan; VALIDATE only on independently fixed source rules.** Companion to [162 operation candidates](decoder-operation-atlas-2026-10-12.md), [82 receiving-surface roles](receiving-surface-atlas-2026-10-12.md) and the [exact sufficiency audit](closed-corpus-sufficiency-2026-10-12.md). The atlas has **244 catalog entries**, not 244 independent clues, nor an endorsement of any. User's working research posture: **assume no more stickers will arrive**. The present physical corpus is 84 records / 66 H108 residues / 42 unknown.
+**DISCOVER / DEVELOP plan; VALIDATE only on independently fixed source rules.** Companion to [162 operation candidates](decoder-operation-atlas-2026-10-12.md), [82 receiving-surface roles](receiving-surface-atlas-2026-10-12.md) and the [exact sufficiency audit (PR #190, not yet merged)](https://github.com/gamesbyian/GRA-EDISNI/pull/190). The atlas has **244 catalog entries**, not 244 independent clues, nor an endorsement of any. User's working research posture: **assume no more stickers will arrive**. The present physical corpus is 84 records / 66 H108 residues / 42 unknown.
 
 ## Why this is a bridge program, not a brute-force decoder competition
 
