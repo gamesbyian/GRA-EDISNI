@@ -1,0 +1,97 @@
+name: CE December 2019 independent collector original-photo audit
+
+# One-off, do not merge this workflow.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-2019-gamecollecting-original-photo-20261013.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  source-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
+      - name: Preserve exact public December 2019 first-person post metadata and links
+        run: |
+          python scripts/external_evidence/lookup_public_ce_resale_posts.py \
+            --manifest data/reference/inside-ce-dec2019-gamecollecting-photo.json \
+            --out visual-evidence-work/eaktdt-archived-post.json
+      - name: Extract post direct-image and gallery URLs with original source
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("visual-evidence-work/eaktdt-archived-post.json")
+          records=json.loads(p.read_text()).get("records",[])
+          direct=[]; galleries=[]
+          for r in records:
+              for url in r.get("direct_image_urls",[]):
+                  direct.append({"source_id":"eaktdt-2019-public-post",
+                                 "source_page_url":r["source_page_url"],
+                                 "image_url":url,"hint_count":1,
+                                 "review_status":"primary-photo-awaiting-visual-verification"})
+              for url in r.get("gallery_urls",[]):
+                  galleries.append({"source_page_url":r["source_page_url"],
+                                    "gallery_url":url,"status":"manual-gallery-review"})
+          Path("visual-evidence-work/eaktdt-image-leads.json").write_text(
+              json.dumps({"schema_version":1,"image_mentions":direct},indent=2)+"\n")
+          Path("visual-evidence-work/eaktdt-gallery-leads.json").write_text(
+              json.dumps({"schema_version":1,"galleries":galleries},indent=2)+"\n")
+          print("ARCHIVED_CE_OWNER_POST",json.dumps({"records":records,"direct":len(direct),
+                                                      "gallery":galleries},ensure_ascii=False))
+          PY
+      - name: Retrieve bounded original public post image files
+        run: |
+          python scripts/external_evidence/fetch_html_images.py \
+            --leads visual-evidence-work/eaktdt-image-leads.json \
+            --out evidence-work --max-images 8 --max-per-page 8
+      - name: Inspect archived comment-tree image/gallery leads, no owner outreach
+        run: |
+          python scripts/external_evidence/recover_reddit_comment_images.py \
+            --manifest data/reference/inside-ce-dec2019-gamecollecting-photo.json \
+            --max-comments 150 --out visual-evidence-work/eaktdt-comments
+      - name: Fetch known publisher negative-control images
+        run: python scripts/external_evidence/fetch_visual_references.py
+      - name: Compare genuine recovered image bytes to 82 sticker originals and marketing controls
+        run: |
+          python scripts/external_evidence/visual_index.py \
+            --candidates evidence-work --max-files 80 --max-matches 8
+      - name: Print source-by-source audit for manual media review
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for file in [
+            "visual-evidence-work/eaktdt-archived-post.json",
+            "evidence-work/html-image-download-report.json",
+            "visual-evidence-work/eaktdt-gallery-leads.json",
+            "visual-evidence-work/eaktdt-comments/reddit-comment-archive-report.json",
+            "visual-evidence-work/eaktdt-comments/reddit-comment-photo-links.json",
+            "visual-evidence-work/eaktdt-comments/reddit-comment-gallery-review.json",
+            "visual-evidence-work/visual-matches.json"
+          ]:
+            p=Path(file)
+            if not p.exists():
+                print("NO_RESULT",file);continue
+            data=json.loads(p.read_text())
+            print("CE_2019_REVIEW",file,json.dumps(data,ensure_ascii=False)[:25000])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-2019-first-person-collector-photos-${{ github.run_id }}
+          path: |
+            evidence-work/
+            visual-reference-work/
+            visual-evidence-work/
+          retention-days: 30
+          if-no-files-found: warn
