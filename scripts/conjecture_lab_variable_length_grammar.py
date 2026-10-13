@@ -8,6 +8,7 @@ Run: python scripts/conjecture_lab_variable_length_grammar.py --observations dat
 from __future__ import annotations
 
 import argparse
+import itertools
 import csv
 import json
 import math
@@ -322,6 +323,59 @@ def delimiter_bounds(s, delimiter: str):
             "certain_count":len(certain),"uncertain_count":len(possible)-len(certain)}
 
 
+def one_hot_tail_audit(tail: str):
+    """Independent class-local 9+3 instruction-header census, with exact nulls.
+
+    Original raw H108 order: each class A..I occupies one site in each
+    nine-wide row. The last three occurrences of each class form its opcode.
+    This is a competing hypothetical grammar, not a U2 machine completion.
+    """
+    assert len(tail) == 27 and all(x in "/.?" for x in tail)
+    def options(word, mark):
+        other = "." if mark == "/" else "/"
+        return [j for j in range(3) if all(c == "?" or c == (mark if i == j else other)
+                                         for i,c in enumerate(word))]
+    def class_count(word, mark):
+        out=1
+        for i in range(9):
+            out *= len(options("".join(word[i+9*j] for j in range(3)),mark))
+        return out
+    classes={}
+    for i,name in enumerate("ABCDEFGHI"):
+        segment="".join(tail[i+9*j] for j in range(3))
+        classes[name]={"physical":segment,"residues":[82+i,91+i,100+i],
+                       "slash_op_positions":options(segment,"/"),"dot_op_positions":options(segment,".")}
+    known=[i for i,c in enumerate(tail) if c!="?"]
+    slash_total=sum(tail[i]=="/" for i in known)
+    frame_groups=[[i for i in known if 9*j<=i<9*(j+1)] for j in range(3)]
+    frame_slashes=[sum(tail[i]=="/" for i in grp) for grp in frame_groups]
+    counts={}
+    for model in ("global_observed_counts","nine_frame_observed_counts"):
+        if model=="global_observed_counts":
+            selections=(set(c) for c in itertools.combinations(known,slash_total))
+        else:
+            combos=(itertools.combinations(group,k) for group,k in zip(frame_groups,frame_slashes))
+            selections=(set().union(*groups) for groups in itertools.product(*combos))
+        slash_survive=dot_survive=total=0
+        slash_counts=Counter()
+        for choice in selections:
+            model_word="".join("?" if i not in known else "/" if i in choice else "."
+                               for i in range(27))
+            sc=class_count(model_word,"/"); dc=class_count(model_word,".")
+            slash_survive += int(sc>0); dot_survive += int(dc>0)
+            slash_counts[sc] += 1
+            total += 1
+        counts[model]={"support":total,"compatible_one_slash":slash_survive,
+                       "compatible_one_dot":dot_survive,
+                       "one_slash_fraction":f"{slash_survive}/{total}",
+                       "one_dot_fraction":f"{dot_survive}/{total}",
+                       "one_slash_completion_counts":dict(sorted(slash_counts.items()))}
+    return {"classes":classes,"one_slash_completions":class_count(tail,"/"),
+            "one_dot_completions":class_count(tail,"."),
+            "exact_observation_label_permutation_nulls":counts,
+            "note":"Compatibility only; 427 dot eliminates half the historically reported 36 one-slash completions."}
+
+
 def analyze(s, nperm=12000, nparser=500):
     assert len(s)==108
     out={"status":"DISCOVER/DEVELOP only; no identified decoder", "corpus":{"records":None,"distinct_observed":len(s)-s.count("?"),"unknown":s.count("?"),"h108_length":108},"zones":{}}
@@ -346,6 +400,7 @@ def analyze(s, nperm=12000, nparser=500):
         z["nulls"]["parser_best_of_family_global"] = parser_null(bit_string(zone,symbols[0],symbols[1]),n=nparser,seed=20261212+start)
         z["nulls"]["parser_best_of_family_frame9"] = parser_null(bit_string(zone,symbols[0],symbols[1]),n=nparser,seed=20261312+start,frames=True)
         out["zones"][label]=z
+    out["cross_zone_class_metadata"] = one_hot_tail_audit(s[81:])
     return out
 
 
@@ -398,6 +453,8 @@ def test():
             assert parse_program(p,cb)["program_completions"] in (0,1)
     # A completed input must never have ambiguous parse, even with both side operations.
     assert parse_program("?0???",CODEBOOKS["two_bit_backward"])["program_completions"]<=16
+    assert one_hot_tail_audit("?"*27)["one_slash_completions"] == 3**9
+    assert one_hot_tail_audit("."*27)["one_slash_completions"] == 0
     assert parse_program("0000011",CODEBOOKS["two_bit_terminated"])["program_completions"] == 1
     assert parse_program("00000",CODEBOOKS["two_bit_terminated"])["program_completions"] == 0
 
@@ -427,6 +484,8 @@ def main():
             print(" ",mapping,"transition range",v["transitions_min_max"])
             for g,p in v["grammar"].items():
                 print("    ",g,"accepted",p["program_completions"],"of",p["possible_completions"])
+    print("tail class one-hot",report["cross_zone_class_metadata"]["one_slash_completions"],
+          "exact null",report["cross_zone_class_metadata"]["exact_observation_label_permutation_nulls"])
     print("wrote",args.output)
 
 if __name__=="__main__":
