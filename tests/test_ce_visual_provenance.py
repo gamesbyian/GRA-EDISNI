@@ -57,7 +57,8 @@ class VisualProvenanceTests(unittest.TestCase):
         folder = self.inbox / "auction-example"
         folder.mkdir()
         (folder / "acquisition.json").write_text(json.dumps({
-            "url": "https://example.org/public-auction/1", "classification": "ok"
+            "url": "https://example.org/public-auction/1", "classification": "ok",
+            "image_urls": {"scan.jpg": "https://i.redd.it/known-public-source.jpg"}
         }))
         (folder / "scan.jpg").write_bytes(self.original.read_bytes())
         (folder / "broken.png").write_text("not an image")
@@ -66,6 +67,7 @@ class VisualProvenanceTests(unittest.TestCase):
         self.assertEqual(len(errors), 1)
         self.assertEqual(records[0]["source_url"], "https://example.org/public-auction/1")
         self.assertEqual(records[0]["source_kind"], "auction-example")
+        self.assertEqual(records[0]["image_url"], "https://i.redd.it/known-public-source.jpg")
 
     def test_original_manifest_integrity_and_distinct_roles(self):
         manifest = self.root / "stickers.csv"
