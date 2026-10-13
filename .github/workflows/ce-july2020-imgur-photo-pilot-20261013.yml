@@ -1,0 +1,75 @@
+name: INSIDE CE July 2020 GameSale Imgur original-photo pilot
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-july2020-imgur-photo-pilot-20261013.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13" gallery-dl
+      - name: Retrieve public album original photo files and metadata
+        shell: bash
+        run: |
+          mkdir -p evidence-work/gallery-p48PIzb
+          timeout 120s gallery-dl --range 1-25 --filesize-max 20M \
+            --write-metadata --dest evidence-work/gallery-p48PIzb \
+            "https://imgur.com/a/p48PIzb" \
+            > evidence-work/gallery-p48PIzb/gallery-dl.log 2>&1 || echo "PUBLIC_IMGUR_RETRIEVAL_FAILED"
+          tail -c 3500 evidence-work/gallery-p48PIzb/gallery-dl.log
+      - name: Verify originals and preserve precise Reddit comment source
+        run: |
+          python scripts/external_evidence/index_public_imgur_gallery.py \
+            --manifest data/reference/inside-ce-july2020-imgur-acquisition.json \
+            --gallery-id p48PIzb --root evidence-work
+      - name: Download known first-party and previously confirmed negative references
+        run: python scripts/external_evidence/fetch_visual_references.py
+      - name: Compare all seller pictures with canonical 82 sticker originals and marketing controls
+        run: |
+          python scripts/external_evidence/visual_index.py \
+            --candidates evidence-work --max-files 80 --max-matches 8
+      - name: Preserve human review inventory in job logs
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          def load(name,key=None):
+            p=Path(name)
+            if not p.exists(): return {} if key is None else []
+            try: result=json.loads(p.read_text())
+            except (OSError, ValueError): return {} if key is None else []
+            return result if key is None else result.get(key,[])
+          record=load("evidence-work/gallery-p48PIzb/acquisition.json")
+          triage=load("visual-evidence-work/visual-matches.json","triage")
+          matches=load("visual-evidence-work/visual-matches.json","matches")
+          print("JULY_2020_SELLER_PHOTO_REPORT_BEGIN")
+          print("ALBUM",json.dumps({k:record.get(k) for k in ("gallery_url","url","image_count","retrieval_status","errors")},ensure_ascii=False))
+          for filename,metadata in record.get("file_metadata",{}).items():
+            print("MEDIA",json.dumps({"file":filename,**metadata},ensure_ascii=False))
+          for t in triage:
+            print("TRIAGE",json.dumps(t,ensure_ascii=False))
+          for m in matches:
+            print("MATCH",json.dumps(m,ensure_ascii=False))
+          print("JULY_2020_SELLER_PHOTO_REPORT_END")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-july2020-original-seller-photos-${{ github.run_id }}
+          path: |
+            evidence-work/
+            visual-reference-work/
+            visual-evidence-work/
+          retention-days: 30
+          if-no-files-found: warn
