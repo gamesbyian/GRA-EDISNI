@@ -1,0 +1,79 @@
+{
+  "research_mode": "DISCOVER_DEVELOP_owner_local_vs_collective",
+  "physical_stickers": 84,
+  "distinct_h108_residues": 66,
+  "unreported_physical_image_class": [
+    43,
+    427
+  ],
+  "inferred_classes_for_unreported": {
+    "43": "G",
+    "427": "D"
+  },
+  "repeated_h108_residue_groups": 16,
+  "extra_physical_repeat_records": 18,
+  "symbol_conflicts_on_h108": 0,
+  "distinct_observed_local_tokens_class_plus_glyph": 24,
+  "possible_local_tokens_class_plus_glyph": 27,
+  "unseen_local_tokens": [
+    "A.",
+    "C.",
+    "F."
+  ],
+  "observed_symbol_counts": {
+    "-": 28,
+    ".": 8,
+    "/": 48
+  },
+  "zero_symbol_conflict_periods": [
+    {
+      "period": 108,
+      "repeat_excess": 18,
+      "symbol_conflicts": 0,
+      "joint_token_conflicts": 0
+    },
+    {
+      "period": 197,
+      "repeat_excess": 6,
+      "symbol_conflicts": 0,
+      "joint_token_conflicts": 6
+    },
+    {
+      "period": 216,
+      "repeat_excess": 8,
+      "symbol_conflicts": 0,
+      "joint_token_conflicts": 0
+    }
+  ],
+  "zero_joint_class_symbol_conflict_periods": [
+    {
+      "period": 108,
+      "repeat_excess": 18,
+      "symbol_conflicts": 0,
+      "joint_token_conflicts": 0
+    },
+    {
+      "period": 216,
+      "repeat_excess": 8,
+      "symbol_conflicts": 0,
+      "joint_token_conflicts": 0
+    }
+  ],
+  "period_search_range": [
+    1,
+    216
+  ],
+  "fixed_period108_body_label_shuffle_null": {
+    "body_entries": 72,
+    "slash_entries": 44,
+    "dash_entries": 28,
+    "repeat_group_sizes": {
+      "1": 38,
+      "2": 14,
+      "3": 2
+    },
+    "favorable_assignments": 440079448381568,
+    "all_assignments": 75553695443676820000,
+    "exact_conditional_probability": 0.00000582472433409475
+  }
+}
