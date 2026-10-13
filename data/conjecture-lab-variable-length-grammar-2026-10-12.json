@@ -572,6 +572,117 @@
       }
     }
   },
+  "mixed_width_grouping_counts": {
+    "108": {
+      "ordered_partitions_total": 53501860,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 36
+        },
+        {
+          "ordered_partitions": 5984,
+          "quintets": 3,
+          "triples": 31
+        },
+        {
+          "ordered_partitions": 906192,
+          "quintets": 6,
+          "triples": 26
+        },
+        {
+          "ordered_partitions": 14307150,
+          "quintets": 9,
+          "triples": 21
+        },
+        {
+          "ordered_partitions": 30421755,
+          "quintets": 12,
+          "triples": 16
+        },
+        {
+          "ordered_partitions": 7726160,
+          "quintets": 15,
+          "triples": 11
+        },
+        {
+          "ordered_partitions": 134596,
+          "quintets": 18,
+          "triples": 6
+        },
+        {
+          "ordered_partitions": 22,
+          "quintets": 21,
+          "triples": 1
+        }
+      ],
+      "total_sites": 108
+    },
+    "12": {
+      "ordered_partitions_total": 1,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 4
+        }
+      ],
+      "total_sites": 12
+    },
+    "27": {
+      "ordered_partitions_total": 36,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 9
+        },
+        {
+          "ordered_partitions": 35,
+          "quintets": 3,
+          "triples": 4
+        }
+      ],
+      "total_sites": 27
+    },
+    "81": {
+      "ordered_partitions_total": 447702,
+      "possible_mixtures": [
+        {
+          "ordered_partitions": 1,
+          "quintets": 0,
+          "triples": 27
+        },
+        {
+          "ordered_partitions": 2300,
+          "quintets": 3,
+          "triples": 22
+        },
+        {
+          "ordered_partitions": 100947,
+          "quintets": 6,
+          "triples": 17
+        },
+        {
+          "ordered_partitions": 293930,
+          "quintets": 9,
+          "triples": 12
+        },
+        {
+          "ordered_partitions": 50388,
+          "quintets": 12,
+          "triples": 7
+        },
+        {
+          "ordered_partitions": 136,
+          "quintets": 15,
+          "triples": 2
+        }
+      ],
+      "total_sites": 81
+    }
+  },
   "status": "DISCOVER/DEVELOP only; no identified decoder",
   "zones": {
     "body": {
@@ -886,8 +997,7 @@
             "two_bit_forward": {
               "accepted_fraction": "30408704/134217728",
               "example_completed_bits": "010010101000101010010000000011010001011101100111000000110011011011001000000101111",
-              "example_output": "00101000100010111000010011101100000001111",
-              "example_trace": [
+              "example_output": "00101000100010111000010011101100000001111",              "example_trace": [
                 {
                   "action": "emit",
                   "argument": "00101",
@@ -997,7 +1107,8 @@
             "12": [
               0,
               1
-            ],            "2": [
+            ],
+            "2": [
               2,
               18
             ],
@@ -1885,8 +1996,7 @@
           },
           {
             "distinct_fully_observed": 0,
-            "fully_observed": 0,
-            "phase": 7,
+            "fully_observed": 0,            "phase": 7,
             "repeated_fully_observed": 0,
             "whole_blocks": 9
           }
@@ -1996,7 +2106,8 @@
           "best_accepted_completions": 50331648,
           "frames": false,
           "max_family_ge_probability": 0.706587,
-          "note": "retrospective best-of-models control; not a prospective p-value",          "null_median": 62914560,
+          "note": "retrospective best-of-models control; not a prospective p-value",
+          "null_median": 62914560,
           "null_q95": 109051904,
           "replicates": 500,
           "seed": 20261213
@@ -2884,8 +2995,7 @@
             "phase": 5,
             "repeated_fully_observed": 0,
             "whole_blocks": 3
-          },
-          {
+          },          {
             "distinct_fully_observed": 0,
             "fully_observed": 0,
             "phase": 6,
@@ -2995,7 +3105,8 @@
             "whole_blocks": 2
           },
           {
-            "distinct_fully_observed": 0,            "fully_observed": 0,
+            "distinct_fully_observed": 0,
+            "fully_observed": 0,
             "phase": 6,
             "repeated_fully_observed": 0,
             "whole_blocks": 2
