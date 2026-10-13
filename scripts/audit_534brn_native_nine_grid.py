@@ -120,7 +120,7 @@ def build_report(page: bytes, xmp: bytes, fixture: dict) -> dict:
         raise ValueError("Original-source dimension domain drift")
     if fixture["decoder_model"]["scan_components"] != "Y 2x2 + Cb 1x1 + Cr 1x1 => 6 blocks/MCU":
         raise ValueError("JPEG native sampling contract changed")
-    if not fixture["all_possible_products_survive"]:
+    if not md["all_possible_products_survive"]:
         raise ValueError("MCU feasibility domain has narrowed")
     possible_products = {math.ceil(x / 16) * math.ceil(y / 16)
                          for x in range(128, 256) for y in range(128, 256)}
