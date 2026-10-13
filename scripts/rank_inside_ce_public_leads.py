@@ -1,60 +1,105 @@
 #!/usr/bin/env python3
-"""Rank public CE search-result JSONL for human review, without asserting ownership."""
-import argparse, csv, json, re
+"""Offline public CE lead ranking. Review queue, never evidence confirmation.
+
+Accepts original-search JSONL (url/title/description/text) and existing
+Brave index executor JSONL (matches array). Never fetches websites or contacts
+individuals. Scores claims, not people; no private identity resolution.
+"""
+from __future__ import annotations
+import argparse
+import json
+import re
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
-POSITIVE = [
- (r"(?i)\\b(?:my|mine|i bought|i got|i own|i received|i have|unboxed|selling my|sold my)\\b",4,"first_person_english"),
- (r"(?:届いた|購入した|買いました|持っています|開封した|買った|到着した)",4,"first_person_japanese"),
- (r"(?:我买了|我買了|收到了|收到貨|我有一套|開箱)",4,"first_person_chinese"),
- (r"(?:comprei|recebi|chegou aqui|eu tenho|vendi|vendo meu)",4,"first_person_portuguese"),
- (r"(?:lo compré|me llegó|tengo la edición|la vendí|vendo mi)",4,"first_person_spanish"),
- (r"(?:je l'ai acheté|je l'ai reçu|j'ai reçu|je possède|je vends)",4,"first_person_french"),
- (r"(?:habe ich gekauft|ist angekommen|ich besitze|verkaufe meine)",4,"first_person_german"),
- (r"(?:купил|купила|получил|получила|у меня есть|продаю)",4,"first_person_russian"),
- (r"(?i)(?:/|\\-|\\.)\\s?0?[0-9]{2,3}\\b",3,"potential_serial_requires_visual_confirmation"),
- (r"(?i)(?:sticker|label|serial|numbered|number|номер|シール|貼紙|编号|編號|etiqueta|Aufkleber|autocollant)",2,"number_or_label_discussion"),
- (r"(?i)(?:huddle|realdoll|iam8bit|playdead)",1,"ce_product_anchor")
-]
-NEGATIVE=[(r"(?i)(?:giveaway|concept art|soundtrack only|ps4 physical game only)",-2,"possibly_not_ce")]
-def normalized(url):
-    p=urlsplit(url.strip())
-    if p.scheme not in ("https","http") or not p.netloc:return ""
-    path=p.path.rstrip("/") or "/"
-    query=urlencode(sorted((k,v) for k,v in parse_qsl(p.query) if k not in ("utm_source","utm_medium","utm_campaign","fbclid","gclid")))
-    return urlunsplit((p.scheme.lower(),p.netloc.lower().removeprefix("www."),path,query,""))
-def score(record):
-    text=" ".join(str(record.get(k,"")) for k in ("title","snippet","description","text"))
-    reasons=[];points=0
-    for pattern,weight,reason in POSITIVE+NEGATIVE:
-        if re.search(pattern,text):
-            points+=weight;reasons.append(reason)
-    return points,reasons
-def triage(records,known_urls):
-    grouped={}
+
+POSITIVE = (
+    (r"\b(?:my|mine|i bought|i got|i own|i received|i have|unboxed|selling my|sold my)\b", 4, "first_person_en"),
+    (r"(?:届いた|購入した|買いました|持っています|開封した|買った|到着した)", 4, "first_person_ja"),
+    (r"(?:我买了|我買了|收到了|收到貨|我有一套|開箱)", 4, "first_person_zh"),
+    (r"(?:comprei|recebi|chegou aqui|eu tenho|vendi|vendo meu)", 4, "first_person_pt"),
+    (r"(?:lo compré|me llegó|tengo la edición|la vendí|vendo mi)", 4, "first_person_es"),
+    (r"(?:je l'ai acheté|je l'ai reçu|j'ai reçu|je possède|je vends)", 4, "first_person_fr"),
+    (r"(?:habe ich gekauft|ist angekommen|ich besitze|verkaufe meine)", 4, "first_person_de"),
+    (r"(?:купил|купила|получил|получила|у меня есть|продаю)", 4, "first_person_ru"),
+    (r"(?:/|-|\.)\s?0?[0-9]{2,3}\b", 2, "numeric_candidate_not_serial_proof"),
+    (r"(?:sticker|label|serial|numbered|number|номер|シール|貼紙|编号|編號|etiqueta|Aufkleber|autocollant)", 2, "number_label_mentioned"),
+    (r"(?:huddle|realdoll|iam8bit|playdead)", 2, "ce_anchor"),
+)
+NEGATIVE = ((r"(?:soundtrack only|ps4 physical game only|flight simulator|larian)", -4, "possible_unrelated_or_standalone"),)
+TRACKING = {"utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid","gclid"}
+
+def normalize_url(url: str) -> str:
+    try:
+        p = urlsplit(url.strip())
+        if p.scheme.lower() not in ("http", "https") or not p.hostname:
+            return ""
+        query = urlencode(sorted((k,v) for k,v in parse_qsl(p.query,keep_blank_values=True)
+                                 if k.lower() not in TRACKING))
+        return urlunsplit(("https",p.netloc.lower().removeprefix("www."),
+                           p.path.rstrip("/") or "/",query,""))
+    except ValueError:
+        return ""
+
+def score(row: dict) -> tuple[int,list[str]]:
+    text = " ".join(str(row.get(k) or "") for k in ("title","snippet","description","text"))
+    pts, reasons = 0, []
+    for pattern,weight,name in POSITIVE+NEGATIVE:
+        if re.search(pattern,text,re.IGNORECASE):
+            pts += weight
+            reasons.append(name)
+    return pts, reasons
+
+def iter_hits(records):
     for row in records:
-        url=normalized(str(row.get("url") or row.get("source_url") or ""))
-        if not url:continue
-        points,reasons=score(row)
-        item=grouped.setdefault(url,{"url":url,"score":-999,"reason_codes":[],"original_title":"","original_excerpt":"","source_records":0,"canonical_url_match":url in known_urls,"status":"unverified_public_lead","new_confirmed_stickers":0})
+        if not isinstance(row,dict):
+            continue
+        if "matches" in row:
+            if row.get("status") != "index_search_success":
+                continue
+            if not isinstance(row["matches"],list):
+                continue
+            for hit in row["matches"]:
+                if isinstance(hit,dict):
+                    yield hit
+        else:
+            yield row
+
+def triage(records, known_urls):
+    known = {normalize_url(x) for x in known_urls}
+    grouped = {}
+    for hit in iter_hits(records):
+        url = normalize_url(str(hit.get("url") or hit.get("source_url") or ""))
+        if not url:
+            continue
+        points,reasons=score(hit)
+        item=grouped.setdefault(url,{
+            "url":url,"score":-999,"reason_codes":[],
+            "original_title":"","original_excerpt":"","source_records":0,
+            "canonical_url_match":url in known,
+            "status":"unverified_public_lead","new_confirmed_stickers":0,
+        })
         item["source_records"]+=1
-        if points>item["score"]:
-            item.update(score=points,reason_codes=reasons,original_title=str(row.get("title",""))[:250],original_excerpt=str(row.get("snippet") or row.get("text") or "")[:600])
-    return sorted(grouped.values(),key=lambda r:(-r["score"],r["canonical_url_match"],r["url"]))
+        if points > item["score"]:
+            item.update(score=points,reason_codes=reasons,
+                        original_title=str(hit.get("title") or "")[:250],
+                        original_excerpt=str(hit.get("snippet") or hit.get("description") or hit.get("text") or "")[:600])
+    return sorted(grouped.values(),key=lambda r:(r["canonical_url_match"],-r["score"],r["url"]))
+
 def main():
-    p=argparse.ArgumentParser()
+    p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--input",type=Path,required=True)
     p.add_argument("--output",type=Path,required=True)
     p.add_argument("--known-urls",type=Path)
     a=p.parse_args()
-    known=set()
+    known=[]
     if a.known_urls:
-        for line in a.known_urls.read_text(encoding="utf-8").splitlines():
-            for url in re.findall(r"https?://[^\\s<>\\])]+",line):
-                known.add(normalized(url))
+        known=re.findall(r'https?://[^\s<>\])"]+',a.known_urls.read_text(encoding="utf-8"))
     records=[json.loads(x) for x in a.input.read_text(encoding="utf-8").splitlines() if x.strip()]
     out=triage(records,known)
     a.output.parent.mkdir(parents=True,exist_ok=True)
-    a.output.write_text("".join(json.dumps(x,ensure_ascii=False)+"\\n" for x in out),encoding="utf-8")
-    print(json.dumps({"input_records":len(records),"unique_source_urls":len(out),"unverified_candidates":sum(not x["canonical_url_match"] for x in out),"new_confirmed_stickers":0}))
-if __name__=="__main__":main()
+    a.output.write_text("".join(json.dumps(x,ensure_ascii=False)+"\n" for x in out),encoding="utf-8")
+    print(json.dumps({"input_records":len(records),"unique_source_urls":len(out),
+                      "unverified_candidates":sum(not x["canonical_url_match"] for x in out),
+                      "new_confirmed_stickers":0}))
+if __name__=="__main__":
+    main()
