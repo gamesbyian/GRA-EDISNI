@@ -58,6 +58,21 @@ The finite outputs are **not independent Bernoulli trials**: the subsequences ov
 
 The current U5 two-readout family and proposed equality rule are both products of this project's prior conjecture space. Nothing here proves a genuine original Playdead receiver or a common digit-generating protocol.
 
+## The original game's "column first" precedent does not supply a winning sheet orientation
+
+Keep **coordinate-pair parsing** and **image traversal** separate. The original 2016 Polybius words decode each numeric pair as **column followed by row** in a 5×5 square. They do **not** tell a solver to flatten the CE 3×3 picture column-major, and they certainly do not specify a vertical flip.
+
+As a literal control, the speculative CE URL-digit→same-three-mark equality rule gives:
+
+| Read order for nine CE classes | Exact U5 masters satisfying it |
+| --- | ---: |
+| Original 3×3 picture in its visible `IAB/CDE/FGH` rows | **0** |
+| Original 3×3 picture read down each column `ICF/ADG/BEH` | **0** |
+| A–I serial/cycle order `ABCDEFGHI` | **0** |
+| **Top/bottom-flipped sheet `FGH/CDE/IAB`** | **6** |
+
+The only surviving version of this *particular invented codebook* therefore needs a **specific extra physical transformation** not presently licensed by either the 2016 Polybius result or the CE background's own source identity. This is a concrete **instruction burden**, not a general impossibility for URL-derived readers. The new source-control script freezes these exact branch counts.
+
 ## Historical positive control: the original game really used a coordinate cipher
 
 The 2016 \`LetterCode_001/002/003\` window strings are already captured in [\`scripts/audit_original_game_polybius.py\`](../scripts/audit_original_game_polybius.py). They decode with **5×5 Polybius, column before row** to \`PITYTHIS / BUSYMONSTER / MANUNKIND\`; the ordinary row-before-column alternative fails. Contemporary [Steam source discussion](https://steamcommunity.com/app/304430/discussions/0/365172547948628597/) and [Chinese contemporary summary](https://www.gamersky.com/handbook/201607/779252.shtml) independently preserve the raw-number transcription and the discovered E. E. Cummings poem target (the Chinese summary adapts English-language research, not independent algorithm discovery).
