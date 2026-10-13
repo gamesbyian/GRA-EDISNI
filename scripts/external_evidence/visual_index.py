@@ -144,6 +144,8 @@ def promotional_refs(repo_root: Path, directory: Path, manifest: Path) -> tuple[
             ),
             source_url=source["url"], source_kind=source["origin"],
         )
+        if source.get("canonical_case"):
+            rec["canonical_case"] = source["canonical_case"]
         records.append(rec)
     return records, skipped
 
@@ -247,6 +249,7 @@ def analyze(refs: list[dict], items: list[dict], limit: int) -> dict:
                     "candidate_source_url": item["source_url"], "candidate_image_url": item["image_url"],
                     "reference_id": ref["id"],
                     "reference_role": ref["role"], "reference_url": ref["source_url"],
+                    **({"reference_canonical_case": ref["canonical_case"]} if ref.get("canonical_case") else {}),
                     **match,
                 })
         ordering = {"byte-identical": 0, "whole-image-similar": 1, "possible-cropped-repost": 2}
