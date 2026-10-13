@@ -17,6 +17,7 @@ from urllib.parse import quote, urlencode, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 DIRECTORY = ROOT / "data/reference/global-gaming-forums.tsv"
 ROUTES = ROOT / "data/reference/global-gaming-forum-search-routing.tsv"
+ARCHIVES = ROOT / "data/reference/global-gaming-forum-archive-routes.tsv"
 REQUIRED = {
     "community", "url", "primary_method", "fallback_method",
     "platform_hint", "classification_basis", "index_query_scope",
@@ -88,7 +89,7 @@ def conditional_native_link(row: dict[str, str], term: str) -> str | None:
         return "https://api.stackexchange.com/2.3/search/advanced?" + urlencode(
             {"site": "gamedev", "q": term, "sort": "relevance", "pagesize": 100}
         )
-    if m == "reddit_oauth_search":
+    if m == "reddit_research_access_gate":
         path = urlsplit(row["url"]).path.rstrip("/")
         return "https://www.reddit.com" + path + "/search/?" + urlencode(
             {"q": term, "restrict_sr": "1"}
@@ -98,9 +99,17 @@ def conditional_native_link(row: dict[str, str], term: str) -> str | None:
 
 def generate(directory: list[dict[str, str]], routes: list[dict[str, str]],
              terms: list[str], mode: str, max_tasks: int, output: Path,
-             statuses: set[str]) -> dict[str, object]:
+             statuses: set[str], archive_routes: list[dict[str, str]] | None = None) -> dict[str, object]:
     check_routes(directory, routes)
+    if archive_routes is None:
+        archive_routes = load_tsv(ARCHIVES)
+    source_keys = [(x["community"], x["url"]) for x in routes]
+    archive_keys = [(x["community"], x["original_url"]) for x in archive_routes]
+    if archive_keys != source_keys:
+        raise ValueError("Archive matrix is not an exact ordered match to the search matrix")
+    archives_by_key = {(x["community"], x["original_url"]): x for x in archive_routes}
     selected = [x for x in routes if x["directory_evidence"] in statuses]
+    metadata = {(x["community"], x["url"]): x for x in directory}
     total = len(selected) * len(terms)
     if total > max_tasks:
         raise ValueError(f"{total} planned queries exceed --max-tasks={max_tasks}; "
@@ -115,8 +124,19 @@ def generate(directory: list[dict[str, str]], routes: list[dict[str, str]],
                     (row["community"] + "\0" + row["url"] + "\0" + term +
                      "\0" + mode).encode("utf-8")
                 ).hexdigest()[:20]
+                descriptor = metadata[(row["community"], row["url"])]
+                archive = archives_by_key[(row["community"], row["url"])]
                 task = {
                     "task_id": uid,
+                    "language": descriptor["language"],
+                    "region": descriptor["region"],
+                    "historical_route": archive["historical_route"],
+                    "other_archive_routes": archive["other_routes"],
+                    "named_mirror_or_rescue": archive["named_mirror_or_rescue"],
+                    "archive_source": archive["supporting_source"],
+                    "archive_source_assurance": archive["source_assurance"],
+                    "host_capture_status": archive["host_capture_status"],
+                    "archive_handling": archive["handling"],
                     "community": row["community"],
                     "url": row["url"],
                     "term": term,
@@ -132,7 +152,8 @@ def generate(directory: list[dict[str, str]], routes: list[dict[str, str]],
                     "manual_index_search_url": "https://www.google.com/search?" +
                         urlencode({"q": index_query}),
                     "conditional_native_url": conditional_native_link(row, term),
-                    "archive_lookup_url": "https://web.archive.org/web/*/" + row["url"],
+                    "archive_lookup_url": archive["wayback_lookup"],
+                    "commoncrawl_index_url": archive["commoncrawl_index_lookup"],
                     "state": "planned_unexecuted",
                     "results": [],
                 }
@@ -150,6 +171,7 @@ def generate(directory: list[dict[str, str]], routes: list[dict[str, str]],
             "No network search, URL verification or corpus scan has been performed.",
             "A site-restricted search is an index sample, never proof of completeness.",
             "Conditional native URLs are candidates requiring per-host authorization/probe.",
+            "Archive/mirror routing is not evidence that this site has recoverable captures.",
             "Do not submit restricted sources to AI services without verifying their terms.",
         ],
         "output": str(output),

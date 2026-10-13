@@ -21,6 +21,9 @@ class TestGlobalForumSearchPlan(unittest.TestCase):
     def test_exact_inventory_coverage(self):
         self.assertEqual(len(self.directory), 483)
         self.assertEqual(len(self.routes), 483)
+        self.archives = planner.load_tsv(planner.ARCHIVES)
+        self.assertEqual(len(self.archives), 483)
+        self.assertEqual([(x["community"], x["original_url"]) for x in self.archives], [(x["community"], x["url"]) for x in self.routes])
         planner.check_routes(self.directory, self.routes)
 
     def test_multiple_arbitrary_queries_and_escaping(self):
@@ -34,6 +37,9 @@ class TestGlobalForumSearchPlan(unittest.TestCase):
             self.assertEqual(len(results), len({r["task_id"] for r in results}))
             self.assertTrue(all(r["state"] == "planned_unexecuted" for r in results))
             self.assertTrue(all(r["results"] == [] for r in results))
+            self.assertTrue(all(r["host_capture_status"] == "not_checked" for r in results))
+            self.assertTrue(all(r["historical_route"] for r in results))
+            self.assertTrue(all(r["language"] and r["region"] for r in results))
             self.assertTrue(any(r["term"] == "內幕 貼紙" for r in results))
             self.assertTrue(all(r["index_query"].startswith("site:") for r in results))
 
@@ -46,7 +52,7 @@ class TestGlobalForumSearchPlan(unittest.TestCase):
     def test_scope_separation(self):
         row = next(x for x in self.routes if x["community"] == "r/PlaydeadsInside")
         self.assertEqual(row["index_query_scope"], "site:reddit.com/r/PlaydeadsInside")
-        self.assertEqual(row["primary_method"], "reddit_oauth_search")
+        self.assertEqual(row["primary_method"], "reddit_research_access_gate")
         native = planner.conditional_native_link(row, "sticker /043")
         self.assertIn("restrict_sr=1", native)
         self.assertIn("sticker+%2F043", native)

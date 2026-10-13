@@ -3,6 +3,7 @@
 **Status:** DISCOVER / operational design, not a claim that 483 sites were crawled  
 **Source directory:** [483-entry forum inventory](../../data/reference/global-gaming-forums.tsv)  
 **Per-site routing:** [483-entry methods matrix](../../data/reference/global-gaming-forum-search-routing.tsv)  
+**Historical search and mirrors:** [archive/mirror research](global-gaming-forum-archives-and-mirrors.md) and [483-entry archival fallback matrix](../../data/reference/global-gaming-forum-archive-routes.tsv)  
 **Query planner:** [plan_global_forum_searches.py](../../scripts/plan_global_forum_searches.py)  
 **Bounded index executor:** [run_global_forum_index_search.py](../../scripts/run_global_forum_index_search.py)  
 **Manual workflow:** [forum-search-plan.yml](../../.github/workflows/forum-search-plan.yml)
@@ -42,7 +43,7 @@ Every named row in the forum directory has exactly one corresponding row in `dat
 
 | Method code | Recommended site-specific execution | Completeness and gating |
 |---|---|---|
-| `reddit_oauth_search` | Obtain authorized OAuth developer/research access; search within each exact subreddit, search titles and posts; use approved pagination, then cross-check indexed links | Reddit access, data-use and AI processing are subject to its current terms; no unauthorized `.json` scraping; capped search is not full historical export |
+| `reddit_research_access_gate` | Review Reddit's **May 2026** researcher-specific access guidance and October 2026 eligibility criteria before any direct/API corpus search; only then use an explicitly authorized method. Indexed discovery/snapshots remain partial and rights-restricted | Ordinary developer OAuth alone is not permission for systematic research. No native Reddit worker is currently authorized or deployed. See archive/mirror audit. |
 | `steam_native_search` | Use the board's native Search Discussions UI or permitted browser session; restrict to application ID and inspect posts/older pages | Steam's forum search may be fuzzy; cross-check external index and original dates; no public universal full-text API assumed |
 | `stackexchange_search_advanced` | Public Stack Exchange `/2.3/search/advanced?site=gamedev&q=...`; paginate with quotas/backoff; inspect answers and comments | Official API documented; question-body searches do not imply every comment has been queried |
 | `discourse_search_json` | Verify the host really runs Discourse and that public `/search.json?q=...` is allowed; paginate; inspect `posts` and `grouped_search_result` | Optional per-host anonymously permitted JSON; browser UI when disabled; do not assume engine by URL alone |
@@ -121,9 +122,11 @@ python scripts/plan_global_forum_searches.py \
 python -m unittest discover -s tests -p 'test_global_forum_search_plan.py' -v
 ```
 
-The planner generates human-openable scoped search links for every `(forum,term)`, possible conditional-native links only for known adapter families, and a Wayback discovery link. `state=planned_unexecuted` is deliberate: these URLs are **work items, not evidence of searches completed**.
+The planner joins the [archive fallback matrix](../../data/reference/global-gaming-forum-archive-routes.tsv) on exact community/URL keys and generates human-openable scoped search links for every `(forum,term)`, possible conditional-native links only for known adapter families, and a Wayback discovery link. `state=planned_unexecuted` is deliberate: these URLs are **work items, not evidence of searches completed**.
 
 **Optional actual index lookup:** Set the GitHub Actions secret `BRAVE_SEARCH_API_KEY` (after acquiring a suitable approved plan), then select `execute_index=yes` and `max_index_queries` in the same manual workflow. The [bounded executor](../../scripts/run_global_forum_index_search.py) uses the official Brave **web search** endpoint only, with sequential requests, a minimum 1-second inter-request delay, a maximum 1,000 calls per dispatch, a configurable response cap and an immediate stop on 401/402/403/429. Default is **20** index calls. Results are marked `brave_web_index_only` and `partial_external_index_no_negative_evidence` and uploaded as artifacts. The workflow does **not** crawl any individual forum, run a native forum API, authenticate to Reddit, ask an AI to summarize full third-party content or bypass access limitations. It may incur vendor/API charges. No API key is stored in source.
+
+**2026 correction:** Brave's documented default `search_lang=en` can bias multilingual results. The index executor now passes a per-forum two-letter language hint when available and uses `spellcheck=false` to reduce accidental rewrites of symbolic identifiers. Its output still needs first-party verification, especially for mixed-language markets. [API parameters](https://api-dashboard.search.brave.com/api-reference/web/search/get).
 
 **Why Brave as the first indexed adapter:** Its current first-party documentation describes a supported official web-search API with authenticated, bounded `q` requests: https://api-dashboard.search.brave.com/api-reference/web/search/get . Google's legacy Custom Search JSON API is **closed to new customers** and slated for transition, so building new automation around it would create a short-lived dependency: https://developers.google.com/custom-search/v1/overview .
 
@@ -144,7 +147,7 @@ Later native workers can consume the same task JSONL and supply approved adapter
 
 ## Known gaps and next autonomous research tasks
 
-**Immediate:** Fingerprint the 239 `forum_native_probe` sites and the uncertain platform hints, correcting dead URLs and identifying true discussion boards; no changes to sticker data. Verify the 411 `C` rows before investing in expensive native searches. For each site, collect explicit dated example thread and actual search UI/API witness. The number of unprobed sites must fall over time, not remain disguised behind a universal fallback.
+**Immediate:** Consult the [archival corpus and site-specific mirror audit](global-gaming-forum-archives-and-mirrors.md) for Steam SPUF, UOL rescue, PTTweb, GameFAQs, Arquivo.pt and Common Crawl; verify actual forum capture coverage rather than presuming archives. Fingerprint the 239 `forum_native_probe` sites and the uncertain platform hints, correcting dead URLs and identifying true discussion boards; no changes to sticker data. Verify the 411 `C` rows before investing in expensive native searches. For each site, collect explicit dated example thread and actual search UI/API witness. The number of unprobed sites must fall over time, not remain disguised behind a universal fallback.
 
 **Then:** Build separately approved native adapters by platform family (Discourse first, then phpBB, Invision/XenForo UIs and regional hosts) with fixture-based parser tests. Add resumable search cursors and source evidence schemas. Pilot across small language-diverse forums and measure retrieval recall against known historical positive controls, **not just counts of indexed hits**. A failure to find a known positive control is a concrete signal to improve the method.
 
