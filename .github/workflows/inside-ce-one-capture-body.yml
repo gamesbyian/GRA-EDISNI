@@ -1,0 +1,37 @@
+name: Recover one witnessed 2019 INSIDE GameFAQs Wayback page
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/inside-ce-one-capture-body.yml"
+      - "scripts/retrieve_inside_ce_known_wayback_body.py"
+      - "tests/test_inside_ce_archive_body.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  one-record-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify exact archive URL, size restrictions, and failure handling
+        run: python -m unittest discover -s tests -p test_inside_ce_archive_body.py -v
+      - name: One historical capture replay request (no crawl)
+        run: |
+          python scripts/retrieve_inside_ce_known_wayback_body.py \
+            --execute \
+            --output search-output/inside-ce-gamefaqs-2019-wayback-body.json
+      - name: Preserve bounded witness or provider error
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: inside-ce-gamefaqs-2019-body-probe
+          path: search-output/
+          if-no-files-found: warn
+          retention-days: 30
