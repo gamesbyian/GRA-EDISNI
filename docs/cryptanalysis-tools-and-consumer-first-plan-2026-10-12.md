@@ -47,10 +47,19 @@ symbols remain free. The SMT script:
 5. obtains a deletion-minimal raw-observation contradiction for one-dot.
    A minimal conflict is not a minimum-cardinality global proof.
 
-Expected controls from [Experiment 317](experiment-317-tail-metadata-observation-audit.md):
-**36** compatible one-slash assignments; **0** one-dot assignments.
-These historical numbers are **not** new decoding evidence. The entire pilot
-must fail rather than silently adapt if observation changes alter the controls.
+Historical [Experiment 317](experiment-317-tail-metadata-observation-audit.md)
+recorded **36** compatible one-slash assignments on the earlier corpus.
+The owner-confirmed sticker **427 (dot at residue 103, class D's third
+tail slot)** eliminates half the alternatives; **18** survive on the present
+84-record/66-residue corpus, and class D's slash is forced at position 1.
+The one-dot rival still has **0** compatible assignments. Both the existing
+standard-library audit and the new SMT pilot now assert these *current*
+numbers, retaining the old 36 as an explicitly dated historical result.
+This migration was surfaced by the initial red CI run of PR #182.
+
+Neither historical nor current counts constitute decoding evidence. If future
+physical discoveries change these assertions, fail loudly and re-audit the
+corpus change instead of silently updating the expected results.
 
 Run locally, on an explicitly opted-in Python 3.12 environment:
 
