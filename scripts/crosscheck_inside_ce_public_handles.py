@@ -52,6 +52,14 @@ def find_explicit_handles(line):
     # Known explicit prose prefix, not just any occurrence of "user".
     for match in re.finditer(r"\bResetEra user\s+([A-Za-z0-9_.-]{3,30})\b",line,re.I):
         result.add(("resetera",match.group(1).casefold()))
+    # Community notes sometimes say "[Resetera post](URL), where on page 5,
+    # user X ..." This explicit same-sentence source attribution is narrower
+    # than searching for arbitrary "user X" anywhere in the notes.
+    for match in re.finditer(
+        r"\[ResetEra post\]\(https?://www\.resetera\.com/[^)]*\)"
+        r"[^.]{0,100}?\buser\s+([A-Za-z0-9_.-]{3,30})\b", line, re.I
+    ):
+        result.add(("resetera",match.group(1).casefold()))
     return result
 
 def canonical_index(markdown: str):
