@@ -57,6 +57,31 @@ class ArchiveReliabilityTests(unittest.TestCase):
         self.assertEqual(sum(x["status"]=="ok" for x in audit),3)
         self.assertEqual(len(failures),3)
 
+    def test_query_window_preserves_december_2019_timeline(self):
+        from urllib.parse import urlparse, parse_qs
+        from scripts.external_evidence.search_public_reddit_ce_media import search_url
+        single = {**self.q[0], "after": "2019-12-01", "before": "2020-01-01"}
+        query = parse_qs(urlparse(search_url(single, 15)).query)
+        self.assertEqual(query["after"], ["2019-12-01"])
+        self.assertEqual(query["before"], ["2020-01-01"])
+        with self.assertRaisesRegex(ValueError, "1..366"):
+            search_url({**single, "before": "2022-01-01"}, 10)
+        with self.assertRaisesRegex(ValueError, "calendar date"):
+            search_url({**single, "after": "2019-12-39"}, 10)
+        with self.assertRaisesRegex(ValueError, "1..366"):
+            search_url({**single, "after": "2020-01-02"}, 10)
+
+    def test_backend_422_timeout_is_not_invalid_query_or_no_results(self):
+        calls = []
+        def timeout(url):
+            calls.append(url)
+            raise ArchiveHTTPFailure(422, '{"data":null,"error":"Timeout. Maybe slow down a bit"}')
+        _, audit, failures, _, _ = scan(self.q, self.empty_known, requester=timeout)
+        self.assertEqual(len(calls), 1)
+        self.assertEqual(audit[0]["failure_kind"], "archive-backend-query-timeout")
+        self.assertEqual(audit[1]["status"], "not-attempted")
+        self.assertEqual(len(failures), 1)
+
     def test_exact_id_control_batch_and_duplicate_role(self):
         source = [
             {"id":"i0vgml", "source_page_url":"https://www.reddit.com/comments/i0vgml/",
