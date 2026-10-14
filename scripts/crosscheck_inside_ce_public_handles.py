@@ -61,7 +61,7 @@ def canonical_index(markdown: str):
         line=line.strip()
         if not line.startswith("- "):
             continue
-        entry=re.match(r"^-\s+(?:\[([0-9]{3})\]|(L[0-9]{2,3}|U[0-9]{2,3}))\s*[-:]",line)
+        entry=re.match(r"^-\s+(?:\[([0-9]{3})\]|(L[0-9]{2,3}|U[0-9]{2,3}))",line)
         if not entry:
             continue
         sticker=entry.group(1) or entry.group(2)
