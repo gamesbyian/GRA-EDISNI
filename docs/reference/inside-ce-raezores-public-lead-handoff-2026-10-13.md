@@ -30,7 +30,7 @@ Original source: [Reddit comment `o99qxpo`](https://www.reddit.com/r/PlaydeadsIn
 
 ## Cases NOT to forward as new owners
 
-- [October 2019 CE collector photo](inside-ce-2019-gamecollecting-firstperson-photo-2026-10-13.md): public post `eaktdt` genuine original 4032×3024 photo, owner ultimately reconciled to **known lost-sticker case L08**.
+- [December 2019 CE collector photo](inside-ce-2019-gamecollecting-firstperson-photo-2026-10-13.md): public post `eaktdt` genuine original 4032×3024 photo, owner ultimately reconciled to **known lost-sticker case L08**.
 - [September 2020 GameSale reseller posts](inside-ce-u32-resale-post-reconciliation-2026-10-13.md) `iuutfq` and `izs23a`: same public selling account as known **U32**.
 - [March 2020 waitlist purchase comment](inside-ce-march2020-purchase-claim-retraction-2026-10-13.md) `fkeb0sa`: original commenter later retracted the claimed purchase in `fkkj7it`.
 - [July 2020 GameSale seller-linked Imgur](inside-ce-historical-marketplace-photo-pilots-2026-10-13.md) `p48PIzb`: all twelve recovered photos were unrelated PS2 games.
