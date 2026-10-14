@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "source_type": "original-public-Reddit-comment",
+  "source_id": "reddit-2026-10-11-closed-ebay-auction-pf7wee4",
+  "original_comment_url": "https://www.reddit.com/comments/1vdbrus/_/pf7wee4/",
+  "original_thread_url": "https://www.reddit.com/r/PlaydeadsInside/comments/1vdbrus/",
+  "comment_id": "pf7wee4",
+  "thread_id": "1vdbrus",
+  "published_utc": "2026-10-11T10:52:15Z",
+  "published_timestamp": 1791715935,
+  "public_account": "Leading_Highlight553",
+  "original_archive_response_sha256": "614c283e03ba3d6983fe013e84d7455156f4301df81f7149167f9dd7565d8fd7",
+  "archive_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38492232244",
+  "archived_comment_count": 14,
+  "archive_marked_partial": false,
+  "source_excerpt": "After years of searching, I FINALLY managed to snag an unopened iam8bit INSIDE Collector's Edition on eBay",
+  "purchase_claim": {
+    "statement": "Public commenter says they won an eBay auction for an unopened INSIDE CE at $400 with free shipping. Says auction began $400, dozens watched, no other bids. They also report a separate CE sold three days after their birthday in September for $380, and two sales in less than 30 days.",
+    "auction_winning_price_reported_usd": 400,
+    "reported_shipping_usd": 0,
+    "auction_listing_id": null,
+    "auction_image_original": null,
+    "original_retail_seal_visible": false,
+    "independent_buyer_proof": false,
+    "claimed_other_september_sale_price_usd": 380,
+    "other_september_sale_verified": false,
+    "physical_transaction_status": "self-reported-win-not-independent-delivery-confirmation"
+  },
+  "canonical_reconciliation": {
+    "exact_public_handle_in_stickers_md": false,
+    "possible_other_alias_or_prior_transfer": true,
+    "not_proof_of_additional_copy": true,
+    "not_known_sticker_number": true,
+    "no_outreach": true
+  },
+  "status": "high-priority-unreconciled-public-self-reported-ce-auction-acquisition",
+  "photo_evidence": "none",
+  "serial_evidence": "none",
+  "recommendation": "Give raezores original public comment ID and auction claims for reconciliation with their October 2026 seller listing records, but do not claim a new copy or serial until an original listing, serial or transfer chain is established."
+}
