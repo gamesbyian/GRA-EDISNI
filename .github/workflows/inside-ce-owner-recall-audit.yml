@@ -5,6 +5,9 @@ on:
     paths:
       - 'scripts/crosscheck_inside_ce_public_handles.py'
       - 'tests/test_inside_ce_public_handle_crosscheck.py'
+      - 'tests/test_inside_ce_raezore_handoff.py'
+      - 'data/reference/inside-ce-raezore-handoff-candidates-2026-10-13.tsv'
+      - 'data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv'
       - 'data/reference/inside-ce-owner-source-recall-controls-2026-10-13.tsv'
       - '.github/workflows/inside-ce-owner-recall-audit.yml'
   workflow_dispatch:
@@ -27,6 +30,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Validate Raezore handoff contains no stale confirmed-owner duplicates
+        run: python -m unittest discover -s tests -p 'test_inside_ce_raezore_handoff.py' -v
       - name: Test eight source controls and exact platform matching
         run: python -m unittest discover -s tests -p 'test_inside_ce_public_handle_crosscheck.py' -v
       - name: Reconcile original public source controls with live canonical list
