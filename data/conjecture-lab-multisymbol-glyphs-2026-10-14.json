@@ -1,0 +1,208 @@
+{
+  "date": "2026-10-14",
+  "experiment": "CL-BANNER-03",
+  "mode": "DISCOVER",
+  "source": {
+    "confirmed_unique": 66,
+    "confirmed_dot_count": 8,
+    "missing": 42,
+    "physical_confirmation": "sticker 427, residue 103, dot",
+    "unconfirmed_residue45": "YouTube comment only; separate arm"
+  },
+  "test": "fixed 3x5 uppercase bitmap font resampled to height 4 or 5; each glyph mapped through preselected outline, shadow, right-edge, bottom-edge operators; six /,-,. role permutations; two read directions; two layouts each with two fixed glyph geometries; both natural and seam-optimized row order; choose highest raw matches only on observed cells; matched null reruns entire selection",
+  "null": "150 independent seeded scrambles of observed symbols within each original row, preserving each original row's unknown mask and three-symbol census",
+  "selection_warning": "four primary arms and multiple font/role/operator choices; nominal null frequencies are exploratory and already search-corrected within each arm, but not evidence of plaintext",
+  "font_families": {
+    "27x4": [
+      "3x4 x6 with 1-column gaps",
+      "4x4 x5 with 1-column gaps"
+    ],
+    "18x6": [
+      "3x5 x4 with 1-column gaps",
+      "5x5 x3 with 1-column gaps"
+    ]
+  },
+  "controls_per_arm": 150,
+  "cases": [
+    {
+      "w": 4,
+      "include": false,
+      "word": "NLLYSC",
+      "matches": 45,
+      "order": "natural",
+      "glyph": "3x4x6+gap1",
+      "operation": "right-edge",
+      "roles": {
+        "core": ".",
+        "accent": "-",
+        "background": "/"
+      },
+      "margin": [
+        1,
+        0
+      ],
+      "direction": "LR",
+      "null_ge": 147,
+      "null_mean": 46.28,
+      "null_min": 44,
+      "null_max": 50,
+      "support": {
+        "matches": {
+          "core": 3,
+          "accent": 10,
+          "background": 32
+        },
+        "expected_position_counts": {
+          "core": 5,
+          "accent": 15,
+          "background": 46
+        }
+      }
+    },
+    {
+      "w": 4,
+      "include": true,
+      "word": "NLLYSC",
+      "matches": 45,
+      "order": "natural",
+      "glyph": "3x4x6+gap1",
+      "operation": "right-edge",
+      "roles": {
+        "core": ".",
+        "accent": "-",
+        "background": "/"
+      },
+      "margin": [
+        1,
+        0
+      ],
+      "direction": "LR",
+      "null_ge": 148,
+      "null_mean": 46.593,
+      "null_min": 44,
+      "null_max": 50,
+      "support": {
+        "matches": {
+          "core": 3,
+          "accent": 10,
+          "background": 32
+        },
+        "expected_position_counts": {
+          "core": 5,
+          "accent": 16,
+          "background": 46
+        }
+      }
+    },
+    {
+      "w": 6,
+      "include": false,
+      "word": "JSS",
+      "matches": 45,
+      "order": "seam-optimized",
+      "row_order": [
+        16,
+        15,
+        18,
+        17,
+        11,
+        8,
+        13,
+        5,
+        3,
+        2,
+        12,
+        14,
+        7,
+        6,
+        1,
+        10,
+        4,
+        9
+      ],
+      "glyph": "5x5x3+gap1",
+      "operation": "shadow",
+      "roles": {
+        "core": "-",
+        "accent": ".",
+        "background": "/"
+      },
+      "margin": [
+        1,
+        0
+      ],
+      "direction": "LR",
+      "null_ge": 111,
+      "null_mean": 45.373,
+      "null_min": 43,
+      "null_max": 49,
+      "support": {
+        "matches": {
+          "core": 12,
+          "accent": 2,
+          "background": 31
+        },
+        "expected_position_counts": {
+          "core": 19,
+          "accent": 2,
+          "background": 45
+        }
+      }
+    },
+    {
+      "w": 6,
+      "include": true,
+      "word": "EQG",
+      "matches": 47,
+      "order": "seam-optimized",
+      "row_order": [
+        8,
+        13,
+        5,
+        3,
+        2,
+        14,
+        12,
+        9,
+        4,
+        10,
+        1,
+        6,
+        7,
+        11,
+        17,
+        18,
+        15,
+        16
+      ],
+      "glyph": "5x5x3+gap1",
+      "operation": "right-edge",
+      "roles": {
+        "core": "-",
+        "accent": ".",
+        "background": "/"
+      },
+      "margin": [
+        1,
+        0
+      ],
+      "direction": "RL",
+      "null_ge": 29,
+      "null_mean": 45.56,
+      "null_min": 42,
+      "null_max": 49,
+      "support": {
+        "matches": {
+          "core": 13,
+          "accent": 4,
+          "background": 30
+        },
+        "expected_position_counts": {
+          "core": 15,
+          "accent": 10,
+          "background": 42
+        }
+      }
+    }
+  ]
+}
