@@ -1,0 +1,70 @@
+name: CE October 2026 newly acquired auction primary-comment audit
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-oct2026-ebay-buyer-archive-pilot.yml"
+permissions:
+  contents: read
+jobs:
+  public-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Exact archived October 11 sale claim, author and canonical public ledger
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          from datetime import datetime,timezone
+          from scripts.external_evidence.recover_reddit_comment_images import request_json,iter_comments,arctic_tree_url
+          pid="1vdbrus"
+          report={"schema_version":1,"post_id":pid,"source_url":"https://www.reddit.com/r/PlaydeadsInside/comments/1vdbrus/",
+                  "status":"not-checked","october_acquisition_comments":[]}
+          try:
+            raw,sha=request_json(arctic_tree_url(pid,200))
+            comments,partial=iter_comments(raw,max_nodes=200)
+            report.update(status="archived-tree-available",archive_response_sha256=sha,
+                          archived_comments=len(comments),possibly_partial=partial)
+            ledger=Path("archive/external/twinysam-inside-arg/stickers.md").read_text(encoding="utf-8")
+            matches=[]
+            for item in comments:
+              body=item.get("body","")
+              if not isinstance(body,str) or body.startswith(("[removed]","[deleted]")): continue
+              # Select the high-detail independent $400 eBay sale report; never all owners.
+              if not ("400" in body and "auction" in body.lower() and ("ebay" in body.lower() or "eBay" in body)):
+                continue
+              handle=item.get("author","")
+              observed=[]
+              if isinstance(handle,str) and re.fullmatch(r"[A-Za-z0-9_-]{3,32}",handle):
+                observed=list(re.finditer(r"(?<![A-Za-z0-9_-])"+re.escape(handle)+r"(?![A-Za-z0-9_-])",
+                                          ledger,re.I))
+              cid=item.get("id")
+              matches.append({
+                "source_comment_id":cid,
+                "source_permalink":"https://www.reddit.com/comments/1vdbrus/_/"+str(cid)+"/",
+                "created_utc":item.get("created_utc"),
+                "created_iso":datetime.fromtimestamp(int(item.get("created_utc") or 0),timezone.utc).isoformat(),
+                "public_author":handle,"canonical_exact_account_mentions":len(observed),
+                "canonical_excerpt":[ledger[max(0,m.start()-100):m.end()+160] for m in observed[:3]],
+                "purchase_excerpt":re.sub(r"\s+"," ",body)[:1900],
+                "source_class":"public self-reported auction win only, no original listing/photo/sticker verified",
+                "physical_copy_new":False,"serial_confirmed":False
+              })
+            report["october_acquisition_comments"]=matches
+            if not matches:report["status"]="archive-available-specific-comment-absent"
+          except (OSError,ValueError) as exc:
+            report["status"]="archive-unavailable";report["error"]=str(exc)[:220]
+          Path("ce-2026-october-ebay-auction-source.json").write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n")
+          print("OCTOBER_CE_AUCTION_PUBLIC_SOURCE",json.dumps(report,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-october-2026-ebay-auction-evidence-${{ github.run_id }}
+          path: ce-2026-october-ebay-auction-source.json
+          retention-days: 21
+          if-no-files-found: warn
