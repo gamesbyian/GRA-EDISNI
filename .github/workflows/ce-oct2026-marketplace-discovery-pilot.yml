@@ -97,6 +97,57 @@ jobs:
                "interpretation":"Listings/search-result rows are not inspected original photos, physical CE copies or sticker observations."}
           (root/"audit.json").write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
           PY
+      - name: Diagnose three PicClick public source-search layouts and item links
+        run: |
+          python - <<'PY'
+          import hashlib,json,re,time,urllib.request,urllib.parse,collections
+          from pathlib import Path
+          from bs4 import BeautifulSoup
+          out=[]
+          for key,query in [
+            ("inside-realdoll","inside realdoll"),
+            ("inside-ce","INSIDE collector's edition"),
+            ("inside-iam8bit","inside iam8bit"),
+          ]:
+            target="https://picclick.com/?"+urllib.parse.urlencode({"q":query})
+            result={"id":key,"url":target}
+            try:
+              req=urllib.request.Request(target,headers={
+                "User-Agent":"Mozilla/5.0 (compatible; PublicCEArchiveReview/1.0)",
+                "Accept":"text/html"})
+              with urllib.request.urlopen(req,timeout=20) as stream:
+                raw=stream.read(1_500_001)
+                if len(raw)>1_500_000:raise ValueError("response size limit")
+                result.update(status=stream.status,bytes=len(raw),
+                              response_sha256=hashlib.sha256(raw).hexdigest())
+              soup=BeautifulSoup(raw,"html.parser")
+              result["page_title"]=soup.title.get_text(" ",strip=True) if soup.title else ""
+              text=soup.get_text(" ",strip=True)
+              result["visible_text_excerpt"]=text[:750]
+              result["visible_text_tail"]=text[-450:]
+              anchors=[]
+              for a in soup.find_all("a",href=True):
+                href=urllib.parse.urljoin(target,a["href"])
+                item=re.search(r"-(\d{12})\.html(?:\?|$)",href)
+                alt=" ".join(str(img.get("alt","")) for img in a.find_all("img"))
+                title=a.get_text(" ",strip=True) or alt
+                if item or any(word in (title+" "+href).lower() for word in
+                               ("inside","iam8bit","playdead","realdoll","huddle")):
+                  anchors.append({"href":href[:350],"title":title[:180],"item_id":item.group(1) if item else None})
+              result["total_anchor_count"]=len(soup.find_all("a",href=True))
+              result["plausible_source_anchors"]=anchors[:65]
+              result["distinct_picclick_ids"]=len(set(x["item_id"] for x in anchors if x["item_id"]))
+              result["12_digit_ids_in_page"]=len(set(re.findall(r"(?<!\d)\d{12}(?!\d)",raw.decode("utf-8","replace"))))
+            except Exception as exc:
+              result["status"]="unavailable"
+              result["reason"]=str(exc)[:220]
+            out.append(result)
+            print("PICCLICK_DIAGNOSTIC",json.dumps(result,ensure_ascii=False)[:20000],flush=True)
+            time.sleep(2)
+          dest=Path("evidence-work/october2026-marketplace/picclick-diagnostic.json")
+          dest.parent.mkdir(parents=True,exist_ok=True)
+          dest.write_text(json.dumps({"schema_version":1,"sources":out},indent=2,ensure_ascii=False)+"\n")
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
