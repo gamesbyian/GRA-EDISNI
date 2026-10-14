@@ -9,6 +9,8 @@ on:
       - 'scripts/test_decompiled_consumer_hits.py'
       - 'scripts/audit_managed_consumer_structures.py'
       - 'scripts/test_managed_consumer_structures.py'
+      - 'scripts/acquire_insidedev_consumer_snapshot.py'
+      - 'scripts/test_insidedev_consumer_snapshot.py'
       - 'scripts/run_local_consumer_recon.sh'
       - 'scripts/run_ghidra_consumer_local.sh'
       - 'scripts/ghidra/InspectConsumerStrings.java'
@@ -30,4 +32,5 @@ jobs:
           python scripts/test_consumer_binary_intake.py -v
           python scripts/test_decompiled_consumer_hits.py -v
           python scripts/test_managed_consumer_structures.py -v
+          python scripts/test_insidedev_consumer_snapshot.py -v
           bash -n scripts/run_local_consumer_recon.sh scripts/run_ghidra_consumer_local.sh
