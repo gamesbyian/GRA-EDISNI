@@ -1,0 +1,70 @@
+name: CE March 2026 split-game acquisition public-comment audit
+
+# One-off runner. Never merge.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-2026-split-sale-comment-pilot.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  exact-public-thread:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check exact single public thread for 2026 separated-game acquisition context
+        run: |
+          python - <<'PY'
+          import hashlib,json,re
+          from pathlib import Path
+          from scripts.external_evidence.recover_reddit_comment_images import request_json,iter_comments,arctic_tree_url
+          pid="1l5x8rb"; target="o99qxpo"
+          report={"post_id":pid,"target_comment_id":target,
+                  "source_permalink":"https://www.reddit.com/r/PlaydeadsInside/comments/1l5x8rb/comment/o99qxpo/",
+                  "status":"archive-request-pending","comments":[],"target_found":False}
+          try:
+            raw,digest=request_json(arctic_tree_url(pid,250))
+            comments,partial=iter_comments(raw,max_nodes=250)
+            report["status"]="archive-response-available"
+            report["response_sha256"]=digest
+            report["comments_retrieved"]=len(comments)
+            report["possibly_partial"]=partial
+            # Restrict raw output to target author and immediate public reply family.
+            target_comment=next((r for r in comments if r.get("id")==target),None)
+            if target_comment:
+              author=target_comment.get("author")
+              related=[r for r in comments if r.get("id")==target or
+                       r.get("parent_id")=="t1_"+target or
+                       (r.get("author")==author and isinstance(author,str))]
+              for r in related[:15]:
+                body=r.get("body","")
+                report["comments"].append({
+                  "id":r.get("id"),"original_public_url":"https://www.reddit.com/comments/"+pid+"/_/"+str(r.get("id"))+"/",
+                  "created_utc":r.get("created_utc"),"public_author":r.get("author"),
+                  "parent_id":r.get("parent_id"),
+                  "context_excerpt":re.sub(r"\s+"," ",body)[:500]
+                  if isinstance(body,str) and not body.startswith(("[removed]","[deleted]")) else "[unavailable]",
+                })
+              report["target_found"]=True
+            else:
+              report["status"]="archive-available-target-comment-missing"
+          except (OSError,ValueError) as exc:
+            report["status"]="archive-unavailable"
+            report["reason"]=str(exc)[:230]
+          Path("ce-2026-split-sale-source-report.json").write_text(
+            json.dumps(report,indent=2,ensure_ascii=False)+"\n")
+          print("CE_SPLIT_SALE_EXACT_SOURCE",json.dumps(report,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-march2026-split-sale-evidence-${{ github.run_id }}
+          path: ce-2026-split-sale-source-report.json
+          retention-days: 20
+          if-no-files-found: warn
