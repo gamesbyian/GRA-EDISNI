@@ -59,6 +59,23 @@ These are modest **retrospective near-fit signals**, conditioned on these select
 
 The tight three-site null is important: it preserves the physical slash/dash census **within each three-bit state**, so a score advantage cannot be credited merely to each state's observed symbol-count distribution. But it does not preserve all other possible machine constraints or tell us which source operation is intended.
 
+### Leave-one-class-out challenge
+
+A stronger, *post-hoc but out-of-fit* check withholds **all nine early positions of one A–I class**, selects the least-contradictory global codebook from the other eight classes, then measures that fixed codebook's minimum contradictions on the held-out physical class without using its body observations to choose the codebook. Ties use the frozen lexicographic codebook order.
+
+Across all nine folds, the total held-out contradictions are **5**, distributed as **I:1, A:0, B:0, C:2, D:0, E:1, F:1, G:0, H:0**. Most folds still choose the same near-fitting global operation, but class E instead chooses a different permutation. Across **10,000** controls per scheme, held-out totals as small as or smaller than five occur in:
+
+- **680/10,000 (6.80%)** of class-preserving shuffles;
+- **805/10,000 (8.05%)** of serial-frame-preserving shuffles;
+- **439/10,000 (4.39%)** of three-site-state-preserving shuffles.
+
+The held-out outcome is weaker than the fitted score and is still **conditional on having selected the entire hypothesis class after inspecting the same corpus**. The score is number of *minimally contradictory known physical sites* in each held-out class, not a successful prediction of a uniquely generated bitstream. It does not repair the four known conflicts or validate the model.
+
+[Reproducible class-holdout executable](../../scripts/conjecture_lab_intra_class_holdout.py) and [30,000-control holdout archive](../../data/conjecture-lab-intra-class-holdout-2026-10-14.json):
+
+    python scripts/conjecture_lab_intra_class_holdout.py --test
+    python scripts/conjecture_lab_intra_class_holdout.py --null-replicates 10000 --output data/conjecture-lab-intra-class-holdout-2026-10-14.json
+
 ## Decision and next test
 
 This is a strong **negative** for any fixed, value-uniform 3-bit permutation/complement generator in the natural class-local three-phase geometry. Letting the tail select a *write site* makes the observed evidence closer to a consistent two-transition mechanism, but **still cannot explain the physical code**. Introducing further arbitrary exceptions to erase the four contradictions would be overfitting; do **not** extend the grammar just because it almost fits.
