@@ -84,7 +84,7 @@ def load_known_source_crosswalk(path: Path) -> dict[str, dict]:
     required = {"source_url", "canonical_record", "source_relation",
                 "evidence_note", "review_status"}
     with path.open(encoding="utf-8", newline="") as f:
-        reader = csv.DictReader(f, delimiter="\\t")
+        reader = csv.DictReader(f, delimiter="\t")
         if not required.issubset(reader.fieldnames or []):
             raise ValueError("Malformed known-source crosswalk header")
         result = {}
