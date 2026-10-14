@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "purpose": "Small public monthly historical retrieval scopes for testing whether Arctic Shift backend keyword queries can complete without year-spanning timeouts. Sources are only leads, never counted as owners.",
+  "limits": {
+    "max_queries": 4,
+    "max_results_per_query": 15,
+    "max_total_unique_records": 60
+  },
+  "searches": [
+    {
+      "id": "sep2020-gamesale-realdoll-control",
+      "kind": "post",
+      "subreddit": "GameSale",
+      "term": "realdoll",
+      "after": "2020-09-01",
+      "before": "2020-10-01"
+    },
+    {
+      "id": "dec2019-gamecollecting-iam8bit",
+      "kind": "post",
+      "subreddit": "gamecollecting",
+      "term": "iam8bit",
+      "after": "2019-12-01",
+      "before": "2020-01-01"
+    },
+    {
+      "id": "jan2020-playdead-sticker-replies",
+      "kind": "comment",
+      "subreddit": "PlaydeadsInside",
+      "term": "sticker",
+      "after": "2020-01-01",
+      "before": "2020-02-01"
+    },
+    {
+      "id": "dec2019-limited-iam8bit",
+      "kind": "post",
+      "subreddit": "limitedprintgames",
+      "term": "iam8bit",
+      "after": "2019-12-01",
+      "before": "2020-01-01"
+    }
+  ]
+}
