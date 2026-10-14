@@ -10,6 +10,7 @@ on:
       - 'tests/test_inside_ce_index_triage.py'
       - 'scripts/rank_inside_ce_public_leads.py'
       - 'tests/test_inside_ce_public_leads.py'
+      - 'data/reference/inside-ce-curated-public-source-crosswalk-2026-10-14.tsv'
       - 'tests/test_inside_ce_native_campaign.py'
       - 'tests/test_global_forum_search_plan.py'
       - 'data/reference/global-gaming-forum-archive-routes.tsv'
@@ -178,6 +179,14 @@ jobs:
             --canonical-stickers canonical-inside-arg/stickers.md \
             --output search-output/inside-ce-index-candidates.tsv \
             --summary search-output/inside-ce-index-triage-summary.json
+      - name: Rank public leads and suppress previously reconciled source URLs
+        if: ${{ inputs.execute_index == 'yes' }}
+        run: |
+          python scripts/rank_inside_ce_public_leads.py \
+            --input search-output/inside-ce-index-results.jsonl \
+            --known-urls canonical-inside-arg/stickers.md \
+            --known-source-crosswalk data/reference/inside-ce-curated-public-source-crosswalk-2026-10-14.tsv \
+            --output search-output/inside-ce-ranked-public-leads.jsonl
       - uses: actions/upload-artifact@v4
         with:
           name: inside-ce-native-search-campaign

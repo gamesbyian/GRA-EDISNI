@@ -37,6 +37,52 @@ class LeadTests(unittest.TestCase):
             inp.write_text("".join(json.dumps(x)+"\n" for x in records),encoding="utf-8")
             parsed=[json.loads(x) for x in inp.read_text().splitlines()]
             self.assertEqual(mod.triage(parsed,[]),got)
+    def test_reddit_original_post_variants_without_comment_conflation(self):
+        original = "https://www.reddit.com/r/gamecollecting/comments/eaktdt/"
+        variants = [
+            "https://old.reddit.com/r/gamecollecting/comments/eaktdt/arrived/?utm_source=share",
+            "http://reddit.com/comments/eaktdt",
+            original,
+        ]
+        normalized = {mod.normalize_url(v) for v in variants}
+        self.assertEqual(normalized, {"https://reddit.com/comments/eaktdt"})
+        comment = mod.normalize_url(
+            "https://reddit.com/r/gamecollecting/comments/eaktdt/arrived/xyz123")
+        self.assertEqual(comment, "https://reddit.com/comments/eaktdt/comment/xyz123")
+        self.assertNotIn(comment, normalized)
+
+    def test_existing_case_crosswalk_suppresses_old_owner_lead_not_new_reply(self):
+        path = ROOT / "data/reference/inside-ce-curated-public-source-crosswalk-2026-10-14.tsv"
+        known = mod.load_known_source_crosswalk(path)
+        self.assertEqual(len(known), 3)
+        original = "https://old.reddit.com/r/gamecollecting/comments/eaktdt/my_inside_ce/"
+        other_comment = original + "abcxyz"
+        rows = [
+            {"url":original, "title":"My INSIDE CE finally came in"},
+            {"url":other_comment, "title":"I have this too"},
+            {"url":"https://reddit.com/r/GameSale/comments/i0vgml/my_listing/",
+             "title":"Selling my INSIDE CE"},
+        ]
+        results=mod.triage(rows, [], known)
+        by_url={x["url"]:x for x in results}
+        self.assertEqual(by_url["https://reddit.com/comments/eaktdt"]["crosswalk_record"],"L08")
+        self.assertEqual(by_url["https://reddit.com/comments/i0vgml"]["crosswalk_record"],"U32")
+        self.assertEqual(by_url["https://reddit.com/comments/eaktdt/comment/abcxyz"]["crosswalk_record"],"")
+        self.assertEqual(by_url["https://reddit.com/comments/eaktdt"]["status"],"existing_case_context_review")
+        self.assertTrue(all(x["new_confirmed_stickers"]==0 for x in results))
+
+    def test_crosswalk_rejects_duplicate_and_missing_fields(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/"cases.tsv"
+            header="source_url\\tcanonical_record\\tsource_relation\\tevidence_note\\treview_status\\n"
+            row="https://reddit.com/comments/eaktdt\\tL08\\tprior\\tpublic\\tunverified\\n"
+            path.write_text(header+row+row, encoding="utf-8")
+            with self.assertRaises(ValueError):
+                mod.load_known_source_crosswalk(path)
+            path.write_text(header+row.replace("L08",""),encoding="utf-8")
+            with self.assertRaises(ValueError):
+                mod.load_known_source_crosswalk(path)
+
     def test_serial_not_auto_confirmed(self):
         got=mod.triage([{"url":"https://example.org/img","title":"Sticker /043"}],[])
         self.assertEqual(got[0]["new_confirmed_stickers"],0)

@@ -1,0 +1,4 @@
+source_url	canonical_record	source_relation	evidence_note	review_status
+https://www.reddit.com/r/gamecollecting/comments/eaktdt/	L08	probable_previously_known_source_link	December 2019 CE arrival thread was earlier attributed to Reddit user Knuckles316; canonical L08 lists same public username as a lost sticker. Source page image/author cannot currently be reverified from web interface.	suppress_new_owner_claim_pending_original_thread_verification
+https://www.reddit.com/r/GameSale/comments/i0vgml	U32	existing_owner_resale_provenance	2020 GameSale public CE sale from user KoreanB_B_Q is already reconciled to canonical U32 in local lead ledger R04.	already_documented_case_source
+https://www.reddit.com/r/GameSale/comments/i8i1d9	U32	same_seller_repeat_listing	August 2020 CE GameSale repeated the prior seller public offering; local owner search ledger R21 reconciles to U32.	already_documented_case_source
