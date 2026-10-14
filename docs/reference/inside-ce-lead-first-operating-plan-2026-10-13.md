@@ -28,3 +28,15 @@ The first open-web probe used broad quoted English phrases about receiving the I
 - **Coverage:** report completed queries and successfully retrieved reply/media bodies separately. A planned 28,188-query manifest is not 28,188 completed searches.
 - **Negative results:** valid only for the specific provider, phrase, time interval and content surface successfully searched.
 - **No outreach:** deliver a useful original URL to Raezore; leave decisions about communication to the community.
+
+## October 14: known-owner false-positive control (L08)
+
+A [December 2019 r/gamecollecting INSIDE CE arrival/photo thread](https://www.reddit.com/r/gamecollecting/comments/eaktdt/) initially looked absent from both the local owner-search ledger and the canonical sticker markdown's source URLs. The thread was previously attributed to Reddit poster **Knuckles316**, but direct recovery of the original Reddit post and its attached image is currently blocked in our source interface.
+
+**Crucial reconciliation:** Raezore's [canonical sticker list](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md) already records public Reddit account `/u/Knuckles316/` as **lost sticker L08**, confirmed in the community history on 28 January 2020. Therefore the original 2019 post is a **probable additional public-source link for an already known case**, *not a new CE owner or sticker*. Do not forward it as a new find. Only report any original photo as additional provenance if it is actually retrieved and can be distinguished from canonical materials.
+
+The prior ranker matched exact known URLs but could not compare the *different URL types* (canonical owner profile versus independent arrival post). The new [curated public-source crosswalk](../../data/reference/inside-ce-curated-public-source-crosswalk-2026-10-14.tsv) explicitly records this *source-level* possible match, with separate known U32 seller/relisted-post controls. It deliberately makes **no generic cross-platform identity inference**. A new comment in the same Reddit thread retains its unique permalink and is *not automatically assigned* to L08 or any seller.
+
+The [lead ranker](../../scripts/rank_inside_ce_public_leads.py) now supports `--known-source-crosswalk` and returns `existing_case_context_review` with a canonical record and evidence status for these exact vetted source URLs. They sort behind candidate new public leads. The opt-in API search workflow feeds the crosswalk and canonical sticker markdown to the ranking output. This protects Raezore's time while retaining the evidence for historical verification.
+
+**Evidence limit:** The older visible search result indicated the post's author, but the original Reddit page/photographs could not be reverified in this pass. The crosswalk states *probable* L08, pending original-post verification. No new serial or symbol was observed; all counts remain zero.
