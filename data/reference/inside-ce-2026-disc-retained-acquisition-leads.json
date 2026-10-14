@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "purpose": "Public, self-reported 2026 INSIDE CE aftermarket acquisition involving alleged PS4 game component separation. Preserve original evidence only, never infer missing sticker serial/owner.",
+  "purpose": "Public, self-reported 2026 INSIDE CE aftermarket acquisition involving alleged PS4 game component separation. Preserve original evidence only, never infer missing sticker serial/owner. Archive corroborated exact comment and timestamps; not independently corroborated transaction.",
   "discovered_utc_date": "2026-10-13",
   "leads": [
     {
@@ -11,7 +11,7 @@
       "original_comment_url": "https://www.reddit.com/r/PlaydeadsInside/comments/1l5x8rb/comment/o99qxpo/",
       "thread_url": "https://www.reddit.com/r/PlaydeadsInside/comments/1l5x8rb/",
       "account_as_published": "Afaith_1",
-      "comment_date_precision": "March 2026 approximately, unverified absolute timestamp",
+      "comment_date_precision": "2026-03-08T05:32:21Z exact archived comment created_utc",
       "direct_public_excerpt": "I found a seller with a sealed box and was able to negotiate the keeping the physical disc ... the seller reduced the price and I was able to get a sealed collectors edition for around $650",
       "statement_summary": "Writer reports purchasing an INSIDE CE box from a seller for about USD 650 with the PS4 physical game retained/separated in the transaction because buyer plays Xbox.",
       "original_disc_handoff": "ambiguous-from-grammar; seller appears to retain disc, needs original full context",
@@ -28,7 +28,15 @@
         "unreconciled-public-acquisition-claim",
         "original-game-component-possibly-separated",
         "physical-sticker-not-observed"
-      ]
+      ],
+      "archive_created_utc": 1772947941,
+      "archived_thread_response_sha256": "37340bdeba812b4bc4491bb1507d651743063b497df9195fd2a88e36b4c87725",
+      "archived_thread_comment_count": 18,
+      "target_comment_found": true,
+      "original_public_comment_retrieved": true,
+      "archive_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38491175914",
+      "archived_target_follow_up_count": 0,
+      "archive_truncation_flag": false
     }
   ]
 }
