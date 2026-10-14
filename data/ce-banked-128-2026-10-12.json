@@ -1,0 +1,292 @@
+{
+  "corpus_records": 84,
+  "distinct_residues": 66,
+  "conditional_bodies": 18,
+  "interpretations": {
+    "reverse0_one/": {
+      "bank_patterns": [
+        [
+          2,
+          2,
+          0,
+          1,
+          2,
+          3,
+          2,
+          1,
+          2
+        ]
+      ],
+      "bank_pattern_count": 1,
+      "bank_counts": [
+        {
+          "0": 1,
+          "1": 2,
+          "2": 5,
+          "3": 1
+        }
+      ],
+      "seven_bit_offsets": {
+        "A": [
+          42,
+          46
+        ],
+        "B": [
+          126
+        ],
+        "C": [
+          58
+        ],
+        "D": [
+          19,
+          23,
+          27,
+          31,
+          83,
+          87,
+          91,
+          95
+        ],
+        "E": [
+          55,
+          63
+        ],
+        "F": [
+          23
+        ],
+        "G": [
+          49,
+          53,
+          57,
+          61,
+          113,
+          117,
+          121,
+          125
+        ],
+        "H": [
+          1
+        ],
+        "I": [
+          101,
+          109
+        ]
+      },
+      "distinct_nine_addresses_per_body": true
+    },
+    "reverse0_one-": {
+      "bank_patterns": [
+        [
+          1,
+          1,
+          3,
+          2,
+          1,
+          0,
+          1,
+          2,
+          1
+        ]
+      ],
+      "bank_pattern_count": 1,
+      "bank_counts": [
+        {
+          "0": 1,
+          "1": 5,
+          "2": 2,
+          "3": 1
+        }
+      ],
+      "seven_bit_offsets": {
+        "A": [
+          81,
+          85
+        ],
+        "B": [
+          1
+        ],
+        "C": [
+          69
+        ],
+        "D": [
+          32,
+          36,
+          40,
+          44,
+          96,
+          100,
+          104,
+          108
+        ],
+        "E": [
+          64,
+          72
+        ],
+        "F": [
+          104
+        ],
+        "G": [
+          2,
+          6,
+          10,
+          14,
+          66,
+          70,
+          74,
+          78
+        ],
+        "H": [
+          126
+        ],
+        "I": [
+          18,
+          26
+        ]
+      },
+      "distinct_nine_addresses_per_body": true
+    },
+    "reverse1_one/": {
+      "bank_patterns": [
+        [
+          1,
+          1,
+          1,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2
+        ]
+      ],
+      "bank_pattern_count": 1,
+      "bank_counts": [
+        {
+          "0": 0,
+          "1": 3,
+          "2": 3,
+          "3": 3
+        }
+      ],
+      "seven_bit_offsets": {
+        "A": [
+          41,
+          105
+        ],
+        "B": [
+          125
+        ],
+        "C": [
+          56
+        ],
+        "D": [
+          18,
+          22,
+          50,
+          54,
+          82,
+          86,
+          114,
+          118
+        ],
+        "E": [
+          89,
+          121
+        ],
+        "F": [
+          83
+        ],
+        "G": [
+          25,
+          29,
+          57,
+          61,
+          89,
+          93,
+          121,
+          125
+        ],
+        "H": [
+          2
+        ],
+        "I": [
+          77,
+          109
+        ]
+      },
+      "distinct_nine_addresses_per_body": true
+    },
+    "reverse1_one-": {
+      "bank_patterns": [
+        [
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "bank_pattern_count": 1,
+      "bank_counts": [
+        {
+          "0": 3,
+          "1": 3,
+          "2": 3,
+          "3": 0
+        }
+      ],
+      "seven_bit_offsets": {
+        "A": [
+          22,
+          86
+        ],
+        "B": [
+          2
+        ],
+        "C": [
+          71
+        ],
+        "D": [
+          9,
+          13,
+          41,
+          45,
+          73,
+          77,
+          105,
+          109
+        ],
+        "E": [
+          6,
+          38
+        ],
+        "F": [
+          44
+        ],
+        "G": [
+          2,
+          6,
+          34,
+          38,
+          66,
+          70,
+          98,
+          102
+        ],
+        "H": [
+          125
+        ],
+        "I": [
+          18,
+          50
+        ]
+      },
+      "distinct_nine_addresses_per_body": true
+    }
+  },
+  "status": "DISCOVER_DEVELOP_banked_128_is_tautological_split"
+}
