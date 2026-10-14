@@ -187,7 +187,7 @@ def search_url(entry: dict, limit: int) -> str:
     if not isinstance(term, str) or not 1 <= len(term) <= 100:
         raise ValueError("invalid search term")
     after, before = entry.get("after", "2018-01-01"), entry.get("before", "2026-10-14")
-    if not all(isinstance(v, str) and re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}", v)
+    if not all(isinstance(v, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", v)
                for v in (after, before)):
         raise ValueError("archive search dates must be YYYY-MM-DD")
     try:
