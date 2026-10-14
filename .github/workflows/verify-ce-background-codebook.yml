@@ -16,6 +16,15 @@ jobs:
           python-version: '3.12'
       - name: Rank fixed April 2020 readings against source-frozen archive routes
         run: python scripts/audit_background_url_lookup_discrimination.py --output /tmp/experiment-466.json --summary
+      - name: Control CE nine-digit codebook against unrelated historical opaque tokens
+        run: python scripts/audit_terminal41_opaque_token_controls.py --output /tmp/opaque-token-controls.json
+      - name: Verify original-game coordinate-cipher positive control
+        run: python scripts/audit_original_game_polybius.py > /dev/null
+      - name: Preserve opaque-token control witness
+        uses: actions/upload-artifact@v4
+        with:
+          name: terminal41-source-native-opaque-token-controls
+          path: /tmp/opaque-token-controls.json
       - name: Preserve full source-assistance test output
         uses: actions/upload-artifact@v4
         with:
