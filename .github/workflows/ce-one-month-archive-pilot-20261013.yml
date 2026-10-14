@@ -1,0 +1,54 @@
+name: INSIDE CE dated one-month public archive pilot
+
+# Execution only, never merge the temporary trigger.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-one-month-archive-pilot-20261013.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  source-search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Search four one-month CE public historic query slices, stop on timeout
+        run: |
+          python scripts/external_evidence/search_public_reddit_ce_media.py \
+            --manifest data/reference/inside-ce-public-monthly-reddit-calibration.json \
+            --max-queries 4 --per-query 15 \
+            --output visual-evidence-work/monthly-calibration
+      - name: Print source records and exact archive response statuses
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("visual-evidence-work/monthly-calibration")
+          for name,key,label in [
+            ("search-report.json","searches","DATE_QUERY"),
+            ("review-queue.json","candidates","PUBLIC_CE_LEAD"),
+            ("image-leads.json","image_mentions","PUBLIC_IMAGE_LINK"),
+            ("gallery-leads.json","galleries","PUBLIC_GALLERY_LINK")]:
+            file=root/name
+            if not file.exists():
+                print("UNAVAILABLE",name)
+                continue
+            rows=json.loads(file.read_text()).get(key,[])
+            print(label+"_COUNT",len(rows))
+            for row in rows[:50]:
+                print(label,json.dumps(row,ensure_ascii=False)[:1400])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-one-month-public-archive-pilot-${{ github.run_id }}
+          path: visual-evidence-work/monthly-calibration/
+          retention-days: 21
+          if-no-files-found: warn
