@@ -1,0 +1,69 @@
+name: CE October 2026 full original auction buyer comment audit
+
+# One-off exact public-source investigation. Do not merge.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-oct2026-auction-comment-full-probe.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  read-full-public-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Recover full original October 11 buyer comment and seller media/ID hints
+        run: |
+          mkdir -p visual-evidence-work
+          python - <<'PY'
+          import hashlib,json,re
+          from pathlib import Path
+          from scripts.external_evidence.recover_reddit_comment_images import request_json,iter_comments,arctic_tree_url
+          pid,cid="1vdbrus","pf7wee4"
+          report={"schema_version":1,"post_id":pid,"comment_id":cid,
+                  "original_url":"https://www.reddit.com/comments/1vdbrus/_/pf7wee4/",
+                  "status":"archive-not-yet-attempted"}
+          try:
+            payload,digest=request_json(arctic_tree_url(pid,100))
+            comments,partial=iter_comments(payload,max_nodes=100)
+            report.update(status="archived-thread-retrieved",archive_response_sha256=digest,
+                          comments_returned=len(comments),possible_partial=partial)
+            item=next((x for x in comments if x.get("id")==cid),None)
+            if item is None:
+              report["status"]="original-target-comment-not-retrieved"
+            else:
+              body=item.get("body","")
+              if not isinstance(body,str):body=""
+              report.update(status="exact-original-comment-retrieved",
+                            original_comment_length=len(body),
+                            original_comment_sha256=hashlib.sha256(body.encode()).hexdigest(),
+                            original_created_utc=item.get("created_utc"),
+                            outbound_urls=sorted(set(re.findall(r"https?://[^\s<>\[\]()\"']+",body,re.I)))[:30],
+                            ebay_12_digit_ids=sorted(set(re.findall(r"(?<!\d)\d{12}(?!\d)",body)))[:30],
+                            original_public_body=body[:9000],
+                            original_body_truncated=len(body)>9000)
+              replies=[]
+              for c in comments:
+                if c.get("parent_id")=="t1_"+cid and isinstance(c.get("body"),str):
+                  replies.append({"id":c.get("id"),"created_utc":c.get("created_utc"),
+                                  "body_excerpt":c["body"][:500]})
+              report["direct_replies"]=replies[:15]
+          except (OSError,ValueError) as exc:
+            report.update(status="archive-unavailable",error=str(exc)[:250])
+          out=Path("visual-evidence-work/october2026-buyer-full-source.json")
+          out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
+          print("FULL_AUCTION_BUYER_SOURCE",json.dumps(report,ensure_ascii=False)[:18000])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-oct2026-buyer-comment-full-${{ github.run_id }}
+          path: visual-evidence-work/october2026-buyer-full-source.json
+          retention-days: 21
+          if-no-files-found: warn
