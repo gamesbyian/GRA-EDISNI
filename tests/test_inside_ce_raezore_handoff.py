@@ -25,7 +25,6 @@ class RaezoreHandoffTests(unittest.TestCase):
         self.assertEqual(cases["H01"]["priority"],"P2")
         self.assertIn("334",cases["H01"]["canonical_crosscheck"])
         self.assertIn("BathroomGamers",cases["H01"]["canonical_crosscheck"])
-        self.assertIn("identity not",cases["H01"]["canonical_crosscheck"].lower().replace("_"," ")) if False else None
         self.assertIn("cross-platform account identity not independently established",cases["H01"]["canonical_crosscheck"])
         self.assertNotIn("confirmed_new", " ".join(x["claim_type"] for x in rows))
     def test_no_stale_unreconciled_gamesale_source(self):
