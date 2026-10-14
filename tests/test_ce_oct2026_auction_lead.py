@@ -1,0 +1,54 @@
+"""October 2026 public auction lead cannot be mistaken for verified original sticker."""
+from __future__ import annotations
+import json
+import unittest
+from pathlib import Path
+from scripts.external_evidence.audit_public_ce_october_auction import inspect
+
+
+class October2026OwnerLeadTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        root = Path(__file__).resolve().parents[1]
+        cls.source = json.loads((
+            root/"data/reference/inside-ce-oct2026-ebay-auction-public-lead.json"
+        ).read_text(encoding="utf-8"))
+        cls.ledger = (
+            root/"archive/external/twinysam-inside-arg/stickers.md"
+        ).read_text(encoding="utf-8")
+
+    def test_new_original_source_exact_handle_only_not_a_new_owner(self):
+        out = inspect(self.source, self.ledger)
+        self.assertEqual(out["source_status"],
+                         "unreconciled-exact-account-public-auction-claim")
+        self.assertEqual(out["known_name_occurrences"], 0)
+        self.assertEqual(out["created_utc"], "2026-10-11T10:52:15Z")
+        self.assertEqual(out["auction_win_claim_usd"], 400)
+        self.assertEqual(out["other_september_sale_secondhand_claim_usd"], 380)
+        self.assertFalse(out["new_owner_case_confirmed"])
+        self.assertFalse(out["new_sticker_serial_confirmed"])
+
+    def test_known_alias_in_ledger_changes_review_class_not_serial(self):
+        out = inspect(self.source, self.ledger + "\n- U99 Leading_Highlight553")
+        self.assertEqual(out["known_name_occurrences"], 1)
+        self.assertEqual(out["source_status"], "possible-existing-canonical-pseudonym-review")
+        self.assertFalse(out["new_sticker_serial_confirmed"])
+
+    def test_host_post_and_timestamp_invariants(self):
+        with self.assertRaisesRegex(ValueError, "permalink"):
+            inspect({**self.source,
+                     "original_comment_url":
+                     "https://www.reddit.com.evil.example/comments/1vdbrus/_/pf7wee4/"}, self.ledger)
+        with self.assertRaisesRegex(ValueError, "publication date"):
+            inspect({**self.source, "published_timestamp": 1700000000}, self.ledger)
+        with self.assertRaisesRegex(ValueError, "SHA256"):
+            inspect({**self.source, "original_archive_response_sha256": "nonexistent"}, self.ledger)
+
+    def test_sale_claim_not_promoted_to_physical_evidence(self):
+        claim = {**self.source["purchase_claim"], "physical_transaction_status": "verified"}
+        with self.assertRaisesRegex(ValueError, "physical evidence"):
+            inspect({**self.source, "purchase_claim": claim}, self.ledger)
+
+
+if __name__ == "__main__":
+    unittest.main()
