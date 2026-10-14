@@ -21,3 +21,23 @@ jobs:
         with:
           name: experiment-476-source-native-receiver-control
           path: /tmp/experiment-476.json
+      - name: Audit finite CE readout invariance on canonical physical corpus
+        run: python scripts/audit_finite_receiver_invariance.py --output /tmp/finite-receiver-invariance.json
+      - name: Check source-native literal printer-window negative controls
+        run: python scripts/audit_middle_depth_printer_control.py --output /tmp/middle-depth-printer-control.json
+      - name: Check selection-aware A/G image-class coverage null
+        run: python scripts/audit_class_coverage_selection_null.py --output /tmp/class-coverage-selection-null.json
+      - name: Check observation-first A-I triplets without machine assumptions
+        run: python scripts/audit_observation_first_class_triplets.py --output /tmp/observation-first-triplets.json
+      - name: Exhaust URL-digit A-I codebook across physical D4 orientations
+        run: python scripts/audit_url_digit_triplet_d4.py --output /tmp/url-digit-triplet-d4.json
+      - name: Preserve finite receiver research witnesses
+        uses: actions/upload-artifact@v4
+        with:
+          name: finite-receiver-invariance-controls
+          path: |
+            /tmp/finite-receiver-invariance.json
+            /tmp/middle-depth-printer-control.json
+            /tmp/class-coverage-selection-null.json
+            /tmp/observation-first-triplets.json
+            /tmp/url-digit-triplet-d4.json
