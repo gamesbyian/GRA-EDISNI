@@ -4,7 +4,7 @@ Compact index of the canonical Google Results document.
 
 This file intentionally stores titles, not full experiment prose. Use it to answer “have we already done this?” before querying the large archive.
 
-Latest indexed experiment: **481** (with documented numbering gaps).
+Latest indexed experiment: **482** (with documented numbering gaps).
 
 | Experiment | Title |
 | ---: | --- |
@@ -465,6 +465,8 @@ Latest indexed experiment: **481** (with documented numbering gaps).
 | 479 | historical A–I twelve-sticker class-word lever order: alphabetical and native physical class order each can include U/R/L, but original fourteen-move bunker password, all cyclic rotations and reversals, has zero placements respecting the primary 81 U/R-only plus tail 27 U/L-only alphabets. 324 column/Q4-compatible masters independently confirm zero. See `docs/experiment-479-classword-lever-consumer.md`. |
 | 480 | historical Playdead print-button source transport: contemporary June 2018 witness identifies POSTs to `/print/prepare.php` and `/print/index.php`, a returned HTML fragment inserted into `#print-content`, and `window.print()`; empty, wrong and three accepted printout classes recorded. The 2019 publisher's PDF description is compatible with browser-generated printing and does not prove server-generated application/pdf bytes. Original handler, HAR and CE-era accepted response remain unrecovered. See `docs/experiment-480-original-print-transport.md`. |
 | 481 | publisher nine-sketch poster cross-edition source test: official CE AND standalone PS4 listings show the same distinctive `InsideCE_Lifestyle_00014` marketing photograph of the approximately 3x3 sketch poster, though exact physical sheet identity and reverse side are not proven. The repeated promotional scene weakens CE-exclusive poster registration, while confirming a native printed 9-sketch surface. No A–I foreground overlay cue. See `docs/experiment-481-poster-cross-edition-gallery.md`. |
+
+| 482 | six-mapping secret-ending lever alphabet boundary: 6 mappings × 28 orientations × 108 cyclic starts = 18,144 placements, zero compatible under the proposed 81/27 zones. **One rumored mid-primary dot does not rescue direct replay:** even after *dropping zone restrictions entirely*, just one placement satisfies all 66 observed residues and it requires **five hypothetical** dots at residues 49/54/55/61/62. Neither the dot rumor nor these hypothetical marks are authenticated. See `docs/experiment-482-lever-six-mapping-boundary.md`. |
 
 ## Current frontier
 

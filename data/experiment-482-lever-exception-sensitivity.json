@@ -1,0 +1,56 @@
+{
+  "experiment": 482,
+  "mode": "conditional anomaly sensitivity with confirmed observations fixed",
+  "corpus_records": 84,
+  "unique_observed_residues": 66,
+  "placements_scanned": 18144,
+  "physically_observed_compatible_placements": 1,
+  "minimum_out_of_sector_marks_needed": 5,
+  "out_of_sector_exception_count_histogram": {
+    "5": 1
+  },
+  "placements": [
+    {
+      "mapping": {
+        "U": ".",
+        "R": "/",
+        "L": "-"
+      },
+      "reversed": false,
+      "rotation": 9,
+      "start_residue": 49,
+      "rotated_direction_word": "URLLLUURLRRRUU",
+      "observed_support": 6,
+      "required_sector_exceptions": [
+        {
+          "residue": 49,
+          "symbol": "."
+        },
+        {
+          "residue": 54,
+          "symbol": "."
+        },
+        {
+          "residue": 55,
+          "symbol": "."
+        },
+        {
+          "residue": 61,
+          "symbol": "."
+        },
+        {
+          "residue": 62,
+          "symbol": "."
+        }
+      ],
+      "full_14_symbol_window": "./---../-///.."
+    }
+  ],
+  "interpretation": "One tentative extra dot anywhere in positions 1..81 is insufficient to restore a direct known-password placement without contradicting the 66 confirmed residues. The only raw-compatible target instead requires five out-of-sector dots, all presently unobserved. These are necessary requirements, NOT predicted physical stickers.",
+  "limitations": [
+    "Each unexplained exception is not independently documented or authenticated.",
+    "All six bijective maps and 28 orientations were explored; these are not independent confirmation.",
+    "This analysis only applies to the known normal 14-command bunker phrase.",
+    "Newly confirmed stickers must be entered into the canonical observations and rerun."
+  ]
+}
