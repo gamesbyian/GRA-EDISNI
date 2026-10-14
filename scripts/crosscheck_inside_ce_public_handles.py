@@ -47,7 +47,7 @@ def find_explicit_handles(line):
         h=user_handle(u.rstrip(".,;"))
         if h:
             result.add(h)
-    for match in re.finditer(r"\b(?:u/|Reddit user\s+)([A-Za-z0-9_-]{3,30})\b",line,re.I):
+    for match in re.finditer(r"\b(?:u/|Reddit user\s+|Reddit (?:comment|post) from\s+)([A-Za-z0-9_-]{3,30})\b",line,re.I):
         result.add(("reddit",match.group(1).casefold()))
     # Known explicit prose prefix, not just any occurrence of "user".
     for match in re.finditer(r"\bResetEra user\s+([A-Za-z0-9_.-]{3,30})\b",line,re.I):
