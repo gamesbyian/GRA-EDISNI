@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "purpose": "Four low-volume public Arctic Shift keyword slices to diagnose previous 422/429 failures and discover CE evidence; no claim of complete search or novel owners.",
+  "limits": {
+    "max_queries": 4,
+    "max_results_per_query": 15,
+    "max_total_unique_records": 60
+  },
+  "searches": [
+    {
+      "id": "pilot-gamesale-phrase",
+      "kind": "post",
+      "subreddit": "GameSale",
+      "term": "inside collector"
+    },
+    {
+      "id": "pilot-limited-iam8bit",
+      "kind": "post",
+      "subreddit": "limitedprintgames",
+      "term": "iam8bit"
+    },
+    {
+      "id": "pilot-playdead-huddle",
+      "kind": "post",
+      "subreddit": "PlaydeadsInside",
+      "term": "huddle"
+    },
+    {
+      "id": "pilot-collect-realdoll",
+      "kind": "comment",
+      "subreddit": "gamecollecting",
+      "term": "realdoll"
+    }
+  ]
+}
