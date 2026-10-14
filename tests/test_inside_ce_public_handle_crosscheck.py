@@ -11,7 +11,7 @@ spec.loader.exec_module(mod)
 
 SAMPLE = """
 - L08 - https://www.reddit.com/user/Knuckles316/ via dragonslayer875. confirmed lost.
-- [338](images/stickers/338.jpg) (symb: - img: E) - Resetera user juxjuxjux confirmed in public thread.
+- [338](images/stickers/338.jpg) (symb: - img: E) - During a search, I came across this [Resetera post](https://www.resetera.com/threads/a-public-arg-topic.430745/page-5), where on page 5, user juxjuxjux confirmed he bought the CE.
 - L46 - [Reddit user Afaith_1](https://www.reddit.com/r/PlaydeadsInside/s/mPfxvoJOj6) contacted. lost.
 - [470](images/stickers/470.jpg) (symb: / img: B) [Reddit comment from No-Program385](https://www.reddit.com/r/example/comment/a).
 - U47 - [where Reddit user Shaxai confirms two copies](https://www.reddit.com/r/oddheader/comments/1wmvl0x).
