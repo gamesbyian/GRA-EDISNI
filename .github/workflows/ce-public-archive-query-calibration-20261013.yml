@@ -1,0 +1,50 @@
+name: CE four exact archival keyword calibration requests
+
+# One-shot diagnostic. Do not merge.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-public-archive-query-calibration-20261013.yml"
+permissions:
+  contents: read
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Query four low-volume documented public archives (stop on rate limits)
+        run: |
+          python scripts/external_evidence/search_public_reddit_ce_media.py \
+            --manifest data/reference/inside-ce-archive-query-calibration-2026-10-13.json \
+            --max-queries 4 --per-query 15 \
+            --output visual-evidence-work/ce-calibration
+      - name: Print response/status and original public first-person CE candidates
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("visual-evidence-work/ce-calibration")
+          def rows(name,key):
+            f=root/name
+            return json.loads(f.read_text()).get(key,[]) if f.exists() else []
+          for x in rows("search-report.json","searches"):
+            print("CE_ARCHIVE_QUERY_STATUS",json.dumps(x,ensure_ascii=False))
+          for x in rows("review-queue.json","candidates")[:40]:
+            print("CE_ARCHIVE_LEAD",json.dumps({
+              key:x.get(key) for key in
+              ("id","kind","source_page_url","created_utc","subreddit","context_excerpt",
+               "source_status","direct_image_urls","gallery_urls")
+            },ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-archive-keyword-calibration-${{ github.run_id }}
+          path: visual-evidence-work/ce-calibration/
+          retention-days: 21
+          if-no-files-found: warn
