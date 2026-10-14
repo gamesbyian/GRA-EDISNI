@@ -17,6 +17,7 @@ on:
       - "scripts/external_evidence/probe_ce_ebay_cdx.py"
       - "scripts/external_evidence/audit_public_ce_thread_claims.py"
       - "scripts/external_evidence/audit_public_ce_split_sale_leads.py"
+      - "scripts/external_evidence/audit_public_ce_october_auction.py"
       - "scripts/external_evidence/visual_semantic.py"
       - "tests/test_ce_visual_provenance.py"
       - "tests/test_ce_html_image_discovery.py"
@@ -30,6 +31,7 @@ on:
       - "tests/test_ce_ebay_cdx_index.py"
       - "tests/test_ce_public_thread_claims.py"
       - "tests/test_ce_public_split_sale_leads.py"
+      - "tests/test_ce_oct2026_auction_lead.py"
       - "data/reference/inside-ce-visual-sources.json"
       - "data/reference/inside-ce-archived-public-galleries.json"
       - "data/reference/inside-ce-public-reddit-cross-community-queries.json"
@@ -37,6 +39,7 @@ on:
       - "data/reference/inside-ce-curated-known-public-sale-links.json"
       - "data/reference/inside-ce-public-historic-ebay-sale-index.json"
       - "data/reference/inside-ce-2026-disc-retained-acquisition-leads.json"
+      - "data/reference/inside-ce-oct2026-ebay-auction-public-lead.json"
       - "data/reference/inside-ce-visual-historical-pages.json"
       - ".github/workflows/ce-visual-provenance.yml"
   workflow_dispatch:
@@ -121,7 +124,7 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
       - run: python -m unittest discover -s tests -p 'test_ce_*py' -v
-      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py scripts/external_evidence/audit_historic_ebay_ce_sales.py scripts/external_evidence/probe_ce_ebay_wayback.py scripts/external_evidence/probe_ce_ebay_cdx.py scripts/external_evidence/audit_public_ce_thread_claims.py scripts/external_evidence/audit_public_ce_split_sale_leads.py
+      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py scripts/external_evidence/audit_historic_ebay_ce_sales.py scripts/external_evidence/probe_ce_ebay_wayback.py scripts/external_evidence/probe_ce_ebay_cdx.py scripts/external_evidence/audit_public_ce_thread_claims.py scripts/external_evidence/audit_public_ce_split_sale_leads.py scripts/external_evidence/audit_public_ce_october_auction.py
       - name: Index all canonical original sticker photographs and validate source SHA256
         run: |
           mkdir -p /tmp/ce-empty-candidate-set
