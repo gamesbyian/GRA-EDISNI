@@ -12,6 +12,7 @@ import html
 import json
 import re
 import time
+from datetime import date
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -185,9 +186,19 @@ def search_url(entry: dict, limit: int) -> str:
         raise ValueError("invalid source filter")
     if not isinstance(term, str) or not 1 <= len(term) <= 100:
         raise ValueError("invalid search term")
+    after, before = entry.get("after", "2018-01-01"), entry.get("before", "2026-10-14")
+    if not all(isinstance(v, str) and re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}", v)
+               for v in (after, before)):
+        raise ValueError("archive search dates must be YYYY-MM-DD")
+    try:
+        days = (date.fromisoformat(before) - date.fromisoformat(after)).days
+    except ValueError as exc:
+        raise ValueError("invalid archive search calendar date") from exc
+    if not 1 <= days <= (366 if "after" in entry or "before" in entry else 4000):
+        raise ValueError("explicit archive query window must be 1..366 days")
     endpoint = "/api/posts/search" if kind == "post" else "/api/comments/search"
-    parameters = {"subreddit": sub, "sort": "asc", "after": "2018-01-01",
-                  "before": "2026-10-14", "limit": min(limit, 40),
+    parameters = {"subreddit": sub, "sort": "asc", "after": after,
+                  "before": before, "limit": min(limit, 40),
                   "query" if kind == "post" else "body": term}
     return "https://" + API_HOST + endpoint + "?" + urllib.parse.urlencode(parameters)
 
@@ -196,6 +207,7 @@ class ArchiveHTTPFailure(OSError):
     def __init__(self, code: int, detail: str, retry_after: str = ""):
         super().__init__(f"archive HTTP {code}: {detail[:260]}")
         self.code = code
+        self.detail = detail[:350]
         self.retry_after = retry_after[:80]
 
 
@@ -273,7 +285,9 @@ def scan(searches: list[dict], known: dict[str, set[str]], requester=request_jso
                 row["curated_case_ref"] = known.get("case_by_post_id", {}).get(row["post_id"])
                 hits[identity] = row
             audit.append({"search_id": sid, "kind": kind, "subreddit": search["subreddit"],
-                          "term": search["term"], "status": "ok", "archive_sha256": digest,
+                          "term": search["term"], "after": search.get("after", "2018-01-01"),
+                          "before": search.get("before", "2026-10-14"),
+                          "status": "ok", "archive_sha256": digest,
                           "returned": len(rows), "relevant": matched,
                           "page_limit": per_query, "possibly_truncated": len(rows) >= per_query})
         except (OSError, ValueError, urllib.error.URLError) as exc:
@@ -286,9 +300,13 @@ def scan(searches: list[dict], known: dict[str, set[str]], requester=request_jso
                 if exc.code == 429:
                     stopped_reason = "HTTP 429; postponed to a future run (respect Retry-After)"
                 elif exc.code == 422:
-                    consecutive_rejections += 1
-                    if consecutive_rejections >= 3:
-                        stopped_reason = "Three consecutive HTTP 422 query rejections; inspect diagnostics before retry"
+                    if "timeout" in exc.detail.lower():
+                        error["failure_kind"] = "archive-backend-query-timeout"
+                        stopped_reason = "Archive backend reported query timeout; stop and use a narrower date slice next run"
+                    else:
+                        consecutive_rejections += 1
+                        if consecutive_rejections >= 3:
+                            stopped_reason = "Three consecutive HTTP 422 invalid/unsupported queries"
             audit.append(error)
             failures.append(error)
         if requester is request_json and not stopped_reason:
