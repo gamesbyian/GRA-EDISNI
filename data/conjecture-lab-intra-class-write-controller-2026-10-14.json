@@ -1,0 +1,249 @@
+{
+  "mode": "DISCOVER",
+  "date": "2026-10-14",
+  "script": "scripts/conjecture_lab_intra_class_write_controller.py",
+  "physical_records": 84,
+  "unique_residues": 66,
+  "body_observed": 54,
+  "tail_observed": 12,
+  "physical_census": {
+    "slash": 36,
+    "dash": 22,
+    "dot": 8,
+    "unknown": 42
+  },
+  "source_confirmation": "sticker 427 physically confirms dot at H108 residue 103; residue 045 unconfirmed and excluded",
+  "hypothesis": "Nine A-I classes each contain 3 successive 3-bit states, and a 3-cell slash/dot tail selector supplies a write-address repeated under one shared affine coordinate-permutation/XOR rule.",
+  "selector_assumption": "Exactly one slash per class among three tail positions, conditional. There are 18 physically compatible completions.",
+  "model_count": 48,
+  "selected_model": {
+    "permutation": [
+      2,
+      0,
+      1
+    ],
+    "global_complement": 0,
+    "bit_write_schedule": [
+      1,
+      1
+    ]
+  },
+  "errors_by_schedule": {
+    "10": 7,
+    "11": 4,
+    "00": 9,
+    "01": 9
+  },
+  "minimum_contradictions": 4,
+  "contradictory_physical_residues": [
+    12,
+    39,
+    51,
+    72
+  ],
+  "class_local_minima": [
+    {
+      "class": "I",
+      "modulo_nine_column": 0,
+      "tail_selector_options": [
+        0
+      ],
+      "local_min_contradictions": 1,
+      "local_fitted_selector": 0,
+      "contradictory_residues": [
+        72
+      ],
+      "observed_triples": [
+        "//-",
+        " / ",
+        " /-"
+      ]
+    },
+    {
+      "class": "A",
+      "modulo_nine_column": 1,
+      "tail_selector_options": [
+        0,
+        1,
+        2
+      ],
+      "local_min_contradictions": 0,
+      "local_fitted_selector": 2,
+      "contradictory_residues": [],
+      "observed_triples": [
+        " --",
+        " -/",
+        "   "
+      ]
+    },
+    {
+      "class": "B",
+      "modulo_nine_column": 2,
+      "tail_selector_options": [
+        2
+      ],
+      "local_min_contradictions": 0,
+      "local_fitted_selector": 2,
+      "contradictory_residues": [],
+      "observed_triples": [
+        "/ /",
+        "///",
+        "//-"
+      ]
+    },
+    {
+      "class": "C",
+      "modulo_nine_column": 3,
+      "tail_selector_options": [
+        0,
+        1,
+        2
+      ],
+      "local_min_contradictions": 2,
+      "local_fitted_selector": 0,
+      "contradictory_residues": [
+        12,
+        39
+      ],
+      "observed_triples": [
+        "---",
+        "///",
+        "-/-"
+      ]
+    },
+    {
+      "class": "D",
+      "modulo_nine_column": 4,
+      "tail_selector_options": [
+        1
+      ],
+      "local_min_contradictions": 0,
+      "local_fitted_selector": 1,
+      "contradictory_residues": [],
+      "observed_triples": [
+        "-/ ",
+        "-/ ",
+        "  /"
+      ]
+    },
+    {
+      "class": "E",
+      "modulo_nine_column": 5,
+      "tail_selector_options": [
+        0
+      ],
+      "local_min_contradictions": 0,
+      "local_fitted_selector": 0,
+      "contradictory_residues": [],
+      "observed_triples": [
+        "/--",
+        "/  ",
+        "/  "
+      ]
+    },
+    {
+      "class": "F",
+      "modulo_nine_column": 6,
+      "tail_selector_options": [
+        1
+      ],
+      "local_min_contradictions": 1,
+      "local_fitted_selector": 1,
+      "contradictory_residues": [
+        51
+      ],
+      "observed_triples": [
+        " /-",
+        " /-",
+        "///"
+      ]
+    },
+    {
+      "class": "G",
+      "modulo_nine_column": 7,
+      "tail_selector_options": [
+        0,
+        2
+      ],
+      "local_min_contradictions": 0,
+      "local_fitted_selector": 0,
+      "contradictory_residues": [],
+      "observed_triples": [
+        "/  ",
+        " / ",
+        " -/"
+      ]
+    },
+    {
+      "class": "H",
+      "modulo_nine_column": 8,
+      "tail_selector_options": [
+        2
+      ],
+      "local_min_contradictions": 0,
+      "local_fitted_selector": 2,
+      "contradictory_residues": [],
+      "observed_triples": [
+        " /-",
+        " --",
+        " -/"
+      ]
+    }
+  ],
+  "exact_feasible_programs": 0,
+  "null": {
+    "method": "For class/frame/trio, independently shuffle observed slash/dash labels only inside these body grouping units, preserving their known-position masks and symbol census, hold the 27 tail symbols fixed, choose the best of the same 48 models and each permitted class-local 3-bit seed/selector.",
+    "seed_by_method": {
+      "class": 20261015,
+      "frame": 20261016,
+      "trio": 20261017
+    },
+    "replicates_per_method": 10000,
+    "observed_minimum_conflicts": 4,
+    "results": {
+      "class": {
+        "histogram": {
+          "2": 4,
+          "3": 36,
+          "4": 264,
+          "5": 1258,
+          "6": 3231,
+          "7": 3854,
+          "8": 1283,
+          "9": 70
+        },
+        "controls_with_at_most_four_conflicts": 304,
+        "draws": 10000
+      },
+      "frame": {
+        "histogram": {
+          "2": 12,
+          "3": 50,
+          "4": 325,
+          "5": 1321,
+          "6": 3288,
+          "7": 3635,
+          "8": 1280,
+          "9": 88,
+          "10": 1
+        },
+        "controls_with_at_most_four_conflicts": 387,
+        "draws": 10000
+      },
+      "trio": {
+        "histogram": {
+          "3": 20,
+          "4": 167,
+          "5": 970,
+          "6": 3210,
+          "7": 4254,
+          "8": 1347,
+          "9": 32
+        },
+        "controls_with_at_most_four_conflicts": 187,
+        "draws": 10000
+      }
+    }
+  },
+  "interpretation": "All 48 exact decoders are physically inconsistent. Small retrospective near-fit tail fractions are conditional on a model family devised after inspecting the data, and cannot establish authorial encoding."
+}
