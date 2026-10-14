@@ -1,0 +1,365 @@
+{
+  "conditional_minimum_20_write_opcode_footprint": {
+    "best_opcode_masks": [
+      "100111110",
+      "011001011",
+      "011100111"
+    ],
+    "best_selector_vector": [
+      0,
+      2,
+      0,
+      1,
+      0,
+      1,
+      0,
+      2,
+      2
+    ],
+    "joint_body_selector_cases": 864,
+    "max_footprint_histogram": {
+      "6": 34,
+      "7": 202,
+      "8": 406,
+      "9": 222
+    },
+    "minimum_body_optima": 48,
+    "smallest_maximum_opcode_footprint": 6,
+    "smallest_sum_opcode_footprint_with_best_max": 17
+  },
+  "forced_B_to_C_write_indices_0based": [
+    0,
+    2,
+    6
+  ],
+  "matched_controls": {
+    "original_frame9": {
+      "at_most_actual_footprint": 5420,
+      "histogram": {
+        "3": 117,
+        "4": 1516,
+        "5": 3787,
+        "6": 2975,
+        "7": 1239,
+        "8": 331,
+        "9": 35
+      },
+      "median": 5,
+      "samples": 10000
+    },
+    "within_class": {
+      "at_most_actual_footprint": 4171,
+      "histogram": {
+        "3": 34,
+        "4": 866,
+        "5": 3271,
+        "6": 3356,
+        "7": 2077,
+        "8": 379,
+        "9": 17
+      },
+      "median": 6,
+      "samples": 10000
+    }
+  },
+  "observed_forced_transition_masks": [
+    "000010100",
+    "001000101",
+    "100001010",
+    "000001011",
+    "000000010",
+    "010000000",
+    "000010000",
+    "000000010",
+    "000000000"
+  ],
+  "physical": "84 reports / 66 unique H108 residues",
+  "raw_forced_opcode_address_footprint": {
+    "all_18_results": [
+      {
+        "required_max_writable_sites": 5,
+        "selectors": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 5,
+        "selectors": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 5,
+        "selectors": [
+          0,
+          2,
+          1,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 5,
+        "selectors": [
+          0,
+          2,
+          1,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 6,
+        "selectors": [
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 7,
+        "selectors": [
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 6,
+        "selectors": [
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 6,
+        "selectors": [
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 7,
+        "selectors": [
+          1,
+          2,
+          1,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 7,
+        "selectors": [
+          1,
+          2,
+          1,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 6,
+        "selectors": [
+          1,
+          2,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 7,
+        "selectors": [
+          1,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 5,
+        "selectors": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 5,
+        "selectors": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 5,
+        "selectors": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 5,
+        "selectors": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 7,
+        "selectors": [
+          2,
+          2,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "required_max_writable_sites": 7,
+        "selectors": [
+          2,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "minimum_maximum_fixed_opcode_site_count": 5,
+    "witness_selector_positions": [
+      2,
+      2,
+      1,
+      1,
+      0,
+      1,
+      2,
+      2,
+      2
+    ],
+    "witness_writable_sites_zero_based": [
+      [
+        1
+      ],
+      [
+        0,
+        1,
+        3,
+        7,
+        8
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        6
+      ]
+    ]
+  },
+  "status": "conditional one-hot and cyclic-class tape; no identified Playdead grammar"
+}

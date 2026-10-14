@@ -1,0 +1,487 @@
+{
+  "actual": {
+    "best_mismatches": 12,
+    "mismatch_histogram_le14": {
+      "12": 2,
+      "13": 6,
+      "14": 24
+    },
+    "models": 110592,
+    "sampled_best_fit_candidates_not_prespecified": [
+      {
+        "misfits": 18,
+        "permutation": [
+          -1,
+          0,
+          1
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 91,
+        "selectors": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 17,
+        "permutation": [
+          -1,
+          0,
+          1
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 91,
+        "selectors": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 17,
+        "permutation": [
+          -1,
+          0,
+          1
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 158,
+        "selectors": [
+          0,
+          2,
+          1,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 17,
+        "permutation": [
+          -1,
+          0,
+          1
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 229,
+        "selectors": [
+          0,
+          2,
+          1,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 16,
+        "permutation": [
+          -1,
+          0,
+          1
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 82,
+        "selectors": [
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 16,
+        "permutation": [
+          -1,
+          0,
+          1
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 82,
+        "selectors": [
+          1,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 15,
+        "permutation": [
+          -1,
+          1,
+          0
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 111,
+        "selectors": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 15,
+        "permutation": [
+          0,
+          -1,
+          1
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 242,
+        "selectors": [
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 15,
+        "permutation": [
+          0,
+          1,
+          -1
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 173,
+        "selectors": [
+          1,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          1,
+          -1,
+          0
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 91,
+        "selectors": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          1,
+          -1,
+          0
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 91,
+        "selectors": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          1,
+          -1,
+          0
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 91,
+        "selectors": [
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          1,
+          -1,
+          0
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 91,
+        "selectors": [
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          1,
+          -1,
+          0
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 91,
+        "selectors": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          1,
+          -1,
+          0
+        ],
+        "reverse": false,
+        "ring": true,
+        "rule": 91,
+        "selectors": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          -1,
+          0,
+          1
+        ],
+        "reverse": false,
+        "ring": false,
+        "rule": 91,
+        "selectors": [
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          -1,
+          1,
+          0
+        ],
+        "reverse": false,
+        "ring": false,
+        "rule": 60,
+        "selectors": [
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          -1,
+          1,
+          0
+        ],
+        "reverse": false,
+        "ring": false,
+        "rule": 183,
+        "selectors": [
+          1,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          -1,
+          1,
+          0
+        ],
+        "reverse": false,
+        "ring": false,
+        "rule": 60,
+        "selectors": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "misfits": 14,
+        "permutation": [
+          -1,
+          1,
+          0
+        ],
+        "reverse": false,
+        "ring": false,
+        "rule": 183,
+        "selectors": [
+          2,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "survivors": 0
+  },
+  "machine": "C-anchored class-cycle, full 256-rule nonlinear register writer, three tail-chosen read offsets",
+  "null_controls": {
+    "class_word": {
+      "at_most_actual_mismatches": 16,
+      "histogram": {
+        "10": 3,
+        "11": 6,
+        "12": 7,
+        "13": 3,
+        "14": 1
+      },
+      "median": 12,
+      "trials": 20
+    },
+    "nine_site_frame": {
+      "at_most_actual_mismatches": 17,
+      "histogram": {
+        "9": 1,
+        "10": 3,
+        "11": 4,
+        "12": 9,
+        "13": 3
+      },
+      "median": 12,
+      "trials": 20
+    }
+  },
+  "physical": {
+    "records": 84,
+    "unique": 66,
+    "unknown": 42
+  },
+  "status": "DISCOVER/DEVELOP, not an original Playdead codebook"
+}

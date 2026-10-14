@@ -1,0 +1,104 @@
+{
+  "actual": {
+    "control": {
+      "original_frame9": {
+        "at_most_observed": 56,
+        "histogram": {
+          "3": 16,
+          "4": 40,
+          "5": 30,
+          "6": 14
+        },
+        "median": 4,
+        "n": 100
+      },
+      "same_class": {
+        "at_most_observed": 53,
+        "histogram": {
+          "3": 18,
+          "4": 35,
+          "5": 32,
+          "6": 15
+        },
+        "median": 4,
+        "n": 100
+      }
+    },
+    "minimum_per_step_write_capacity": 4,
+    "radii_checked": {
+      "0": {
+        "failed_at": "D",
+        "feasible": false
+      },
+      "1": {
+        "failed_at": "D",
+        "feasible": false
+      },
+      "2": {
+        "failed_at": "D",
+        "feasible": false
+      },
+      "3": {
+        "failed_at": "E",
+        "feasible": false
+      },
+      "4": {
+        "cycle_C_to_C": [
+          "000111010",
+          "010011001",
+          "100111101",
+          "110010111",
+          "100010001",
+          "010000001",
+          "100100101",
+          "100101000",
+          "101111110",
+          "000111010"
+        ],
+        "feasible": true,
+        "minimum_total_changes_under_this_cap": 20,
+        "step_change_counts": [
+          4,
+          4,
+          4,
+          3,
+          3,
+          4,
+          3,
+          4,
+          3
+        ]
+      },
+      "global_minimum_edit_example": {
+        "A_to_B_to_C_to_D_to_E_to_F_to_G_to_H_to_I_to_A_writes": [
+          3,
+          3,
+          4,
+          4,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "A_to_I_states": {
+          "A": "/--/-//--",
+          "B": "/-//////-",
+          "C": "---///-/-",
+          "D": "-/--/--//",
+          "E": "/--//-///",
+          "F": "//-//-///",
+          "G": "//-//-/-/",
+          "H": "//-/--/-/",
+          "I": "/--/--/-/"
+        },
+        "minimum_possible_max_writes_among_all_global_minimum_edit_completions": 4,
+        "total_writes": 20
+      },
+      "unlimited": {
+        "minimum_total_changes": 20
+      }
+    }
+  },
+  "status": "DISCOVER: unrestricted per-step bit writes, not an identified codebook"
+}

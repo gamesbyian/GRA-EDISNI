@@ -1,0 +1,547 @@
+{
+  "actual": {
+    "conditional_unobserved_probabilities": {
+      "1": 1.0,
+      "11": 0.0,
+      "16": 1.0,
+      "22": 0.0,
+      "25": 0.0,
+      "27": 0.0,
+      "28": 1.0,
+      "33": 1.0,
+      "34": 1.0,
+      "35": 1.0,
+      "41": 1.0,
+      "45": 0.0,
+      "49": 0.6666666666666666,
+      "50": 0.3333333333333333,
+      "52": 0.0,
+      "54": 0.5,
+      "55": 1.0,
+      "58": 0.5,
+      "6": 1.0,
+      "61": 1.0,
+      "62": 1.0,
+      "64": 0.5,
+      "67": 1.0,
+      "68": 1.0,
+      "73": 0.5,
+      "77": 1.0,
+      "8": 1.0
+    },
+    "minimum_writes": 20,
+    "per_depth_minimizing_sequences": [
+      [
+        "//--/////"
+      ],
+      [
+        "---/-///-"
+      ],
+      [
+        "-/-------"
+      ],
+      [
+        "///-/////"
+      ],
+      [
+        "-//////--"
+      ],
+      [
+        "///------",
+        "////-----",
+        "/////----",
+        "///-----/",
+        "////----/",
+        "/////---/"
+      ],
+      [
+        "//--/////",
+        "//-//////"
+      ],
+      [
+        "-/////---",
+        "//////---"
+      ],
+      [
+        "---//////",
+        "/--//////"
+      ]
+    ],
+    "per_depth_minimum": [
+      2,
+      4,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "per_depth_optima": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      6,
+      2,
+      2,
+      2
+    ],
+    "total_optimal_body_completions": 48,
+    "uniquely_forced_under_minimum_edits": {
+      "1": "/",
+      "11": "-",
+      "16": "/",
+      "22": "-",
+      "25": "-",
+      "27": "-",
+      "28": "/",
+      "33": "/",
+      "34": "/",
+      "35": "/",
+      "41": "/",
+      "45": "-",
+      "52": "-",
+      "55": "/",
+      "6": "/",
+      "61": "/",
+      "62": "/",
+      "67": "/",
+      "68": "/",
+      "77": "/",
+      "8": "/"
+    }
+  },
+  "holdout": {
+    "brier": 0.2635288065843622,
+    "n": 54,
+    "predictions": [
+      {
+        "actual": "-",
+        "brier": 0.0,
+        "conditional_p_slash": 0.0,
+        "impossible": false,
+        "residue": 10
+      },
+      {
+        "actual": "-",
+        "brier": 0.4444444444444444,
+        "conditional_p_slash": 0.6666666666666666,
+        "impossible": false,
+        "residue": 19
+      },
+      {
+        "actual": "-",
+        "brier": 0.4444444444444444,
+        "conditional_p_slash": 0.6666666666666666,
+        "impossible": false,
+        "residue": 37
+      },
+      {
+        "actual": "/",
+        "brier": 0.11111111111111113,
+        "conditional_p_slash": 0.6666666666666666,
+        "impossible": false,
+        "residue": 46
+      },
+      {
+        "actual": "/",
+        "brier": 0.44444444444444453,
+        "conditional_p_slash": 0.3333333333333333,
+        "impossible": false,
+        "residue": 2
+      },
+      {
+        "actual": "/",
+        "brier": 1.0,
+        "conditional_p_slash": 0.0,
+        "impossible": true,
+        "residue": 20
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 29
+      },
+      {
+        "actual": "/",
+        "brier": 0.25,
+        "conditional_p_slash": 0.5,
+        "impossible": false,
+        "residue": 38
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 47
+      },
+      {
+        "actual": "/",
+        "brier": 0.44444444444444453,
+        "conditional_p_slash": 0.3333333333333333,
+        "impossible": false,
+        "residue": 56
+      },
+      {
+        "actual": "/",
+        "brier": 0.11111111111111113,
+        "conditional_p_slash": 0.6666666666666666,
+        "impossible": false,
+        "residue": 65
+      },
+      {
+        "actual": "-",
+        "brier": 0.1111111111111111,
+        "conditional_p_slash": 0.3333333333333333,
+        "impossible": false,
+        "residue": 74
+      },
+      {
+        "actual": "-",
+        "brier": 0.25,
+        "conditional_p_slash": 0.5,
+        "impossible": false,
+        "residue": 3
+      },
+      {
+        "actual": "-",
+        "brier": 0.4444444444444444,
+        "conditional_p_slash": 0.6666666666666666,
+        "impossible": false,
+        "residue": 12
+      },
+      {
+        "actual": "-",
+        "brier": 0.4444444444444444,
+        "conditional_p_slash": 0.6666666666666666,
+        "impossible": false,
+        "residue": 21
+      },
+      {
+        "actual": "/",
+        "brier": 0.25,
+        "conditional_p_slash": 0.5,
+        "impossible": false,
+        "residue": 30
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 39
+      },
+      {
+        "actual": "/",
+        "brier": 0.0625,
+        "conditional_p_slash": 0.75,
+        "impossible": false,
+        "residue": 48
+      },
+      {
+        "actual": "-",
+        "brier": 1.0,
+        "conditional_p_slash": 1.0,
+        "impossible": true,
+        "residue": 57
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 66
+      },
+      {
+        "actual": "-",
+        "brier": 0.25,
+        "conditional_p_slash": 0.5,
+        "impossible": false,
+        "residue": 75
+      },
+      {
+        "actual": "-",
+        "brier": 0.25,
+        "conditional_p_slash": 0.5,
+        "impossible": false,
+        "residue": 4
+      },
+      {
+        "actual": "/",
+        "brier": 1.0,
+        "conditional_p_slash": 0.0,
+        "impossible": true,
+        "residue": 13
+      },
+      {
+        "actual": "-",
+        "brier": 1.0,
+        "conditional_p_slash": 1.0,
+        "impossible": true,
+        "residue": 31
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 40
+      },
+      {
+        "actual": "/",
+        "brier": 0.44444444444444453,
+        "conditional_p_slash": 0.3333333333333333,
+        "impossible": false,
+        "residue": 76
+      },
+      {
+        "actual": "/",
+        "brier": 0.44444444444444453,
+        "conditional_p_slash": 0.3333333333333333,
+        "impossible": false,
+        "residue": 5
+      },
+      {
+        "actual": "-",
+        "brier": 1.0,
+        "conditional_p_slash": 1.0,
+        "impossible": true,
+        "residue": 14
+      },
+      {
+        "actual": "-",
+        "brier": 0.0,
+        "conditional_p_slash": 0.0,
+        "impossible": false,
+        "residue": 23
+      },
+      {
+        "actual": "/",
+        "brier": 0.6400000000000001,
+        "conditional_p_slash": 0.2,
+        "impossible": false,
+        "residue": 32
+      },
+      {
+        "actual": "/",
+        "brier": 0.11111111111111113,
+        "conditional_p_slash": 0.6666666666666666,
+        "impossible": false,
+        "residue": 59
+      },
+      {
+        "actual": "/",
+        "brier": 0.44444444444444453,
+        "conditional_p_slash": 0.3333333333333333,
+        "impossible": false,
+        "residue": 15
+      },
+      {
+        "actual": "-",
+        "brier": 0.0,
+        "conditional_p_slash": 0.0,
+        "impossible": false,
+        "residue": 24
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 42
+      },
+      {
+        "actual": "-",
+        "brier": 0.16000000000000003,
+        "conditional_p_slash": 0.4,
+        "impossible": false,
+        "residue": 51
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 60
+      },
+      {
+        "actual": "/",
+        "brier": 0.5625,
+        "conditional_p_slash": 0.25,
+        "impossible": false,
+        "residue": 69
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 78
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 7
+      },
+      {
+        "actual": "/",
+        "brier": 0.25,
+        "conditional_p_slash": 0.5,
+        "impossible": false,
+        "residue": 43
+      },
+      {
+        "actual": "-",
+        "brier": 0.25,
+        "conditional_p_slash": 0.5,
+        "impossible": false,
+        "residue": 70
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 79
+      },
+      {
+        "actual": "/",
+        "brier": 0.44444444444444453,
+        "conditional_p_slash": 0.3333333333333333,
+        "impossible": false,
+        "residue": 17
+      },
+      {
+        "actual": "-",
+        "brier": 0.0,
+        "conditional_p_slash": 0.0,
+        "impossible": false,
+        "residue": 26
+      },
+      {
+        "actual": "-",
+        "brier": 0.4444444444444444,
+        "conditional_p_slash": 0.6666666666666666,
+        "impossible": false,
+        "residue": 44
+      },
+      {
+        "actual": "-",
+        "brier": 0.25,
+        "conditional_p_slash": 0.5,
+        "impossible": false,
+        "residue": 53
+      },
+      {
+        "actual": "-",
+        "brier": 0.0,
+        "conditional_p_slash": 0.0,
+        "impossible": false,
+        "residue": 71
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 80
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 9
+      },
+      {
+        "actual": "-",
+        "brier": 0.25,
+        "conditional_p_slash": 0.5,
+        "impossible": false,
+        "residue": 18
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 36
+      },
+      {
+        "actual": "/",
+        "brier": 0.0,
+        "conditional_p_slash": 1.0,
+        "impossible": false,
+        "residue": 63
+      },
+      {
+        "actual": "-",
+        "brier": 0.1111111111111111,
+        "conditional_p_slash": 0.3333333333333333,
+        "impossible": false,
+        "residue": 72
+      },
+      {
+        "actual": "/",
+        "brier": 0.11111111111111113,
+        "conditional_p_slash": 0.6666666666666666,
+        "impossible": false,
+        "residue": 81
+      }
+    ],
+    "zero_probability_wrong": 5
+  },
+  "null_controls": {
+    "native_frame9": {
+      "histogram": {
+        "18": 11,
+        "20": 151,
+        "22": 733,
+        "24": 1999,
+        "26": 2924,
+        "28": 2590,
+        "30": 1297,
+        "32": 273,
+        "34": 22
+      },
+      "less_or_equal_observed": 162,
+      "mean": 26.4258,
+      "trials": 10000
+    },
+    "within_class": {
+      "histogram": {
+        "12": 1,
+        "14": 1,
+        "16": 19,
+        "18": 75,
+        "20": 287,
+        "22": 846,
+        "24": 1492,
+        "26": 2273,
+        "28": 2211,
+        "30": 1631,
+        "32": 775,
+        "34": 291,
+        "36": 85,
+        "38": 13
+      },
+      "less_or_equal_observed": 383,
+      "mean": 27.0024,
+      "trials": 10000
+    }
+  },
+  "physical": {
+    "body_unique": 54,
+    "body_unknown": 27,
+    "observed_unique": 66
+  },
+  "status": "DISCOVER; minimum-cyclic-write hypothesis not an original code"
+}

@@ -1,0 +1,480 @@
+{
+  "first_40_better_alternative_cycles": [
+    [
+      "ABCDFGHEI",
+      18
+    ],
+    [
+      "ABCDFGHIE",
+      18
+    ],
+    [
+      "ABCFDGHEI",
+      18
+    ],
+    [
+      "ABCFDGHIE",
+      18
+    ],
+    [
+      "ABECDFGHI",
+      18
+    ],
+    [
+      "ABECFDGHI",
+      18
+    ],
+    [
+      "AEBCDFGHI",
+      18
+    ],
+    [
+      "AEBCFDGHI",
+      18
+    ],
+    [
+      "AEGBCDFHI",
+      18
+    ],
+    [
+      "AEGBCFDHI",
+      18
+    ],
+    [
+      "AEGIBCDFH",
+      18
+    ],
+    [
+      "AEGIBCFDH",
+      18
+    ],
+    [
+      "AEHDFCBGI",
+      18
+    ],
+    [
+      "AEHDFCBIG",
+      18
+    ],
+    [
+      "AEHFDCBGI",
+      18
+    ],
+    [
+      "AEHFDCBIG",
+      18
+    ],
+    [
+      "AEHGDFCBI",
+      18
+    ],
+    [
+      "AEHGFDCBI",
+      18
+    ],
+    [
+      "AEIBCDFGH",
+      18
+    ],
+    [
+      "AEIBCFDGH",
+      18
+    ],
+    [
+      "AEIGBCDFH",
+      18
+    ],
+    [
+      "AEIGBCFDH",
+      18
+    ],
+    [
+      "AEIHDFCBG",
+      18
+    ],
+    [
+      "AEIHFDCBG",
+      18
+    ],
+    [
+      "AGBCDFHEI",
+      18
+    ],
+    [
+      "AGBCFDHEI",
+      18
+    ],
+    [
+      "AGBECDFHI",
+      18
+    ],
+    [
+      "AGBECFDHI",
+      18
+    ],
+    [
+      "AGEBCDFHI",
+      18
+    ],
+    [
+      "AGEBCFDHI",
+      18
+    ],
+    [
+      "AGEIBCDFH",
+      18
+    ],
+    [
+      "AGEIBCFDH",
+      18
+    ],
+    [
+      "AGIBECDFH",
+      18
+    ],
+    [
+      "AGIBECFDH",
+      18
+    ],
+    [
+      "AGIEBCDFH",
+      18
+    ],
+    [
+      "AGIEBCFDH",
+      18
+    ],
+    [
+      "AHDFCBEGI",
+      18
+    ],
+    [
+      "AHDFCBGEI",
+      18
+    ],
+    [
+      "AHDFCEBGI",
+      18
+    ],
+    [
+      "AHFDCBEGI",
+      18
+    ]
+  ],
+  "first_45_at_most_native": [
+    [
+      "ABCDEFGHI",
+      20
+    ],
+    [
+      "ABCDFEGHI",
+      20
+    ],
+    [
+      "ABCDFEGIH",
+      20
+    ],
+    [
+      "ABCDFEIGH",
+      20
+    ],
+    [
+      "ABCDFGEHI",
+      20
+    ],
+    [
+      "ABCDFGEIH",
+      20
+    ],
+    [
+      "ABCDFGHEI",
+      18
+    ],
+    [
+      "ABCDFGHIE",
+      18
+    ],
+    [
+      "ABCDFGIEH",
+      20
+    ],
+    [
+      "ABCDFGIHE",
+      20
+    ],
+    [
+      "ABCDFHEGI",
+      20
+    ],
+    [
+      "ABCDFHEIG",
+      20
+    ],
+    [
+      "ABCDFHGEI",
+      20
+    ],
+    [
+      "ABCDFHGIE",
+      20
+    ],
+    [
+      "ABCDFHIEG",
+      20
+    ],
+    [
+      "ABCDFHIGE",
+      20
+    ],
+    [
+      "ABCDFIEGH",
+      20
+    ],
+    [
+      "ABCDFIGEH",
+      20
+    ],
+    [
+      "ABCDFIGHE",
+      20
+    ],
+    [
+      "ABCDGFHEI",
+      20
+    ],
+    [
+      "ABCDGFHIE",
+      20
+    ],
+    [
+      "ABCEDFGHI",
+      20
+    ],
+    [
+      "ABCEFDGHI",
+      20
+    ],
+    [
+      "ABCEFGDHI",
+      20
+    ],
+    [
+      "ABCFDEGHI",
+      20
+    ],
+    [
+      "ABCFDEGIH",
+      20
+    ],
+    [
+      "ABCFDEIGH",
+      20
+    ],
+    [
+      "ABCFDGEHI",
+      20
+    ],
+    [
+      "ABCFDGEIH",
+      20
+    ],
+    [
+      "ABCFDGHEI",
+      18
+    ],
+    [
+      "ABCFDGHIE",
+      18
+    ],
+    [
+      "ABCFDGIEH",
+      20
+    ],
+    [
+      "ABCFDGIHE",
+      20
+    ],
+    [
+      "ABCFDHEGI",
+      20
+    ],
+    [
+      "ABCFDHEIG",
+      20
+    ],
+    [
+      "ABCFDHGEI",
+      20
+    ],
+    [
+      "ABCFDHGIE",
+      20
+    ],
+    [
+      "ABCFDHIEG",
+      20
+    ],
+    [
+      "ABCFDHIGE",
+      20
+    ],
+    [
+      "ABCFDIEGH",
+      20
+    ],
+    [
+      "ABCFDIGEH",
+      20
+    ],
+    [
+      "ABCFDIGHE",
+      20
+    ],
+    [
+      "ABCFGDHEI",
+      20
+    ],
+    [
+      "ABCFGDHIE",
+      20
+    ],
+    [
+      "ABCFHDEGI",
+      20
+    ]
+  ],
+  "histogram": {
+    "18": 46,
+    "20": 360,
+    "22": 1602,
+    "24": 3972,
+    "26": 5494,
+    "28": 5140,
+    "30": 2706,
+    "32": 768,
+    "34": 72
+  },
+  "leave_one_class_out_rank": {
+    "A": {
+      "at_most_native": 223,
+      "circular_orders": 2520,
+      "native_cost_without_class": 20,
+      "strictly_better": 30
+    },
+    "B": {
+      "at_most_native": 230,
+      "circular_orders": 2520,
+      "native_cost_without_class": 18,
+      "strictly_better": 36
+    },
+    "C": {
+      "at_most_native": 523,
+      "circular_orders": 2520,
+      "native_cost_without_class": 18,
+      "strictly_better": 78
+    },
+    "D": {
+      "at_most_native": 56,
+      "circular_orders": 2520,
+      "native_cost_without_class": 16,
+      "strictly_better": 0
+    },
+    "E": {
+      "at_most_native": 10,
+      "circular_orders": 2520,
+      "native_cost_without_class": 18,
+      "strictly_better": 0
+    },
+    "F": {
+      "at_most_native": 305,
+      "circular_orders": 2520,
+      "native_cost_without_class": 20,
+      "strictly_better": 31
+    },
+    "G": {
+      "at_most_native": 114,
+      "circular_orders": 2520,
+      "native_cost_without_class": 20,
+      "strictly_better": 16
+    },
+    "H": {
+      "at_most_native": 521,
+      "circular_orders": 2520,
+      "native_cost_without_class": 20,
+      "strictly_better": 96
+    },
+    "I": {
+      "at_most_native": 149,
+      "circular_orders": 2520,
+      "native_cost_without_class": 20,
+      "strictly_better": 16
+    }
+  },
+  "min_possible_cost": 18,
+  "mosaic_scans": {
+    "scores": [
+      {
+        "cost": 20,
+        "mirror": false,
+        "rotation": 2,
+        "scan": "HGFEDCBAI",
+        "snake": false
+      },
+      {
+        "cost": 22,
+        "mirror": false,
+        "rotation": 2,
+        "scan": "HGFCDEBAI",
+        "snake": true
+      },
+      {
+        "cost": 26,
+        "mirror": true,
+        "rotation": 2,
+        "scan": "FGHCDEIAB",
+        "snake": false
+      },
+      {
+        "cost": 26,
+        "mirror": true,
+        "rotation": 2,
+        "scan": "FGHEDCIAB",
+        "snake": true
+      },
+      {
+        "cost": 28,
+        "mirror": false,
+        "rotation": 3,
+        "scan": "BEHADGICF",
+        "snake": false
+      },
+      {
+        "cost": 28,
+        "mirror": false,
+        "rotation": 3,
+        "scan": "BEHGDAICF",
+        "snake": true
+      },
+      {
+        "cost": 30,
+        "mirror": true,
+        "rotation": 3,
+        "scan": "ICFADGBEH",
+        "snake": false
+      },
+      {
+        "cost": 30,
+        "mirror": true,
+        "rotation": 3,
+        "scan": "ICFGDABEH",
+        "snake": true
+      }
+    ],
+    "unique_unoriented_scans": 8
+  },
+  "native_ABC_cycle_cost": 20,
+  "number_at_most_native": 406,
+  "number_below_native": 46,
+  "number_equal_native": 360,
+  "unoriented_cyclic_orders": 20160
+}

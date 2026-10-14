@@ -1,0 +1,133 @@
+{
+  "compatible_examples": [],
+  "exact": {
+    "best_free_vars": -1,
+    "grammar_count": 1440,
+    "max_rank": 0,
+    "survivors": 0
+  },
+  "forced_transition_changes": [
+    {
+      "forced_changes": 2,
+      "forced_equal": 1,
+      "transition": "A\u2192B",
+      "unresolved": 6
+    },
+    {
+      "forced_changes": 3,
+      "forced_equal": 5,
+      "transition": "B\u2192C",
+      "unresolved": 1
+    },
+    {
+      "forced_changes": 3,
+      "forced_equal": 2,
+      "transition": "C\u2192D",
+      "unresolved": 4
+    },
+    {
+      "forced_changes": 3,
+      "forced_equal": 0,
+      "transition": "D\u2192E",
+      "unresolved": 6
+    },
+    {
+      "forced_changes": 1,
+      "forced_equal": 2,
+      "transition": "E\u2192F",
+      "unresolved": 6
+    },
+    {
+      "forced_changes": 1,
+      "forced_equal": 2,
+      "transition": "F\u2192G",
+      "unresolved": 6
+    },
+    {
+      "forced_changes": 1,
+      "forced_equal": 2,
+      "transition": "G\u2192H",
+      "unresolved": 6
+    },
+    {
+      "forced_changes": 1,
+      "forced_equal": 2,
+      "transition": "H\u2192I",
+      "unresolved": 6
+    },
+    {
+      "forced_changes": 0,
+      "forced_equal": 1,
+      "transition": "I\u2192A",
+      "unresolved": 8
+    }
+  ],
+  "machine": {
+    "feedback_functions": [
+      "prev_rot_xor_current",
+      "cur_rot_xor_prev",
+      "prev_cur_rot_xor",
+      "toggle_prev_pair"
+    ],
+    "global_invert": 2,
+    "registers": 9,
+    "reverse": 2,
+    "shift_sets": [
+      [
+        -1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        3,
+        6
+      ],
+      [
+        -3,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        3
+      ]
+    ],
+    "state_bits": 9,
+    "tail_selector_vectors": 18
+  },
+  "matched_controls": {
+    "class": {
+      "ge_observed": 25,
+      "histogram": {
+        "0": 25
+      },
+      "maximum": 0,
+      "median": 0,
+      "n": 25,
+      "num_with_survivors": 0
+    },
+    "frame9": {
+      "ge_observed": 25,
+      "histogram": {
+        "0": 25
+      },
+      "maximum": 0,
+      "median": 0,
+      "n": 25,
+      "num_with_survivors": 0
+    }
+  },
+  "physical": {
+    "distinct": 66,
+    "records": 84,
+    "unknown": 42
+  },
+  "status": "DISCOVER/DEVELOP only; invented global feedback; no decoded CE message"
+}
