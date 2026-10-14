@@ -1,0 +1,93 @@
+name: CE public PicClick historical eBay item-ID archive probe
+
+# Exact known public resale IDs only. Never merge this execution workflow.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/ce-picclick-historical-id-pilot.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  picclick-exact-id:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check beautifulsoup4
+      - name: Test PicClick direct eBay ID archive resolution with two known controls
+        run: |
+          mkdir -p visual-evidence-work/picclick-id-probe
+          python - <<'PY'
+          import hashlib,json,re,time,urllib.request,urllib.error,urllib.parse
+          from pathlib import Path
+          from bs4 import BeautifulSoup
+          # Control: known original /047 and /223 eBay sources.
+          # Discovery: two of seven exact unexplored historic PriceCharting eBay IDs.
+          sources=[
+            ("known-047","257753799919"),
+            ("known-223","297682348686"),
+            ("unreconciled-2026-mar","389713956842"),
+            ("unreconciled-2023-nov","335133327762"),
+          ]
+          out=[]
+          for label,id in sources:
+            url="https://picclick.com/Inside-Collector-Edition-"+id+".html"
+            rec={"source_id":label,"ebay_item_id":id,"attempt_url":url,
+                 "classification":"public-original-item-metadata-only"}
+            try:
+              req=urllib.request.Request(url,headers={
+                "User-Agent":"Mozilla/5.0 (compatible; PublicCEArchiveReview/1.0)",
+                "Accept":"text/html"})
+              with urllib.request.urlopen(req,timeout=20) as response:
+                raw=response.read(1_500_001)
+                parsed=urllib.parse.urlparse(response.url)
+                if parsed.hostname not in {"picclick.com","www.picclick.com"}:
+                  raise ValueError("PicClick redirect to unapproved host")
+                if len(raw)>1_500_000:
+                  raise ValueError("response above bounded limit")
+                rec.update(http_status=response.status,final_url=response.url,
+                           content_type=response.headers.get_content_type(),
+                           byte_count=len(raw),source_sha256=hashlib.sha256(raw).hexdigest())
+              html=raw.decode("utf-8","replace")
+              soup=BeautifulSoup(html,"html.parser")
+              rec["page_title"]=soup.title.get_text(" ",strip=True)[:240] if soup.title else ""
+              def meta(property_name):
+                el=soup.find("meta",attrs={"property":property_name}) or soup.find("meta",attrs={"name":property_name})
+                return (el.get("content","")[:1200] if el else "")
+              rec["og_description"]=meta("og:description")
+              rec["og_image"]=meta("og:image")
+              rec["visible_excerpt"]=soup.get_text(" ",strip=True)[:700]
+              rec["html_contains_own_id"]=id in html
+              rec["photo_urls"]=list(dict.fromkeys(
+                 el.get("src") or el.get("data-src") for el in soup.find_all("img",limit=18)
+                 if el.get("src") or el.get("data-src")))[:10]
+              if rec["http_status"]==200 and id in html and "404" not in rec["page_title"]:
+                rec["status"]="possible-public-item-page-review"
+              else:
+                rec["status"]="not-verified-original-item"
+            except urllib.error.HTTPError as exc:
+              rec.update(status="HTTP-failure",http_status=exc.code,reason=str(exc)[:150])
+              if exc.code==429:
+                out.append(rec);break
+            except Exception as exc:
+              rec.update(status="unavailable",reason=str(exc)[:180])
+            out.append(rec)
+            print("PICCLICK_ID_RECOVERY",json.dumps(rec,ensure_ascii=False)[:17000],flush=True)
+            time.sleep(2)
+          result={"schema_version":1,"sources":out,
+                  "note":"PicClick public item URL response alone cannot prove corresponding original eBay item, seller's photographs or any sticker."}
+          Path("visual-evidence-work/picclick-id-probe/report.json").write_text(
+            json.dumps(result,indent=2,ensure_ascii=False)+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-picclick-exact-id-pilot-${{ github.run_id }}
+          path: visual-evidence-work/picclick-id-probe/
+          retention-days: 21
+          if-no-files-found: warn
