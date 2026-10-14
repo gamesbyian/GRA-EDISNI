@@ -6,6 +6,9 @@ This file intentionally stores titles, not full experiment prose. Use it to answ
 
 Latest indexed experiment: **482** (with documented numbering gaps).
 
+**Unnumbered conjecture audit CL-BAR-01 (2026-10-13):** [Code 128 / GTIN CE intake and width-pattern null](conjecture-lab/2026-10-13-code128-gs1-ce-audit.md). Across 288 fitted width/direction/phase mappings, zero are compatible with all observed H108 positions (best still contradicts 3 Code 128 character chunks); both 500-shuffle null families fit at least as well in nearly all trials. Barcode-origin/scan identity remains missing; this does not allocate or supersede a numbered experiment.
+
+
 | Experiment | Title |
 | ---: | --- |
 | 1 | symbol dependence on the nine image classes |

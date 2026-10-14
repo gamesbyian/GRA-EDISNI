@@ -1,0 +1,25 @@
+name: Barcode sticker interpretation audit
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/conjecture_lab_code128_widths.py'
+      - 'scripts/inspect_arg_barcodes.py'
+      - 'tests/test_inspect_arg_barcodes.py'
+      - 'data/observations.csv'
+      - 'data/conjecture-lab-code128-widths-2026-10-13.json'
+      - '.github/workflows/verify-code128-stickers.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify barcode grammar and payload parser
+        run: |
+          python -m unittest discover -s tests -p test_inspect_arg_barcodes.py -v
+          python scripts/conjecture_lab_code128_widths.py --selftest
+      - name: Replay physically masked Code 128 comparison with both controls
+        run: |
+          python scripts/conjecture_lab_code128_widths.py --controls 500 --output /tmp/barcode-report.json
+          diff -u data/conjecture-lab-code128-widths-2026-10-13.json /tmp/barcode-report.json

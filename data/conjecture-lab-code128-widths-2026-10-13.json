@@ -1,0 +1,210 @@
+{
+  "actual": {
+    "best_fitted_examples": [
+      {
+        "chunks": 18,
+        "compatible_chunks": 15,
+        "compatible_patterns_per_chunk": [
+          1,
+          1,
+          0,
+          0,
+          5,
+          6,
+          1,
+          1,
+          1,
+          2,
+          6,
+          0,
+          1,
+          6,
+          1,
+          4,
+          6,
+          14
+        ],
+        "direction": "serial_ascending",
+        "glyph_to_width": {
+          "-": 3,
+          ".": 2,
+          "/": 1
+        },
+        "incompatible_chunks": 3,
+        "log2_ratio_if_compatible": null,
+        "phase": 0
+      },
+      {
+        "chunks": 17,
+        "compatible_chunks": 14,
+        "compatible_patterns_per_chunk": [
+          3,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          2,
+          6,
+          6,
+          6,
+          1,
+          0,
+          10,
+          0,
+          0,
+          13
+        ],
+        "direction": "serial_ascending",
+        "glyph_to_width": {
+          "-": 2,
+          ".": 3,
+          "/": 1
+        },
+        "incompatible_chunks": 3,
+        "log2_ratio_if_compatible": null,
+        "phase": 3
+      },
+      {
+        "chunks": 17,
+        "compatible_chunks": 14,
+        "compatible_patterns_per_chunk": [
+          3,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          2,
+          6,
+          6,
+          6,
+          1,
+          0,
+          4,
+          0,
+          0,
+          3
+        ],
+        "direction": "serial_ascending",
+        "glyph_to_width": {
+          "-": 2,
+          ".": 4,
+          "/": 1
+        },
+        "incompatible_chunks": 3,
+        "log2_ratio_if_compatible": null,
+        "phase": 3
+      },
+      {
+        "chunks": 17,
+        "compatible_chunks": 14,
+        "compatible_patterns_per_chunk": [
+          33,
+          2,
+          4,
+          4,
+          1,
+          0,
+          1,
+          6,
+          4,
+          1,
+          1,
+          1,
+          6,
+          2,
+          0,
+          0,
+          4
+        ],
+        "direction": "serial_descending",
+        "glyph_to_width": {
+          "-": 3,
+          ".": 2,
+          "/": 1
+        },
+        "incompatible_chunks": 3,
+        "log2_ratio_if_compatible": null,
+        "phase": 1
+      }
+    ],
+    "fully_compatible_models": 0,
+    "incompatible_chunk_histogram": {
+      "10": 24,
+      "11": 20,
+      "12": 23,
+      "13": 42,
+      "14": 33,
+      "15": 19,
+      "16": 5,
+      "17": 1,
+      "3": 4,
+      "4": 14,
+      "5": 13,
+      "6": 26,
+      "7": 23,
+      "8": 21,
+      "9": 20
+    },
+    "min_incompatible_chunks": 3,
+    "models_tying_minimum": 4,
+    "total_models": 288
+  },
+  "fitted_parameter_count": 288,
+  "limitations": [
+    "Not a full Code128 validation; segments lack mandated start/stop/checksum.",
+    "The class-to-width, phase, and direction are fitted post hoc; report matched controls.",
+    "Unobserved cells may admit many completions; zero incompatible chunks is weak evidence.",
+    "A 108-entry symbol dictionary, keying, or actual photographed barcode is a distinct hypothesis.",
+    "No barcode from the Discord discussion was supplied for decoding; screenshot contains specification text only."
+  ],
+  "model": "Three glyphs injectively mapped to three of four Code128 element widths; permute 24 maps, two directions, six phases; ignore unmatched leading/trailing elements",
+  "null_controls": {
+    "frame_preserving": {
+      "controls_at_least_as_compatible": 500,
+      "fraction_at_least_as_compatible": 1.0,
+      "iterations": 500,
+      "minimum_incompatibility_histogram": {
+        "1": 28,
+        "2": 342,
+        "3": 130
+      },
+      "zero_incompatibility_control_count": 0
+    },
+    "region_preserving": {
+      "controls_at_least_as_compatible": 497,
+      "fraction_at_least_as_compatible": 0.994,
+      "iterations": 500,
+      "minimum_incompatibility_histogram": {
+        "0": 5,
+        "1": 88,
+        "2": 270,
+        "3": 134,
+        "4": 3
+      },
+      "zero_incompatibility_control_count": 5
+    }
+  },
+  "null_seed": 128108,
+  "physical_length_rejections": {
+    "note": "Includes start, modulo-103 check, stop; GS1 additionally FNC1. Quiet zones add at least 20 modules and also do not rescue 108.",
+    "raw_108_modules_full_code128_without_quiet_zone": "108 != 35 + 11*N for any nonnegative integer N",
+    "raw_108_modules_full_gs1_128_without_quiet_zone": "108 != 46 + 11*N for any nonnegative integer N"
+  },
+  "provenance": {
+    "observed_symbol_counts": {
+      "-": 22,
+      ".": 8,
+      "/": 36
+    },
+    "physical_records": 84,
+    "unique_residues": 66,
+    "unobserved_residues": 42
+  },
+  "research_mode": "DISCOVER",
+  "schema_version": 1,
+  "source": "observations.csv"
+}

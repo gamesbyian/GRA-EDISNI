@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-13",
+  "scope": "Public third-party product-identifier metadata, not verified scans or CE sticker observations",
+  "artifacts": [
+    {
+      "id": "INSIDE-PS4-standalone-listed-UPC",
+      "object_class": "standalone iam8bit PS4 physical release",
+      "reported_symbology": "UPC-A",
+      "reported_value": "850971008532",
+      "check_digit": "valid (computed 2; recorded 2)",
+      "physical_barcode_scan_confirmed": false,
+      "first_party_registration_confirmed": false,
+      "sources": [
+        {
+          "url": "https://www.pricecharting.com/game/playstation-4/inside",
+          "what": "Product metadata lists UPC 850971008532"
+        },
+        {
+          "url": "https://www.ebay.com/itm/226923122130",
+          "what": "Seller listing metadata supplies same UPC for PS4 standalone"
+        }
+      ],
+      "limitation": "The enclosure of a disc/case in a CE is stated by iam8bit, but the actual CE-enclosed case's exact printed barcode has not been independently read."
+    },
+    {
+      "id": "INSIDE-full-CE-premium-box-UPC",
+      "object_class": "Collector's Edition premium outer packaging",
+      "reported_value": null,
+      "physical_barcode_scan_confirmed": false,
+      "first_party_registration_confirmed": false,
+      "sources": [
+        {
+          "url": "https://www.pricecharting.com/game/playstation-4/inside-collector%27s-edition",
+          "what": "Separate product entry says UPC: none, meaning unrecorded by this catalogue"
+        }
+      ],
+      "limitation": "No UPC in this retail-price catalogue is not evidence that no barcode was printed on the physical box."
+    }
+  ],
+  "separation_rule": "Do not conflate actual Code 128/GS1-128 decoded text with this third-party UPC-A listing, or the standard PS4 case with full CE packaging.",
+  "consequence": "No observed identification of the barcode Discord participant used, and no source-cued mapping from UPC digits to stickers."
+}
