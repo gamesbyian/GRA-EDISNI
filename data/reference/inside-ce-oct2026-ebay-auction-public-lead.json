@@ -31,10 +31,28 @@
     "possible_other_alias_or_prior_transfer": true,
     "not_proof_of_additional_copy": true,
     "not_known_sticker_number": true,
-    "no_outreach": true
+    "no_outreach": true,
+    "possible_same_as_september_sticker_047_listing": "unproven price/date near-match only; do not merge without same source/item"
   },
   "status": "high-priority-unreconciled-public-self-reported-ce-auction-acquisition",
   "photo_evidence": "none",
   "serial_evidence": "none",
-  "recommendation": "Give raezores original public comment ID and auction claims for reconciliation with their October 2026 seller listing records, but do not claim a new copy or serial until an original listing, serial or transfer chain is established."
+  "recommendation": "Give raezores original public comment ID and auction claims for reconciliation with their October 2026 seller listing records, but do not claim a new copy or serial until an original listing, serial or transfer chain is established.",
+  "complete_public_original_review": {
+    "run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38494075387",
+    "comment_text_sha256": "f72d3eef5cbb8afbcc6b4acedfc3951bf7bdf0260f4e7060392460412a200149",
+    "comment_character_count": 4603,
+    "outbound_urls_in_comment": 0,
+    "candidate_ebay_item_numbers_in_comment": 0,
+    "auction_first_seen_relative_to_comment": "about a week earlier, approximately 2026-10-04; exact date uncertain",
+    "seller_photo_link_recovered": false
+  },
+  "public_marketplace_photo_recovery": {
+    "evidence_file": "data/reference/inside-ce-oct2026-public-auction-media-recovery-audit.json",
+    "exact_eBay_sale_listing_id_recovered": false,
+    "seller_original_image_recovered": false,
+    "ebay_public_search_status": "three HTTP 403 responses",
+    "picclick_public_search_status": "HTTP 200, no full Collector's Edition candidate identified",
+    "picclick_exact_id_probe_status": "four HTTP 403 responses, including known item controls"
+  }
 }

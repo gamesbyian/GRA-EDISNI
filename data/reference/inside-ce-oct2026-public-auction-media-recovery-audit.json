@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "report_date": "2026-10-13",
+  "target_original_source": "https://www.reddit.com/comments/1vdbrus/_/pf7wee4/",
+  "purchase_claim": "Unopened INSIDE CE, $400 winning eBay auction, free shipping, no competing bidders; buyer's self-report, not independent delivery/seller verification.",
+  "primary_archive": {
+    "run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38494075387",
+    "public_comment_id": "pf7wee4",
+    "exact_comment_sha256": "f72d3eef5cbb8afbcc6b4acedfc3951bf7bdf0260f4e7060392460412a200149",
+    "original_text_characters": 4603,
+    "original_outbound_urls": [],
+    "original_ebay_item_ids": [],
+    "direct_replies": 0,
+    "original_comment_created_utc": 1791715935,
+    "rough_original_listing_first_seen": "~2026-10-04 according to author saying 'a week ago'; exact date unknown",
+    "original_auction_closure": "before comment of 2026-10-11T10:52:15Z; exact date unknown",
+    "independent_auction_listing_recovered": false
+  },
+  "bounded_public_marketplace_test": {
+    "run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38493783965",
+    "ebay_sold_searches": {
+      "query_count": 3,
+      "all_http_status": 403,
+      "status": "blocked-access-not-a-negative-census",
+      "note": "Public eBay HTML search responses denied access, no item or image extracted"
+    },
+    "picclick_search": {
+      "url": "https://picclick.com/?q=inside+iam8bit",
+      "http_status": 200,
+      "raw_page_sha256": "641729afb2dcd3e44fc35926e33f089f94fa99d9565fedaf862aba15b534f3fd",
+      "result_ids": [
+        "147632657006",
+        "157829305544"
+      ],
+      "classification": "PS4-only game listings by title, not verified full Huddle CE; no October $400 auction",
+      "item_ids_not_independent_ce_proof": true,
+      "title_only_not_image_verified": true
+    }
+  },
+  "historical_picclick_id_resolution": {
+    "run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38494287559",
+    "method": "Four exact known public eBay IDs rendered as PicClick direct detail URLs with synthetic title slug",
+    "attempted_item_ids": [
+      "257753799919",
+      "297682348686",
+      "389713956842",
+      "335133327762"
+    ],
+    "statuses": [
+      403,
+      403,
+      403,
+      403
+    ],
+    "interpretation": "Cannot distinguish noncanonical slug rejection from site item-page access restrictions; cannot infer older listings absent."
+  },
+  "possible_september_reconciliation": {
+    "original_buyers_secondhand_reported_sale_usd_approx": 380,
+    "known_existing_september_eBay_source": "https://www.ebay.com/itm/257753799919",
+    "canonical_sticker_case": "/047",
+    "known_source_asking_price_usd": 375,
+    "known_source_public_shipping_usd": 13.99,
+    "evidence_relationship": "unverified temporal/price near-match only",
+    "no_evidence_same_auction": true,
+    "no_evidence_listing_sold": true,
+    "count_as_new_copy": false
+  },
+  "source_evidence_grade": "buyer self-report corroborated as original public statement; no original auction/media/serial verified",
+  "current_new_serial_observations": 0,
+  "current_new_physical_ce_copies_proven": 0,
+  "next_public_search_prerequisite": "Exact original auction item ID, URL or seller photo from independently indexed public records; no account contacting by research agent."
+}

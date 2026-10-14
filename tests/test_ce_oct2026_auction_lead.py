@@ -28,6 +28,17 @@ class October2026OwnerLeadTests(unittest.TestCase):
         self.assertFalse(out["new_owner_case_confirmed"])
         self.assertFalse(out["new_sticker_serial_confirmed"])
 
+    def test_complete_original_comment_has_no_original_ebay_item_or_media_link(self):
+        full = self.source["complete_public_original_review"]
+        self.assertEqual(full["comment_character_count"], 4603)
+        self.assertEqual(len(full["comment_text_sha256"]), 64)
+        self.assertEqual(full["outbound_urls_in_comment"], 0)
+        self.assertEqual(full["candidate_ebay_item_numbers_in_comment"], 0)
+        self.assertFalse(full["seller_photo_link_recovered"])
+        methods = self.source["public_marketplace_photo_recovery"]
+        self.assertFalse(methods["exact_eBay_sale_listing_id_recovered"])
+        self.assertFalse(methods["seller_original_image_recovered"])
+
     def test_known_alias_in_ledger_changes_review_class_not_serial(self):
         out = inspect(self.source, self.ledger + "\n- U99 Leading_Highlight553")
         self.assertEqual(out["known_name_occurrences"], 1)

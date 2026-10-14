@@ -11,6 +11,12 @@
 - The captured canonical [community sticker ledger](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md) does **not** contain the exact public account name `Leading_Highlight553`. This is useful for source triage but does **not** prove a new collector or new physical CE, since the account/box might be known under other aliases, earlier seller chains or a sticker code already recorded.
 - Neither the auction eBay item ID, seller image URLs, outer game-wrapper sticker, box serial, seller account nor independent proof of delivery was recovered. The Reddit statement is **a reported win**, not physical inspection.
 
+## October 13 full-comment and photo-recovery update
+
+A [separate complete-source audit](inside-ce-oct2026-auction-photo-recovery-pilot-2026-10-13.md) recovered and SHA-verified **all 4,603 characters** of the original public comment, not merely the earlier 1,900-character excerpt. The buyer says the auction first appeared **roughly a week before October 11**, at $400/free shipping, with no competing bid. The complete text contains **no original eBay ID and no outbound URLs**.
+
+Three live eBay sold/auction search requests all returned **HTTP 403**; public PicClick HTML was accessible but its results consisted of unrelated items or standalone PS4-game titles. A four-ID PicClick direct-item probe likewise returned **HTTP 403 for known and unknown controls**. **No original listing or seller photo has been verified.** The September ~$380 secondhand report *might* overlap with an already known September /047 eBay listing asking $375, but there is no proof those are the same transaction. The October lead remains a public auction **claim**, not a confirmed distinct physical CE or sticker.
+
 ## Two historical-sale timing hypotheses must be kept separate
 
 **October auction:** auction reportedly opened at $400, closed shortly before October 11; winning account says only one bid, free shipping. Original eBay listing number unknown. Search public completed eBay auctions, thumbnail mirrors, public collector resales and crossposts for **actual original listing/photos** in the October 4–11 interval. Do not assume time exact without original auction.
