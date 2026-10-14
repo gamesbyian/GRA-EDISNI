@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "purpose": "Public, self-reported 2026 INSIDE CE aftermarket acquisition involving alleged PS4 game component separation. Preserve original evidence only, never infer missing sticker serial/owner.",
+  "discovered_utc_date": "2026-10-13",
+  "leads": [
+    {
+      "lead_id": "reddit-2026-af_2026-split-ce-game",
+      "origin": "public-reddit-comment",
+      "post_id": "1l5x8rb",
+      "comment_id": "o99qxpo",
+      "original_comment_url": "https://www.reddit.com/r/PlaydeadsInside/comments/1l5x8rb/comment/o99qxpo/",
+      "thread_url": "https://www.reddit.com/r/PlaydeadsInside/comments/1l5x8rb/",
+      "account_as_published": "Afaith_1",
+      "comment_date_precision": "March 2026 approximately, unverified absolute timestamp",
+      "direct_public_excerpt": "I found a seller with a sealed box and was able to negotiate the keeping the physical disc ... the seller reduced the price and I was able to get a sealed collectors edition for around $650",
+      "statement_summary": "Writer reports purchasing an INSIDE CE box from a seller for about USD 650 with the PS4 physical game retained/separated in the transaction because buyer plays Xbox.",
+      "original_disc_handoff": "ambiguous-from-grammar; seller appears to retain disc, needs original full context",
+      "where_sticker_might_be": "The white numbered sticker seals the black game wrapper. If that wrapper stayed with the separated PS4 game, its last custodian might be the seller, but nothing directly establishes wrapper or sticker custody.",
+      "canonical_exact_pseudonym_in_stickers_md": false,
+      "original_media_retrieved": false,
+      "sticker_number_observed": false,
+      "physical_copy_newly_proven": false,
+      "separate_seller_identity_known": false,
+      "relationship_to_pricecharting_march9_2026_sale": "temporal coincidence only, no original seller/image/link match; DO NOT combine",
+      "priority": "high-for-source-reconciliation",
+      "recommendation": "Check whether community already reconciled this case under a different username, missing disc or resale listing. Avoid unsolicited owner outreach; refer source to raezores only as a public buyer report.",
+      "statuses": [
+        "unreconciled-public-acquisition-claim",
+        "original-game-component-possibly-separated",
+        "physical-sticker-not-observed"
+      ]
+    }
+  ]
+}
