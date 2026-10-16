@@ -139,6 +139,24 @@ class NativeCECampaignTests(unittest.TestCase):
         self.assertEqual({x["locale"] for x in forum_tasks}, expected)
         self.assertEqual({x["locale"] for x in social_tasks}, expected)
 
+    def test_source_priority_levels_are_distinct_even_with_locale_rotation(self):
+        # One task per site: P1 must not be silently equivalent to P2,
+        # and rotation must not move a lower tier ahead of higher tiers.
+        cells = [
+            {"site": "A-P2", "locale": "en", "priority": "P2"},
+            {"site": "B-P1", "locale": "en", "priority": "P1"},
+            {"site": "C-P0", "locale": "en", "priority": "P0"},
+            {"site": "D-P1", "locale": "en", "priority": "P1"},
+            {"site": "E-P2", "locale": "ja", "priority": "P2"},
+            {"site": "F-P0", "locale": "ja", "priority": "P0"},
+        ]
+        ordered = module.interleave_search_tasks(cells)
+        en = [x["priority"] for x in ordered if x["locale"] == "en"]
+        ja = [x["priority"] for x in ordered if x["locale"] == "ja"]
+        self.assertEqual(en, ["P0", "P1", "P1", "P2"])
+        self.assertEqual(ja, ["P0", "P2"])
+        self.assertEqual(len(ordered), len(cells))
+
     def test_small_paid_batch_is_multilingual_and_multisource(self):
         social_tasks = module.build_secondary(module.load_tsv(module.SECONDARY), self.lexicon)
         head = social_tasks[:20]
