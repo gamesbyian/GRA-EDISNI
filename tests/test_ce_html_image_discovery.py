@@ -118,6 +118,70 @@ class HtmlLeadTests(unittest.TestCase):
             self.assertEqual(result["image_downloads"], [])
             self.assertEqual(result["bytes_downloaded"], 0)
 
+    def test_round_robin_allows_later_source_within_small_budget(self):
+        def row(source, name, hints):
+            return {"source_id": source, "image_url": f"https://i.redd.it/{name}.jpg",
+                    "source_page_url": f"https://reddit.com/{source}",
+                    "keyword_hints": ["inside"] * hints, "hint_count": hints}
+        leads = [row("aaa", f"early{i}", 2) for i in range(5)]
+        leads += [row("zzz", "later", 1), row("mmm", "middle", 3)]
+        selected = select(leads, per_page=4, total=3)
+        self.assertEqual([r["source_id"] for r in selected], ["mmm", "aaa", "zzz"])
+        self.assertEqual(len(set(r["source_id"] for r in selected)), 3)
+        self.assertEqual(selection_coverage(leads, selected)["eligible_asset_families_not_selected_by_budget"], 4)
+
+    def test_round_robin_preserves_priority_and_per_page_limit(self):
+        sources = []
+        for source in ("a", "b"):
+            for idx in range(4):
+                sources.append({"source_id": source,
+                                "image_url": f"https://i.redd.it/{source}{idx}.jpg",
+                                "hint_count": 4 - idx})
+        selected = select(sources, per_page=2, total=10)
+        self.assertEqual([(x["source_id"],x["hint_count"]) for x in selected],
+                         [("a",4),("b",4),("a",3),("b",3)])
+        self.assertEqual(len(selected), 4)
+
+    def test_static_embedded_images_not_only_img_tags(self):
+        source = """
+        <html><head>
+          <base href="https://www.iam8bit.com/media/">
+          <script type="application/ld+json">{"@type":"Product",
+            "image":["/images/inside-cover.jpg",
+                     {"@type":"ImageObject","contentUrl":"huddle.jpg"}],
+            "offers":{"price":"400","url":"https://example.org/not-image"}}
+          </script>
+        </head><body>
+          <video poster="../frame/sticker-cover.png"></video>
+          <div style="background-image: url('/images/black-wrapper.webp')"></div>
+          <a href="sealed-game.jpeg?size=large">See package photograph</a>
+          <a href="https://example.org/forum/post">Not an image</a>
+        </body></html>
+        """
+        results = extract(source, "https://www.iam8bit.com/archive/post")
+        urls = {r["image_url"]: r for r in results}
+        self.assertEqual(len(urls), 5)
+        self.assertIn("https://www.iam8bit.com/images/inside-cover.jpg", urls)
+        self.assertIn("https://www.iam8bit.com/media/huddle.jpg", urls)
+        self.assertIn("https://www.iam8bit.com/frame/sticker-cover.png", urls)
+        self.assertIn("https://www.iam8bit.com/images/black-wrapper.webp", urls)
+        self.assertIn("https://www.iam8bit.com/media/sealed-game.jpeg?size=large", urls)
+        self.assertTrue(all(x["review_status"] == "unfetched-and-unverified"
+                            for x in results))
+        self.assertTrue(any("jsonld:" in context
+                            for result in results for context in result["contexts"]))
+
+    def test_malformed_jsonld_and_disallowed_urls_remain_nonfatal(self):
+        source = """
+        <script type="application/ld+json">{not json</script>
+        <div style="background-image:url(javascript:alert(1))"></div>
+        <video poster="data:image/jpeg;base64,aaa"></video>
+        <a href="https://example.org/p/photo.jpg">review candidate</a>
+        """
+        rows = extract(source, "https://example.org/post")
+        self.assertEqual([x["image_url"] for x in rows],
+                         ["https://example.org/p/photo.jpg"])
+
     def test_semantic_ranks_are_relative_and_untrusted(self):
         keys = list(LABELS)[:3]
         rows = ranking(keys, [0.1, 0.7, 0.3])
