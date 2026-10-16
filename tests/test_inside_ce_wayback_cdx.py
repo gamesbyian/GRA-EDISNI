@@ -88,6 +88,24 @@ class WaybackProbeTests(unittest.TestCase):
         self.assertEqual(len(tasks), 2)
         self.assertTrue(all(x["label"] == "allowed" for x in tasks))
 
+    def test_all_unattempted_followers_are_preserved_and_never_fetched(self):
+        tasks = probe.generate(
+            [{"label": "a", "url": "https://forum.example/one", "evidence": "x"},
+             {"label": "b", "url": "https://forum.example/two", "evidence": "x"}],
+            max_sources=2, per_window_limit=1)
+        called = []
+        def forbidden(req, timeout):
+            called.append(req.full_url)
+            raise urllib.error.HTTPError(req.full_url, 403, "blocked", {}, None)
+        results = probe.run(tasks, delay_seconds=2, transport=forbidden)
+        self.assertEqual(len(called), 1)
+        self.assertEqual(len(results), 4)
+        self.assertEqual(results[0]["status"], "http_error")
+        self.assertEqual([x["status"] for x in results[1:]],
+                         ["not_attempted_after_provider_block"] * 3)
+        self.assertEqual([x["source_url"] for x in results],
+                         [x["source_url"] for x in tasks])
+
     def test_error_handling_no_retry_or_bypass(self):
         tasks = probe.generate(
             [{"label": "x", "url": "https://forum.example/",
@@ -96,9 +114,11 @@ class WaybackProbeTests(unittest.TestCase):
         def deny(req, timeout):
             raise urllib.error.HTTPError(req.full_url, 429, "rate-limited", {}, None)
         got = probe.run(tasks, delay_seconds=2, transport=deny)
-        self.assertEqual(len(got), 1)
+        self.assertEqual(len(got), len(tasks))
         self.assertEqual(got[0]["status"], "http_error")
         self.assertEqual(got[0]["http_status"], 429)
+        self.assertEqual(got[1]["status"], "not_attempted_after_provider_block")
+        self.assertIn("429", got[1]["reason"])
 
 
 if __name__ == "__main__":
