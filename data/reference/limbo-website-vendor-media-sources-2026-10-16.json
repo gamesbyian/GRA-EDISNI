@@ -1,0 +1,136 @@
+{
+  "campaign": "Playdead historical website provenance / LIMBO archive fallback",
+  "date": "2026-10-16",
+  "new_source_records": [
+    {
+      "url": "https://twentyfour.dk/en/cases/limbo/",
+      "category": "vendor_case",
+      "provenance": "direct_developer_claim",
+      "status": "verified_current_page",
+      "remarks": "Playdead commissioned vendor relationship, wordpress flash PayPal"
+    },
+    {
+      "url": "https://twentyfour.dk/cases/limbo/",
+      "category": "vendor_case_danish",
+      "provenance": "direct_developer_claim",
+      "status": "verified_current_page",
+      "remarks": "Danish edition of Twentyfour testimony"
+    },
+    {
+      "url": "https://plastiik.com/",
+      "category": "design_vendor",
+      "provenance": "vendor_attribution_plus_current_site",
+      "status": "current_site_only",
+      "remarks": "Historic design association is Twentyfour testimony; no LIMBO project page found on Plastiik"
+    },
+    {
+      "url": "http://limbogame.org/wordpress2/wp-content/uploads/2011/07/screenshot05-800x450.jpg",
+      "category": "historic_cms_asset",
+      "provenance": "2011_contemporaneous_forum_embed",
+      "status": "original_bytes_missing",
+      "remarks": "Retain exact HTTP path and filename"
+    },
+    {
+      "url": "https://www.mobygames.com/game/47457/limbo/promo/",
+      "category": "attributed_media_mirror",
+      "provenance": "third_party_curated_archive",
+      "status": "23_promos_plus_7_concept_art",
+      "remarks": "Image uploads 2016; not verified bitwise originals"
+    },
+    {
+      "url": "https://www.mobygames.com/game/47457/limbo/promo/group-3912/image-48304/",
+      "category": "attributed_media_item",
+      "provenance": "third_party_curated_archive",
+      "status": "present",
+      "remarks": "First of 23 media images, added Aug 2016"
+    },
+    {
+      "url": "https://www.mobygames.com/game/47457/limbo/promo/group-3912/image-116043/",
+      "category": "attributed_media_item",
+      "provenance": "third_party_curated_archive",
+      "status": "present",
+      "remarks": "2010 July Pipe press artwork"
+    },
+    {
+      "url": "https://playdead.com/press/INSIDE/splash_screen_v1.png",
+      "category": "first_party_press_image",
+      "provenance": "first_party_live_http_link",
+      "status": "image_rendered",
+      "remarks": "Exact first party filename and path"
+    },
+    {
+      "url": "https://playdead.com/press/INSIDE/INSIDE%20Logo.png",
+      "category": "first_party_press_image",
+      "provenance": "first_party_live_http_link",
+      "status": "image_rendered",
+      "remarks": "Exact URL percent-encoding"
+    },
+    {
+      "url": "https://playdead.com/press/INSIDE/INSIDE%20Logo%20w%20playdead.png",
+      "category": "first_party_press_image",
+      "provenance": "first_party_live_http_link",
+      "status": "image_rendered",
+      "remarks": "Exact URL percent-encoding"
+    },
+    {
+      "url": "https://playdead.com/press/LIMBO/LIMBO_Concept_2004.png",
+      "category": "first_party_press_image",
+      "provenance": "first_party_live_http_link",
+      "status": "image_rendered",
+      "remarks": "Filename year refers concept, not verified upload date"
+    },
+    {
+      "url": "https://playdead.com/press/LIMBO/LIMBO%20-%20Poster.jpg",
+      "category": "first_party_press_image",
+      "provenance": "first_party_live_http_link",
+      "status": "image_rendered",
+      "remarks": "Poster media asset"
+    },
+    {
+      "url": "https://playdead.com/press/INSIDE/INSIDE_screenshots.zip",
+      "category": "first_party_press_zip",
+      "provenance": "first_party_live_http_link",
+      "status": "not_binary_inspected",
+      "remarks": "Linked by press HTML; no internal listing"
+    },
+    {
+      "url": "https://playdead.com/press/LIMBO/LIMBO%20-%20Screenshots%20-%20May%202010.zip",
+      "category": "first_party_press_zip",
+      "provenance": "first_party_live_http_link",
+      "status": "not_binary_inspected",
+      "remarks": "Linked by press HTML; no internal listing"
+    },
+    {
+      "url": "https://playdead.com/press/LIMBO/LIMBO%20-%20Screenshots%20-%20July%202010.zip",
+      "category": "first_party_press_zip",
+      "provenance": "first_party_live_http_link",
+      "status": "not_binary_inspected",
+      "remarks": "Linked by press HTML; no internal listing"
+    },
+    {
+      "url": "https://playdead.com/inside/",
+      "category": "historic_first_party_page",
+      "provenance": "official_playdead_publications_readme",
+      "status": "currently_redirects",
+      "remarks": "Current live redirect not the 2018 source"
+    },
+    {
+      "url": "https://www.fantrust.com/wp-content/uploads/2013/08/WSA_cairo_final_catalogue-2013.pdf",
+      "category": "2013_first_party_company_listing_external_pdf",
+      "provenance": "contemporaneous_institutional_catalogue",
+      "status": "indexed_pdf_text",
+      "remarks": "Historical fan@playdeadgames.com and limbogame.org"
+    }
+  ],
+  "interpretation": "Public provenance locations, not proof of Playdead ownership of external hosts or ARG relevance",
+  "reviewed_community_search": [
+    "Twentyfour",
+    "Plastiik",
+    "HTML24",
+    "MobyGames",
+    "screenshot05-800x450",
+    "fan@playdeadgames.com"
+  ],
+  "community_repository": "twinysam/INSIDE-ARG (indexed default-branch GitHub code search)",
+  "indexed_exact_hits": 0
+}
