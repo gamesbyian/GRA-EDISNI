@@ -103,13 +103,21 @@ def interleave_search_tasks(tasks):
     priority = {label: i for i, label in enumerate(FIRST_PASS_LOCALES)}
     ordered_locales = sorted(pools, key=lambda l: (priority.get(l, 1000), l))
     site_cycles = {}
+    # Do not rotate lower priority sites ahead of a higher tier. The previous
+    # boolean P0/non-P0 sort flattened P1 and P2 and the full-list rotation
+    # sometimes placed a P2 site before any P0 for the same locale.
+    priority_order = {"P0": 0, "P1": 1, "P2": 2}
     for idx, locale in enumerate(ordered_locales):
-        sites = sorted(
-            pools[locale],
-            key=lambda s: (0 if pools[locale][s][0].get("priority", "P1") == "P0" else 1, s)
-        )
-        turn = idx % len(sites)
-        site_cycles[locale] = deque(sites[turn:] + sites[:turn])
+        sites = sorted(pools[locale],
+            key=lambda s: (priority_order.get(
+                pools[locale][s][0].get("priority", "P1"), 3), s))
+        best_rank = priority_order.get(
+            pools[locale][sites[0]][0].get("priority", "P1"), 3)
+        first_tier = [s for s in sites if priority_order.get(
+            pools[locale][s][0].get("priority", "P1"), 3) == best_rank]
+        turn = idx % len(first_tier)
+        site_cycles[locale] = deque(
+            first_tier[turn:] + first_tier[:turn] + sites[len(first_tier):])
     ordered, remaining = [], len(tasks)
     while remaining:
         for locale in ordered_locales:
