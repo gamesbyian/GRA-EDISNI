@@ -17,6 +17,27 @@ python scripts/audit_terminal41_complete_client_receivers.py --json
 
 **Evidence limit:** a local, source-matched HTML/text mirror may preserve accurately what a particular captured page displayed while omitting historic server-side PHP, cookies, query processing, POST routes, successful responses, different dated versions or hidden paths. A file not linked or present in the mirror is **not** evidence that its original route never existed. Printed prompts are not equivalent to HTML input widgets.
 
+## Quantified whole-mirror result
+
+The source-verified [GitHub Actions audit](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38977253962) passed the fixed 73-source byte and Git-blob checks. Exact counts from the executable source scanner (frozen in the [machine-readable fixture](../../data/terminal41-complete-client-census-2026-10-16.json)):
+
+| Observed preserved-client feature | Count |
+|---|---:|
+| Byte-exact text source files | **73/73** |
+| HTML files | 69 |
+| Additional plain-text status variants | 4 |
+| Pages containing a real HTML form/input/textarea/select/button | **0** |
+| Pages with an inline request-API call | **0** |
+| Pages showing a literal rendered `Input:[…]` placeholder | 2 |
+| Pages with an HTML meta-refresh | 42 |
+| Source-link/redirect edges resolving into the pinned snapshot | 46 |
+| Internal edges not resolving into the pinned snapshot | **6** |
+| Pages containing JavaScript | 1 |
+
+The sole script-bearing page is `sys/terminateall.html`: its script source is the ordinary **Google Analytics** `www.googletagmanager.com/gtag/js?id=UA-154558593-1`, and its 153-character inline code configures `gtag`. There is no source-local puzzle submission handler there. This classification is narrower than claiming the historical **server** had no scripts.
+
+This is a meaningful improvement on only checking two visually tempting Viewgate pages: **no working HTML-side submission control is visible anywhere in the known 69-file HTML mirror**. It still cannot exclude server-side routes, query-string handlers or dynamic code not captured in the mirror.
+
 ## Receiver-type distinction
 
 The *original* Playdead website had a demonstrated **2018 browser print button** and conditional server POST interaction, as pinned in [Experiment 480](../experiment-480-original-print-transport.md). Contemporary accounts report `/print/prepare.php` and `/print/index.php`; saved JavaScript inserted successful returned content into `#print-content`, then called `window.print()`. Original server requests/responses and the 2018–2020 `/js/dist.js` bundle have **not** been recovered. That confirmed consumer is **not the same website** as the surviving `terminal41.link` mirror.
@@ -51,6 +72,25 @@ The source family references indexed schemes **0–3 only**. Some individual ver
 **Interpretation:** This rules out a **fifth *ordinary numbered scheme in these 17 archived status texts***. It does not rule out an independently named fifth input, a later unpublished version, a new CE path, original backend special cases, or a different receiver entirely. The 0→4 story largely corroborates the earlier historical Game Detectives account; it is not a new independent server witness.
 
 ## An important archive-incompleteness control
+
+### One exact missing redirect hop not in the earlier screenshot-derived gap list
+
+The live source-graph audit exposes an additional, **directly referenced** missing artifact:
+
+`/sys/activate_shutdown_protocol/commit/___________DONE_SD.html`
+
+The preserved and byte-verified `___________DONE.html` has this literal, zero-delay HTML instruction:
+
+```html
+<meta http-equiv="refresh" content="0; url=___________DONE_SD.html" />
+```
+
+The referenced `___________DONE_SD.html` is absent from the 74-file source tree. It is **not** among CL-09's ten screenshot-derived gap names. The separately preserved nine `___________DONE_SD_CONFIRMED_09.html` → `_01.html` countdown is fixed (Experiment 408), but we cannot prove how or whether the missing intermediate page entered that countdown. In particular, no recovered byte defines whether this absent junction merely redirected, displayed another message or offered a choice. **Do not count a guessed bridge page as a recovered decoder.**
+
+The five other **unresolved internal edges** correspond to `/sys/` and the four numbered termination directories `11/`, `23/`, `42/`, `99/`, already documented with first-person screenshot provenance in CL-09. The sixth missing edge is the precise shutdown-stage `DONE_SD.html` above. A link graph is an **archive-completeness map**, never proof of an available input handler.
+
+This source gap should be preserved in the future-work queue as a **specific retrieval target** for archived historical material already collected. New sticker acquisition offers no benefit for classifying this HTML junction.
+
 
 April 2020 authenticated directory screenshots (already preserved in [CL-09](2026-10-08-terminal41-unarchived-route-recovery.md)) identify relevant **routes and directories missing from the 74-file mirror**, including the termination subdirectories `11/`, `23/`, `42/`, `99/`. The old directory listing itself has a server-looking `Last modified` column, but those timestamps are captured *page claims*, not independently verified file creation times. Existing image proof therefore prevents us from interpreting a link-missing result as a comprehensive search of all historic Terminal41 functionality.
 
