@@ -1,5 +1,11 @@
 """Offline, deterministic CE search attempt ledger tests."""
 import unittest
+import hashlib
+import json
+import sys
+import tempfile
+from pathlib import Path
+from unittest.mock import patch
 from scripts.external_evidence.audit_search_attempts import evaluate, brave_result_events
 
 D = "a" * 64
@@ -96,6 +102,27 @@ class SearchAttemptAuditTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"matches"):
             brave_result_events([{"task_id":"a","task_index":0,
                                  "status":"index_search_success"}],"r1")
+
+    def test_exact_manifest_bytes_and_brave_run_binding(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            manifest=root/"plan.jsonl"
+            raw="".join(json.dumps(row)+"\\n" for row in self.tasks)
+            manifest.write_text(raw,encoding="utf-8")
+            digest=hashlib.sha256(raw.encode("utf-8")).hexdigest()
+            from scripts.external_evidence.audit_search_attempts import main
+            with patch.object(sys,"argv",["audit_search_attempts.py","--tasks",str(manifest),
+                                          "--out",str(root/"report")]):
+                main()
+            result=json.loads((root/"report/run-summary.json").read_text())
+            self.assertEqual(result["task_manifest_sha256"],digest)
+            self.assertEqual(result["task_manifest_digest_scope"],"exact_input_bytes")
+            self.assertEqual(result["real_provider_attempts"],0)
+            sample=[{"task_id":"a","task_index":0,"status":"index_search_success",
+                     "matches":[],"manifest_sha256":digest}]
+            self.assertEqual(len(brave_result_events(sample,"run-1",digest)),1)
+            with self.assertRaisesRegex(ValueError,"frozen exact-byte"):
+                brave_result_events(sample,"run-1","f"*64)
 
     def test_task_manifest_duplicates_rejected(self):
         with self.assertRaisesRegex(ValueError,"duplicate"):
