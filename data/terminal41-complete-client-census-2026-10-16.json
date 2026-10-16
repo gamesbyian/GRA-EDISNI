@@ -90,5 +90,12 @@
     "applied_equals_obtained": true,
     "negative_scope": "No fifth ordinary scheme index in this 17-file snapshot; not a missing-server proof."
   },
-  "existing_positive_control": "Original playdead.com 2018 client-side printer button POST flow, source-documented in Experiment 480; it is not captured in the terminal41 mirror."
+  "existing_positive_control": "Original playdead.com 2018 client-side printer button POST flow, source-documented in Experiment 480; it is not captured in the terminal41 mirror.",
+  "upstream_uploader_missing_file_provenance": {
+    "source_commit": "d0b11cf8c6462c9592bc141ee6a4dddc0a029da6",
+    "date": "2023-08-18",
+    "report": "docs/conjecture-lab/2026-10-16-terminal41-original-uploader-gap-audit.md",
+    "overlapping_route_already_named_in_2023": "/sys/activate_shutdown_protocol/commit/___________DONE_SD.html",
+    "note": "This 2026 six-edge census freshly automates link enumeration; the overlapping missing filename was already documented by the 2023 mirror uploader."
+  }
 }
