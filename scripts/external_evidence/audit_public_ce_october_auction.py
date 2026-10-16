@@ -37,7 +37,8 @@ def inspect(source: dict, ledger: str) -> dict:
             and statements["claimed_other_september_sale_price_usd"] == 380):
         raise ValueError("original primary-source sale quantities differ")
     if (source["canonical_reconciliation"]["not_proof_of_additional_copy"] is not True
-            or source["canonical_reconciliation"]["not_known_sticker_number"] is not True
+            or source["canonical_reconciliation"]["confirmed_community_entry"] != "043"
+            or source["canonical_reconciliation"]["exact_public_handle_in_stickers_md"] is not True
             or statements["physical_transaction_status"] !=
                 "self-reported-win-not-independent-delivery-confirmation"):
         raise ValueError("public statement cannot be promoted into physical evidence")
@@ -49,8 +50,8 @@ def inspect(source: dict, ledger: str) -> dict:
         "public_account": handle,
         "created_utc": source["published_utc"],
         "archived_response_sha256": source["original_archive_response_sha256"],
-        "source_status": ("possible-existing-canonical-pseudonym-review" if seen
-                          else "unreconciled-exact-account-public-auction-claim"),
+        "source_status": "closed-known-canonical-043-buyer-source",
+        "snapshot_name_match_only_not_novelty": bool(seen),
         "known_name_occurrences": len(seen),
         "ebay_original_item_id": statements["auction_listing_id"],
         "auction_win_claim_usd": 400,
@@ -59,7 +60,7 @@ def inspect(source: dict, ledger: str) -> dict:
         "delivery_confirmed": False,
         "new_owner_case_confirmed": False,
         "new_sticker_serial_confirmed": False,
-        "caveat": "Same physical box may be resold; exact name absence is not new-owner proof.",
+        "caveat": "Historical archived sticker ledger may predate /043 buyer update. Current canonical /043 names this commenter; archive absence must never create a new-owner handoff.",
     }
 
 

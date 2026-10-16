@@ -1,3 +1,5 @@
+> **16 October reconciliation:** This original-source report remains historically valid, but its novelty/outreach conclusion is **superseded**. The upstream [canonical /043 G entry](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md) explicitly identifies `Leading_Highlight553` as the *already-known buyer of latcholia's /043* on October 11. The comment's $400 auction is **not a new owner/copy lead**. Preserve unrecovered-photo details only as provenance. [Corrected packet](inside-ce-raezores-public-lead-handoff-2026-10-13.md).
+
 # New October 11, 2026 public CE buyer lead: reported $400 unopened eBay auction win
 
 **Discovery / archive confirmation:** October 13, 2026. **Original comment:** October 11, 2026 at **10:52:15 UTC**. **Status:** high-priority **public self-reported CE auction acquisition**, potentially an unknown physical CE owner, **not a confirmed additional copy, seller photograph, numbered sticker or serial**. **No owner contact or outreach**.
