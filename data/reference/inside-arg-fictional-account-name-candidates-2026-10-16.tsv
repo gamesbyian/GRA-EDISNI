@@ -41,3 +41,11 @@ gateway	viewgate002	route-stem	candidate-handle	untested-site-native	https://git
 texture	GLADBLAD	Morse-decode	source-derived-term	indexed-queried	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	Nordic word/name collisions
 texture	gladblad41	joined-suffix	candidate-handle	untested-site-native	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	conjecture
 texture	WaterGirlWireFake	game-asset-term	source-derived-term	indexed-queried	https://steamcommunity.com/app/304430/discussions/0/359543951720753445?ctp=8&l=hungarian	original Aug 9 2016 asset report
+staff-linked	TobberH	actual-handle	staff-credited-public-profile	verified-real-world-graph	https://x.com/tobberh	X bio links to Playdead technical artist Tobias Biehl and gladblad domain
+staff-linked	tobbermix	blog-stem	staff-linked-public-website	verified-real-world-graph	https://tobbermix.gladblad.dk/author/tobberh/	indexed WordPress author blog; appears as early as July 2010
+staff-linked	tobbermix.gladblad.dk	domain	staff-linked-public-website	verified-real-world-graph	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	2016 archival mention and current X bio
+staff-linked	gaming.gladblad.dk	domain	staff-associated-game-team	verified-real-world-graph	https://www.gametracker.com/clan/gaming.gladblad.dk/	listed as team's public homepage
+staff-linked	Tobias Biehl	credited-name	known-developer-not-ARG-character	verified-real-world-graph	https://gamefaqs.gamespot.com/xboxone/805489-inside/credit	credited technical artist
+staff-linked	tobberh	gametracker-handle	staff-associated-game-account	verified-real-world-graph	https://www.gametracker.com/tobberh/	profile associated with Gladblad group
+staff-linked	GLADBLAD GameTracker	team	public-game-team	verified-real-world-graph	https://www.gametracker.com/clan/gaming.gladblad.dk/	two-member group with published Steam link; does not establish ARG affiliation
+metadata	Andreas Normand Grøntved	printer-jpg-creator	real-asset-author-not-fictional	source-documented-2018	https://steamcommunity.com/app/304430/discussions/0/359543951720753445/?ctp=53	2018 Steam reports EXIF/Picasa metadata and official credits confirm animator
