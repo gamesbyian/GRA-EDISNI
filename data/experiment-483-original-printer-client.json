@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "experiment": 483,
+  "mode": "VALIDATE for client bytes and branch code only; DEVELOP for server semantics",
+  "historical_reference": "2018-06-04 Steam observer linked www.playdead.com/js/dist.js",
+  "primary_sources": [
+    {
+      "capture": "2016-07-25T22:46:58Z",
+      "provider": "Wayback",
+      "url": "https://web.archive.org/web/20160725224658id_/http://playdead.com/js/dist.js",
+      "bytes": 740120,
+      "sha256": "fc42ccefccf5a3c23cabdabbf7f61144b535bf1beb4f89e8d7b6f53866795690",
+      "role": "pre-printer control",
+      "source_map_modules": 7,
+      "printer_handlers": 0
+    },
+    {
+      "capture": "2018-07-19T14:10:35Z",
+      "provider": "Arquivo.pt",
+      "url": "https://arquivo.pt/wayback/20180719141035id_/https://playdead.com/js/dist.js",
+      "bytes": 723075,
+      "sha256": "892e795393531f93bb485c8382b52a13d35423b7251c7399d5a7ef5c7b912587",
+      "role": "original printer-era client"
+    },
+    {
+      "capture": "2019-03-27T17:27:47Z",
+      "provider": "Arquivo.pt",
+      "url": "https://arquivo.pt/wayback/20190327172747id_/https://playdead.com/js/dist.js",
+      "bytes": 723075,
+      "sha256": "892e795393531f93bb485c8382b52a13d35423b7251c7399d5a7ef5c7b912587",
+      "role": "independent later capture, byte identical"
+    }
+  ],
+  "source_artifact_run_ids": [
+    38980599410,
+    38981035661,
+    38981304970
+  ],
+  "original_printer_client": {
+    "input_selector": "#mce-EMAIL",
+    "local_storage_id_key": "id",
+    "id_generation": "guid() composed with Math.random(), persisted unless already present",
+    "printed_output_selector": "#print-content",
+    "static_endpoint_paths": [
+      "/print/prepare.php",
+      "/print/index.php"
+    ],
+    "request_program": [
+      {
+        "sequence": 1,
+        "method": "POST",
+        "path": "/print/prepare.php",
+        "payload_keys": [
+          "in",
+          "id",
+          "check",
+          "url"
+        ],
+        "payload_examples": {
+          "check": "true",
+          "url": "window.location.pathname"
+        },
+        "condition": "all input states",
+        "awaited_before_next": false
+      },
+      {
+        "sequence": 2,
+        "method": "POST",
+        "path": "/print/index.php",
+        "payload_keys": [
+          "in",
+          "id",
+          "check",
+          "url"
+        ],
+        "condition": "nonempty input",
+        "awaited_before_next": "not_applicable"
+      },
+      {
+        "sequence": 3,
+        "method": "POST",
+        "path": "/print/index.php",
+        "payload_keys": [
+          "in",
+          "id"
+        ],
+        "condition": "first index.php response is not the string 'false'",
+        "awaited_before_next": "not_applicable"
+      }
+    ],
+    "empty_input": {
+      "request_count": 1,
+      "response_handling": "client prints local 'no message received'"
+    },
+    "nonempty_rejected": {
+      "request_count": 2,
+      "first_index_check": "string 'false'",
+      "response_handling": "client prints local 'incorrect message received'"
+    },
+    "nonempty_unrejected": {
+      "request_count": 3,
+      "first_index_check": "anything other than string 'false'",
+      "response_handling": "second index response inserted as HTML into #print-content, browser window.print invoked"
+    },
+    "response_type_claim": "Client inserts server response HTML then invokes browser printing; no proof that PHP serves a PDF directly.",
+    "error_handling": "Uses .done callbacks; no original PHP, no proven failed-request UI states."
+  },
+  "sourcemap": {
+    "inline_source_map": true,
+    "module_count": 8,
+    "printer_module": "3_print.js",
+    "printer_module_chars": 3100,
+    "important_mismatch": "Embedded sourcesContent is not identical to compiled runtime; compiled has prepare.php and url pathname, source map lacks both; compiled checks only nonempty, mapped source rejects whitespace.",
+    "runtime_prepare_post_occurrences": 1,
+    "runtime_index_post_occurrences": 2,
+    "mapped_prepare_post_occurrences": 0,
+    "mapped_index_post_occurrences": 2,
+    "runtime_nonempty_expression": "s_input != empty string",
+    "map_nonempty_expression": "!/^$|\\s+/.test(s_input)",
+    "source_map_cannot_override_runtime": true
+  },
+  "archive_index_caveat": "Arquivo 2018–2021 index digest GJNK47W44Z3L4HKY2YYBM4VSRJLX7C2P does not itself authenticate each year's replay body; raw July 2018 and March 2019 bodies independently byte-matched.",
+  "limitations": [
+    "No original /print/prepare.php or /print/index.php server implementation recovered.",
+    "No accepted response HTML/HAR/cookies recovered.",
+    "The client alone does not establish a CE-specific accepted value or an active post-2019 consumer.",
+    "The archived raw JS is a site build and not a developer design specification; source map mismatch must be tracked."
+  ],
+  "next_nonsticker_falsifiers": [
+    "Original server PHP or raw successful index.php response from 2018-2020.",
+    "Original form page/path and client HTML to establish pathname-driven branch behavior.",
+    "Historic successful-response capture tied to an input class, cookie/session id and source timestamp."
+  ]
+}
