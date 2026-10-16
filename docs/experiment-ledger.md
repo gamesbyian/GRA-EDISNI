@@ -478,6 +478,9 @@ Latest indexed experiment: **482** (with documented numbering gaps).
 
 | 482 | six-mapping secret-ending lever alphabet boundary: 6 mappings × 28 orientations × 108 cyclic starts = 18,144 placements, zero compatible under the proposed 81/27 zones. **One rumored mid-primary dot does not rescue direct replay:** even after *dropping zone restrictions entirely*, just one placement satisfies all 66 observed residues and it requires **five hypothetical** dots at residues 49/54/55/61/62. Neither the dot rumor nor these hypothetical marks are authenticated. See `docs/experiment-482-lever-six-mapping-boundary.md`. |
 
+
+| CL-T41-CLIENT-01 | source-bounded full Terminal41 receiver audit, extending Experiments 408/478/480: verifies original Git SHA and size for all 73 preserved textual sources in the pinned 74-file tree; distinguishes HTML client controls/scripts/redirects, printed Viewgate placeholders and URL-path command art. The 17 `printreqstatus` variants show exact printed obtained/applied progression 0→1→2→3→4, all indexed `schem[n]` values confined to 0–3. No fifth ordinary scheme in *those versions*, no established foreground input; original server routes and `y/` confirmation branch are outside the static snapshot. No stickers searched, decoded or inferred. See `docs/conjecture-lab/2026-10-16-terminal41-full-client-receiver-census.md` and `scripts/audit_terminal41_complete_client_receivers.py`. |
+
 ## Current frontier
 
 - **194–208:** latent register, generic-compression negative, T3 closure, minimum observer, conditional-bit circuit, inverse Q4 reconstruction.
