@@ -230,6 +230,20 @@ def main():
     if a.check:
         assert all(p["manifest_size_matches"] and p["manifest_git_blob_matches"] for p in result["pages"]), (
             "source mirror drifted from its original manifest; inspect before making negative claims")
+        golden = json.loads((ROOT / "data/terminal41-complete-client-census-2026-10-16.json").read_text(encoding="utf-8"))
+        assert golden["source_tree_sha"] == result["source_tree_sha"]
+        for key, expected in golden["summary"].items():
+            assert result["summary"].get(key) == expected, (key, result["summary"].get(key), expected)
+        missing = sorted((p["path"], edge["raw"], edge["url_path"])
+                         for p in result["pages"] for edge in p["link_analysis"]
+                         if edge["kind"] == "uncaptured_internal")
+        expected_missing = sorted((edge["source"], edge["raw_href"], edge["unpreserved_route"])
+                                  for edge in golden["unmatched_internal_edges"])
+        assert missing == expected_missing, (missing, expected_missing)
+        scripted = [p for p in result["pages"] if p["inline_script_chars"] or p["script_srcs"] or p["event_handlers"]]
+        assert len(scripted) == 1 and scripted[0]["path"] == golden["only_scripted_page"]["path"]
+        assert scripted[0]["script_srcs"] == [golden["only_scripted_page"]["script_src"]]
+        assert scripted[0]["inline_script_chars"] == golden["only_scripted_page"]["inline_character_count"]
         for name in OBSERVED_ANCHOR:
             item = next(p for p in result["pages"] if p["path"] == name)
             assert item["printed_input_literal"] and not item["controls"] and not item["event_handlers"]
