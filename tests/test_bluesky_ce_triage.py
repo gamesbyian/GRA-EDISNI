@@ -71,6 +71,14 @@ class PublicBlueskyTriageTests(unittest.TestCase):
              "unrelated_or_unresolved"),
             ("House of 1000 Doors: Evil Inside Collector's Edition code giveaway",
              "unrelated_or_unresolved"),
+            ("Finally got my Blue Prince merch package today and it's missing "
+             "the pin and desk mat. Instead I found two random children's "
+             "picture books inside. I didn't order them, and iam8bit doesn't "
+             "even sell them.", "unrelated_or_unresolved"),
+            ("@iam8bit.com sent us a mystery package. What was inside? 👀",
+             "unrelated_or_unresolved"),
+            ("I received a numbered sticker on my INSIDE Collector's Edition "
+             "from iam8bit!", "possible_owner_claim"),
             ("", "unrelated_or_unresolved"),
         ]
         for body, expected in samples:
