@@ -22,7 +22,7 @@ Mercado Livre	https://www.mercadolivre.com.br/	marketplace_listings	pt-BR	native
 Carousell	https://www.carousell.com/	marketplace_listings	en-ms	native_site_search	web_index_and_wayback	site_terms_review	South East Asia collectible resale	P2
 Gumtree	https://www.gumtree.com/	marketplace_listings	en	native_site_search	web_index_and_wayback	site_terms_review	UK/AU regional secondhand listings; country path differences	P2
 Trade Me	https://www.trademe.co.nz/	marketplace_listings	en	native_site_search	web_index_and_wayback	site_terms_review	New Zealand collector resale leads	P2
-Bluesky	https://bsky.app/	public_posts	multi	atproto_searchposts_permitted	web_index_and_wayback	auth_may_be_required	SearchPosts public lexicon provides keyword query; coverage only post-2023	P2
+Bluesky	https://bsky.app/	public_posts	multi	atproto_searchposts_v2_alltime_and_v1_permitted	web_index_and_wayback	public_appview_read_policy_and_403_429_stop	Known-positive Caswell post from 2026-08-16 shows unmeasured native retrieval; direct thread and blind search must be distinguished; public search is incomplete	P1
 Mastodon	https://joinmastodon.org/	federated_posts	multi	instance_specific_public_search	web_index_and_wayback	instance_rules_and_independence	No single global complete post index or timeline	P2
 TikTok	https://www.tiktok.com/	videos_comments	multi	licensed_public_search	web_index_and_wayback	platform_research_api_eligibility	Unboxings and resale clips not covered by gamer web forums	P2
 Flickr	https://www.flickr.com/	photos	multi	official_public_photo_search	web_index_and_wayback	API_key_terms	Original high-resolution collectible photographs may expose sticker	P1
