@@ -15,7 +15,7 @@ class SearchAttemptAuditTests(unittest.TestCase):
         out,pending,log = evaluate(self.tasks,[])
         self.assertEqual(out["planned_tasks"],3)
         self.assertEqual(out["real_provider_attempts"],0)
-        self.assertEqual(out["complete_tasks_with_exhausted_pagination"],0)
+        self.assertEqual(out["tasks_with_sufficient_recorded_evidence"],0)
         self.assertEqual(len(pending),3)
         self.assertEqual(log,[])
         self.assertEqual(out["new_confirmed_stickers"],0)
@@ -31,7 +31,7 @@ class SearchAttemptAuditTests(unittest.TestCase):
         self.assertEqual(out["real_provider_attempts"],2)
         self.assertEqual(out["blocked_or_error_events"],1)
         self.assertEqual(out["tasks_marked_not_attempted_after_provider_block"],1)
-        self.assertEqual(out["complete_tasks_with_exhausted_pagination"],0)
+        self.assertEqual(out["tasks_with_sufficient_recorded_evidence"],0)
         self.assertEqual(len(pending),3)
         self.assertEqual(next(x for x in pending if x["task_id"]=="a")["retry_policy"],
                          "manual-review-before-retrying")
@@ -49,7 +49,7 @@ class SearchAttemptAuditTests(unittest.TestCase):
         ]
         out,pending,_=evaluate(self.tasks,events)
         self.assertEqual(out["real_provider_attempts"],3)
-        self.assertEqual(out["complete_tasks_with_exhausted_pagination"],2)
+        self.assertEqual(out["tasks_with_sufficient_recorded_evidence"],2)
         self.assertEqual([x["task_id"] for x in pending],["c"])
         self.assertEqual(out["new_confirmed_stickers"],0)
         self.assertEqual(out["task_manifest_sha256"],
@@ -88,7 +88,7 @@ class SearchAttemptAuditTests(unittest.TestCase):
         self.assertFalse(events[0]["original_source_body_retrieved"])
         out,pending,_=evaluate(self.tasks,events)
         self.assertEqual(out["real_provider_attempts"],2)
-        self.assertEqual(out["complete_tasks_with_exhausted_pagination"],0)
+        self.assertEqual(out["tasks_with_sufficient_recorded_evidence"],0)
         self.assertEqual(len(pending),3)
         self.assertEqual(out["new_confirmed_stickers"],0)
         with self.assertRaisesRegex(ValueError,"run_id"):
