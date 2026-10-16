@@ -53,7 +53,7 @@ Both runners are offline. A zero-acquired-photo result must report **zero actual
 
 The no-network [CI run 38959420837](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38959420837) at PR source SHA `9a26516f2c986a73a1668193a7fb081224892804` passed **143 tests** and executed all **12 positive** and **4 negative** synthetic scenes at the original unmodified scan/window budget.
 
-- Without a rejection cutoff, **8/12** composite paper stickers had a top-eight suggested region overlapping the true paper box by IoU ≥0.40. Four pasted examples were missed. They are distinct source-photo stickers but **not** genuine wide-scene owner photographs.
+- Without a rejection cutoff, **8/12** composite paper stickers had a top-eight suggested region overlapping the true paper box by IoU ≥0.40. The frozen **per-size breakdown** on exact-head [CI run 38959743068](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38959743068) was **1/4 at 1% of image area**, **3/4 at 3%**, and **4/4 at 8%**. Four pasted examples were missed, disproportionately at the tiniest scale. They are distinct source-photo stickers but **not** genuine wide-scene owner photographs.
 - The system returned at least one suggested region for **4/4 synthetic sticker-free scenes**. These are proposed visual matches, not physical CE ownership claims.
 - At **maximum hash distance 24**, it localized **1/12** of the positive scenes and still suggested a region for **1/4** negative scenes.
 - At **maximum hash distance 32** (and at each tested larger cutoff through 65), it localized **8/12** positives and suggested a region for **4/4** negatives. None of the six frozen distance cutoffs simultaneously achieved good localization and low synthetic false prompting.
