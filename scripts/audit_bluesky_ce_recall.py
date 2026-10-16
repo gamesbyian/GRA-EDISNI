@@ -143,28 +143,44 @@ def run(*, execute=False, max_requests=17, delay=1.0,
         return {"state": "planned_unexecuted", "manifest_sha256": sha,
                 "requests_sent": 0, "tasks": tasks, "results": []}
     fetch_fn, sleep_fn = fetch_fn or fetch, sleep_fn or time.sleep
-    results, stop_reason = [], None
-    for i, task in enumerate(tasks[:max_requests]):
-        if i:
+    results, stop_reason, blocked_versions = [], None, set()
+    requests_sent, skipped_blocked = 0, 0
+    for i, task in enumerate(tasks):
+        if task.get("version") in blocked_versions:
+            results.append({"task_index": i, "kind": task["kind"],
+                            "key": task["key"], "version": task["version"],
+                            "status": "skipped_after_endpoint_access_failure"})
+            skipped_blocked += 1
+            continue
+        if requests_sent >= max_requests:
+            break
+        if requests_sent:
             sleep_fn(delay)
+        requests_sent += 1
         try:
             row = summarize(i, task, fetch_fn(task["endpoint"], task["params"]))
         except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError,
                 ValueError, OSError, json.JSONDecodeError) as exc:
             row = summarize(i, task, error=exc)
-            if (isinstance(exc, urllib.error.HTTPError) and
-                exc.code in STOP_HTTP and
-                (task["kind"] != "direct_control" or exc.code == 429)):
-                stop_reason = f"provider_access_stop_{exc.code}"
+            if isinstance(exc, urllib.error.HTTPError):
+                if exc.code == 429 or exc.code == 402:
+                    stop_reason = f"provider_access_stop_{exc.code}"
+                elif exc.code in (401, 403) and task["kind"] == "blind_discovery":
+                    # No repeated requests to a forbidden version. The independently
+                    # documented other search version may have distinct permissions.
+                    blocked_versions.add(task["version"])
         results.append(row)
         if stop_reason:
             break
     return {
         "state": "executed_bounded",
         "fetched_at_utc": datetime.now(timezone.utc).isoformat(),
-        "manifest_sha256": sha, "requests_sent": len(results),
-        "tasks_planned": len(tasks), "tasks_attempted": len(results),
+        "manifest_sha256": sha, "requests_sent": requests_sent,
+        "tasks_planned": len(tasks),
+        "tasks_attempted": requests_sent,
+        "tasks_skipped_endpoint_block": skipped_blocked,
         "tasks_unattempted": len(tasks) - len(results),
+        "blocked_versions": sorted(blocked_versions),
         "stop_reason": stop_reason,
         "direct_post_retrievable": results[0].get("gold_accessible") if results else None,
         "blind_hits": [
@@ -173,6 +189,7 @@ def run(*, execute=False, max_requests=17, delay=1.0,
         ],
         "results": results,
     }
+
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
