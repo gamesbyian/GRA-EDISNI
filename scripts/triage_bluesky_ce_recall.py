@@ -173,8 +173,8 @@ def classify_media_caption_relevance(post):
     for raw in combined:
         s = unicodedata.normalize("NFKC", str(raw)).casefold()
         s = s.translate(str.maketrans({"’": "'", "‘": "'", "ʼ": "'"}))
-        title = re.search(r"\\binside\\s+collector(?:'s|s)?\\s+edition\\b", s)
-        specific = re.search(r"\\b(?:huddle|playdead)\\b", s)
+        title = re.search(r"\binside\s+collector(?:'s|s)?\s+edition\b", s)
+        specific = re.search(r"\b(?:huddle|playdead)\b", s)
         if title and specific:
             return "inside_ce_huddle_source_caption"
     return "not_identified_from_available_captions"
