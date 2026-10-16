@@ -257,7 +257,7 @@ def render(index: dict, visual: dict, root: Path, max_items: int = 48,
   <p class="meta">Source batch: {source_tag}</p>
   <p class="links">{source_html} · {media_html}</p>
   <p class="meta">Local image digest prefix: {sha}</p>
-  <h3>Review-only similarity</h3>{summary}{roi_markup}
+  <h3>Review-only similarity</h3>{summary}{roi_markup}{geometry_markup}
   <p class="status">UNREVIEWED · no sticker verified</p></div>
 </article>''')
     styles = """
