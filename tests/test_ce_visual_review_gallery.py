@@ -127,15 +127,15 @@ class GalleryTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"must not establish"):
                 render(index,{"matches":[]},root,geometry={**geometries,
                                                           "new_confirmed_stickers":2})
-            with self.assertRaisesRegex(ValueError,"cannot identify"):
-                bad=dict(geometries)
-                bad["candidates"]=[{"candidate_id":"candidate","proposals":[
-                    {"bbox_xyxy_original_pixels":[20,30,100,110],
-                     "new_sticker_confirmed":True}]}]
-                # Per-proposal violations are visibly withheld, not promoted.
-                out,summary=render(index,{"matches":[]},root,geometry=bad)
-                if not summary["invalid_geometry_preview_records"]:
-                    raise ValueError("cannot identify")
+            bad=dict(geometries)
+            bad["candidates"]=[{"candidate_id":"candidate","proposals":[
+                {"bbox_xyxy_original_pixels":[20,30,100,110],
+                 "new_sticker_confirmed":True}]}]
+            # Per-proposal violations are visibly withheld, not promoted.
+            out,summary=render(index,{"matches":[]},root,geometry=bad)
+            self.assertEqual(summary["geometry_crop_previews_embedded"],0)
+            self.assertEqual(len(summary["invalid_geometry_preview_records"]),1)
+            self.assertIn("cannot identify",summary["invalid_geometry_preview_records"][0]["error"])
 
     def test_source_link_scheme_and_login_rejected(self):
         self.assertEqual(original_link("http://example.org/"), "")
