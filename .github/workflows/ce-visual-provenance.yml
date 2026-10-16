@@ -5,6 +5,8 @@ on:
     paths:
       - "scripts/external_evidence/visual_index.py"
       - "scripts/external_evidence/visual_region_probe.py"
+      - "scripts/external_evidence/visual_geometry_proposals.py"
+      - "scripts/external_evidence/benchmark_sticker_geometry_development.py"
       - "scripts/external_evidence/benchmark_sticker_region_holdout.py"
       - "scripts/external_evidence/benchmark_sticker_region_stress.py"
       - "scripts/external_evidence/benchmark_sticker_region_real_negatives.py"
@@ -29,6 +31,7 @@ on:
       - "tests/test_ce_sticker_region_pilot.py"
       - "tests/test_ce_sticker_region_independent_holdout.py"
       - "tests/test_ce_sticker_region_specificity.py"
+      - "tests/test_ce_sticker_geometry_proposals.py"
       - "tests/test_ce_visual_review_gallery.py"
       - "tests/test_ce_search_attempt_ledger.py"
       - "tests/test_ce_html_image_discovery.py"
@@ -140,9 +143,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
+      - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13" "opencv-python-headless>=4.10,<5"
       - run: python -m unittest discover -s tests -p 'test_ce_*py' -v
-      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/visual_region_probe.py scripts/external_evidence/benchmark_sticker_region_holdout.py scripts/external_evidence/benchmark_sticker_region_stress.py scripts/external_evidence/benchmark_sticker_region_real_negatives.py scripts/external_evidence/build_visual_review_gallery.py scripts/external_evidence/audit_search_attempts.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py scripts/external_evidence/audit_historic_ebay_ce_sales.py scripts/external_evidence/probe_ce_ebay_wayback.py scripts/external_evidence/probe_ce_ebay_cdx.py scripts/external_evidence/audit_public_ce_thread_claims.py scripts/external_evidence/audit_public_ce_split_sale_leads.py scripts/external_evidence/audit_public_ce_october_auction.py
+      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/visual_region_probe.py scripts/external_evidence/visual_geometry_proposals.py scripts/external_evidence/benchmark_sticker_geometry_development.py scripts/external_evidence/benchmark_sticker_region_holdout.py scripts/external_evidence/benchmark_sticker_region_stress.py scripts/external_evidence/benchmark_sticker_region_real_negatives.py scripts/external_evidence/build_visual_review_gallery.py scripts/external_evidence/audit_search_attempts.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py scripts/external_evidence/audit_historic_ebay_ce_sales.py scripts/external_evidence/probe_ce_ebay_wayback.py scripts/external_evidence/probe_ce_ebay_cdx.py scripts/external_evidence/audit_public_ce_thread_claims.py scripts/external_evidence/audit_public_ce_split_sale_leads.py scripts/external_evidence/audit_public_ce_october_auction.py
       - name: Index all canonical original sticker photographs and validate source SHA256
         run: |
           mkdir -p /tmp/ce-empty-candidate-set
@@ -167,6 +170,11 @@ jobs:
           python scripts/external_evidence/benchmark_sticker_region_stress.py \
             --repo-root . \
             --output visual-evidence-work/region-specificity-stress.json
+      - name: Measure geometric paper candidate proposals on previously seen development scenes
+        run: |
+          python scripts/external_evidence/benchmark_sticker_geometry_development.py \
+            --repo-root . \
+            --out visual-evidence-work/geometry-developments.json
       - name: Retain exact-head independent original-photo benchmark report
         if: always()
         uses: actions/upload-artifact@v4
@@ -175,6 +183,7 @@ jobs:
           path: |
             visual-evidence-work/region-independent-holdout.json
             visual-evidence-work/region-specificity-stress.json
+            visual-evidence-work/geometry-developments.json
           retention-days: 30
           if-no-files-found: warn
 
@@ -297,6 +306,13 @@ jobs:
             --repo-root . \
             --media visual-reference-work \
             --output visual-evidence-work/region-real-negative-controls.json
+      - name: Generate opt-in geometric paper candidates from previously acquired images
+        if: inputs.run_region_pilot
+        run: |
+          python scripts/external_evidence/visual_geometry_proposals.py \
+            --candidate-index visual-evidence-work/candidate-index.json \
+            --candidate-root evidence-work --max-files 48 --max-proposals 48 \
+            --output visual-evidence-work/geometry-proposals.json
       - name: Generate offline source-diverse visual review gallery
         run: |
           args=(--index visual-evidence-work/candidate-index.json
