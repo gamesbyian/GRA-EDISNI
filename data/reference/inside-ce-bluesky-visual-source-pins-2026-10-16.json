@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "origin": "October 16 2026 measured native Bluesky AppView 16-query media recapture",
+  "source_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38882275551",
+  "purpose": "Independent visual review of precisely three publicly attached images; no owner outreach or sticker promotion",
+  "max_binary_bytes_per_file": 6000000,
+  "images": [
+    {
+      "case_id": "caswell_statue",
+      "source_post": "https://bsky.app/profile/tomcaswell.games/post/3mta6ecjbvk2i",
+      "created_at": "2026-08-16T21:53:12.962Z",
+      "alt": "",
+      "cdn_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:msovagwqdq3ew2rrikvpqp7c/bafkreifh2ulznbpzk2vv5syqymlmrrlvwgxpppbjco27dnuqcjeuioqdoi",
+      "known_sticker": null
+    },
+    {
+      "case_id": "telemon_huddle_screenshot",
+      "source_post": "https://bsky.app/profile/telemon.bsky.social/post/3lsqjezdwgc2z",
+      "created_at": "2025-06-29T11:01:28.541Z",
+      "alt": "A screenshot of The Huddle as it appears in INSIDE.",
+      "cdn_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:rr4bd7yobqi73fmmgrpy3p7t/bafkreidxyznmptfr4ltei6zeznlryohknrremkiy6otal7iciflnmzknlu",
+      "known_sticker": null
+    },
+    {
+      "case_id": "telemon_huddle_art_cards",
+      "source_post": "https://bsky.app/profile/telemon.bsky.social/post/3lsqjezdwgc2z",
+      "created_at": "2025-06-29T11:01:28.541Z",
+      "alt": "Concept art cards of The Huddle, from INSIDE Collector's Edition.",
+      "cdn_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:rr4bd7yobqi73fmmgrpy3p7t/bafkreigkolvib5ldgqtgretdk622zpynik65hxjdiavxlzafgqntvcagry",
+      "known_sticker": null
+    }
+  ],
+  "exploration_queries": [
+    "playdead_inside_edition",
+    "inside_numbered",
+    "inside_sticker",
+    "inside_cipher"
+  ],
+  "sticker_confirmed_by_manifest": 0
+}
