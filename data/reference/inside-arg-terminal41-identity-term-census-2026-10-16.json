@@ -72,7 +72,8 @@
       "path": "terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
       "blob_sha": "127d8772912ffc499e5afaffe321d5bab7e920df",
       "size_bytes": 19360240,
-      "reason": "binary-media; neither full bitstream nor image metadata reviewed in this specific string scan"
+      "reason": "binary-media; neither full bitstream nor image metadata reviewed in this specific string scan",
+      "attempted_connector_fetch_blob": "failed: UnicodeDecodeError at PNG signature (0x89), no content inspected"
     }
   ],
   "finding": "No additional source-text matches for the tested names beyond one 534brn image-source artifact and facility in viewgate pair; not global-web/account absence proof.",
@@ -81,5 +82,6 @@
     "Search matched decoded connector text, not all raw bytes; original A reproduction differs from connector rendition, see existing hash audit.",
     "No inference of ARG-controlled external accounts follows from file-internal tokens.",
     "Unarchived original backup pages/terminal branches remain unknown and are not included."
-  ]
+  ],
+  "limits_update": "Other 73 text inventory members inspected, one PNG binary not scanned."
 }
