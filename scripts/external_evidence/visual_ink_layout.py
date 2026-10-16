@@ -97,6 +97,8 @@ def annotate(index:dict, proposed:dict, root:Path, *, max_files:int=48,
              max_regions_per_file:int=8)->dict:
     if not 1<=max_files<=48 or not 1<=max_regions_per_file<=8:
         raise ValueError("source review budgets are 1..48 photos and 1..8 regions")
+    if proposed.get("new_confirmed_stickers",0)!=0:
+        raise ValueError("source region report may not declare a verified sticker")
     lookup={}
     for item in index.get("candidates",[]):
         ident=item.get("id")
@@ -106,6 +108,8 @@ def annotate(index:dict, proposed:dict, root:Path, *, max_files:int=48,
     results=[];errors=[]
     root=root.resolve()
     for source in proposed.get("candidates",[])[:max_files]:
+        if source.get("new_sticker_confirmed") is not False:
+            raise ValueError("source row incorrectly declares a verified sticker")
         ident=source.get("candidate_id")
         if ident not in lookup:
             errors.append({"candidate_id":ident,"reason":"missing-pinned-source-reference"})
