@@ -1,0 +1,82 @@
+name: One-shot Bluesky CE discovery pilot
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/discover_bluesky_inside_ce.py'
+      - 'scripts/triage_bluesky_ce_recall.py'
+      - 'tests/test_bluesky_ce_discovery.py'
+      - 'tests/test_bluesky_ce_triage.py'
+      - '.github/workflows/inside-ce-bluesky-discovery.yml'
+  workflow_dispatch:
+    inputs:
+      execute:
+        description: 'Run live, bounded 2023–2026 public discovery?'
+        type: choice
+        options: ['no', 'yes']
+        default: 'no'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: inside-ce-bluesky-discovery-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  blinded-discovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate frozen queries and review-only source filters
+        run: |
+          python -m unittest discover -s tests -p 'test_bluesky_ce_discovery.py' -v
+          python -m unittest discover -s tests -p 'test_bluesky_ce_triage.py' -v
+      - name: Publish offline search manifest
+        run: |
+          python scripts/discover_bluesky_inside_ce.py \
+            --output research-output/bluesky-crossyear-plan.json
+      - name: Execute single bounded cross-year public pilot on originating PR
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 288 }}
+        run: |
+          python scripts/discover_bluesky_inside_ce.py --execute \
+            --request-cap 16 \
+            --output research-output/bluesky-crossyear-results.json
+      - name: Optional manual bounded public run
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
+        run: |
+          python scripts/discover_bluesky_inside_ce.py --execute \
+            --request-cap 16 \
+            --output research-output/bluesky-crossyear-results.json
+      - name: Review-only deduplication with source context
+        if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.number == 288) || (github.event_name == 'workflow_dispatch' && inputs.execute == 'yes') }}
+        run: |
+          python scripts/triage_bluesky_ce_recall.py \
+            --input research-output/bluesky-crossyear-results.json \
+            --output research-output/bluesky-crossyear-review-only.jsonl \
+            --summary research-output/bluesky-crossyear-review-summary.json \
+            --max-candidates 200
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path("research-output/bluesky-crossyear-review-summary.json").read_text())
+          print("REVIEW_SUMMARY:",json.dumps(r))
+          for line in Path("research-output/bluesky-crossyear-review-only.jsonl").read_text().splitlines()[:25]:
+              x=json.loads(line)
+              print("REVIEW_CANDIDATE:",json.dumps({
+                  "url":x["url"],"date":x["published_at"],
+                  "context_class":x["context_class"],
+                  "excerpt":x["excerpt"][:280],
+                  "new_confirmed_stickers":0,
+              },ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inside-ce-bluesky-crossyear
+          path: research-output/
+          retention-days: 14
+          if-no-files-found: error
