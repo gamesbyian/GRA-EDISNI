@@ -23,9 +23,9 @@ from pathlib import Path
 MARKERS = ("terminal41", "setrinamair", "hasty", "534brn9653f9j8mmd",
            "multipleprobesdispatched", "newplanetdiscovered", "lifedetected")
 HIDDEN_RE = re.compile(r"<!--.*?-->", re.DOTALL)
-URL_RE = re.compile(r"https?://[^\\s\\]<>|{}'\\\"]+", re.IGNORECASE)
+URL_RE = re.compile(r'https?://[^\s<>|{}]+', re.IGNORECASE)
 STRANGE = {"Cf", "Cc"}
-ALLOWED_CONTROLS = "\\r\\n\\t"
+ALLOWED_CONTROLS = "\r\n\t"
 
 
 def revision_text(rev):
@@ -122,7 +122,7 @@ def delta_days(first, second):
 
 def indicators(before, after, added):
     flags = []
-    joined = "\\n".join(added)
+    joined = "\n".join(added)
     newly_hidden = set(HIDDEN_RE.findall(after)) - set(HIDDEN_RE.findall(before))
     if newly_hidden:
         flags.append({"kind": "added_html_comment", "examples": sorted(newly_hidden)[:3]})
@@ -204,8 +204,8 @@ def main():
         result = audit(dataset, args.transient_days)
         if args.raw_output:
             args.raw_output.write_text(
-                json.dumps(dataset, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
-        rendered = json.dumps(result, ensure_ascii=False, indent=2) + "\\n"
+                json.dumps(dataset, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        rendered = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
         if args.output:
             args.output.write_text(rendered, encoding="utf-8")
         else:
