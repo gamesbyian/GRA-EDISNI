@@ -49,12 +49,6 @@ jobs:
         run: |
           python scripts/audit_bluesky_ce_recall.py \
             --output research-output/bluesky-recall-offline-plan.json
-      - name: One bounded live PR known-positive benchmark (17 GET maximum)
-        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 288 }}
-        run: |
-          python scripts/audit_bluesky_ce_recall.py --execute \
-            --api-host primary --max-requests 17 --delay-seconds 1 \
-            --output research-output/bluesky-recall-public-results.json
       - name: Optional explicit manual bounded public search
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
         env:
@@ -64,7 +58,7 @@ jobs:
             --api-host primary --max-requests "$REQUEST_CAP" --delay-seconds 1 \
             --output research-output/bluesky-recall-public-results.json
       - name: Generate bounded deduplicated review-only lead queue
-        if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.number == 288) || (github.event_name == 'workflow_dispatch' && inputs.execute == 'yes') }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
         run: |
           python scripts/triage_bluesky_ce_recall.py \
             --input research-output/bluesky-recall-public-results.json \
@@ -72,7 +66,7 @@ jobs:
             --summary research-output/bluesky-public-review-summary.json \
             --max-candidates 100
       - name: Report exact source and observed probe statuses (no speculative coverage)
-        if: ${{ github.event_name == 'pull_request' || inputs.execute == 'yes' }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
         run: |
           python - <<'PY'
           import json
