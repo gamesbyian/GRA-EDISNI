@@ -73,19 +73,19 @@ The source family references indexed schemes **0–3 only**. Some individual ver
 
 ## An important archive-incompleteness control
 
-### One exact missing redirect hop not in the earlier screenshot-derived gap list
+### An exact unpreserved redirect hop: in the uploader's 2023 list, but not in earlier screenshot-derived gaps
 
 The live source-graph audit exposes an additional, **directly referenced** missing artifact:
 
 `/sys/activate_shutdown_protocol/commit/___________DONE_SD.html`
 
-The preserved and byte-verified `___________DONE.html` has this literal, zero-delay HTML instruction:
+The preserved `___________DONE.html`, byte-verified **against the 2023 mirror's Git blob** (not necessarily original website HTML), has this literal, zero-delay HTML instruction:
 
 ```html
 <meta http-equiv="refresh" content="0; url=___________DONE_SD.html" />
 ```
 
-The referenced `___________DONE_SD.html` is absent from the 74-file source tree. It is **not** among CL-09's ten screenshot-derived gap names. The separately preserved nine `___________DONE_SD_CONFIRMED_09.html` → `_01.html` countdown is fixed (Experiment 408), but we cannot prove how or whether the missing intermediate page entered that countdown. In particular, no recovered byte defines whether this absent junction merely redirected, displayed another message or offered a choice. **Do not count a guessed bridge page as a recovered decoder.**
+The referenced `___________DONE_SD.html` is absent from the 74-file source tree. It is **not** among CL-09's ten screenshot-derived gap names. **Importantly, the 2023 original archive uploader had already explicitly listed this exact file as missing; it is not a newly discovered missing filename.** The uploader also listed two other missing shutdown-stage files, `___________DONE_SD_CONFIRMED.html` and `___________DONE_SD_CONFIRMED_10.html`, which are not established as linked destinations by this six-edge graph. See the [upstream source-provenance correction](2026-10-16-terminal41-original-uploader-gap-audit.md). The separately preserved nine `___________DONE_SD_CONFIRMED_09.html` → `_01.html` countdown is fixed (Experiment 408), but we cannot prove how or whether the missing intermediate page entered that countdown. In particular, no recovered byte defines whether this absent junction merely redirected, displayed another message or offered a choice. **Do not count a guessed bridge page as a recovered decoder.**
 
 The five other **unresolved internal edges** correspond to `/sys/` and the four numbered termination directories `11/`, `23/`, `42/`, `99/`, already documented with first-person screenshot provenance in CL-09. The sixth missing edge is the precise shutdown-stage `DONE_SD.html` above. A link graph is an **archive-completeness map**, never proof of an available input handler.
 
