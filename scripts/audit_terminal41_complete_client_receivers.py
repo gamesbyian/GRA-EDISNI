@@ -134,7 +134,15 @@ def inspect() -> dict:
         ]
         candidate_literals = sorted(set(x.rstrip(".,;)]") for x in TARGET_RE.findall(txt)))
         inline_code = "\n".join(h.inline_js_parts)
+        is_status = bool(re.fullmatch(r"terminal41[.]link/sys/printreqstatus(?:_[0-9]+|_SD)?[.](?:html|txt)", e["path"]))
+        scheme_indices = sorted(set(int(v) for v in re.findall(r"schem\\[(\\d+)\\]", txt, flags=re.I))) if is_status else []
+        obtained_match = re.search(r"print requirements obtained\\(b\\)[.]+\\[(\\d+)\\]", txt, re.I) if is_status else None
+        applied_match = re.search(r"print requirements applied\\(b\\)[.]+\\[(\\d+)\\]", txt, re.I) if is_status else None
         p = {
+            "printreqstatus_variant": is_status,
+            "named_scheme_indices": scheme_indices,
+            "schemes_obtained": int(obtained_match.group(1)) if obtained_match else None,
+            "schemes_applied": int(applied_match.group(1)) if applied_match else None,
             "path": e["path"],
             "bytes": len(raw),
             "manifest_size_matches": correct_size,
@@ -171,9 +179,16 @@ def inspect() -> dict:
         counts["printed_input_literal_pages"] += int(p["printed_input_literal"])
         counts["anchor_pages"] += int(bool(p["anchors"]))
         counts["meta_redirect_pages"] += int(bool(p["meta_redirects"]))
+        counts["status_variants"] += int(p["printreqstatus_variant"])
+        if p["printreqstatus_variant"] and p["schemes_obtained"] is not None:
+            counts["status_obtained_" + str(p["schemes_obtained"])] += 1
         for link in p["link_analysis"]:
             counts["links_"+link["kind"]] += 1
     assert len(pages) == 73
+    statuses = [p for p in pages if p["printreqstatus_variant"]]
+    assert len(statuses) == 17
+    assert all(p["schemes_obtained"] == p["schemes_applied"] for p in statuses)
+    assert all(set(p["named_scheme_indices"]) <= {0,1,2,3} for p in statuses)
     return {
         "mode": "VALIDATE_preserved_client_snapshot_ONLY",
         "source_ref": manifest["source_ref"],
@@ -225,6 +240,12 @@ def main():
             if item["controls"] or item["script_srcs"] or item["event_handlers"] or item["inline_script_chars"]:
                 print(item["path"], item["controls"], item["script_srcs"],
                       item["event_handlers"], item["inline_script_chars"])
+        print("STATUS DOCUMENTS (source filenames not assumed to be dates):")
+        for item in result["pages"]:
+            if item["printreqstatus_variant"]:
+                print(item["path"], "schemes", item["named_scheme_indices"],
+                      "obtained", item["schemes_obtained"],
+                      "applied", item["schemes_applied"])
         print("UNCAPTURED INTERNAL LINK EDGES:")
         for item in result["pages"]:
             for edge in item["link_analysis"]:
