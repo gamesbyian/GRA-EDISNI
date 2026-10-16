@@ -86,14 +86,19 @@ def build_queue(report, *, max_candidates=100):
     if not 1 <= max_candidates <= 500:
         raise ValueError("Candidate cap must be 1..500")
     joined = {}
-    checked, indexed, errors = 0, 0, 0
+    checked, indexed, errors, unattempted = 0, 0, 0, 0
+    query_statuses = Counter()
     for result in report["results"]:
         if result.get("kind") != "blind_discovery":
             continue
-        if result.get("status") == "error":
-            errors += 1
+        status = result.get("status") or "missing_status"
+        query_statuses[status] += 1
+        if status in ("not_attempted", "planned_unexecuted",
+                      "skipped_after_endpoint_access_failure"):
+            unattempted += 1
             continue
-        if result.get("status") != "ok":
+        if status != "ok":
+            errors += 1
             continue
         checked += 1
         for rank, post in enumerate(result.get("posts", []), 1):
@@ -134,6 +139,8 @@ def build_queue(report, *, max_candidates=100):
         "api_host": report.get("api_host", "unrecorded"),
         "searched_queries_with_valid_response": checked,
         "failed_queries": errors,
+        "unattempted_queries": unattempted,
+        "query_status_counts": dict(sorted(query_statuses.items())),
         "search_post_appearances": indexed,
         "unique_public_post_uris": len(joined),
         "context_class_counts": dict(sorted(classes.items())),
@@ -162,7 +169,10 @@ def build_media_review_queue(report, *, max_candidates=200):
     selected = {}
     stats = Counter()
     for result in report["results"]:
-        if result.get("kind") != "blind_discovery" or result.get("status") != "ok":
+        if result.get("kind") != "blind_discovery":
+            continue
+        stats["query_status_" + str(result.get("status") or "missing_status")] += 1
+        if result.get("status") != "ok":
             continue
         for post in result.get("posts", []):
             stats["post_appearances"] += 1
@@ -220,6 +230,9 @@ def build_media_review_queue(report, *, max_candidates=200):
         "posts_without_captured_media_metadata": counts.get(
             "posts_without_captured_media_metadata", 0),
         "invalid_public_post_locators": counts.get("invalid_public_post_locators", 0),
+        "query_status_counts": {key.removeprefix("query_status_"): val
+                                for key, val in counts.items()
+                                if key.startswith("query_status_")},
         "unfiltered_original_api_artifact_required": True,
         "source_photo_bytes_retrieved": 0,
         "new_confirmed_stickers": 0,
