@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "mode": "VALIDATE: source-pinned retrieval and direct visual inspection; bounded DISCOVER public query followthrough",
+  "date": "2026-10-16",
+  "github_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38885283710",
+  "artifact_id": 12038842963,
+  "artifact_retention_days": 14,
+  "source_manifest": "data/reference/inside-ce-bluesky-visual-source-pins-2026-10-16.json",
+  "image_retrieval": [
+    {
+      "id": "caswell_statue",
+      "source": "https://bsky.app/profile/tomcaswell.games/post/3mta6ecjbvk2i",
+      "status": "retrieved_and_visually_inspected",
+      "dimensions": [
+        3000,
+        3999
+      ],
+      "media_format": "WEBP",
+      "bytes": 167698,
+      "sha256": "a5f703eeed6d561631cb31535ccf65b31e266f92036fb0582ba15f975e28d191",
+      "observation": "Single public photograph of flesh-coloured Huddle statue being held in one hand, no edition box, seal, packaging, or numbered sticker visible",
+      "evidence_ce_object": "visible_huddle_statue",
+      "new_sticker": "not_in_this_image",
+      "ownership_beyond_photo": "unknown"
+    },
+    {
+      "id": "telemon_huddle_screenshot",
+      "source": "https://bsky.app/profile/telemon.bsky.social/post/3lsqjezdwgc2z",
+      "status": "retrieved_and_visually_inspected",
+      "dimensions": [
+        1023,
+        1023
+      ],
+      "media_format": "WEBP",
+      "bytes": 12096,
+      "sha256": "c407b74916ae4278f2524f625f6ad450bb722b045b38de93d86837137f37f59f",
+      "observation": "Screenshot of Huddle character in dark game scene; not a real-life CE package or sticker",
+      "new_sticker": "not_in_this_image"
+    },
+    {
+      "id": "telemon_huddle_art_cards",
+      "source": "https://bsky.app/profile/telemon.bsky.social/post/3lsqjezdwgc2z",
+      "status": "retrieved_and_visually_inspected",
+      "dimensions": [
+        1429,
+        2000
+      ],
+      "media_format": "WEBP",
+      "bytes": 114814,
+      "sha256": "b5b521f371e1ad9aa56a84e93450aab7f40e2ca80a1ff08a5dd0a8db59a46157",
+      "observation": "Two printed Huddle concept-art cards/prints laid flat on wooden tabletop; no sticker or packaging label visible",
+      "new_sticker": "not_in_this_image",
+      "cross_source": "Community register previously has Discord Telemon /449 H, identity across platforms unverified"
+    }
+  ],
+  "results": {
+    "query_requests_actual": 4,
+    "query_requests_max": 6,
+    "recovered_original_timeout_queries": [
+      {
+        "name": "playdead_inside_edition",
+        "status": "success_first_page",
+        "posts_returned": 3,
+        "new_confirmed_stickers": 0,
+        "note": "One known ARG-awareness appeal by Molonara; two other non-owner Playdead/INSIDE mentions"
+      },
+      {
+        "name": "inside_numbered",
+        "status": "success_first_page",
+        "posts_returned": 15,
+        "new_confirmed_stickers": 0,
+        "note": "Posts are about unrelated numbered stickers, packages and merchandise"
+      }
+    ],
+    "first_page_refetched": {
+      "name": "inside_sticker",
+      "status": "success",
+      "posts_returned": 49,
+      "cursor_existed": true,
+      "new_confirmed_stickers": 0
+    },
+    "blocked_followup": {
+      "name": "inside_sticker",
+      "phase": "next_page_if_cursor",
+      "http_status": 403,
+      "classification": "provider_denied_this_cursor_page_not_evidence_of_absence"
+    },
+    "unattempted_followup": {
+      "name": "inside_cipher",
+      "classification": "not_attempted_after_provider_block"
+    },
+    "observed_new_post_uris_relative_to_previous_pilot": 18,
+    "verified_new_ce_sticker_owners": 0,
+    "verified_new_sticker_photos": 0
+  },
+  "constraints": "No owner outreach, no broad scraping, no CAPTCHA/403 bypass, public exact source images only. The absence of a sticker in these three photographs is not absence from copies or other photos."
+}
