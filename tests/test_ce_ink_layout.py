@@ -52,7 +52,7 @@ class InkLayoutTests(unittest.TestCase):
             Image.new("RGB",(230,180),(240,235,230)).save(source)
             index={"candidates":[{"id":"a","path":"owned-photo.jpg","sha256":sha256(source),
                                   "source_url":"https://example.org/owner/post"}]}
-            proposed={"candidates":[{"candidate_id":"a","proposals":[{
+            proposed={"new_confirmed_stickers":0,"candidates":[{"candidate_id":"a","new_sticker_confirmed":False,"proposals":[{
                       "bbox_xyxy_original_pixels":[20,30,140,140],
                       "new_sticker_confirmed":False}]}]}
             result=annotate(index,proposed,root)
