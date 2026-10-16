@@ -264,12 +264,15 @@ jobs:
             --output visual-evidence-work/region-suggestions.json
       - name: Generate offline source-diverse visual review gallery
         run: |
-          python scripts/external_evidence/build_visual_review_gallery.py \
-            --index visual-evidence-work/candidate-index.json \
-            --matches visual-evidence-work/visual-matches.json \
-            --candidate-root evidence-work \
-            --output visual-evidence-work/review-gallery.html \
-            --max-items 48
+          args=(--index visual-evidence-work/candidate-index.json
+            --matches visual-evidence-work/visual-matches.json
+            --candidate-root evidence-work
+            --output visual-evidence-work/review-gallery.html
+            --max-items 48)
+          if [[ -f visual-evidence-work/region-suggestions.json ]]; then
+            args+=(--regions visual-evidence-work/region-suggestions.json)
+          fi
+          python scripts/external_evidence/build_visual_review_gallery.py "${args[@]}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
