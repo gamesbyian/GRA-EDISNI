@@ -1,11 +1,9 @@
 name: External evidence public social smoke
 
 on:
-  pull_request:
-    paths:
-      - "scripts/external_evidence/**"
-      - "data/external-acquisition-targets.json"
-      - ".github/workflows/external-evidence-social-smoke.yml"
+  # Live provider capability checks are intentional, manual and strict.
+  # Repeated pull-request smoke was hammering login-blocked sources and
+  # conflating remote access failure with source-code regression.
   workflow_dispatch:
 
 permissions:
