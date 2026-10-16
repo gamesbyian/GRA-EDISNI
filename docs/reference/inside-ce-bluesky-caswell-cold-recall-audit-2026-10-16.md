@@ -81,3 +81,10 @@ No first-page result can establish full coverage; a source URL delivered by a we
 The literal body uses **U+2019 right curly apostrophe** (Collector’s). Our principal query contains **U+0027 ASCII straight apostrophe** (collector's). After only Unicode casefolding, a naive substring matcher does not find the query. Replacing curly apostrophes with ASCII apostrophes first yields an exact match. That is a real local-text-matching hazard, but **not** evidence that Bluesky's actual search index discriminates these characters, since our queries were refused. Treat the curly-quote variant as a retrospective diagnostic, not as a successful blind search.
 
 The program still requires original-source/CE-object reconciliation and cannot infer that Caswell retains this Huddle, possessed a wrapping sticker, or represents an additional distinct copy. Ian already gave the lead to Raezores.
+
+
+## Downstream triage error: search-hit scoring, independently reproduced
+
+The existing [public-lead ranker](../../scripts/rank_inside_ce_public_leads.py) matched explicit possession verbs such as "I bought", "I own", "my" and marketing anchors (Huddle, iam8bit, Playdead, RealDoll). Caswell's **actual verified public text** has neither set: without a new rule it received **score 0** despite naming the INSIDE CE. Thus even a successfully retrieved search hit could be buried after stronger-scored sources. This is a measurable **post-retrieval triage omission**, distinct from the 403 retrieval barrier.
+
+The PR adds two conservative rules with an explicit regression: "Do I still need" / comparable first-person keep-or-dispose questions as **possible ownership (weight 2)** and the distinctive "INSIDE Collector’s Edition" title including straight or curly apostrophe **(weight 2)**. The Caswell text now scores **4**, remains **unverified_public_lead**, and always has **new_confirmed_stickers = 0**. This fixes ranking of similar questions without claiming they retained the full edition or numbered sticker. A local punctuation-normalization experiment also demonstrates why direct exact-string matching is unreliable.
