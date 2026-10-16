@@ -1,0 +1,51 @@
+family	term	transformation	evidence_class	coverage	source	note
+anthony	Anthony T. Setrinamairé	name-full-accent	known-persona	indexed-queried	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	known ARG sender/video
+anthony	Anthony T Setrinamaire	name-full-ascii	known-persona	indexed-queried	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	accent folding
+anthony	AnthonySetrinamaire	join-full	candidate-handle	indexed-queried	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	no attributable second account
+anthony	AnthonyTSetrinamaire	join-full-initial	candidate-handle	indexed-queried	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	no attributable second account
+anthony	Tony Setrinamaire	nickname-full	candidate-handle	indexed-queried	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	Tony substitution only
+anthony	Tony Setrinamairé	nickname-accent	candidate-handle	indexed-queried	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	Tony substitution only
+anthony	Tony T Setrinamaire	nickname-initial	candidate-handle	indexed-queried	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	no relevant extra matches
+anthony	TonySetrinamaire	nickname-joined	candidate-handle	indexed-queried	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	no relevant extra matches
+anthony	tonytset	nickname-abbreviated	candidate-handle	untested-site-native	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	low distinctiveness
+anthony	AntSetrinamaire	nickname-ant	candidate-handle	untested-site-native	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	short-name hypothesis
+anthony	AntonySetrinamaire	spelling-variant	candidate-handle	untested-site-native	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	Antony without h
+anthony	Setrinamaire	surname	candidate-handle	indexed-queried	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	rare anchor
+anthony	qpzympraddjjnymblns	email-local-part	known-persona	indexed-queried	https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream	exact sender token
+anset	AnSet	original-XMP-author	metadata-string	indexed-queried	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/dat/534brn9653f9j8mmd/index.html	exact case; common Danish word lowercase
+anset	An_Set	underscore	candidate-handle	untested-site-native	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/dat/534brn9653f9j8mmd/index.html	punctuation transform
+anset	an.set	period	candidate-handle	untested-site-native	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/dat/534brn9653f9j8mmd/index.html	punctuation transform
+anset	anset41	suffix-41	candidate-handle	untested-site-native	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/dat/534brn9653f9j8mmd/index.html	code suffix conjecture
+anset	AnSetrin	name-extension	candidate-handle	untested-site-native	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/dat/534brn9653f9j8mmd/index.html	posthoc hypothetical
+terminal	terminal41	domain-stem	known-infrastructure	indexed-queried	https://github.com/twinysam/INSIDE-ARG/blob/master/readme.md	unrelated generic terminal tools
+terminal	terminal_41	underscore	candidate-handle	untested-site-native	https://github.com/twinysam/INSIDE-ARG/blob/master/readme.md	possible platform alias
+terminal	term41	short-form	candidate-handle	indexed-queried	https://github.com/twinysam/INSIDE-ARG/blob/master/readme.md	homonymous software
+terminal	terminal11	other-terminal	candidate-handle	untested-site-native	https://github.com/gamesbyian/GRA-EDISNI/blob/main/docs/conjecture-lab/2026-10-08-terminal41-unarchived-route-recovery.md	screenshot terminal ID
+terminal	terminal23	other-terminal	candidate-handle	untested-site-native	https://github.com/gamesbyian/GRA-EDISNI/blob/main/docs/conjecture-lab/2026-10-08-terminal41-unarchived-route-recovery.md	screenshot terminal ID
+terminal	terminal42	other-terminal	candidate-handle	untested-site-native	https://github.com/gamesbyian/GRA-EDISNI/blob/main/docs/conjecture-lab/2026-10-08-terminal41-unarchived-route-recovery.md	screenshot terminal ID
+terminal	terminal99	other-terminal	candidate-handle	untested-site-native	https://github.com/gamesbyian/GRA-EDISNI/blob/main/docs/conjecture-lab/2026-10-08-terminal41-unarchived-route-recovery.md	screenshot terminal ID
+facility	Facility 89B(7hg553)	full-exact	in-world-facility	indexed-queried	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/comms_main_viewgate_002.html	original HTML verified
+facility	facility89b	joined	candidate-handle	indexed-queried	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/comms_main_viewgate_002.html	no attributable account
+facility	7hg553	code	candidate-handle	indexed-queried	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/comms_main_viewgate_002.html	higher precision than facility
+facility	89b7hg553	joined-code	candidate-handle	untested-site-native	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/comms_main_viewgate_002.html	combine original exact fields
+facility	facility_89b	underscore	candidate-handle	untested-site-native	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/comms_main_viewgate_002.html	combine original exact fields
+rorschach	Rorschach Desgn Noah x200564	original-texture	in-world-notation	indexed-queried	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	could be designation not organization
+rorschach	rorschachdesgn	joined	candidate-handle	indexed-queried	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	not verified account
+rorschach	noahx200564	joined	candidate-handle	indexed-queried	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	not verified account
+rorschach	x200564	code-fragment	candidate-handle	untested-site-native	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	ambiguous generic numeric pattern
+rorschach	rorschach_design	expanded	candidate-handle	untested-site-native	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	expanded name not in source
+gateway	gate98	gate-stem	candidate-handle	untested-site-native	https://wiki.gamedetectives.net/w/Inside_ARG	system name
+gateway	breachlog	route-stem	candidate-handle	untested-site-native	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/dat/breachlog.html	exact original route
+gateway	breachcontribution	route-stem	candidate-handle	untested-site-native	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/dat/breach_contribution_reg.html	derived compound
+gateway	viewgate002	route-stem	candidate-handle	untested-site-native	https://github.com/twinysam/INSIDE-ARG/blob/master/terminal41.link/comms_main_viewgate_002.html	original stem abbreviated
+texture	GLADBLAD	Morse-decode	source-derived-term	indexed-queried	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	Nordic word/name collisions
+texture	gladblad41	joined-suffix	candidate-handle	untested-site-native	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	conjecture
+texture	WaterGirlWireFake	game-asset-term	source-derived-term	indexed-queried	https://steamcommunity.com/app/304430/discussions/0/359543951720753445?ctp=8&l=hungarian	original Aug 9 2016 asset report
+staff-linked	TobberH	actual-handle	staff-credited-public-profile	verified-real-world-graph	https://x.com/tobberh	X bio links to Playdead technical artist Tobias Biehl and gladblad domain
+staff-linked	tobbermix	blog-stem	staff-linked-public-website	verified-real-world-graph	https://tobbermix.gladblad.dk/author/tobberh/	indexed WordPress author blog; appears as early as July 2010
+staff-linked	tobbermix.gladblad.dk	domain	staff-linked-public-website	verified-real-world-graph	https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2	2016 archival mention and current X bio
+staff-linked	gaming.gladblad.dk	domain	staff-associated-game-team	verified-real-world-graph	https://www.gametracker.com/clan/gaming.gladblad.dk/	listed as team's public homepage
+staff-linked	Tobias Biehl	credited-name	known-developer-not-ARG-character	verified-real-world-graph	https://gamefaqs.gamespot.com/xboxone/805489-inside/credit	credited technical artist
+staff-linked	tobberh	gametracker-handle	staff-associated-game-account	verified-real-world-graph	https://www.gametracker.com/tobberh/	profile associated with Gladblad group
+staff-linked	GLADBLAD GameTracker	team	public-game-team	verified-real-world-graph	https://www.gametracker.com/clan/gaming.gladblad.dk/	two-member group with published Steam link; does not establish ARG affiliation
+metadata	Andreas Normand Grøntved	printer-jpg-creator	real-asset-author-not-fictional	source-documented-2018	https://steamcommunity.com/app/304430/discussions/0/359543951720753445/?ctp=53	2018 Steam reports EXIF/Picasa metadata and official credits confirm animator
