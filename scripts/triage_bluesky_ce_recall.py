@@ -36,6 +36,11 @@ def classify_ce_context(text):
     s = unicodedata.normalize("NFKC", str(text or "")).casefold()
     s = s.translate(str.maketrans({"’": "'", "‘": "'", "ʼ": "'"}))
     s = re.sub(r"\s+", " ", s)
+    # Negative control: another game literally titled "Evil Inside" produces
+    # "Evil Inside Collector's Edition" and passes naive title-prefix logic.
+    if (("house of 1000 doors" in s or "evil inside collector" in s)
+            and "playdead" not in s and "iam8bit" not in s):
+        return "unrelated_or_unresolved"
     named_ce = bool(
         re.search(r"\binside\s+collector(?:'s|s)?\s+edition\b", s)
         or re.search(r"\bcollector(?:'s|s)?\s+edition\s+of\s+(?:playdead's\s+)?inside\b", s)
