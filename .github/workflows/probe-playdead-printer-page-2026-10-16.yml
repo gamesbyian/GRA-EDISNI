@@ -1,9 +1,8 @@
-name: One-shot historical Playdead printer page HTML
+name: Manual historical Playdead printer page HTML replay
 
+# The original one-shot archive run completed on 16 October 2026.
+# Manual only thereafter to avoid redundant archival requests.
 on:
-  pull_request:
-    paths:
-      - ".github/workflows/probe-playdead-printer-page-2026-10-16.yml"
   workflow_dispatch:
 
 permissions:
@@ -18,11 +17,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Offline archive URL and HTML parser checks
+      - name: Verify offline original URL guard and HTML parser
         run: python scripts/probe_playdead_printer_page_html.py
-      - name: Eight fixed historical source HTML archive replays
+      - name: Explicit archival HTML replay
         run: python scripts/probe_playdead_printer_page_html.py --execute
-      - name: Preserve original replay bytes and source checksums
+      - name: Preserve archived raw HTML and source metadata
         if: always()
         uses: actions/upload-artifact@v4
         with:
