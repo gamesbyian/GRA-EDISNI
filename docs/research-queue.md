@@ -1,3 +1,7 @@
+## 16 October 2026: outgoing owner-lead canonical drift corrected
+
+[Current Raezores handoff](reference/inside-ce-raezores-public-lead-handoff-2026-10-13.md) now closes two previously ranked 2026 owner leads: `Leading_Highlight553` is explicitly in community **/043 G** as the buyer of latcholia's sticker; `Afaith_1` is explicitly community lost **L46** (confirmed 22 September). Both original comments were real; the claimed novelty was not. The older 2020 H04 same-thread buyer statement was also retracted. **No source-qualified new owner or serial is ready to forward**. Historical reports remain with prominent 16 October errata; machine ledgers corrected. Future handoff requires current upstream source/blob pin, explicit [numbered/L/U] *full-entry and update* comparison, local closure check, and human review. An exact-name miss alone is not evidence of novelty; avoid treating search discoveries as new physical CEs.
+
 ## 16 October 2026: selective Bluesky photo verification and censored-page followthrough closed
 
 [Direct full-size visual inspection and provider outcome audit](reference/inside-ce-bluesky-selective-photo-and-cursor-audit-2026-10-16.md) rechecked Caswell's Huddle photo and Telemon's two images. **Caswell:** handheld Huddle statue only, with no numbered sticker, wrap or box. **Telemon:** game screenshot and CE concept-art prints only, with no sticker. Source WebP hashes, original post URLs and artifact provenance preserved. These are **only image-scoped negatives**; no owner contacted or new sticker claimed.
