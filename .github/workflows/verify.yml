@@ -22,6 +22,10 @@ jobs:
         run: python scripts/check_perspective_queue.py
       - name: Census original Terminal41 client receiver surface
         run: python scripts/audit_terminal41_complete_client_receivers.py --check --summary
+      - name: Verify original 2023 Terminal41 uploader provenance
+        run: python scripts/check_terminal41_uploader_provenance.py
+      - name: Verify recovered Playdead printer client evidence (offline)
+        run: python scripts/audit_archived_playdead_printer_483.py
       - name: Audit observation-only label generator causality
         run: python scripts/audit_perspective_production_causality.py --check
       - name: Verify observation-only erasure identifiability bound
