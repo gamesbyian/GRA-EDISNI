@@ -56,6 +56,32 @@ jobs:
           python scripts/audit_bluesky_ce_recall.py --execute \
             --max-requests "$REQUEST_CAP" --delay-seconds 1 \
             --output research-output/bluesky-recall-public-results.json
+      - name: Report exact source and observed probe statuses (no speculative coverage)
+        if: ${{ github.event_name == 'pull_request' || inputs.execute == 'yes' }}
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("research-output/bluesky-recall-public-results.json")
+          if p.exists():
+              r = json.loads(p.read_text())
+              control = r["results"][0] if r["results"] else {}
+              print(json.dumps({
+                  "fetched_at_utc": r["fetched_at_utc"],
+                  "requests_sent": r["requests_sent"],
+                  "blocked_versions": r.get("blocked_versions"),
+                  "direct_source": control.get("post"),
+                  "probes": [{
+                      "key": x.get("key"), "version": x.get("version"),
+                      "status": x["status"],
+                      "http_status": x.get("http_status"),
+                      "returned": x.get("returned"),
+                      "hits_total_reported": x.get("hits_total_reported"),
+                      "cursor_available": x.get("cursor_available"),
+                      "gold_found": x.get("gold_found")
+                  } for x in r["results"][1:]],
+              }, ensure_ascii=False))
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: inside-ce-bluesky-recall
