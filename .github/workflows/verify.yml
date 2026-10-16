@@ -26,6 +26,8 @@ jobs:
         run: python scripts/check_terminal41_uploader_provenance.py
       - name: Verify recovered Playdead printer client evidence (offline)
         run: python scripts/audit_archived_playdead_printer_483.py
+      - name: Verify archived original Playdead printer page wiring (offline)
+        run: python scripts/audit_original_playdead_html_484.py
       - name: Audit observation-only label generator causality
         run: python scripts/audit_perspective_production_causality.py --check
       - name: Verify observation-only erasure identifiability bound
