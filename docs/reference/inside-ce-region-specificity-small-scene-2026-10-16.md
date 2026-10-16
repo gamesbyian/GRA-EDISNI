@@ -48,4 +48,17 @@ python scripts/external_evidence/benchmark_sticker_region_real_negatives.py \
 
 Both runners are offline. A zero-acquired-photo result must report **zero actual negative photographs scanned** with missing-source reasons, rather than `0 false positives`.
 
-**At creation:** no quantitative synthetic stress result or actual retrieved negative-photo score is claimed until the exact-head workflow executes. This is a benchmark design and integration, not a new sticker observation.
+
+## First measured full stress run
+
+The no-network [CI run 38959420837](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38959420837) at PR source SHA `9a26516f2c986a73a1668193a7fb081224892804` passed **143 tests** and executed all **12 positive** and **4 negative** synthetic scenes at the original unmodified scan/window budget.
+
+- Without a rejection cutoff, **8/12** composite paper stickers had a top-eight suggested region overlapping the true paper box by IoU ≥0.40. Four pasted examples were missed. They are distinct source-photo stickers but **not** genuine wide-scene owner photographs.
+- The system returned at least one suggested region for **4/4 synthetic sticker-free scenes**. These are proposed visual matches, not physical CE ownership claims.
+- At **maximum hash distance 24**, it localized **1/12** of the positive scenes and still suggested a region for **1/4** negative scenes.
+- At **maximum hash distance 32** (and at each tested larger cutoff through 65), it localized **8/12** positives and suggested a region for **4/4** negatives. None of the six frozen distance cutoffs simultaneously achieved good localization and low synthetic false prompting.
+- These observations conclusively **do not justify autonomous sticker detection**. They do justify continued source-first human image review and researching discriminative sticker-specific features. A future improved method must have a separately frozen validation set; don't relabel these 16 studied examples as unseen.
+
+The exact-source artifacts retain the full per-case boxes, distances and scan-window coverage. The original-source **real** negative images were **not** acquired or scanned in that PR check, so measured real-photograph specificity remains unknown.
+
+
