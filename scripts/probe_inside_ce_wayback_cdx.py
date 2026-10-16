@@ -106,7 +106,14 @@ def run(tasks: list[dict], *, delay_seconds: float,
     if transport is None:
         transport = urllib.request.urlopen
     out = []
+    blocked_reason = None
     for idx, task in enumerate(tasks):
+        if blocked_reason:
+            rec = dict(task)
+            rec["status"] = "not_attempted_after_provider_block"
+            rec["reason"] = blocked_reason
+            out.append(rec)
+            continue
         if idx:
             time.sleep(delay_seconds)
         rec = dict(task)
@@ -129,7 +136,7 @@ def run(tasks: list[dict], *, delay_seconds: float,
             rec["http_status"] = exc.code
             out.append(rec)
             if exc.code in (401, 403, 429, 503):
-                break
+                blocked_reason = f"CDX HTTP {exc.code} at task {idx}; remaining tasks not attempted"
             continue
         except (OSError, ValueError, TimeoutError, json.JSONDecodeError) as exc:
             rec["status"] = "request_error"
