@@ -79,6 +79,8 @@ class PublicBlueskyTriageTests(unittest.TestCase):
              "unrelated_or_unresolved"),
             ("I received a numbered sticker on my INSIDE Collector's Edition "
              "from iam8bit!", "possible_owner_claim"),
+            ("I got my iam8bit Huddle from the game INSIDE delivered today",
+             "possible_owner_claim"),
             ("", "unrelated_or_unresolved"),
         ]
         for body, expected in samples:
