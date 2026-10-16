@@ -105,7 +105,17 @@ class ImageHTMLParser(HTMLParser):
                     if key in ("image", "thumbnailUrl", "contentUrl"):
                         if isinstance(value, str):
                             self.insert(value, f"jsonld:{key}")
-                        else:
+                        elif isinstance(value, list):
+                            # Product.image commonly contains URL strings;
+                            # generic traversal ignores scalar list members.
+                            for image in value[:100]:
+                                if isinstance(image, str):
+                                    self.insert(image, f"jsonld:{key}")
+                                else:
+                                    walk(image, depth + 1)
+                        elif isinstance(value, dict):
+                            if isinstance(value.get("url"), str):
+                                self.insert(value["url"], f"jsonld:{key}:url")
                             walk(value, depth + 1)
                     elif isinstance(value, (dict, list)):
                         walk(value, depth + 1)
