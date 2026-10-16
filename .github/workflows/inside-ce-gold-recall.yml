@@ -5,6 +5,8 @@ on:
     paths:
       - '.github/workflows/inside-ce-gold-recall.yml'
       - 'scripts/benchmark_inside_ce_discovery.py'
+      - 'scripts/external_evidence/audit_search_attempts.py'
+      - 'tests/test_ce_search_attempt_ledger.py'
       - 'data/reference/inside-ce-discovery-gold-controls.tsv'
       - 'tests/test_inside_ce_discovery_gold.py'
   workflow_dispatch:
@@ -45,6 +47,19 @@ jobs:
         run: |
           python scripts/benchmark_inside_ce_discovery.py plan \
             --output search-output/inside-ce-gold-index-plan.jsonl
+      - name: Publish resumable source-attempt baseline without executing searches
+        run: |
+          python scripts/external_evidence/audit_search_attempts.py \
+            --tasks search-output/inside-ce-gold-index-plan.jsonl \
+            --out search-output/source-attempts
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          summary=json.loads(Path("search-output/source-attempts/run-summary.json").read_text())
+          assert summary["planned_tasks"] == 24
+          assert summary["real_provider_attempts"] == 0
+          assert summary["pending_or_censored_tasks"] == 24
+          PY
       - name: Publish truthful offline readiness report
         run: |
           python scripts/benchmark_inside_ce_discovery.py evaluate \
