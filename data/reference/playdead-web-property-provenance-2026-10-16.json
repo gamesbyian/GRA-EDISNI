@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-16",
+  "purpose": "Source-linked web-property footprint, not exhaustive domain ownership or proof of puzzle connection",
+  "source_links": [
+    {
+      "url": "https://doczz.net/doc/1206748/danish-computer-game-companies-index",
+      "source_type": "contemporaneous_2010_directory"
+    },
+    {
+      "url": "https://pressreleases.triplepointpr.com/2012/07/02/playdead-announces-the-launch-of-the-limbo-special-edition/",
+      "source_type": "contemporaneous_first_party_press_release"
+    },
+    {
+      "url": "https://github.com/playdeadgames/publications/blob/master/INSIDE/readme.md",
+      "source_type": "first_party_git"
+    },
+    {
+      "url": "https://steamcommunity.com/app/304430/discussions/0/359543951720753445?ctp=53&l=latam",
+      "source_type": "contemporaneous_2018_eyewitness"
+    },
+    {
+      "url": "https://unknowns.de/forum/thread/3853-aktuell-gespielte-videospiele/?pageNo=2",
+      "source_type": "2011_image_embed"
+    },
+    {
+      "url": "https://loopit.dk/publications/",
+      "source_type": "external_contributor_asset_directory"
+    },
+    {
+      "url": "https://blog.playdead.com/articles/StarfishRig/StarfishRig.html",
+      "source_type": "first_party_publication"
+    },
+    {
+      "url": "https://playdead.com/press/",
+      "source_type": "first_party_current_media_assets"
+    }
+  ],
+  "properties": [
+    {
+      "locator": "www.limbogame.org",
+      "classification": "historical_first_party_domain",
+      "evidence": "2010 Danish Computer Game Companies Index and 2012 Playdead press release",
+      "confidence": "confirmed_association",
+      "priority": "P0",
+      "recording_only": true
+    },
+    {
+      "locator": "www.playdeadgames.com",
+      "classification": "historical_first_party_domain",
+      "evidence": "2010 Danish Computer Game Companies Index",
+      "confidence": "confirmed_historical_association",
+      "priority": "P0",
+      "recording_only": true
+    },
+    {
+      "locator": "limbogame.org/wordpress2/wp-content/uploads/2011/07/screenshot05-800x450.jpg",
+      "classification": "historical_first_party_host_path",
+      "evidence": "2011 independent German forum image embed",
+      "confidence": "third_party_link_to_historical_path",
+      "priority": "P0",
+      "recording_only": true
+    },
+    {
+      "locator": "limbogame.org/specialedition/",
+      "classification": "historical_first_party_route",
+      "evidence": "2012 Playdead press release",
+      "confidence": "confirmed",
+      "priority": "P1",
+      "recording_only": true
+    },
+    {
+      "locator": "limbogame.org/press",
+      "classification": "historical_first_party_route",
+      "evidence": "2012 Playdead press release",
+      "confidence": "confirmed",
+      "priority": "P1",
+      "recording_only": true
+    },
+    {
+      "locator": "limbogame.org/company",
+      "classification": "historical_first_party_route",
+      "evidence": "2012 Playdead press release",
+      "confidence": "confirmed",
+      "priority": "P1",
+      "recording_only": true
+    },
+    {
+      "locator": "playdead.com/inside/",
+      "classification": "legacy_first_party_route",
+      "evidence": "playdeadgames/publications INSIDE/readme.md",
+      "confidence": "confirmed",
+      "priority": "P0",
+      "recording_only": true
+    },
+    {
+      "locator": "playdead.com/press/",
+      "classification": "current_first_party_route",
+      "evidence": "playdead.com first-party press page",
+      "confidence": "confirmed",
+      "priority": "P1",
+      "recording_only": true
+    },
+    {
+      "locator": "playdead.com/js/dist.js",
+      "classification": "historical_arg_first_party_js",
+      "evidence": "2018 original Steam discussion, GRA experiment 480",
+      "confidence": "historical_eyewitness",
+      "priority": "P0",
+      "recording_only": true
+    },
+    {
+      "locator": "playdead.com/print/prepare.php",
+      "classification": "historical_arg_first_party_endpoint",
+      "evidence": "2018 original Steam network eyewitness, GRA experiment 480",
+      "confidence": "historical_eyewitness",
+      "priority": "P0",
+      "recording_only": true
+    },
+    {
+      "locator": "playdead.com/print/index.php",
+      "classification": "historical_arg_first_party_endpoint",
+      "evidence": "2018 original Steam JS excerpt, GRA experiment 480",
+      "confidence": "historical_eyewitness",
+      "priority": "P0",
+      "recording_only": true
+    },
+    {
+      "locator": "blog.playdead.com",
+      "classification": "current_first_party_subdomain",
+      "evidence": "first-party Playdead blog",
+      "confidence": "confirmed",
+      "priority": "P1",
+      "recording_only": true
+    },
+    {
+      "locator": "loopit.dk/publications/",
+      "classification": "contributor_independently_hosted_publications",
+      "evidence": "Playdead official GitHub readme direct link",
+      "confidence": "publisher_linked_not_owned",
+      "priority": "P1",
+      "recording_only": true
+    },
+    {
+      "locator": "loopit.dk/rendering_inside.pptx",
+      "classification": "contributor_independently_hosted_asset",
+      "evidence": "Playdead official GitHub readme direct link",
+      "confidence": "publisher_linked_not_owned",
+      "priority": "P2",
+      "recording_only": true
+    },
+    {
+      "locator": "sota.dk/stuff/starfishrig/starfishRig.html",
+      "classification": "contributor_personal_publication",
+      "evidence": "Playdead official GitHub readme direct link",
+      "confidence": "publisher_linked_not_owned",
+      "priority": "P1",
+      "recording_only": true
+    },
+    {
+      "locator": "schmid.dk/talks/",
+      "classification": "contributor_personal_publication",
+      "evidence": "Playdead official GitHub readme direct link",
+      "confidence": "publisher_linked_not_owned",
+      "priority": "P1",
+      "recording_only": true
+    },
+    {
+      "locator": "docs.google.com/presentation/d/1dew0TynVmtQf8OMLEz_YtRxK32a_0SAZU9-vgyMRPlA/",
+      "classification": "third_party_hosted_official_link",
+      "evidence": "Playdead official GitHub readme direct link",
+      "confidence": "publisher_linked_not_owned",
+      "priority": "P2",
+      "recording_only": true
+    },
+    {
+      "locator": "docs.google.com/presentation/d/1QN99FZUQl3KE4c7eg9-GLLEl3Og0FqreJbiTrCc8ZAk/",
+      "classification": "third_party_hosted_official_link",
+      "evidence": "Playdead official GitHub readme direct link",
+      "confidence": "publisher_linked_not_owned",
+      "priority": "P2",
+      "recording_only": true
+    },
+    {
+      "locator": "vimeo.com/215488901",
+      "classification": "third_party_hosted_official_link",
+      "evidence": "Playdead official GitHub readme direct link",
+      "confidence": "publisher_linked_not_owned",
+      "priority": "P2",
+      "recording_only": true
+    },
+    {
+      "locator": "f0716f2bff707a1b9e85-36c178e006d3d30c5b9c8dd905f8236a.r70.cf2.rackcdn.com",
+      "classification": "third_party_mirror_cdn",
+      "evidence": "loopit.dk publications explicit mirror link",
+      "confidence": "not_playdead_owned",
+      "priority": "P2",
+      "recording_only": true
+    },
+    {
+      "locator": "terminal41.link",
+      "classification": "arg_website_ownership_unverified",
+      "evidence": "Game Detectives old wiki original community documentation",
+      "confidence": "arg_association_confirmed",
+      "priority": "P0",
+      "recording_only": true
+    },
+    {
+      "locator": "534brn9653f9j8mmd.surge.sh",
+      "classification": "fan_mirror",
+      "evidence": "twinysam readme explicitly self-hosted",
+      "confidence": "not_playdead_owned",
+      "priority": "exclusion",
+      "recording_only": true
+    }
+  ]
+}
