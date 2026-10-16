@@ -145,19 +145,37 @@ def region_by_candidate(regions: dict | None) -> dict[str, list[dict]]:
     return mapping
 
 
+def geometry_by_candidate(data: dict | None) -> dict[str,list[dict]]:
+    if data is None:
+        return {}
+    if data.get("new_confirmed_stickers",0)!=0:
+        raise ValueError("geometric box suggestions must not establish sticker verification")
+    found={}
+    for row in data.get("candidates",[]):
+        ident=row.get("candidate_id")
+        if not isinstance(ident,str) or not ident or ident in found:
+            raise ValueError("duplicate or missing geometric source candidate")
+        found[ident]=row.get("proposals",[])
+    return found
+
+
 def render(index: dict, visual: dict, root: Path, max_items: int = 48,
-           regions: dict | None = None) -> tuple[str, dict]:
+           regions: dict | None = None,
+           geometry: dict | None = None) -> tuple[str, dict]:
     items = index.get("candidates", [])
     if not isinstance(items, list):
         raise ValueError("candidate index must contain an array")
     matchmap = match_by_candidate(visual)
     regionmap = region_by_candidate(regions)
+    geometrymap = geometry_by_candidate(geometry)
     selected = select_for_review(items, matchmap, max_items)
     source_count = len({source_label(x) for x in selected})
     cards = []
     errors = []
     roi_errors = []
     roi_previews = 0
+    geometric_previews = 0
+    geometric_errors = []
     for item in selected:
         ident = str(item["id"])
         path = safe_candidate_path(root, item.get("path", ""))
@@ -208,6 +226,28 @@ def render(index: dict, visual: dict, root: Path, max_items: int = 48,
                           '<div class="roi-grid">'+''.join(details)+'</div>'
                           '<p class="meta">A reference sticker number is an example template,'
                           ' NOT a reading of the candidate photograph.</p>')
+        geometry_markup=""
+        geometry_rows=geometrymap.get(ident,[])
+        if geometry_rows:
+            shapes=[]
+            for ordinal,proposal in enumerate(geometry_rows[:3],start=1):
+                try:
+                    if path is None:
+                        raise ValueError("original source image unavailable")
+                    if proposal.get("new_sticker_confirmed") is not False:
+                        raise ValueError("geometric proposal cannot identify a sticker")
+                    src=region_preview(path,proposal.get("bbox_xyxy_original_pixels"))
+                    coords=html.escape(str(proposal.get("bbox_xyxy_original_pixels",[])))
+                    shapes.append(f'<div class="roi"><img src="{src}" alt="Unverified light-paper region {ordinal}">'
+                                  f'<p>Light rectangle {ordinal}<span class="coords">{coords}</span></p></div>')
+                    geometric_previews+=1
+                except (OSError,ValueError,UnidentifiedImageError,Image.DecompressionBombError) as exc:
+                    geometric_errors.append({"candidate_id":ident,"region":ordinal,
+                                             "error":str(exc)[:140]})
+            geometry_markup=('<h3>Geometric paper candidates (unverified)</h3>'
+                             '<div class="roi-grid">'+''.join(shapes)+'</div>'
+                             '<p class="meta">These may be cards, game boxes, labels or unrelated paper;'
+                             ' the geometric method does NOT identify stickers.</p>')
         source_tag = html.escape(source_label(item))
         ident_tag = html.escape(ident)
         sha = html.escape(str(item.get("sha256", ""))[:16])
@@ -248,8 +288,10 @@ ul{padding-left:1.3rem}li{margin-bottom:.3rem}a{color:#124f9b}"""
         "selected_candidate_ids": [str(x["id"]) for x in selected],
         "region_crop_previews_embedded": roi_previews,
         "invalid_region_preview_records": roi_errors,
+        "geometry_crop_previews_embedded": geometric_previews,
+        "invalid_geometry_preview_records": geometric_errors,
         "new_confirmed_stickers": 0,
-        "evidence_ceiling": "offline unreviewed media and hash-similarity only",
+        "evidence_ceiling": "offline unreviewed media, hash and generic rectangle proposals only",
     }
     return document, summary
 
@@ -261,6 +303,8 @@ def main() -> None:
     parser.add_argument("--candidate-root", type=Path, default=Path("evidence-work"))
     parser.add_argument("--output", type=Path, default=Path("visual-evidence-work/review-gallery.html"))
     parser.add_argument("--max-items", type=int, default=48)
+    parser.add_argument("--geometry",type=Path,default=None,
+                        help="Optional unverified generic bright paper boxes from a bounded OpenCV run")
     parser.add_argument("--regions",type=Path,default=None,
                         help="Optional review-only region-suggestions.json from opt-in pilot")
     args = parser.parse_args()
@@ -270,6 +314,7 @@ def main() -> None:
         args.candidate_root,
         args.max_items,
         regions=json.loads(args.regions.read_text(encoding="utf-8")) if args.regions else None,
+        geometry=json.loads(args.geometry.read_text(encoding="utf-8")) if args.geometry else None,
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(body, encoding="utf-8")
