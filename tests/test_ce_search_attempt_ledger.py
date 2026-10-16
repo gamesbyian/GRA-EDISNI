@@ -1,6 +1,6 @@
 """Offline, deterministic CE search attempt ledger tests."""
 import unittest
-from scripts.external_evidence.audit_search_attempts import evaluate
+from scripts.external_evidence.audit_search_attempts import evaluate, brave_result_events
 
 D = "a" * 64
 
@@ -72,6 +72,30 @@ class SearchAttemptAuditTests(unittest.TestCase):
         for events,expected in cases:
             with self.subTest(events=events), self.assertRaisesRegex(ValueError,expected):
                 evaluate(self.tasks,events)
+
+    def test_actual_brave_metadata_is_only_index_recall_not_original_source(self):
+        rows=[
+            {"task_id":"a","task_index":0,"status":"index_search_success",
+             "matches":[{"url":"https://www.reddit.com/r/PlaydeadsInside/comments/eers0x"}],
+             "possibly_truncated":False},
+            {"task_id":"b","task_index":1,"status":"http_error","http_status":429},
+            {"task_id":"c","task_index":2,"status":"not_attempted"},
+        ]
+        events=brave_result_events(rows,"gha-123")
+        self.assertEqual(len(events),2)
+        self.assertEqual(events[0]["attempt_id"],"gha-123-0")
+        self.assertEqual(events[0]["response_digest_scope"],"normalized_result_matches_not_raw_http")
+        self.assertFalse(events[0]["original_source_body_retrieved"])
+        out,pending,_=evaluate(self.tasks,events)
+        self.assertEqual(out["real_provider_attempts"],2)
+        self.assertEqual(out["complete_tasks_with_exhausted_pagination"],0)
+        self.assertEqual(len(pending),3)
+        self.assertEqual(out["new_confirmed_stickers"],0)
+        with self.assertRaisesRegex(ValueError,"run_id"):
+            brave_result_events(rows,"bad id")
+        with self.assertRaisesRegex(ValueError,"matches"):
+            brave_result_events([{"task_id":"a","task_index":0,
+                                 "status":"index_search_success"}],"r1")
 
     def test_task_manifest_duplicates_rejected(self):
         with self.assertRaisesRegex(ValueError,"duplicate"):
