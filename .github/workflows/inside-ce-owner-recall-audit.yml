@@ -9,6 +9,10 @@ on:
       - 'data/reference/inside-ce-raezore-handoff-candidates-2026-10-13.tsv'
       - 'data/reference/inside-ce-owner-search-ledger-2026-10-12.tsv'
       - 'data/reference/inside-ce-owner-source-recall-controls-2026-10-13.tsv'
+      - 'docs/reference/inside-ce-raezores-public-lead-handoff-2026-10-13.md'
+      - 'data/reference/inside-ce-oct2026-ebay-auction-public-lead.json'
+      - 'data/reference/inside-ce-2026-disc-retained-acquisition-leads.json'
+      - 'tests/test_inside_ce_raezores_public_handoff.py'
       - '.github/workflows/inside-ce-owner-recall-audit.yml'
   workflow_dispatch:
 
@@ -32,8 +36,10 @@ jobs:
           python-version: '3.12'
       - name: Validate Raezore handoff contains no stale confirmed-owner duplicates
         run: python -m unittest discover -s tests -p 'test_inside_ce_raezore_handoff.py' -v
-      - name: Test eight source controls and exact platform matching
+      - name: Test nine source controls and exact platform matching
         run: python -m unittest discover -s tests -p 'test_inside_ce_public_handle_crosscheck.py' -v
+      - name: Test current outward handoff source and JSON status
+        run: python -m unittest discover -s tests -p 'test_inside_ce_raezores_public_handoff.py' -v
       - name: Reconcile original public source controls with live canonical list
         run: |
           python - <<'PY'
@@ -62,11 +68,12 @@ jobs:
                    for r in result if r['canonical_handle_relation']=='same_platform_handle_in_canonical_needs_review'}
           for author,label in [('Knuckles316','L08'),('juxjuxjux','338'),
                                ('Afaith_1','L46'),('KoreanB_B_Q','U32'),
-                               ('No-Program385','470'),('Shaxai','U47')]:
+                               ('No-Program385','470'),('Shaxai','U47'),
+                               ('Leading_Highlight553','043')]:
             assert label in matched.get(author,''),(author,label,matched)
           assert all(r['new_confirmed_stickers']=='0' for r in result)
           print(json.dumps({'control_count':len(result),
-                            'known_owner_source_controls_recalled':6,
+                            'known_owner_source_controls_recalled':7,
                             'matched':matched,'new_confirmed_stickers':0}))
           PY
       - uses: actions/upload-artifact@v4
