@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "search_mode": "DISCOVER bounded replay of previously frozen sixteen source-native queries; source content reviewed in VALIDATE evidence discipline",
+  "executed_at_utc": "2026-10-16T09:43:28.672962+00:00",
+  "github_action_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38882275551",
+  "artifact_id": 12038316873,
+  "artifact_retention_days": 30,
+  "original_manifest_sha256": "58289cdf9a57d21c4eafbaca6dae74ec828d54f3938b9a675dc34edf5be58362",
+  "api_host": "api.bsky.app",
+  "frozen_window_utc": {
+    "since": "2023-01-01T00:00:00.000Z",
+    "until": "2026-10-17T00:00:00.000Z"
+  },
+  "sampled_query_limit_per_page": 50,
+  "planned_queries": 16,
+  "attempted_queries": 16,
+  "successful_queries": 14,
+  "timed_out_queries": [
+    "playdead_inside_edition",
+    "inside_numbered"
+  ],
+  "provider_cursor_unexhausted_queries": [
+    "inside_sticker",
+    "inside_cipher"
+  ],
+  "source_post_appearances": 147,
+  "unique_post_uris": 133,
+  "image_post_appearances": 67,
+  "distinct_posts_with_image_previews": 61,
+  "distinct_posts_with_external_embed": 40,
+  "distinct_media_or_external_link_posts": 101,
+  "distinct_media_queue_posts_without_source_image_captions": 8,
+  "distinct_text_relevant_posts": 5,
+  "text_review_categories": {
+    "possible_owner_claim": 1,
+    "publisher_domain_handle_reference": 1,
+    "arg_discussion": 2,
+    "other_playdead_ce_context": 1
+  },
+  "source_caption_positive_but_text_negative_posts": 1,
+  "primary_source_outlier_created_at": "2016-07-28T10:01:00+00:00",
+  "primary_source_outlier_indexed_at": "2025-09-27T15:52:30.752Z",
+  "potential_new_stickers_confirmed": 0,
+  "visual_bytes_downloaded": 0,
+  "source_review": [
+    {
+      "url": "https://bsky.app/profile/tomcaswell.games/post/3mta6ecjbvk2i",
+      "type": "possible_owner_prior_lead",
+      "image_preview_count": 1,
+      "image_alt_blank": true,
+      "community_status": "already_forwarded_to_raezores",
+      "sticker_confirmed": false
+    },
+    {
+      "url": "https://bsky.app/profile/telemon.bsky.social/post/3lsqjezdwgc2z",
+      "type": "source_caption_inside_ce_huddle",
+      "image_preview_count": 2,
+      "caption": "Concept art cards of The Huddle, from INSIDE Collector's Edition.",
+      "community_status": "Discord Telemon supplied /449 on background H 2024-08-02; identity_match_unverified",
+      "sticker_confirmed": false
+    },
+    {
+      "url": "https://bsky.app/profile/iam8bit.com/post/3mphksb3pku2h",
+      "type": "publisher_known_video_crosslink",
+      "original_video": "https://youtu.be/gqlQaHgRaHg",
+      "community_status": "linked video already U01 (IGN)",
+      "sticker_confirmed": false
+    },
+    {
+      "url": "https://bsky.app/profile/straycatalyst.bsky.social/post/3mwagj42at22f",
+      "type": "arg_awareness",
+      "community_status": "discussion_only",
+      "sticker_confirmed": false
+    },
+    {
+      "url": "https://bsky.app/profile/fedorasaurus.bsky.social/post/3mw3b352tsc2v",
+      "type": "arg_sticker_solicitation",
+      "community_status": "discussion_only",
+      "sticker_confirmed": false
+    },
+    {
+      "url": "https://bsky.app/profile/giantbombforever.bsky.social/post/3miaqe4kjop2h",
+      "type": "known_video_crosslink",
+      "community_status": "U02 / L35 Giant Bomb",
+      "sticker_confirmed": false
+    }
+  ],
+  "interpretation": "Proven source-index->text-extraction omission for one already-contextual CE image-caption post, with 101 metadata-only media/link records. No unreviewed image is negative sticker evidence and no counted photo was decoded."
+}
