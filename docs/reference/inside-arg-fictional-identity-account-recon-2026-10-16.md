@@ -4,13 +4,28 @@
 
 ## Outcome in brief
 
-* No independently attributable *additional* ARG-operated account was confirmed by the bounded public web/GitHub search described below. This is **not** a negative finding about all platforms or archived accounts.
+* No independently attributable *additional fictional ARG-operated* account was confirmed. One valuable real-world author Easter-egg graph was reconciled: `GLADBLAD` → Tobias Biehl/`TobberH` → `tobbermix.gladblad.dk` and the GameTracker `Gladblad` team. This is **not** a negative finding about all platforms or archived accounts.
 * The documented persona **Anthony T. Setrinamairé** used the original Playdead printer email sender identity and also appeared as the creator/uploader of the contemporary YouTube item `Terminal41 emergency comms transmission [DATA STREAM]` at [video ID dWhmPSjOybI](https://www.youtube.com/watch?v=dWhmPSjOybI). This is **known ARG infrastructure**, not a newly found account. [Game Detectives contemporary chronology](https://wiki.gamedetectives.net/w/Inside_ARG#Youtube_Stream), [2018 Steam thread](https://steamcommunity.com/app/304430/discussions/0/359543951720753445/?ctp=52&l=schinese).
 * **Newly verified within this particular search:** `AnSet` occurs as the literal `dc:creator` value in an original preserved Terminal41 artifact, not just in BigDusty's 2026 concept map. It is an **authentic metadata author token** but **not a proven second account** or a proven alternate identity of Anthony.
 * **Pre-existing repository evidence, verified after initial write:** GRA-EDISNI **main** already preserved `AnSet` three times in `archive/external/terminal41-534brn/A-original-capture.bin` (source Git blob `ce55c03ee972954f6e80f55a1a279bb85024f99b`) and in its separately labeled altered-connector rendition `A-connector-rendition-not-original.bin`. The twinysam source HTML also contains three instances. This PR **did not discover or add the source string to the corpus**; it documents the cross-context author/alias interpretation for the first time in this dossier.
 
 * **Also primary-source verified:** `[Facility][89B(7hg553)]` appears in the original archived `comms_main_viewgate.html` and `comms_main_viewgate_002.html` Terminal41 pages. This is a source-grounded facility identifier, not a demonstrated organization account.
 * **Other source-backed identity vocabulary:** `Rorschach Desgn Noah x200564` from `SIGN_GirlLab_A_#935`; `GLADBLAD` from `Sign_SecretMorse_#944`; Terminal IDs **11, 23, 41, 42, 99** from dated April 2020 original screenshots. None is an established person's name beyond Anthony; don't collapse texture labels, filesystem names and playable-character labels into social personas.
+
+## 0. Follow-up October 16: GLADBLAD's verified real-world account graph
+
+**Concrete cross-platform connection (historically documented since July 2016, newly reconciled to live/current primary profiles in this pass):** the `GLADBLAD` Morse texture is independently traceable to Playdead technical artist **Tobias Biehl**, whose professional X biography under **@TobberH** identifies him as a Playdead technical/visual-effects artist and links to `tobbermix.gladblad.dk`. Both [2016 Steam](https://steamcommunity.com/app/304430/discussions/0/365172547948628597/?ctp=2) and [original Reddit](https://www.reddit.com/r/PlaydeadsInside/comments/4sav9x/curious_textures_found_in_the_game_files/) discussions already noticed the web domain link. See [X bio](https://x.com/tobberh), [2016 INSIDE credits](https://gamefaqs.gamespot.com/xboxone/805489-inside/credit), and [indexed WordPress blog](https://tobbermix.gladblad.dk/author/tobberh/).
+
+**Newly reconciled supporting public accounts:**
+- [GameTracker public profile `tobberh`](https://www.gametracker.com/tobberh/) identifies country Denmark and public gaming team Gladblad; it supplies an outward identity signal distinct from a Steam investigator's claim.
+- [GameTracker Gladblad team](https://www.gametracker.com/clan/gaming.gladblad.dk/) lists two members `GB|FlyveHest` (team founder) and `tobberh`; the publicly published website is `gaming.gladblad.dk` and a linked Steam group. This is an explicit **account-to-domain-to-team** graph. No inference about any team's role in an ARG.
+- [Tobber's Mixes post from July 2010](https://tobbermix.gladblad.dk/category/uncategorized/) precedes 2016 game release. The mix blog is about electronic music, not in-universe Terminal41 records.
+
+**Interpretation:** this greatly improves confidence that `GLADBLAD` was a *deliberate staff-referential string / insider Easter egg*. An ARG-operated hidden organization/second fictional persona is **not** established, and the other GameTracker team member should not be identity-traced in this project. This hypothesis is directly more economical than claiming a fictional `GLADBLAD` facility/company without source support. A string can be an Easter egg without being a clue to the CE sticker decoding process.
+
+**Separate, older printer attachment observation:** On [4 June 2018 Steam](https://steamcommunity.com/app/304430/discussions/0/359543951720753445/?ctp=53), investigators noted `printer.jpg` metadata credited **Andreas Normand Grøntved**, who is independently listed as INSIDE animator in [the credits](https://gamefaqs.gamespot.com/xboxone/805489-inside/credit). This shows a second named staff-metadata connection but neither proves Playdead-authored `AnSet` nor turns Andreas into a fictional ARG identity. Useful **negative control** when a creator tag simply exposes asset-tool authorship.
+
+**Distinctiveness warning:** exact lowercase `anset` also matches common Danish/Norwegian words and unrelated present-day brands. The initials-origin `AnSet` remains **high-priority community-supported hypothesis** per the project user's October 16 clarification; do not mark any independent account verified merely for sharing those five letters.
 
 ## 1. Anthony, Tony and the documented identity
 
@@ -53,7 +68,7 @@ Do not infer H-A because it is satisfying. Run handle-focused source searches fo
 | terminal41.link | Community-preserved `/loadSys/`, `/comms/`, `/sys/` and `/dat/` | `terminal41`, `term41`, `emergencyterminal41`, `terminal_41` | High |
 | 11 / 23 / 41 / 42 / 99 terminals | [CL-09 2020 screenshot recovery](../conjecture-lab/2026-10-08-terminal41-unarchived-route-recovery.md); source screens show `terminate_terminal` directories | `terminal11`, `terminal23`, `terminal42`, `terminal99` | Medium, exact site routes are stronger than social usernames |
 | Gateway, breach contribution registry, gate 98 | Preserved Terminal41 HTML path vocabulary | `gateway98`, `gate98`, `breachcontribution`, `breachlog`, `viewgate002` | Medium |
-| GLADBLAD | 2016 Steam unpacked texture `Sign_SecretMorse_#944` | `gladblad`, `gladblad41`, `gladbladinside` | Low-medium; ordinary Nordic name/word collisions |
+| GLADBLAD | 2016 Steam unpacked texture `Sign_SecretMorse_#944`; 2016 Reddit/Steam identified `tobbermix.gladblad.dk`; X / GameTracker verify artist `TobberH` | `gladblad`, `tobberh`, `tobbermix`, `gaming.gladblad.dk`, `gladblad41` | **Confirmed cross-platform staff-associated Easter-egg graph**; ARG operation not demonstrated |
 | WaterGirlWireFake | 2016 internal game-asset references; confirm exact native filename before asserting in-world label | `watergirlwirefake`, `watergirl` | Low-medium |
 | Huddle | In-game creature and CE marketing | `huddle` variants only with rare high-precision project anchor | Low: huge non-ARG background |
 | MANUN KIND / `manunkind` | E. E. Cummings poem reproduced in the solved ARG | Treat as a *literary phrase*, not a fictional organization; search only when linked to ARG date/site | Low |
@@ -72,10 +87,10 @@ This was a bounded live web-index plus connected GitHub **global file-content se
 | `AnSet` exact and with Playdead/INSIDE/Terminal41/EXIF | Original metadata witness found; unrelated common-language/name hits predominate; no independent dated account | Positive original artifact, account unresolved |
 | `Facility 89B` / `7hg553` | Exact text verified in viewgate HTML; no attributable separate account | Positive original artifact, account unresolved |
 | `Rorschach Desgn` / `Noah x200564` | Original texture described in 2016; later fan/wikis cite it; no attributable account | Positive game artifact, account unresolved |
-| `GLADBLAD` | 2016 texture report and unrelated Nordic/public names; no support for attribution | Weak alias candidate |
+| `GLADBLAD` | 2016 Steam and Reddit connect texture to `tobbermix.gladblad.dk`; Playdead artist's public X profile, GameTracker profile/team and game credits independently corroborate | Confirmed staff-associated online graph; not an ARG-operated fictional account |
 | `terminal41` | Known ARG website; unrelated later GitHub repos under same stem | Known organization/site, no new account |
 
-No source-backed second fictional online persona or ARG-controlled extra social account has been demonstrated by this search. **Do not contact accounts that happen to share one of these names.**
+A **real staff-linked identity/web/team graph** has now been established for `GLADBLAD`; **no second fictional ARG-operated persona** has been demonstrated by this search. **Do not contact accounts that happen to share one of these names.**
 
 ## 5. Next discriminating steps, in priority order
 
