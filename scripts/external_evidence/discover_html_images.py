@@ -6,7 +6,6 @@ import argparse
 import html
 import json
 from html.parser import HTMLParser
-import json
 import re
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, urldefrag
