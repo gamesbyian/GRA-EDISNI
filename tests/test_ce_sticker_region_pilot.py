@@ -12,7 +12,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 from scripts.external_evidence.visual_region_probe import (
-    FRACTIONS, box_iou, fingerprint, load_regions, proxy_image, run, scan, select_windows, sha256
+    FRACTIONS, box_iou, diverse_candidates, fingerprint, load_regions, proxy_image, run, scan, select_windows, sha256
 )
 
 
@@ -103,6 +103,18 @@ class RegionPilotTests(unittest.TestCase):
         self.assertLessEqual(len(hits),6)
         # Even if a visually similar decoy ranks highly, never a numbered discovery.
         self.assertTrue(all(h["new_sticker_confirmed"] is False for h in hits))
+
+    def test_roi_batch_budget_reaches_later_source_groups(self):
+        sources = [{"id":f"first-{i}","source_kind":"A","path":f"{i}.jpg"}
+                   for i in range(12)]
+        sources += [{"id":"late1","source_kind":"Z","path":"x.jpg"},
+                    {"id":"late2","source_kind":"Z","path":"y.jpg"}]
+        chosen=diverse_candidates(sources,3)
+        self.assertEqual([x["id"] for x in chosen],["first-0","late1","first-1"])
+        self.assertEqual(len({x["source_kind"] for x in chosen}),2)
+        self.assertEqual(chosen,diverse_candidates(sources,3))
+        with self.assertRaises(ValueError):
+            diverse_candidates(sources,0)
 
     def test_digest_is_provenance_gate_and_cap_visible(self):
         scene,box=scene_with_patch("037")
