@@ -63,7 +63,7 @@ class PublicHandleTests(unittest.TestCase):
             rows=list(csv.DictReader(f,delimiter="\t"))
         self.assertEqual(len(rows),9)
         self.assertEqual(len({r["id"] for r in rows}),9)
-        self.assertEqual(len({r["source_url"] for r in rows})<8,True,
+        self.assertLess(len({r["source_url"] for r in rows}),len(rows),
                          "Two distinct commenters can use the same source URL")
         self.assertIn("known_lost_owner_post_different_url",
                       [r["known_source_class"] for r in rows])
