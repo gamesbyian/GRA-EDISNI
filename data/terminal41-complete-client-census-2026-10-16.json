@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "source_manifest": "data/terminal41-source-tree.json",
+  "source_tree_sha": "4de72d7c2f21bd9eb4144fda51281c84cbcb90c4",
+  "meaning": "Fixed reconstructed client snapshot only; original historic servers and missing routes may differ.",
+  "summary": {
+    "anchor_pages": 1,
+    "blob_match": 73,
+    "executable_js_page": 1,
+    "form_control_pages": 0,
+    "html_pages": 69,
+    "inline_request_api_pages": 0,
+    "links_captured_internal": 46,
+    "links_uncaptured_internal": 6,
+    "meta_redirect_pages": 42,
+    "native_form_pages": 0,
+    "printed_input_literal_pages": 2,
+    "size_match": 73,
+    "text_files": 4,
+    "status_variants": 17,
+    "status_obtained_0": 5,
+    "status_obtained_1": 7,
+    "status_obtained_2": 2,
+    "status_obtained_3": 2,
+    "status_obtained_4": 1
+  },
+  "only_scripted_page": {
+    "path": "terminal41.link/sys/terminateall.html",
+    "script_src": "https://www.googletagmanager.com/gtag/js?id=UA-154558593-1",
+    "inline_character_count": 153,
+    "classification": "third_party_google_analytics",
+    "ce_receiver_evidence": false
+  },
+  "unmatched_internal_edges": [
+    {
+      "source": "terminal41.link/sys/activate_shutdown_protocol/commit/___________DONE.html",
+      "raw_href": "___________DONE_SD.html",
+      "unpreserved_route": "/sys/activate_shutdown_protocol/commit/___________DONE_SD.html",
+      "prior_cl09_screenshot_gap": false,
+      "note": "Direct authenticated HTML meta-refresh target, exact missing entry; no source for its behavior."
+    },
+    {
+      "source": "terminal41.link/sys/terminate_terminal/index.html",
+      "raw_href": "/sys/",
+      "unpreserved_route": "/sys/",
+      "prior_cl09_screenshot_gap": true,
+      "note": "A parent directory link, original index screenshot was separately preserved; no preserved HTML counterpart in 74-file mirror."
+    },
+    {
+      "source": "terminal41.link/sys/terminate_terminal/index.html",
+      "raw_href": "11/",
+      "unpreserved_route": "/sys/terminate_terminal/11/",
+      "prior_cl09_screenshot_gap": true,
+      "note": "Directory independently attested in April 2020 source screenshot; no captured branch body."
+    },
+    {
+      "source": "terminal41.link/sys/terminate_terminal/index.html",
+      "raw_href": "23/",
+      "unpreserved_route": "/sys/terminate_terminal/23/",
+      "prior_cl09_screenshot_gap": true,
+      "note": "Directory independently attested in April 2020 source screenshot; no captured branch body."
+    },
+    {
+      "source": "terminal41.link/sys/terminate_terminal/index.html",
+      "raw_href": "42/",
+      "unpreserved_route": "/sys/terminate_terminal/42/",
+      "prior_cl09_screenshot_gap": true,
+      "note": "Directory independently attested in April 2020 source screenshot; no captured branch body."
+    },
+    {
+      "source": "terminal41.link/sys/terminate_terminal/index.html",
+      "raw_href": "99/",
+      "unpreserved_route": "/sys/terminate_terminal/99/",
+      "prior_cl09_screenshot_gap": true,
+      "note": "Directory independently attested in April 2020 source screenshot; no captured branch body."
+    }
+  ],
+  "tested_status_family": {
+    "pages": 17,
+    "numbered_scheme_min": 0,
+    "numbered_scheme_max": 3,
+    "obtained_histogram": {
+      "0": 5,
+      "1": 7,
+      "2": 2,
+      "3": 2,
+      "4": 1
+    },
+    "applied_equals_obtained": true,
+    "negative_scope": "No fifth ordinary scheme index in this 17-file snapshot; not a missing-server proof."
+  },
+  "existing_positive_control": "Original playdead.com 2018 client-side printer button POST flow, source-documented in Experiment 480; it is not captured in the terminal41 mirror."
+}
