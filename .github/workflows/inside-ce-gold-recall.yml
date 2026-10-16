@@ -99,6 +99,16 @@ jobs:
           ]
           subprocess.run(cmd, check=True)
           PY
+      - name: Publish real provider-attempt ledger and manual continuation queue
+        if: ${{ inputs.execute_index == 'yes' }}
+        env:
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python scripts/external_evidence/audit_search_attempts.py \
+            --tasks search-output/inside-ce-gold-index-plan.jsonl \
+            --brave-results search-output/inside-ce-gold-index-results.jsonl \
+            --run-id "$RUN_ID" \
+            --out search-output/source-attempts
       - name: Report only measured original-URL or weaker thread-level hits
         if: ${{ inputs.execute_index == 'yes' }}
         run: |
@@ -107,6 +117,7 @@ jobs:
             --output search-output/inside-ce-gold-recall-results.json \
             --summary search-output/inside-ce-gold-recall-summary.json
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: inside-ce-gold-source-recall
           path: search-output/
