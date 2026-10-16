@@ -56,3 +56,21 @@ python scripts/external_evidence/visual_ink_layout.py \
 A useful improvement might be human reviewer ranking based on layout differences, but only after an **entirely new separately frozen** positive/negative set can demonstrate the ranking improves actual novel-source inspection per unit cost. Purely learning from the 11 known stickers and generated negatives would yield a dangerously comfortable model.
 
 **At authoring:** the descriptor and no-network benchmark are in PR; numerical descriptive results must be taken from the exact-head CI output. No new serial or owner found.
+
+## First measured descriptive result, and an annotation confound
+
+[Exact-head CI run 38964862642](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38964862642) passed **158 no-network tests** and generated the full 11-original/8-generated-region descriptor report. Printed zones were **not** used to create a classifier or select a threshold. Median normalized dark-pixel fractions were:
+
+| Zone | 11 genuine old sticker photo crops | 8 simulated unrelated paper/product crops |
+|---|---:|---:|
+| Center symbol area | **0.115087** | **0.062823** |
+| Lower printed-number area | **0.016589** | **0.014833** |
+| Top margin | **0.000000** | **0.000000** |
+| Outer edge | **0.125456** | **0.000000** |
+
+**The bottom-zone medians are almost indistinguishable.** Lower print density is even **zero in at least one already known genuine sticker**, so a strict "bottom text must be visible" filter would discard actual positives. Center dark density spans 0.002095–0.122985 for originals versus 0–0.263943 for synthetic negatives, with major overlap. No class-separation threshold is justifiable from these numbers.
+
+The large difference in **edge darkness** is an especially dangerous confound. Our real original crops were manually annotated within photographs with the sticker surrounded by dark wrapper/shadow, whereas several generated negative objects had clean artificially tight crop borders and no comparable dark background. A classifier trained here could be learning the *photo crop protocol*, not the difference between an INSIDE sticker and normal print. Do **not** promote that feature until independently photographed paper/packaging negatives have comparable margins and lighting.
+
+Therefore this experiment **does not establish discriminatory printed-layout features**. A useful next measurement is to score genuine same-camera negative paper, preserve a standardized paper-plus-background crop margin for *both* classes and quantify per-zone missingness on tilted/occluded stickers. The run artifact preserves all eleven original-source SHA hashes and zone features, and no new CE serial or owner.
+
