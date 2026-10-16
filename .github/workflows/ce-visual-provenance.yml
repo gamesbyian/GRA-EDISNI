@@ -323,6 +323,9 @@ jobs:
           if [[ -f visual-evidence-work/region-suggestions.json ]]; then
             args+=(--regions visual-evidence-work/region-suggestions.json)
           fi
+          if [[ -f visual-evidence-work/geometry-proposals.json ]]; then
+            args+=(--geometry visual-evidence-work/geometry-proposals.json)
+          fi
           python scripts/external_evidence/build_visual_review_gallery.py "${args[@]}"
       - uses: actions/upload-artifact@v4
         if: always()
