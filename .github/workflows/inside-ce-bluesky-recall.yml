@@ -64,7 +64,8 @@ jobs:
             --input research-output/bluesky-recall-public-results.json \
             --output research-output/bluesky-public-review-only.jsonl \
             --summary research-output/bluesky-public-review-summary.json \
-            --max-candidates 100
+            --max-candidates 100 \
+            --media-review-output research-output/bluesky-public-visual-review-only.jsonl
       - name: Report exact source and observed probe statuses (no speculative coverage)
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
         run: |

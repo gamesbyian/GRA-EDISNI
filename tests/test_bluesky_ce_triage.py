@@ -148,6 +148,73 @@ class PublicBlueskyTriageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             triage.build_queue(report, max_candidates=0)
 
+    def test_image_only_post_survives_separate_visual_metadata_queue(self):
+        image = {
+            "uri": "at://did:plc:imageowner/app.bsky.feed.post/abc123",
+            "handle": "archive.bsky.social",
+            "created_at": "2026-09-01T10:00:00Z",
+            "indexed_at": "2026-09-01T11:00:00Z",
+            "text_excerpt": "",
+            "target": False,
+            "media_metadata": {
+                "record_declared_image_count": 1,
+                "image_previews": [{
+                    "alt": "Sticker /043 on the sealed box",
+                    "thumbnail": "https://cdn.bsky.app/img/feed_thumbnail/plain/test.jpg",
+                    "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/test.jpg",
+                }],
+                "external_public_url": "",
+                "record_media_without_view_image_urls": False,
+            },
+        }
+        report = {"state": "executed_bounded", "results": [
+            {"kind": "blind_discovery", "status": "ok", "key": "sticker",
+             "version": "v2", "posts": [image, POST]},
+            {"kind": "blind_discovery", "status": "ok", "key": "box",
+             "version": "v2", "posts": [image]},
+        ]}
+        text_hits, _ = triage.build_queue(report)
+        self.assertEqual(len(text_hits), 1)
+        media_hits, summary = triage.build_media_review_queue(report)
+        self.assertEqual(len(media_hits), 1)
+        self.assertEqual(summary["unique_media_linked_posts"], 1)
+        self.assertEqual(len(media_hits[0]["matched_searches"]), 2)
+        self.assertEqual(media_hits[0]["image_previews"][0]["alt"],
+                         "Sticker /043 on the sealed box")
+        self.assertFalse(media_hits[0]["original_image_retrieved"])
+        self.assertEqual(media_hits[0]["record_image_alts"], [])
+        self.assertFalse(media_hits[0]["sticker_verified"])
+        self.assertEqual(media_hits[0]["new_confirmed_stickers"], 0)
+
+    def test_old_text_only_archive_does_not_fake_image_census(self):
+        report = {"state": "executed_bounded", "results": [
+            {"kind": "blind_discovery", "status": "ok", "posts": [POST]}]}
+        hits, stats = triage.build_media_review_queue(report)
+        self.assertEqual(hits, [])
+        self.assertEqual(stats["posts_without_captured_media_metadata"], 1)
+        self.assertEqual(stats["source_photo_bytes_retrieved"], 0)
+        with self.assertRaises(ValueError):
+            triage.build_media_review_queue({"state": "planned_unexecuted", "results": []})
+
+    def test_malformed_search_is_failure_and_blocked_followers_unattempted(self):
+        report = {"state": "executed_bounded", "results": [
+            {"kind": "blind_discovery", "status": "ok", "posts": [POST]},
+            {"kind": "blind_discovery", "status": "bad_shape", "error": "no posts array"},
+            {"kind": "blind_discovery", "status": "error", "http_status": 503},
+            {"kind": "blind_discovery", "status": "skipped_after_endpoint_access_failure"},
+            {"kind": "blind_discovery", "status": "not_attempted"},
+        ]}
+        hits, counts = triage.build_queue(report)
+        self.assertEqual(len(hits), 1)
+        self.assertEqual(counts["searched_queries_with_valid_response"], 1)
+        self.assertEqual(counts["failed_queries"], 2)
+        self.assertEqual(counts["unattempted_queries"], 2)
+        self.assertEqual(counts["query_status_counts"]["bad_shape"], 1)
+        media, media_counts = triage.build_media_review_queue(report)
+        self.assertEqual(media, [])
+        self.assertEqual(media_counts["query_status_counts"]["bad_shape"], 1)
+        self.assertEqual(media_counts["query_status_counts"]["not_attempted"], 1)
+
     def test_source_ids_never_merged_by_similar_text(self):
         other = dict(POST, uri="at://did:plc:different/app.bsky.feed.post/abc123",
                      target=False)

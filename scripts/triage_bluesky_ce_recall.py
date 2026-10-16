@@ -86,14 +86,19 @@ def build_queue(report, *, max_candidates=100):
     if not 1 <= max_candidates <= 500:
         raise ValueError("Candidate cap must be 1..500")
     joined = {}
-    checked, indexed, errors = 0, 0, 0
+    checked, indexed, errors, unattempted = 0, 0, 0, 0
+    query_statuses = Counter()
     for result in report["results"]:
         if result.get("kind") != "blind_discovery":
             continue
-        if result.get("status") == "error":
-            errors += 1
+        status = result.get("status") or "missing_status"
+        query_statuses[status] += 1
+        if status in ("not_attempted", "planned_unexecuted",
+                      "skipped_after_endpoint_access_failure"):
+            unattempted += 1
             continue
-        if result.get("status") != "ok":
+        if status != "ok":
+            errors += 1
             continue
         checked += 1
         for rank, post in enumerate(result.get("posts", []), 1):
@@ -134,6 +139,8 @@ def build_queue(report, *, max_candidates=100):
         "api_host": report.get("api_host", "unrecorded"),
         "searched_queries_with_valid_response": checked,
         "failed_queries": errors,
+        "unattempted_queries": unattempted,
+        "query_status_counts": dict(sorted(query_statuses.items())),
         "search_post_appearances": indexed,
         "unique_public_post_uris": len(joined),
         "context_class_counts": dict(sorted(classes.items())),
@@ -148,12 +155,98 @@ def build_queue(report, *, max_candidates=100):
     }
     return ranked[:max_candidates], summary
 
+def build_media_review_queue(report, *, max_candidates=200):
+    """Independently preserve image-led posts even when body text is irrelevant.
+
+    Do not count thumbnails or alt text as inspected photographs. The initial
+    raw API archive lacks these fields, so a fresh *authorized* capture is
+    required for source-level media recall.
+    """
+    if report.get("state") != "executed_bounded" or not isinstance(report.get("results"), list):
+        raise ValueError("Measured public source search required")
+    if not 1 <= max_candidates <= 1000:
+        raise ValueError("Invalid visual candidate cap")
+    selected = {}
+    stats = Counter()
+    for result in report["results"]:
+        if result.get("kind") != "blind_discovery":
+            continue
+        stats["query_status_" + str(result.get("status") or "missing_status")] += 1
+        if result.get("status") != "ok":
+            continue
+        for post in result.get("posts", []):
+            stats["post_appearances"] += 1
+            url = candidate_url(post)
+            if not url:
+                stats["invalid_public_post_locators"] += 1
+                continue
+            media = post.get("media_metadata")
+            if not isinstance(media, dict):
+                stats["posts_without_captured_media_metadata"] += 1
+                continue
+            declared = media.get("record_declared_image_count", 0)
+            views = media.get("image_previews", [])
+            views = views if isinstance(views, list) else []
+            has_external = bool(media.get("external_public_url"))
+            if not declared and not views and not has_external:
+                continue
+            uri = post["uri"]
+            context = classify_ce_context(post.get("text_excerpt", ""), post.get("handle", ""))
+            if uri not in selected:
+                selected[uri] = {
+                    "uri": uri, "url": url,
+                    "published_at": post.get("created_at"),
+                    "indexed_at": post.get("indexed_at"),
+                    "context_class": context,
+                    "text_excerpt": str(post.get("text_excerpt") or "")[:450],
+                    "image_previews": views[:12],
+                    "declared_image_count": declared,
+                    "record_image_alts": media.get("record_image_alts", [])[:12]
+                         if isinstance(media.get("record_image_alts"), list) else [],
+                    "external_public_url": media.get("external_public_url", ""),
+                    "media_view_missing": bool(media.get("record_media_without_view_image_urls")),
+                    "review_status": "uninspected_public_media_metadata_only",
+                    "owner_verified": False,
+                    "sticker_verified": False,
+                    "original_image_retrieved": False,
+                    "new_confirmed_stickers": 0,
+                    "matched_searches": [],
+                }
+            selected[uri]["matched_searches"].append({
+                "key": result.get("key"),
+                "version": result.get("version"),
+            })
+    items = sorted(selected.values(), key=lambda x: (
+        0 if x["context_class"] != "unrelated_or_unresolved" else 1,
+        0 if x["image_previews"] else 1,
+        x["uri"],
+    ))
+    counts = dict(sorted(stats.items()))
+    return items[:max_candidates], {
+        "unique_media_linked_posts": len(items),
+        "media_queue_returned": min(max_candidates, len(items)),
+        "media_queue_truncated": len(items) > max_candidates,
+        "source_post_appearances": counts.get("post_appearances", 0),
+        "posts_without_captured_media_metadata": counts.get(
+            "posts_without_captured_media_metadata", 0),
+        "invalid_public_post_locators": counts.get("invalid_public_post_locators", 0),
+        "query_status_counts": {key.removeprefix("query_status_"): val
+                                for key, val in counts.items()
+                                if key.startswith("query_status_")},
+        "unfiltered_original_api_artifact_required": True,
+        "source_photo_bytes_retrieved": 0,
+        "new_confirmed_stickers": 0,
+    }
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--input", type=Path, required=True)
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--summary", type=Path, required=True)
     ap.add_argument("--max-candidates", type=int, default=100)
+    ap.add_argument("--media-review-output", type=Path,
+                    help="Optional separate unverified visual/external-link queue (no image downloads)")
     args = ap.parse_args()
     report = json.loads(args.input.read_text(encoding="utf-8"))
     hits, summary = build_queue(report, max_candidates=args.max_candidates)
@@ -161,6 +254,13 @@ def main():
     args.output.write_text(
         "".join(json.dumps(hit, ensure_ascii=False) + "\n" for hit in hits),
         encoding="utf-8")
+    if args.media_review_output:
+        media, media_summary = build_media_review_queue(report)
+        args.media_review_output.parent.mkdir(parents=True, exist_ok=True)
+        args.media_review_output.write_text(
+            "".join(json.dumps(item, ensure_ascii=False) + "\n" for item in media),
+            encoding="utf-8")
+        summary["visual_review"] = media_summary
     args.summary.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n",
                             encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False))

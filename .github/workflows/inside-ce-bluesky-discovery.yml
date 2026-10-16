@@ -53,7 +53,8 @@ jobs:
             --input research-output/bluesky-crossyear-results.json \
             --output research-output/bluesky-crossyear-review-only.jsonl \
             --summary research-output/bluesky-crossyear-review-summary.json \
-            --max-candidates 200
+            --max-candidates 200 \
+            --media-review-output research-output/bluesky-crossyear-visual-review-only.jsonl
           python - <<'PY'
           import json
           from pathlib import Path
