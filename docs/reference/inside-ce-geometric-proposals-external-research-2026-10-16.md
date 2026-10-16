@@ -45,3 +45,16 @@ Only merge after the no-network `CE visual provenance` and external-evidence sui
 4. Preserve the failure case if geometric detection spuriously treats game cases or printed paper as stickers. That is a structural limitation, not a reason to silently exclude awkward negative examples.
 
 **Outcome as of implementation:** research into comparable live systems and code/CI integration; actual geometry comparison numbers must come from the exact-head test logs, not from this document's assumptions.
+
+## First measured development comparison
+
+On [exact-source CI run 38961289389](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38961289389), the OpenCV experiment passed **147** offline tests and generated an explicitly **development-set** comparison. Against previously examined fixed cases at **top-eight review budget** and IoU ≥0.40, it localized:
+
+- **12/12 pasted-photo sticker positives:** **4/4** at **1%**, **4/4** at **3%**, **4/4** at **8%** scene area. The previously tested five-reference dHash/aHash region method localized **8/12** (1/4, 3/4, 4/4 by size). This supports a better *paper box proposal* stage at this budget.
+- **4/4 different source-original frontal sticker photos** at IoU ≥0.40, as with the earlier baseline.
+- **4/4 synthetic sticker-free negatives** received at least one generic light rectangular candidate. Consequently no sticker/no-sticker precision, positive predictive value or rejection threshold is established.
+- **Zero actual new collector photographs** were acquired for this comparison; **zero** real independent negative photos were processed by this PR CI; **zero** new serials verified.
+
+Because these specific challenges were already investigated and their shapes known before implementing contour search, **12/12 is diagnostic/development performance, not honest blind test performance**. Do not use it as an externally validated detection probability or claim it will generalize to full Collector's Edition images. The next new dataset must be independently sourced, frozen, and include native camera negatives and tiny/sticker-occluded cases.
+
+The opt-in original-media workflow now emits a self-contained contact-sheet with up to three generic-paper cropped previews per image, *separate from* hash-similarity sticker templates. It expressly warns that white paper, boxes or printed labels are not verified numbered stickers.
