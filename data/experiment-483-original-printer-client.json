@@ -103,7 +103,10 @@
       "response_handling": "second index response inserted as HTML into #print-content, browser window.print invoked"
     },
     "response_type_claim": "Client inserts server response HTML then invokes browser printing; no proof that PHP serves a PDF directly.",
-    "error_handling": "Uses .done callbacks; no original PHP, no proven failed-request UI states."
+    "error_handling": "Uses .done callbacks; no original PHP, no proven failed-request UI states.",
+    "original_button_handler_wiring_found_in_bundle": false,
+    "runtime_printCheck_identifier_occurrences": 1,
+    "historical_dom_click_wiring_unrecovered": true
   },
   "sourcemap": {
     "inline_source_map": true,
@@ -129,6 +132,7 @@
   "next_nonsticker_falsifiers": [
     "Original server PHP or raw successful index.php response from 2018-2020.",
     "Original form page/path and client HTML to establish pathname-driven branch behavior.",
-    "Historic successful-response capture tied to an input class, cookie/session id and source timestamp."
+    "Historic successful-response capture tied to an input class, cookie/session id and source timestamp.",
+    "Archived 2018/2019 original Playdead page HTML defining #mce-EMAIL, print button and invocation of printCheck; implementation bundle contains only the named function declaration."
   ]
 }
