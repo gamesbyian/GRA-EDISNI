@@ -18,6 +18,8 @@ Read only these first:
 6. `docs/community-glossary.md`
 7. `docs/community-conventions.md`
 
+The cross-disciplinary sticker portfolio is tracked by `docs/perspective-driven-sticker-experiments-2026-10-16.md` and `data/perspective-experiments-2026-10-16.json`. Every new session that reprioritizes or works on the 20 vocation approaches, six syntheses or three generative models must preserve all 27 PX IDs; run `python scripts/check_perspective_queue.py` after updates. These are proposed work cards, **not** canonical numbered experiments or evidence; use existing prior negatives and add execution results to the experiment ledger only after a real test.
+
 Use `docs/experiment-ledger.md` to check whether an idea has already been tested. Query the long-form Google Docs only for details that are not represented here.
 
 Do not begin a session by rereading large tails of the Google Docs.
