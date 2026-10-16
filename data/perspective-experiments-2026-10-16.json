@@ -237,8 +237,11 @@
       "depends_on": [],
       "status": "active",
       "progress_report": "docs/conjecture-lab/2026-10-16-px12-expected-player-paths.md",
-      "progress_note": "Historical one-owner, pooled background, conditional foreground and null walkthroughs documented; independently fixed foreground receiving operation remains missing.",
-      "last_updated": "2026-10-16"
+      "progress_note": "Historical one-owner, pooled background, conditional foreground and null walkthroughs documented; independently fixed foreground receiving operation remains missing. Full 73-text-file Terminal41 receiver/source census extended Experiment 478, with all 17 status variants bounded to the known four-scheme family; no CE reader proved.",
+      "last_updated": "2026-10-16",
+      "additional_reports": [
+        "docs/conjecture-lab/2026-10-16-terminal41-full-client-receiver-census.md"
+      ]
     },
     {
       "id": "PX-13",
@@ -559,8 +562,11 @@
       ],
       "status": "active",
       "progress_report": "docs/conjecture-lab/2026-10-16-pxm1-causal-explanation-frontier.md",
-      "progress_note": "Proved broad message/structure/interaction/null histories observationally nonidentifiable under unrestricted hidden choices; source-conditioned discriminators remain to execute.",
-      "last_updated": "2026-10-16"
+      "progress_note": "Proved broad message/structure/interaction/null histories observationally nonidentifiable under unrestricted hidden choices; source-conditioned discriminators remain to execute. Full 73-text-file Terminal41 receiver/source census extended Experiment 478, with all 17 status variants bounded to the known four-scheme family; no CE reader proved.",
+      "last_updated": "2026-10-16",
+      "additional_reports": [
+        "docs/conjecture-lab/2026-10-16-terminal41-full-client-receiver-census.md"
+      ]
     }
   ]
 }
