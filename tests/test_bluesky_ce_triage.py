@@ -69,6 +69,8 @@ class PublicBlueskyTriageTests(unittest.TestCase):
              "unrelated_or_unresolved"),
             ("House of 1000 Doors: Evil Inside Collector's Edition",
              "unrelated_or_unresolved"),
+            ("House of 1000 Doors: Evil Inside Collector's Edition code giveaway",
+             "unrelated_or_unresolved"),
             ("", "unrelated_or_unresolved"),
         ]
         for body, expected in samples:
