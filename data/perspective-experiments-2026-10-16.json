@@ -1,0 +1,551 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-16",
+  "repo": "gamesbyian/GRA-EDISNI",
+  "basis": "20 vocations, 6 multidisciplinary combinations, one causal-model capstone",
+  "evidence_status": "proposals_only",
+  "count_expected": 27,
+  "cards": [
+    {
+      "id": "PX-01",
+      "discipline": "Theoretical physicist",
+      "question": "Which observables remain invariant across the original 108-cycle and viable transformations?",
+      "test": "Define a finite catalogue of symbol-count, neighborhood, D4, translation and class-phase invariants on the physical 66-residue observation mask; compare across grammars without using their imputed completions as input.",
+      "control": "Exact within-class/frame permutation and observed-mask matched null; account for post-hoc selection of symmetry group.",
+      "discriminator": "A predeclared nontrivial invariant with predictive consequences on currently unseen residues that is exceptional under its matched null.",
+      "reuse": [
+        "docs/experiment-421-h108-replication-audit.md",
+        "docs/experiment-458-common-mask-prospective-discrimination.md"
+      ],
+      "priority": "P1",
+      "mode": "DISCOVER",
+      "readiness": "ready",
+      "gate": "No new sticker required; freeze tested transformation list before scoring.",
+      "stop": "Stop after fixed catalogue and matched-null result; retain null even if no invariant survives.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-02",
+      "discipline": "Jazz improviser",
+      "question": "Does the code carry a rhythmic or phrase structure rather than single-glyph semantics?",
+      "test": "Analyze event gaps, phrase boundaries, self-similar motifs and run-length intervals under serial order; optionally compare as symbolic percussion against source-native printer timing if authentic packet times exist.",
+      "control": "Match class-by-class glyph census, H108 cycle, run counts and multiple tested meters; use known direct Morse/run grammar negatives as baselines.",
+      "discriminator": "One source-cued meter/phrase grammar yields held-out prediction or a specific historically authentic timing receiver.",
+      "reuse": [
+        "docs/experiment-403-fractionated-morse-direct.md",
+        "docs/conjecture-lab/2026-10-12-streaming-rle-instructions.md"
+      ],
+      "priority": "P2",
+      "mode": "DISCOVER",
+      "readiness": "ready",
+      "gate": "Timing interpretation remains conditional unless original source supplies durations.",
+      "stop": "Stop after a bounded meter set; avoid sound-alike or music-fitting output claims.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-03",
+      "discipline": "Criminal detective",
+      "question": "Are existing owner/media chains hiding a missed primary observation?",
+      "test": "Build claim→owner→physical edition→source media→resale chain for unresolved priority cases; locate date contradictions, aliases, archived originals and previously uninspected frames.",
+      "control": "Reconcile full community numbered/lost/unknown entries, not just names; deduplicate reuploads; preserve source loss and provider blocks.",
+      "discriminator": "A new original image/primary testimony or a corrected provenance contradiction, never an inferred sticker.",
+      "reuse": [
+        "docs/serial-provenance-clusters.md",
+        "docs/reference/inside-ce-raezores-public-lead-handoff-2026-10-13.md"
+      ],
+      "priority": "P0",
+      "mode": "DISCOVER",
+      "readiness": "ready",
+      "gate": "Do not contact owners automatically; prefer archived primary material and handoff-ready source.",
+      "stop": "Stop per case at original-byte exhaustion, documented block or verified reconciliation; record negatives.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-04",
+      "discipline": "Architect",
+      "question": "Are serial class, tile placement and 108-foldout coordinates distinct but interoperating grids?",
+      "test": "Enumerate physically meaningful 9×12,12×9,3×3×12 and registered nine-class coordinate maps, explicitly typing class vs occurrence coordinates.",
+      "control": "Apply exact photograph/assembly anchors; same-mask geometry-preserving shuffled nulls; do not use a fitted transformation as an independent cue.",
+      "discriminator": "A source-native registration that fixes an otherwise free map or provides a frozen prediction.",
+      "reuse": [
+        "docs/experiment-319-background-geometry-mask-domain-audit.md",
+        "docs/experiment-326-9x12-spatial-field-audit.md"
+      ],
+      "priority": "P1",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Reconstruct only layouts compatible with original panel dimensions.",
+      "stop": "Stop if only arbitrary affine/D4 degrees of freedom remain or old fixed null is reproduced.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-05",
+      "discipline": "Chess grandmaster",
+      "question": "Which new observation or historical source most efficiently separates the live hypotheses?",
+      "test": "Re-rank 50/54/93, 82/84/94/102 and other disagreements by expected information gain jointly with realistic evidence-recovery probability and research cost; show sensitivity to priors.",
+      "control": "Compare to plain disagreement count, class-balanced baseline and prior acquisition rankings; keep correlated models in one dependence cluster.",
+      "discriminator": "A defensible top-10 acquisition/search order with exact conditional outcomes and trigger for revision.",
+      "reuse": [
+        "docs/experiment-422-live-acquisition-priorities.md",
+        "docs/experiment-458-common-mask-prospective-discrimination.md"
+      ],
+      "priority": "P0",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Do not presume a new sticker is necessary; include archived consumer/source recovery as actions.",
+      "stop": "Freeze input model families and priors; stop when ranking insensitive to further low-confidence assumptions.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-06",
+      "discipline": "Experimental chef",
+      "question": "Which layers interact nonadditively to reveal an operation?",
+      "test": "Ablate and factorially recombine observed glyph, serial, A-I class, background artwork and authentic external source parameters using typed transformations only.",
+      "control": "Additive layer baseline, source/label-shuffled interactions and full attempted-combination denominator; protect fitted operations from test data.",
+      "discriminator": "An interaction whose extra constraint predicts a new observation or registers to an independently authenticated consumer.",
+      "reuse": [
+        "docs/experiment-419-tail-xor-overlay.md",
+        "docs/conjecture-lab/2026-10-13-nine-image-router.md"
+      ],
+      "priority": "P1",
+      "mode": "DISCOVER",
+      "readiness": "ready",
+      "gate": "First restrict combinations to type-compatible operations and original artifacts.",
+      "stop": "Stop initial pilot at pairwise plus preselected triple combinations; no unfettered transform zoo.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-07",
+      "discipline": "Trial lawyer",
+      "question": "Which frequently repeated premises collapse under adversarial cross-examination?",
+      "test": "Maintain a two-sided claim brief for H108, exact endpoint, carrier purpose, 81/27, manufacturing independence and alleged external consumers; articulate strongest rival and decisive contradiction.",
+      "control": "Use primary observations only and seek negative instances; distinguish model consequence from independent premise.",
+      "discriminator": "A narrowed assumption stack, explicit counterfactuals and ranked tests resolving the highest-stakes uncertainty.",
+      "reuse": [
+        "docs/reset-incumbent-assumption-audit.md",
+        "docs/sticker-epistemic-reset.md"
+      ],
+      "priority": "P0",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Existing exact falsifications are immutable; no blanket claim that one negative rejects all variants.",
+      "stop": "Stop each brief with a source/observation that could change the verdict; never close solely for lack of source.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-08",
+      "discipline": "Wilderness survivalist",
+      "question": "What could be decoded despite 42 currently unseen H108 positions?",
+      "test": "Simulate random and mechanism-correlated erasures on observed symbols; compare recovery, ambiguity and human-readable output feasibility across minimal grammars.",
+      "control": "Training-only census majority, exact conditional-completion baseline, predeclared erasure regimes; report coverage and correctness separately.",
+      "discriminator": "A decoder with stable bounded output under observed-mask omissions without imputing physical observations.",
+      "reuse": [
+        "docs/experiment-365-completion-universe.md",
+        "docs/experiment-474-q4-erasure-scope.md"
+      ],
+      "priority": "P0",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Treat missingness as nonrandom possible; no assumed future sticker.",
+      "stop": "Stop if purported erasure resistance disappears on complete A-I class withholding.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-09",
+      "discipline": "Comedian/improviser",
+      "question": "Could the printed marks function literally as punctuation, commands or direction cues?",
+      "test": "Enumerate a small typed glyph-grammar table: slash/path/division, dash/continuation/subtraction, dot/point/termination, and test with authentic Terminal41/lever/user interfaces.",
+      "control": "Grammar-free token permutations, known direct-password failure, explicit costs for added syntax and arbitrary word choice.",
+      "discriminator": "One operation naturally accepted by a verified contemporary interface or independent instructions that specify glyph roles.",
+      "reuse": [
+        "docs/experiment-342-sticker-lever-cue.md",
+        "docs/conjecture-lab/2026-10-13-contextual-instruction-and-minimal-write.md"
+      ],
+      "priority": "P2",
+      "mode": "DISCOVER",
+      "readiness": "ready",
+      "gate": "Treat jokes/linguistic analogies only as candidate generators, not evidence.",
+      "stop": "Cap to source-attested interfaces and two predeclared candidate parsers per type.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-10",
+      "discipline": "Cryptanalyst",
+      "question": "Is the glyph sequence output of a conventional/ternary/finite-state family rather than an image?",
+      "test": "Score compact ternary, variable-length, transposition, key-schedule and finite-state coder families on the original common observed mask and known cross-puzzle sources.",
+      "control": "Retain published negative Trifid/Morse results; nested family selection corrections, held-out physical coverage and balanced symbol null.",
+      "discriminator": "A specified low-complexity decoder that beats matched controls and predicts a new symbol or original reader response.",
+      "reuse": [
+        "docs/experiment-403-fractionated-morse-direct.md",
+        "docs/experiment-407-nontrivial-coupling-atlas.md"
+      ],
+      "priority": "P1",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Do not repeat already closed direct ciphers without changed operator/cue.",
+      "stop": "Stop on saturation of bounded code family without independent payload evidence.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-11",
+      "discipline": "Emergency physician",
+      "question": "Which differential diagnosis explains all current observations with least assumption debt?",
+      "test": "Create likelihood/constraint table for message-first, structure-first, manufacturing-metadata, interaction-first, and hybrid models; separate nested hypotheses and observation reliability.",
+      "control": "Sensitivity to prior weights, correlated evidence clusters and disputed records; do not multiply same-source evidence.",
+      "discriminator": "A decision table identifying next high-value discriminator, not unearned numeric probability of solution.",
+      "reuse": [
+        "docs/hypothesis-test-coverage-matrix.md",
+        "docs/experiment-359-reset-stopping-boundary.md"
+      ],
+      "priority": "P1",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Use conditional probabilities only where defensible; otherwise ordinal likelihood.",
+      "stop": "Stop after falsifier/next-evidence column exists for every model.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-12",
+      "discipline": "Game designer",
+      "question": "What solution path was actually feasible to a 2019–2020 purchaser?",
+      "test": "Build three chronological player walkthroughs (one CE, pooled CEs, ARG-aware player), documenting cues, necessary stickers and feedback points at release-time availability.",
+      "control": "Compare to verified prior ARG affordances and no-further-endgame/null story; reject later archival discoveries as contemporary clues.",
+      "discriminator": "A source-specific, human-feasible step with an observable feedback/consumer absent from current story.",
+      "reuse": [
+        "docs/experiment-324-expected-player-information.md",
+        "docs/human-solve-reconstruction.md"
+      ],
+      "priority": "P0",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Do not grant historical players modern repo data or post-release archives.",
+      "stop": "Stop when each walkthrough identifies exact missing historical cue or demonstrates a complete conditional path.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-13",
+      "discipline": "Diplomatic negotiator",
+      "question": "What evidence could different holder groups supply with least friction?",
+      "test": "Build consent-respecting request variants for sellers, current owners, old purchasers, unboxers, archivists, retailers and manufacturing partners; distinguish serial, tile, print sheet and packaging evidence.",
+      "control": "Compare candidate requests against documented past contacts; prevent duplicate unsolicited outreach or privacy escalation.",
+      "discriminator": "A practical reviewed Raezores handoff/request template or independently archived original photo.",
+      "reuse": [
+        "docs/archival-outreach-templates.md",
+        "docs/manual-acquisition-queue.md"
+      ],
+      "priority": "P1",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "No messages sent; only user/community-mediated opt-in outreach.",
+      "stop": "Stop at finished source-specific templates and source/owner reconciliation.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-14",
+      "discipline": "Evolutionary biologist",
+      "question": "Are printer strings and sticker fragments homologous under bounded transformations?",
+      "test": "Align motifs under rotations, inversions, block swaps and local insertions using original printer reference corpora; group by proven source/time family.",
+      "control": "Source-specific alphabet frequency and motif-preserving synthetic controls, correct for scanning many alignments.",
+      "discriminator": "A replicated correspondence with independently prescribed orientation or a novel source-linked prediction.",
+      "reuse": [
+        "data/printer-reference/README.md",
+        "docs/experiment-476-receiver-native-geometry-audit.md"
+      ],
+      "priority": "P2",
+      "mode": "DISCOVER",
+      "readiness": "ready",
+      "gate": "Do not assume direct Xbox 36-row match after its documented rejection.",
+      "stop": "Cap alignment families and count all attempted shifts/transforms.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-15",
+      "discipline": "Stage magician",
+      "question": "Is meaningful information concealed in occlusion, negative space or attention framing?",
+      "test": "Examine original sticker images for symbol-mask occlusion, multiple-exposure background recovery, sparse perimeter pixels and angle/lighting effects.",
+      "control": "Use full native original photo support masks, synthetic occlusion nulls and independent same-class observations; no inpainting-as-observation.",
+      "discriminator": "New physically visible stroke/registration feature reproducible across independently sourced originals.",
+      "reuse": [
+        "docs/background-tile-master-process.md",
+        "docs/experiment-344-full-photo-perimeter-support.md"
+      ],
+      "priority": "P1",
+      "mode": "DISCOVER",
+      "readiness": "ready",
+      "gate": "Original-byte provenance and per-pixel observed support required.",
+      "stop": "Stop once each of nine classes has an observability/coverage map and source-specific evidence needs.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-16",
+      "discipline": "Software reverse engineer",
+      "question": "What generator most economically explains serial, A-I cycle and foreground glyph assignment?",
+      "test": "Specify distinct generative pipelines (serial→art→glyph; artwork sheet→serial; independent glyph stream; batching) and test implied conditional independences on the 84-record physical ledger.",
+      "control": "Use observed sticker records only; manufacturing/copy-number uncertainty; frame-conditional shuffle and model-complexity penalty.",
+      "discriminator": "Pipeline predicts observed cross-run statistical property that existing H108 period model does not trivially imply.",
+      "reuse": [
+        "docs/archival-manufacturing-evidence.md",
+        "docs/serial-provenance-clusters.md"
+      ],
+      "priority": "P0",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Never interpret derived machine states as print-production measurements.",
+      "stop": "Stop after explicit falsifiable signatures for at least three pipelines and exact data-limited result.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-17",
+      "discipline": "Archaeologist",
+      "question": "Which physical production and custody traces establish the order of printing/numbering/packing?",
+      "test": "Audit contemporary iam8bit/Playdead marketing, packaging photographs, printing artifacts and batch/label stock; seek evidence of production stage boundaries.",
+      "control": "Distinguish original primary media from mockups, later reproductions and inferred runs; preserve ambiguous dates.",
+      "discriminator": "A dated primary production cue discriminating whether serial, glyph and background were assigned together.",
+      "reuse": [
+        "docs/archival-manufacturing-evidence.md",
+        "docs/experiment-480-original-print-transport.md"
+      ],
+      "priority": "P1",
+      "mode": "DISCOVER",
+      "readiness": "ready",
+      "gate": "No destructive inspection; use public/permissioned originals only.",
+      "stop": "Stop documentary pass after source/capture matrix and explicit unresolved physical measurements.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-18",
+      "discipline": "Search-and-rescue coordinator",
+      "question": "Where does expected recoverable evidence per unit search cost remain high?",
+      "test": "Build a platform×locale×era search coverage and failure map; use known-positive blind recall, censored pages, duplicate chains and image quality to choose next bounded searches.",
+      "control": "Provider-block censoring, author/post-level exact gold, original-media retrieval and lead novelty separately; forbid 28k-task scaling before pilot recall.",
+      "discriminator": "Ranked consent-compliant 12-query and 48-image pilot with measured source-level recall/false prompts and complete failure waterfall.",
+      "reuse": [
+        "docs/reference/inside-ce-search-and-visual-predeployment-audit-2026-10-16.md",
+        "docs/reference/inside-ce-cold-recall-controls-audit-2026-10-16.md"
+      ],
+      "priority": "P0",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Actual provider queries require authorized opt-in; offline audit can run now.",
+      "stop": "Stop at exact source recall and review metrics before wide deployment.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-19",
+      "discipline": "Intricate-plot novelist",
+      "question": "What narrative setup/payoff would explain the sticker's role in the ARG chronology?",
+      "test": "Assemble a source-dated dependency graph of game printer, CE nine-piece URL, Terminal41, cover and later releases; write competing minimally speculative storylines.",
+      "control": "No-further-endgame and manufacturing-only stories as equal controls; contemporaneous evidence only for original intention.",
+      "discriminator": "A previously overlooked dependency or independently archived clue that predicts next puzzle function.",
+      "reuse": [
+        "docs/inside-arg-historical-chronology.md",
+        "docs/sticker-endgame-destination-investigation-2026-10-08.md"
+      ],
+      "priority": "P1",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Do not award points for story elegance; missing endpoints stay missing.",
+      "stop": "Stop when all storyline edges are typed observed/attested/invented and a source retrieval could decide.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-20",
+      "discipline": "Mechanical inventor",
+      "question": "Are the marks instructions for a physical alignment, fold, slide or stencil?",
+      "test": "Use true-scale A-I source masters and physical CE layout to test a limited family of overlay, rotation, masking, sliding-window and fold mechanisms.",
+      "control": "Rigid source-provided anchors, paper support masks, fixed D4 comparisons and same-source fabricated-image controls.",
+      "discriminator": "A fixed physical operation exposing source-native readable output and reproducible with printed mockups.",
+      "reuse": [
+        "docs/sticker-native-registration-inventory.md",
+        "docs/experiment-481-poster-cross-edition-gallery.md"
+      ],
+      "priority": "P1",
+      "mode": "DISCOVER",
+      "readiness": "ready",
+      "gate": "Do not infer poster/sticker physical identity from marketing photos.",
+      "stop": "Stop at preregistered geometric operations; park variants lacking full source masters.",
+      "depends_on": [],
+      "status": "queued"
+    },
+    {
+      "id": "PX-C1",
+      "discipline": "Physicist + reverse engineer + archaeologist",
+      "question": "Can a common production graph explain observed invariants and material evidence?",
+      "test": "Combine PX-01,PX-16,PX-17 into a causal print-flow DAG; list conditional independences distinguishing generation order and later assembly.",
+      "control": "Observed serial/class/glyph only, no model completions; allow multiple equally fitting mechanisms.",
+      "discriminator": "An external print workflow artifact or frozen conditional prediction differentiating at least two production DAGs.",
+      "reuse": [
+        "docs/archival-manufacturing-evidence.md",
+        "docs/experiment-421-h108-replication-audit.md"
+      ],
+      "priority": "P0",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Production links conditional until original manufacturing evidence appears.",
+      "stop": "Stop once evidence sufficiency table and next distinct signature are documented.",
+      "depends_on": [
+        "PX-01",
+        "PX-16",
+        "PX-17"
+      ],
+      "status": "queued"
+    },
+    {
+      "id": "PX-C2",
+      "discipline": "Jazz musician + evolutionary biologist + cryptanalyst",
+      "question": "Is there a reproducible sequence grammar across sticker and printer corpora?",
+      "test": "Integrate PX-02,PX-10,PX-14 to compare metrical, alignment and automata languages using shared held-out and null protocol.",
+      "control": "Source-aware alphabet/motif shuffle, best-of-family correction and prior direct-Morse negatives.",
+      "discriminator": "A single parsimonious family predicts unseen data under more than one source corpus.",
+      "reuse": [
+        "docs/experiment-407-nontrivial-coupling-atlas.md",
+        "data/printer-reference/README.md"
+      ],
+      "priority": "P2",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Different ARG corpora may encode different purposes; do not force shared plaintext.",
+      "stop": "Stop after joint family leaderboard and dependence-corrected controls.",
+      "depends_on": [
+        "PX-02",
+        "PX-10",
+        "PX-14"
+      ],
+      "status": "queued"
+    },
+    {
+      "id": "PX-C3",
+      "discipline": "Architect + inventor + magician",
+      "question": "Does a physical registration operation reveal what the symbol overlay hides?",
+      "test": "Integrate PX-04,PX-15,PX-20 with original photo masks, exact paper ratios, nine-class assembly and candidate source-native overlay.",
+      "control": "Use only authentic unfilled pixels, rigid transforms and independent same-class photographic controls.",
+      "discriminator": "A deterministic registration with reproducible visible readout, not alignment-optimized OCR.",
+      "reuse": [
+        "docs/background-tile-master-process.md",
+        "docs/experiment-344-full-photo-perimeter-support.md"
+      ],
+      "priority": "P1",
+      "mode": "DEVELOP",
+      "readiness": "evidence_gate",
+      "gate": "Full-resolution source-native overlay artwork and registration anchors may need recovery.",
+      "stop": "Stop if free translations dominate or alleged letters depend on synthetic filled pixels.",
+      "depends_on": [
+        "PX-04",
+        "PX-15",
+        "PX-20"
+      ],
+      "status": "queued"
+    },
+    {
+      "id": "PX-C4",
+      "discipline": "Detective + trial lawyer + physician",
+      "question": "Which evidence families have systemic blind spots or contradictory assumptions?",
+      "test": "Join PX-03,PX-07,PX-11 to issue an adversarial claim/evidence dependency map and correct unresolved source contradictions.",
+      "control": "Independent claim grouping by source and observation; censored source treated unknown rather than absent.",
+      "discriminator": "A falsifier or new original source resolving a high-centrality assumption cluster.",
+      "reuse": [
+        "docs/hypothesis-test-coverage-matrix.md",
+        "docs/serial-provenance-clusters.md"
+      ],
+      "priority": "P0",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "No direct owner outreach and no implied Bayesian precision.",
+      "stop": "Stop after all active top assumptions have source links and counterclaims.",
+      "depends_on": [
+        "PX-03",
+        "PX-07",
+        "PX-11"
+      ],
+      "status": "queued"
+    },
+    {
+      "id": "PX-C5",
+      "discipline": "Game designer + novelist + comedian",
+      "question": "What simplest original player action connects the three marks to a contemporary ARG consumer?",
+      "test": "Combine PX-09,PX-12,PX-19 in competing complete conditional walkthroughs, including a simple literal-instruction interpretation.",
+      "control": "Original-time source inventory, one-owner and community cases, no-endgame story; report invented bridges.",
+      "discriminator": "An independently attested source-native input or physical action completing a short human solve.",
+      "reuse": [
+        "docs/experiment-324-expected-player-information.md",
+        "docs/experiment-479-classword-lever-consumer.md"
+      ],
+      "priority": "P1",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Do not claim the story itself is proof.",
+      "stop": "Stop with at least two rival step-by-step paths and exact missing cue.",
+      "depends_on": [
+        "PX-09",
+        "PX-12",
+        "PX-19"
+      ],
+      "status": "queued"
+    },
+    {
+      "id": "PX-C6",
+      "discipline": "Chess grandmaster + survivalist + search-and-rescue coordinator",
+      "question": "What next action maximizes information under permanently missing stickers and bounded discovery budgets?",
+      "test": "Combine PX-05,PX-08,PX-18 into cost-weighted value-of-information rankings across archive, new source retrieval and physically missing residues.",
+      "control": "Robust rank sensitivity to uncertain recoverability, correlated hypotheses and missing-not-at-random models.",
+      "discriminator": "A reproducible next-action queue with expected discrimination and honest provider/source limits.",
+      "reuse": [
+        "docs/experiment-422-live-acquisition-priorities.md",
+        "docs/reference/inside-ce-search-and-visual-predeployment-audit-2026-10-16.md"
+      ],
+      "priority": "P0",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Search activity does not count as successful acquisition.",
+      "stop": "Stop at a capacity-bounded priority schedule; update only when new coverage/evidence changes.",
+      "depends_on": [
+        "PX-05",
+        "PX-08",
+        "PX-18"
+      ],
+      "status": "queued"
+    },
+    {
+      "id": "PX-M1",
+      "discipline": "Capstone: mechanism-vs-message",
+      "question": "Does the same observed record favor message-first, structure-first or interaction-first generation?",
+      "test": "Specify three generative DAGs: authored payload→cipher→labels; structural production→glyph sequence; player action→physical distribution. Separate observable consequences, human decoding procedure and downstream consumer for each.",
+      "control": "Equal evidence table, complexity prior sensitivity, complete-source/no-endgame baseline and explicit observational nonidentifiability.",
+      "discriminator": "A concrete independent experiment that separates at least two DAGs without preferring the incumbent decoder.",
+      "reuse": [
+        "docs/sticker-epistemic-reset.md",
+        "docs/experiment-359-reset-stopping-boundary.md"
+      ],
+      "priority": "P0",
+      "mode": "DEVELOP",
+      "readiness": "ready",
+      "gate": "Models may be observationally equivalent; missing production records is an evidentiary limit.",
+      "stop": "Stop with at least one discriminating prediction or a precise nonidentifiability result.",
+      "depends_on": [
+        "PX-C1",
+        "PX-C4",
+        "PX-C5"
+      ],
+      "status": "queued"
+    }
+  ]
+}
