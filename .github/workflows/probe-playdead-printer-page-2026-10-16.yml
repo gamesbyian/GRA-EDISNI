@@ -1,0 +1,32 @@
+name: One-shot historical Playdead printer page HTML
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/probe-playdead-printer-page-2026-10-16.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  archived-html:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Offline archive URL and HTML parser checks
+        run: python scripts/probe_playdead_printer_page_html.py
+      - name: Eight fixed historical source HTML archive replays
+        run: python scripts/probe_playdead_printer_page_html.py --execute
+      - name: Preserve original replay bytes and source checksums
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playdead-original-2018-2019-printer-html
+          path: search-output/
+          retention-days: 30
+          if-no-files-found: warn
