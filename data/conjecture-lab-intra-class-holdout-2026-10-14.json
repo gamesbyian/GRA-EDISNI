@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-14",
+  "mode": "DISCOVER",
+  "parent": "CL-OPS-03",
+  "script": "scripts/conjecture_lab_intra_class_holdout.py",
+  "source": "84 physical reports, 66 distinct H108 residues; nine class-word holdout folds",
+  "method": "Fit one of 48 fixed shared op codebooks on eight nine-site A-I body words; evaluate remaining class with its physical tail options and a freely chosen three-bit seed. Sum held-out minimum known-site disagreements.",
+  "fitted_heldout_total": 5,
+  "folds": [
+    {
+      "class": "I",
+      "loss": 1
+    },
+    {
+      "class": "A",
+      "loss": 0
+    },
+    {
+      "class": "B",
+      "loss": 0
+    },
+    {
+      "class": "C",
+      "loss": 2
+    },
+    {
+      "class": "D",
+      "loss": 0
+    },
+    {
+      "class": "E",
+      "loss": 1
+    },
+    {
+      "class": "F",
+      "loss": 1
+    },
+    {
+      "class": "G",
+      "loss": 0
+    },
+    {
+      "class": "H",
+      "loss": 0
+    }
+  ],
+  "nulls": {
+    "class": {
+      "draws": 10000,
+      "seed": 20261016,
+      "histogram": {
+        "2": 5,
+        "3": 34,
+        "4": 172,
+        "5": 469,
+        "6": 487,
+        "7": 450,
+        "8": 798,
+        "9": 968,
+        "10": 1000,
+        "11": 1170,
+        "12": 1145,
+        "13": 1082,
+        "14": 921,
+        "15": 640,
+        "16": 373,
+        "17": 189,
+        "18": 78,
+        "19": 15,
+        "20": 4
+      },
+      "at_most_five": 680
+    },
+    "frame": {
+      "draws": 10000,
+      "seed": 20261017,
+      "histogram": {
+        "1": 1,
+        "2": 5,
+        "3": 54,
+        "4": 218,
+        "5": 527,
+        "6": 486,
+        "7": 470,
+        "8": 790,
+        "9": 965,
+        "10": 1011,
+        "11": 1141,
+        "12": 1151,
+        "13": 1058,
+        "14": 817,
+        "15": 619,
+        "16": 376,
+        "17": 193,
+        "18": 86,
+        "19": 25,
+        "20": 6,
+        "21": 1
+      },
+      "at_most_five": 805
+    },
+    "trio": {
+      "draws": 10000,
+      "seed": 20261018,
+      "histogram": {
+        "3": 10,
+        "4": 95,
+        "5": 334,
+        "6": 341,
+        "7": 235,
+        "8": 654,
+        "9": 781,
+        "10": 925,
+        "11": 1140,
+        "12": 1149,
+        "13": 1239,
+        "14": 1022,
+        "15": 906,
+        "16": 655,
+        "17": 339,
+        "18": 120,
+        "19": 46,
+        "20": 6,
+        "21": 3
+      },
+      "at_most_five": 439
+    }
+  },
+  "caution": "This is not independent prospective validation of a model class invented after seeing the data; all full models still contradict physical data."
+}
