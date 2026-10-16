@@ -156,7 +156,10 @@
       "gate": "Treat missingness as nonrandom possible; no assumed future sticker.",
       "stop": "Stop if purported erasure resistance disappears on complete A-I class withholding.",
       "depends_on": [],
-      "status": "queued"
+      "status": "active",
+      "progress_report": "docs/conjecture-lab/2026-10-16-px08-erasure-bound.md",
+      "progress_note": "Exact minimal H108+81/27 binary-sector erasure grammar retains 2^42 completions, with 27 unknown body and 15 unknown tail sites; original redundancy/consumer operation unresolved.",
+      "last_updated": "2026-10-16"
     },
     {
       "id": "PX-09",
