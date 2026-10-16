@@ -65,6 +65,27 @@ class BlueskyRecallTests(unittest.TestCase):
         self.assertEqual(report["requests_sent"], 3)
         self.assertIsNone(report["direct_post_retrievable"])
 
+    def test_v2_403_does_not_suppress_distinct_v1(self):
+        seen = []
+        def endpoint_acl(endpoint, params):
+            seen.append(endpoint)
+            if endpoint.endswith("getPostThread"):
+                return {"thread": {"post": {
+                    "uri": m.GOLD_URI, "author": {"handle": "tomcaswell.games"},
+                    "record": {"text": "inside collector's edition"}}}}
+            if endpoint.endswith("searchPostsV2"):
+                raise urllib.error.HTTPError("https://public.api.bsky.app",
+                                            403, "Forbidden", {}, None)
+            return {"posts": []}
+        report = m.run(execute=True, max_requests=17,
+                       fetch_fn=endpoint_acl, sleep_fn=lambda _: None)
+        self.assertEqual(report["requests_sent"], 10)
+        self.assertEqual(report["blocked_versions"], ["v2"])
+        self.assertEqual(report["tasks_skipped_endpoint_block"], 7)
+        self.assertTrue(report["direct_post_retrievable"])
+        self.assertEqual(sum(x.endswith("searchPostsV2") for x in seen), 1)
+        self.assertEqual(sum(x.endswith("searchPosts") for x in seen), 8)
+
     def test_matching_exact_at_uri_not_post_id_only(self):
         fake = {"uri": "at://did:plc:other/app.bsky.feed.post/3mta6ecjbvk2i",
                 "author": {}, "record": {"text": "same ID different identity"}}
