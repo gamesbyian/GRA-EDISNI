@@ -115,11 +115,14 @@ def media_metadata(x, record):
             "fullsize": public_image_url(item.get("fullsize")),
             "alt": str(item.get("alt") or "")[:450],
         })
-    declared = rec.get("images")
+    # A recordWithMedia embed holds the original image declarations under
+    # record.embed.media, not directly under record.embed.
+    rec_media = rec.get("media") if isinstance(rec.get("media"), dict) else rec
+    declared = rec_media.get("images")
     if not isinstance(declared, list):
         declared = []
     external = nested.get("external") if isinstance(nested.get("external"), dict) else (
-        rec.get("external") if isinstance(rec.get("external"), dict) else {})
+        rec_media.get("external") if isinstance(rec_media.get("external"), dict) else {})
     uri = external.get("uri", "")
     if not isinstance(uri, str):
         uri = ""
@@ -132,6 +135,8 @@ def media_metadata(x, record):
         "record_embed_type": rec.get("$type", ""),
         "view_embed_type": view.get("$type", ""),
         "record_declared_image_count": len(declared),
+        "record_image_alts": [str(x.get("alt") or "")[:450] for x in declared[:12]
+                              if isinstance(x, dict)],
         "public_view_image_count": len(images),
         "image_previews": images,
         "external_public_url": uri[:1000],
