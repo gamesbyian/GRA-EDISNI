@@ -26,7 +26,7 @@ def candidate_url(post):
     return "https://bsky.app/profile/" + quote(handle.lower(), safe=".-") + "/post/" + match.group(2)
 
 
-def classify_ce_context(text):
+def classify_ce_context(text, handle=""):
     """Conservative Playdead-specific source relevance, separate from owner score.
 
     Blank text cannot be classified by words. The original native API artifact
@@ -57,9 +57,19 @@ def classify_ce_context(text):
                           and re.search(r"\binside\b", s)
                           and re.search(r"\b(?:collector|sticker|huddle|realdoll|real doll|"
                                         r"statue|jelly|cipher|puzzle)\b", s))
-    if not (named_ce or (playdead_inside and meaningful_context) or iam8bit_inside
+    # The CE's publisher may refer to "INSIDE!" and "collector's edition"
+    # in separate clauses, without repeating its own brand name in the body.
+    # Domain-handle provenance is only a review cue, not owner verification.
+    publisher_ce_reference = bool(
+        str(handle or "").casefold() == "iam8bit.com"
+        and re.search(r"\binside\b", s)
+        and re.search(r"\bcollector(?:'s|s)?\s+edition\b", s)
+    )
+    if not (publisher_ce_reference or named_ce or (playdead_inside and meaningful_context) or iam8bit_inside
             or "#insidearg" in s):
         return "unrelated_or_unresolved"
+    if publisher_ce_reference:
+        return "publisher_domain_handle_reference"
     owner_language = bool(re.search(
         r"\b(?:do i still need|should i keep|i (?:have|own|bought|got|received|"
         r"ordered|sold|unboxed)|my (?:copy|edition|statue|huddle|sticker|"
@@ -92,7 +102,7 @@ def build_queue(report, *, max_candidates=100):
             if not url:
                 continue
             pts, reasons = score({"text": post.get("text_excerpt", "")})
-            context = classify_ce_context(post.get("text_excerpt", ""))
+            context = classify_ce_context(post.get("text_excerpt", ""), post.get("handle", ""))
             uri = post["uri"]
             x = joined.setdefault(uri, {
                 "uri": uri, "url": url, "published_at": post.get("created_at"),
@@ -110,8 +120,8 @@ def build_queue(report, *, max_candidates=100):
                 "key": result.get("key"), "version": result.get("version"),
                 "rank_on_page": rank,
             })
-    priority = {"possible_owner_claim": 0, "arg_discussion": 1,
-                "other_playdead_ce_context": 2}
+    priority = {"possible_owner_claim": 0, "publisher_domain_handle_reference": 1,
+                "arg_discussion": 2, "other_playdead_ce_context": 3}
     relevant = [x for x in joined.values() if x["context_class"] in priority]
     # Keep all original unfiltered posts in the immutable API artifact; never
     # hand a generic sports/film post to Raezores merely for matching "Inside".
