@@ -32,3 +32,14 @@ A miss on a real sticker at top-eight/0.40 IoU means this particular fingerprint
 A hit establishes localization feasibility on that **one known photographed object**, not source independence at Internet scale, classification specificity or ownership. Subsequent work: diverse independent photoreal negatives, background-only hard controls, sticker appearances occupying <10% of frame, JPEG blur/perspective, and alternative PDQ/embedding/corner-feature approaches if this method misses. Continue to use current community [numbered/L/U] reconciliation for any genuinely novel public lead.
 
 **At document creation:** benchmark implemented and source annotations fixed; numerical measured recall belongs to the exact-head CI artifact, not to speculation or synthetic unit tests.
+
+## Measured first exact-source CI run
+
+[Original retained benchmark run 38957046067](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38957046067), executed on PR #303 source head `0eb597f2f35caa71536934edc631a4dd48525489`, scored the four genuine original photographs without provider retrieval. Logged summary:
+
+- **Four of four** had at least one top-eight proposed box with **intersection-over-union ≥ 0.60** versus the manually fixed paper boundary. Consequently the ≥0.40 and ≥0.25 counts were also 4/4.
+- **Mean best top-eight IoU = 0.70789**; fixed scan budget 1600 coarse plus 1200 refined windows; five other source photos as references, 20 rotated fingerprint variants.
+- **No independent negative original photos evaluated.** False-positive rate is **not measured**; no serial was automatically read or sticker confirmed. These images mostly contain large, frontal papers, not tiny off-axis stickers in clutter.
+- The source run passed 137 no-network tests in 10.166 seconds and uploaded `region-independent-holdout.json` as the retained 30-day artifact. The result is not a measurement of unlabeled public web-photo discovery.
+
+This positive feasibility result warrants the next experiment: **real independent image negatives and genuine very-small-in-frame positives**, keeping the existing IoU targets, source IDs and current scan budget unchanged. Do not optimize further against these four now-observed holdout outcomes and call them unseen.
