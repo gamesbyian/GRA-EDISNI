@@ -50,7 +50,7 @@ def ink_layout(crop: Image.Image) -> dict:
     center=zones["center_mark"]
     bottom=zones["bottom_print"]
     def components(zone:np.ndarray)->dict:
-        n,labels,stats,centers=cv2.connectedComponentsWithStats(zone.astype(np.uint8),8)
+        n,labels,stats,centers=cv2.connectedComponentsWithStats(zone.astype(np.uint8),connectivity=8)
         if n>2500:
             raise ValueError("too many foreground components")
         useful=[(int(s[4]),int(s[2]),int(s[3]))
