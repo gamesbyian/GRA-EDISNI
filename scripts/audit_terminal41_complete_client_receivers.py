@@ -189,6 +189,7 @@ def inspect() -> dict:
     assert len(statuses) == 17
     assert all(p["schemes_obtained"] == p["schemes_applied"] for p in statuses)
     assert all(set(p["named_scheme_indices"]) <= {0,1,2,3} for p in statuses)
+    assert Counter(p["schemes_obtained"] for p in statuses) == Counter({0:5,1:7,2:2,3:2,4:1})
     return {
         "mode": "VALIDATE_preserved_client_snapshot_ONLY",
         "source_ref": manifest["source_ref"],
