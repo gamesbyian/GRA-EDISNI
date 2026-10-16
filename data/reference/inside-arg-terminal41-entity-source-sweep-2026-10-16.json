@@ -22,8 +22,8 @@
     "youtube.com"
   ],
   "counts": {
-    "scanned_files": 72,
-    "unexamined_large_html": 1,
+    "scanned_files": 73,
+    "unexamined_large_html": 0,
     "excluded_binary_png": 1,
     "files_with_any_substring": 4
   },
@@ -38,9 +38,9 @@
   },
   "notes": [
     "Files were read directly through the linked GitHub repository rather than inferred from code search index. Batch results were recorded with all errors visible; no errors were returned for the 72 small source files.",
-    "The 1,986,163-byte saf_dat_col.html responds with a valid Git blob SHA but empty content through the linked file action; it was not analyzed.",
     "A 19,360,240-byte PNG was not OCRed nor tested for textual metadata in this substring pass.",
-    "The 534brn source HTML was scanned as exposed by the linked repository; existing GRA-EDISNI CL-09 audit retains authority for hash-authenticated original A binary."
+    "The 534brn source HTML was scanned as exposed by the linked repository; existing GRA-EDISNI CL-09 audit retains authority for hash-authenticated original A binary.",
+    "The normal file-content action returned empty text for saf_dat_col.html; the direct SHA-addressed fetch_blob returned 1,265,970 Unicode characters that UTF-8 reencode to exactly 1,986,163 bytes (identical to the source-tree byte size), with 5,014 lines and the final [SD. safety dat. collect[/END/]] marker. All thirteen expressions returned zero decoded-text matches. The bytes were length-checked, not independently Git-SHA recomputed."
   ],
   "files": [
     {
@@ -108,7 +108,7 @@
       "path": "terminal41.link/dat/saf_dat_col.html",
       "blob_sha": "349b818fce618ef55c404bedfb602b1d03f29a48",
       "source_size_bytes": 1986163,
-      "status": "connector_empty_response_large_text",
+      "status": "checked_decoded_git_blob_full_utf8_bytesize_verified",
       "hits": {}
     },
     {
