@@ -112,7 +112,7 @@ def evaluate(tasks: list[dict], events: list[dict]) -> tuple[dict, list[dict], l
 
 
 
-def brave_result_events(rows: list[dict], run_id: str) -> list[dict]:
+def brave_result_events(rows: list[dict], run_id: str, expected_manifest_sha256: str = "") -> list[dict]:
     """Convert *normalized* Brave result rows; never imply original HTML fetched.
 
     The digest covers our retained normalized result-row payload, not raw Brave
@@ -124,6 +124,8 @@ def brave_result_events(rows: list[dict], run_id: str) -> list[dict]:
     for row in rows:
         if not isinstance(row, dict):
             raise ValueError("Brave result must be an object")
+        if expected_manifest_sha256 and row.get("manifest_sha256") != expected_manifest_sha256:
+            raise ValueError("Brave results do not match frozen exact-byte task manifest")
         status = str(row.get("status") or "")
         if status == "not_attempted":
             continue
@@ -175,8 +177,14 @@ def main() -> None:
     if args.brave_results and not args.run_id:
         p.error("--run-id is required with --brave-results")
     for path in args.brave_results or []:
-        events.extend(brave_result_events(read_jsonl(path), args.run_id))
+        events.extend(brave_result_events(
+            read_jsonl(path), args.run_id,
+            expected_manifest_sha256=hashlib.sha256(args.tasks.read_bytes()).hexdigest()))
     report, pending, log = evaluate(tasks, events)
+    # Match the literal byte digest emitted by the original Brave runner so
+    # resume checks do not mix it up with an equivalent reserialized manifest.
+    report["task_manifest_sha256"] = hashlib.sha256(args.tasks.read_bytes()).hexdigest()
+    report["task_manifest_digest_scope"] = "exact_input_bytes"
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "run-summary.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False)+"\n", encoding="utf-8")
