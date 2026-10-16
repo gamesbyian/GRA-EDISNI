@@ -20,6 +20,8 @@ jobs:
         run: python scripts/check_evidence_map.py
       - name: Check cross-disciplinary research queue integrity
         run: python scripts/check_perspective_queue.py
+      - name: Census original Terminal41 client receiver surface
+        run: python scripts/audit_terminal41_complete_client_receivers.py --check --summary
       - name: Audit observation-only label generator causality
         run: python scripts/audit_perspective_production_causality.py --check
       - name: Verify observation-only erasure identifiability bound
