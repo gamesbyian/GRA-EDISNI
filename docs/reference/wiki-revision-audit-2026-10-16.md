@@ -14,6 +14,28 @@
 
 **Result:** no independently attributable Playdead-authored wiki clue has been discovered. Two demonstrable outsider ARG-related historical insertions provide both an audit positive control and evidence that ARG-looking wiki text can arise from unrelated editors.
 
+## Resolved apparent anomaly: nine removed ♻ annotations on iOS bitmap lines
+
+A closer look at the [2019-06-03 Thingy revision 18924](https://oldwiki.gamedetectives.net/index.php?diff=18924&oldid=18923&title=Inside_ARG) reveals removal of exactly nine annotations appended to iOS printer glyph lines: `♻203, ♻206, ♻208, ♻205, ♻214, ♻206, ♻204, ♻208, ♻215`. These were **already present** in the [earliest article revision of 2018-07-04](https://oldwiki.gamedetectives.net/index.php?oldid=15953&title=Inside_ARG); the 2019 edit only cleaned them away.
+
+The 24 glyphs spell the independently documented `MULTIPLEPROBESDISPATCHED`. Each mark is an **exact backward reference to the earlier occurrence of the same letter**: the numeric target minus 200 gives the previous character's 1-based ordinal. Explicitly:
+
+| Current ordinal / letter | Annotation | Earlier ordinal / letter |
+| --- | --- | --- |
+| 7 / L | ♻203 | 3 / L |
+| 9 / P | ♻206 | 6 / P |
+| 13 / E | ♻208 | 8 / E |
+| 16 / I | ♻205 | 5 / I |
+| 17 / S | ♻214 | 14 / S |
+| 18 / P | ♻206 | 6 / P |
+| 20 / T | ♻204 | 4 / T |
+| 23 / E | ♻208 | 8 / E |
+| 24 / D | ♻215 | 15 / D |
+
+The nine cited glyphs also reproduce the corresponding earlier bitmap shapes; the full first-source page displays all 24 lines. Thus **9/9 annotations have a simple repeat-lookup explanation**. This is no evidence of a hidden Playdead wiki edit; it is a source-traceable annotation of reused patterns (the significance of the initial 200-based numbering scheme is not independently established). The earliest page credits an external collaborative printer-code Google Doc for information in the article, but this alone does not prove which author or document first introduced these annotations. Recover historical Google Doc revisions only if further provenance is important.
+
+**Methodological note:** this discovery was made by visual review *after* seeing the historical revision; it was not found by the predeclared automated anomaly scanner. A prospective detector for recycle-code syntax would be a post-hoc addition and should be scored separately from the frozen positive controls.
+
 ## Reproducible bounded auditor
 
 A read-only, standard-library MediaWiki action-API tool is at [scripts/wiki_revision_audit.py](../../scripts/wiki_revision_audit.py), with [offline regression tests](../../tests/test_wiki_revision_audit.py) and [prioritized target registry](../../data/reference/wiki-revision-audit-targets-2026-10-16.json).
