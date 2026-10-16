@@ -103,7 +103,7 @@ def evaluate(tasks: list[dict], events: list[dict]) -> tuple[dict, list[dict], l
         "tasks_marked_not_attempted_after_provider_block": counts["not_attempted_after_provider_block"],
         "latest_task_states": dict(sorted(summary_counts.items())),
         "pending_or_censored_tasks": len(pending),
-        "complete_tasks_with_exhausted_pagination": len(manifests) - len(pending),
+        "tasks_with_sufficient_recorded_evidence": len(manifests) - len(pending),
         "source_discovery_claim": "attempted valid returned responses only",
         "no_historical_absence_claim": True,
         "new_confirmed_stickers": 0,
