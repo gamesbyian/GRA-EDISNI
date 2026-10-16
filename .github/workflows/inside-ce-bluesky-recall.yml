@@ -46,7 +46,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 288 }}
         run: |
           python scripts/audit_bluesky_ce_recall.py --execute \
-            --max-requests 17 --delay-seconds 1 \
+            --api-host primary --max-requests 17 --delay-seconds 1 \
             --output research-output/bluesky-recall-public-results.json
       - name: Optional explicit manual bounded public search
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
@@ -54,7 +54,7 @@ jobs:
           REQUEST_CAP: ${{ inputs.max_requests }}
         run: |
           python scripts/audit_bluesky_ce_recall.py --execute \
-            --max-requests "$REQUEST_CAP" --delay-seconds 1 \
+            --api-host primary --max-requests "$REQUEST_CAP" --delay-seconds 1 \
             --output research-output/bluesky-recall-public-results.json
       - name: Report exact source and observed probe statuses (no speculative coverage)
         if: ${{ github.event_name == 'pull_request' || inputs.execute == 'yes' }}
@@ -68,6 +68,7 @@ jobs:
               control = r["results"][0] if r["results"] else {}
               print(json.dumps({
                   "fetched_at_utc": r["fetched_at_utc"],
+                  "api_host": r["api_host"],
                   "requests_sent": r["requests_sent"],
                   "blocked_versions": r.get("blocked_versions"),
                   "direct_source": control.get("post"),
