@@ -41,3 +41,18 @@ The optional `run_sliced_pilot=true` flag runs only **after** the existing publi
 - **Next:** original public-image negative controls via explicit opt-in workflow; independent public original **wide scene with paper <1%**, with SHA-pinned ground-truth bounding boxes and no reference leakage. Compare global geometry, sliced geometry, hash, and possibly ORB feature homography *only if enough points are present*. The user's primary outcome remains **novel canonical-reconciled CE sticker sources**, not synthetic leaderboard improvements.
 
 **At initial authoring:** numerical performance unmeasured until the exact CI run; preserve both positive misses and negative prompts in the run artifact.
+
+## First measured source-disjoint composite comparison
+
+The exact-head [CI run 38963666527](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38963666527) passed **154 tests**, then scored source SHA-pinned **021** and **171** paper crops in the six frozen wide-scene composites:
+
+| Paper area fraction | Whole-frame geometry localized | Sliced geometry localized |
+|---|---:|---:|
+| 0.1% | 1 / 2 | **2 / 2** |
+| 0.3% | 2 / 2 | 2 / 2 |
+| 1% | 2 / 2 | 2 / 2 |
+| **All six** | **5 / 6** | **6 / 6** |
+
+Both methods emitted at least one light-paper candidate on **3 / 4 generated sticker-free negative scenes**, with the same eight-proposal review limit. Slicing therefore improved tiny-paper *localization* on this source-disjoint composite suite, **not paper/sticker classification or practical false-prompt rejection**. Raw proposals, original source hashes, tile budgets, missed candidates and exact ground-truth rectangles are preserved in `sliced-novel-small-paper-challenge.json`.
+
+**Crucial limits:** These are two genuinely distinct physical-sticker **source photographs**, but their appearance in a **synthetic** wide scene is not the same as an independent photograph of an actual tiny sticker in situ. The positive counts are 2 per area, too small for statistical claims; the negative scenes are generated and not a rate for real web images. We already observed these outcomes, so this fixed set is now **development data** for all subsequent tuning. Any later feature/threshold promotion must be evaluated on a *new frozen set* with genuine original negative images. The controlled public negative-image lane still needs its explicit opt-in acquisition; no corresponding real negatives were scanned here.
