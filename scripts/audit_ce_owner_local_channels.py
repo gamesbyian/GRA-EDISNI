@@ -78,7 +78,7 @@ def fixed_period_null(rows):
     denominator = math.comb(len(body), nslash)
     return dict(body_entries=len(body), slash_entries=nslash,
                 dash_entries=len(body) - nslash,
-                repeat_group_sizes=dict(sorted(collections.Counter(sizes).items())),
+                repeat_group_sizes={str(k): v for k, v in sorted(collections.Counter(sizes).items())},
                 favorable_assignments=dp[nslash],
                 all_assignments=denominator,
                 exact_conditional_probability=dp[nslash] / denominator)

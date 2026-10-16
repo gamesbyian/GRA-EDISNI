@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 from scripts.external_evidence.discover_html_images import extract, normal_url
 from scripts.external_evidence.visual_semantic import LABELS, ranking
-from scripts.external_evidence.fetch_html_images import approved, select, safe_dir, asset_key
+from scripts.external_evidence.fetch_html_images import approved, select, safe_dir, asset_key, selection_coverage
 
 
 class HtmlLeadTests(unittest.TestCase):
@@ -52,6 +52,29 @@ class HtmlLeadTests(unittest.TestCase):
         ]
         result = select(rows, per_page=1, total=5)
         self.assertEqual([x["image_url"] for x in result], ["https://i.redd.it/high.jpg"])
+
+    def test_visual_waterfall_keeps_excluded_original_candidates_visible(self):
+        rows = [
+            {"source_id": "ce-visual-official-ce", "image_url": "https://cdn.shopify.com/photo/opaque.jpg",
+             "hint_count": 2},
+            {"source_id": "ce-visual-official-ce", "image_url": "https://cdn.shopify.com/photo/inside.jpg?width=400",
+             "hint_count": 1},
+            {"source_id": "ce-visual-official-ce", "image_url": "https://cdn.shopify.com/photo/inside.jpg?width=800",
+             "hint_count": 1},
+            {"source_id": "owner", "image_url": "https://i.redd.it/owner1.jpg", "hint_count": 2},
+            {"source_id": "owner", "image_url": "https://i.redd.it/owner2.jpg", "hint_count": 1},
+            {"source_id": "owner", "image_url": "https://example.org/not-allowlisted.jpg", "hint_count": 3},
+        ]
+        chosen = select(rows, per_page=1, total=1)
+        report = selection_coverage(rows, chosen)
+        self.assertEqual(report["input_url_mentions"], 6)
+        self.assertEqual(report["official_product_url_heuristic"], 1)
+        self.assertEqual(report["unapproved_image_host"], 1)
+        self.assertEqual(report["eligible_variants_collapsed"], 1)
+        self.assertEqual(report["unique_eligible_asset_families"], 3)
+        self.assertEqual(report["asset_families_selected_for_transfer"], 1)
+        self.assertEqual(report["eligible_asset_families_not_selected_by_budget"], 2)
+        self.assertTrue(report["original_lead_inventory_retained_separately"])
 
     def test_srcset_resolution_family_collapses_to_one_download(self):
         base = "https://www.iam8bit.com/cdn/shop/products/InsideCE_Lifestyle_00001B.jpg?v=123"

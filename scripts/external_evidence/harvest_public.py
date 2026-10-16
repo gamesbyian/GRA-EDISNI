@@ -245,12 +245,43 @@ def inventory_files(source_root: Path, work_root: Path) -> list[dict]:
     return items
 
 
+def acquisition_health(records: list[dict]) -> dict:
+    """Count *usable payload acquisition*, not successful script termination.
+
+    An extractor may exit 0 while producing no output, or this script may
+    have caught an HTTP/API failure and recorded it in acquisition.json.
+    Neither condition is evidence that the selected public source was searched.
+    """
+    states = []
+    for r in records:
+        payloads = [x for x in r.get("files", []) if x.get("size", 0) > 0
+                    and not x.get("path", "").endswith("/acquisition.json")]
+        state = ("acquired_payload" if r.get("classification") == "ok" and payloads
+                 else "success_without_payload" if r.get("classification") == "ok"
+                 else "not_acquired")
+        states.append({"source_id": r["source_id"], "kind": r["kind"],
+                       "classification": r.get("classification", "not-classified"),
+                       "retrieval_state": state, "payload_file_count": len(payloads)})
+    return {
+        "selected_sources": len(records),
+        "acquired_payload_sources": sum(x["retrieval_state"] == "acquired_payload" for x in states),
+        "success_without_payload": sum(x["retrieval_state"] == "success_without_payload" for x in states),
+        "not_acquired_sources": sum(x["retrieval_state"] == "not_acquired" for x in states),
+        "all_selected_acquired_payload": bool(states) and all(
+            x["retrieval_state"] == "acquired_payload" for x in states),
+        "source_coverage": states,
+        "scope": "selected_public_source_payloads_only_no_sticker_or_owner_verification",
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path, default=Path("data/external-acquisition-targets.json"))
     parser.add_argument("--output", type=Path, default=Path("evidence-work"))
     parser.add_argument("--source-id", default="all")
     parser.add_argument("--include-media", action="store_true")
+    parser.add_argument("--strict-selected", action="store_true",
+                        help="Exit nonzero if ANY selected source failed or yielded no payload; preserve full report")
     parser.add_argument("--include-social", action="store_true",
                         help="Attempt public gallery-dl acquisition for Instagram/Twitter/VK.")
     parser.add_argument(
@@ -327,12 +358,19 @@ def main() -> int:
                 "schema_version": 1,
                 "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(),
                 "sources": summary,
+                "retrieval_health": acquisition_health(summary),
             },
             indent=2,
             sort_keys=True,
         ) + "\n",
         encoding="utf-8",
     )
+    health = acquisition_health(summary)
+    print("Acquisition health: " + json.dumps({
+        k: v for k, v in health.items() if k != "source_coverage"
+    }), flush=True)
+    if args.strict_selected and not health["all_selected_acquired_payload"]:
+        return 2
     return 0
 
 

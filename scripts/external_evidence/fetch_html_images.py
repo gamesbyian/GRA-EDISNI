@@ -136,6 +136,44 @@ def select(leads: list[dict], per_page: int, total: int) -> list[dict]:
     return selected
 
 
+def selection_coverage(leads: list[dict], chosen: list[dict]) -> dict:
+    """Report image leads excluded by allowlist, official URL heuristics and caps.
+
+    These are *not irrelevant images*, merely assets not acquired in this
+    particular budgeted pass. Original lead URLs remain in the input artifact.
+    """
+    states = {"missing_source_or_url": 0, "unapproved_image_host": 0,
+              "official_product_url_heuristic": 0, "eligible_url_mentions": 0}
+    asset_groups = set()
+    for entry in leads:
+        key = entry.get("source_id", "")
+        url = entry.get("image_url", "")
+        if not key or not url:
+            states["missing_source_or_url"] += 1
+            continue
+        if not approved(url):
+            states["unapproved_image_host"] += 1
+            continue
+        if key.startswith("ce-visual-official-") and not any(
+            word in url.lower() for word in ("inside", "playdead", "realdoll", "huddle")
+        ):
+            states["official_product_url_heuristic"] += 1
+            continue
+        states["eligible_url_mentions"] += 1
+        asset_groups.add((key, asset_key(url)))
+    selected_groups = {(row["source_id"], asset_key(row["image_url"])) for row in chosen}
+    states.update({
+        "input_url_mentions": len(leads),
+        "unique_eligible_asset_families": len(asset_groups),
+        "eligible_variants_collapsed": states["eligible_url_mentions"] - len(asset_groups),
+        "asset_families_selected_for_transfer": len(selected_groups),
+        "eligible_asset_families_not_selected_by_budget": len(asset_groups - selected_groups),
+        "original_lead_inventory_retained_separately": True,
+        "interpretation": "unselected does not imply irrelevant or no sticker",
+    })
+    return states
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--leads", type=Path, default=Path("visual-evidence-work/html-image-leads.json"))
@@ -151,6 +189,7 @@ def main() -> None:
     for lead_file in args.additional_leads or []:
         rows += json.loads(lead_file.read_text(encoding="utf-8"))["image_mentions"]
     chosen = select(rows, args.max_per_page, args.max_images)
+    waterfall = selection_coverage(rows, chosen)
     args.out.mkdir(parents=True, exist_ok=True)
     reports = []
     total_bytes = 0
@@ -192,6 +231,7 @@ def main() -> None:
     report_path.write_text(json.dumps({
         "schema_version": 1, "max_images": args.max_images,
         "bytes_downloaded": total_bytes, "image_downloads": reports,
+        "selection_coverage": waterfall,
         "note": "Remote media unreviewed; nothing here confirms an edition or sticker"
     }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 

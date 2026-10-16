@@ -110,6 +110,28 @@ class ArchivedMarketSearchTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             search_url({**entry, "subreddit":"GameSale&author=someone"},30)
 
+    def test_candidate_cap_reports_omitted_qualified_posts(self):
+        q = [{"id": "capped", "kind": "post", "subreddit": "GameSale",
+              "term": "INSIDE collector"}]
+        rows = [
+            {"id": "abcde" + str(i), "title": "Selling my iam8bit INSIDE CE",
+             "url": "https://i.redd.it/inside" + str(i) + ".jpg"}
+            for i in range(5)]
+        def archived(url):
+            return {"data": rows}, "c" * 64
+        records, audit, failures, photos, _ = scan(
+            q, {"reddit": set(), "imgur": set()},
+            requester=archived, per_query=10, max_total=2)
+        self.assertEqual(len(records), 2)
+        self.assertEqual(audit[0]["returned"], 5)
+        self.assertEqual(audit[0]["relevant"], 5)
+        self.assertEqual(audit[0]["new_candidates_omitted_at_cap"], 3)
+        self.assertTrue(audit[0]["result_cap_reached"])
+        self.assertEqual(audit[0]["status"], "ok")
+        self.assertFalse(audit[0]["possibly_truncated"])
+        self.assertEqual(len(photos), 2)
+        self.assertEqual(failures, [])
+
     def test_duplicate_cross_query_records_and_failure_are_explicit(self):
         queries=[{"id":"q1","kind":"post","subreddit":"GameSale","term":"iam8bit"},
                  {"id":"q2","kind":"post","subreddit":"gamecollecting","term":"real doll"},

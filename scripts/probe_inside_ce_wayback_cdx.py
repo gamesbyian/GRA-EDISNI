@@ -106,7 +106,14 @@ def run(tasks: list[dict], *, delay_seconds: float,
     if transport is None:
         transport = urllib.request.urlopen
     out = []
+    blocked_reason = None
     for idx, task in enumerate(tasks):
+        if blocked_reason:
+            rec = dict(task)
+            rec["status"] = "not_attempted_after_provider_block"
+            rec["reason"] = blocked_reason
+            out.append(rec)
+            continue
         if idx:
             time.sleep(delay_seconds)
         rec = dict(task)
@@ -129,7 +136,7 @@ def run(tasks: list[dict], *, delay_seconds: float,
             rec["http_status"] = exc.code
             out.append(rec)
             if exc.code in (401, 403, 429, 503):
-                break
+                blocked_reason = f"CDX HTTP {exc.code} at task {idx}; remaining tasks not attempted"
             continue
         except (OSError, ValueError, TimeoutError, json.JSONDecodeError) as exc:
             rec["status"] = "request_error"
@@ -138,6 +145,21 @@ def run(tasks: list[dict], *, delay_seconds: float,
             continue
         out.append(rec)
     return out
+
+def summarize_run(tasks: list[dict], *, executed: bool) -> dict:
+    """Count actual CDX calls, not planned tasks or blocked followers."""
+    statuses = [x.get("status") for x in tasks]
+    attempts = {"metadata_sample_received", "http_error", "request_error", "request_started"}
+    return {
+        "sources_selected": len({x.get("label") for x in tasks}),
+        "tasks_written": len(tasks),
+        "attempted_requests": sum(x in attempts for x in statuses) if executed else 0,
+        "successful_metadata_responses": statuses.count("metadata_sample_received"),
+        "provider_or_parse_failures": sum(x in {"http_error", "request_error"} for x in statuses),
+        "not_attempted_after_provider_block": statuses.count("not_attempted_after_provider_block"),
+        "planned_unexecuted": statuses.count("planned_unexecuted"),
+    }
+
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
@@ -175,9 +197,8 @@ def main() -> None:
         for r in tasks:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
     print(json.dumps({
-        "inventory": args.inventory, "sources_selected": args.max_sources,
-        "tasks_written": len(tasks),
-        "attempted_requests": sum(x["status"] != "planned_unexecuted" for x in tasks) if args.execute else 0,
+        "inventory": args.inventory,
+        **summarize_run(tasks, executed=args.execute),
         "execute": args.execute, "output": str(args.output),
         "scope": "archive_capture_metadata_only_not_full_post_search",
     }))

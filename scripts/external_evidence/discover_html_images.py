@@ -83,18 +83,31 @@ def main() -> None:
     p.add_argument("--max-html-bytes", type=int, default=10_000_000)
     args = p.parse_args()
     all_results = []
+    coverage = {"source_metadata_files": 0, "invalid_metadata_files": 0,
+                "metadata_without_public_url": 0,
+                "html_pages_seen": 0, "oversized_html_pages": 0,
+                "readable_html_pages": 0, "html_pages_with_image_urls": 0,
+                "html_pages_without_image_urls": 0}
     for metadata in sorted(args.acquired.glob("*/acquisition.json")):
+        coverage["source_metadata_files"] += 1
         try:
             rec = json.loads(metadata.read_text(encoding="utf-8"))
         except (ValueError, OSError):
+            coverage["invalid_metadata_files"] += 1
             continue
         url = rec.get("final_url") or rec.get("url") or ""
         if not url.startswith(("http://", "https://")):
+            coverage["metadata_without_public_url"] += 1
             continue
         for page in sorted(metadata.parent.rglob("*.html")):
+            coverage["html_pages_seen"] += 1
             if page.stat().st_size > args.max_html_bytes:
+                coverage["oversized_html_pages"] += 1
                 continue
             leads = extract(page.read_text(encoding="utf-8", errors="replace"), url)
+            coverage["readable_html_pages"] += 1
+            coverage["html_pages_with_image_urls" if leads else
+                     "html_pages_without_image_urls"] += 1
             for lead in leads:
                 lead["source_id"] = rec.get("source_id") or metadata.parent.name
                 lead["source_page_url"] = url
@@ -104,6 +117,10 @@ def main() -> None:
     args.output.write_text(json.dumps({
         "schema_version": 1, "source_type": "acquired-public-html",
         "interpretation": "candidate image URLs only; not retrieved, owned, or readable stickers",
+        "source_coverage": coverage,
+        "unscanned_or_skipped_html": coverage["oversized_html_pages"] +
+                                      coverage["invalid_metadata_files"] +
+                                      coverage["metadata_without_public_url"],
         "image_mentions": all_results
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"extracted {len(all_results)} public HTML image mentions; none fetched")

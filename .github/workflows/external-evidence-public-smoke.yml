@@ -1,11 +1,9 @@
 name: External evidence public smoke harvest
 
 on:
-  pull_request:
-    paths:
-      - "scripts/external_evidence/**"
-      - "data/external-acquisition-targets.json"
-      - ".github/workflows/external-evidence-public-smoke.yml"
+  # Live provider capability checks are intentional, manual and strict.
+  # Repeated pull-request smoke was hammering login-blocked sources and
+  # conflating remote access failure with source-code regression.
   workflow_dispatch:
 
 permissions:
@@ -46,7 +44,7 @@ jobs:
             echo "No YouTube cookie secret available; continuing unauthenticated."
           fi
       - name: Harvest one source without large media
-        run: python scripts/external_evidence/harvest_public.py --source-id "${{ matrix.source_id }}"
+        run: python scripts/external_evidence/harvest_public.py --source-id "${{ matrix.source_id }}" --strict-selected
       - name: Upload smoke artifact
         if: always()
         uses: actions/upload-artifact@v4

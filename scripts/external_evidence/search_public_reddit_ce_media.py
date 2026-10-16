@@ -267,6 +267,7 @@ def scan(searches: list[dict], known: dict[str, set[str]], requester=request_jso
             if not isinstance(rows, list):
                 raise ValueError("response data is not an array")
             matched = 0
+            cap_omitted = 0
             for item in rows[:per_query]:
                 if not isinstance(item, dict):
                     continue
@@ -279,7 +280,8 @@ def scan(searches: list[dict], known: dict[str, set[str]], requester=request_jso
                     hits[identity]["matched_search_ids"].add(sid)
                     continue
                 if len(hits) >= max_total:
-                    break
+                    cap_omitted += 1
+                    continue
                 row["matched_search_ids"] = {sid}
                 row["source_status"] = known_status(row, known)
                 row["curated_case_ref"] = known.get("case_by_post_id", {}).get(row["post_id"])
@@ -289,7 +291,10 @@ def scan(searches: list[dict], known: dict[str, set[str]], requester=request_jso
                           "before": search.get("before", "2026-10-14"),
                           "status": "ok", "archive_sha256": digest,
                           "returned": len(rows), "relevant": matched,
-                          "page_limit": per_query, "possibly_truncated": len(rows) >= per_query})
+                          "page_limit": per_query, "possibly_truncated": len(rows) >= per_query,
+                          "new_candidates_omitted_at_cap": cap_omitted,
+                          "distinct_candidate_cap": max_total,
+                          "result_cap_reached": cap_omitted > 0})
         except (OSError, ValueError, urllib.error.URLError) as exc:
             error = {"search_id": sid, "status": "unavailable",
                      "reason": str(exc)[:350]}
