@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "evidence_source": "twinysam/INSIDE-ARG",
+  "upstream_upload_commit": "d0b11cf8c6462c9592bc141ee6a4dddc0a029da6",
+  "upstream_upload_date": "2023-08-18T07:43:55Z",
+  "upstream_commit_url": "https://github.com/twinysam/INSIDE-ARG/commit/d0b11cf8c6462c9592bc141ee6a4dddc0a029da6",
+  "preserved_mirror_source_tree": "4de72d7c2f21bd9eb4144fda51281c84cbcb90c4",
+  "missing_file_names_as_uploader_reported": [
+    "sys/index.html",
+    "dir/index.html",
+    "sys/activate_shutdown_protocol/commit/___________DONE_SD.html",
+    "sys/activate_shutdown_protocol/commit/___________DONE_SD_CONFIRMED.html",
+    "sys/activate_shutdown_protocol/commit/___________DONE_SD_CONFIRMED_10.html",
+    "sys/terminate_terminal/41/y/index.html"
+  ],
+  "upstream_described_non_original_html_versions": [
+    {
+      "claimed": "comms_main_viewgate.html",
+      "available": "comms_main_viewgate.html"
+    },
+    {
+      "claimed": "sys/printreqstatus_005.html",
+      "available": "sys/printreqstatus_005.txt"
+    },
+    {
+      "claimed": "sys/printreqstatus_006.html",
+      "available": "sys/printreqstatus_006.txt"
+    },
+    {
+      "claimed": "sys/printreqstatus_008.html",
+      "available": "sys/printreqstatus_008.txt"
+    },
+    {
+      "claimed": "sys/printreqstatus_014.html",
+      "available": "sys/printreqstatus_014.txt"
+    },
+    {
+      "claimed": "sys/activate_shutdown_protocol/commit/___________DONE.html",
+      "available": "sys/activate_shutdown_protocol/commit/___________DONE.html"
+    },
+    {
+      "claimed": "dat/534brn9653f9j8mmd/index.html",
+      "available": "dat/534brn9653f9j8mmd/index.html"
+    },
+    {
+      "claimed": "sys/terminateall.html",
+      "available": "sys/terminateall.html"
+    }
+  ],
+  "interpretation": "Uploader-supplied documentary provenance, not a contemporary 2019-2020 server record; missing files and not-original-HTML caveats are explicitly disclosed, not extrapolated to site nonexistence.",
+  "archive_provenance_revision": "The 2026-10-16 full-client audit newly enumerated a missing link relative to earlier screenshot-derived gap lists, but its exact filename was documented by the 2023 archive uploader. Two additional confirmed-stage filenames were also listed in 2023 and remain absent from pinned mirror."
+}
