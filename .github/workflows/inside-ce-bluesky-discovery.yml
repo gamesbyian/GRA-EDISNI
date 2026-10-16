@@ -40,12 +40,6 @@ jobs:
         run: |
           python scripts/discover_bluesky_inside_ce.py \
             --output research-output/bluesky-crossyear-plan.json
-      - name: Execute single bounded cross-year public pilot on originating PR
-        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 288 }}
-        run: |
-          python scripts/discover_bluesky_inside_ce.py --execute \
-            --request-cap 16 \
-            --output research-output/bluesky-crossyear-results.json
       - name: Optional manual bounded public run
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
         run: |
@@ -53,7 +47,7 @@ jobs:
             --request-cap 16 \
             --output research-output/bluesky-crossyear-results.json
       - name: Review-only deduplication with source context
-        if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.number == 288) || (github.event_name == 'workflow_dispatch' && inputs.execute == 'yes') }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
         run: |
           python scripts/triage_bluesky_ce_recall.py \
             --input research-output/bluesky-crossyear-results.json \
