@@ -17,8 +17,8 @@ from pathlib import Path
 
 OK = {"index_search_success", "original_source_retrieved", "original_image_retrieved"}
 FAILED = {"http_error", "request_error", "blocked", "rate_limited", "unavailable", "provider_timeout"}
-CENSORED = {"pagination_incomplete", "result_cap_reached", "not_attempted_after_provider_block"}
-NOT_ATTEMPTED = {"planned_unexecuted", "not_attempted"}
+CENSORED = {"pagination_incomplete", "result_cap_reached"}
+NOT_ATTEMPTED = {"planned_unexecuted", "not_attempted", "not_attempted_after_provider_block"}
 STATUSES = OK | FAILED | CENSORED | NOT_ATTEMPTED
 SHA = re.compile(r"[0-9a-f]{64}")
 
@@ -82,7 +82,7 @@ def evaluate(tasks: list[dict], events: list[dict]) -> tuple[dict, list[dict], l
         state = event["status"] if event else "planned_unexecuted"
         summary_counts[state] += 1
         # A valid first page does not prove that search pagination is exhausted.
-        incomplete = event and state in OK and event.get("pages_exhausted") is not True
+        incomplete = event and state == "index_search_success" and event.get("pages_exhausted") is not True
         if state not in OK or incomplete:
             pending.append({**task, "resume_status": state,
                             "retry_policy": "manual-review-before-retrying" if state in FAILED
@@ -100,6 +100,7 @@ def evaluate(tasks: list[dict], events: list[dict]) -> tuple[dict, list[dict], l
         "successful_acquisition_events": sum(counts[x] for x in OK),
         "blocked_or_error_events": sum(counts[x] for x in FAILED),
         "censored_events": sum(counts[x] for x in CENSORED),
+        "tasks_marked_not_attempted_after_provider_block": counts["not_attempted_after_provider_block"],
         "latest_task_states": dict(sorted(summary_counts.items())),
         "pending_or_censored_tasks": len(pending),
         "complete_tasks_with_exhausted_pagination": len(manifests) - len(pending),
