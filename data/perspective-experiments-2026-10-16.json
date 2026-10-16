@@ -156,7 +156,10 @@
       "gate": "Treat missingness as nonrandom possible; no assumed future sticker.",
       "stop": "Stop if purported erasure resistance disappears on complete A-I class withholding.",
       "depends_on": [],
-      "status": "queued"
+      "status": "active",
+      "progress_report": "docs/conjecture-lab/2026-10-16-px08-erasure-bound.md",
+      "progress_note": "Exact minimal H108+81/27 binary-sector erasure grammar retains 2^42 completions, with 27 unknown body and 15 unknown tail sites; original redundancy/consumer operation unresolved.",
+      "last_updated": "2026-10-16"
     },
     {
       "id": "PX-09",
@@ -232,7 +235,10 @@
       "gate": "Do not grant historical players modern repo data or post-release archives.",
       "stop": "Stop when each walkthrough identifies exact missing historical cue or demonstrates a complete conditional path.",
       "depends_on": [],
-      "status": "queued"
+      "status": "active",
+      "progress_report": "docs/conjecture-lab/2026-10-16-px12-expected-player-paths.md",
+      "progress_note": "Historical one-owner, pooled background, conditional foreground and null walkthroughs documented; independently fixed foreground receiving operation remains missing.",
+      "last_updated": "2026-10-16"
     },
     {
       "id": "PX-13",
@@ -308,7 +314,10 @@
       "gate": "Never interpret derived machine states as print-production measurements.",
       "stop": "Stop after explicit falsifiable signatures for at least three pipelines and exact data-limited result.",
       "depends_on": [],
-      "status": "queued"
+      "status": "active",
+      "progress_report": "docs/conjecture-lab/2026-10-16-px16-production-causal-fingerprint.md",
+      "progress_note": "Completed first bounded deterministic-address and print-history nonidentifiability pilot; original print-job constraint remains outstanding.",
+      "last_updated": "2026-10-16"
     },
     {
       "id": "PX-17",
@@ -407,7 +416,10 @@
         "PX-16",
         "PX-17"
       ],
-      "status": "queued"
+      "status": "active",
+      "progress_report": "docs/conjecture-lab/2026-10-16-px16-production-causal-fingerprint.md",
+      "progress_note": "Constructed rival preprint/on-demand/shuffled-packout DAGs, observational-equivalence proof and independent source triggers; still needs authentic print-layer or packout records.",
+      "last_updated": "2026-10-16"
     },
     {
       "id": "PX-C2",
@@ -545,7 +557,10 @@
         "PX-C4",
         "PX-C5"
       ],
-      "status": "queued"
+      "status": "active",
+      "progress_report": "docs/conjecture-lab/2026-10-16-pxm1-causal-explanation-frontier.md",
+      "progress_note": "Proved broad message/structure/interaction/null histories observationally nonidentifiable under unrestricted hidden choices; source-conditioned discriminators remain to execute.",
+      "last_updated": "2026-10-16"
     }
   ]
 }
