@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "scripts/external_evidence/visual_index.py"
+      - "scripts/external_evidence/visual_region_probe.py"
       - "scripts/external_evidence/discover_html_images.py"
       - "scripts/external_evidence/fetch_visual_references.py"
       - "scripts/external_evidence/fetch_html_images.py"
@@ -22,6 +23,7 @@ on:
       - "scripts/external_evidence/build_visual_review_gallery.py"
       - "scripts/external_evidence/audit_search_attempts.py"
       - "tests/test_ce_visual_provenance.py"
+      - "tests/test_ce_sticker_region_pilot.py"
       - "tests/test_ce_visual_review_gallery.py"
       - "tests/test_ce_search_attempt_ledger.py"
       - "tests/test_ce_html_image_discovery.py"
@@ -37,6 +39,7 @@ on:
       - "tests/test_ce_public_split_sale_leads.py"
       - "tests/test_ce_oct2026_auction_lead.py"
       - "data/reference/inside-ce-visual-sources.json"
+      - "data/reference/inside-ce-sticker-region-pilot-rois.csv"
       - "data/reference/inside-ce-archived-public-galleries.json"
       - "data/reference/inside-ce-public-reddit-cross-community-queries.json"
       - "data/reference/inside-ce-public-archived-resale-posts.json"
@@ -113,6 +116,11 @@ on:
         required: true
         default: "500"
         type: string
+      run_region_pilot:
+        description: "Opt-in bounded local sticker-paper patch search, no OCR or evidence promotion"
+        required: true
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -128,7 +136,7 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
       - run: python -m unittest discover -s tests -p 'test_ce_*py' -v
-      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/build_visual_review_gallery.py scripts/external_evidence/audit_search_attempts.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py scripts/external_evidence/audit_historic_ebay_ce_sales.py scripts/external_evidence/probe_ce_ebay_wayback.py scripts/external_evidence/probe_ce_ebay_cdx.py scripts/external_evidence/audit_public_ce_thread_claims.py scripts/external_evidence/audit_public_ce_split_sale_leads.py scripts/external_evidence/audit_public_ce_october_auction.py
+      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/visual_region_probe.py scripts/external_evidence/build_visual_review_gallery.py scripts/external_evidence/audit_search_attempts.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py scripts/external_evidence/audit_historic_ebay_ce_sales.py scripts/external_evidence/probe_ce_ebay_wayback.py scripts/external_evidence/probe_ce_ebay_cdx.py scripts/external_evidence/audit_public_ce_thread_claims.py scripts/external_evidence/audit_public_ce_split_sale_leads.py scripts/external_evidence/audit_public_ce_october_auction.py
       - name: Index all canonical original sticker photographs and validate source SHA256
         run: |
           mkdir -p /tmp/ce-empty-candidate-set
@@ -245,14 +253,26 @@ jobs:
           python scripts/external_evidence/visual_index.py \
             --candidates evidence-work --max-files "$MAX_IMAGES" \
             --output visual-evidence-work
+      - name: Optional pilot of tiny sticker-paper region hypotheses
+        if: inputs.run_region_pilot
+        run: |
+          python scripts/external_evidence/visual_region_probe.py \
+            --candidate-index visual-evidence-work/candidate-index.json \
+            --candidates evidence-work \
+            --max-files 48 \
+            --max-windows 1600 \
+            --output visual-evidence-work/region-suggestions.json
       - name: Generate offline source-diverse visual review gallery
         run: |
-          python scripts/external_evidence/build_visual_review_gallery.py \
-            --index visual-evidence-work/candidate-index.json \
-            --matches visual-evidence-work/visual-matches.json \
-            --candidate-root evidence-work \
-            --output visual-evidence-work/review-gallery.html \
-            --max-items 48
+          args=(--index visual-evidence-work/candidate-index.json
+            --matches visual-evidence-work/visual-matches.json
+            --candidate-root evidence-work
+            --output visual-evidence-work/review-gallery.html
+            --max-items 48)
+          if [[ -f visual-evidence-work/region-suggestions.json ]]; then
+            args+=(--regions visual-evidence-work/region-suggestions.json)
+          fi
+          python scripts/external_evidence/build_visual_review_gallery.py "${args[@]}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

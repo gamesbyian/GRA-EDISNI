@@ -78,6 +78,33 @@ class GalleryTests(unittest.TestCase):
             self.assertEqual(len(report["unavailable_or_unsafe_thumbnails"]), 1)
             self.assertIn("unavailable or unsafe", output)
 
+    def test_review_gallery_embeds_bounded_unverified_region_crops(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            Image.new("RGB",(250,180),"gray").save(root/"collector.jpg")
+            index={"candidates":[{"id":"photo","path":"collector.jpg",
+                                  "source_kind":"public-owner",
+                                  "source_url":"https://example.org/owner"}]}
+            regions={"new_confirmed_stickers":0,"candidates":[
+              {"candidate_id":"photo","suggestions":[
+                {"bbox_xyxy_original_pixels":[25,25,120,135],
+                 "reference_id":"sticker-037","hash_distance_sum":10,
+                 "new_sticker_confirmed":False},
+                {"bbox_xyxy_original_pixels":[0,0,99999,99999],
+                 "reference_id":"sticker-999","hash_distance_sum":0,
+                 "new_sticker_confirmed":False}]}]}
+            output,report=render(index,{"matches":[]},root,regions=regions)
+            self.assertEqual(report["region_crop_previews_embedded"],1)
+            self.assertEqual(len(report["invalid_region_preview_records"]),1)
+            self.assertIn("Suggested image regions (unverified)",output)
+            self.assertIn("NOT a reading of the candidate photograph",output)
+            self.assertIn("sticker-037",output)
+            self.assertEqual(output.count('src="data:image/jpeg;base64,'),2)
+            self.assertNotIn("sticker-999",output)
+            with self.assertRaisesRegex(ValueError,"must not claim"):
+                render(index,{"matches":[]},root,regions={
+                    **regions,"new_confirmed_stickers":1})
+
     def test_source_link_scheme_and_login_rejected(self):
         self.assertEqual(original_link("http://example.org/"), "")
         self.assertEqual(original_link("https://user:pw@example.org/p"), "")
