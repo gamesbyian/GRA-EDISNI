@@ -5,6 +5,15 @@ on:
     paths:
       - "scripts/audit_source_native_consumer_affordances.py"
       - "scripts/audit_classword_lever_consumer.py"
+      - "scripts/conjecture_lab_steam_password_direct.py"
+      - "scripts/conjecture_lab_q4_roles.py"
+      - "scripts/conjecture_lab_native_q4_receiver.py"
+      - "scripts/conjecture_lab_native_q4_base27.py"
+      - "scripts/conjecture_lab_q4_tile_band.py"
+      - "scripts/conjecture_lab_url_digits_q4_depth.py"
+      - "scripts/conjecture_lab_q4_dictionary_null.py"
+      - "artifacts/background-tile-evidence-masters/**"
+      - "data/printer-reference/pc-ps4-acorn-order.txt"
       - "scripts/conjecture_lab_128_output_consumer.py"
       - "scripts/conjecture_lab_534brn_capture_type_gate.py"
       - "data/534brn-canonical-partial-evidence-2026-10-08.json"
@@ -28,7 +37,7 @@ concurrency:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -42,6 +51,31 @@ jobs:
         run: python scripts/conjecture_lab_128_output_consumer.py > /tmp/128-output-receiver-audit.json
       - name: Verify independent JPEG erasure-type and XMP metadata gates
         run: python scripts/conjecture_lab_534brn_capture_type_gate.py > /tmp/534brn-capture-erasure-type-audit.json
+      - name: Install evidence image reader
+        run: python -m pip install --disable-pip-version-check Pillow==11.3.0
+      - name: Verify speculative Q4 receiving-artifact controls
+        run: |
+          python scripts/conjecture_lab_steam_password_direct.py > /tmp/steam-direct-control.txt
+          python scripts/conjecture_lab_q4_roles.py > /tmp/q4-comparison.txt
+          python scripts/conjecture_lab_native_q4_receiver.py > /tmp/native-q4-receiver.txt
+          python scripts/conjecture_lab_native_q4_base27.py --out-json /tmp/native-q4-mask-bank.json > /tmp/native-q4-base27.txt
+          python scripts/conjecture_lab_native_q4_receiver.py --allow-primary-dots > /tmp/native-q4-permissive.txt
+          python scripts/conjecture_lab_native_q4_base27.py --allow-primary-dots > /tmp/native-q4-base27-permissive.txt
+          python scripts/conjecture_lab_q4_tile_band.py --out-json /tmp/native-q4-tile-band.json > /tmp/native-q4-tile-band.txt
+          python scripts/conjecture_lab_url_digits_q4_depth.py > /tmp/native-q4-url-depth.txt
+          cat /tmp/native-q4-receiver.txt
+          cat /tmp/native-q4-base27.txt
+          cat /tmp/native-q4-tile-band.txt
+      - name: Preserve speculative A-I/Q4 3x3 mask family
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-q4-binary-mask-bank
+          path: /tmp/native-q4-mask-bank.json
+      - name: Preserve masked-tile Q4 class-shuffle control
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-q4-tile-band-null
+          path: /tmp/native-q4-tile-band.json
       - name: Show consumer audit summary
         run: |
           python -c 'import json; a=json.load(open("/tmp/source-consumer-gates.json")); print("sources:",a["artifact_total"],"new CE receivers:",a["verified_new_ce_value_receivers"],"type-compatible bunker direct placements:",a["known_lever_direct_replay_type_check"]["type_compatible_14_command_direct_placements"])'
