@@ -182,6 +182,7 @@ class PublicBlueskyTriageTests(unittest.TestCase):
         self.assertEqual(media_hits[0]["image_previews"][0]["alt"],
                          "Sticker /043 on the sealed box")
         self.assertFalse(media_hits[0]["original_image_retrieved"])
+        self.assertEqual(media_hits[0]["record_image_alts"], [])
         self.assertFalse(media_hits[0]["sticker_verified"])
         self.assertEqual(media_hits[0]["new_confirmed_stickers"], 0)
 
