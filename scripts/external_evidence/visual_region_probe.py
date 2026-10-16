@@ -308,6 +308,29 @@ def scan(image: Image.Image, references: list[dict], *, max_windows: int = 1600,
     return chosen, coverage
 
 
+def diverse_candidates(items: list[dict], max_files: int) -> list[dict]:
+    """Round-robin original source groups, not alphabetical media file paths.
+
+    A large batch of files from one early seller must not consume every scan
+    slot while an independent collector's image never gets examined.
+    """
+    if not 1 <= max_files <= 200:
+        raise ValueError("max_files must be 1..200")
+    groups = {}
+    for item in items:
+        key = str(item.get("source_kind") or item.get("source_url") or "unknown-source")
+        groups.setdefault(key, []).append(item)
+    keys = sorted(groups)
+    chosen = []
+    for depth in range(max(map(len, groups.values()), default=0)):
+        for key in keys:
+            if depth < len(groups[key]):
+                chosen.append(groups[key][depth])
+                if len(chosen) == max_files:
+                    return chosen
+    return chosen
+
+
 def run(index: dict, refs: list[dict], candidates_root: Path,
         *, max_files: int = 48, max_windows: int = 1600,
         max_refine_windows: int = 1200) -> dict:
@@ -318,7 +341,8 @@ def run(index: dict, refs: list[dict], candidates_root: Path,
         raise ValueError("candidate index requires array")
     root = candidates_root.resolve()
     results, errors = [], []
-    for item in source[:max_files]:
+    selection = diverse_candidates(source, max_files)
+    for item in selection:
         ident = item.get("id", "")
         if not isinstance(ident, str) or not ident:
             errors.append({"id": str(ident), "failure": "missing_candidate_id"})
@@ -344,7 +368,8 @@ def run(index: dict, refs: list[dict], candidates_root: Path,
     return {
         "schema_version":1, "method":"review-only-rotated-multiscale-dhash-ahash",
         "reference_variants":len(refs), "candidate_files_available":len(source),
-        "candidate_files_selected":min(max_files,len(source)),
+        "candidate_files_selected":len(selection),
+        "source_groups_selected":len({str(x.get("source_kind") or x.get("source_url") or "unknown-source") for x in selection}),
         "candidate_files_not_scanned_by_cap":max(0,len(source)-max_files),
         "candidate_files_scanned":len(results),
         "errors":errors, "candidates":results,
