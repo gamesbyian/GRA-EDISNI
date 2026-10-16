@@ -96,6 +96,7 @@ class SpecificityChallengeTests(unittest.TestCase):
             self.assertEqual(images[0]["sha256"],digest)
             report=report_negatives(fixture,root,self.refs)
             self.assertEqual(report["negative_controls_scanned"],1)
+            self.assertEqual(report["documented_no_visible_sticker_sources_actually_scanned"],1)
             self.assertEqual(report["new_confirmed_stickers"],0)
             self.assertTrue(all(x["scanned_negative_images"]==1
                                 for x in report["operating_points"]))
@@ -113,6 +114,7 @@ class SpecificityChallengeTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             result=report_negatives(manifest,Path(temp),self.refs)
         self.assertEqual(result["negative_controls_scanned"],0)
+        self.assertEqual(result["documented_no_visible_sticker_sources_actually_scanned"],0)
         self.assertGreater(result["negative_controls_expected"],0)
         self.assertEqual(len(result["unavailable_or_invalid_source_controls"]),
                          result["negative_controls_expected"])
