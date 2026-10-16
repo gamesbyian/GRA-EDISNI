@@ -14,7 +14,7 @@ A bounded [one-shot GitHub Actions archive query](https://github.com/gamesbyian/
 |---|---|---|---:|---|
 | [playdead.com homepage](https://arquivo.pt/wayback/20190327172702id_/https://playdead.com/) | **2019-03-27 17:27:02** | `dbb585bbb175c3288f1ee53322fc46ee277123a173a1cccfa022cc6b1a36fdeb` | 9,178 | **Full click binding, email field, print output area** |
 | [Original INSIDE game page](https://arquivo.pt/wayback/20180719140951id_/http://playdead.com/games/inside/) | **2018-07-19 14:09:51** | `70e93a066974df4d4dd3f83ab25d48b0ec2598d3e9b4130f69bdcda8a142430c` | 18,795 | Print button bound, **no email field or output area** |
-| [INSIDE page later state](https://arquivo.pt/wayback/20190405002453id_/https://playdead.com/games/inside/) | **2019-04-05 00:24:53** | `49885e820c7e3e9a6faed8b995b327dc5ce9087e4e38c67bc0246c375e227b034aa591` | 18,856 | Same missing elements, script URL migrated HTTP→HTTPS |
+| [INSIDE page later state](https://arquivo.pt/wayback/20190405002453id_/https://playdead.com/games/inside/) | **2019-04-05 00:24:53** | `49885e820c7e5baeb995b327dc5ce9087e4e38c67bc0246c375e227b034aa591` | 18,856 | Same missing elements, script URL migrated HTTP→HTTPS |
 | [`/inside/` redirect](https://arquivo.pt/wayback/20251009104855id_/https://playdead.com/inside/) | **2025-10-09** | `590a6fa8f40b371027cb3c8b70be6dcf9d4f46dda6cb9b5ead394d13780f4f4a` | 561 | Modern redirect only; **do not use as historical source** |
 
 This direct byte-level source-capture record is pinned in [the Experiment 484 fixture](../data/experiment-484-playdead-original-page-html.json). No full third-party HTML is redistributed in this repository; source URLs, SHA-256 and precise DOM facts are durable.
