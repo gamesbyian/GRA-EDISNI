@@ -146,6 +146,27 @@ class BlueskyRecallTests(unittest.TestCase):
         self.assertEqual(m.public_image_url("https://cdn.bsky.app@evil.example/a"), "")
         self.assertEqual(m.public_image_url("https://[broken"), "")
 
+    def test_nested_record_with_media_retains_original_alt_without_view(self):
+        post = {
+            "uri": m.GOLD_URI,
+            "author": {"handle": "collector.bsky.social"},
+            "record": {
+                "text": "Unboxing photos",
+                "embed": {
+                    "$type": "app.bsky.embed.recordWithMedia",
+                    "media": {"$type": "app.bsky.embed.images",
+                              "images": [{"alt": "INSIDE CE slash mark 043",
+                                          "image": {"ref": {"$link": "bafya"}}}]},
+                },
+            },
+        }
+        result = m.extract_post(post)["media_metadata"]
+        self.assertEqual(result["record_declared_image_count"], 1)
+        self.assertEqual(result["record_image_alts"], ["INSIDE CE slash mark 043"])
+        self.assertEqual(result["public_view_image_count"], 0)
+        self.assertTrue(result["record_media_without_view_image_urls"])
+        self.assertFalse(result["original_media_downloaded"])
+
     def test_missing_dates_and_undecodable_search_dates_do_not_invent_outlier(self):
         task = m.plan()[1]
         self.assertFalse(m.author_date_outside_filter({"created_at": None}, task))
