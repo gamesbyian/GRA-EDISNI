@@ -2,6 +2,8 @@
 
 **Date:** 16 October 2026. **Mode:** VALIDATE for byte-authenticated preserved client-side code; DEVELOP for any conclusion about lost server-side behavior or a possible CE continuation. **Inputs:** existing historical web archives only, **no sticker searches or owner contact**. This supersedes the previous *client-byte-unavailable* statement in [Experiment 480](../experiment-480-original-print-transport.md) without supplying the missing PHP/server response.
 
+**Supersession note, Experiment 484:** The actual 2019 homepage `onclick="printCheck()"` call site, input field and print target have **now been recovered in original archived HTML**. The statement below that *the JavaScript bundle itself does not contain the call site* remains true; the separate page source fills that gap. See [Experiment 484](experiment-484-playdead-original-page-html.md).
+
 ## Recovery, as actually performed
 
 The [4 June 2018 Steam witness](https://steamcommunity.com/app/304430/discussions/0/359543951720753445?ctp=53) explicitly identified `http://www.playdead.com/js/dist.js` and quoted a success callback. The project already knew that report. This experiment directly recovered byte-bearing archive sources, rather than extrapolating the protocol from those comments.

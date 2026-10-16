@@ -1,5 +1,12 @@
 # Current Research State
 
+## 16 October 2026: original Playdead page click wiring recovered (Experiment 484)
+
+The true **27 March 2019 archived Playdead homepage HTML** contains the inline `onclick="printCheck()"` button, real `#mce-EMAIL` field, `#print-content` print area, and script path loading the byte-recovered 2018/2019 client from Experiment 483. Its *ordinary Mailchimp form* and the *separate Playdead printer action* are distinct workflows sharing one visible field. The 19 July 2018 and 5 April 2019 `/games/inside/` pages carry the same print-button call and JS URL but **lack** the field and content area. They do not demonstrate a working successful alternate server response; the client-submitted pathname is plausible ordinary routing context and only a hypothesis about any server branching.
+
+The archive's requested 2018 homepage capture actually **returned 27 March 2019**, while `/inside/` returned **2025** redirect HTML. All source claims use the archive's *actual returned timestamps*, not the requested dates. See [Experiment 484](experiment-484-playdead-original-page-html.md) and fixed [source hashes/DOM facts](../data/experiment-484-playdead-original-page-html.json). Neither original PHP nor accepted server response/CE input has been recovered; physical sticker data is unchanged.
+
+
 ## 16 October 2026 source recovered: authentic 2018 Playdead printer client (Experiment 483)
 
 **Original 2018/2019 `playdead.com/js/dist.js` client bytes are recovered and independently hash-matched**, replacing the outdated 8 October statement that no original JavaScript bundle exists. Two raw archive captures are identical (723,075 bytes; SHA-256 `892e795393531f93bb485c8382b52a13d35423b7251c7399d5a7ef5c7b912587`). Source map and executable differ; the executable establishes a three-request accepted path, exact `in,id,check,url` check fields, persistent browser ID and `window.location.pathname` as a possible server-side conditioning input. See [Experiment 483](experiment-483-original-printer-client-runtime.md) and [underlying 8 October transport audit](experiment-480-original-print-transport.md). **Original PHP, actual accepted-response HTML/HAR and CE-specific consumer remain unverified.** Foreground code and 84/66 physical corpus are unchanged. Any general claim that the contemporary printer client is missing is now superseded; server source/replies remain the proper retrieval target.
