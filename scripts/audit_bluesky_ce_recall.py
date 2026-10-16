@@ -14,6 +14,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from urllib.parse import urlsplit
 
 # Both hosts are documented Bluesky AppView entrypoints. The cached public
 # hostname returned 403 for both native search versions on 2026-10-16;
@@ -84,6 +85,77 @@ def fetch(endpoint, params, *, api_host="primary"):
             raise ValueError("Oversized response")
         return json.loads(content.decode("utf-8"))
 
+def public_image_url(value):
+    """Retain only unchanged public Bluesky CDN URLs; never fetch media here."""
+    if not isinstance(value, str):
+        return ""
+    try:
+        u = urlsplit(value)
+        if u.scheme != "https" or u.hostname != "cdn.bsky.app" or u.username or u.password:
+            return ""
+    except ValueError:
+        return ""
+    return value
+
+
+def media_metadata(x, record):
+    """Keep source media cues that text-only search snapshots used to drop."""
+    view = x.get("embed") if isinstance(x.get("embed"), dict) else {}
+    rec = record.get("embed") if isinstance(record.get("embed"), dict) else {}
+    nested = view.get("media") if isinstance(view.get("media"), dict) else view
+    visual_images = nested.get("images")
+    if not isinstance(visual_images, list):
+        visual_images = []
+    images = []
+    for item in visual_images[:12]:
+        if not isinstance(item, dict):
+            continue
+        images.append({
+            "thumbnail": public_image_url(item.get("thumb")),
+            "fullsize": public_image_url(item.get("fullsize")),
+            "alt": str(item.get("alt") or "")[:450],
+        })
+    declared = rec.get("images")
+    if not isinstance(declared, list):
+        declared = []
+    external = nested.get("external") if isinstance(nested.get("external"), dict) else (
+        rec.get("external") if isinstance(rec.get("external"), dict) else {})
+    uri = external.get("uri", "")
+    if not isinstance(uri, str):
+        uri = ""
+    try:
+        if urlsplit(uri).scheme not in ("https", "http"):
+            uri = ""
+    except ValueError:
+        uri = ""
+    return {
+        "record_embed_type": rec.get("$type", ""),
+        "view_embed_type": view.get("$type", ""),
+        "record_declared_image_count": len(declared),
+        "public_view_image_count": len(images),
+        "image_previews": images,
+        "external_public_url": uri[:1000],
+        "record_media_without_view_image_urls": bool(declared) and not any(
+            img["fullsize"] or img["thumbnail"] for img in images),
+        "media_image_urls_preserved": sum(bool(img["fullsize"] or img["thumbnail"])
+                                          for img in images),
+        "original_media_downloaded": False,
+        "evidence_class": "public_search_metadata_only_not_a_sticker_photo",
+    }
+
+
+def author_date_outside_filter(post, task):
+    """Report calendar mismatch; do not assume Bluesky filters author's createdAt."""
+    from datetime import datetime
+    try:
+        date = datetime.fromisoformat(str(post.get("created_at", "")).replace("Z", "+00:00"))
+        since = datetime.fromisoformat(task["params"]["since"].replace("Z", "+00:00"))
+        until = datetime.fromisoformat(task["params"]["until"].replace("Z", "+00:00"))
+        return date < since or date >= until
+    except (KeyError, ValueError, TypeError):
+        return False
+
+
 def extract_post(x):
     if not isinstance(x, dict):
         return None
@@ -97,7 +169,9 @@ def extract_post(x):
     return {
         "uri": uri, "handle": author.get("handle"),
         "created_at": record.get("createdAt"),
+        "indexed_at": x.get("indexedAt"),
         "text_excerpt": body[:450] if isinstance(body, str) else "",
+        "media_metadata": media_metadata(x, record),
         "target": uri == GOLD_URI,
     }
 
@@ -133,6 +207,10 @@ def summarize(index, task, response=None, error=None):
         "hits_total_reported": response.get("hitsTotal"),
         "cursor_available": bool(response.get("cursor")),
         "gold_found": bool(positions), "gold_ranks": positions,
+        "posts_with_view_image_metadata": sum(bool(p["media_metadata"]["public_view_image_count"]) for p in parsed),
+        "posts_with_record_declared_images_but_no_view_urls": sum(bool(p["media_metadata"]["record_media_without_view_image_urls"]) for p in parsed),
+        "author_created_at_outside_requested_window": sum(author_date_outside_filter(p, task) for p in parsed),
+        "time_filter_semantics": "reported_author_timestamp_disagreement_only_not_provider_falsification",
         "posts": parsed,
     })
     return result

@@ -97,6 +97,61 @@ class BlueskyRecallTests(unittest.TestCase):
         self.assertEqual(sum(x.endswith("searchPostsV2") for x in seen), 1)
         self.assertEqual(sum(x.endswith("searchPosts") for x in seen), 8)
 
+    def test_search_preserves_public_image_alt_indexed_at_and_outlier_date(self):
+        entry = {
+            "uri": m.GOLD_URI,
+            "indexedAt": "2026-09-01T15:00:00.000Z",
+            "author": {"handle": "sample.bsky.social"},
+            "record": {
+                "createdAt": "2016-07-28T01:02:03.000Z",
+                "text": "The photo is attached",
+                "embed": {"$type": "app.bsky.embed.images",
+                          "images": [{"alt": "INSIDE numbered label",
+                                      "image": {"ref": {"$link": "bafy123"}}}]}
+            },
+            "embed": {"$type": "app.bsky.embed.images#view",
+                      "images": [{
+                        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:sample/file@jpeg",
+                        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:sample/file@jpeg",
+                        "alt": "a numbered sticker on a Collector's Edition"
+                      }]}
+        }
+        result = m.summarize(1, m.plan()[1], {"posts": [entry]})
+        self.assertEqual(result["posts_with_view_image_metadata"], 1)
+        self.assertEqual(result["author_created_at_outside_requested_window"], 1)
+        got = result["posts"][0]
+        self.assertEqual(got["indexed_at"], "2026-09-01T15:00:00.000Z")
+        media = got["media_metadata"]
+        self.assertEqual(media["record_declared_image_count"], 1)
+        self.assertEqual(media["public_view_image_count"], 1)
+        self.assertIn("Collector", media["image_previews"][0]["alt"])
+        self.assertTrue(media["image_previews"][0]["fullsize"].startswith("https://cdn.bsky.app/"))
+        self.assertFalse(media["original_media_downloaded"])
+        self.assertEqual(media["evidence_class"], "public_search_metadata_only_not_a_sticker_photo")
+
+    def test_media_declared_but_missing_view_is_explicit_and_no_arbitrary_urls(self):
+        post = {"uri": m.GOLD_URI, "author": {"handle": "sample.bsky.social"},
+                "record": {"text": "", "embed": {
+                    "$type": "app.bsky.embed.images",
+                    "images": [{"alt": "number", "image": {}}]}},
+                "embed": {"images": [{
+                    "thumb": "https://cdn.bsky.app.attacker.example/image.jpg",
+                    "fullsize": "http://cdn.bsky.app/image.jpg",
+                    "alt": "photo"}]}}
+        result = m.extract_post(post)
+        meta = result["media_metadata"]
+        self.assertTrue(meta["record_media_without_view_image_urls"])
+        self.assertEqual(meta["media_image_urls_preserved"], 0)
+        self.assertEqual(m.public_image_url("https://cdn.bsky.app.attacker.example/a"), "")
+        self.assertEqual(m.public_image_url("https://cdn.bsky.app@evil.example/a"), "")
+        self.assertEqual(m.public_image_url("https://[broken"), "")
+
+    def test_missing_dates_and_undecodable_search_dates_do_not_invent_outlier(self):
+        task = m.plan()[1]
+        self.assertFalse(m.author_date_outside_filter({"created_at": None}, task))
+        self.assertFalse(m.author_date_outside_filter({"created_at": "unknown"}, task))
+        self.assertFalse(m.author_date_outside_filter({"created_at": "2026-09-01T00:00:00Z"}, task))
+
     def test_matching_exact_at_uri_not_post_id_only(self):
         fake = {"uri": "at://did:plc:other/app.bsky.feed.post/3mta6ecjbvk2i",
                 "author": {}, "record": {"text": "same ID different identity"}}
