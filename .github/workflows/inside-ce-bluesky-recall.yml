@@ -43,7 +43,7 @@ jobs:
           python scripts/audit_bluesky_ce_recall.py \
             --output research-output/bluesky-recall-offline-plan.json
       - name: One bounded live PR known-positive benchmark (17 GET maximum)
-        if: ${{ github.event_name == 'pull_request' }}
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 288 }}
         run: |
           python scripts/audit_bluesky_ce_recall.py --execute \
             --max-requests 17 --delay-seconds 1 \
