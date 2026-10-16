@@ -32,6 +32,22 @@ class WikiRevisionAuditTests(unittest.TestCase):
         self.assertTrue({"short_lived_added_lines", "new_url"} <= types2)
         self.assertTrue({"added_html_comment", "invisible_or_directional_unicode"} <= types4)
 
+    def test_recycled_ios_printer_markers_resolve_to_earlier_letters(self):
+        # Post-hoc source-forensics check, not a predeclared ARG detector.
+        # Historical original: oldwiki Game Detectives Inside_ARG oldid=15953.
+        # Removed by revision 18924 on 2019-06-03.
+        plaintext = "MULTIPLEPROBESDISPATCHED"
+        current_and_referenced = [
+            (7, 203), (9, 206), (13, 208), (16, 205),
+            (17, 214), (18, 206), (20, 204), (23, 208), (24, 215),
+        ]
+        self.assertEqual(len(plaintext), 24)
+        self.assertEqual(len(current_and_referenced), 9)
+        for current, label in current_and_referenced:
+            previous = label - 200
+            self.assertLess(previous, current)
+            self.assertEqual(plaintext[current - 1], plaintext[previous - 1])
+
     def test_no_fabricated_negative(self):
         dataset = {"site": "example.invalid", "title": "Neutral", "revisions": [
             {"revid": 1, "timestamp": "2019-01-01T00:00:00Z", "content": "Hello"},
