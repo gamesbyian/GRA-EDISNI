@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-16",
+  "status": "retrieval queue; no complete live API history corpus captured",
+  "targets": [
+    {
+      "id": "gd_inside",
+      "tier": "P0",
+      "endpoint": "https://oldwiki.gamedetectives.net/api.php",
+      "title": "Inside_ARG",
+      "history_url": "https://oldwiki.gamedetectives.net/index.php?title=Inside_ARG&action=history",
+      "history_metadata_verified": true,
+      "revision_bodies_complete": false,
+      "known_positive_edit_ids": [
+        17942,
+        17971
+      ]
+    },
+    {
+      "id": "fandom_inside_arg",
+      "tier": "P0",
+      "endpoint": "https://inside.fandom.com/api.php",
+      "title": "INSIDE_ARG",
+      "history_url": "https://inside.fandom.com/wiki/INSIDE_ARG?action=history",
+      "history_metadata_verified": false,
+      "revision_bodies_complete": false
+    },
+    {
+      "id": "fandom_main",
+      "tier": "P0",
+      "endpoint": "https://inside.fandom.com/api.php",
+      "title": "Inside_Wiki",
+      "history_url": "https://inside.fandom.com/wiki/Inside_Wiki?action=history",
+      "history_metadata_verified": false,
+      "revision_bodies_complete": false
+    },
+    {
+      "id": "wikipedia_inside",
+      "tier": "P1",
+      "endpoint": "https://en.wikipedia.org/w/api.php",
+      "title": "Inside (video game)",
+      "history_url": "https://en.wikipedia.org/w/index.php?title=Inside_(video_game)&action=history",
+      "history_metadata_verified": false,
+      "revision_bodies_complete": false
+    },
+    {
+      "id": "wikipedia_playdead",
+      "tier": "P1",
+      "endpoint": "https://en.wikipedia.org/w/api.php",
+      "title": "Playdead",
+      "history_url": "https://en.wikipedia.org/w/index.php?title=Playdead&action=history",
+      "history_metadata_verified": false,
+      "revision_bodies_complete": false
+    },
+    {
+      "id": "pcgamingwiki_inside",
+      "tier": "P1",
+      "endpoint": "https://www.pcgamingwiki.com/w/api.php",
+      "title": "Inside",
+      "history_url": "https://www.pcgamingwiki.com/wiki/Inside?action=history",
+      "history_metadata_verified": false,
+      "revision_bodies_complete": false
+    },
+    {
+      "id": "wikipedia_limbo_control",
+      "tier": "control",
+      "endpoint": "https://en.wikipedia.org/w/api.php",
+      "title": "Limbo (video game)",
+      "history_url": "https://en.wikipedia.org/w/index.php?title=Limbo_(video_game)&action=history",
+      "history_metadata_verified": false,
+      "revision_bodies_complete": false
+    }
+  ]
+}
