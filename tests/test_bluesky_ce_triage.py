@@ -196,6 +196,25 @@ class PublicBlueskyTriageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             triage.build_media_review_queue({"state": "planned_unexecuted", "results": []})
 
+    def test_malformed_search_is_failure_and_blocked_followers_unattempted(self):
+        report = {"state": "executed_bounded", "results": [
+            {"kind": "blind_discovery", "status": "ok", "posts": [POST]},
+            {"kind": "blind_discovery", "status": "bad_shape", "error": "no posts array"},
+            {"kind": "blind_discovery", "status": "error", "http_status": 503},
+            {"kind": "blind_discovery", "status": "skipped_after_endpoint_access_failure"},
+            {"kind": "blind_discovery", "status": "not_attempted"},
+        ]}
+        hits, counts = triage.build_queue(report)
+        self.assertEqual(len(hits), 1)
+        self.assertEqual(counts["searched_queries_with_valid_response"], 1)
+        self.assertEqual(counts["failed_queries"], 2)
+        self.assertEqual(counts["unattempted_queries"], 2)
+        self.assertEqual(counts["query_status_counts"]["bad_shape"], 1)
+        media, media_counts = triage.build_media_review_queue(report)
+        self.assertEqual(media, [])
+        self.assertEqual(media_counts["query_status_counts"]["bad_shape"], 1)
+        self.assertEqual(media_counts["query_status_counts"]["not_attempted"], 1)
+
     def test_source_ids_never_merged_by_similar_text(self):
         other = dict(POST, uri="at://did:plc:different/app.bsky.feed.post/abc123",
                      target=False)
