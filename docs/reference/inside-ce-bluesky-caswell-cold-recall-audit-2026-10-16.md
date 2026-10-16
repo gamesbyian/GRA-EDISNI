@@ -107,7 +107,7 @@ The successful primary-host [run 38867696822](https://github.com/gamesbyian/GRA-
 
 An independent source-text review of all 127 distinct returned posts yielded:
 - **One possible public owner**: Caswell's exact archived post; already forwarded to Raezores.
-- **Five public posts discussing/soliciting the existing ARG**, not new owners: \`straycatalyst.bsky.social\`, \`molonara.bsky.social\`, \`fedorasaurus.bsky.social\`, \`gelatinpangolin.bsky.social\`, and no fifth owner supplied; verify the count against the deterministic classifier below. (**Correction:** the actual archived source corpus contains *four* additional clear ARG posts in this list, not five.)
+- **Four public ARG-discussion/solicitation posts**, not new owners: `straycatalyst.bsky.social`, `molonara.bsky.social`, `fedorasaurus.bsky.social`, and `gelatinpangolin.bsky.social`.
 - A **false-positive lookalike** about *House of 1000 Doors: Evil Inside Collector's Edition*, alongside sports programmes titled *Inside the Huddle*, unrelated collectors' editions and other ordinary uses of "inside".
 
 **Precise reconciled count:** one Caswell potential-owner post, **four** separate puzzle-awareness/solicitation posts, and **122** unrelated, ambiguous or similarly named posts. The raw native artifact contains all 127 for reproducibility; none of the four awareness posts implies a sticker number or independent CE ownership.
