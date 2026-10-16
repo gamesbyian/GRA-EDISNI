@@ -107,7 +107,7 @@ class SearchAttemptAuditTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)
             manifest=root/"plan.jsonl"
-            raw="".join(json.dumps(row)+"\\n" for row in self.tasks)
+            raw="".join(json.dumps(row)+"\n" for row in self.tasks)
             manifest.write_text(raw,encoding="utf-8")
             digest=hashlib.sha256(raw.encode("utf-8")).hexdigest()
             from scripts.external_evidence.audit_search_attempts import main
