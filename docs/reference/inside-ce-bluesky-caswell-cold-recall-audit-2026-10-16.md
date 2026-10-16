@@ -64,3 +64,20 @@ No first-page result can establish full coverage; a source URL delivered by a we
 5. **Do not contact Caswell or any other apparent owners from this pipeline.** Any genuine public lead goes to human source-review with original URL, date, firsthand wording, possible known-case match and *no* inferred sticker symbol or number.
 
 **Initial live observation, superseded by per-endpoint test in the next CI run:** [GitHub Actions run 38863537662](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38863537662) (2026-10-16 06:51 UTC) executed two actual public API GET requests: the exact original-post control **succeeded**, while the first V2 allTime search returned **HTTP 403**. It then stopped under the original broad access gate; therefore no V1 search was performed in that run and no conclusion about native keyword recall follows. The workflow's eight original synthetic checks were seven at this first run, all passing. The access policy and a new per-version regression were subsequently amended to avoid letting a V2 refusal suppress independent V1 tests. Subsequent exact-head CI outputs must be separately recorded; don't silently collapse the two experiments. Bluesky is provisionally promoted from P2 to **P1** because of a demonstrated missed known-positive and its low acquisition cost. Reassess after measured recall and source originality checks.
+
+
+## Second live result: direct source verified; BOTH search versions access-denied
+
+[Exact-head run 38864203210](https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38864203210) on 2026-10-16T06:58:22Z passed **eight deterministic unit tests** and made **three actual GETs**:
+
+1. Direct getPostThread succeeded for the expected AT URI, original handle and date. Original body: **"Do I still need Inside Collector’s edition jelly statue?"** The post creation timestamp is **2026-08-16T21:53:12.962Z**.
+2. The newer searchPostsV2 keyword query (allTime=true) returned HTTP **403**.
+3. The older searchPosts keyword query returned HTTP **403**. Fourteen later planned probes were marked *skipped_after_endpoint_access_failure* and made zero network calls.
+
+**The source itself is now verified. Search absence is not measured.** Neither index returned a successful empty result, and the failure from our public GitHub Actions runner cannot be generalized to logged-in accounts or to the API's state in August.
+
+### New lexical mismatch, distinct from API access
+
+The literal body uses **U+2019 right curly apostrophe** (Collector’s). Our principal query contains **U+0027 ASCII straight apostrophe** (collector's). After only Unicode casefolding, a naive substring matcher does not find the query. Replacing curly apostrophes with ASCII apostrophes first yields an exact match. That is a real local-text-matching hazard, but **not** evidence that Bluesky's actual search index discriminates these characters, since our queries were refused. Treat the curly-quote variant as a retrospective diagnostic, not as a successful blind search.
+
+The program still requires original-source/CE-object reconciliation and cannot infer that Caswell retains this Huddle, possessed a wrapping sticker, or represents an additional distinct copy. Ian already gave the lead to Raezores.
