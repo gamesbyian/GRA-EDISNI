@@ -48,6 +48,51 @@ class PublicBlueskyTriageTests(unittest.TestCase):
         self.assertTrue(summary["known_positive_found"])
         self.assertEqual(summary["new_confirmed_stickers"], 0)
 
+    def test_actual_source_context_separates_five_arg_posts_and_owner(self):
+        samples = [
+            ("Do I still need Inside Collector’s edition jelly statue?",
+             "possible_owner_claim"),
+            ("Wow, there's some kind of ARG around Playdead's game, Inside. "
+             "The game's Collector's Edition had cipher symbols on stickers",
+             "arg_discussion"),
+            ("If you have the Collector's Edition of Inside and haven't "
+             "thrown away the sticker that sealed the package, help the community",
+             "arg_discussion"),
+            ("ATTENTION ANYONE WITH A COLLECTOR'S EDITION OF PLAYDEAD'S INSIDE! "
+             "HELP SOLVE THE ARG!", "arg_discussion"),
+            ("theres this ARG going on with playdead’s Inside where pieces of "
+             "a code were written on packaging for collectors edition",
+             "arg_discussion"),
+            ("A football podcast called Inside The Huddle", "unrelated_or_unresolved"),
+            ("Inside the huddle: CFL preview today", "unrelated_or_unresolved"),
+            ("I bought the Ecco the Dolphin Collector's Edition",
+             "unrelated_or_unresolved"),
+            ("House of 1000 Doors: Evil Inside Collector's Edition",
+             "unrelated_or_unresolved"),
+            ("", "unrelated_or_unresolved"),
+        ]
+        for body, expected in samples:
+            with self.subTest(body=body):
+                self.assertEqual(triage.classify_ce_context(body), expected)
+
+    def test_topic_gating_removes_false_positives_without_losing_raw_count(self):
+        football = dict(POST, uri="at://did:plc:sport/app.bsky.feed.post/abc123",
+                        handle="sports.bsky.social", target=False,
+                        text_excerpt="Inside The Huddle - Indigenous football news")
+        unrelated = dict(POST, uri="at://did:plc:other/app.bsky.feed.post/def456",
+                         handle="other.bsky.social", target=False,
+                         text_excerpt="I bought a collector edition of something inside a box")
+        report = {"state": "executed_bounded", "results": [
+            {"kind": "blind_discovery", "status": "ok", "version": "v1",
+             "key": "inside_huddle", "posts": [football, unrelated, POST]}]}
+        hits, summary = triage.build_queue(report)
+        self.assertEqual(len(hits), 1)
+        self.assertEqual(hits[0]["uri"], URI)
+        self.assertEqual(summary["unique_public_post_uris"], 3)
+        self.assertEqual(summary["relevant_review_candidates"], 1)
+        self.assertEqual(summary["excluded_from_review_queue"], 2)
+        self.assertTrue(summary["original_unfiltered_api_results_retained"])
+
     def test_reject_unexecuted_and_invalid_public_locator(self):
         with self.assertRaises(ValueError):
             triage.build_queue({"state": "planned_unexecuted", "results": []})
