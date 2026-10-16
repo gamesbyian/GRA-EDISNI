@@ -237,12 +237,13 @@
       "depends_on": [],
       "status": "active",
       "progress_report": "docs/conjecture-lab/2026-10-16-px12-expected-player-paths.md",
-      "progress_note": "Historical one-owner, pooled background, conditional foreground and null walkthroughs documented; independently fixed foreground receiving operation remains missing. Full 73-text-file Terminal41 receiver/source census extended Experiment 478, with all 17 status variants bounded to the known four-scheme family; no CE reader proved. Authentic 2018-2019 Playdead printer client recovered with two-stage validation/content POST but no source-backed CE input; Terminal41 missing-hop uploader attribution corrected to 2023. ",
+      "progress_note": "Historical one-owner, pooled background, conditional foreground and null walkthroughs documented; independently fixed foreground receiving operation remains missing. Full 73-text-file Terminal41 receiver/source census extended Experiment 478, with all 17 status variants bounded to the known four-scheme family; no CE reader proved. Authentic 2018-2019 Playdead printer client recovered with two-stage validation/content POST but no source-backed CE input; Terminal41 missing-hop uploader attribution corrected to 2023.  Original 2019 Playdead homepage call site and 2018 game-page missing-field contrast recovered and dated; server branch remains unverified.",
       "last_updated": "2026-10-16",
       "additional_reports": [
         "docs/conjecture-lab/2026-10-16-terminal41-full-client-receiver-census.md",
         "docs/experiment-483-original-printer-client-runtime.md",
-        "docs/conjecture-lab/2026-10-16-terminal41-original-uploader-gap-audit.md"
+        "docs/conjecture-lab/2026-10-16-terminal41-original-uploader-gap-audit.md",
+        "docs/experiment-484-playdead-original-page-html.md"
       ]
     },
     {
@@ -564,12 +565,13 @@
       ],
       "status": "active",
       "progress_report": "docs/conjecture-lab/2026-10-16-pxm1-causal-explanation-frontier.md",
-      "progress_note": "Proved broad message/structure/interaction/null histories observationally nonidentifiable under unrestricted hidden choices; source-conditioned discriminators remain to execute. Full 73-text-file Terminal41 receiver/source census extended Experiment 478, with all 17 status variants bounded to the known four-scheme family; no CE reader proved. Authentic 2018-2019 Playdead printer client recovered with two-stage validation/content POST but no source-backed CE input; Terminal41 missing-hop uploader attribution corrected to 2023. ",
+      "progress_note": "Proved broad message/structure/interaction/null histories observationally nonidentifiable under unrestricted hidden choices; source-conditioned discriminators remain to execute. Full 73-text-file Terminal41 receiver/source census extended Experiment 478, with all 17 status variants bounded to the known four-scheme family; no CE reader proved. Authentic 2018-2019 Playdead printer client recovered with two-stage validation/content POST but no source-backed CE input; Terminal41 missing-hop uploader attribution corrected to 2023.  Original 2019 Playdead homepage call site and 2018 game-page missing-field contrast recovered and dated; server branch remains unverified.",
       "last_updated": "2026-10-16",
       "additional_reports": [
         "docs/conjecture-lab/2026-10-16-terminal41-full-client-receiver-census.md",
         "docs/experiment-483-original-printer-client-runtime.md",
-        "docs/conjecture-lab/2026-10-16-terminal41-original-uploader-gap-audit.md"
+        "docs/conjecture-lab/2026-10-16-terminal41-original-uploader-gap-audit.md",
+        "docs/experiment-484-playdead-original-page-html.md"
       ]
     }
   ]
