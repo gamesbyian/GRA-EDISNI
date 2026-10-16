@@ -183,8 +183,73 @@ def box_iou(a: list[int], b: list[int]) -> float:
     return intersection/(area_a + area_b - intersection)
 
 
+def refine_windows(first_pass: list[tuple], width: int, height: int,
+                   max_refine_windows: int = 1200) -> tuple[list[tuple[int,int,int,int]], dict]:
+    """Coarse-to-fine second pass around spatially distinct low-distance hints.
+
+    Deliberately reconsiders larger boxes around partial-hit regions: a hash
+    matched against the inner mark can be more competitive than the full paper.
+    It is a bounded proposal generator, not a proof of detector recall.
+    """
+    if not 0 <= max_refine_windows <= 5000:
+        raise ValueError("max_refine_windows must be 0..5000")
+    seeds = []
+    for _, _, _, bbox, _ in first_pass:
+        if any(box_iou(bbox, x) > .55 for x in seeds):
+            continue
+        seeds.append(bbox)
+        if len(seeds) >= 16:
+            break
+    buckets = []
+    for x1,y1,x2,y2 in seeds:
+        cx,cy=(x1+x2)/2,(y1+y2)/2
+        proposals = []
+        for zoom in (0.75,1.0,1.35,1.7,2.0):
+            for aspect in ASPECTS:
+                h=max(MIN_SIDE,round((y2-y1)*zoom))
+                w=max(MIN_SIDE,round(h*aspect))
+                if w>width or h>height:
+                    continue
+                for dy in (-0.25,0.0,0.25):
+                    for dx in (-0.25,0.0,0.25):
+                        bx=min(max(0,round(cx-w/2+dx*w)),width-w)
+                        by=min(max(0,round(cy-h/2+dy*h)),height-h)
+                        proposals.append((bx,by,bx+w,by+h))
+        buckets.append(list(dict.fromkeys(proposals)))
+    total=sum(len(b) for b in buckets)
+    if total <= max_refine_windows:
+        selected=[box for bucket in buckets for box in bucket]
+    else:
+        # Equal opportunities for distinct hint locations and spatially
+        # stratified sampling *inside* each seed's multiscale proposal set.
+        allocated=[0]*len(buckets)
+        remaining=max_refine_windows
+        while remaining:
+            active=[i for i,bucket in enumerate(buckets) if allocated[i]<len(bucket)]
+            if not active:
+                break
+            for i in active:
+                if not remaining:
+                    break
+                allocated[i]+=1
+                remaining-=1
+        selected=[]
+        for bucket,n in zip(buckets,allocated):
+            for i in range(n):
+                selected.append(bucket[min(len(bucket)-1,((2*i+1)*len(bucket))//(2*n))])
+    unique=list(dict.fromkeys(selected))
+    return unique,{
+        "refinement_seeds":len(seeds),
+        "refinement_windows_proposed":total,
+        "refinement_windows_scored":len(unique),
+        "refinement_omitted_at_cap":max(0,total-len(selected)),
+        "refinement_not_exhaustive_when_capped":total>max_refine_windows,
+    }
+
+
 def scan(image: Image.Image, references: list[dict], *, max_windows: int = 1600,
-         max_suggestions: int = 8, long_side: int = PROXY_LONG_SIDE) -> tuple[list[dict], dict]:
+         max_suggestions: int = 8, long_side: int = PROXY_LONG_SIDE,
+         max_refine_windows: int = 1200) -> tuple[list[dict], dict]:
     if not references:
         raise ValueError("no region references")
     if not 1 <= max_suggestions <= 50:
@@ -192,16 +257,27 @@ def scan(image: Image.Image, references: list[dict], *, max_windows: int = 1600,
     proxy = proxy_image(image, long_side=long_side)
     boxes, coverage = select_windows(proxy.width, proxy.height, max_windows)
     possibilities = []
-    for box in boxes:
+    def rank_box(box):
         dh, ah = fingerprint(proxy.crop(box))
         for ref in references:
             d = (dh ^ ref["dhash"]).bit_count()
             h = (ah ^ ref["ahash"]).bit_count()
             score = d+h
-            # Keep a very small local shortlist; across all references,
-            # disagreement and shared marks can produce near-ties.
+            # All accepted low-distance proposals remain review-only.
             if score <= 65:
                 possibilities.append((score, d, h, box, ref))
+    for box in boxes:
+        rank_box(box)
+    possibilities.sort(key=lambda x: (x[0], x[1], x[2], x[3], x[4]["reference_id"]))
+    refined, refine_coverage = refine_windows(
+        possibilities, proxy.width, proxy.height, max_refine_windows)
+    existing=set(boxes)
+    unique_refined=[box for box in refined if box not in existing]
+    for box in unique_refined:
+        rank_box(box)
+    coverage.update(refine_coverage)
+    coverage["refinement_windows_new_after_coarse_overlap"] = len(unique_refined)
+    coverage["total_windows_fingerprinted"] = len(boxes) + len(unique_refined)
     possibilities.sort(key=lambda x: (x[0], x[1], x[2], x[3], x[4]["reference_id"]))
     chosen = []
     oriented_size = ImageOps.exif_transpose(image).size
@@ -233,7 +309,8 @@ def scan(image: Image.Image, references: list[dict], *, max_windows: int = 1600,
 
 
 def run(index: dict, refs: list[dict], candidates_root: Path,
-        *, max_files: int = 48, max_windows: int = 1600) -> dict:
+        *, max_files: int = 48, max_windows: int = 1600,
+        max_refine_windows: int = 1200) -> dict:
     if not 1 <= max_files <= 200:
         raise ValueError("max_files must be 1..200")
     source = index.get("candidates", [])
@@ -256,7 +333,8 @@ def run(index: dict, refs: list[dict], candidates_root: Path,
         try:
             with Image.open(path) as img:
                 img.load()
-                hits, stats = scan(img, refs, max_windows=max_windows)
+                hits, stats = scan(img, refs, max_windows=max_windows,
+                                   max_refine_windows=max_refine_windows)
             results.append({"candidate_id":ident, "source_url":item.get("source_url",""),
                             "source_kind":item.get("source_kind",""),
                             "suggestions":hits, "coverage":stats})
@@ -285,12 +363,14 @@ def main() -> None:
     p.add_argument("--output",type=Path,default=Path("visual-evidence-work/region-suggestions.json"))
     p.add_argument("--max-files",type=int,default=48)
     p.add_argument("--max-windows",type=int,default=1600)
+    p.add_argument("--max-refine-windows",type=int,default=1200)
     args=p.parse_args()
     repo=args.repo_root.resolve()
     manifest=args.roi_manifest if args.roi_manifest.is_absolute() else repo/args.roi_manifest
     refs=load_regions(manifest,repo)
     result=run(json.loads(args.candidate_index.read_text(encoding="utf-8")),
-               refs,args.candidates,max_files=args.max_files,max_windows=args.max_windows)
+               refs,args.candidates,max_files=args.max_files,max_windows=args.max_windows,
+               max_refine_windows=args.max_refine_windows)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print(json.dumps({
