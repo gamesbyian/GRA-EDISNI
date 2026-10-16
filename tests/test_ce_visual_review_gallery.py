@@ -105,6 +105,38 @@ class GalleryTests(unittest.TestCase):
                 render(index,{"matches":[]},root,regions={
                     **regions,"new_confirmed_stickers":1})
 
+    def test_geometry_paper_crops_are_never_identified_as_stickers(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            Image.new("RGB",(160,160),"white").save(root/"photo.jpg")
+            index={"candidates":[{"id":"candidate","path":"photo.jpg",
+                                  "source_kind":"demo","source_url":"https://example.org/photo"}]}
+            geometries={"new_confirmed_stickers":0,"candidates":[{
+                "candidate_id":"candidate","proposals":[
+                    {"bbox_xyxy_original_pixels":[20,30,100,110],
+                     "candidate_type":"bright-rectangle-unverified",
+                     "new_sticker_confirmed":False},
+                    {"bbox_xyxy_original_pixels":[0,0,5000,5000],
+                     "new_sticker_confirmed":False}]}]}
+            html_text,report=render(index,{"matches":[]},root,geometry=geometries)
+            self.assertEqual(report["geometry_crop_previews_embedded"],1)
+            self.assertEqual(len(report["invalid_geometry_preview_records"]),1)
+            self.assertIn("the geometric method does NOT identify stickers",html_text)
+            self.assertEqual(html_text.count('src="data:image/jpeg;base64,'),2)
+            self.assertEqual(report["new_confirmed_stickers"],0)
+            with self.assertRaisesRegex(ValueError,"must not establish"):
+                render(index,{"matches":[]},root,geometry={**geometries,
+                                                          "new_confirmed_stickers":2})
+            with self.assertRaisesRegex(ValueError,"cannot identify"):
+                bad=dict(geometries)
+                bad["candidates"]=[{"candidate_id":"candidate","proposals":[
+                    {"bbox_xyxy_original_pixels":[20,30,100,110],
+                     "new_sticker_confirmed":True}]}]
+                # Per-proposal violations are visibly withheld, not promoted.
+                out,summary=render(index,{"matches":[]},root,geometry=bad)
+                if not summary["invalid_geometry_preview_records"]:
+                    raise ValueError("cannot identify")
+
     def test_source_link_scheme_and_login_rejected(self):
         self.assertEqual(original_link("http://example.org/"), "")
         self.assertEqual(original_link("https://user:pw@example.org/p"), "")
