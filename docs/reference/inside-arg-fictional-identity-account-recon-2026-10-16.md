@@ -114,6 +114,10 @@ The actual manual web-index checks documented in the preceding section are only 
 
 Scope rule: source-supported in-universe/credited-staff handles and site infrastructure only; no private individual account discovery or contact scraping. A `site:` query is a general-index *heuristic* and does not establish direct platform-native account search completeness. Historical negative conclusions require at least one true-positive searchable-control for the platform and date range.
 
+## 4b. Completed Terminal41 source-wide name census
+
+**Recovery follow-up (after interrupted agent session):** The [source-by-source audit report](inside-arg-terminal41-entity-sweep-2026-10-16.md) and [74-row JSON evidence](../../data/reference/inside-arg-terminal41-entity-source-sweep-2026-10-16.json) document a completed **73/73 text-file** sweep against the original mirror's source-tree manifest; only the 19 MB PNG remains outside this text-focused operation. `saf_dat_col.html` was recovered through the direct blob API, proving all 1,986,163 UTF-8 bytes present by length and its proper ending, despite the regular file API's empty response. The audit finds only the three already-known `AnSet` occurrences in the damaged-image page, the two viewgate references to `Facility 89B(7hg553)`, and two false-positive `89B` hexadecimal substrings in the breach registry. No other Anthony/Tony/Noah/Rorschach/GLADBLAD literal matches were found in that **specific preserved textual corpus**. This excludes only exact string occurrences in those pages, not historical deleted accounts, external webpages, encoded/steganographic payloads, or text inside the PNG.
+
 ## 5. Next discriminating steps, in priority order
 
 1. **Metadata connection test (best):** inspect raw byte-authenticated 534brn A and any other independently saved versions. Extract EXIF/XMP properties and maker/software fields. Check whether `AnSet` appears in other original files or online under that exact casing **before** the ARG's public reveal. Pair with `Anthony` only after an independently evidenced overlap, not on name resemblance.
