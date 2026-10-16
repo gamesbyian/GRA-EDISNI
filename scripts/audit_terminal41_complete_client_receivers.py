@@ -135,9 +135,9 @@ def inspect() -> dict:
         candidate_literals = sorted(set(x.rstrip(".,;)]") for x in TARGET_RE.findall(txt)))
         inline_code = "\n".join(h.inline_js_parts)
         is_status = bool(re.fullmatch(r"terminal41[.]link/sys/printreqstatus(?:_[0-9]+|_SD)?[.](?:html|txt)", e["path"]))
-        scheme_indices = sorted(set(int(v) for v in re.findall(r"schem\\[(\\d+)\\]", txt, flags=re.I))) if is_status else []
-        obtained_match = re.search(r"print requirements obtained\\(b\\)[.]+\\[(\\d+)\\]", txt, re.I) if is_status else None
-        applied_match = re.search(r"print requirements applied\\(b\\)[.]+\\[(\\d+)\\]", txt, re.I) if is_status else None
+        scheme_indices = sorted(set(int(v) for v in re.findall(r"schem\[(\d+)\]", txt, flags=re.I))) if is_status else []
+        obtained_match = re.search(r"print requirements obtained\(b\)[.]+\[(\d+)\]", txt, re.I) if is_status else None
+        applied_match = re.search(r"print requirements applied\(b\)[.]+\[(\d+)\]", txt, re.I) if is_status else None
         p = {
             "printreqstatus_variant": is_status,
             "named_scheme_indices": scheme_indices,
