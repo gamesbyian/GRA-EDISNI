@@ -111,18 +111,71 @@ def evaluate(tasks: list[dict], events: list[dict]) -> tuple[dict, list[dict], l
     return report, pending, ledger
 
 
+
+def brave_result_events(rows: list[dict], run_id: str) -> list[dict]:
+    """Convert *normalized* Brave result rows; never imply original HTML fetched.
+
+    The digest covers our retained normalized result-row payload, not raw Brave
+    HTTP response bytes. A returned snippet/link is not a retrieved photograph.
+    """
+    if not isinstance(run_id, str) or not re.fullmatch(r"[A-Za-z0-9_.-]{1,80}",run_id):
+        raise ValueError("Brave event conversion requires a safe run_id")
+    events = []
+    for row in rows:
+        if not isinstance(row, dict):
+            raise ValueError("Brave result must be an object")
+        status = str(row.get("status") or "")
+        if status == "not_attempted":
+            continue
+        if status not in {"index_search_success", "http_error", "request_error"}:
+            raise ValueError("Unexpected Brave provider result status")
+        task_index = row.get("task_index")
+        if not isinstance(task_index, int) or task_index < 0:
+            raise ValueError("Brave result requires nonnegative task_index")
+        event = {
+            "task_id": str(row.get("task_id") or ""),
+            "attempt_id": f"{run_id}-{task_index}",
+            "status": status,
+            "provider": "brave_web_index_only",
+            "pages_exhausted": False,
+            "retrieval_evidence": "normalized index metadata only",
+        }
+        if status == "index_search_success":
+            matches = row.get("matches")
+            if not isinstance(matches, list):
+                raise ValueError("Successful Brave response needs matches array")
+            payload = json.dumps(matches, sort_keys=True, ensure_ascii=False, separators=(",",":"))
+            event.update({
+                "response_sha256": hashlib.sha256(payload.encode("utf-8")).hexdigest(),
+                "response_digest_scope": "normalized_result_matches_not_raw_http",
+                "result_count": len(matches),
+                "possibly_truncated": row.get("possibly_truncated", True),
+                "original_source_body_retrieved": False,
+            })
+        if status == "http_error":
+            event["http_status"] = row.get("http_status")
+        events.append(event)
+    return events
+
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--tasks", required=True, type=Path,
                    help="Frozen task JSONL (gold or public native campaign)")
     p.add_argument("--events", type=Path, action="append",
                    help="Append-only observed provider-event JSONL; may repeat for prior runs")
+    p.add_argument("--brave-results", type=Path, action="append",
+                   help="Optional normalized results from actual approved Brave provider run")
+    p.add_argument("--run-id", default="", help="GitHub run ID identifying actual Brave attempts")
     p.add_argument("--out", type=Path, required=True)
     args = p.parse_args()
     tasks = read_jsonl(args.tasks)
     events = []
     for path in args.events or []:
         events.extend(read_jsonl(path))
+    if args.brave_results and not args.run_id:
+        p.error("--run-id is required with --brave-results")
+    for path in args.brave_results or []:
+        events.extend(brave_result_events(read_jsonl(path), args.run_id))
     report, pending, log = evaluate(tasks, events)
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "run-summary.json").write_text(
