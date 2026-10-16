@@ -238,8 +238,18 @@ def render(index: dict, visual: dict, root: Path, max_items: int = 48,
                         raise ValueError("geometric proposal cannot identify a sticker")
                     src=region_preview(path,proposal.get("bbox_xyxy_original_pixels"))
                     coords=html.escape(str(proposal.get("bbox_xyxy_original_pixels",[])))
+                    zones=proposal.get("ink_layout",{}).get("dark_pixel_fractions_by_zone",{})
+                    zone_text=""
+                    if isinstance(zones,dict) and "center_mark" in zones and "bottom_print" in zones:
+                        center=float(zones["center_mark"])
+                        bottom=float(zones["bottom_print"])
+                        if not (0<=center<=1 and 0<=bottom<=1):
+                            raise ValueError("invalid ink-zone measurement")
+                        zone_text=(f'<span class="coords">Center dark: {center:.3f}; '
+                                   f'lower dark: {bottom:.3f} (NOT sticker proof)</span>')
                     shapes.append(f'<div class="roi"><img src="{src}" alt="Unverified light-paper region {ordinal}">'
-                                  f'<p>Light rectangle {ordinal}<span class="coords">{coords}</span></p></div>')
+                                  f'<p>Light rectangle {ordinal}<span class="coords">{coords}</span>'
+                                  f'{zone_text}</p></div>')
                     geometric_previews+=1
                 except (OSError,ValueError,UnidentifiedImageError,Image.DecompressionBombError) as exc:
                     geometric_errors.append({"candidate_id":ident,"region":ordinal,

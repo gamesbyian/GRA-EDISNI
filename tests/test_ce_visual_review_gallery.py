@@ -115,13 +115,16 @@ class GalleryTests(unittest.TestCase):
                 "candidate_id":"candidate","proposals":[
                     {"bbox_xyxy_original_pixels":[20,30,100,110],
                      "candidate_type":"bright-rectangle-unverified",
-                     "new_sticker_confirmed":False},
+                     "new_sticker_confirmed":False,
+                     "ink_layout":{"dark_pixel_fractions_by_zone":{
+                          "center_mark":.08,"bottom_print":.013}}},
                     {"bbox_xyxy_original_pixels":[0,0,5000,5000],
                      "new_sticker_confirmed":False}]}]}
             html_text,report=render(index,{"matches":[]},root,geometry=geometries)
             self.assertEqual(report["geometry_crop_previews_embedded"],1)
             self.assertEqual(len(report["invalid_geometry_preview_records"]),1)
             self.assertIn("the geometric method does NOT identify stickers",html_text)
+            self.assertIn("Center dark: 0.080; lower dark: 0.013 (NOT sticker proof)",html_text)
             self.assertEqual(html_text.count('src="data:image/jpeg;base64,'),2)
             self.assertEqual(report["new_confirmed_stickers"],0)
             with self.assertRaisesRegex(ValueError,"must not establish"):
