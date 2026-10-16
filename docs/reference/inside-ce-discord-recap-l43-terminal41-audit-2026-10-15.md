@@ -6,7 +6,7 @@
 
 ## 1. L43, the lost sticker with a dot, is NOT numbered sticker /043
 
-Upstream L43 identifies the Discord user **Dirtwolf**, who provided a photo in which the dot is visible but fingers conceal the serial; the sticker was later lost. L43 is a lost-case *label*, and should not be confused with confirmed numbered sticker **/043**. The original L43 photo is linked from [the canonical register](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md#L43) via a Discord message, but its bytes were **not independently available** in this audit. Therefore its A–I background piece has **not** been classified.
+Upstream L43 identifies the Discord user **Dirtwolf**, who provided a photo in which the dot is visible but fingers conceal the serial; the sticker was later lost. L43 is a lost-case *label*, and should not be confused with confirmed numbered sticker **/043**. The original L43 photo is linked from [the canonical register](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md#L43) via a Discord message. **Correction (user-confirmed): the image is already in GRA-EDISNI and was analyzed in prior project work.** This narrowly scoped candidate-table audit did not recover the exact existing asset path, experiment identifier, or classification outcome, and therefore cannot claim that background classification is unattempted or inconclusive. Recover and cite that existing analysis before proposing further photo work.
 
 ### Exactly what the 261 count assumes
 
@@ -39,7 +39,7 @@ The upstream community currently places **•427** with **•369** under **repor
 
 ### Next L43 experiment
 
-Acquire the original L43 Discord image **with permission**, retain original pixels and source/capture metadata; perform rotation/crop/brightness-robust nine-way A–I template registration, with out-of-sample genuine sticker controls, human-blind ranking and confidence threshold; compare the class evidence to this table. If the printed serial is fully occluded there is no legitimate image enhancement that guarantees recovering it.
+**Do not request another image from Dirtwolf or assume that the original has not been recovered.** First locate the already retained L43 photograph and prior analysis in this repository, inspect their actual results and limitations, and compare any existing A–I finding to this new conditional candidate table. Re-analysis is warranted only for a specific untested limitation in that earlier work. If the serial is fully occluded, enhancement cannot reliably reconstruct unseen digits.
 
 ## 2. Terminal41 sibling directories: unverified archive lead
 
