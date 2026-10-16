@@ -95,6 +95,17 @@ This was a bounded live web-index plus connected GitHub **global file-content se
 
 A **real staff-linked identity/web/team graph** has now been established for `GLADBLAD`; **no second fictional ARG-operated persona** has been demonstrated by this search. **Do not contact accounts that happen to share one of these names.**
 
+## 4b. Direct exhaustive **text-classified Terminal41 mirror** name scan
+
+The [machine-readable census](../../data/reference/inside-arg-terminal41-identity-term-census-2026-10-16.json) documents a **direct substring scan of all 73/73 text-classified paths** in the pinned 74-file mirror, with the oversized `saf_dat_col.html` explicitly fetched by Git blob SHA. Thirteen rare-name, persona, facility and public-link patterns were searched case-insensitively. Exact source findings:
+
+- `AnSet`: **three readable instances, one file only** (`dat/534brn9653f9j8mmd/index.html`).
+- `7hg553` / `Facility` / `89B`: in **both** preserved communications viewgate pages, with two references apiece per page.
+- Bare `89B` appears twice in long hexadecimal strings in the breach registry. The substring has **no facility semantic relevance**.
+- No inspected additional text contains `Anthony`, `Tony`, `Setrinamaire`, `Rorschach`, `Noah`, `Gladblad` or `Tobber`, nor `twitter.com` or `youtube.com` in these files.
+
+The one ~19 MB PNG binary was **not** scanned for strings or metadata: the connector's direct blob retrieval failed on PNG's `0x89` binary signature with UnicodeDecodeError. The decoded `saf_dat_col.html` response was readable but not raw-byte-authenticated. Thus **73/73 searchable source-text entries examined**, **1 binary artifact excluded**, and **unpreserved routes remain outside scope**. The result does not disprove independent online accounts.
+
 ## 4a. Reproducible platform search inventory
 
 The [machine-readable platform search manifest](../../data/reference/inside-arg-fictional-account-platform-search-manifest-2026-10-16.tsv) preserves **553 distinct rows**, including **5 verified original/public-source links**, **344 high-priority planned index queries**, and **204 secondary planned index queries** across twenty public-platform/archival hosts. Input candidates come from the separate [source-linked 50-term registry](../../data/reference/inside-arg-fictional-account-name-candidates-2026-10-16.tsv). This is a search queue, **not 553 executed requests, no-availability assertions, account matches, or unique individuals**.
