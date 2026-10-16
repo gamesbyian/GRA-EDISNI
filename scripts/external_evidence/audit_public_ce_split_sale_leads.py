@@ -17,9 +17,9 @@ from urllib.parse import urlparse
 ID_RE = re.compile(r"[a-z0-9]{5,12}", flags=re.I)
 NAME_RE = re.compile(r"[A-Za-z0-9_-]{3,32}")
 EXPECTED_STATUSES = {
-    "unreconciled-public-acquisition-claim",
-    "original-game-component-possibly-separated",
-    "physical-sticker-not-observed",
+    "known_canonical_lost_L46",
+    "speculative_original_game_component_separated",
+    "physical_sticker_not_observed_in_this_source",
 }
 
 
@@ -61,6 +61,10 @@ def validate(leads: list[dict], ledger: str) -> dict:
         sha = lead.get("archived_thread_response_sha256", "")
         if not re.fullmatch(r"[0-9a-f]{64}", sha):
             raise ValueError("Missing exact public archive response SHA-256")
+        if (lead.get("canonical_status") != "known_lost_L46"
+                or lead.get("canonical_exact_pseudonym_in_stickers_md") is not True
+                or lead.get("canonical_sticker_loss_confirmation_date") != "2026-09-22"):
+            raise ValueError("Current canonical L46 reconciliation must be preserved")
         if set(lead.get("statuses", [])) != EXPECTED_STATUSES:
             raise ValueError("Unexpected or promoted lead statuses")
         if lead.get("sticker_number_observed") is not False or lead.get("physical_copy_newly_proven") is not False:
@@ -70,15 +74,13 @@ def validate(leads: list[dict], ledger: str) -> dict:
             "public_source_author": name, "source_published_utc": published_iso,
             "known_canonical_pseudonym_occurrences": len(known),
             "canonical_pseudonym_evidence": known,
-            "source_status": (
-                "pseudonym-appears-in-canonical-ledger-review-case"
-                if known else "unreconciled-original-public-acquisition-statement"
-            ),
+            "source_status": "known-canonical-lost-L46-historical-source-only",
+            "historical_snapshot_contains_public_handle": bool(known),
             "seller_or_game_wrapper_custody": "unverified",
             "source_photo_available": bool(lead.get("original_media_retrieved", False)),
             "sticker_number_confirmed": False,
             "new_physical_owner_case_confirmed": False,
-            "caveat": "Exact username absence is NOT proof the person/box is new; sale may involve existing transfer case.",
+            "caveat": "Current canonical L46 explicitly names this Reddit user and confirms sticker lost. The archived ledger snapshot can be older; a zero snapshot match is NOT novelty.",
         })
     return {
         "schema_version": 1,
@@ -87,6 +89,7 @@ def validate(leads: list[dict], ledger: str) -> dict:
             r["known_canonical_pseudonym_occurrences"] == 0 for r in review),
         "new_stickers_confirmed": 0,
         "new_physical_copies_confirmed": 0,
+        "current_unreconciled_owner_leads": 0,
         "records": review,
     }
 
