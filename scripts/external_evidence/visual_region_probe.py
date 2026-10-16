@@ -101,6 +101,8 @@ def load_regions(manifest: Path, repo_root: Path) -> list[dict]:
 
 
 def proxy_image(image: Image.Image, long_side: int = PROXY_LONG_SIDE) -> Image.Image:
+    if not 32 <= long_side <= 4096:
+        raise ValueError("proxy long-side bound must be 32..4096")
     if image.width * image.height > Image.MAX_IMAGE_PIXELS:
         raise ValueError("candidate image pixel cap exceeded")
     copy = ImageOps.exif_transpose(image).convert("RGB")
@@ -202,8 +204,9 @@ def scan(image: Image.Image, references: list[dict], *, max_windows: int = 1600,
                 possibilities.append((score, d, h, box, ref))
     possibilities.sort(key=lambda x: (x[0], x[1], x[2], x[3], x[4]["reference_id"]))
     chosen = []
-    sx = image.width / proxy.width
-    sy = image.height / proxy.height
+    oriented_size = ImageOps.exif_transpose(image).size
+    sx = oriented_size[0] / proxy.width
+    sy = oriented_size[1] / proxy.height
     for score,d,h,box,ref in possibilities:
         original = [round(box[0]*sx), round(box[1]*sy),
                     round(box[2]*sx), round(box[3]*sy)]
@@ -211,6 +214,7 @@ def scan(image: Image.Image, references: list[dict], *, max_windows: int = 1600,
             continue
         chosen.append({
             "bbox_xyxy_original_pixels": original,
+            "coordinate_system": "exif-oriented-source-image-pixels",
             "reference_id": ref["reference_id"],
             "reference_rotation_degrees": ref["reference_rotation_degrees"],
             "hash_distance_sum": score,
