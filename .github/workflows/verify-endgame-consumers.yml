@@ -16,3 +16,17 @@ jobs:
         run: python scripts/audit_endgame_channel_budget.py --check-2026-10-08 > /dev/null
       - name: Check SAF data field and bit-capacity rejection
         run: python scripts/audit_terminal41_saf_ascii_island.py > /dev/null
+      - name: Audit source-native marked-record omission and error-correction labels
+        run: python scripts/audit_terminal41_marked_recovery.py --output /tmp/marked-recovery.json
+      - name: Exclude direct 9-bit class-to-133-row index for all physical completions
+        run: python scripts/audit_registry_nine_bit_address_gate.py --output /tmp/terminal41-direct-address-gate.json
+      - name: Preserve physical-only registry address gate
+        uses: actions/upload-artifact@v4
+        with:
+          name: terminal41-physical-sticker-address-gate
+          path: /tmp/terminal41-direct-address-gate.json
+      - name: Preserve Terminal41 marked-record forensic witness
+        uses: actions/upload-artifact@v4
+        with:
+          name: terminal41-marked-record-source-audit
+          path: /tmp/marked-recovery.json
