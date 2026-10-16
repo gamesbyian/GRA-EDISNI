@@ -30,6 +30,10 @@ Then run:
 python scripts/verify_machine.py
 ```
 
+## Perspective-driven experiment programme (16 October 2026)
+
+The [twenty-perspective experiment portfolio](docs/perspective-driven-sticker-experiments-2026-10-16.md) and [27-card machine-readable queue](data/perspective-experiments-2026-10-16.json) cross-reference all 20 distinct disciplinary approaches, six collaborations and one rival-generative-mechanism comparison to prior work. These remain queued proposals, not new solved results. Their statuses, dependencies, falsifiers and stopping rules are guarded by `python scripts/check_perspective_queue.py`; the active priorities are in [the research queue](docs/research-queue.md).
+
 ## Research evidence map
 
 - [CL-VLEN-03 streaming run-length instruction campaign](docs/conjecture-lab/2026-10-12-streaming-rle-instructions.md): a **real executable program**, with alternating unary opcode/operand runs and `EMIT`, `REPEAT`, `REVERSE`, optional `STOP`; exact finite-state accounting of 108 grammars across primary 81, tail 27 and collapsed full 108 symbols. None shows exceptional grammar-specific compatibility after 120 matched frame shuffles per region; a 14-number lever-shaped output does not distinguish the data. [Executable parser with exhaustive tiny-string oracle](scripts/conjecture_lab_streaming_rle.py), [compact summary](data/conjecture-lab-streaming-rle-summary-2026-10-12.json) and [full results/witnesses](data/conjecture-lab-streaming-rle-2026-10-12.json). No Playdead opcode table claimed.
