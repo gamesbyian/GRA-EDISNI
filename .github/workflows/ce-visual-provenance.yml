@@ -5,6 +5,7 @@ on:
     paths:
       - "scripts/external_evidence/visual_index.py"
       - "scripts/external_evidence/visual_region_probe.py"
+      - "scripts/external_evidence/benchmark_sticker_region_holdout.py"
       - "scripts/external_evidence/discover_html_images.py"
       - "scripts/external_evidence/fetch_visual_references.py"
       - "scripts/external_evidence/fetch_html_images.py"
@@ -24,6 +25,7 @@ on:
       - "scripts/external_evidence/audit_search_attempts.py"
       - "tests/test_ce_visual_provenance.py"
       - "tests/test_ce_sticker_region_pilot.py"
+      - "tests/test_ce_sticker_region_independent_holdout.py"
       - "tests/test_ce_visual_review_gallery.py"
       - "tests/test_ce_search_attempt_ledger.py"
       - "tests/test_ce_html_image_discovery.py"
@@ -40,6 +42,7 @@ on:
       - "tests/test_ce_oct2026_auction_lead.py"
       - "data/reference/inside-ce-visual-sources.json"
       - "data/reference/inside-ce-sticker-region-pilot-rois.csv"
+      - "data/reference/inside-ce-sticker-region-independent-holdout.csv"
       - "data/reference/inside-ce-archived-public-galleries.json"
       - "data/reference/inside-ce-public-reddit-cross-community-queries.json"
       - "data/reference/inside-ce-public-archived-resale-posts.json"
@@ -136,7 +139,7 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install --disable-pip-version-check "Pillow>=10,<13"
       - run: python -m unittest discover -s tests -p 'test_ce_*py' -v
-      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/visual_region_probe.py scripts/external_evidence/build_visual_review_gallery.py scripts/external_evidence/audit_search_attempts.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py scripts/external_evidence/audit_historic_ebay_ce_sales.py scripts/external_evidence/probe_ce_ebay_wayback.py scripts/external_evidence/probe_ce_ebay_cdx.py scripts/external_evidence/audit_public_ce_thread_claims.py scripts/external_evidence/audit_public_ce_split_sale_leads.py scripts/external_evidence/audit_public_ce_october_auction.py
+      - run: python -m py_compile scripts/external_evidence/visual_index.py scripts/external_evidence/visual_region_probe.py scripts/external_evidence/benchmark_sticker_region_holdout.py scripts/external_evidence/build_visual_review_gallery.py scripts/external_evidence/audit_search_attempts.py scripts/external_evidence/fetch_visual_references.py scripts/external_evidence/visual_semantic.py scripts/external_evidence/discover_html_images.py scripts/external_evidence/fetch_html_images.py scripts/external_evidence/recover_reddit_image_links.py scripts/external_evidence/recover_reddit_comment_images.py scripts/external_evidence/index_public_imgur_gallery.py scripts/external_evidence/search_public_reddit_ce_media.py scripts/external_evidence/lookup_public_ce_resale_posts.py scripts/external_evidence/audit_historic_ebay_ce_sales.py scripts/external_evidence/probe_ce_ebay_wayback.py scripts/external_evidence/probe_ce_ebay_cdx.py scripts/external_evidence/audit_public_ce_thread_claims.py scripts/external_evidence/audit_public_ce_split_sale_leads.py scripts/external_evidence/audit_public_ce_october_auction.py
       - name: Index all canonical original sticker photographs and validate source SHA256
         run: |
           mkdir -p /tmp/ce-empty-candidate-set
@@ -149,6 +152,21 @@ jobs:
           assert len([r for r in p["references"] if r["role"] == "known-sticker-photo"]) >= 82
           assert all(r["sha256"] for r in p["references"])
           PY
+
+      - name: Score different physical stickers against held-out source-original images
+        run: |
+          python scripts/external_evidence/benchmark_sticker_region_holdout.py \
+            --repo-root . \
+            --max-windows 1600 --max-refine-windows 1200 --top-k 8 \
+            --output visual-evidence-work/region-independent-holdout.json
+      - name: Retain exact-head independent original-photo benchmark report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ce-independent-sticker-photo-holdout-${{ github.run_id }}
+          path: visual-evidence-work/region-independent-holdout.json
+          retention-days: 30
+          if-no-files-found: warn
 
   public-run:
     if: github.event_name == 'workflow_dispatch'
