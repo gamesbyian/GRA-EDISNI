@@ -1,3 +1,5 @@
+> **16 October reconciliation:** This original-source report remains historically valid, but its novelty/outreach conclusion is **superseded**. The upstream [canonical lost L46 entry](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md) explicitly names `Afaith_1`; the commenter confirmed the sticker was lost on 22 September 2026. The suggested disc-wrapper separation is unverified and cannot overturn this known case. [Corrected packet](inside-ce-raezores-public-lead-handoff-2026-10-13.md).
+
 # INSIDE CE public March 2026 split-sale lead: buyer reportedly did not receive PS4 game
 
 **Source-first discovery:** October 13, 2026. **Original comment published:** **2026-03-08 05:32:21 UTC**. **Review class:** potentially *previously unlisted public CE acquisition*, not a confirmed new serial or an additional physical copy. **Owner outreach:** none.
