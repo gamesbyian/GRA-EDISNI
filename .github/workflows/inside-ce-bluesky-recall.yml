@@ -5,6 +5,10 @@ on:
     paths:
       - 'scripts/audit_bluesky_ce_recall.py'
       - 'tests/test_bluesky_ce_recall.py'
+      - 'tests/test_bluesky_ce_triage.py'
+      - 'scripts/triage_bluesky_ce_recall.py'
+      - 'scripts/rank_inside_ce_public_leads.py'
+      - 'scripts/build_inside_ce_native_search_campaign.py'
       - 'data/reference/inside-ce-ownership-secondary-platforms.tsv'
       - '.github/workflows/inside-ce-bluesky-recall.yml'
   workflow_dispatch:
@@ -37,7 +41,10 @@ jobs:
         with:
           python-version: '3.12'
       - name: Exact offline negative/positive controls and access-gate tests
-        run: python -m unittest discover -s tests -p 'test_bluesky_ce_recall.py' -v
+        run: |
+          python -m unittest discover -s tests -p 'test_bluesky_ce_recall.py' -v
+          python -m unittest discover -s tests -p 'test_bluesky_ce_triage.py' -v
+          python -m unittest discover -s tests -p 'test_inside_ce_public_leads.py' -v
       - name: Save immutable, offline query plan
         run: |
           python scripts/audit_bluesky_ce_recall.py \
@@ -56,6 +63,14 @@ jobs:
           python scripts/audit_bluesky_ce_recall.py --execute \
             --api-host primary --max-requests "$REQUEST_CAP" --delay-seconds 1 \
             --output research-output/bluesky-recall-public-results.json
+      - name: Generate bounded deduplicated review-only lead queue
+        if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.number == 288) || (github.event_name == 'workflow_dispatch' && inputs.execute == 'yes') }}
+        run: |
+          python scripts/triage_bluesky_ce_recall.py \
+            --input research-output/bluesky-recall-public-results.json \
+            --output research-output/bluesky-public-review-only.jsonl \
+            --summary research-output/bluesky-public-review-summary.json \
+            --max-candidates 100
       - name: Report exact source and observed probe statuses (no speculative coverage)
         if: ${{ github.event_name == 'pull_request' || inputs.execute == 'yes' }}
         run: |
@@ -82,6 +97,19 @@ jobs:
                       "gold_found": x.get("gold_found")
                   } for x in r["results"][1:]],
               }, ensure_ascii=False))
+              sp = Path("research-output/bluesky-public-review-summary.json")
+              if sp.exists():
+                  print("REVIEW_ONLY_COUNTS:", sp.read_text()[:2000])
+                  qp = Path("research-output/bluesky-public-review-only.jsonl")
+                  for line in qp.read_text().splitlines()[:10]:
+                      item = json.loads(line)
+                      print("REVIEW_ONLY_CANDIDATE:", json.dumps({
+                          "url": item["url"],
+                          "score": item["lead_score"],
+                          "excerpt": item["excerpt"][:150],
+                          "known_positive_control": item["known_positive_control"],
+                          "sticker_verified": False,
+                      }, ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
         with:
