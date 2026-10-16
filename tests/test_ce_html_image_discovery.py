@@ -38,6 +38,7 @@ class HtmlLeadTests(unittest.TestCase):
 
     def test_download_host_restriction_and_priority(self):
         self.assertTrue(approved("https://i.redd.it/abc.jpg"))
+        self.assertTrue(approved("https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:test/source@jpeg"))
         self.assertFalse(approved("http://i.redd.it/abc.jpg"))
         self.assertFalse(approved("https://localhost/internal.jpg"))
         self.assertFalse(approved("https://i.redd.it.attacker.example/img.jpg"))
