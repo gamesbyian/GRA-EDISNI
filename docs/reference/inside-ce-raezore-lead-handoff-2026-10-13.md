@@ -1,3 +1,5 @@
+> **16 October reconciliation:** Historical worksheet only. Current [corrected handoff](inside-ce-raezores-public-lead-handoff-2026-10-13.md) closes the October /043 buyer and the March L46 buyer; **H04 is retracted** by the same Reddit author (see [same-thread audit](inside-ce-march2020-purchase-claim-retraction-2026-10-13.md)); **H03 is only a preorder intention**. Neither H03 nor H04 is a validated, outstanding owner lead. Do not follow the outdated outreach recommendation preserved below.
+
 # CE owner research: short candidate handoff for Raezore
 
 **Compiled:** 2026-10-13. **Evidence baseline:** current [canonical stickers.md](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md) checked October 13 and [Raezore research-method report](https://github.com/twinysam/INSIDE-ARG/blob/master/raezores-research.md). **Structured handoff:** [six-row TSV](../../data/reference/inside-ce-raezore-handoff-candidates-2026-10-13.tsv).
