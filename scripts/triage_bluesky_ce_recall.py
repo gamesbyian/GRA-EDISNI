@@ -191,6 +191,8 @@ def build_media_review_queue(report, *, max_candidates=200):
                     "text_excerpt": str(post.get("text_excerpt") or "")[:450],
                     "image_previews": views[:12],
                     "declared_image_count": declared,
+                    "record_image_alts": media.get("record_image_alts", [])[:12]
+                         if isinstance(media.get("record_image_alts"), list) else [],
                     "external_public_url": media.get("external_public_url", ""),
                     "media_view_missing": bool(media.get("record_media_without_view_image_urls")),
                     "review_status": "uninspected_public_media_metadata_only",
