@@ -1,0 +1,103 @@
+name: One-time INSIDE CE Bluesky media recapture
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  contents: read
+
+jobs:
+  single-frozen-source-recapture:
+    if: ${{ github.event.pull_request.head.ref == 'research/bluesky-media-recapture-20261016' && github.event.pull_request.base.ref == 'main' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify extraction and review safety gates locally
+        run: |
+          python -m unittest discover -s tests -p 'test_bluesky_ce_recall.py' -v
+          python -m unittest discover -s tests -p 'test_bluesky_ce_triage.py' -v
+          python -m unittest discover -s tests -p 'test_bluesky_ce_discovery.py' -v
+      - name: Run exactly one 16-query public AppView source recapture
+        run: |
+          python scripts/discover_bluesky_inside_ce.py --execute \
+            --request-cap 16 \
+            --output research-output/bluesky-media-recapture-native.json
+      - name: Preserve text and image-bearing posts in separate review-only queues
+        run: |
+          python scripts/triage_bluesky_ce_recall.py \
+            --input research-output/bluesky-media-recapture-native.json \
+            --output research-output/bluesky-media-recapture-text-queue.jsonl \
+            --media-review-output research-output/bluesky-media-recapture-image-queue.jsonl \
+            --summary research-output/bluesky-media-recapture-review-summary.json \
+            --max-candidates 200
+      - name: Publish exact evidence and source-triage denominators
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("research-output/bluesky-media-recapture-native.json")
+          if not p.exists():
+              print("LIVE_RESULTS: unavailable; do not count as source search")
+          else:
+              r=json.loads(p.read_text())
+              rows=r["results"]
+              failures=[{"key":x.get("key"),"status":x.get("status"),
+                         "error":x.get("error"),"http_status":x.get("http_status")}
+                        for x in rows if x["status"]!="ok"]
+              print("SOURCE_REQUESTS:",json.dumps({
+                  "manifest_sha256":r["manifest_sha256"],
+                  "fetched_at_utc":r["fetched_at_utc"],
+                  "requests_sent":r["requests_sent"],
+                  "planned":r["tasks_planned"],
+                  "unattempted":r["tasks_unattempted"],
+                  "valid_queries":sum(x["status"]=="ok" for x in rows),
+                  "failures":failures,
+                  "source_result_appearances":sum(x.get("returned",0) for x in rows),
+                  "post_image_metadata_appearances":sum(
+                      x.get("posts_with_view_image_metadata",0) for x in rows),
+                  "created_date_outliers":sum(
+                      x.get("author_created_at_outside_requested_window",0)
+                      for x in rows),
+                  "query_result_windows":[{
+                      "key":x.get("key"),"status":x.get("status"),
+                      "returned":x.get("returned"),"cursor":x.get("cursor_available"),
+                      "images":x.get("posts_with_view_image_metadata"),
+                      "missing_view":x.get("posts_with_record_declared_images_but_no_view_urls")
+                  } for x in rows]
+              },ensure_ascii=False))
+          s=Path("research-output/bluesky-media-recapture-review-summary.json")
+          if s.exists():
+              print("TRIAGE_SUMMARY:",s.read_text())
+          for kind in ("text","image"):
+              file=Path("research-output")/f"bluesky-media-recapture-{kind}-queue.jsonl"
+              if not file.exists():continue
+              data=[json.loads(line) for line in file.read_text().splitlines() if line.strip()]
+              print("REVIEW_COUNT:",kind,len(data))
+              for item in data[:60]:
+                  media=item.get("image_previews",[])
+                  print("REVIEW_POST:",json.dumps({
+                      "queue":kind,"url":item["url"],
+                      "date":item.get("published_at"),"indexed":item.get("indexed_at"),
+                      "category":item.get("context_class"),
+                      "text":(item.get("excerpt") or item.get("text_excerpt") or "")[:220],
+                      "media_preview_count":len(media),
+                      "image_alts":[im.get("alt","")[:160] for im in media[:4]],
+                      "record_alts":item.get("record_image_alts",[])[:4],
+                      "media_view_missing":item.get("media_view_missing"),
+                      "external":item.get("external_public_url"),
+                      "sticker_verified":False,
+                  },ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ce-bluesky-multimodal-recapture-one-time
+          path: research-output/
+          retention-days: 30
+          if-no-files-found: warn
