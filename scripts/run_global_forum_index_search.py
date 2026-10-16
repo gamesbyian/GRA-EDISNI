@@ -104,6 +104,11 @@ def run_campaign(
                     task["index_query"], key, max_results, task.get("language", "")
                 )
                 result["status"] = "index_search_success"
+                result["index_page_limit"] = max_results
+                result["index_page_offset"] = 0
+                result["index_pages_requested"] = 1
+                result["possibly_truncated"] = len(result["matches"]) >= max_results
+                result["original_source_body_retrieved"] = False
                 next_index = idx + 1
                 last_successful_id = task["task_id"]
             except urllib.error.HTTPError as exc:
