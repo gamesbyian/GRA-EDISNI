@@ -64,6 +64,23 @@ class IndexResumeTests(unittest.TestCase):
         self.assertTrue(all(x["coverage"] == "partial_external_index_no_negative_evidence"
                             for x in actual))
 
+    def test_index_full_page_is_censored_not_completeness_proof(self):
+        two = self.tasks[:1]
+        def api(query, key, count, language):
+            return [{"url": "https://example.org/a"},
+                    {"url": "https://example.org/b"}]
+        result = mod.run_campaign(
+            two, manifest_sha256="a" * 64, key="dummy",
+            output=self.root / "capped.jsonl", start_index=0,
+            max_queries=1, max_results=2,
+            search_fn=api, sleep_fn=lambda _: None)
+        item = json.loads((self.root / "capped.jsonl").read_text().strip())
+        self.assertTrue(item["possibly_truncated"])
+        self.assertEqual(item["index_pages_requested"], 1)
+        self.assertEqual(item["index_page_limit"], 2)
+        self.assertFalse(item["original_source_body_retrieved"])
+        self.assertTrue(result["complete"])  # tasks done, *not* source corpus exhaustive
+
     def test_rate_limit_halts_at_failed_index(self):
         called = []
         def search(q, key, count, language):

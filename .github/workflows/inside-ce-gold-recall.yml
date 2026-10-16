@@ -45,6 +45,22 @@ jobs:
         run: |
           python scripts/benchmark_inside_ce_discovery.py plan \
             --output search-output/inside-ce-gold-index-plan.jsonl
+      - name: Publish truthful offline readiness report
+        run: |
+          python scripts/benchmark_inside_ce_discovery.py evaluate \
+            --input search-output/inside-ce-gold-index-plan.jsonl \
+            --output search-output/inside-ce-gold-readiness.json \
+            --summary search-output/inside-ce-gold-readiness-summary.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r = json.loads(Path("search-output/inside-ce-gold-readiness-summary.json").read_text())
+          assert r["queries_attempted"] == 0, r
+          assert r["controls_with_unscoreable_original_locator"] == 2, r
+          assert r["controls_with_indexed_exact_source"] == 0, r
+          assert r["controls_without_executed_search"] == 12, r
+          print("GOLD_READINESS:", json.dumps(r))
+          PY
       - name: Optional bounded licensed index search
         if: ${{ inputs.execute_index == 'yes' }}
         env:
