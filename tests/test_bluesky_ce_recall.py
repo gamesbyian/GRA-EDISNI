@@ -20,6 +20,17 @@ class BlueskyRecallTests(unittest.TestCase):
         self.assertTrue(all(t["params"].get("allTime") == "true"
                             for t in tasks[1:] if t["version"] == "v2"))
 
+    def test_documented_host_selection_is_explicit_and_bounded(self):
+        self.assertEqual(m.run()["api_host"], "primary")
+        self.assertEqual(m.run(api_host="cached")["api_host"], "cached")
+        self.assertEqual(set(m.HOSTS), {"primary", "cached"})
+        for host in ("evil", "http://api.bsky.app", ""):
+            with self.assertRaises(ValueError):
+                m.run(api_host=host)
+            with self.assertRaises(ValueError):
+                m.fetch("app.bsky.feed.searchPosts", {"q": "inside"},
+                        api_host=host)
+
     def test_offline_default_never_networks(self):
         report = m.run(fetch_fn=lambda *x: self.fail("network attempted"))
         self.assertEqual(report["state"], "planned_unexecuted")
