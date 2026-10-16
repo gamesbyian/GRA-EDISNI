@@ -79,6 +79,29 @@ class PublicSearchHealthTests(unittest.TestCase):
         self.assertIn("source_pages_not_inspected", x["flags"])
         self.assertIn("no_html_body_scanned", x["flags"])
 
+    def test_image_selection_and_transfer_censoring(self):
+        result = m.health("image_download", {
+            "selection_coverage": {
+                "input_url_mentions": 12,
+                "unapproved_image_host": 4,
+                "official_product_url_heuristic": 2,
+                "eligible_asset_families_not_selected_by_budget": 3,
+                "asset_families_selected_for_transfer": 2,
+            },
+            "image_downloads": [
+                {"status": "downloaded", "image_url": "https://i.redd.it/a.jpg"},
+                {"status": "unavailable", "image_url": "https://i.redd.it/b.jpg"},
+            ],
+        })
+        self.assertEqual(result["row_count"], 2)
+        self.assertEqual(result["counts"]["image_payload_downloads"], 1)
+        self.assertEqual(result["counts"]["image_transfer_failures"], 1)
+        self.assertEqual(result["counts"]["eligible_asset_families_not_selected_by_budget"], 3)
+        self.assertIn("eligible_images_dropped_by_budget", result["flags"])
+        self.assertIn("source_image_mentions_filtered_by_policy", result["flags"])
+        self.assertIn("image_transfer_errors", result["flags"])
+        self.assertEqual(result["new_confirmed_stickers"], 0)
+
     def test_json_object_jsonl_and_empty_validation(self):
         with tempfile.TemporaryDirectory() as folder:
             file = Path(folder) / "sample"
