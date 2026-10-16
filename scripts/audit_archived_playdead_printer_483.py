@@ -46,6 +46,7 @@ def check_source(data, d):
     assert "url: window.location.pathname" in compiled
     assert "check: 'true'" in compiled
     assert "localStorage.getItem('id')" in compiled
+    assert compiled.count("printCheck") == 1, "button invocation must be separately source-proven"
     assert "window.print()" in compiled
     assert "if (data == 'false')" in compiled
     assert "var _data = { in: s_input, id: localStorage.getItem('id')}" in compiled
