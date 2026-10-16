@@ -104,5 +104,24 @@
     "Retrieve original successful index.php response fragment including response headers, date, and payload.",
     "Retrieve originals of historical printed PDFs and separately emailed printer.jpg assets, with checksums.",
     "Compare dated pre- and post-CE captures for new accepted response classes, not visual resemblance to chosen plaintext."
-  ]
+  ],
+  "superseding_2026_10_16": {
+    "experiment": 483,
+    "client_javascript_recovered": true,
+    "original_raw_replays": [
+      "2018-07-19T14:10:35Z",
+      "2019-03-27T17:27:47Z"
+    ],
+    "client_sha256": "892e795393531f93bb485c8382b52a13d35423b7251c7399d5a7ef5c7b912587",
+    "wire_keys_corrected": [
+      "in",
+      "id",
+      "check",
+      "url"
+    ],
+    "accepted_client_requests": 3,
+    "server_php_recovered": false,
+    "successful_index_php_response_recovered": false,
+    "interpretation": "Historical 2026-10-08 source_bytes_recovered state was accurate then but is now superseded ONLY for the client JavaScript, not for server handlers or successful responses."
+  }
 }

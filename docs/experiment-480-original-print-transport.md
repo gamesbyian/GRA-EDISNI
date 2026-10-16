@@ -1,6 +1,10 @@
 # Experiment 480: original Playdead printer-button transport and response grammar
 
-*8 October 2026. Source archaeology, not a new sticker decode or a live input test.*
+*8 October 2026 original audit, with important 16 October 2026 source recovery.*
+
+**Superseding evidence, Experiment 483:** The **full original 2018-07-19 and 2019-03-27 client-side JavaScript** has now been recovered as byte-identical raw archive captures (723,075 bytes, SHA-256 `892e795393531f93bb485c8382b52a13d35423b7251c7399d5a7ef5c7b912587`). The earlier assertion below that the original client bundle was unrecovered is preserved as an **8 October historical status**, not the present truth. The compiled 2018 code actually sends `in,id,check,url` (not wire key `email`) to `/print/prepare.php`, checks `/print/index.php` with those four fields, and on non-rejected input posts `in,id` to `/print/index.php` *again* for printable content. Thus the accepted path contains **three POSTs**, rejected nonempty two, empty one. It supplies `check='true'`, `url=window.location.pathname`, and a `localStorage` browser ID. The embedded `3_print.js` source map is stale/different from the runnable script; the compiled version is authoritative. **Original server PHP and accepted-response bytes are still missing.** Full evidence: [Experiment 483](experiment-483-original-printer-client-runtime.md).
+
+
 
 ## What this audit newly establishes
 

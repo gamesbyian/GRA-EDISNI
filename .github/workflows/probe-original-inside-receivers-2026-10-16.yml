@@ -1,0 +1,51 @@
+name: Read-only archival recovery of original INSIDE web receivers
+
+# Manual only. Initial 2026-10-16 discovery passes have completed.
+# Explicit opt-in avoids continually repeating archive calls on PR updates.
+on:
+  workflow_dispatch:
+    inputs:
+      probe:
+        description: "Archive source recovery step (never original live websites)"
+        type: choice
+        default: iframe
+        options: [metadata, printer-era, iframe]
+
+permissions:
+  contents: read
+
+jobs:
+  historical-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Offline archive parser and safety tests
+        run: |
+          python -m unittest discover -s tests -p test_historical_receiver_archive_probe.py -v
+          python scripts/probe_arquivo_iframe_receiver.py
+      - name: Execute one expressly chosen read-only archive mode
+        env:
+          PROBE: ${{ inputs.probe }}
+        run: |
+          if [ "$PROBE" = "metadata" ]; then
+            python scripts/probe_historical_printer_receiver_archives.py --execute --out search-output/historical-receiver-metadata.json
+          elif [ "$PROBE" = "printer-era" ]; then
+            python scripts/probe_historical_printer_receiver_archives.py --execute --phase2 --out search-output/historical-receiver-printer-era.json
+          elif [ "$PROBE" = "iframe" ]; then
+            python scripts/probe_arquivo_iframe_receiver.py --execute --out search-output/arquivo-iframe-replay.json
+          else
+            echo "Unsupported probe mode" >&2
+            exit 2
+          fi
+      - name: Preserve archive metadata and exact replay bytes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-inside-receiver-archive-probe
+          path: search-output/
+          retention-days: 30
+          if-no-files-found: warn
