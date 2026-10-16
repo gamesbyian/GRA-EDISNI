@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "research_date": "2026-10-16",
+  "mode": "DISCOVER/source-fact reconnaissance",
+  "source_repo": "twinysam/INSIDE-ARG",
+  "source_ref": "master",
+  "source_tree_sha": "4de72d7c2f21bd9eb4144fda51281c84cbcb90c4",
+  "source_snapshot_date": "2026-09-29",
+  "inventory_files": 74,
+  "files_inspected_text": 73,
+  "binary_files_excluded": 1,
+  "method": "Direct GitHub connector fetch_file over all text-or-unknown inventory paths; for oversized saf_dat_col.html use fetch_blob by pinned SHA. Returned text may be decoded/lossy; search is at substring level, not raw byte-exact proof.",
+  "case_insensitive_terms": [
+    "anset",
+    "setrinamaire",
+    "anthony",
+    "tony",
+    "rorschach",
+    "noah",
+    "gladblad",
+    "tobber",
+    "7hg553",
+    "facility",
+    "89b",
+    "twitter.com",
+    "youtube.com"
+  ],
+  "positive_files": [
+    {
+      "path": "terminal41.link/dat/534brn9653f9j8mmd/index.html",
+      "hits": {
+        "anset": 3
+      },
+      "meaning": "three instances in ONE file, multiple image metadata fields, not independent corroboration"
+    },
+    {
+      "path": "terminal41.link/comms_main_viewgate.html",
+      "hits": {
+        "7hg553": 2,
+        "facility": 2,
+        "89b": 2
+      },
+      "meaning": "two within-page textual mentions of the same facility identifier"
+    },
+    {
+      "path": "terminal41.link/comms_main_viewgate_002.html",
+      "hits": {
+        "7hg553": 2,
+        "facility": 2,
+        "89b": 2
+      },
+      "meaning": "two within-page textual mentions of the same facility identifier"
+    },
+    {
+      "path": "terminal41.link/dat/breach_contribution_reg.html",
+      "hits": {
+        "89b": 2
+      },
+      "meaning": "incidental substrings inside unrelated long SHA-256-like uppercase hex data; not references to facility"
+    }
+  ],
+  "checked_large_file": {
+    "path": "terminal41.link/dat/saf_dat_col.html",
+    "sha": "349b818fce618ef55c404bedfb602b1d03f29a48",
+    "status": "text inspected via fetch_blob",
+    "checked_decoded_chars": 1265970,
+    "term_matches": 0,
+    "raw_bytes_verified": false
+  },
+  "excluded_binary": [
+    {
+      "path": "terminal41.link/comms/gate/98/transmission_id41786174541g1f561f4186454544fdrfd532430980980000000000000000k.png",
+      "blob_sha": "127d8772912ffc499e5afaffe321d5bab7e920df",
+      "size_bytes": 19360240,
+      "reason": "binary-media; neither full bitstream nor image metadata reviewed in this specific string scan"
+    }
+  ],
+  "finding": "No additional source-text matches for the tested names beyond one 534brn image-source artifact and facility in viewgate pair; not global-web/account absence proof.",
+  "limitations": [
+    "This is a bounded scan of 74-file community mirror, which historic CL-09 analysis proved incomplete relative to original terminal41 server index.",
+    "Search matched decoded connector text, not all raw bytes; original A reproduction differs from connector rendition, see existing hash audit.",
+    "No inference of ARG-controlled external accounts follows from file-internal tokens.",
+    "Unarchived original backup pages/terminal branches remain unknown and are not included."
+  ]
+}
