@@ -54,9 +54,9 @@ def classify_ce_context(text):
     # my iam8bit parcel?" or missing Blue Prince merch can match it.
     # Require independently distinctive CE/INSIDE puzzle vocabulary.
     iam8bit_inside = bool("iam8bit" in s
-                          and re.search(r"\\binside\\b", s)
-                          and re.search(r"\\b(?:collector|sticker|huddle|realdoll|real doll|"
-                                        r"statue|jelly|cipher|puzzle)\\b", s))
+                          and re.search(r"\binside\b", s)
+                          and re.search(r"\b(?:collector|sticker|huddle|realdoll|real doll|"
+                                        r"statue|jelly|cipher|puzzle)\b", s))
     if not (named_ce or (playdead_inside and meaningful_context) or iam8bit_inside
             or "#insidearg" in s):
         return "unrelated_or_unresolved"
