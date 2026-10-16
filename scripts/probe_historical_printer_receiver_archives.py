@@ -84,6 +84,27 @@ def planned() -> list[dict]:
     return items
 
 
+def planned_phase2() -> list[dict]:
+    """Search only after the historical June 2018 source witness."""
+    original = ORIGINALS["PDJS2018"]
+    queries = []
+    for start, end in (("201806", "201812"), ("2019", "2019")):
+        url = "https://web.archive.org/cdx/search/cdx?" + urllib.parse.urlencode({
+            "url": original, "output": "json", "from": start, "to": end,
+            "fl": "timestamp,original,statuscode,mimetype,digest,length", "limit": "70",
+        })
+        queries.append({"label": "PDJS2018", "provider": "wayback_cdx",
+                        "window": start + "-" + end, "url": url})
+    url = "https://arquivo.pt/textsearch?" + urllib.parse.urlencode({
+        "versionHistory": original, "maxItems": "100",
+    })
+    queries.append({"label": "PDJS2018", "provider": "arquivo_history",
+                    "window": "all-history", "url": url})
+    for task in queries:
+        assert_archive_url(task["url"])
+    return queries
+
+
 def extract_captures(task: dict, raw: bytes) -> list[dict]:
     txt = raw.decode("utf-8", errors="replace").strip()
     if not txt:
@@ -160,7 +181,7 @@ def safe_archived_request(url: str, max_bytes: int = MAX_BODY):
                 "content_type": response.headers.get("Content-Type", "")}, data
 
 
-def probe(tasks: list[dict], outdir: Path) -> dict:
+def probe(tasks: list[dict], outdir: Path, *, phase2: bool = False) -> dict:
     outdir.mkdir(parents=True, exist_ok=True)
     disabled = {}
     results = []
@@ -211,6 +232,19 @@ def probe(tasks: list[dict], outdir: Path) -> dict:
                     replay = detect_replay(entry)
                     if replay:
                         candidates.append(replay)
+        if phase2:
+            # Prefer a post-June 2018 capture and a second 2019 capture,
+            # never silently falling back to the 2016 pre-printer bundle.
+            def capture_time(pair):
+                match = re.search(r"/(?:web|wayback)/(\d{14})", pair[0])
+                return match.group(1) if match else ""
+            selected = []
+            for year in ("2018", "2019"):
+                matches = [x for x in candidates if capture_time(x).startswith(year)]
+                matches.sort(key=lambda x: (capture_time(x) < "20180604000000", capture_time(x)))
+                if matches:
+                    selected.append(matches[0])
+            candidates = selected
         seen = set()
         for url, provenance in candidates:
             if url in seen:
@@ -271,12 +305,13 @@ def self_test():
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--execute", action="store_true")
+    p.add_argument("--phase2", action="store_true", help="search only 2018-19 Playdead printer-era source captures")
     p.add_argument("--out", type=Path, default=DEFAULT)
     a = p.parse_args()
     self_test()
-    jobs = planned()
+    jobs = planned_phase2() if a.phase2 else planned()
     if a.execute:
-        results = probe(jobs, a.out.parent / "originals")
+        results = probe(jobs, a.out.parent / "originals", phase2=a.phase2)
         a.out.parent.mkdir(parents=True, exist_ok=True)
         a.out.write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
         print("ARCHIVE_PROBE_SUMMARY", json.dumps({

@@ -22,8 +22,8 @@ jobs:
           python-version: "3.12"
       - name: Offline safety and archive-parser tests
         run: python -m unittest discover -s tests -p test_historical_receiver_archive_probe.py -v
-      - name: Search three historical archives for two specific source artifacts
-        run: python scripts/probe_historical_printer_receiver_archives.py --execute --out search-output/historical-receiver-archive-2026-10-16.json
+      - name: Retrieve 2018-19 Playdead printer-era JS from archived captures
+        run: python scripts/probe_historical_printer_receiver_archives.py --execute --phase2 --out search-output/historical-receiver-archive-phase2-2026-10-16.json
       - name: Save exact archive replies and candidate replay bytes
         if: always()
         uses: actions/upload-artifact@v4
