@@ -110,15 +110,54 @@ def safe_candidate_path(root: Path, relative: str) -> Path | None:
     return candidate if candidate.is_relative_to(root.resolve()) and candidate.is_file() else None
 
 
-def render(index: dict, visual: dict, root: Path, max_items: int = 48) -> tuple[str, dict]:
+def region_preview(path: Path, bounds: list[int]) -> str:
+    """Render a locally acquired source crop in EXIF-oriented pixel coordinates."""
+    if not isinstance(bounds, list) or len(bounds) != 4 or any(
+        type(v) is not int for v in bounds
+    ):
+        raise ValueError("malformed region coordinates")
+    with Image.open(path) as raw:
+        if raw.width * raw.height > MAX_PIXELS:
+            raise ValueError("oversized source image")
+        oriented = ImageOps.exif_transpose(raw)
+        l,t,r,b = bounds
+        if not (0 <= l < r <= oriented.width and 0 <= t < b <= oriented.height
+                and min(r-l,b-t) >= 16):
+            raise ValueError("invalid or out-of-image proposed crop")
+        patch = oriented.crop(bounds)
+        patch.thumbnail((180,180),Image.Resampling.LANCZOS)
+        output = io.BytesIO()
+        patch.convert("RGB").save(output,format="JPEG",quality=72)
+    return "data:image/jpeg;base64," + base64.b64encode(output.getvalue()).decode("ascii")
+
+
+def region_by_candidate(regions: dict | None) -> dict[str, list[dict]]:
+    if regions is None:
+        return {}
+    if regions.get("new_confirmed_stickers", 0) != 0:
+        raise ValueError("a region-search report must not claim verified stickers")
+    mapping = {}
+    for row in regions.get("candidates", []):
+        ident=row.get("candidate_id")
+        if not isinstance(ident,str) or not ident or ident in mapping:
+            raise ValueError("duplicate or missing candidate in regional report")
+        mapping[ident]=row.get("suggestions",[])
+    return mapping
+
+
+def render(index: dict, visual: dict, root: Path, max_items: int = 48,
+           regions: dict | None = None) -> tuple[str, dict]:
     items = index.get("candidates", [])
     if not isinstance(items, list):
         raise ValueError("candidate index must contain an array")
     matchmap = match_by_candidate(visual)
+    regionmap = region_by_candidate(regions)
     selected = select_for_review(items, matchmap, max_items)
     source_count = len({source_label(x) for x in selected})
     cards = []
     errors = []
+    roi_errors = []
+    roi_previews = 0
     for item in selected:
         ident = str(item["id"])
         path = safe_candidate_path(root, item.get("path", ""))
@@ -144,6 +183,31 @@ def render(index: dict, visual: dict, root: Path, max_items: int = 48) -> tuple[
             suffix = f" · Known case {case}" if case else ""
             descriptions.append(f'<li>{role}: {title} ({kind}){suffix}</li>')
         summary = "<ul>" + "".join(descriptions) + "</ul>" if descriptions else "<p>No hash match among retained references. This does not imply a new CE.</p>"
+        roi_markup = ""
+        proposals = regionmap.get(ident, [])
+        if proposals:
+            details = []
+            for ordinal, proposal in enumerate(proposals[:3], start=1):
+                try:
+                    if path is None:
+                        raise ValueError("source image unavailable")
+                    src = region_preview(path, proposal.get("bbox_xyxy_original_pixels"))
+                    if proposal.get("new_sticker_confirmed") is not False:
+                        raise ValueError("region proposal cannot verify a sticker")
+                    reference = html.escape(str(proposal.get("reference_id", "unnamed")))
+                    coords = html.escape(str(proposal.get("bbox_xyxy_original_pixels", [])))
+                    distance = html.escape(str(proposal.get("hash_distance_sum", "?")))
+                    details.append(f'<div class="roi"><img src="{src}" alt="Unverified region {ordinal}">'
+                                   f'<p>Region {ordinal}: example {reference} · hash distance {distance}'
+                                   f'<span class="coords">{coords}</span></p></div>')
+                    roi_previews += 1
+                except (OSError,ValueError,UnidentifiedImageError,Image.DecompressionBombError) as exc:
+                    roi_errors.append({"candidate_id":ident,"region":ordinal,
+                                       "error":str(exc)[:140]})
+            roi_markup = ('<h3>Suggested image regions (unverified)</h3>'
+                          '<div class="roi-grid">'+''.join(details)+'</div>'
+                          '<p class="meta">A reference sticker number is an example template,'
+                          ' NOT a reading of the candidate photograph.</p>')
         source_tag = html.escape(source_label(item))
         ident_tag = html.escape(ident)
         sha = html.escape(str(item.get("sha256", ""))[:16])
@@ -153,7 +217,7 @@ def render(index: dict, visual: dict, root: Path, max_items: int = 48) -> tuple[
   <p class="meta">Source batch: {source_tag}</p>
   <p class="links">{source_html} · {media_html}</p>
   <p class="meta">Local image digest prefix: {sha}</p>
-  <h3>Review-only similarity</h3>{summary}
+  <h3>Review-only similarity</h3>{summary}{roi_markup}
   <p class="status">UNREVIEWED · no sticker verified</p></div>
 </article>''')
     styles = """
@@ -161,7 +225,7 @@ body{font:15px/1.5 system-ui,sans-serif;margin:2rem auto;padding:0 1rem;max-widt
 header{max-width:900px;margin-bottom:2rem}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1rem}
 .card{background:white;border:1px solid #ccc;border-radius:10px;overflow:hidden;min-width:0}
 .card img{display:block;width:100%;height:250px;object-fit:contain;background:#ddd}
-.card .body{padding:1rem}.card h2{font-size:1.05rem;margin:0}.card h3{font-size:.9rem}
+.roi-grid{display:flex;gap:.4rem;flex-wrap:wrap}.roi{max-width:120px}.roi img{width:120px;height:120px;object-fit:contain;background:#ececec}.roi p{font-size:.72rem;overflow-wrap:anywhere}.coords{display:block;color:#595959}\n.card .body{padding:1rem}.card h2{font-size:1.05rem;margin:0}.card h3{font-size:.9rem}
 .meta{color:#505050;overflow-wrap:anywhere}.links{overflow-wrap:anywhere}
 .status{font-weight:bold;font-size:.8rem;color:#8a4400}.missing{padding:3rem 1rem;background:#e8e8e8}
 ul{padding-left:1.3rem}li{margin-bottom:.3rem}a{color:#124f9b}"""
@@ -182,6 +246,8 @@ ul{padding-left:1.3rem}li{margin-bottom:.3rem}a{color:#124f9b}"""
         "represented_source_groups": source_count,
         "unavailable_or_unsafe_thumbnails": errors,
         "selected_candidate_ids": [str(x["id"]) for x in selected],
+        "region_crop_previews_embedded": roi_previews,
+        "invalid_region_preview_records": roi_errors,
         "new_confirmed_stickers": 0,
         "evidence_ceiling": "offline unreviewed media and hash-similarity only",
     }
@@ -195,12 +261,15 @@ def main() -> None:
     parser.add_argument("--candidate-root", type=Path, default=Path("evidence-work"))
     parser.add_argument("--output", type=Path, default=Path("visual-evidence-work/review-gallery.html"))
     parser.add_argument("--max-items", type=int, default=48)
+    parser.add_argument("--regions",type=Path,default=None,
+                        help="Optional review-only region-suggestions.json from opt-in pilot")
     args = parser.parse_args()
     body, report = render(
         json.loads(args.index.read_text(encoding="utf-8")),
         json.loads(args.matches.read_text(encoding="utf-8")),
         args.candidate_root,
         args.max_items,
+        regions=json.loads(args.regions.read_text(encoding="utf-8")) if args.regions else None,
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(body, encoding="utf-8")
