@@ -1,3 +1,5 @@
+> **16 October reconciliation:** The Reddit buyer `Leading_Highlight553` is already tied by Raezores to canonical **/043 G** (latcholia). This is a retained **original-photo retrieval failure audit for a known sale**, not an active lead to identify an additional CE. [Corrected packet](inside-ce-raezores-public-lead-handoff-2026-10-13.md).
+
 # October 2026 $400 INSIDE CE auction: original photograph recovery audit
 
 **Investigation:** October 13, 2026 local (GitHub Actions execution October 14 UTC). **Original public acquisition claim:** [Reddit comment `pf7wee4`](https://www.reddit.com/comments/1vdbrus/_/pf7wee4/) by `Leading_Highlight553`, published October 11, 2026 at 10:52:15 UTC. **Status:** exact auction item number **not found**, original eBay photos **not recovered**, no newly proved physical CE or numbered sticker. This is a record of actual source access and unsuccessful retrieval, **not evidence that the October sale didn't occur**.
