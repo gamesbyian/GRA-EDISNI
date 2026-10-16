@@ -46,7 +46,7 @@ jobs:
             echo "No YouTube cookie secret available; continuing unauthenticated."
           fi
       - name: Harvest one source without large media
-        run: python scripts/external_evidence/harvest_public.py --source-id "${{ matrix.source_id }}"
+        run: python scripts/external_evidence/harvest_public.py --source-id "${{ matrix.source_id }}" --strict-selected
       - name: Upload smoke artifact
         if: always()
         uses: actions/upload-artifact@v4
