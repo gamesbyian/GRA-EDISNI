@@ -17,10 +17,10 @@ class October2026OwnerLeadTests(unittest.TestCase):
             root/"archive/external/twinysam-inside-arg/stickers.md"
         ).read_text(encoding="utf-8")
 
-    def test_new_original_source_exact_handle_only_not_a_new_owner(self):
+    def test_source_now_reconciled_with_known_043_despite_stale_archive(self):
         out = inspect(self.source, self.ledger)
         self.assertEqual(out["source_status"],
-                         "unreconciled-exact-account-public-auction-claim")
+                         "closed-known-canonical-043-buyer-source")
         self.assertEqual(out["known_name_occurrences"], 0)
         self.assertEqual(out["created_utc"], "2026-10-11T10:52:15Z")
         self.assertEqual(out["auction_win_claim_usd"], 400)
@@ -42,7 +42,8 @@ class October2026OwnerLeadTests(unittest.TestCase):
     def test_known_alias_in_ledger_changes_review_class_not_serial(self):
         out = inspect(self.source, self.ledger + "\n- U99 Leading_Highlight553")
         self.assertEqual(out["known_name_occurrences"], 1)
-        self.assertEqual(out["source_status"], "possible-existing-canonical-pseudonym-review")
+        self.assertEqual(out["source_status"], "closed-known-canonical-043-buyer-source")
+        self.assertTrue(out["snapshot_name_match_only_not_novelty"])
         self.assertFalse(out["new_sticker_serial_confirmed"])
 
     def test_host_post_and_timestamp_invariants(self):
