@@ -23,6 +23,7 @@ HOSTS = {
     "www.iam8bit.com", "cdn.shopify.com", "cdn.vox-cdn.com",
     "i.redd.it", "preview.redd.it", "i.imgur.com",
     "pbs.twimg.com", "i.ebayimg.com", "static0.polygonimages.com",
+    "cdn.bsky.app",
 }
 FORMATS = {"JPEG": ".jpg", "PNG": ".png", "WEBP": ".webp", "GIF": ".gif"}
 MAX_TOTAL_BYTES = 180 * 1024 * 1024
@@ -123,16 +124,30 @@ def select(leads: list[dict], per_page: int, total: int) -> list[dict]:
             resolution_preference(previous["image_url"]),
         ):
             assets[ident] = entry
-    selected = []
-    for key, rows in sorted(grouped.items()):
-        sorted_rows = sorted(
+    # Round-robin selection prevents lexicographically earlier source IDs
+    # from consuming the entire batch before later source pages are considered.
+    # Score the first round by each source's strongest lead rather than its ID.
+    queues = {
+        key: sorted(
             rows.values(),
             key=lambda r: (-r.get("hint_count", 0),
                            -resolution_preference(r["image_url"]), r["image_url"]),
-        )
-        selected.extend(sorted_rows[:min(per_page, total - len(selected))])
-        if len(selected) >= total:
-            break
+        )[:per_page]
+        for key, rows in grouped.items()
+    }
+    source_order = sorted(
+        queues,
+        key=lambda key: (-queues[key][0].get("hint_count", 0),
+                         -resolution_preference(queues[key][0]["image_url"]),
+                         key),
+    )
+    selected = []
+    for depth in range(per_page):
+        for key in source_order:
+            if depth < len(queues[key]):
+                selected.append(queues[key][depth])
+                if len(selected) == total:
+                    return selected
     return selected
 
 
