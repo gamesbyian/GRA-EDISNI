@@ -87,6 +87,37 @@ class PublicBlueskyTriageTests(unittest.TestCase):
             with self.subTest(body=body):
                 self.assertEqual(triage.classify_ce_context(body), expected)
 
+    def test_real_publisher_anniversary_recovered_without_owner_promotion(self):
+        official_body = ("Happy 10th Birthday to INSIDE! We're thinking a lot about "
+                         "the extremely normal collector's edition we made. "
+                         "https://youtu.be/gqlQaHgRaHg")
+        self.assertEqual(
+            triage.classify_ce_context(official_body, "iam8bit.com"),
+            "publisher_domain_handle_reference")
+        self.assertEqual(
+            triage.classify_ce_context(official_body, "anonymous.bsky.social"),
+            "unrelated_or_unresolved")
+        self.assertEqual(
+            triage.classify_ce_context(
+                "@iam8bit.com sent us a mystery package. What was inside?",
+                "iam8bit.com"), "unrelated_or_unresolved")
+        publisher = dict(POST, uri="at://did:plc:4nwd4d33o3hw6b5b3syxokii/app.bsky.feed.post/3mphksb3pku2h",
+                         handle="iam8bit.com", text_excerpt=official_body, target=False)
+        false_parcel = dict(POST,
+            uri="at://did:plc:unrelated/app.bsky.feed.post/xyzabc",
+            handle="sixoneindie.com", target=False,
+            text_excerpt="@iam8bit.com sent us a mystery package. What was inside?")
+        report = {"state": "executed_bounded", "results": [
+            {"kind": "blind_discovery", "status": "ok", "key": "frozen",
+             "version": "v2", "posts": [publisher, false_parcel, POST]}]}
+        hits, summary = triage.build_queue(report)
+        self.assertEqual(len(hits), 2)
+        self.assertEqual(hits[0]["uri"], URI)
+        self.assertEqual(hits[1]["context_class"], "publisher_domain_handle_reference")
+        self.assertFalse(hits[1]["owner_verified"])
+        self.assertFalse(hits[1]["sticker_verified"])
+        self.assertEqual(summary["excluded_from_review_queue"], 1)
+
     def test_topic_gating_removes_false_positives_without_losing_raw_count(self):
         football = dict(POST, uri="at://did:plc:sport/app.bsky.feed.post/abc123",
                         handle="sports.bsky.social", target=False,
