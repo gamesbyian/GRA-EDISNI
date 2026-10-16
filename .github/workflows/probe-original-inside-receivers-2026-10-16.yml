@@ -21,9 +21,11 @@ jobs:
         with:
           python-version: "3.12"
       - name: Offline safety and archive-parser tests
-        run: python -m unittest discover -s tests -p test_historical_receiver_archive_probe.py -v
-      - name: Retrieve 2018-19 Playdead printer-era JS from archived captures
-        run: python scripts/probe_historical_printer_receiver_archives.py --execute --phase2 --out search-output/historical-receiver-archive-phase2-2026-10-16.json
+        run: |
+          python -m unittest discover -s tests -p test_historical_receiver_archive_probe.py -v
+          python scripts/probe_arquivo_iframe_receiver.py
+      - name: Follow original Arquivo.pt 2018-2019 iframe URLs, not the viewer shells
+        run: python scripts/probe_arquivo_iframe_receiver.py --execute --out search-output/arquivo-iframe-replay-2026-10-16.json
       - name: Save exact archive replies and candidate replay bytes
         if: always()
         uses: actions/upload-artifact@v4
