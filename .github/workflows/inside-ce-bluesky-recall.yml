@@ -1,0 +1,113 @@
+name: Bounded Bluesky CE recall audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/audit_bluesky_ce_recall.py'
+      - 'tests/test_bluesky_ce_recall.py'
+      - 'tests/test_bluesky_ce_triage.py'
+      - 'scripts/triage_bluesky_ce_recall.py'
+      - 'scripts/rank_inside_ce_public_leads.py'
+      - 'scripts/build_inside_ce_native_search_campaign.py'
+      - 'data/reference/inside-ce-ownership-secondary-platforms.tsv'
+      - '.github/workflows/inside-ce-bluesky-recall.yml'
+  workflow_dispatch:
+    inputs:
+      execute:
+        description: 'Execute bounded live public Bluesky API audit? No runs in offline mode'
+        type: choice
+        options: ['no', 'yes']
+        default: 'no'
+      max_requests:
+        description: 'Total public GET requests, including direct source control; 1–17'
+        type: choice
+        options: ['1', '5', '9', '17']
+        default: '17'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: inside-ce-bluesky-recall-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  bounded-native-bluesky:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exact offline negative/positive controls and access-gate tests
+        run: |
+          python -m unittest discover -s tests -p 'test_bluesky_ce_recall.py' -v
+          python -m unittest discover -s tests -p 'test_bluesky_ce_triage.py' -v
+          python -m unittest discover -s tests -p 'test_inside_ce_public_leads.py' -v
+      - name: Save immutable, offline query plan
+        run: |
+          python scripts/audit_bluesky_ce_recall.py \
+            --output research-output/bluesky-recall-offline-plan.json
+      - name: Optional explicit manual bounded public search
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
+        env:
+          REQUEST_CAP: ${{ inputs.max_requests }}
+        run: |
+          python scripts/audit_bluesky_ce_recall.py --execute \
+            --api-host primary --max-requests "$REQUEST_CAP" --delay-seconds 1 \
+            --output research-output/bluesky-recall-public-results.json
+      - name: Generate bounded deduplicated review-only lead queue
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
+        run: |
+          python scripts/triage_bluesky_ce_recall.py \
+            --input research-output/bluesky-recall-public-results.json \
+            --output research-output/bluesky-public-review-only.jsonl \
+            --summary research-output/bluesky-public-review-summary.json \
+            --max-candidates 100
+      - name: Report exact source and observed probe statuses (no speculative coverage)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.execute == 'yes' }}
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("research-output/bluesky-recall-public-results.json")
+          if p.exists():
+              r = json.loads(p.read_text())
+              control = r["results"][0] if r["results"] else {}
+              print(json.dumps({
+                  "fetched_at_utc": r["fetched_at_utc"],
+                  "api_host": r["api_host"],
+                  "requests_sent": r["requests_sent"],
+                  "blocked_versions": r.get("blocked_versions"),
+                  "direct_source": control.get("post"),
+                  "probes": [{
+                      "key": x.get("key"), "version": x.get("version"),
+                      "status": x["status"],
+                      "http_status": x.get("http_status"),
+                      "returned": x.get("returned"),
+                      "hits_total_reported": x.get("hits_total_reported"),
+                      "cursor_available": x.get("cursor_available"),
+                      "gold_found": x.get("gold_found")
+                  } for x in r["results"][1:]],
+              }, ensure_ascii=False))
+              sp = Path("research-output/bluesky-public-review-summary.json")
+              if sp.exists():
+                  print("REVIEW_ONLY_COUNTS:", sp.read_text()[:2000])
+                  qp = Path("research-output/bluesky-public-review-only.jsonl")
+                  for line in qp.read_text().splitlines()[:10]:
+                      item = json.loads(line)
+                      print("REVIEW_ONLY_CANDIDATE:", json.dumps({
+                          "url": item["url"],
+                          "score": item["lead_score"],
+                          "excerpt": item["excerpt"][:150],
+                          "known_positive_control": item["known_positive_control"],
+                          "sticker_verified": False,
+                      }, ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inside-ce-bluesky-recall
+          path: research-output/
+          retention-days: 14
+          if-no-files-found: error

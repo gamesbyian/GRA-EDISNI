@@ -14,6 +14,22 @@ class LeadTests(unittest.TestCase):
             points,reasons=mod.score({"title":text})
             self.assertGreaterEqual(points,4,text)
             self.assertTrue(reasons)
+    def test_caswell_exact_public_text_is_a_review_lead_not_sticker_proof(self):
+        post = "Do I still need Inside Collector’s edition jelly statue?"
+        score, reasons = mod.score({"text": post})
+        self.assertGreaterEqual(score, 4)
+        self.assertIn("possible_owner_disposal_question_not_confirmed", reasons)
+        self.assertIn("specific_inside_ce_title", reasons)
+        self.assertNotIn("first_person_en", reasons)
+        got = mod.triage([{
+            "url": "https://bsky.app/profile/tomcaswell.games/post/3mta6ecjbvk2i",
+            "text": post,
+        }], [])
+        self.assertEqual(got[0]["new_confirmed_stickers"], 0)
+        self.assertEqual(got[0]["status"], "unverified_public_lead")
+        not_ce = mod.score({"text": "Do I still need this ordinary kitchen statue?"})
+        self.assertNotIn("specific_inside_ce_title", not_ce[1])
+
     def test_exact_url_dedup_and_known(self):
         source="https://www.example.com/post/12?utm_source=x"
         got=mod.triage([{"url":source,"text":"I bought the INSIDE iam8bit CE"},

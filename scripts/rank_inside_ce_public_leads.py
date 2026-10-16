@@ -14,6 +14,13 @@ from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 POSITIVE = (
+    # Caswell-type text suggests possible possession/disposal, not confirmed
+    # ownership or evidence of an intact CE/sticker.
+    (r"\b(?:do i still need|should i keep|thinking of selling|getting rid of)\b",
+     2, "possible_owner_disposal_question_not_confirmed"),
+    # Exact CE title plus distinct quotation marks, but not a symbol/serial.
+    (r"\binside\b.{0,40}\bcollector(?:['\u2019]s)?\s+edition\b",
+     2, "specific_inside_ce_title"),
     (r"\b(?:my|mine|i bought|i got|i own|i received|i have|unboxed|selling my|sold my)\b", 4, "first_person_en"),
     (r"(?:届いた|購入した|買いました|持っています|開封した|買った|到着した)", 4, "first_person_ja"),
     (r"(?:我买了|我買了|收到了|收到貨|我有一套|開箱)", 4, "first_person_zh"),
