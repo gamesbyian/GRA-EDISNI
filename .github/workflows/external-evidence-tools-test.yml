@@ -4,6 +4,13 @@ on:
   pull_request:
     paths:
       - "scripts/external_evidence/**"
+      - "scripts/audit_ce_search_run_health.py"
+      - "scripts/probe_inside_ce_wayback_cdx.py"
+      - "tests/test_ce_search_run_health.py"
+      - "tests/test_ce_search_execution_failures.py"
+      - "tests/test_inside_ce_wayback_cdx.py"
+      - "tests/test_ce_public_reddit_market_search.py"
+      - "data/reference/inside-ce-search-pipeline-risk-matrix-2026-10-16.tsv"
       - "data/external-acquisition-targets.json"
       - ".github/workflows/external-evidence-*.yml"
   workflow_dispatch:
@@ -22,6 +29,12 @@ jobs:
           python-version: "3.12"
       - name: Compile Python helpers
         run: python -m py_compile scripts/external_evidence/*.py
+      - name: Verify cross-pipeline search execution and censoring controls
+        run: |
+          python -m unittest discover -s tests -p 'test_ce_search_run_health.py' -v
+          python -m unittest discover -s tests -p 'test_ce_search_execution_failures.py' -v
+          python -m unittest discover -s tests -p 'test_inside_ce_wayback_cdx.py' -v
+          python -m unittest discover -s tests -p 'test_ce_public_reddit_market_search.py' -v
       - name: Parse acquisition manifest
         run: python -m json.tool data/external-acquisition-targets.json >/dev/null
       - name: Exercise Git blob verifier
