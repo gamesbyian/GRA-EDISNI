@@ -16,18 +16,18 @@
       "statement_summary": "Writer reports purchasing an INSIDE CE box from a seller for about USD 650 with the PS4 physical game retained/separated in the transaction because buyer plays Xbox.",
       "original_disc_handoff": "ambiguous-from-grammar; seller appears to retain disc, needs original full context",
       "where_sticker_might_be": "The white numbered sticker seals the black game wrapper. If that wrapper stayed with the separated PS4 game, its last custodian might be the seller, but nothing directly establishes wrapper or sticker custody.",
-      "canonical_exact_pseudonym_in_stickers_md": false,
+      "canonical_exact_pseudonym_in_stickers_md": true,
       "original_media_retrieved": false,
       "sticker_number_observed": false,
       "physical_copy_newly_proven": false,
       "separate_seller_identity_known": false,
       "relationship_to_pricecharting_march9_2026_sale": "temporal coincidence only, no original seller/image/link match; DO NOT combine",
-      "priority": "high-for-source-reconciliation",
-      "recommendation": "Check whether community already reconciled this case under a different username, missing disc or resale listing. Avoid unsolicited owner outreach; refer source to raezores only as a public buyer report.",
+      "priority": "closed-known-case-source-history-only",
+      "recommendation": "DO NOT send as new owner: canonical L46 names Afaith_1, who confirmed sticker lost on 2026-09-22. The alleged seller/game-wrapper split remains unverified context.",
       "statuses": [
-        "unreconciled-public-acquisition-claim",
-        "original-game-component-possibly-separated",
-        "physical-sticker-not-observed"
+        "known_canonical_lost_L46",
+        "speculative_original_game_component_separated",
+        "physical_sticker_not_observed_in_this_source"
       ],
       "archive_created_utc": 1772947941,
       "archived_thread_response_sha256": "37340bdeba812b4bc4491bb1507d651743063b497df9195fd2a88e36b4c87725",
@@ -36,7 +36,12 @@
       "original_public_comment_retrieved": true,
       "archive_run": "https://github.com/gamesbyian/GRA-EDISNI/actions/runs/38491175914",
       "archived_target_follow_up_count": 0,
-      "archive_truncation_flag": false
+      "archive_truncation_flag": false,
+      "canonical_status": "known_lost_L46",
+      "canonical_status_verified_date": "2026-10-16",
+      "canonical_sticker_loss_confirmation_date": "2026-09-22",
+      "canonical_source": "https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md",
+      "canonical_git_blob_sha": "90ab3d48e5e0b73ec820fd6f98bf7b8792fb4216"
     }
   ]
 }
