@@ -105,6 +105,13 @@ class WaybackProbeTests(unittest.TestCase):
                          ["not_attempted_after_provider_block"] * 3)
         self.assertEqual([x["source_url"] for x in results],
                          [x["source_url"] for x in tasks])
+        stats = probe.summarize_run(results, executed=True)
+        self.assertEqual(stats["attempted_requests"], 1)
+        self.assertEqual(stats["not_attempted_after_provider_block"], 3)
+        self.assertEqual(stats["sources_selected"], 2)
+        self.assertEqual(stats["tasks_written"], 4)
+        self.assertEqual(stats["provider_or_parse_failures"], 1)
+
 
     def test_error_handling_no_retry_or_bypass(self):
         tasks = probe.generate(
