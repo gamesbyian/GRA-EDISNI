@@ -15,7 +15,11 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-ROOT = "https://public.api.bsky.app/xrpc/"
+# Both hosts are documented Bluesky AppView entrypoints. The cached public
+# hostname returned 403 for both native search versions on 2026-10-16;
+# use the separately documented primary AppView hostname by default.
+HOSTS = {"primary": "https://api.bsky.app/xrpc/",
+         "cached": "https://public.api.bsky.app/xrpc/"}
 GOLD_DID = "did:plc:msovagwqdq3ew2rrikvpqp7c"
 GOLD_RKEY = "3mta6ecjbvk2i"
 GOLD_URI = f"at://{GOLD_DID}/app.bsky.feed.post/{GOLD_RKEY}"
@@ -64,11 +68,13 @@ def fingerprint(tasks):
     return hashlib.sha256(json.dumps(tasks, sort_keys=True,
               separators=(",", ":"), ensure_ascii=False).encode()).hexdigest()
 
-def fetch(endpoint, params):
+def fetch(endpoint, params, *, api_host="primary"):
+    if api_host not in HOSTS:
+        raise ValueError("Unapproved Bluesky API host")
     if endpoint not in ALLOWED:
         raise ValueError("Unapproved public endpoint")
     req = urllib.request.Request(
-        ROOT + endpoint + "?" + urllib.parse.urlencode(params),
+        HOSTS[api_host] + endpoint + "?" + urllib.parse.urlencode(params),
         headers={"Accept": "application/json",
                  "User-Agent": "GRA-EDISNI-CE-recall-audit/1.0"},
     )
@@ -132,7 +138,9 @@ def summarize(index, task, response=None, error=None):
     return result
 
 def run(*, execute=False, max_requests=17, delay=1.0,
-        fetch_fn=None, sleep_fn=None):
+        api_host="primary", fetch_fn=None, sleep_fn=None):
+    if api_host not in HOSTS:
+        raise ValueError("Unapproved Bluesky API host")
     if not 1 <= max_requests <= 17:
         raise ValueError("max_requests must be 1..17")
     if delay < 1:
@@ -141,8 +149,11 @@ def run(*, execute=False, max_requests=17, delay=1.0,
     sha = fingerprint(tasks)
     if not execute:
         return {"state": "planned_unexecuted", "manifest_sha256": sha,
-                "requests_sent": 0, "tasks": tasks, "results": []}
-    fetch_fn, sleep_fn = fetch_fn or fetch, sleep_fn or time.sleep
+                "api_host": api_host, "requests_sent": 0, "tasks": tasks,
+                "results": []}
+    if fetch_fn is None:
+        fetch_fn = lambda endpoint, params: fetch(endpoint, params, api_host=api_host)
+    sleep_fn = sleep_fn or time.sleep
     results, stop_reason, blocked_versions = [], None, set()
     requests_sent, skipped_blocked = 0, 0
     for i, task in enumerate(tasks):
@@ -173,7 +184,7 @@ def run(*, execute=False, max_requests=17, delay=1.0,
         if stop_reason:
             break
     return {
-        "state": "executed_bounded",
+        "state": "executed_bounded", "api_host": api_host,
         "fetched_at_utc": datetime.now(timezone.utc).isoformat(),
         "manifest_sha256": sha, "requests_sent": requests_sent,
         "tasks_planned": len(tasks),
@@ -195,11 +206,13 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--execute", action="store_true")
+    ap.add_argument("--api-host", choices=tuple(HOSTS), default="primary",
+                    help="Official AppView hostname; primary avoids cached public search 403")
     ap.add_argument("--max-requests", type=int, default=17)
     ap.add_argument("--delay-seconds", type=float, default=1.0)
     args = ap.parse_args()
     report = run(execute=args.execute, max_requests=args.max_requests,
-                 delay=args.delay_seconds)
+                 api_host=args.api_host, delay=args.delay_seconds)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n",
                            encoding="utf-8")
