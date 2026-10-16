@@ -8,6 +8,8 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import unicodedata
+from collections import Counter
 from pathlib import Path
 from urllib.parse import quote
 
@@ -22,6 +24,40 @@ def candidate_url(post):
     if not match or not HANDLE.fullmatch(handle):
         return None
     return "https://bsky.app/profile/" + quote(handle.lower(), safe=".-") + "/post/" + match.group(2)
+
+
+def classify_ce_context(text):
+    """Conservative Playdead-specific source relevance, separate from owner score.
+
+    Blank text cannot be classified by words. The original native API artifact
+    still retains every post, so a future image/alt-text experiment can review
+    it separately without mistaking broad-query hits for proven CE evidence.
+    """
+    s = unicodedata.normalize("NFKC", str(text or "")).casefold()
+    s = s.translate(str.maketrans({"’": "'", "‘": "'", "ʼ": "'"}))
+    s = re.sub(r"\s+", " ", s)
+    named_ce = bool(
+        re.search(r"\binside\s+collector(?:'s|s)?\s+edition\b", s)
+        or re.search(r"\bcollector(?:'s|s)?\s+edition\s+of\s+(?:playdead's\s+)?inside\b", s)
+        or re.search(r"\bcollector(?:'s|s)?\s+edition\s+for\s+(?:the\s+game\s+)?inside\b", s)
+    )
+    playdead_inside = bool(re.search(r"\bplaydead\b", s) and re.search(r"\binside\b", s))
+    meaningful_context = bool(re.search(
+        r"\b(?:collector|sticker|cipher|arg|packaging|code|huddle|real doll|realdoll|statue|jelly)\b",
+        s))
+    iam8bit_inside = ("iam8bit" in s and "inside" in s)
+    if not (named_ce or (playdead_inside and meaningful_context) or iam8bit_inside
+            or "#insidearg" in s):
+        return "unrelated_or_unresolved"
+    owner_language = bool(re.search(
+        r"\b(?:do i still need|should i keep|i (?:have|own|bought|got|received|"
+        r"ordered|sold|unboxed)|my (?:copy|edition|statue|huddle|sticker|"
+        r"collector)|selling my|getting rid of)\b", s))
+    if owner_language:
+        return "possible_owner_claim"
+    if re.search(r"\b(?:arg|cipher|sticker|puzzle|code)\b", s) or "#insidearg" in s:
+        return "arg_discussion"
+    return "other_playdead_ce_context"
 
 def build_queue(report, *, max_candidates=100):
     if report.get("state") != "executed_bounded" or not isinstance(report.get("results"), list):
@@ -45,11 +81,13 @@ def build_queue(report, *, max_candidates=100):
             if not url:
                 continue
             pts, reasons = score({"text": post.get("text_excerpt", "")})
+            context = classify_ce_context(post.get("text_excerpt", ""))
             uri = post["uri"]
             x = joined.setdefault(uri, {
                 "uri": uri, "url": url, "published_at": post.get("created_at"),
                 "excerpt": str(post.get("text_excerpt") or "")[:450],
                 "lead_score": pts, "reason_codes": reasons,
+                "context_class": context,
                 "search_matches": [], "known_positive_control": bool(post.get("target")),
                 "evidence_status": "unverified_public_post_for_review",
                 "owner_verified": False, "sticker_verified": False,
@@ -61,8 +99,15 @@ def build_queue(report, *, max_candidates=100):
                 "key": result.get("key"), "version": result.get("version"),
                 "rank_on_page": rank,
             })
-    ranked = sorted(joined.values(), key=lambda x: (
-        -x["lead_score"], -len(x["search_matches"]), x["uri"]))
+    priority = {"possible_owner_claim": 0, "arg_discussion": 1,
+                "other_playdead_ce_context": 2}
+    relevant = [x for x in joined.values() if x["context_class"] in priority]
+    # Keep all original unfiltered posts in the immutable API artifact; never
+    # hand a generic sports/film post to Raezores merely for matching "Inside".
+    ranked = sorted(relevant, key=lambda x: (
+        priority[x["context_class"]], -x["lead_score"],
+        -len(x["search_matches"]), x["uri"]))
+    classes = Counter(x["context_class"] for x in joined.values())
     summary = {
         "retrieved_at_utc": report.get("fetched_at_utc"),
         "api_host": report.get("api_host", "unrecorded"),
@@ -70,9 +115,13 @@ def build_queue(report, *, max_candidates=100):
         "failed_queries": errors,
         "search_post_appearances": indexed,
         "unique_public_post_uris": len(joined),
+        "context_class_counts": dict(sorted(classes.items())),
+        "relevant_review_candidates": len(relevant),
+        "excluded_from_review_queue": len(joined) - len(relevant),
+        "original_unfiltered_api_results_retained": True,
         "queue_written": min(max_candidates, len(ranked)),
         "queue_truncated": len(ranked) > max_candidates,
-        "known_positive_found": any(x["known_positive_control"] for x in ranked),
+        "known_positive_found": any(x["known_positive_control"] for x in relevant),
         "new_confirmed_stickers": 0,
         "interpretation": "Public source suggestions for independent human review, not known owners",
     }
