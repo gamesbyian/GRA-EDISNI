@@ -155,6 +155,31 @@ def build_queue(report, *, max_candidates=100):
     }
     return ranked[:max_candidates], summary
 
+def classify_media_caption_relevance(post):
+    """Conservative, review-only indicator for the INSIDE CE in original image captions.
+
+    Title adjacency alone has observed collisions with other games
+    (Terminator 2D, Batman, House of 1000 Doors). Require *both* the
+    INSIDE CE title and its distinctive Huddle or Playdead context.
+    """
+    media = post.get("media_metadata")
+    if not isinstance(media, dict):
+        return "media_metadata_not_captured"
+    descriptions = media.get("record_image_alts", [])
+    previews = media.get("image_previews", [])
+    combined = list(descriptions) if isinstance(descriptions, list) else []
+    if isinstance(previews, list):
+        combined.extend(x.get("alt", "") for x in previews if isinstance(x, dict))
+    for raw in combined:
+        s = unicodedata.normalize("NFKC", str(raw)).casefold()
+        s = s.translate(str.maketrans({"’": "'", "‘": "'", "ʼ": "'"}))
+        title = re.search(r"\\binside\\s+collector(?:'s|s)?\\s+edition\\b", s)
+        specific = re.search(r"\\b(?:huddle|playdead)\\b", s)
+        if title and specific:
+            return "inside_ce_huddle_source_caption"
+    return "not_identified_from_available_captions"
+
+
 def build_media_review_queue(report, *, max_candidates=200):
     """Independently preserve image-led posts even when body text is irrelevant.
 
@@ -192,12 +217,14 @@ def build_media_review_queue(report, *, max_candidates=200):
                 continue
             uri = post["uri"]
             context = classify_ce_context(post.get("text_excerpt", ""), post.get("handle", ""))
+            caption_context = classify_media_caption_relevance(post)
             if uri not in selected:
                 selected[uri] = {
                     "uri": uri, "url": url,
                     "published_at": post.get("created_at"),
                     "indexed_at": post.get("indexed_at"),
                     "context_class": context,
+                    "media_caption_relevance": caption_context,
                     "text_excerpt": str(post.get("text_excerpt") or "")[:450],
                     "image_previews": views[:12],
                     "declared_image_count": declared,
@@ -217,13 +244,24 @@ def build_media_review_queue(report, *, max_candidates=200):
                 "version": result.get("version"),
             })
     items = sorted(selected.values(), key=lambda x: (
-        0 if x["context_class"] != "unrelated_or_unresolved" else 1,
+        0 if x["context_class"] != "unrelated_or_unresolved" else
+        1 if x["media_caption_relevance"] == "inside_ce_huddle_source_caption" else 2,
         0 if x["image_previews"] else 1,
         x["uri"],
     ))
     counts = dict(sorted(stats.items()))
     return items[:max_candidates], {
         "unique_media_linked_posts": len(items),
+        "strong_original_caption_ce_context": sum(
+            x["media_caption_relevance"] == "inside_ce_huddle_source_caption"
+            for x in items),
+        "image_preview_posts": sum(bool(x["image_previews"]) for x in items),
+        "external_link_posts": sum(bool(x["external_public_url"]) for x in items),
+        "no_original_image_captions": sum(
+            bool(x["image_previews"]) and not any(
+                (p.get("alt") or "").strip() for p in x["image_previews"])
+            and not any((a or "").strip() for a in x["record_image_alts"])
+            for x in items),
         "media_queue_returned": min(max_candidates, len(items)),
         "media_queue_truncated": len(items) > max_candidates,
         "source_post_appearances": counts.get("post_appearances", 0),
