@@ -1,8 +1,10 @@
+> **16 October correction:** The community register explicitly resolves October buyer `Leading_Highlight553` to **/043 G** and March buyer `Afaith_1` to **L46 (lost)**. The original source-recall control count is now **nine**, with seven positive known-handle controls. The repository's earlier handoff had missed these closures even though this existing audit noted both. [Corrected current handoff](inside-ce-raezores-public-lead-handoff-2026-10-13.md).
+
 # First real-world CE owner-source recall audit (2026-10-13)
 
 **Purpose:** Prevent already-known physical CEs being resurfaced as false new leads for Raezore when they appear through a different URL or historical platform. Use passive public posts only. **Do not contact owners or merge identities through inferred personal information.**
 
-**Source of authority:** [community sticker list](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md) (live at validation time), [Raezore search methods](https://github.com/twinysam/INSIDE-ARG/blob/master/raezores-research.md). **Machine-readable fixture:** [eight public source controls](../../data/reference/inside-ce-owner-source-recall-controls-2026-10-13.tsv). **Detector:** [same-platform public-handle crosscheck](../../scripts/crosscheck_inside_ce_public_handles.py). **Regression:** [four local tests](../../tests/test_inside_ce_public_handle_crosscheck.py) and [live canonical CI audit](../../.github/workflows/inside-ce-owner-recall-audit.yml).
+**Source of authority:** [community sticker list](https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md) (live at validation time), [Raezore search methods](https://github.com/twinysam/INSIDE-ARG/blob/master/raezores-research.md). **Machine-readable fixture:** [nine public source controls](../../data/reference/inside-ce-owner-source-recall-controls-2026-10-13.tsv). **Detector:** [same-platform public-handle crosscheck](../../scripts/crosscheck_inside_ce_public_handles.py). **Regression:** [four local tests](../../tests/test_inside_ce_public_handle_crosscheck.py) and [live canonical CI audit](../../.github/workflows/inside-ce-owner-recall-audit.yml).
 
 ## Public-search leads that initially looked new but are already canonical
 
@@ -23,7 +25,7 @@ A match is reported as `same_platform_handle_in_canonical_needs_review`, with po
 
 ## Verification fixture design
 
-[Eight controls](../../data/reference/inside-ce-owner-source-recall-controls-2026-10-13.tsv) include six exact public known-handle outcomes, one historical source with no clear author attribution, and a pure announcement/no-purchase control. The CI workflow reads the current public canonical markdown via a read-only GitHub checkout, pins its SHA256 in output, and **fails** if expected known handles vanish or no longer match. It does not fetch individual Reddit comments, archived private posts, direct messages or any forum user profile.
+[Eight controls](../../data/reference/inside-ce-owner-source-recall-controls-2026-10-13.tsv) include seven exact public known-handle outcomes, one historical source with no clear author attribution, and a pure announcement/no-purchase control. The CI workflow reads the current public canonical markdown via a read-only GitHub checkout, pins its SHA256 in output, and **fails** if expected known handles vanish or no longer match. It does not fetch individual Reddit comments, archived private posts, direct messages or any forum user profile.
 
 Next: compare **actual search-provider retrieval** against these known controls, stratified into thread-only, reply-only, image-led and later-account alias leads. Treat a result as discoverable only when original *post text or media evidence* was actually returned, not when an exact URL was inserted into a test. Use this dataset to find previously missed evidence classes, then ship Raezore only independently sourced **unreconciled** leads.
 
