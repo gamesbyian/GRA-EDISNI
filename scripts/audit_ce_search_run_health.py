@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 
 KINDS = ("brave_index", "wayback_cdx", "reddit_archive",
-         "public_harvest", "html_images", "bluesky")
+         "public_harvest", "html_images", "image_download", "bluesky")
 NOT_ATTEMPTED = {"planned_unexecuted", "not_attempted", "not-attempted",
                  "not_attempted_after_provider_block", "not-attempted-after-rate-limit",
                  "skipped_after_endpoint_access_failure"}
@@ -37,7 +37,8 @@ def health(kind, payload):
     elif not isinstance(payload, dict):
         raise ValueError("Expected structured search report")
     else:
-        rows = _rows(payload.get("results", [])) if kind == "bluesky" else []
+        rows = _rows(payload.get("results", [])) if kind == "bluesky" else (
+            _rows(payload.get("image_downloads", [])) if kind == "image_download" else [])
     counts = Counter()
     possible_missing = []
     actual_success = set()
@@ -88,6 +89,24 @@ def health(kind, payload):
             if not isinstance(value, int) or value < 0:
                 raise ValueError("Invalid HTML image count: " + col)
             counts[col] = value
+    if kind == "image_download":
+        selection = payload.get("selection_coverage", {})
+        if not isinstance(selection, dict):
+            raise ValueError("Malformed image selection coverage")
+        for key in ("input_url_mentions", "unapproved_image_host",
+                    "official_product_url_heuristic",
+                    "eligible_asset_families_not_selected_by_budget",
+                    "asset_families_selected_for_transfer"):
+            val = selection.get(key, 0)
+            if not isinstance(val, int) or val < 0:
+                raise ValueError("Malformed image selection count: " + key)
+            counts[key] = val
+        for row in rows:
+            if row.get("status") == "downloaded":
+                counts["image_payload_downloads"] += 1
+            else:
+                counts["image_transfer_failures"] += 1
+        counts["image_transfer_attempts"] = len(rows)
     if kind == "bluesky" and payload.get("state") != "executed_bounded":
         # An offline plan may retain task rows, but must never report retrieval.
         if any(x.get("status") == "ok" for x in rows):
@@ -111,6 +130,15 @@ def health(kind, payload):
         flags.append("source_pages_not_inspected")
     if data.get("unknown_statuses"):
         flags.append("unrecognized_outcome_needs_review")
+    if kind == "image_download":
+        if data.get("eligible_asset_families_not_selected_by_budget"):
+            flags.append("eligible_images_dropped_by_budget")
+        if data.get("unapproved_image_host") or data.get("official_product_url_heuristic"):
+            flags.append("source_image_mentions_filtered_by_policy")
+        if data.get("image_transfer_failures"):
+            flags.append("image_transfer_errors")
+        if data.get("input_url_mentions") and not data.get("image_payload_downloads"):
+            flags.append("images_discovered_but_no_payload")
     if kind == "html_images" and not data.get("readable_html_pages"):
         flags.append("no_html_body_scanned")
     if kind == "public_harvest" and not data.get("source_payload_acquired"):
@@ -118,7 +146,7 @@ def health(kind, payload):
     return {
         "schema_version": 1,
         "kind": kind,
-        "row_count": len(rows) if kind in SUCCESS else data.get("selected_sources", data.get("source_metadata_files", 0)),
+        "row_count": len(rows) if kind in SUCCESS or kind == "image_download" else data.get("selected_sources", data.get("source_metadata_files", 0)),
         "counts": data,
         "flags": sorted(set(flags)),
         "unrecognized_rows": possible_missing,
