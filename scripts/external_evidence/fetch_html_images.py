@@ -23,6 +23,7 @@ HOSTS = {
     "www.iam8bit.com", "cdn.shopify.com", "cdn.vox-cdn.com",
     "i.redd.it", "preview.redd.it", "i.imgur.com",
     "pbs.twimg.com", "i.ebayimg.com", "static0.polygonimages.com",
+    "cdn.bsky.app",
 }
 FORMATS = {"JPEG": ".jpg", "PNG": ".png", "WEBP": ".webp", "GIF": ".gif"}
 MAX_TOTAL_BYTES = 180 * 1024 * 1024
