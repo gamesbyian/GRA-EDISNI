@@ -1,0 +1,82 @@
+"""Offline, deterministic CE search attempt ledger tests."""
+import unittest
+from scripts.external_evidence.audit_search_attempts import evaluate
+
+D = "a" * 64
+
+
+class SearchAttemptAuditTests(unittest.TestCase):
+    def setUp(self):
+        self.tasks = [{"task_id":"a","index_query":"site:reddit.com INSIDE iam8bit"},
+                      {"task_id":"b","index_query":"site:youtube.com INSIDE collector"},
+                      {"task_id":"c","index_query":"site:forum.example INSIDE"}]
+
+    def test_empty_planned_is_not_searched(self):
+        out,pending,log = evaluate(self.tasks,[])
+        self.assertEqual(out["planned_tasks"],3)
+        self.assertEqual(out["real_provider_attempts"],0)
+        self.assertEqual(out["complete_tasks_with_exhausted_pagination"],0)
+        self.assertEqual(len(pending),3)
+        self.assertEqual(log,[])
+        self.assertEqual(out["new_confirmed_stickers"],0)
+
+    def test_blocks_and_skips_preserved_as_censored(self):
+        events=[
+            {"task_id":"a","attempt_id":"a1","status":"blocked","http_status":429},
+            {"task_id":"b","status":"not_attempted_after_provider_block"},
+            {"task_id":"c","attempt_id":"c1","status":"index_search_success",
+             "response_sha256":D,"pages_exhausted":False,"result_count":10}
+        ]
+        out,pending,log=evaluate(self.tasks,events)
+        self.assertEqual(out["real_provider_attempts"],2)
+        self.assertEqual(out["blocked_or_error_events"],1)
+        self.assertEqual(out["tasks_marked_not_attempted_after_provider_block"],1)
+        self.assertEqual(out["complete_tasks_with_exhausted_pagination"],0)
+        self.assertEqual(len(pending),3)
+        self.assertEqual(next(x for x in pending if x["task_id"]=="a")["retry_policy"],
+                         "manual-review-before-retrying")
+        self.assertEqual(next(x for x in pending if x["task_id"]=="c")["retry_policy"],
+                         "pagination-requires-review")
+        self.assertEqual(len(log),3)
+
+    def test_valid_complete_and_unique_retries(self):
+        events=[
+            {"task_id":"a","attempt_id":"r1","status":"provider_timeout"},
+            {"task_id":"a","attempt_id":"r2","status":"index_search_success",
+             "response_sha256":D,"pages_exhausted":True},
+            {"task_id":"b","attempt_id":"b1","status":"original_source_retrieved",
+             "response_sha256":D}
+        ]
+        out,pending,_=evaluate(self.tasks,events)
+        self.assertEqual(out["real_provider_attempts"],3)
+        self.assertEqual(out["complete_tasks_with_exhausted_pagination"],2)
+        self.assertEqual([x["task_id"] for x in pending],["c"])
+        self.assertEqual(out["new_confirmed_stickers"],0)
+        self.assertEqual(out["task_manifest_sha256"],
+                         evaluate(self.tasks,events)[0]["task_manifest_sha256"])
+
+    def test_invalid_or_misleading_claims_rejected(self):
+        cases=[
+            ([{"task_id":"a","status":"index_search_success","attempt_id":"x"}],"SHA256"),
+            ([{"task_id":"a","status":"index_search_success","attempt_id":"x",
+               "response_sha256":D,"pages_exhausted":False},
+              {"task_id":"a","status":"blocked","attempt_id":"x"}],"duplicate"),
+            ([{"task_id":"a","status":"http_error","attempt_id":"x",
+               "no_evidence_exists":True}],"absence"),
+            ([{"task_id":"a","status":"pagination_incomplete","attempt_id":"x",
+               "pages_exhausted":True}],"exhausted"),
+            ([{"task_id":"not-in-manifest","status":"blocked","attempt_id":"x"}],"not in"),
+            ([{"task_id":"a","status":"new-owner-verified","attempt_id":"x"}],"unknown"),
+            ([{"task_id":"a","status":"blocked"}],"attempt_id"),
+        ]
+        for events,expected in cases:
+            with self.subTest(events=events), self.assertRaisesRegex(ValueError,expected):
+                evaluate(self.tasks,events)
+
+    def test_task_manifest_duplicates_rejected(self):
+        with self.assertRaisesRegex(ValueError,"duplicate"):
+            evaluate(self.tasks+[self.tasks[0]],[])
+
+
+if __name__=="__main__":
+    unittest.main()
