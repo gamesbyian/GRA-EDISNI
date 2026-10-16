@@ -156,6 +156,13 @@ def challenge(reference_rows: list[dict], holdout_rows: list[dict], root: Path,
             "synthetic_negative_images_with_a_proposal":false,
             "synthetic_negative_total":len(negatives),
         })
+    per_area = [{
+        "sticker_fraction":fraction,
+        "total":sum(c["area_fraction"]==fraction for c in positives),
+        "top8_localized_iou_040":sum(
+            c["area_fraction"]==fraction and c["best_iou"]>=IOU_CUTOFF
+            for c in positives),
+    } for fraction in PATCH_FRACTIONS]
     return {
         "schema_version":1, "benchmark":"frozen-tiny-sticker-and-adversarial-synthetic-scenes",
         "reference_original_photographs":5,
@@ -167,11 +174,14 @@ def challenge(reference_rows: list[dict], holdout_rows: list[dict], root: Path,
         "matching_window_budget":{"coarse":max_windows,"refined":max_refine_windows,"top_k":top_k},
         "localization_iou_threshold":IOU_CUTOFF,
         "area_fractions":list(PATCH_FRACTIONS),
+        "per_sticker_area_recall":per_area,
         "distance_operating_points":curve,
         "positive_cases":positives, "negative_cases":negatives,
         "unthresholded_top8_positive_localizations_at_iou_040":sum(c["best_iou"]>=IOU_CUTOFF for c in positives),
         "unthresholded_top8_negative_images_with_proposals":sum(n["proposals_on_sticker_free_image"]>0 for n in negatives),
         "new_confirmed_stickers":0,
+        "autonomous_image_sticker_detection_validated":False,
+        "recommendation":"review-only: no qualified detection/abstention threshold",
         "limitation":"only synthetic scenes; hard negatives visually overlap real sticker designs; not independent real-world specificity or tiny scene recall",
     }
 
@@ -192,6 +202,7 @@ def main() -> None:
         "benchmark","synthetic_small_sticker_composites","synthetic_negative_photographs",
         "unthresholded_top8_positive_localizations_at_iou_040",
         "unthresholded_top8_negative_images_with_proposals","distance_operating_points",
+        "per_sticker_area_recall","autonomous_image_sticker_detection_validated",
         "new_confirmed_stickers")},sort_keys=True))
 
 
