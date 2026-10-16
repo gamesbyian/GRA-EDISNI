@@ -1,5 +1,12 @@
 # Current Research State
 
+## 16 October 2026 source recovered: authentic 2018 Playdead printer client (Experiment 483)
+
+**Original 2018/2019 `playdead.com/js/dist.js` client bytes are recovered and independently hash-matched**, replacing the outdated 8 October statement that no original JavaScript bundle exists. Two raw archive captures are identical (723,075 bytes; SHA-256 `892e795393531f93bb485c8382b52a13d35423b7251c7399d5a7ef5c7b912587`). Source map and executable differ; the executable establishes a three-request accepted path, exact `in,id,check,url` check fields, persistent browser ID and `window.location.pathname` as a possible server-side conditioning input. See [Experiment 483](experiment-483-original-printer-client-runtime.md) and [underlying 8 October transport audit](experiment-480-original-print-transport.md). **Original PHP, actual accepted-response HTML/HAR and CE-specific consumer remain unverified.** Foreground code and 84/66 physical corpus are unchanged. Any general claim that the contemporary printer client is missing is now superseded; server source/replies remain the proper retrieval target.
+
+The 2023 [original mirror uploader commit](https://github.com/twinysam/INSIDE-ARG/commit/d0b11cf8c6462c9592bc141ee6a4dddc0a029da6) also predates our 16 October enumeration of the missing `___________DONE_SD.html`. This is not a new-to-community missing route; source-provenance correction and additional missing filenames are in [the uploader audit](conjecture-lab/2026-10-16-terminal41-original-uploader-gap-audit.md).
+
+
 ## October 8, 2026 source-first receiving-artifact frontier (Experiments 476, 478–481)
 
 The currently merged Experiment 476 and Experiments 478–479 separately distinguish a confirmed original printer website intake from preserved Terminal41 static pages, reject literal Xbox three-row reuse (minimum 12/9/7 physical mismatches even after reversing rows), and reject direct original bunker-password replay under source-native 12×9 class-word ordering. The sticker foreground remains **84 physical records / 66 unique residues / 42 unknown residues**, not a uniquely decoded endgame message.
