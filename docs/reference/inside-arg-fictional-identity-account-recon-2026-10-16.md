@@ -93,6 +93,14 @@ This was a bounded live web-index plus connected GitHub **global file-content se
 
 A **real staff-linked identity/web/team graph** has now been established for `GLADBLAD`; **no second fictional ARG-operated persona** has been demonstrated by this search. **Do not contact accounts that happen to share one of these names.**
 
+## 4a. Reproducible platform search inventory
+
+The [machine-readable platform search manifest](../../data/reference/inside-arg-fictional-account-platform-search-manifest-2026-10-16.tsv) preserves **553 distinct rows**, including **5 verified original/public-source links**, **344 high-priority planned index queries**, and **204 secondary planned index queries** across twenty public-platform/archival hosts. Input candidates come from the separate [source-linked 50-term registry](../../data/reference/inside-arg-fictional-account-name-candidates-2026-10-16.tsv). This is a search queue, **not 553 executed requests, no-availability assertions, account matches, or unique individuals**.
+
+The actual manual web-index checks documented in the preceding section are only a **subset** of those planned tasks; their approximate phrasing is preserved in prose rather than falsely claiming an exact per-provider API log. Maintain per-query retrieval logs with time, URL, provider, original post date, capture date, account ownership evidence, and no-hit vs blocked/unindexed outcome before marking a task as executed.
+
+Scope rule: source-supported in-universe/credited-staff handles and site infrastructure only; no private individual account discovery or contact scraping. A `site:` query is a general-index *heuristic* and does not establish direct platform-native account search completeness. Historical negative conclusions require at least one true-positive searchable-control for the platform and date range.
+
 ## 5. Next discriminating steps, in priority order
 
 1. **Metadata connection test (best):** inspect raw byte-authenticated 534brn A and any other independently saved versions. Extract EXIF/XMP properties and maker/software fields. Check whether `AnSet` appears in other original files or online under that exact casing **before** the ARG's public reveal. Pair with `Anthony` only after an independently evidenced overlap, not on name resemblance.
