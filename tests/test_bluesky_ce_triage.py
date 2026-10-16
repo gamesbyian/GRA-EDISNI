@@ -148,6 +148,72 @@ class PublicBlueskyTriageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             triage.build_queue(report, max_candidates=0)
 
+    def test_actual_telemon_caption_is_recovered_without_new_owner(self):
+        telemon = {
+            "uri": "at://did:plc:rr4bd7yobqi73fmmgrpy3p7t/app.bsky.feed.post/3lsqjezdwgc2z",
+            "handle": "telemon.bsky.social",
+            "created_at": "2025-06-29T11:01:28.541Z",
+            "indexed_at": "2025-06-29T11:01:59.272Z",
+            "text_excerpt": ("Obviously, the main inspiration for this is directly "
+                             "referenced in the title - The Huddle"),
+            "target": False,
+            "media_metadata": {
+                "record_declared_image_count": 2,
+                "record_image_alts": [
+                    "A screenshot of The Huddle as it appears in INSIDE.",
+                    "Concept art cards of The Huddle, from INSIDE Collector's Edition."],
+                "image_previews": [
+                    {"alt": "A screenshot of The Huddle as it appears in INSIDE."},
+                    {"alt": "Concept art cards of The Huddle, from INSIDE Collector's Edition."}],
+                "external_public_url": "",
+                "record_media_without_view_image_urls": False,
+            },
+        }
+        terminator = {
+            **telemon,
+            "uri": "at://did:plc:unrelated/app.bsky.feed.post/3mterminator",
+            "handle": "merch.bsky.social",
+            "media_metadata": {
+                **telemon["media_metadata"],
+                "record_image_alts": [
+                    "Collector's Edition Terminator 2D No Fate Silver tin "
+                    "Inside Collector's Edition tin. Steel book case on left."],
+                "image_previews": [{"alt": "Inside Collector's Edition tin"}],
+            },
+        }
+        caswell = {
+            **telemon,
+            "uri": "at://did:plc:msovagwqdq3ew2rrikvpqp7c/app.bsky.feed.post/3mta6ecjbvk2i",
+            "handle": "tomcaswell.games",
+            "text_excerpt": "Do I still need Inside Collector’s edition jelly statue?",
+            "media_metadata": {
+                **telemon["media_metadata"],
+                "record_image_alts": [""],
+                "image_previews": [{"alt": ""}],
+            },
+        }
+        report = {"state": "executed_bounded", "results": [
+            {"kind": "blind_discovery", "status": "ok", "key": "frozen",
+             "posts": [caswell, terminator, telemon]},
+        ]}
+        self.assertEqual(
+            triage.classify_media_caption_relevance(telemon),
+            "inside_ce_huddle_source_caption")
+        self.assertEqual(
+            triage.classify_media_caption_relevance(terminator),
+            "not_identified_from_available_captions")
+        ranked, totals = triage.build_media_review_queue(report)
+        self.assertEqual(len(ranked), 3)
+        self.assertEqual(ranked[0]["uri"], caswell["uri"])
+        self.assertEqual(ranked[1]["uri"], telemon["uri"])
+        self.assertEqual(ranked[1]["media_caption_relevance"],
+                         "inside_ce_huddle_source_caption")
+        self.assertFalse(ranked[1]["owner_verified"])
+        self.assertFalse(ranked[1]["sticker_verified"])
+        self.assertEqual(totals["strong_original_caption_ce_context"], 1)
+        self.assertEqual(totals["image_preview_posts"], 3)
+        self.assertEqual(totals["no_original_image_captions"], 1)
+
     def test_image_only_post_survives_separate_visual_metadata_queue(self):
         image = {
             "uri": "at://did:plc:imageowner/app.bsky.feed.post/abc123",
