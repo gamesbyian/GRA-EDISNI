@@ -19,25 +19,27 @@ class PublicCESplitSaleTests(unittest.TestCase):
             root / "archive/external/twinysam-inside-arg/stickers.md"
         ).read_text(encoding="utf-8")
 
-    def test_exact_live_source_stays_unreconciled_no_serial(self):
+    def test_archived_source_stays_known_lost_L46_no_serial(self):
         report = validate([self.sample], self.original_ledger)
         self.assertEqual(report["source_count"], 1)
         self.assertEqual(report["candidate_count_not_canonical_exact_pseudonym"], 1)
         self.assertEqual(report["new_physical_copies_confirmed"], 0)
+        self.assertEqual(report["current_unreconciled_owner_leads"], 0)
         self.assertEqual(report["new_stickers_confirmed"], 0)
         row = report["records"][0]
         self.assertEqual(row["source_published_utc"], "2026-03-08T05:32:21Z")
         self.assertEqual(row["seller_or_game_wrapper_custody"], "unverified")
         self.assertEqual(row["source_status"],
-                         "unreconciled-original-public-acquisition-statement")
+                         "known-canonical-lost-L46-historical-source-only")
 
     def test_existing_alias_in_ledger_forces_manual_reconciliation(self):
         seeded = self.original_ledger + "\n- L999 - user Afaith_1 already known"
         report = validate([self.sample], seeded)
         self.assertEqual(report["candidate_count_not_canonical_exact_pseudonym"], 0)
         self.assertEqual(report["records"][0]["source_status"],
-                         "pseudonym-appears-in-canonical-ledger-review-case")
+                         "known-canonical-lost-L46-historical-source-only")
         self.assertEqual(report["new_stickers_confirmed"], 0)
+        self.assertTrue(report["records"][0]["historical_snapshot_contains_public_handle"])
 
     def test_substring_match_does_not_count_as_existing_case(self):
         fake = "user NotAfaith_1Other something unrelated"
