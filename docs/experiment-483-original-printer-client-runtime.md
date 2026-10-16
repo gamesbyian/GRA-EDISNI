@@ -32,6 +32,8 @@ Exact client details that materially refine Experiment 480:
 - The compiled condition for the locally empty case is simple nonempty-string checking. An arbitrary nonempty value is **not** deemed valid by the client itself: it asks the server, and only a first response equal to the string `false` is treated as rejection.
 - The original uses **browser `window.print()`** after locally inserting returned HTML. There is **no evidence here that the server returned a PDF** with PDF HTTP headers, nor that a fourth CE credential was accepted.
 
+**The original button wiring is still outside this JavaScript bundle.** The raw compiled code contains one `printCheck` identifier, its function declaration, and **no second reference invoking it**. This constrains where the click handler might have lived: the corresponding 2018/2019 HTML could have used an inline `onclick="printCheck()"`, a separate script, or another dynamic bridge. The recovered bundle alone is **not evidence for a particular button ID or actual DOM invocation**. Locate the dated page HTML containing the form, `#mce-EMAIL` field and call site before claiming an end-to-end browser interaction reconstruction.
+
 The `window.location.pathname` parameter is particularly worth preserving as a **potential routing discriminator**. It establishes that the server received the source page's path during the *check* request, so checks *could* theoretically depend on the page. It does **not** show that any pathway actually did, and no CE-specific path or submitted value is supplied by this source.
 
 ## Critical source-map mismatch: do not silently interpret source maps as executable code
