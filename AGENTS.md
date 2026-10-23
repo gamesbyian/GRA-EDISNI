@@ -6,35 +6,31 @@ Determine the INSIDE Collector's Edition sticker mechanism from the closed corpu
 
 The active epistemic-reset protocol is `docs/sticker-epistemic-reset.md`. The cross-puzzle operation prior is `docs/arg-puzzle-mechanics-corpus.md`. The complementary conjecture protocol is `docs/conjecture-lab-protocol.md`; these serve different research purposes.
 
-## Session recovery
+## Agent dispatch and session recovery
 
-Read only these first:
+Start from the current default branch and inspect open research PRs before taking an experiment. `docs/research-queue.md` owns live priority; `docs/current-state.md` owns current conclusions; `docs/experiment-ledger.md` owns reproducible attempts/negatives. Their chronological length is **not** a priority ordering: read the current top and query relevant IDs/phrases before historical tails. Google Docs are historical long-form context, not a parallel dispatch board.
 
-1. `docs/sticker-epistemic-reset.md`
-2. `docs/current-state.md`
-3. `docs/research-queue.md`
-4. `docs/arg-puzzle-mechanics-corpus.md`
-5. `data/machine-spec.json`
-6. `docs/community-glossary.md`
-7. `docs/community-conventions.md`
+| Work | Minimal route |
+|---|---|
+| New hypothesis / challenge to incumbent | `docs/sticker-epistemic-reset.md`, `docs/arg-puzzle-mechanics-corpus.md`, `docs/conjecture-lab-protocol.md` |
+| Existing experiment / next discriminating run | Relevant research-queue entry, exact ledger ID and existing script/fixture; check prior negatives |
+| Machine, closure, theorem or predictions | `data/machine-spec.json`, `docs/current-state.md`, relevant proof/observation fixture |
+| Sticker acquisition, archival leads, community claims | Provenance/physical ledger, community glossary/conventions, corresponding source audit; distinguish original source from mirrors and recollections |
+| Twenty-perspective portfolio | `docs/perspective-driven-sticker-experiments-2026-10-16.md`, `data/perspective-experiments-2026-10-16.json`; preserve all 27 PX IDs |
+| Software/tooling change | Owning script and tests, then `python scripts/verify_machine.py`; proof changes also `python scripts/verify_proof_pack.py` |
 
-The cross-disciplinary sticker portfolio is tracked by `docs/perspective-driven-sticker-experiments-2026-10-16.md` and `data/perspective-experiments-2026-10-16.json`. Every new session that reprioritizes or works on the 20 vocation approaches, six syntheses or three generative models must preserve all 27 PX IDs; run `python scripts/check_perspective_queue.py` after updates. These are proposed work cards, **not** canonical numbered experiments or evidence; use existing prior negatives and add execution results to the experiment ledger only after a real test.
+Avoid rereading large Google Doc tails at the start of a session. Use `docs/community-glossary.md` and `docs/community-conventions.md` when reporting to readers or comparing community methods.
 
-Use `docs/experiment-ledger.md` to check whether an idea has already been tested. Query the long-form Google Docs only for details that are not represented here.
+### Work contract
 
-Do not begin a session by rereading large tails of the Google Docs.
+1. State whether work is DISCOVER, DEVELOP or VALIDATE before claiming its result; record assumption stack, what was fitted after viewing results, dependent sources and candidate selection. **Exploration is welcome; promotion needs independent discrimination.**
+2. Define one bounded question, the cheapest test, controls/null family, expected informative outcomes and stop rule. Reuse existing scripts and evidence before collecting more. Negative and inconclusive results are durable outcomes, not invitations to silently rerun.
+3. Keep hypotheses competing. Incumbent-machine structure cannot justify itself, and an archival copy of the same observation is not an independent witness. Distinguish actual absence from search/provider failure and original Playdead source from fan reconstruction.
+4. Work in focused commits/PRs, reconcile parallel branches before edits, and update the *single owning* queue/ledger/state document where a result changes facts. Do not inflate all three with duplicated narrative.
+5. Finish with executable script/fixture and exact command/results or a justified no-change disposition. Handoff records the candidate, evidence grade, independent observations, failed premises, next discriminating action and source/commit identity. Never describe a speculative decode as solved.
+6. Research about people or communities uses public provenance responsibly. Do not contact sticker owners, impersonate community members or initiate outreach in the owner's name without a current explicit request.
 
-Baseline verification:
-
-```bash
-python scripts/verify_machine.py
-```
-
-For proof-chain or model-structure changes, also run:
-
-```bash
-python scripts/verify_proof_pack.py
-```
+The standing baseline is `python scripts/verify_machine.py`; run `python scripts/verify_proof_pack.py` for proof-chain/model-structure changes. For portfolio updates, also run `python scripts/check_perspective_queue.py`.
 
 ## Evidence discipline
 

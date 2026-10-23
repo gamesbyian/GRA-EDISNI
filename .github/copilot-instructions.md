@@ -1,0 +1,1 @@
+Follow `../AGENTS.md` as the canonical INSIDE research and coding-agent contract. Route by the current research question, preserve raw observation versus inference and DISCOVER/DEVELOP/VALIDATE status, and run targeted scripts. Avoid duplicating chronological project state or speculative solutions here.
